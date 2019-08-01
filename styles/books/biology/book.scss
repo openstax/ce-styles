@@ -3,15 +3,13 @@
 @import '../../templates/template1/settings.scss';
 
 @include use('RootTypography', "common:::RootTypography");
-//book specific styles
+
 
 //@use
-@include use('CommonFigure','common:::CommonFigure');
-@include use('NoCaptionFigure','common:::NoCaptionFigure');
-
-@include use('FigureContainer','carnival:::Figure');
-@include use('RootTypography', "common:::RootTypography");
-
+@include use('CareerIcon','carnival:::CareerIcon');
+@include use('EvolutionIcon','carnival:::Evolution');
+@include use('ScientificMethodIcon','carnival:::Scientific');
+@include use('VisualConnection','carnival:::Visual');
 @include use('Preface','carnival:::Preface');
 @include use('KeyTerm','carnival:::EocKeyTerm');
 @include use('KeyEquation','carnival:::EocKeyEqu');
@@ -25,4 +23,3 @@
 @include use('Example', 'carnival:::IconFeatureShape');
 @include use('Appendix', 'carnival:::AppendixShape');
 @include use('Index', 'carnival:::IndexShape');
-@include use('AnswerKey', 'carnival:::AnswerKeyShape');
