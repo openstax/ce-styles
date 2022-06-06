@@ -1,19 +1,19 @@
 ##
 ## Create an image that can be used to play with
-## cnx-recipes commands.
+## ce-styles commands.
 ##
 ## To create the image:
-##    docker build -t openstax/cnx-recipes:latest .
+##    docker build -t openstax/ce-styles:latest .
 ##
 ## To start the container:
-##    docker run --mount type=bind,source=$(pwd),target=/code -it openstax/cnx-recipes:latest /bin/bash
-## where the cnx-recipes repo has been cloned into the
+##    docker run --mount type=bind,source=$(pwd),target=/code -it openstax/ce-styles:latest /bin/bash
+## where the ce-styles repo has been cloned into the
 ## current working directory.
 ##
 ## To run the code:
 ##    ./scripts/test
 ## See:
-##    https://github.com/openstax/cnx-recipes
+##    https://github.com/openstax/ce-styles
 ## for details.
 ##
 
