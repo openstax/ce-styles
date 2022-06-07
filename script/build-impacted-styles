@@ -19,7 +19,7 @@ search_string="$theme:::$shape_name"
 book_files=($(grep -R -l $search_string $styles_root))
 echo "Found ${#book_files[@]} files with instances of $search_string."
 echo `grep -R -l $search_string $styles_root`
-
+ 
 PLATFORMS=(pdf)
 for i in "${!book_files[@]}"; do
     sass_file=${book_files[i]}
