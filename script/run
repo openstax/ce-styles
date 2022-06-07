@@ -9,8 +9,8 @@ do
   shift
 done
 
-docker build -t cnx-recipes-image .
-docker run -d -t --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container cnx-recipes-image /bin/bash
+docker build -t ce-styles-image .
+docker run -d -t --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container ce-styles-image /bin/bash
 echo "Executing $@..."
 docker exec "${env_vars[@]}" styles_temp_container "$@"
 docker stop styles_temp_container > /dev/null    # mutes "styles_temp_container" output
