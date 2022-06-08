@@ -25,10 +25,10 @@ $Exercise__Container--MaterialSet2: (
 
 $Exercise__Container--FromExample: empty_wrapper(ExerciseFromExample, '');
 
-$ExercisesModule__Container: empty_wrapper(ExercisesModuleContainer, '');
+// $ExercisesModule__Container: empty_wrapper(ExercisesModuleContainer, '');
 
-$ExercisesModule--Multicolumn__Container: (
-  _name: "ExercisesMulticolumnModuleContainer",
+$ExercisesModule__Container: (
+  _name: "ExercisesModuleContainer",
   _subselector: ' ',
   _properties: (
       margin-bottom: v-spacing(2),
@@ -213,7 +213,7 @@ $Exercise__Title__Icon--Commentary: (
     )
 );
 
-$Exercise__Title__Icon--Problem: ( 
+$Exercise__Title__Icon--Problem: (
     _name: "ExerciseTitleProblemIcon",
     _subselector: '::before',
     _properties: (

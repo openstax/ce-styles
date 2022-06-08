@@ -1490,11 +1490,15 @@ a[role=doc-noteref] {
   padding-right: 3px;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] {
+:not(.os-note-body) > [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] > .os-number {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
@@ -1503,101 +1507,101 @@ a[role=doc-noteref] {
   text-align: right;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] > .os-divider {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > p {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ul {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=solution] > .solution-title {
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=solution] > .solution-title {
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
@@ -1863,9 +1867,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-multiple-choice-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-multiple-choice-container section {
@@ -1892,117 +1893,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-multiple-choice-container [data-type=problem] > .os-number {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-multiple-choice-container [data-type=problem] > .os-divider {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > p {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > ul {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > div > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container > div > ul {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-table > table {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-multiple-choice-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2010,117 +2011,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] > .os-number {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] > .os-divider {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > p {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ul {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-table > table {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-multiple-choice-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2130,9 +2131,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-critical-thinking-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-critical-thinking-container section {
@@ -2159,117 +2157,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-critical-thinking-container [data-type=problem] > .os-number {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-critical-thinking-container [data-type=problem] > .os-divider {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > p {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > ul {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > div > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container > div > ul {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-table > table {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-critical-thinking-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2277,117 +2275,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] > .os-number {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] > .os-divider {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > p {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ul {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-table > table {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-critical-thinking-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2397,9 +2395,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-short-answer-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-short-answer-container section {
@@ -2426,117 +2421,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] {
+.os-short-answer-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-short-answer-container [data-type=problem] > .os-number {
+.os-short-answer-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-short-answer-container [data-type=problem] > .os-divider {
+.os-short-answer-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > p {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > ul {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > div > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container > div > ul {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=problem] .os-table > table {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-short-answer-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2544,117 +2539,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-short-answer-container [data-type=exercise-question] {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-short-answer-container [data-type=exercise-question] > .os-number {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-short-answer-container [data-type=exercise-question] > .os-divider {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > p {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > ul {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-table > table {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-short-answer-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2664,9 +2659,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-fill-in-the-blank-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-fill-in-the-blank-container section {
@@ -2693,117 +2685,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] > .os-number {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] > .os-divider {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > p {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > ul {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > div > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container > div > ul {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-table > table {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-fill-in-the-blank-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2811,117 +2803,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] > .os-number {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] > .os-divider {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > p {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > ul {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-table > table {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-fill-in-the-blank-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -2931,9 +2923,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-matching-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-matching-container section {
@@ -2960,117 +2949,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] {
+.os-matching-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-matching-container [data-type=problem] > .os-number {
+.os-matching-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-matching-container [data-type=problem] > .os-divider {
+.os-matching-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > p {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > ul {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > div > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container > div > ul {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=problem] .os-table > table {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-matching-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-matching-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -3078,117 +3067,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-matching-container [data-type=exercise-question] {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-matching-container [data-type=exercise-question] > .os-number {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-matching-container [data-type=exercise-question] > .os-divider {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > p {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > ul {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-matching-container [data-type=exercise-question] .os-table > table {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-matching-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -3198,9 +3187,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-true-false-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-true-false-container section {
@@ -3227,117 +3213,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] {
+.os-true-false-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-true-false-container [data-type=problem] > .os-number {
+.os-true-false-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-true-false-container [data-type=problem] > .os-divider {
+.os-true-false-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > p {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > ul {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > div > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > div > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container > div > ul {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > p {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > ul {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=problem] .os-table > table {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-true-false-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -3345,117 +3331,117 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-true-false-container [data-type=exercise-question] {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-true-false-container [data-type=exercise-question] > .os-number {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-true-false-container [data-type=exercise-question] > .os-divider {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > p {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > ul {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > div > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container > div > ul {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > p {
   margin-bottom: 0;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-table > table {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-true-false-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;

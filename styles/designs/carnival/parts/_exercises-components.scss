@@ -1,6 +1,18 @@
-$Exercise__Container: empty_wrapper(Container, '');
+$Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
+$InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');
 
-// Problem components
+$ExerciseModule__Container: (
+    _name: "ExerciseModuleContainer",
+    _subselector: "",
+    _properties: (
+        margin-bottom: v-spacing(1),
+        column-count: enum('ValueSet:::OPTIONAL'), // not used in every book and eevery exercise module
+        column-gap: enum('ValueSet:::OPTIONAL'), // not used in every book and eevery exercise module
+        column-width: enum('ValueSet:::OPTIONAL'), // not used in every book and eevery exercise module
+    ),
+);
+
+// Problem component
 $Exercise__Problem__Wrapper: (
     _name: "ProblemWrapper",
     _subselector: " [data-type='problem']",

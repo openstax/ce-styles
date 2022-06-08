@@ -6,7 +6,7 @@
 
 @include create_shape('corn:::ThreeColumnsExercisesModuleShape',(
     _components: (
-        map-merge($ExercisesModule--Multicolumn__Container, (
+        map-merge($ExercisesModule__Container, (
             _components: (
                 $Exercises_Paragraph__Title,
                 $Exercises_Paragraph__Title--Italic,
@@ -101,7 +101,7 @@
 
 @include create_shape('corn:::TwoColumnsExercisesModuleShape',(
     _components: (
-        map-merge($ExercisesModule--Multicolumn__Container, (
+        map-merge($ExercisesModule__Container, (
             _components: (
                 $Exercises_Paragraph__Title,
                 $Exercises_Paragraph__Title--Italic,
