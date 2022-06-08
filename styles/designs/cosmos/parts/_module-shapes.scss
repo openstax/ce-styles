@@ -15,3 +15,23 @@
         )),
     )
 ));
+
+@include create_shape('cosmos:::ModuleWithIndentationPolishShape',(
+    _components:(
+        map-merge($Module__Container--WithoutMargin,(
+            _components:(
+                $ModuleWithIndentation__Para--Polish,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $ModuleWithIndentation__Para--Polish,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $ModuleWithIndentation__Para--Polish,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
