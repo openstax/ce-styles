@@ -4,9 +4,18 @@
     _components: (
         map-merge($CitationPara__Container, (
             _components: (
-                $CitationPara--Regular,
-                $CitationPara--StudentSample,
-                $CitationPara--PublicDomain,
+                $CitationPara,
+            )
+        )),
+    ),
+));
+
+@include create-shape('cosmos:::CitationParaForSideLineShape', (
+    _components: (
+        map-merge($CitationPara__Container, (
+            _components: (
+              $CitationPara--StudentSample,
+              $CitationPara--PublicDomain
             )
         )),
     ),
