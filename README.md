@@ -1,20 +1,13 @@
-# Important Links
- - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
- - [CE Styles ZenHub Board](https://app.zenhub.com/workspaces/ce-styles-5cdc84baee941c07853fbbf2/board?repos=49744755,11369724,137909279,63083783)
- - [Cookbook Repo](https://github.com/openstax/cookbook)
-
 # About
-The ce-styles repo contains the  styles framework. The styles framework. If you're looking to manipulate the content during the baking stage, the recipes framework is contained in the [cookbook repo](https://github.com/openstax/cookbook).
+The ce-styles repo contains the styles framework. If you're looking to manipulate the content during the baking stage, the recipes framework is contained in the [cookbook repo](https://github.com/openstax/cookbook).
 
-[Baked PDF frameworkguide](./styles/styling-bakedpdf.md)
+[Baked PDF framework guide](./styles/styling-bakedpdf.md)
 
 [Styling framework tutorial](./styles/README.md)
 
 ## Installation
 
 The ce-styles repo uses a docker container to simplify installation requirements. It's reccomended that you either run the container in vs code, or prepend the `./script/run` script before the desired command to run that command in a docker container.
-
-Almost all of the scripts that we run to generate outputs at various stages of development require docker.
 
 [To install docker, follow the instructions here.](https://docs.docker.com/get-docker/)
 
@@ -38,3 +31,9 @@ If you're in the repo's docker container (either using VScode or something else)
 But if you can't open the container, just prepend with ./script/run:
 
 `./script/run ./script/build-styles`
+
+# Important Links
+ - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
+ - [How to Release CE Styles](https://openstax.atlassian.net/l/c/TjrhH68R)
+ - [CE Styles ZenHub Board](https://app.zenhub.com/workspaces/ce-styles-5cdc84baee941c07853fbbf2/board?repos=49744755,11369724,137909279,63083783)
+ - [Cookbook Repo](https://github.com/openstax/cookbook)
