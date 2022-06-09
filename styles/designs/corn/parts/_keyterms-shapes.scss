@@ -1,0 +1,22 @@
+@import '_keyterms-components';
+@import 'lists-components';
+
+@include create_shape('corn:::KeyTermsShape',(
+    _components:(
+        map-merge($KeyTerms__Container,(
+            _components:(
+                map-merge($KeyTerms__List,(
+                    _components:(
+                        $KeyTerms__Term,
+                        map-merge($KeyTerms__Definition, (
+                            _components: (
+                                $UnorderedList--KeyTerms,
+                                $OrderedList--KeyTerms,
+                            ),
+                        ))
+                    ),
+                )),
+            ),
+        )),
+    )
+));
