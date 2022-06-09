@@ -1,21 +1,6 @@
 @import '_eoc-components';
 @import 'wrappers-components';
 
-@include create_shape('cardboard:::KeyTermsShape',(
-    _components:(
-        map-merge($Eoc__Container,(
-            _components:(
-                map-merge($Term--DL,(
-                    _components:(
-                        $Term--DT,
-                        $Term--DD,
-                    ),
-                )),
-            ),
-        )),
-    )
-));
-
 //Used in section Collaborative Group Activities from Astronomy
 @include create_shape('cardboard:::ModuleWithTypeAListShape',(
     _components:(
