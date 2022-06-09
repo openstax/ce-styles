@@ -83,12 +83,6 @@ ChapterIntro: (
 
 //EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'composite-chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'composite-chapter'] > .os-key-concepts-container"),
     'Container:::column-count': 2,
@@ -320,7 +314,7 @@ ChapterIntro: (
 @include use('Equation', 'carnival:::EquationShape');
 
 // EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 @include use('ConceptualQuestionsCompChapPage','carnival:::EOCAssesmentsShape');

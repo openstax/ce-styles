@@ -109,12 +109,6 @@ $ChapterIntroType: side;
 
 //Can we convert those into group settings? A mixin? Something to DRY it.
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
     'Container:::column-count': 2,
@@ -222,7 +216,7 @@ $ChapterIntroType: side;
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 
 //EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('VisualExercise', 'carnival:::EOCAssesmentsShape');
 @include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');

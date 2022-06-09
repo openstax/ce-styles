@@ -109,12 +109,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
     'Container:::column-count': 2,
@@ -177,7 +171,7 @@ $ChapterIntroType: fullWidth;
 @include use('MediaPodcast', 'carnival:::IconCondensedShape');
 
 // Eoc
-@include use('KeyTerm', 'carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary'); // Can be removed after lists clean up in carnival theme
 @include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
