@@ -207,11 +207,11 @@ $bandColor: #093D4C;
 @include use('Equation', 'corn:::EquationShape');
 
 //Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('WritingExercises', 'corn:::TwoColumnsExercisesModuleShape');
-@include use('EverydayExercises', 'corn:::TwoColumnsExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('WritingExercises', 'corn:::MultipleColumnExercisesModuleShape'); // two columns
+@include use('EverydayExercises', 'corn:::MultipleColumnExercisesModuleShape'); // two columns
 
 //EoC
 @include use('KeyTerm','corn:::EocKeyTerm');
-@include use('ReviewExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('PracticeTest', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');

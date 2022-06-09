@@ -182,12 +182,12 @@ $bandColor: #093D4C;
 @include use('CoreqExercises', 'corn:::OneColumnExercisesModuleShape');
 
 // Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
 
 // EoC
 @include use('KeyTerm','corn:::EocKeyTerm');
-@include use('ReviewExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('PracticeTest', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');
 
 // Notes
 @include use('HowTo', 'corn:::IconBoxedNoteShape');

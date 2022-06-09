@@ -301,7 +301,7 @@ $ChapterIntroType: fullWidth;
 @include use('TeacherMaterial', 'common:::Hidden');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
+@include use('ContentExercises','carnival:::ExerciseContentModuleShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -329,13 +329,13 @@ $ChapterIntroType: fullWidth;
 @include use('KeyTerm','carnival:::EocKeyTerm');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
-@include use('ConceptCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('CriticalThinkingCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ProblemsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('PerformanceCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('MultipleChoiceCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ShortAnswerCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ExtendedResponseCompChapPage','carnival:::EOCAssesmentsShape');
+@include use('ConceptCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('PerformanceCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('MultipleChoiceCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ExtendedResponseCompChapPage','carnival:::ExerciseEoCModuleShape');
 
 // Notes
 @include use('VirtualPhysicsNote', 'carnival:::BoxedNoteShape');

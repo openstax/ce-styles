@@ -288,7 +288,6 @@ ChapterIntro: (
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('PageWithIndentation', 'carnival:::ModuleWithIndentationForPolishBooksShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -323,10 +322,10 @@ ChapterIntro: (
 @include use('KeyTerm','carnival:::EocKeyTerm');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
-@include use('ConceptualQuestionsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ProblemsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('AdditionalProblemsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ChallengeProblemsCompChapPage','carnival:::EOCAssesmentsShape');
+@include use('ConceptualQuestionsCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('AdditionalProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ChallengeProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
 
 // Tables
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');

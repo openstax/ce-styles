@@ -236,7 +236,6 @@ $ChapterIntroType: fullWidth;
 @include use('AnswerKeyInline', 'carnival:::AnswerKeyInlineShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('Equation', 'carnival:::EquationShape');
 
 // Chapter Intro
@@ -254,12 +253,12 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include use('EocSummary', 'carnival:::EocSummary');
-@include use('MultipleChoiceCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('CriticalThinkingCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ShortAnswerCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('FillInTheBlankCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('MatchingCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('TrueFalseCompChapPage','carnival:::EOCAssesmentsShape');
+@include use('MultipleChoiceCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('FillInTheBlankCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('MatchingCompChapPage','carnival:::ExerciseEoCModuleShape');
+@include use('TrueFalseCompChapPage','carnival:::ExerciseEoCModuleShape');
 
 // Notes
 @include use('ClinicalFocusNote', 'carnival:::BoxedNoteShape');

@@ -202,7 +202,6 @@ $ChapterIntroType: side;
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 
 // Equations
@@ -224,9 +223,9 @@ $ChapterIntroType: side;
 //EOC
 @include use('KeyTerm','carnival:::EocKeyTerm');
 @include use('EocSummary','carnival:::EocSummary');
-@include use('VisualExercise', 'carnival:::EOCAssesmentsShape');
-@include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');
-@include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
+@include use('VisualExercise', 'carnival:::ExerciseEoCModuleShape');
+@include use('MultipleChoice', 'carnival:::ExerciseEoCModuleShape');
+@include use('CriticalThinking', 'carnival:::ExerciseEoCModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');

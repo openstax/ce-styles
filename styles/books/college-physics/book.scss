@@ -158,7 +158,7 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseShape');
+@include use('ContentExercises','carnival:::ExerciseContentModuleShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 
 // Chapter Intro
@@ -185,8 +185,8 @@ $ChapterIntroType: fullWidth;
 // EOC
 @include use('KeyTerm', 'carnival:::EocKeyTerm');
 @include use('EocSummary', 'carnival:::EocSummary');
-@include use('ConceptualQuestions','carnival:::EOCAssesmentsShape');
-@include use('ProblemsExercises','carnival:::EOCAssesmentsShape');
+@include use('ConceptualQuestions','carnival:::ExerciseEoCModuleShape');
+@include use('ProblemsExercises','carnival:::ExerciseEoCModuleShape');
 
 // Notes
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');

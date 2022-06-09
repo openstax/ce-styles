@@ -1,6 +1,6 @@
 @import '../biology/book';
 
-@include add_settings(( 
+@include add_settings((
   ColumnHeaderTable: (
     _selectors: ('.os-table.os-column-header-container'),
     'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::biologyTableColor"),
@@ -16,7 +16,7 @@
   ),
 ));
 
-@include add_settings(( 
+@include add_settings((
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
     'Container:::column-count': 2,
@@ -93,6 +93,6 @@
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 
 // EOC
-@include use('Review', 'carnival:::EOCAssesmentsShape');
-@include use('TestPrep', 'carnival:::EOCAssesmentsShape');
-@include use('SciencePractice', 'carnival:::EOCAssesmentsShape');
+@include use('Review', 'carnival:::ExerciseEoCModuleShape');
+@include use('TestPrep', 'carnival:::ExerciseEoCModuleShape');
+@include use('SciencePractice', 'carnival:::ExerciseEoCModuleShape');

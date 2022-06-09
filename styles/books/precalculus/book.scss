@@ -166,12 +166,12 @@ $ChapterIntroType: fullWidth;
 @include use('NoClassNote', 'corn:::BoxedNoteShape');
 
 //Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
 
 //EoC
 @include use('KeyTerm','corn:::EocKeyTerm');
-@include use('ReviewExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('PracticeTest', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');
 
 //EOB
 @include use('AnswerKeyNestedSolutionAreas', 'corn:::AnswerKeyWithNestedSolutionAreasShape');

@@ -202,7 +202,6 @@ $ChapterIntroType: fullWidth;
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -237,9 +236,9 @@ $ChapterIntroType: fullWidth;
 //EOC
 @include use('KeyTerm', 'carnival:::EocKeyTerm');
 @include use('EocSummary', 'carnival:::EocSummary');
-@include use('InteractiveExercise', 'carnival:::EOCAssesmentsShape');
-@include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');
-@include use('FreeResponse', 'carnival:::EOCAssesmentsShape');
+@include use('InteractiveExercise', 'carnival:::ExerciseEoCModuleShape');
+@include use('MultipleChoice', 'carnival:::ExerciseEoCModuleShape');
+@include use('FreeResponse', 'carnival:::ExerciseEoCModuleShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');

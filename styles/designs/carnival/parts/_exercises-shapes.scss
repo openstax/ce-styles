@@ -4,7 +4,7 @@
 @import 'eoc-components';
 @import 'table-components';
 
-@include create_shape('carnival:::ExerciseShape',(
+@include create_shape('carnival:::ExerciseContentModuleShape',( // present in physics books (collge physics, college-physics for ap courses, hs physcis)
     _components:(
         map-merge($ExerciseModule__Container,(
           _components:(
@@ -60,7 +60,7 @@
                 )),
                 map-merge($Exercise__Solution__Wrapper,(
                     _components:(
-                        $SolutionTitle
+                        $SolutionTitle // present in hs physics
                     ),
                 )),
               )
@@ -70,11 +70,11 @@
       )
 ));
 
-@include create_shape('carnival:::EOCAssesmentsShape',(
+@include create_shape('carnival:::ExerciseEoCModuleShape',(
     _components:(
         map-merge($ExerciseModule__Container,(
             _components:(
-                $Section--MarginBottom,
+                $Section--MarginBottom, // added within https://github.com/openstax/cnx-recipes/issues/2013
                 $Section__UnorderedList--MarginLeftBottom,
                 map-merge($Container__OrderedList--MarginLeftBottom, (
                     _components:(

@@ -168,7 +168,6 @@ $ChapterIntroType: fullWidth;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -191,7 +190,7 @@ $ChapterIntroType: fullWidth;
 @include use('KeyTerm','carnival:::EocKeyTerm');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 @include use('EocSummary','carnival:::EocSummary');
-@include use('Exercises','carnival:::EOCAssesmentsShape');
+@include use('Exercises','carnival:::ExerciseEoCModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');

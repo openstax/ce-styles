@@ -4,7 +4,7 @@
 @import 'table-components';
 @import 'titles-components';
 
-@include create_shape('corn:::ThreeColumnsExercisesModuleShape',(
+@include create_shape('corn:::MultipleColumnExercisesModuleShape',(
     _components: (
         map-merge($ExercisesModule__Container, (
             _components: (
@@ -93,40 +93,50 @@
                     )
 
                 )),
-
-            )
-        )),
-    )
-));
-
-@include create_shape('corn:::TwoColumnsExercisesModuleShape',(
-    _components: (
-        map-merge($ExercisesModule__Container, (
-            _components: (
-                $Exercises_Paragraph__Title,
-                $Exercises_Paragraph__Title--Italic,
-                map-merge($Exercise__Container,(
-                    _components:(
-                        map-merge($Exercise__Problem__Wrapper,(
+                map_merge($InjectedExercise__Container, (
+                    _components: (
+                        map_merge($InjectedExercise__Question__Wrapper, (
                             _components:(
                                 $Exercise__ProblemSolution__Number,
                                 $Exercise__ProblemSolution__Divider,
                                 map-merge($Exercise__Problem__Container,(
                                     _components:(
                                         $Exercise__ProblemSolution__Paragraph,
-                                        $Table--Eoc__Container,
+                                        $UnorderedList--FirstLevel,
+                                        $OrderedList--FirstLevel,
+                                    )
+                                )),
+                                map-merge($Exercise__Problem__Container--WithImageTableOnTop,(
+                                    _components:(
+                                        $Exercise__ProblemSolution__Paragraph,
+                                        map-merge($Table--Eoc__Container, (
+                                            _components:(
+                                                $Table
+                                            )
+                                        )),
+                                    )
+                                )),
+                                map-merge($Exercise__Problem__Container--WithInlineListOnTop, (
+                                    _components: (
+                                        $Exercise__ProblemSolution__Paragraph,
+                                        map-merge($Table--Eoc__Container, (
+                                            _components:(
+                                                $Table
+                                            )
+                                        )),
                                     )
                                 )),
                             )
-                        )),
+                        ))
                     )
                 )),
+
             )
         )),
     )
 ));
 
-@include create_shape('corn:::OneColumnExercisesModuleShape',(
+@include create_shape('corn:::OneColumnExercisesModuleShape',( // used in statistics, contemporary math where the para outsie exercise are not italisized in styles (just <em> text inside is by defult)
     _components: (
         map-merge($ExercisesModule__Container, (
             _components: (
