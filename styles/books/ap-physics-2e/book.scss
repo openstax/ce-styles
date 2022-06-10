@@ -4,9 +4,6 @@
 @include add_settings((
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -17,4 +14,11 @@
 ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-ap-test-prep-container'),
+  ),
+));
+
 @include use('TestPrep', 'carnival:::EOCAssesmentsShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');

@@ -1195,12 +1195,6 @@ nav#toc > ol > .os-toc-index > a::after {
   line-height: 1.5rem;
 }
 
-.preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
 .preface > ul {
   margin-left: 24px;
 }
@@ -1467,6 +1461,55 @@ nav#toc > ol > .os-toc-index > a::after {
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.5rem;
+}
+
+.preface {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-glossary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-key-concepts-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-conceptual-questions-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-problems-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-additional-problems-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-challenge-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2016,13 +2059,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 8px;
 }
 
-.os-glossary-container {
-  margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -2041,9 +2077,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-chapter] > .os-key-concepts-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=composite-chapter] > .os-key-concepts-container > section > ul {
@@ -2076,9 +2109,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-chapter] > .os-key-equations-container {
   margin-bottom: 0.7rem;
-  column-count: 1;
-  column-gap: normal;
-  column-width: auto;
 }
 
 [data-type=composite-chapter] > .os-key-equations-container section {
@@ -2112,9 +2142,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-conceptual-questions-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-review-conceptual-questions-container section {
@@ -2379,9 +2406,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-problems-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-review-problems-container section {
@@ -2646,9 +2670,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-additional-problems-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-review-additional-problems-container section {
@@ -2913,9 +2934,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-challenge-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-review-challenge-container section {
@@ -3390,12 +3408,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 300;
   text-transform: none;
   display: block;
-}
-
-[data-type=page]:not(.introduction).preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {

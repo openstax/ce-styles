@@ -1082,6 +1082,34 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   color: #0074BC;
 }
 
+.preface {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-glossary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-section-summary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-critical-thinking-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
 .introduction > .os-figure.has-splash {
   margin-bottom: 0.7rem;
 }
@@ -1230,12 +1258,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 300;
   text-transform: none;
   display: block;
-}
-
-[data-type=page]:not(.introduction).preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {
@@ -1999,13 +2021,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
-.os-glossary-container {
-  margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -2024,9 +2039,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=chapter] > .os-section-summary-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=chapter] > .os-section-summary-container > section > ul {
@@ -2059,9 +2071,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=chapter] > .os-critical-thinking-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=chapter] > .os-critical-thinking-container section {

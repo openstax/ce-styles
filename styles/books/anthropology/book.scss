@@ -111,15 +111,9 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -130,6 +124,13 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-section-summary-container',
+                 '.os-critical-thinking-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -137,6 +138,7 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 //Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

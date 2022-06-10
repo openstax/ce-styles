@@ -85,15 +85,9 @@ ChapterIntro: (
 @include add_settings((
   EocSummary: (
     _selectors: ("[data-type = 'composite-chapter'] > .os-key-concepts-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   EocKeyEquations: (
     _selectors: ("[data-type = 'composite-chapter'] > .os-key-equations-container"),
-    'Container:::column-count': 1,
-    'Container:::column-gap': normal,
-    'Container:::column-width': auto,
     'SectionMarginBottom:::margin-bottom': 0,
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-v-spacing(1),
@@ -101,9 +95,6 @@ ChapterIntro: (
   ),
   ConceptualQuestionsCompChapPage:(
     _selectors: (".os-review-conceptual-questions-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -114,9 +105,6 @@ ChapterIntro: (
   ),
   ProblemsCompChapPage:(
     _selectors: (".os-review-problems-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -127,9 +115,6 @@ ChapterIntro: (
   ),
   AdditionalProblemsCompChapPage:(
     _selectors: (".os-review-additional-problems-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -140,9 +125,6 @@ ChapterIntro: (
   ),
   ChallengeProblemsCompChapPage:(
     _selectors: (".os-review-challenge-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -273,6 +255,14 @@ ChapterIntro: (
     ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-key-concepts-container',
+                 '.os-review-conceptual-questions-container', '.os-review-problems-container',
+                 '.os-review-additional-problems-container', '.os-review-challenge-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -283,6 +273,7 @@ ChapterIntro: (
 @include use('PageWithIndentation', 'carnival:::ModuleWithIndentationForPolishBooksShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
