@@ -47,13 +47,6 @@ $ChapterIntroType: fullWidth;
   EocSummary: (
     _selectors: ("[data-type = 'composite-chapter'] > .os-key-concepts-container"),
   ),
-  EocKeyEquations:(
-    _selectors: ("[data-type = 'composite-chapter'] > .os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': 0,
-    'UnnumberedUnstyledTable:::margin-bottom': 0,
-    'TableData:::padding-right': table-h-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-  ),
   ConceptualQuestionsCompChapPage:(
     _selectors: (".os-review-conceptual-questions-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -225,7 +218,7 @@ $ChapterIntroType: fullWidth;
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
-@include use('EocKeyEquations','carnival:::EocKeyEquations');
+@include use('KeyEquations','carnival:::ModuleWithUnstyledTableShape');
 @include use('ConceptualQuestionsCompChapPage','carnival:::EOCAssesmentsShape');
 @include use('ProblemsCompChapPage','carnival:::EOCAssesmentsShape');
 @include use('AdditionalProblemsCompChapPage','carnival:::EOCAssesmentsShape');

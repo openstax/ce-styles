@@ -53,13 +53,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  EocKeyEquations:(
-    _selectors: (".os-eoc.os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': 0,
-    'UnnumberedUnstyledTable:::margin-bottom': 0,
-    'TableData:::padding-right': table-h-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-  ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
   ),
@@ -175,13 +168,14 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocKeyEquations','carnival:::EocKeyEquations');
+@include use('KeyEquations','carnival:::ModuleWithUnstyledTableShape');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('Exercises','carnival:::EOCAssesmentsShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
+@include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('EverydayLifeNote', 'carnival:::BoxedNoteShape');
 @include use('PortraitNote', 'carnival:::BoxedNoteShape');
 
