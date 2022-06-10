@@ -245,14 +245,6 @@ $bandColor: #093D4C;
 ));
 
 @include add_settings((
-  FormulaReview: (
-    Container: (
-      column-count: 1,
-    ),
-  ),
-));
-
-@include add_settings((
   BasicTable: (
     _selectors: (".os-table:not(.os-unstyled-container)"),
     'TableHeadCell:::background-color': (_ref: "colorMap:::tableOption2Color"),
