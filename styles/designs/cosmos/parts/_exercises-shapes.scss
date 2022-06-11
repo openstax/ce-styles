@@ -15,11 +15,12 @@
                                         $Exercise__Problem__Paragraph,
                                     )
                                 )),
+                                $Exercise__Problem__Container--WithImageTableOnTop,
                             )
                         )),
                     )
                 )),
-                map-merge($InjectedExercise__Container,(
+                map-merge($InjectedExercise__Container,( // used in English Composition
                     _components: (
                         map_merge($InjectedExercise__Question__Wrapper, (
                             _components:(
@@ -32,6 +33,7 @@
                                         $Exercise__Problem__Paragraph,
                                     )
                                 )),
+                                $Exercise__Problem__Container--WithImageTableOnTop,
                             )
                         )),
                     )

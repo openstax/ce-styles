@@ -88,11 +88,6 @@ $ChapterIntroType: fullWidth;
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsExercises: (
@@ -101,11 +96,6 @@ $ChapterIntroType: fullWidth;
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
@@ -178,6 +168,7 @@ $ChapterIntroType: fullWidth;
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 
 // Equations
 @include use('NumberedEquation', 'carnival:::NumberedEquationShape');
@@ -196,6 +187,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');

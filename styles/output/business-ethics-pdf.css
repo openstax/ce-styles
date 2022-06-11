@@ -3438,6 +3438,13 @@ a[data-type=cite] {
   margin-bottom: 0;
 }
 
+.os-eoc.os-assessment-questions-container [data-type=exercise] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eoc.os-assessment-questions-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
@@ -3472,6 +3479,13 @@ a[data-type=cite] {
 
 .os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) {

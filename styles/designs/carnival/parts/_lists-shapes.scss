@@ -76,3 +76,61 @@
         )),
     )
 ));
+
+@include create_shape('cardboard:::ExercisesListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      $UnorderedList--FirstLevel--Exercise,
+                      map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          map-merge($OrderedList--SecondLevel--Exercise, (
+                            _components: (
+                              $OrderedList--SecondLevel--Exercise,
+                            )
+                          )),
+                        )
+                      )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                  _components: (
+                    $UnorderedList--FirstLevel--Exercise,
+                    map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          $OrderedList--SecondLevel--Exercise
+                        )
+                    )),
+                  )
+                )),
+              )
+        )),
+    )
+));
+
+// Composite Page List
+@include create_shape('carnival:::ExerciseCompositePageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          $OrderedList--SecondLevel--Exercise,
+                        )
+                      )),
+                    )
+                )),
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                      $UnorderedList--FirstLevel--Exercise,
+                      $OrderedList--FirstLevel--Exercise,
+                    )
+                )),
+            )
+        )),
+    )
+));

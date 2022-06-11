@@ -127,6 +127,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromExercisesSolution','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
+@include use('FigureFromExercisesModule','corn:::FigureFromExercisesModuleShape');
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
@@ -152,11 +153,11 @@ $ChapterIntroType: fullWidth;
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
-
 //Tables
 @include use('BasicTable', 'corn:::BasicTableShape');
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
+@include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
 
 //Notes
 @include use('HowTo', 'corn:::IconBoxedNoteShape');

@@ -75,13 +75,13 @@ $SubSection__Container__UnorderedList--MarginLeftBottom: list--marginLeft(main, 
 
 //Exercises
 
-$OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " > ol");
-$UnorderedList--MarginLeftBottom: list--marginLeftBottom(main, " > ul");
-$Section__UnorderedList--MarginLeftBottom: list--marginLeftBottom(margin-left-increased, " section > ul");
-$Section__OrderedList--MarginLeftBottom: list--marginLeftBottom(margin-left-increased, " section > ol");
-$Container__OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " > div > ol");
-$Container__UnorderedList--MarginLeftBottom: list--marginLeftBottom(main, " > div > ul");
-$OrderedList--Nested--MarginLeftBottom: list--marginLeftBottom(nested, " > li > ol");
+// $OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " > ol");
+// $UnorderedList--MarginLeftBottom: list--marginLeftBottom(main, " > ul");
+// $Section__UnorderedList--MarginLeftBottom: list--marginLeftBottom(margin-left-increased, " section > ul");
+// $Section__OrderedList--MarginLeftBottom: list--marginLeftBottom(margin-left-increased, " section > ol");
+// $Container__OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " > div > ol");
+// $Container__UnorderedList--MarginLeftBottom: list--marginLeftBottom(main, " > div > ul");
+// $OrderedList--Nested--MarginLeftBottom: list--marginLeftBottom(nested, " > li > ol");
 
 // Notes, Chapter Intro in polish University Physics vol2
 
@@ -217,5 +217,39 @@ $UnorderedList__Item--AppendixGlossary: (
   )
 );
 
+// Exercises
+$UnorderedList--FirstLevel--Exercise: (
+    _name: "ExerciseFirstLevelUnorderedList",
+    _subselector: " > ul",
+    _properties: (
+        margin-left: h-spacing(3),
+        margin-bottom: v-spacing(1),
+    )
+);
 
+$OrderedList--FirstLevel--Exercise: (
+    _name: "ExerciseFirstLevelOrderedList",
+    _subselector: " > ol",
+    _properties: (
+        margin-left: h-spacing(3),
+        margin-bottom: v-spacing(1),
+    )
+);
 
+$UnorderedList--SecondLevel--Exercise: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$OrderedList--SecondLevel--Exercise: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+        margin-bottom: v-spacing(1),
+    )
+);

@@ -127,11 +127,6 @@ $ChapterIntroType: side;
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': 0,
   ),
   MultipleChoice: (
@@ -140,11 +135,6 @@ $ChapterIntroType: side;
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': 0,
   ),
   CriticalThinking: (
@@ -153,11 +143,6 @@ $ChapterIntroType: side;
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
@@ -231,7 +216,7 @@ $ChapterIntroType: side;
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
-
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 
 //Notes
 @include use('EverydayConnectionNote','carnival:::BoxedNoteShape');
@@ -253,6 +238,7 @@ $ChapterIntroType: side;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

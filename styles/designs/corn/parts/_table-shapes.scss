@@ -200,3 +200,22 @@
         )),
     )
 ));
+
+@include create_shape('corn:::TableFromExercisesShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container--Exercises, (
+                          _components:(
+                            $Table,
+                          ),
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+

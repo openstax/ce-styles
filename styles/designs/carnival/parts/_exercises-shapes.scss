@@ -1,5 +1,4 @@
 @import 'exercises-components';
-@import 'generic-components';
 @import 'lists-components';
 @import 'eoc-components';
 @import 'table-components';
@@ -17,45 +16,9 @@
                         map-merge($Exercise__Problem__Container,(
                             _components:(
                                 $Exercise__ProblemSolution__Paragraph,
-                                map-merge($OrderedList--MarginLeftBottom, (
-                                    _components:(
-                                        map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                            _components:(
-                                                $OrderedList--Nested--MarginLeftBottom,
-                                            ),
-                                        )),
-                                    ),
-                                )),
-                                $UnorderedList--MarginLeftBottom,
-                                map-merge($Container__OrderedList--MarginLeftBottom, (
-                                    _components:(
-                                        $OrderedList--Nested--MarginLeftBottom,
-                                    ),
-                                )),
-                                $Container__UnorderedList--MarginLeftBottom,
                             ),
                         )),
-                        map-merge($Exercise__Problem__Container--WithImageTableOnTop,(
-                            _components:(
-                                $Exercise__ProblemSolution__Paragraph,
-                                map-merge($OrderedList--MarginLeftBottom, (
-                                    _components:(
-                                        map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                            _components:(
-                                                $OrderedList--Nested--MarginLeftBottom,
-                                            ),
-                                        )),
-                                    ),
-                                )),
-                                $UnorderedList--MarginLeftBottom,
-                                map-merge($Container__OrderedList--MarginLeftBottom, (
-                                    _components:(
-                                        $OrderedList--Nested--MarginLeftBottom,
-                                    ),
-                                )),
-                                $Container__UnorderedList--MarginLeftBottom,
-                            ),
-                        )),
+                        $Exercise__Problem__Container--WithImageTableOnTop,
                     ),
                 )),
                 map-merge($Exercise__Solution__Wrapper,(
@@ -75,13 +38,6 @@
         map-merge($ExerciseModule__Container,(
             _components:(
                 $Section--MarginBottom, // added within https://github.com/openstax/cnx-recipes/issues/2013
-                $Section__UnorderedList--MarginLeftBottom,
-                map-merge($Container__OrderedList--MarginLeftBottom, (
-                    _components:(
-                        $OrderedList--Nested--MarginLeftBottom,
-                    ),
-                )),
-                $Section__OrderedList--MarginLeftBottom,
                 map-merge($Exercise__Container, (
                   _components: (
                     map-merge($Exercise__Problem__Wrapper,(
@@ -91,62 +47,9 @@
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
                                     $Exercise__ProblemSolution__Paragraph,
-                                    map-merge($OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                                _components:(
-                                                    $OrderedList--Nested--MarginLeftBottom,
-                                                ),
-                                            )),
-                                        ),
-                                    )),
-                                    $UnorderedList--MarginLeftBottom,
-                                    map-merge($Container__OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            $OrderedList--Nested--MarginLeftBottom,
-                                        ),
-                                    )),
-                                    $Container__UnorderedList--MarginLeftBottom,
                                 ),
                             )),
-                            map-merge($Exercise__Problem__Container--WithImageTableOnTop,(
-                                _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
-                                    map-merge($OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                                _components:(
-                                                    $OrderedList--Nested--MarginLeftBottom,
-                                                ),
-                                            )),
-                                        ),
-                                    )),
-                                    $UnorderedList--MarginLeftBottom,
-                                    map-merge($Container__OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            $OrderedList--Nested--MarginLeftBottom,
-                                        ),
-                                    )),
-                                    $Container__UnorderedList--MarginLeftBottom,
-                                ),
-                            )),
-                            map-merge($Table__Container__Wrapper, (
-                                _components:(
-                                    map-merge($Table, (
-                                        _components:(
-                                            map-merge($Table__Body, (
-                                                _components: (
-                                                    map-merge($Table__Row, (
-                                                        _components: (
-                                                            $Table__Data,
-                                                        ),
-                                                    )),
-                                                )
-                                            )),
-                                        ),
-                                    )),
-                                ),
-                            )),
+                            $Exercise__Problem__Container--WithImageTableOnTop,
                         ),
                     )),
                   )
@@ -160,62 +63,9 @@
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
                                     $Exercise__ProblemSolution__Paragraph,
-                                    map-merge($OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                                _components:(
-                                                    $OrderedList--Nested--MarginLeftBottom,
-                                                ),
-                                            )),
-                                        ),
-                                    )),
-                                    $UnorderedList--MarginLeftBottom,
-                                    map-merge($Container__OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            $OrderedList--Nested--MarginLeftBottom,
-                                        ),
-                                    )),
-                                    $Container__UnorderedList--MarginLeftBottom,
                                 ),
                             )),
-                            map-merge($Exercise__Problem__Container--WithImageTableOnTop,(
-                                _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
-                                    map-merge($OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            map-merge($OrderedList--Nested--MarginLeftBottom, (
-                                                _components:(
-                                                    $OrderedList--Nested--MarginLeftBottom,
-                                                ),
-                                            )),
-                                        ),
-                                    )),
-                                    $UnorderedList--MarginLeftBottom,
-                                    map-merge($Container__OrderedList--MarginLeftBottom, (
-                                        _components:(
-                                            $OrderedList--Nested--MarginLeftBottom,
-                                        ),
-                                    )),
-                                    $Container__UnorderedList--MarginLeftBottom,
-                                ),
-                            )),
-                            map-merge($Table__Container__Wrapper, (
-                                _components:(
-                                    map-merge($Table, (
-                                        _components:(
-                                            map-merge($Table__Body, (
-                                                _components: (
-                                                    map-merge($Table__Row, (
-                                                        _components: (
-                                                            $Table__Data,
-                                                        ),
-                                                    )),
-                                                )
-                                            )),
-                                        ),
-                                    )),
-                                ),
-                            )),
+                            $Exercise__Problem__Container--WithImageTableOnTop,
                         ),
                     )),
                   )

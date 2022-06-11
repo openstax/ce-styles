@@ -77,11 +77,6 @@ $ChapterIntroType: fullWidth;
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
@@ -194,11 +189,12 @@ $ChapterIntroType: fullWidth;
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+
+// Notes
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('EverydayLifeNote', 'carnival:::BoxedNoteShape');
 @include use('PortraitNote', 'carnival:::BoxedNoteShape');
-
-// Notes
 @include use('InterconnectNote', 'carnival:::IconNoteShape');
 @include use('Example', 'carnival:::ExampleShape');
 @include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
@@ -213,6 +209,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

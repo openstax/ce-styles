@@ -111,11 +111,6 @@ ChapterIntro: (
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsCompChapPage:(
@@ -124,11 +119,6 @@ ChapterIntro: (
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   AdditionalProblemsCompChapPage:(
@@ -137,11 +127,6 @@ ChapterIntro: (
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': 0,
   ),
   ChallengeProblemsCompChapPage:(
@@ -150,11 +135,6 @@ ChapterIntro: (
     'Container:::column-gap': 2.4rem,
     'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
     'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
@@ -331,6 +311,7 @@ ChapterIntro: (
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
@@ -342,6 +323,7 @@ ChapterIntro: (
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
