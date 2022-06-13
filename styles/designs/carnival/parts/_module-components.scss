@@ -19,12 +19,12 @@ $Module__Container--WithTwoColumns: (
     ),
 );
 
-$Module__SectionWithoutMargin: (
-  _name: "ModuleSectionWithoutMargin",
-  _subselector: ' > section',
-  _properties: (
-    margin-bottom: 0,
-  )
+$Module__Section--WithMarginBottom:(
+    _name: "ModuleSectionWithMarginBottom",
+    _subselector: " section",
+    _properties:(
+        margin-bottom: enum('ValueSet:::REQUIRED'),
+    )
 );
 
 $ModuleWithIndentation__Para: (
