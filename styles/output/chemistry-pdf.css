@@ -1359,6 +1359,14 @@ a[role=doc-noteref] {
   column-width: auto;
 }
 
+.os-key-equations-container section {
+  margin-bottom: 0;
+}
+
+.os-exercises-container section {
+  margin-bottom: 1.4rem;
+}
+
 .introduction > .os-figure.has-splash {
   margin-bottom: 0.7rem;
 }
@@ -1634,10 +1642,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-eoc.os-key-equations-container section {
-  margin-bottom: 0;
-}
-
 .os-eoc.os-key-equations-container > .key-equations {
   padding: 0;
 }
@@ -1697,10 +1701,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=chapter] > .os-exercises-container {
   margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-exercises-container section {
-  margin-bottom: 1.4rem;
 }
 
 [data-type=chapter] > .os-exercises-container section > ul {
