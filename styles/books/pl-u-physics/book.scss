@@ -88,7 +88,6 @@ ChapterIntro: (
   ),
   EocKeyEquations: (
     _selectors: ("[data-type = 'composite-chapter'] > .os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': 0,
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-v-spacing(1),
     'TableData:::padding-left': table-h-spacing(1),
@@ -101,7 +100,6 @@ ChapterIntro: (
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsCompChapPage:(
     _selectors: (".os-review-problems-container"),
@@ -111,7 +109,6 @@ ChapterIntro: (
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   AdditionalProblemsCompChapPage:(
     _selectors: (".os-review-additional-problems-container"),
@@ -121,7 +118,6 @@ ChapterIntro: (
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   ChallengeProblemsCompChapPage:(
     _selectors: (".os-review-challenge-container"),
@@ -131,7 +127,6 @@ ChapterIntro: (
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -263,6 +258,20 @@ ChapterIntro: (
   ),
 ));
 
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-key-equations-container', '.os-review-additional-problems-container', '.os-review-challenge-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  ModulesWithSectionTitles: (
+    _selectors: ('.os-review-conceptual-questions-container', '.os-review-problems-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -274,6 +283,8 @@ ChapterIntro: (
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

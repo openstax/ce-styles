@@ -133,7 +133,6 @@ $ChapterIntroType: fullWidth;
   ),
   EocKeyEquations:(
     _selectors: (".os-eoc.os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-h-spacing(1),
     'TableData:::padding-left': table-h-spacing(1),
@@ -146,7 +145,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom':  column-v-spacing(1),
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
@@ -156,7 +154,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsCompChapPage:(
     _selectors: (".os-problems-container"),
@@ -166,7 +163,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom':  column-v-spacing(1),
   ),
   PerformanceCompChapPage:(
     _selectors: (".os-performance-container"),
@@ -176,7 +172,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
@@ -186,7 +181,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
@@ -196,7 +190,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ExtendedResponseCompChapPage:(
     _selectors: (".os-extended-response-container"),
@@ -206,7 +199,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
 
@@ -268,6 +260,15 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesWithSectionTitles: (
+    _selectors: ('.os-key-equations-container', '.os-concept-container', '.os-critical-thinking-container',
+                 '.os-problems-container', '.os-performance-container', '.os-multiple-choice-container',
+                 '.os-short-answer-container', '.os-extended-response-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
+  ),
+));
+
 // @use
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -280,6 +281,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

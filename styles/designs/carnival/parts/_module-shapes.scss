@@ -7,6 +7,19 @@
     )
 ));
 
+// Use for EOC modules. Margin bottom of section depends on existance
+// of section title links.
+
+@include create_shape('carnival:::ModuleWithCustomSectionShape', (
+    _components: (
+      map-merge($Module__Container,(
+            _components:(
+                $Module__Section--WithMarginBottom
+            ),
+        )),
+    )
+));
+
 // This shape can be used to style References with sections and paragraphs.
 // There are also References with notes that have citation links within chapters.
 // There are no such cases in this theme at this moment.

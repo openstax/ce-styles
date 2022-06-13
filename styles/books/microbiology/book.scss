@@ -101,7 +101,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
@@ -111,7 +110,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
@@ -121,7 +119,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   FillInTheBlankCompChapPage:(
     _selectors: (".os-fill-in-the-blank-container"),
@@ -131,7 +128,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   MatchingCompChapPage:(
     _selectors: (".os-matching-container"),
@@ -141,7 +137,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   TrueFalseCompChapPage:(
     _selectors: (".os-true-false-container"),
@@ -151,7 +146,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -211,6 +205,14 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-multiple-choice-container', '.os-critical-thinking-container', '.os-short-answer-container',
+                 '.os-fill-in-the-blank-container', '.os-matching-container', '.os-true-false-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TOC', 'carnival:::NoUnitToc');
@@ -226,6 +228,7 @@ $ChapterIntroType: fullWidth;
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

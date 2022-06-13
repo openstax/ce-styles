@@ -1,7 +1,6 @@
 @import '_eoc-components';
 @import '_table-components';
 @import 'lists-components';
-@import 'generic-components';
 @import 'wrappers-components';
 
 
@@ -11,7 +10,6 @@
     _components:(
         map-merge($Eoc__Container,(
             _components:(
-                $Section--MarginBottom,
                 map-merge($KeyEquations, (
                     _components: (
                         map-merge($KeyEquations__Table__Container, (
