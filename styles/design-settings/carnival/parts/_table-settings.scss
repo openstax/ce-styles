@@ -142,7 +142,7 @@
 
 // Tables from exercises
 @include add_settings((
-    TableFromEoCExercises:(
+    TableFromEoCExercises:( // Only needed for EoC Multicolumn Exercises
       _selectors: ('.os-eoc [data-type="problem"]', '.os-eoc [data-type="exercise-question"]'),
       'Table:::max-width': 100%,
       'Table:::table-layout': fixed,

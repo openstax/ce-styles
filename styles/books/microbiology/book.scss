@@ -215,13 +215,13 @@ $ChapterIntroType: fullWidth;
 // EOC
 @include use('EocSummary', 'carnival:::EocSummary');
 
-// Exercises
-@include use('MultipleChoiceCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('CriticalThinkingCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('ShortAnswerCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('FillInTheBlankCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('MatchingCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('TrueFalseCompChapPage','carnival:::ExerciseEoCModuleShape');
+// EoC Exercises
+@include use('MultipleChoiceCompChapPage','carnival:::ExerciseModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExerciseModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExerciseModuleShape');
+@include use('FillInTheBlankCompChapPage','carnival:::ExerciseModuleShape');
+@include use('MatchingCompChapPage','carnival:::ExerciseModuleShape');
+@include use('TrueFalseCompChapPage','carnival:::ExerciseModuleShape');
 
 // Notes
 @include use('ClinicalFocusNote', 'carnival:::BoxedNoteShape');

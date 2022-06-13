@@ -73,6 +73,7 @@ $ChapterIntroType: fullWidth;
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
   ),
+
   ConceptualQuestions: (
     _selectors: ("[data-type = 'chapter'] > .os-conceptual-questions-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -140,7 +141,6 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseContentModuleShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
@@ -169,8 +169,10 @@ $ChapterIntroType: fullWidth;
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary');
-@include use('ConceptualQuestions','carnival:::ExerciseEoCModuleShape');
-@include use('ProblemsExercises','carnival:::ExerciseEoCModuleShape');
+
+// EoC Exercises
+@include use('ConceptualQuestions','carnival:::ExerciseModuleShape');
+@include use('ProblemsExercises','carnival:::ExerciseModuleShape');
 
 // Notes
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');

@@ -214,9 +214,11 @@ $ChapterIntroType: fullWidth;
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary');
-@include use('InteractiveExercise', 'carnival:::ExerciseEoCModuleShape');
-@include use('MultipleChoice', 'carnival:::ExerciseEoCModuleShape');
-@include use('FreeResponse', 'carnival:::ExerciseEoCModuleShape');
+
+// EoC Exercises
+@include use('InteractiveExercise', 'carnival:::ExerciseModuleShape');
+@include use('MultipleChoice', 'carnival:::ExerciseModuleShape');
+@include use('FreeResponse', 'carnival:::ExerciseModuleShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');

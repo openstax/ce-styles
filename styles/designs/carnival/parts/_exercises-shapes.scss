@@ -3,41 +3,10 @@
 @import 'eoc-components';
 @import 'table-components';
 
-@include create_shape('carnival:::ExerciseContentModuleShape',( // present in physics books (collge physics, college-physics for ap courses, hs physics)
-    _components:(
-        map-merge($ExerciseModule__Container,(
-          _components:(
-            map-merge($Exercise__Container,(
-            _components:(
-                map-merge($Exercise__Problem__Wrapper,(
-                    _components:(
-                        $Exercise__ProblemSolution__Number,
-                        $Exercise__ProblemSolution__Divider,
-                        map-merge($Exercise__Problem__Container,(
-                            _components:(
-                                $Exercise__ProblemSolution__Paragraph,
-                            ),
-                        )),
-                        $Exercise__Problem__Container--WithImageTableOnTop,
-                    ),
-                )),
-                map-merge($Exercise__Solution__Wrapper,(
-                    _components:(
-                        $SolutionTitle // present in hs physics
-                    ),
-                )),
-              )
-            )),
-          )
-        )),
-      )
-));
-
-@include create_shape('carnival:::ExerciseEoCModuleShape',(
+@include create_shape('carnival:::ExerciseModuleShape',(
     _components:(
         map-merge($ExerciseModule__Container,(
             _components:(
-                $Section--MarginBottom, // added within https://github.com/openstax/cnx-recipes/issues/2013
                 map-merge($Exercise__Container, (
                   _components: (
                     map-merge($Exercise__Problem__Wrapper,(
@@ -51,6 +20,11 @@
                             )),
                             $Exercise__Problem__Container--WithImageTableOnTop,
                         ),
+                    )),
+                    map-merge($Exercise__Solution__Wrapper,(
+                      _components:(
+                          $SolutionTitle // present only in hs physics
+                      ),
                     )),
                   )
                 )),

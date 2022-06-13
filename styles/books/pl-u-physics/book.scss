@@ -288,11 +288,11 @@ ChapterIntro: (
 @include use('EocSummary','carnival:::EocSummary');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 
-// Exercises
-@include use('ConceptualQuestionsCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('ProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('AdditionalProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
-@include use('ChallengeProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');
+// EoC Exercises
+@include use('ConceptualQuestionsCompChapPage','carnival:::ExerciseModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExerciseModuleShape');
+@include use('AdditionalProblemsCompChapPage','carnival:::ExerciseModuleShape');
+@include use('ChallengeProblemsCompChapPage','carnival:::ExerciseModuleShape');
 
 // Tables
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');

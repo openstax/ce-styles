@@ -198,9 +198,11 @@ $ChapterIntroType: side;
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
-@include use('VisualExercise', 'carnival:::ExerciseEoCModuleShape');
-@include use('MultipleChoice', 'carnival:::ExerciseEoCModuleShape');
-@include use('CriticalThinking', 'carnival:::ExerciseEoCModuleShape');
+
+// EoC Exercises
+@include use('VisualExercise', 'carnival:::ExerciseModuleShape');
+@include use('MultipleChoice', 'carnival:::ExerciseModuleShape');
+@include use('CriticalThinking', 'carnival:::ExerciseModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');

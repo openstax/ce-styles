@@ -1581,10 +1581,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-visual-exercise-container section {
-  margin-bottom: 0;
-}
-
 [data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -1614,6 +1610,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 [data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] {
@@ -1651,10 +1653,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-multiple-choice-container section {
-  margin-bottom: 0;
-}
-
 [data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -1684,6 +1682,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 [data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] {
@@ -1721,10 +1725,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-critical-thinking-container section {
-  margin-bottom: 0;
-}
-
 [data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -1754,6 +1754,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 [data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] {
