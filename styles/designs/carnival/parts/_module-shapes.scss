@@ -12,7 +12,7 @@
 
 @include create_shape('carnival:::ModuleWithCustomSectionShape', (
     _components: (
-      map-merge($Module__Container,(
+      map-merge($Module__Container--WithoutMargin,(
             _components:(
                 $Module__Section--WithMarginBottom
             ),
