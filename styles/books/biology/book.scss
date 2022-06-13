@@ -109,23 +109,11 @@ $ChapterIntroType: side;
 
 //Can we convert those into group settings? A mixin? Something to DRY it.
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   VisualExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-visual-exercise-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -136,9 +124,6 @@ $ChapterIntroType: side;
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -149,9 +134,6 @@ $ChapterIntroType: side;
   ),
   CriticalThinking: (
     _selectors: ("[data-type = 'chapter'] > .os-critical-thinking-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -195,6 +177,13 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-summary-container',
+                 '.os-visual-exercise-container', '.os-multiple-choice-container', '.os-critical-thinking-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -204,6 +193,7 @@ $ChapterIntroType: side;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');
@@ -222,7 +212,7 @@ $ChapterIntroType: side;
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 
 //EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('VisualExercise', 'carnival:::EOCAssesmentsShape');
 @include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');

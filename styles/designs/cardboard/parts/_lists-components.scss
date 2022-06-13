@@ -95,3 +95,28 @@ $UnorderedList__Item--AppendixGlossary: (
   )
 );
 
+// Lists of type A
+// Used in section Collaborative Group Activities from Astronomy
+$OrderedList--TypeA: (
+    _name: "TypeAOrderedListList",
+    _subselector: ' > ol[type="A"]',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$OrderedList--TypeA__Item: (
+    _name: "TypeAOrderedListItem",
+    _subselector: ' > li',
+    _properties:(
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$OrderedList--TypeA__Marker: (
+    _name: "TypeAOrderedListMarker",
+    _subselector: '::marker',
+    _properties:(
+        font-weight: bold,
+    )
+);

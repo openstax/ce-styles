@@ -1,0 +1,16 @@
+@import '_keyterms-components';
+
+@include create_shape('carnival:::KeyTermsShape',(
+    _components:(
+        map-merge($KeyTerms__Container,(
+            _components:(
+                map-merge($KeyTerms__List,(
+                    _components:(
+                        $KeyTerms__Term,
+                        $KeyTerms__Definition,
+                    ),
+                )),
+            ),
+        )),
+    )
+));

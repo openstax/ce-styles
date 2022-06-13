@@ -1,6 +1,6 @@
 @import '../biology/book';
 
-@include add_settings(( 
+@include add_settings((
   ColumnHeaderTable: (
     _selectors: ('.os-table.os-column-header-container'),
     'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::biologyTableColor"),
@@ -16,12 +16,9 @@
   ),
 ));
 
-@include add_settings(( 
+@include add_settings((
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -32,9 +29,6 @@
 ),
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -45,9 +39,6 @@
 ),
   SciencePractice: (
     _selectors: ("[data-type = 'chapter'] > .os-science-practice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -81,7 +72,14 @@
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container'),
+  ),
+));
+
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Notes
 @include use('APSciencePractices','carnival:::IconNoteShape');

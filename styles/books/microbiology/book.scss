@@ -92,15 +92,9 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -111,9 +105,6 @@ $ChapterIntroType: fullWidth;
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -124,9 +115,6 @@ $ChapterIntroType: fullWidth;
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -137,9 +125,6 @@ $ChapterIntroType: fullWidth;
   ),
   FillInTheBlankCompChapPage:(
     _selectors: (".os-fill-in-the-blank-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -150,9 +135,6 @@ $ChapterIntroType: fullWidth;
   ),
   MatchingCompChapPage:(
     _selectors: (".os-matching-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -163,9 +145,6 @@ $ChapterIntroType: fullWidth;
   ),
   TrueFalseCompChapPage:(
     _selectors: (".os-true-false-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
@@ -224,6 +203,14 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-summary-container', '.os-multiple-choice-container',
+                 '.os-critical-thinking-container', '.os-short-answer-container', '.os-fill-in-the-blank-container',
+                 '.os-matching-container', '.os-true-false-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TOC', 'carnival:::NoUnitToc');
@@ -238,6 +225,7 @@ $ChapterIntroType: fullWidth;
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('Equation', 'carnival:::EquationShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

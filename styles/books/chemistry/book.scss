@@ -53,12 +53,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocKeyEquations:(
     _selectors: (".os-eoc.os-key-equations-container"),
     'SectionMarginBottom:::margin-bottom': 0,
@@ -68,9 +62,6 @@ $ChapterIntroType: fullWidth;
   ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   Exercises:(
     _selectors: ("[data-type = 'chapter'] > .os-exercises-container"),
@@ -148,15 +139,9 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-// Revert two column layout in Preface
 @include add_settings((
-  Preface: (
-    _selectors: (" "),
-    'PrefaceContainer:::column-count': 1,
-  ),
-  PageTitles: (
-      _selectors: ('[data-type="page"]:not(.introduction)'),
-      'PrefaceContainer:::column-count': 1,
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.os-summary-container'),
   ),
 ));
 
@@ -169,6 +154,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('ContentExercises','carnival:::ExerciseShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -188,7 +174,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('Exercises','carnival:::EOCAssesmentsShape');
