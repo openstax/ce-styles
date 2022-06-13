@@ -1177,12 +1177,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   display: none;
 }
 
-.preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
 .preface > ul {
   margin-left: 24px;
 }
@@ -1241,48 +1235,81 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   color: #00819A;
 }
 
-:not(.os-note-body) > [data-type=exercise] {
+.preface {
   margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] {
-  display: table;
+.os-glossary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  width: 2%;
-  text-align: right;
+.os-summary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
+.os-key-equations-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container {
-  display: table-cell;
-  width: 100%;
+.os-concept-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > p {
-  margin-bottom: 0;
+.os-critical-thinking-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
+.os-problems-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=solution] > .solution-title {
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+.os-performance-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-multiple-choice-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-short-answer-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-extended-response-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1749,34 +1776,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-[data-type=chapter] > .os-glossary-container {
-  margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-[data-type=chapter] > .os-glossary-container > dl {
+.os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
 }
 
-[data-type=chapter] > .os-glossary-container > dl > dt {
+.os-glossary-container > dl > dt {
   font-weight: bold;
   padding-right: 8px;
   display: inline;
 }
 
-[data-type=chapter] > .os-glossary-container > dl > dd {
+.os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
 }
 
 [data-type=chapter] > .os-summary-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=chapter] > .os-summary-container > section > ul {
@@ -1809,9 +1826,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-key-equations-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-eoc.os-key-equations-container section {
@@ -1841,6 +1855,50 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
+}
+
+:not(.os-note-body) > [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] {
+  display: table;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+:not(.os-note-body) > [data-type=exercise] [data-type=exercise] [data-type=solution] > .solution-title {
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .os-concept-container {
@@ -2985,12 +3043,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 300;
   text-transform: none;
   display: block;
-}
-
-[data-type=page]:not(.introduction).preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {

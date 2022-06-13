@@ -214,6 +214,9 @@ $bandColor: #093D4C;
 @include use('EverydayExercises', 'corn:::MultipleColumnExercisesModuleShape'); // two columns
 
 //EoC
-@include use('KeyTerm','corn:::EocKeyTerm');
+@include use('KeyTerms','corn:::KeyTermsShape');
+
+// EoC Exercises
 @include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
 @include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');
+

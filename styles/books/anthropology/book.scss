@@ -109,25 +109,20 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-section-summary-container',
+                 '.os-critical-thinking-container'),
   ),
 ));
 
@@ -138,6 +133,7 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 //Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -175,7 +171,7 @@ $ChapterIntroType: fullWidth;
 @include use('MediaPodcast', 'carnival:::IconCondensedShape');
 
 // Eoc
-@include use('KeyTerm', 'carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary'); // Can be removed after lists clean up in carnival theme
 @include use('CriticalThinking', 'carnival:::ExerciseEoCModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');

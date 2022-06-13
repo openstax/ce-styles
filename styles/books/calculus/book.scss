@@ -146,9 +146,6 @@ $bandColor: #093D4C;
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
-//Exercises
-@include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
-
 //Titles
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -176,12 +173,16 @@ $bandColor: #093D4C;
 @include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
 
 //EoC
-@include use('KeyTerm','corn:::EocKeyTerm');
-@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('KeyTerms','corn:::KeyTermsShape');
+
+// Exercises from Example
+@include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
 
 //Section Exercises
 @include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
 
+// EoC Exercises
+@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');

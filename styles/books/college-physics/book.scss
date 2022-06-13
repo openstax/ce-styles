@@ -70,31 +70,16 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   ConceptualQuestions: (
     _selectors: ("[data-type = 'chapter'] > .os-conceptual-questions-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsExercises: (
     _selectors: ("[data-type = 'chapter'] > .os-problems-exercises-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
@@ -141,6 +126,13 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-section-summary-container',
+                 '.os-conceptual-questions-container', '.os-problems-exercises-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -150,6 +142,7 @@ $ChapterIntroType: fullWidth;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('ContentExercises','carnival:::ExerciseContentModuleShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -174,7 +167,7 @@ $ChapterIntroType: fullWidth;
 @include use('NumberedEquation', 'carnival:::NumberedEquationShape');
 
 // EOC
-@include use('KeyTerm', 'carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary');
 @include use('ConceptualQuestions','carnival:::ExerciseEoCModuleShape');
 @include use('ProblemsExercises','carnival:::ExerciseEoCModuleShape');

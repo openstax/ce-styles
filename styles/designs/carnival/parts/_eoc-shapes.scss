@@ -5,22 +5,7 @@
 @import 'wrappers-components';
 
 
-//4 main shapes are used for the EOC. Key Terms, Summary, Key Equations and Exerises (from the exercise shapes).
-
-@include create_shape('carnival:::EocKeyTerm',(
-    _components:(
-        map-merge($Eoc__Container,(
-            _components:(
-                map-merge($Term--DL,(
-                    _components:(
-                        $Term--DT,
-                        $Term--DD,
-                    ),
-                )),
-            ),
-        )),
-    ))
-);
+//4 main shapes are used for the EOC. Summary, Key Equations and Exerises (from the exercise shapes).
 
 @include create_shape('carnival:::EocKeyEquations',(
     _components:(

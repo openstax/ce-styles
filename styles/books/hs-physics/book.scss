@@ -128,23 +128,11 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   EocKeyEquations:(
     _selectors: (".os-eoc.os-key-equations-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-h-spacing(1),
@@ -152,57 +140,36 @@ $ChapterIntroType: fullWidth;
   ),
   ConceptCompChapPage:(
     _selectors: (".os-concept-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom':  column-v-spacing(1),
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsCompChapPage:(
     _selectors: (".os-problems-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom':  column-v-spacing(1),
   ),
   PerformanceCompChapPage:(
     _selectors: (".os-performance-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ExtendedResponseCompChapPage:(
     _selectors: (".os-extended-response-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
@@ -256,6 +223,16 @@ $ChapterIntroType: fullWidth;
     'H3Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
   ),
 ));
+
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-summary-container',
+                 '.os-key-equations-container', '.os-concept-container', '.os-critical-thinking-container',
+                 '.os-problems-container', '.os-performance-container', '.os-multiple-choice-container',
+                 '.os-short-answer-container', '.os-extended-response-container'),
+  ),
+));
+
 // @use
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -266,7 +243,7 @@ $ChapterIntroType: fullWidth;
 @include use('TeacherMaterial', 'common:::Hidden');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
-@include use('ContentExercises','carnival:::ExerciseContentModuleShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -292,9 +269,12 @@ $ChapterIntroType: fullWidth;
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 
 // EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
+
+// Exercises
+@include use('ContentExercises','carnival:::ExerciseContentModuleShape');
 @include use('ConceptCompChapPage','carnival:::ExerciseEoCModuleShape');
 @include use('CriticalThinkingCompChapPage','carnival:::ExerciseEoCModuleShape');
 @include use('ProblemsCompChapPage','carnival:::ExerciseEoCModuleShape');

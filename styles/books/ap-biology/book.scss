@@ -19,25 +19,16 @@
 @include add_settings((
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': 0,
 ),
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': 0,
 ),
   SciencePractice: (
     _selectors: ("[data-type = 'chapter'] > .os-science-practice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'SectionMarginBottom:::margin-bottom': 0,
 ),
@@ -66,7 +57,14 @@
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container'),
+  ),
+));
+
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 
 // Notes
 @include use('APSciencePractices','carnival:::IconNoteShape');

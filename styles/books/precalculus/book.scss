@@ -170,7 +170,9 @@ $ChapterIntroType: fullWidth;
 @include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
 
 //EoC
-@include use('KeyTerm','corn:::EocKeyTerm');
+@include use('KeyTerms','corn:::KeyTermsShape');
+
+// EoC Exercises
 @include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
 @include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');
 
