@@ -115,17 +115,14 @@ $ChapterIntroType: side;
   VisualExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-visual-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   CriticalThinking: (
     _selectors: ("[data-type = 'chapter'] > .os-critical-thinking-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -169,6 +166,13 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-visual-exercise-container', '.os-multiple-choice-container', '.os-critical-thinking-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -178,6 +182,7 @@ $ChapterIntroType: side;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');

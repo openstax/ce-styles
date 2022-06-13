@@ -115,7 +115,6 @@ $ChapterIntroType: fullWidth;
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -123,6 +122,13 @@ $ChapterIntroType: fullWidth;
   TwoColumnsModules: (
     _selectors: ('.preface', '.os-glossary-container', '.os-section-summary-container',
                  '.os-critical-thinking-container'),
+  ),
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-critical-thinking-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -134,6 +140,7 @@ $ChapterIntroType: fullWidth;
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 //Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

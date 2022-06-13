@@ -77,12 +77,10 @@ $ChapterIntroType: fullWidth;
   ConceptualQuestions: (
     _selectors: ("[data-type = 'chapter'] > .os-conceptual-questions-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
   ProblemsExercises: (
     _selectors: ("[data-type = 'chapter'] > .os-problems-exercises-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
 
@@ -134,6 +132,13 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesWithSectionTitles: (
+    _selectors: ('.os-conceptual-questions-container', '.os-problems-exercises-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -143,6 +148,7 @@ $ChapterIntroType: fullWidth;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

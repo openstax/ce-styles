@@ -55,7 +55,6 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocKeyEquations:(
     _selectors: (".os-eoc.os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': 0,
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-h-spacing(1),
     'TableData:::padding-left': table-h-spacing(1),
@@ -68,7 +67,6 @@ $ChapterIntroType: fullWidth;
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
 
@@ -140,6 +138,20 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-key-equations-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  ModulesWithSectionTitles: (
+    _selectors: ('.os-exercises-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 
 // Book specific styles
@@ -149,6 +161,8 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

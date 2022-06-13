@@ -5,7 +5,6 @@
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'SectionMarginBottom:::margin-bottom': 0,
 ),
 ));
 
@@ -15,5 +14,13 @@
   ),
 ));
 
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-ap-test-prep-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 @include use('TestPrep', 'carnival:::ExerciseModuleShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
