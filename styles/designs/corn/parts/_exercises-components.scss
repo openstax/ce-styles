@@ -256,7 +256,7 @@ $Exercises_ParagraphTitle: ( // should be styled in multi molumn exercises
         font-size: font-scale(0),
         line-height: line-height(0),
         margin-top: enum('ValueSet:::OPTIONAL'),
-        font-style: normal,
+        font-style: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
     )
 );
 

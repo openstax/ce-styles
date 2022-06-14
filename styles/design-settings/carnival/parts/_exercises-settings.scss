@@ -1,6 +1,6 @@
 @include add_settings((
     ModuleExercises: ( // present only in HS Physics
-        _selectors: ('[data-type="page"] :not(.os-note-body) > [data-type="exercise"]', '[data-type="page"] :not(.os-note-body) > [data-type="injected-exercise"]'),
+        _selectors: ('[data-type="page"] :not(.os-note-body)'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
