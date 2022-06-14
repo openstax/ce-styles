@@ -276,16 +276,16 @@ $ChapterIntroType: fullWidth;
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 
 // Exercises
-@include use('ContentExercises','carnival:::ExerciseModuleShape');
+@include use('ModuleExercises','carnival:::ExercisesModuleShape');
 
 // EoC Exercises
-@include use('ConceptCompChapPage','carnival:::ExerciseModuleShape');
-@include use('CriticalThinkingCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ProblemsCompChapPage','carnival:::ExerciseModuleShape');
-@include use('PerformanceCompChapPage','carnival:::ExerciseModuleShape');
-@include use('MultipleChoiceCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ShortAnswerCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ExtendedResponseCompChapPage','carnival:::ExerciseModuleShape');
+@include use('ConceptCompChapPage','carnival:::ExercisesModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('PerformanceCompChapPage','carnival:::ExercisesModuleShape');
+@include use('MultipleChoiceCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ExtendedResponseCompChapPage','carnival:::ExercisesModuleShape');
 
 // Notes
 @include use('VirtualPhysicsNote', 'carnival:::BoxedNoteShape');
@@ -309,7 +309,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB

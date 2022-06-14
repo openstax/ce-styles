@@ -43,7 +43,7 @@
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
     ),
-)); 
+));
 
 //Section Exercises, EoC exercises, AnswerKey solutions lists for parts with 3 column layout
 @include add_settings((
@@ -53,8 +53,20 @@
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
     ),
+    SectionInjectedExercisesQuestionLists: (
+        _selectors: ('.os-eos.os-section-exercises-container [data-type="exercise-question"]'),
+        CircledListTokenMultiColumn: (
+            color: (_ref: 'colorMap:::circledListTokenColor'),
+        ),
+    ),
     EOCExercisesProblemLists: (
         _selectors: ('.os-eoc.os-exercises-container [data-type="problem"]'),
+        CircledListTokenMultiColumn: (
+            color: (_ref: 'colorMap:::circledListTokenColor'),
+        ),
+    ),
+    EOCInjectedExercisesQuestionLists: (
+        _selectors: ('.os-eoc.os-exercises-container [data-type="exercise-question"]'),
         CircledListTokenMultiColumn: (
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),

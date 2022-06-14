@@ -1,5 +1,5 @@
 @include add_settings((
-    ThreeColumnsModuleExercises: ( // Used with ThreeColumnsExercisesModuleShape
+    ThreeColumnsModuleExercises: ( // Three Column Exercise Module
         _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises > section'),
         ExerciseContainer: (
             width: 29%,
@@ -8,10 +8,13 @@
         ExercisesParagraphTitle: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
         ),
         ExercisesParagraphTitleItalic: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
+            font-style: italic,
         ),
         ProblemSolutionNumber: (
             color: black,
@@ -20,7 +23,7 @@
 ));
 
 @include add_settings((
-    WritingExercises: ( // Used with TwoColumnsExercisesModuleShape
+    WritingExercises: (  // Two Column Exercise Module
         _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises > section.writing'),
         ExerciseContainer: (
             width: 48%,
@@ -29,10 +32,13 @@
         ExercisesParagraphTitle: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
         ),
         ExercisesParagraphTitleItalic: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
+            font-style: italic,
         ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
@@ -50,10 +56,13 @@
         ExercisesParagraphTitle: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
         ),
         ExercisesParagraphTitleItalic: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
+            font-style: italic,
         ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
@@ -71,10 +80,13 @@
         ExercisesParagraphTitle: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
         ),
         ExercisesParagraphTitleItalic: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
+            font-style: italic,
         ),
         ProblemSolutionNumber: (
             color: black,
@@ -92,10 +104,13 @@
         ExercisesParagraphTitle: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
         ),
         ExercisesParagraphTitleItalic: (
             font-family: (_ref: 'typography:::baseFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
+            margin-top: v-spacing(1),
+            font-style: italic,
         ),
         ProblemSolutionNumber: (
             color: black,
@@ -104,7 +119,7 @@
 ));
 
 // Used in Statistics
-@include add_settings((
+@include add_settings(( // One Column Exercise Module
     Practice: (
         _selectors: ('.os-eoc.os-practice-container'),
         ProblemSolutionNumber: (
@@ -140,7 +155,7 @@
 ));
 
 // Used in Additive Manufacturing
-@include add_settings((
+@include add_settings(( // One Column Exercise Module
     ReviewQuestions: (
         _selectors: ('.os-eoc.os-review-questions-container'),
         ProblemSolutionNumber: (

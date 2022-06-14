@@ -105,9 +105,6 @@ $ChapterIntroType: side;
   ),
 ));
 
-//EOC, define colors and column layout for all eoc sections here.This should be treated exactly like notes, where we use generic components and book specfic setting for each one of them. There is quite a bit of repetion but this keeps everything cleanly in here and follows the same principles as the notes.
-
-//Can we convert those into group settings? A mixin? Something to DRY it.
 @include add_settings((
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
@@ -205,9 +202,9 @@ $ChapterIntroType: side;
 @include use('EocSummary','carnival:::EocSummary');
 
 // EoC Exercises
-@include use('VisualExercise', 'carnival:::ExerciseModuleShape');
-@include use('MultipleChoice', 'carnival:::ExerciseModuleShape');
-@include use('CriticalThinking', 'carnival:::ExerciseModuleShape');
+@include use('VisualExercise', 'carnival:::ExercisesModuleShape');
+@include use('MultipleChoice', 'carnival:::ExercisesModuleShape');
+@include use('CriticalThinking', 'carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
@@ -235,7 +232,7 @@ $ChapterIntroType: side;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB

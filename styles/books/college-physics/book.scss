@@ -177,8 +177,8 @@ $ChapterIntroType: fullWidth;
 @include use('EocSummary', 'carnival:::EocSummary');
 
 // EoC Exercises
-@include use('ConceptualQuestions','carnival:::ExerciseModuleShape');
-@include use('ProblemsExercises','carnival:::ExerciseModuleShape');
+@include use('ConceptualQuestions','carnival:::ExercisesModuleShape');
+@include use('ProblemsExercises','carnival:::ExercisesModuleShape');
 
 // Notes
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
@@ -188,7 +188,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 //Titles

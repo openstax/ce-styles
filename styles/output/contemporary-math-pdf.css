@@ -3168,7 +3168,18 @@ li > table {
 }
 
 section.check-understanding {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+section.check-understanding > p > [data-effect=bold] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+
+section.check-understanding > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 section.check-understanding [data-type=exercise] {
@@ -3205,14 +3216,6 @@ section.check-understanding [data-type=exercise] [data-type=problem] .os-problem
   padding-right: 0.7rem;
 }
 
-section.check-understanding [data-type=exercise] [data-type=problem] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-section.check-understanding [data-type=exercise] [data-type=problem] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
 section.check-understanding [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3221,6 +3224,55 @@ section.check-understanding [data-type=exercise] [data-type=problem] .os-problem
 }
 
 section.check-understanding [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 1.4rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding-right: 0.7rem;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+section.check-understanding [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;
@@ -3286,7 +3338,18 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 [data-type=note].your-turn {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note].your-turn > p > [data-effect=bold] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+
+[data-type=note].your-turn > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 [data-type=note].your-turn [data-type=exercise] {
@@ -3321,14 +3384,6 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
   padding-right: 0.7rem;
 }
 
-[data-type=note].your-turn [data-type=exercise] [data-type=problem] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=note].your-turn [data-type=exercise] [data-type=problem] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
 [data-type=note].your-turn [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3337,6 +3392,53 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 [data-type=note].your-turn [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 1.4rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding-right: 0.7rem;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+[data-type=note].your-turn [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;
@@ -3400,7 +3502,18 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eos.os-section-exercises-container > section.section-exercises {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises > p > [data-effect=bold] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise] {
@@ -3437,14 +3550,6 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
   padding-right: 0.7rem;
 }
 
-.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise] [data-type=problem] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise] [data-type=problem] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
 .os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3453,6 +3558,55 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 1.4rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding-right: 0.7rem;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;
@@ -3518,7 +3672,18 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eoc.os-chapter-test-container > .chapter-test {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test > p > [data-effect=bold] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise] {
@@ -3555,14 +3720,6 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
   padding-right: 0.7rem;
 }
 
-.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise] [data-type=problem] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise] [data-type=problem] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
 .os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3571,6 +3728,55 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 1.4rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding-right: 0.7rem;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-test-container > .chapter-test [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;
@@ -3636,7 +3842,18 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eoc.os-chapter-review-container > .chapter-review {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review > p > [data-effect=bold] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise] {
@@ -3673,14 +3890,6 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
   padding-right: 0.7rem;
 }
 
-.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise] [data-type=problem] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise] [data-type=problem] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
 .os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3689,6 +3898,55 @@ section.check-understanding [data-type=injected-exercise][data-is-multipart=True
 }
 
 .os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 1.4rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding-right: 0.7rem;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.os-eoc.os-chapter-review-container > .chapter-review [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;

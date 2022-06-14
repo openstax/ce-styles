@@ -1,14 +1,3 @@
-$Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
-$InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');
-
-$Section--MarginBottom:(
-    _name: "SectionMarginBottom",
-    _subselector: " section",
-    _properties:(
-        margin-bottom: enum('ValueSet:::REQUIRED'),
-    )
-);
-
 $ExerciseModule__Container: (
     _name: "ExerciseModuleContainer",
     _subselector: "",
@@ -16,6 +5,9 @@ $ExerciseModule__Container: (
         margin-bottom: v-spacing(1),
     ),
 );
+
+$Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
+$InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');
 
 // Problem component
 $Exercise__Problem__Wrapper: (
@@ -103,8 +95,8 @@ $Exercise__ProblemSolution__Number: (
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
-    width:  enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
-    text-align: enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
+    width:  enum('ValueSet:::OPTIONAL'), // used in one column exercises, answer key
+    text-align: enum('ValueSet:::OPTIONAL'), // used in one column exercises, answer key
   )
 );
 

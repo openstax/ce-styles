@@ -148,9 +148,12 @@ $ChapterIntroType: fullWidth;
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 @include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
 //Tables
@@ -167,14 +170,14 @@ $ChapterIntroType: fullWidth;
 @include use('NoClassNote', 'corn:::BoxedNoteShape');
 
 //Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
 
 // EoC Exercises
-@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
-@include use('PracticeTest', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('ReviewExercises', 'corn:::ExercisesModuleShape'); // three columns
+@include use('PracticeTest', 'corn:::ExercisesModuleShape'); // three columns
 
 //EOB
 @include use('AnswerKeyNestedSolutionAreas', 'corn:::AnswerKeyWithNestedSolutionAreasShape');

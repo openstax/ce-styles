@@ -1,15 +1,14 @@
 @import 'exercises-components';
-@import 'lists-components';
 @import 'figureimage-components';
 @import 'table-components';
 @import 'titles-components';
 
-@include create_shape('corn:::MultipleColumnExercisesModuleShape',(
+@include create_shape('corn:::ExercisesModuleShape',(
     _components: (
         map-merge($ExercisesModule__Container, (
             _components: (
-                $Exercises_Paragraph__Title,
-                $Exercises_Paragraph__Title--Italic,
+                $Exercises_ParagraphTitle,
+                $Exercises_ParagraphTitle--Italic,
                 map-merge($Exercise__Container,(
                     _components:(
                         map-merge($Exercise__Problem__Wrapper,(
@@ -63,55 +62,7 @@
                         )),
                     )
                 )),
-
-            )
-        )),
-    )
-));
-
-@include create_shape('corn:::OneColumnExercisesModuleShape',( // used in statistics, contemporary math where the para outsie exercise are not italisized in styles (just <em> text inside is by defult)
-    _components: (
-        map-merge($ExercisesModule__Container, (
-            _components: (
-                map-merge($Exercise__Container,(
-                    _components:(
-                        map-merge($Exercise__Problem__Wrapper,(
-                            _components:(
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Problem__Container,(
-                                    _components:(
-                                        $Exercise__ProblemSolution__Paragraph,
-                                        $UnorderedList--FirstLevel,
-                                        $OrderedList--FirstLevel,
-                                    )
-                                )),
-                               $Exercise__Problem__Container--WithImageTableOnTop,
-                               $Exercise__Problem__Container--WithInlineListOnTop,
-                            )
-                        )),
-                    )
-                )),
-                map_merge($InjectedExercise__Container, (
-                    _components: (
-                        map_merge($InjectedExercise__Question__Wrapper, (
-                            _components:(
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Problem__Container,(
-                                    _components:(
-                                        $Exercise__ProblemSolution__Paragraph,
-                                        $UnorderedList--FirstLevel,
-                                        $OrderedList--FirstLevel,
-                                    )
-                                )),
-                                $Exercise__Problem__Container--WithImageTableOnTop,
-                                $Exercise__Problem__Container--WithInlineListOnTop,
-                            )
-                        ))
-                    )
-                )),
-                $InjectedExercise--Multipart__QuestionIndent,
+                $InjectedExercise--Multipart__QuestionIndent
             )
         )),
     )

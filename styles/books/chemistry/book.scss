@@ -187,7 +187,7 @@ $ChapterIntroType: fullWidth;
 @include use('EocSummary','carnival:::EocSummary');
 
 // EoC Exercises
-@include use('Exercises','carnival:::ExerciseModuleShape');
+@include use('Exercises','carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
@@ -211,7 +211,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB

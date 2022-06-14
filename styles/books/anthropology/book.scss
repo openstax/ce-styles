@@ -154,7 +154,7 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 //Tables
@@ -180,7 +180,7 @@ $ChapterIntroType: fullWidth;
 // Eoc
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary'); // Can be removed after lists clean up in carnival theme
-@include use('CriticalThinking', 'carnival:::ExerciseModuleShape');
+@include use('CriticalThinking', 'carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // EOB

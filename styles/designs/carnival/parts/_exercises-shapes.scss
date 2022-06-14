@@ -1,9 +1,6 @@
 @import 'exercises-components';
-@import 'lists-components';
-@import 'eoc-components';
-@import 'table-components';
 
-@include create_shape('carnival:::ExerciseModuleShape',(
+@include create_shape('carnival:::ExercisesModuleShape',(
     _components:(
         map-merge($ExerciseModule__Container,(
             _components:(
@@ -23,7 +20,7 @@
                     )),
                     map-merge($Exercise__Solution__Wrapper,(
                       _components:(
-                          $SolutionTitle // present only in hs physics
+                          $Exercises__Solution__Title // present only in hs physics in module exercises
                       ),
                     )),
                   )

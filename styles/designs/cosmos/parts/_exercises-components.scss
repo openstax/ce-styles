@@ -2,7 +2,7 @@ $ExercisesModule__Container: (
   _name: "ExercisesModuleContainer",
   _subselector: '',
   _properties: (
-    margin-bottom: v-spacing(2),
+    margin-bottom: v-spacing(1),
   )
 );
 
@@ -21,14 +21,6 @@ $InjectedExercise__Container: (
         margin-bottom: v-spacing(1),
     )
 );
-
-// $InjectedExercise--OnPage__Container: (
-//     _name: "InjectedExerciseOnPageContainer",
-//     _subselector: '[data-type="page"] [data-type="injected-exercise"]',
-//     _properties: (
-//         margin-bottom: v-spacing(1),
-//     )
-// );
 
 // Problem components
 $Exercise__Problem__Wrapper: (
@@ -96,7 +88,6 @@ $InjectedExercise__Divider: (
 );
 
 // Solution components (used in Answer Key with solutions displayed one after the other)
-
 $Exercise__Solution__Wrapper: (
     _name: "SolutionWrapper",
     _subselector: " [data-type='solution']",

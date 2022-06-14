@@ -218,10 +218,10 @@ $ChapterIntroType: fullWidth;
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 
 // EoC Exercises
-@include use('ConceptualQuestionsCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ProblemsCompChapPage','carnival:::ExerciseModuleShape');
-@include use('AdditionalProblemsCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ChallengeProblemsCompChapPage','carnival:::ExerciseModuleShape');
+@include use('ConceptualQuestionsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('AdditionalProblemsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ChallengeProblemsCompChapPage','carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
@@ -239,7 +239,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB

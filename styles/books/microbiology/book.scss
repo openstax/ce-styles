@@ -219,12 +219,12 @@ $ChapterIntroType: fullWidth;
 @include use('EocSummary', 'carnival:::EocSummary');
 
 // EoC Exercises
-@include use('MultipleChoiceCompChapPage','carnival:::ExerciseModuleShape');
-@include use('CriticalThinkingCompChapPage','carnival:::ExerciseModuleShape');
-@include use('ShortAnswerCompChapPage','carnival:::ExerciseModuleShape');
-@include use('FillInTheBlankCompChapPage','carnival:::ExerciseModuleShape');
-@include use('MatchingCompChapPage','carnival:::ExerciseModuleShape');
-@include use('TrueFalseCompChapPage','carnival:::ExerciseModuleShape');
+@include use('MultipleChoiceCompChapPage','carnival:::ExercisesModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExercisesModuleShape');
+@include use('FillInTheBlankCompChapPage','carnival:::ExercisesModuleShape');
+@include use('MatchingCompChapPage','carnival:::ExercisesModuleShape');
+@include use('TrueFalseCompChapPage','carnival:::ExercisesModuleShape');
 
 // Notes
 @include use('ClinicalFocusNote', 'carnival:::BoxedNoteShape');
@@ -238,7 +238,7 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
-@include use("ExercisesProblemLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // Titles

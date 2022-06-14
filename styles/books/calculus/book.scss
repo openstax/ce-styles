@@ -141,9 +141,12 @@ $bandColor: #093D4C;
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 @include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
 //Titles
@@ -179,10 +182,10 @@ $bandColor: #093D4C;
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
 
 //Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
 
 // EoC Exercises
-@include use('ReviewExercises', 'corn:::MultipleColumnExercisesModuleShape');
+@include use('ReviewExercises', 'corn:::ExercisesModuleShape');
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
