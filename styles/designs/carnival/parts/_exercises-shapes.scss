@@ -1,6 +1,5 @@
 @import 'exercises-components';
 @import 'lists-components';
-@import 'eoc-components';
 @import 'table-components';
 
 @include create_shape('carnival:::ExerciseShape',(
@@ -67,7 +66,7 @@
 
 @include create_shape('carnival:::EOCAssesmentsShape',(
     _components:(
-        map-merge($Eoc__Container,(
+        map-merge($ExerciseModule__Container,(
             _components:(
                 $Section__UnorderedList--MarginLeftBottom,
                 map-merge($Container__OrderedList--MarginLeftBottom, (

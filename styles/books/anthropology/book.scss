@@ -109,9 +109,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  EocSummary: (
-    _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
-  ),
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -137,6 +134,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesFromEoc: (
+    _selectors: ('.os-section-summary-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -146,6 +149,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
 
 //Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -159,6 +163,7 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 
 //Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
@@ -181,7 +186,6 @@ $ChapterIntroType: fullWidth;
 
 // Eoc
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary', 'carnival:::EocSummary'); // Can be removed after lists clean up in carnival theme
 @include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 

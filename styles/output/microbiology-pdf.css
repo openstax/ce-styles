@@ -1685,6 +1685,10 @@ a[role=doc-noteref] {
   margin-bottom: 0;
 }
 
+.os-summary-container {
+  margin-bottom: 1.4rem;
+}
+
 .introduction > .os-figure.has-splash {
   margin-bottom: 0.7rem;
 }
@@ -1898,38 +1902,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: top;
   display: inline;
   padding-top: 0.7rem;
-}
-
-[data-type=chapter] > .os-summary-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-summary-container > section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ol {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ul {
-  margin-left: 16px;
 }
 
 .os-multiple-choice-container {
@@ -3946,6 +3918,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=chapter] > h1 {

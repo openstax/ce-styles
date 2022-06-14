@@ -107,9 +107,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  EocSummary: (
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   InteractiveExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-interactive-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -186,6 +183,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModulesFromEoc: (
+    _selectors: ('.os-summary-container'),
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -198,6 +201,7 @@ $ChapterIntroType: fullWidth;
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -227,11 +231,11 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use('TableLists', 'carnival:::TableListShape');
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary', 'carnival:::EocSummary');
 @include use('InteractiveExercise', 'carnival:::EOCAssesmentsShape');
 @include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');
 @include use('FreeResponse', 'carnival:::EOCAssesmentsShape');

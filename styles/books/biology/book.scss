@@ -109,9 +109,6 @@ $ChapterIntroType: side;
 
 //Can we convert those into group settings? A mixin? Something to DRY it.
 @include add_settings((
-  EocSummary:(
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   VisualExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-visual-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -188,6 +185,12 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  ModulesFromEoc: (
+    _selectors: ('.os-summary-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -199,6 +202,7 @@ $ChapterIntroType: side;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');
@@ -218,7 +222,6 @@ $ChapterIntroType: side;
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary','carnival:::EocSummary');
 @include use('VisualExercise', 'carnival:::EOCAssesmentsShape');
 @include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');
 @include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
@@ -249,6 +252,7 @@ $ChapterIntroType: side;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

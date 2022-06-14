@@ -41,6 +41,31 @@
     )
 ));
 
+@include create_shape('carnival:::CompositePageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
 @include create_shape('carnival:::TableListShape',(
     _components: (
         map-merge($ListContainer,(

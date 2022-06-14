@@ -2,6 +2,12 @@
 @import 'wrappers-components';
 @import 'table-components';
 
+@include create_shape('carnival:::ModuleWithMarginBottomShape', (
+    _components: (
+        $Module__Container
+    )
+));
+
 @include create_shape('carnival:::ModuleWithTwoColumnsShape', (
     _components: (
       $Module__Container--WithTwoColumns
