@@ -1,6 +1,6 @@
 @import '../biology/book';
 
-@include add_settings(( 
+@include add_settings((
   ColumnHeaderTable: (
     _selectors: ('.os-table.os-column-header-container'),
     'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::biologyTableColor"),
@@ -16,45 +16,33 @@
   ),
 ));
 
-@include add_settings(( 
+@include add_settings((
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
 ),
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
 ),
   SciencePractice: (
     _selectors: ("[data-type = 'chapter'] > .os-science-practice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
 ),
 
 ));
@@ -81,7 +69,22 @@
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container'),
+  ),
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Notes
 @include use('APSciencePractices','carnival:::IconNoteShape');

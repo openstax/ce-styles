@@ -8,6 +8,25 @@ $Module__Container: (
 
 $Module__Container--WithoutMargin: empty_wrapper(ContainerWithoutMargin, '');
 
+$Module__Container--WithTwoColumns: (
+    _name: "ModuleContainerWithTwoColumns",
+    _subselector: "",
+    _properties: (
+        margin-bottom: v-spacing(1),
+        column-count: 2,
+        column-gap: 2.4rem,
+        column-width: auto,
+    ),
+);
+
+$Module__Section--WithMarginBottom:(
+    _name: "ModuleSectionWithMarginBottom",
+    _subselector: " section",
+    _properties:(
+        margin-bottom: enum('ValueSet:::REQUIRED'),
+    )
+);
+
 $ModuleWithIndentation__Para: (
     _name: "ModuleWithIndentationPara",
     _subselector: ' > p',

@@ -53,24 +53,14 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocKeyEquations:(
     _selectors: (".os-eoc.os-key-equations-container"),
-    'SectionMarginBottom:::margin-bottom': 0,
     'UnnumberedUnstyledTable:::margin-bottom': 0,
     'TableData:::padding-right': table-h-spacing(1),
     'TableData:::padding-left': table-h-spacing(1),
   ),
   EocSummary:(
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   Exercises:(
     _selectors: ("[data-type = 'chapter'] > .os-exercises-container"),
@@ -82,7 +72,6 @@ $ChapterIntroType: fullWidth;
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': column-v-spacing(1),
   ),
 ));
 
@@ -148,15 +137,23 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-// Revert two column layout in Preface
 @include add_settings((
-  Preface: (
-    _selectors: (" "),
-    'PrefaceContainer:::column-count': 1,
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.os-summary-container'),
   ),
-  PageTitles: (
-      _selectors: ('[data-type="page"]:not(.introduction)'),
-      'PrefaceContainer:::column-count': 1,
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-key-equations-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  ModulesWithSectionTitles: (
+    _selectors: ('.os-exercises-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
   ),
 ));
 
@@ -169,6 +166,9 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('ContentExercises','carnival:::ExerciseShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -188,7 +188,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // EOC
-@include use('KeyTerm','carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocKeyEquations','carnival:::EocKeyEquations');
 @include use('EocSummary','carnival:::EocSummary');
 @include use('Exercises','carnival:::EOCAssesmentsShape');

@@ -1204,12 +1204,6 @@ nav#toc > ol > .os-toc-index > a::after {
   color: #00819A;
 }
 
-.preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
 .preface > ul {
   margin-left: 24px;
 }
@@ -1395,6 +1389,75 @@ nav#toc > ol > .os-toc-index > a::after {
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.5rem;
+}
+
+.preface {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-glossary-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-key-concepts-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-conceptual-questions-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-problems-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-additional-problems-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-review-challenge-container {
+  margin-bottom: 0.7rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-key-equations-container section {
+  margin-bottom: 0;
+}
+
+.os-review-additional-problems-container section {
+  margin-bottom: 0;
+}
+
+.os-review-challenge-container section {
+  margin-bottom: 0;
+}
+
+.os-review-conceptual-questions-container section {
+  margin-bottom: 1.4rem;
+}
+
+.os-review-problems-container section {
+  margin-bottom: 1.4rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2040,34 +2103,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=composite-chapter] > .os-glossary-container {
-  margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-[data-type=composite-chapter] > .os-glossary-container > dl {
+.os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
 }
 
-[data-type=composite-chapter] > .os-glossary-container > dl > dt {
+.os-glossary-container > dl > dt {
   font-weight: bold;
   padding-right: 8px;
   display: inline;
 }
 
-[data-type=composite-chapter] > .os-glossary-container > dl > dd {
+.os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
 }
 
 [data-type=composite-chapter] > .os-key-concepts-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=composite-chapter] > .os-key-concepts-container > section > ul {
@@ -2100,13 +2153,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-chapter] > .os-key-equations-container {
   margin-bottom: 0.7rem;
-  column-count: 1;
-  column-gap: normal;
-  column-width: auto;
-}
-
-[data-type=composite-chapter] > .os-key-equations-container section {
-  margin-bottom: 0;
 }
 
 [data-type=composite-chapter] > .os-key-equations-container > .key-equations {
@@ -2136,13 +2182,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-conceptual-questions-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-review-conceptual-questions-container section {
-  margin-bottom: 1.4rem;
 }
 
 .os-review-conceptual-questions-container section > ul {
@@ -2403,13 +2442,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-problems-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-review-problems-container section {
-  margin-bottom: 1.4rem;
 }
 
 .os-review-problems-container section > ul {
@@ -2670,13 +2702,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-additional-problems-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-review-additional-problems-container section {
-  margin-bottom: 0;
 }
 
 .os-review-additional-problems-container section > ul {
@@ -2937,13 +2962,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-challenge-container {
   margin-bottom: 0.7rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-review-challenge-container section {
-  margin-bottom: 0;
 }
 
 .os-review-challenge-container section > ul {
@@ -3414,12 +3432,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 300;
   text-transform: none;
   display: block;
-}
-
-[data-type=page]:not(.introduction).preface {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {
