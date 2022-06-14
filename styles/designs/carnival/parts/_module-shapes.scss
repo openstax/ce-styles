@@ -14,14 +14,13 @@
     )
 ));
 
-// Use for EOC modules. Margin bottom of section depends on existance
-// of section title links.
+// Use for EOC modules that don't have section title links.
 
-@include create_shape('carnival:::ModuleWithCustomSectionShape', (
+@include create_shape('carnival:::ModuleWithoutTitleLinksShape', (
     _components: (
       map-merge($Module__Container--WithoutMargin,(
             _components:(
-                $Module__Section--WithMarginBottom
+                $Module__Section--WithoutMarginBottom
             ),
         )),
     )

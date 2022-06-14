@@ -169,16 +169,8 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-key-equations-container', '.os-review-additional-problems-container', '.os-review-challenge-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
-  ),
-));
-
-@include add_settings((
-  ModulesWithSectionTitles: (
-    _selectors: ('.os-review-conceptual-questions-container', '.os-review-problems-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
   ),
 ));
 
@@ -199,8 +191,7 @@ $ChapterIntroType: fullWidth;
 @include use('Example', 'carnival:::ExampleShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
-@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
 @include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro

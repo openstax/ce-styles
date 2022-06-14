@@ -179,9 +179,8 @@ $ChapterIntroType: side;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-visual-exercise-container', '.os-multiple-choice-container', '.os-critical-thinking-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -201,7 +200,7 @@ $ChapterIntroType: side;
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
 @include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
 
 // Equations

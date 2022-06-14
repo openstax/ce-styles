@@ -19,11 +19,11 @@ $Module__Container--WithTwoColumns: (
     ),
 );
 
-$Module__Section--WithMarginBottom:(
-    _name: "ModuleSectionWithMarginBottom",
+$Module__Section--WithoutMarginBottom:(
+    _name: "ModuleSectionWithoutMarginBottom",
     _subselector: " section",
     _properties:(
-        margin-bottom: enum('ValueSet:::REQUIRED'),
+        margin-bottom: 0,
     )
 );
 
