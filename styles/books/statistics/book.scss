@@ -127,6 +127,13 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  TableFromTwoColumnsModule: (
+    _selectors: ('.os-formula-review-container > section > .os-table'),
+    'CaptionContainerTable:::break-inside': avoid-column,
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
@@ -158,6 +165,7 @@ $bandColor: #093D4C;
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
+@include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -186,7 +194,6 @@ $bandColor: #093D4C;
 @include use('NotesLists', 'corn:::NotesListsShape');
 
 // EoC
-@include use('FormulaReview', 'corn:::TwoColumnVerticalEocShape');
 @include use('ReferencesWithIndentation', 'corn:::ModuleWithIndentationShape');
 @include use('Practice', 'corn:::OneColumnExercisesModuleShape');
 @include use('BringingItTogetherPractice', 'corn:::OneColumnExercisesModuleShape');
