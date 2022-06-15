@@ -2863,10 +2863,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: none;
 }
 
-.os-multiple-choice-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-multiple-choice-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -2939,10 +2935,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
-}
-
-.os-questions-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-questions-container [data-type=exercise] {
@@ -3019,10 +3011,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-exercise-set-a-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-exercise-set-a-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -3095,10 +3083,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-exercise-set-a-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
-}
-
-.os-exercise-set-b-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-exercise-set-b-container [data-type=exercise] {
@@ -3175,10 +3159,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-problem-set-a-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-problem-set-a-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -3253,10 +3233,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-problem-set-b-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-problem-set-b-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -3329,10 +3305,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-problem-set-b-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
-}
-
-.os-thought-provokers-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-thought-provokers-container [data-type=exercise] {
@@ -3924,6 +3896,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eob[data-type=composite-chapter] > [data-type=composite-page] {

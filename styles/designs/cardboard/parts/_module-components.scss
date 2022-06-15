@@ -1,8 +1,10 @@
-$Module__Container: (
-  _name: "ModuleContainer",
+$Module__Container: empty_wrapper(ModuleContainer, '');
+
+$Module__Container--WithMarginBottom: (
+  _name: "ModuleContainerWithMarginBottom",
   _subselector: '',
   _properties: (
-    margin-bottom: v-spacing(2),
+    margin-bottom: v-spacing(1),
   )
 );
 
