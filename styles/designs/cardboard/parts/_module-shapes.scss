@@ -1,5 +1,6 @@
 @import 'module-components';
 @import 'wrappers-components';
+@import 'lists-components';
 
 @include create_shape('cardboard:::ModuleWithinChapterShape', (
     _components: (
@@ -19,6 +20,29 @@
                 map-merge($SectionWrapper--ThirdLevel,(
                     _components:(
                         $ModuleWithIndentation__Para,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+//Used in section Collaborative Group Activities from Astronomy
+@include create_shape('cardboard:::ModuleWithTypeAListShape',(
+    _components:(
+        map-merge($Module__Container,(
+            _components:(
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        map-merge($OrderedList--TypeA,(
+                            _components:(
+                                map-merge($OrderedList--TypeA__Item,(
+                                    _components:(
+                                        $OrderedList--TypeA__Marker,
+                                    ),
+                                )),
+                            ),
+                        )),
                     ),
                 )),
             ),

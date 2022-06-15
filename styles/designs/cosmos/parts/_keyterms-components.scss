@@ -1,0 +1,34 @@
+$KeyTerms__Container: (
+    _name: "KeyTermsContainer",
+    _subselector: "",
+    _properties: (
+        margin-bottom: v-spacing(2),
+    ),
+);
+
+$KeyTerms__List:(
+    _name: "KeyTermsList",
+    _subselector: " > dl",
+    _properties:(
+        text-indent: h-spacing(-3),
+        padding-left: h-spacing(3),
+    ),
+);
+
+$KeyTerms__Term:(
+    _name: "KeyTermsTerm",
+    _subselector: " > dt ",
+    _properties:(
+        display: inline,
+        font-weight: bold,
+    )
+);
+
+$KeyTerms__Definition:(
+    _name: "KeyTermsDefinition",
+    _subselector: " > dd ",
+    _properties:(
+        display: inline,
+        margin-left: 2px,
+    )
+);

@@ -3,26 +3,6 @@
 @import 'table-components';
 @import 'lists-components';
 
-@include create_shape('corn:::EocKeyTerm',(
-    _components:(
-        map-merge($Eoc__Container,(
-            _components:(
-                map-merge($Term--DL,(
-                    _components:(
-                        $Term--DT,
-                        map-merge($Term--DD, (
-                          _components: (
-                            $UnorderedList--KeyTerms,
-                            $OrderedList--KeyTerms,
-                          ),
-                        ))
-                    ),
-                )),
-            ),
-        )),
-    )
-));
-
 // Used in Formula Review
 @include create_shape('corn:::OneColumnVerticalEocShape',(
     _components:(
