@@ -31,7 +31,7 @@ $ExercisesModule--Multicolumn__Container: (
   _name: "ExercisesMulticolumnModuleContainer",
   _subselector: ' ',
   _properties: (
-      margin-bottom: v-spacing(2),
+      margin-bottom: v-spacing(2), // To do: remove for EOC modules; check if it's needed for section exercises
   )
 );
 
@@ -213,7 +213,7 @@ $Exercise__Title__Icon--Commentary: (
     )
 );
 
-$Exercise__Title__Icon--Problem: ( 
+$Exercise__Title__Icon--Problem: (
     _name: "ExerciseTitleProblemIcon",
     _subselector: '::before',
     _properties: (

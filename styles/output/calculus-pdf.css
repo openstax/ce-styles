@@ -3014,10 +3014,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #093D4C;
 }
 
-.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -3254,6 +3250,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element > .os-table > table {
   table-layout: fixed;
   max-width: 100%;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eos.os-section-exercises-container > section.section-exercises {
