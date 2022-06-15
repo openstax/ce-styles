@@ -1346,14 +1346,12 @@ a[role=doc-noteref] {
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1363,8 +1361,8 @@ a[role=doc-noteref] {
   margin-bottom: 0;
 }
 
-.os-summary-container {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1638,20 +1636,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-.os-key-equations-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-key-equations-container > section > .os-table.os-unstyled-container {
   margin-bottom: 0;
 }
 
 .os-key-equations-container > section > .os-table.os-unstyled-container > table.unstyled {
   margin-bottom: 0;
-}
-
-[data-type=chapter] > .os-exercises-container {
-  margin-bottom: 0.7rem;
 }
 
 [data-type=chapter] > .os-exercises-container section > ul {

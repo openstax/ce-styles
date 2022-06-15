@@ -209,12 +209,6 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-@include add_settings((
-  ModulesFromEoc: (
-    _selectors: ('.os-summary-container'),
-  ),
-));
-
 @include use('BookRoot', "common:::BookRoot");
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TOC', 'carnival:::NoUnitToc');
@@ -231,7 +225,7 @@ $ChapterIntroType: fullWidth;
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
-@include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');

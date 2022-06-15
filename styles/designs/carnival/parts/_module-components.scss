@@ -1,18 +1,17 @@
-$Module__Container: (
-  _name: "ModuleContainer",
+$Module__Container: empty_wrapper(ModuleContainer, '');
+
+$Module__Container--WithMarginBottom: (
+  _name: "ModuleContainerWithMarginBottom",
   _subselector: '',
   _properties: (
-    margin-bottom: v-spacing(2),
+    margin-bottom: v-spacing(1),
   )
 );
-
-$Module__Container--WithoutMargin: empty_wrapper(ContainerWithoutMargin, '');
 
 $Module__Container--WithTwoColumns: (
     _name: "ModuleContainerWithTwoColumns",
     _subselector: "",
     _properties: (
-        margin-bottom: v-spacing(1),
         column-count: 2,
         column-gap: 2.4rem,
         column-width: auto,

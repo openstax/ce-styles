@@ -1083,28 +1083,24 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-section-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1114,8 +1110,8 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0;
 }
 
-.os-section-summary-container {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2069,10 +2065,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-[data-type=chapter] > .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
-}
-
 [data-type=chapter] > .os-critical-thinking-container section > ul {
   margin-left: 32px;
   margin-bottom: 0.7rem;
@@ -2327,10 +2319,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 4px;
   padding-left: 4px;
-}
-
-.os-references-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-references-container > section > p {

@@ -1251,42 +1251,36 @@ nav#toc > ol > .os-toc-index > a::after {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-interactive-exercise-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-multiple-choice-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-free-response-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1304,8 +1298,8 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0;
 }
 
-.os-summary-container {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2108,10 +2102,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-[data-type=chapter] > .os-interactive-exercise-container {
-  margin-bottom: 0.7rem;
-}
-
 [data-type=chapter] > .os-interactive-exercise-container section > ul {
   margin-left: 32px;
   margin-bottom: 0.7rem;
@@ -2368,10 +2358,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-[data-type=chapter] > .os-multiple-choice-container {
-  margin-bottom: 0.7rem;
-}
-
 [data-type=chapter] > .os-multiple-choice-container section > ul {
   margin-left: 32px;
   margin-bottom: 0.7rem;
@@ -2626,10 +2612,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 4px;
   padding-left: 4px;
-}
-
-[data-type=chapter] > .os-free-response-container {
-  margin-bottom: 0.7rem;
 }
 
 [data-type=chapter] > .os-free-response-container section > ul {
@@ -3141,10 +3123,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-index-container > .group-by > .os-index-item > .os-term-section-link {
   content: target-counter(attr(href, url), page);
-}
-
-.os-references-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-references-container > section > p {

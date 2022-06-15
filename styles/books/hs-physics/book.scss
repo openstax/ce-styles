@@ -251,12 +251,6 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-@include add_settings((
-  ModulesFromEoc: (
-    _selectors: ('.os-summary-container'),
-  ),
-));
-
 // @use
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -269,7 +263,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesFromEoc','carnival:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
