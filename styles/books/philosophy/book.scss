@@ -125,16 +125,9 @@ $bandColor: #DCB83D;
   )
 ));
 
-@include add_settings((
-  FurtherReading: (
-    _selectors: ('.os-eoc.os-further-reading-container'),
-  ),
-));
-
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocNoUnitBlue', 'cosmos:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
-@include use('ModuleWithinChapter', 'cosmos:::ModuleWithinChapterShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
 
 // Chapter Intro
@@ -180,5 +173,4 @@ $bandColor: #DCB83D;
 @include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
-@include use('Summary', 'cosmos:::ModuleWithinChapterShape');
-@include use('FurtherReading', 'cosmos:::ModuleWithinChapterShape');
+@include use('ModuleWithMarginBottom','cosmos:::ModuleWithMarginBottomShape');

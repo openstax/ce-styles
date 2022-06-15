@@ -2072,10 +2072,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #000000;
 }
 
-.os-eoc.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-glossary-container > dl {
   text-indent: -24px;
   padding-left: 24px;
@@ -2091,8 +2087,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 2px;
 }
 
-.os-eoc.os-review-questions-container {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-review-questions-container [data-type=exercise] {
@@ -2163,10 +2159,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-eoc.os-critical-thinking-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-critical-thinking-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -2235,10 +2227,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-eoc.os-personal-application-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-personal-application-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -2305,10 +2293,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-personal-application-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
-}
-
-.os-references-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-references-container p {
