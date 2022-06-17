@@ -2326,8 +2326,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
+[data-type=chapter] > [data-type=page] {
+  margin-bottom: 1.4rem;
+}
+
 .os-eoc[data-type=composite-page] {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
 }
 
 .os-eoc.os-glossary-container > dl {
