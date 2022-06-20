@@ -128,6 +128,12 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
 @include use('ImageFromExercisesModule','corn:::ImageFromExercisesModuleShape');
+@include use('FigureAfterEocPara', 'corn:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'corn:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'corn:::ImageTopSpacingShape');
+@include use('FigureAfterEosPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEosPara', 'corn:::ImageTopSpacingShape');
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
