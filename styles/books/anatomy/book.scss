@@ -107,56 +107,35 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   InteractiveExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-interactive-exercise-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
   FreeResponse: (
     _selectors: ("[data-type = 'chapter'] > .os-free-response-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -193,6 +172,20 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-summary-container',
+                 '.os-interactive-exercise-container','.os-multiple-choice-container', '.os-free-response-container'),
+  ),
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-interactive-exercise-container', '.os-multiple-choice-container', '.os-free-response-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -203,6 +196,8 @@ $ChapterIntroType: fullWidth;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('ContentExercises','carnival:::ExerciseShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -235,7 +230,7 @@ $ChapterIntroType: fullWidth;
 @include use('TableLists', 'carnival:::TableListShape');
 
 //EOC
-@include use('KeyTerm', 'carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary');
 @include use('InteractiveExercise', 'carnival:::EOCAssesmentsShape');
 @include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');

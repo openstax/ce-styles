@@ -11,16 +11,7 @@ $Eob__Container: empty_wrapper(EobContainer, '');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
-
-$Preface__Container:(
-  _name:"PrefaceContainer",
-  _subselector: ".preface",
-  _properties:(
-    column-count: enum('ValueSet:::REQUIRED'), // need to be set to one column for Chemistry
-    column-gap: enum('ValueSet:::OPTIONAL'),
-    column-width: enum('ValueSet:::OPTIONAL'),
-  )
-);
+$Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 
 // H1 headers
 $H1: (
@@ -121,7 +112,7 @@ $H2: (
 // Chapter Intro Text Header
 $H2TextHeader--ChapterIntro: (
     _name: "H2IntroTextHeader",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         float: left,
         font-family: enum('ValueSet:::REQUIRED'),

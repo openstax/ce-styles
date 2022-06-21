@@ -4,17 +4,28 @@
 @include add_settings((
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
 ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-ap-test-prep-container'),
+  ),
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-ap-test-prep-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
+  ),
+));
+
 @include use('TestPrep', 'carnival:::EOCAssesmentsShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');

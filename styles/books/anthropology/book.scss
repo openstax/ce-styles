@@ -109,30 +109,31 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  KeyTerm:(
-    _selectors: ("[data-type = 'chapter'] > .os-glossary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
-  ),
   EocSummary: (
     _selectors: ("[data-type = 'chapter'] > .os-section-summary-container"),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
   ),
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
-    'Container:::column-count': 2,
-    'Container:::column-gap': 2.4rem,
-    'Container:::column-width': auto,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'Table:::max-width': 100%,
     'Table:::table-layout': fixed,
     'TableData:::text-align': center,
     'TableData:::padding-right': $columnTablePadding,
     'TableData:::padding-left': $columnTablePadding,
-    'SectionMarginBottom:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.preface', '.os-glossary-container', '.os-section-summary-container',
+                 '.os-critical-thinking-container'),
+  ),
+));
+
+@include add_settings((
+  ModulesWithoutSectionTitles: (
+    _selectors: ('.os-critical-thinking-container'),
+    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -143,6 +144,8 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
 
 //Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -177,7 +180,7 @@ $ChapterIntroType: fullWidth;
 @include use('MediaPodcast', 'carnival:::IconCondensedShape');
 
 // Eoc
-@include use('KeyTerm', 'carnival:::EocKeyTerm');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocSummary', 'carnival:::EocSummary'); // Can be removed after lists clean up in carnival theme
 @include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');

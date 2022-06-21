@@ -1146,6 +1146,13 @@ a[role=doc-noteref] {
   content: target-counter(attr(href, url), page);
 }
 
+.os-formula-review-container {
+  margin-bottom: 1.4rem;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
 .introduction > .os-figure.has-splash {
   margin-bottom: 2rem;
   margin-top: -6rem;
@@ -2951,9 +2958,6 @@ p > [data-type=title] {
 
 .os-eoc.os-formula-review-container {
   margin-bottom: 1.4rem;
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
 }
 
 .os-eoc.os-formula-review-container h2[data-type=document-title], h2[data-type=title] {

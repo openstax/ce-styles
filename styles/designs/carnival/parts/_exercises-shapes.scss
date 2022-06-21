@@ -1,5 +1,4 @@
 @import 'exercises-components';
-@import 'generic-components';
 @import 'lists-components';
 @import 'eoc-components';
 @import 'table-components';
@@ -70,7 +69,6 @@
     _components:(
         map-merge($Eoc__Container,(
             _components:(
-                $Section--MarginBottom,
                 $Section__UnorderedList--MarginLeftBottom,
                 map-merge($Container__OrderedList--MarginLeftBottom, (
                     _components:(

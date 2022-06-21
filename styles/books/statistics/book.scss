@@ -121,6 +121,12 @@ $bandColor: #093D4C;
     ),
 ));
 
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-formula-review-container'),
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
@@ -128,6 +134,7 @@ $bandColor: #093D4C;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Example', 'corn:::ExampleShape');
 @include use('Index', 'corn:::IndexShape');
+@include use('TwoColumnsModules','corn:::ModuleWithTwoColumnsShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'corn:::ChapterIntroShape');
@@ -186,4 +193,4 @@ $bandColor: #093D4C;
 @include use('Homework', 'corn:::OneColumnExercisesModuleShape');
 @include use('BringingItTogetherHomework', 'corn:::OneColumnExercisesModuleShape');
 @include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
-@include use('KeyTerm','corn:::EocKeyTerm');
+@include use('KeyTerms','corn:::KeyTermsShape');

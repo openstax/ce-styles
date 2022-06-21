@@ -1,20 +1,3 @@
-# Virtualenv files
-/venv/
-/.Python
-/pip-selfcheck.json
-/bin/
-/lib/
-/include/
-# pytest creates these files
-*.pyc
-/.pytest_cache/
-
-# Ruby files
-/.bundle/
-/vendor/
-# Commented because Travis edits this file which causes the git diff test to fail
-/Gemfile.lock
-
 # Node files
 node_modules/
 package-lock.json
@@ -40,18 +23,10 @@ package-lock.json
 # CSS Code coverage
 /tmp/
 
-#build and dist files
-/build/
-/dist/
-/cnx-recipes.egg-info/
-
 # SASS stuff
 /.sass-cache/
 /recipes/output/*.css.map
-/recipes/books/mixins/styleguide/*-baked.xhtml
-/recipes/books/styleguide/*-baked.xhtml
 /sassdoc/
-/styleguide/
 /styles/output/*.css.map
 
 # CSS coverage report (as a clickable HTML)
@@ -59,10 +34,6 @@ package-lock.json
 
 .DS_Store
 data/.DS_Store
-
-# Style files
-#styles/output/_web-styles.json
-styles/test/test-coverage.log
 
 # Dart stuff
 .packages

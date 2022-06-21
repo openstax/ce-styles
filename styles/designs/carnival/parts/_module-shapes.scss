@@ -1,6 +1,25 @@
 @import 'module-components';
 @import 'wrappers-components';
 
+@include create_shape('carnival:::ModuleWithTwoColumnsShape', (
+    _components: (
+      $Module__Container--WithTwoColumns
+    )
+));
+
+// Use for EOC modules. Margin bottom of section depends on existance
+// of section title links.
+
+@include create_shape('carnival:::ModuleWithCustomSectionShape', (
+    _components: (
+      map-merge($Module__Container--WithoutMargin,(
+            _components:(
+                $Module__Section--WithMarginBottom
+            ),
+        )),
+    )
+));
+
 // This shape can be used to style References with sections and paragraphs.
 // There are also References with notes that have citation links within chapters.
 // There are no such cases in this theme at this moment.
@@ -13,6 +32,26 @@
                 map-merge($SectionWrapper--FirstLevel,(
                     _components:(
                         $ModuleWithIndentation__Para,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('carnival:::ModuleWithIndentationForPolishBooksShape',(
+    _components:(
+        map-merge($Module__Container--WithoutMargin,(
+            _components:(
+                $ModuleWithIndentation__Para--Inverted,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $ModuleWithIndentation__Para--Inverted,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $ModuleWithIndentation__Para--Inverted,
                     ),
                 )),
             ),
