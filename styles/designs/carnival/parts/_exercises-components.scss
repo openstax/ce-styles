@@ -1,6 +1,9 @@
-$Exercise__Container: empty_wrapper(Container, '');
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
-// Problem components
+$Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
+$InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');
+
+// Problem component
 $Exercise__Problem__Wrapper: (
     _name: "ProblemWrapper",
     _subselector: " [data-type='problem']",
@@ -86,8 +89,8 @@ $Exercise__ProblemSolution__Number: (
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
-    width:  enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
-    text-align: enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
+    width:  enum('ValueSet:::OPTIONAL'), // used in one column exercises, answer key
+    text-align: enum('ValueSet:::OPTIONAL'), // used in one column exercises, answer key
   )
 );
 

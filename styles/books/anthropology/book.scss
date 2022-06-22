@@ -112,11 +112,6 @@ $ChapterIntroType: fullWidth;
   CriticalThinking: (
     _selectors: ('[data-type = "chapter"] > .os-critical-thinking-container'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
 ));
 
@@ -157,9 +152,12 @@ $ChapterIntroType: fullWidth;
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 //Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 
 // Figure
 @include use('Figure','carnival:::FigureShape');
@@ -179,7 +177,7 @@ $ChapterIntroType: fullWidth;
 
 // Eoc
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
+@include use('CriticalThinking', 'carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // EOB

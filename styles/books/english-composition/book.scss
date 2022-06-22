@@ -134,7 +134,7 @@ $bandColor: #DCB83D;
 
 @include add_settings((
   DiscussionQuestions: (
-    _selectors: (''),
+    _selectors: ('[data-type="page"] > section'),
     'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemNumber:::width': 2%,
     'ProblemNumber:::text-align': right,
@@ -243,4 +243,4 @@ $bandColor: #DCB83D;
 @include use('Index', 'cosmos:::IndexShape');
 
 //Exercises
-@include use('DiscussionQuestions', 'cosmos:::InjectedExercisesOnPageShape');
+@include use('DiscussionQuestions', 'cosmos:::ExercisesModuleShape');

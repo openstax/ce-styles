@@ -20,29 +20,14 @@
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
 ),
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
 ),
   SciencePractice: (
     _selectors: ("[data-type = 'chapter'] > .os-science-practice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
 ),
 
 ));
@@ -95,6 +80,6 @@
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 
 // EOC
-@include use('Review', 'carnival:::EOCAssesmentsShape');
-@include use('TestPrep', 'carnival:::EOCAssesmentsShape');
-@include use('SciencePractice', 'carnival:::EOCAssesmentsShape');
+@include use('Review', 'carnival:::ExercisesModuleShape');
+@include use('TestPrep', 'carnival:::ExercisesModuleShape');
+@include use('SciencePractice', 'carnival:::ExercisesModuleShape');

@@ -201,6 +201,24 @@
     )
 ));
 
+@include create_shape('corn:::TableFromExercisesShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container--Exercises, (
+                          _components:(
+                            $Table,
+                          ),
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
 // To do: apply to all themes. For now it's added only in Statistics.
 
 @include create_shape('corn:::TableFromTwoColumnsModuleShape',(

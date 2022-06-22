@@ -58,11 +58,6 @@ $ChapterIntroType: fullWidth;
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
 ));
 
@@ -148,7 +143,6 @@ $ChapterIntroType: fullWidth;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
@@ -173,16 +167,19 @@ $ChapterIntroType: fullWidth;
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('KeyEquations','carnival:::ModuleWithUnstyledTableShape');
-@include use('Exercises','carnival:::EOCAssesmentsShape');
+
+// EoC Exercises
+@include use('Exercises','carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+
+// Notes
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('EverydayLifeNote', 'carnival:::BoxedNoteShape');
 @include use('PortraitNote', 'carnival:::BoxedNoteShape');
-
-// Notes
 @include use('InterconnectNote', 'carnival:::IconNoteShape');
 @include use('Example', 'carnival:::ExampleShape');
 @include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
@@ -198,6 +195,8 @@ $ChapterIntroType: fullWidth;
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

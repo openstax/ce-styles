@@ -154,3 +154,33 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::TableFromExercisesShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container__Wrapper, (
+                          _components:(
+                              map-merge($Table, (
+                                  _components:(
+                                      map-merge($Table__Body, (
+                                          _components: (
+                                              map-merge($Table__Row, (
+                                                  _components: (
+                                                      $Table__Data,
+                                                  ),
+                                              )),
+                                          )
+                                      )),
+                                  ),
+                              )),
+                          ),
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));

@@ -116,6 +116,9 @@ $bandColor: #093D4C;
     ExercisesProblemLists: (
         _selectors: ('[data-type="problem"]'),
     ),
+    InjectedQuestionLists: (
+        _selectors: ('[data-type="exercise-question"]'),
+    ),
     ExercisesSolutionLists: (
       _selectors: ('[data-type="solution"]'),
     ),
@@ -189,16 +192,17 @@ $bandColor: #093D4C;
 // Lists
 @include use('PageLists', 'corn:::PageListsShape');
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 
 // EoC
 @include use('ReferencesWithIndentation', 'corn:::ModuleWithIndentationShape');
-@include use('Practice', 'corn:::OneColumnExercisesModuleShape');
-@include use('BringingItTogetherPractice', 'corn:::OneColumnExercisesModuleShape');
-@include use('Homework', 'corn:::OneColumnExercisesModuleShape');
-@include use('BringingItTogetherHomework', 'corn:::OneColumnExercisesModuleShape');
+@include use('Practice', 'corn:::ExercisesModuleShape'); // one column
+@include use('BringingItTogetherPractice', 'corn:::ExercisesModuleShape'); // one column
+@include use('Homework', 'corn:::ExercisesModuleShape'); // one column
+@include use('BringingItTogetherHomework', 'corn:::ExercisesModuleShape'); // one column
 @include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');

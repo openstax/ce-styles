@@ -339,11 +339,11 @@ $bandColor: #093D4C;
 @include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
 
 //Exercises
-@include use('CheckUnderstandingExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('YourTurnNoteExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('SectionExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('ChapterTestExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('ChapterReviewExercises', 'corn:::OneColumnExercisesModuleShape');
+@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('YourTurnNoteExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('SectionExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('ChapterTestExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('ChapterReviewExercises', 'corn:::ExercisesModuleShape'); // one column
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
