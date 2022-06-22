@@ -1,5 +1,14 @@
 @import 'module-components';
 @import 'wrappers-components';
+@import 'table-components';
+
+// All EOC modules should have margin bottom set to 0.7rem
+
+@include create_shape('carnival:::ModuleWithMarginBottomShape', (
+    _components: (
+      $Module__Container--WithMarginBottom
+    )
+));
 
 @include create_shape('carnival:::ModuleWithTwoColumnsShape', (
     _components: (
@@ -7,14 +16,14 @@
     )
 ));
 
-// Use for EOC modules. Margin bottom of section depends on existance
-// of section title links.
+// Use for EOC modules that don't have section title links.
+// Otherwise there is a blank space between content from different sections.
 
-@include create_shape('carnival:::ModuleWithCustomSectionShape', (
+@include create_shape('carnival:::ModuleWithoutTitleLinksShape', (
     _components: (
-      map-merge($Module__Container--WithoutMargin,(
+      map-merge($Module__Container,(
             _components:(
-                $Module__Section--WithMarginBottom
+                $Module__Section--WithoutMarginBottom
             ),
         )),
     )
@@ -41,7 +50,7 @@
 
 @include create_shape('carnival:::ModuleWithIndentationForPolishBooksShape',(
     _components:(
-        map-merge($Module__Container--WithoutMargin,(
+        map-merge($Module__Container,(
             _components:(
                 $ModuleWithIndentation__Para--Inverted,
                 map-merge($SectionWrapper--FirstLevel,(
@@ -52,6 +61,29 @@
                 map-merge($SectionWrapper--SecondLevel,(
                     _components:(
                         $ModuleWithIndentation__Para--Inverted,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+
+// Used for Key Equations without links to modules to remove blank spaces
+// between tables from different sections.
+// See Chemistry and U-Physics
+
+@include create_shape('carnival:::ModuleWithUnstyledTableShape',(
+    _components:(
+        map-merge($Module__Container,(
+            _components:(
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        map-merge($Table__Container--ModuleWithUnstyledTable,(
+                            _components:(
+                                $Table--ModuleWithUnstyledTable,
+                            ),
+                        )),
                     ),
                 )),
             ),

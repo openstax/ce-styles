@@ -163,7 +163,7 @@ $Table__Data--FirstType: (
     )
 );
 
-// Used in Formula Review
+// Used in Answer Key
 $Table--Eoc__Container: (
     _name: "EocTableContainer",
     _subselector: " > .os-table",
@@ -203,3 +203,15 @@ $ListTable: (
 
 $Table__Container--FirstInList: empty_wrapper(TableContainerFirstChild, ' > li > .os-table:first-child');
 $Table__Container--FirstInCircledList: empty_wrapper(TableContainerFirst, ' > os.table:nth-child(2)');
+
+// Used in two columns modules
+
+$Table--FromTwoColumnsModule: (
+    _name: "TableFromTwoColumnsModule",
+    _subselector: " > table",
+    _properties: (
+      table-layout: fixed,
+      max-width: 100%,
+      break-inside: avoid-column,
+    )
+);

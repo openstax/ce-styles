@@ -1362,56 +1362,48 @@ a[role=doc-noteref] {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-multiple-choice-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-short-answer-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-fill-in-the-blank-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-matching-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-true-false-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1439,6 +1431,10 @@ a[role=doc-noteref] {
 
 .os-true-false-container section {
   margin-bottom: 0;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1779,7 +1775,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-table.os-unstyled-container > table > tbody > tr > td:not(:only-of-type) {
+.os-table.os-unstyled-container > table > tbody > tr > td {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
@@ -1810,42 +1806,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 4px;
   padding-left: 4px;
-}
-
-[data-type=chapter] > .os-summary-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-summary-container > section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ol {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ul {
-  margin-left: 16px;
-}
-
-.os-multiple-choice-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-multiple-choice-container [data-type=exercise] [data-type=problem] {
@@ -1916,10 +1876,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-critical-thinking-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-critical-thinking-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -1986,10 +1942,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-short-answer-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-short-answer-container [data-type=exercise] [data-type=problem] {
@@ -2060,10 +2012,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-fill-in-the-blank-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -2132,10 +2080,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-matching-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-matching-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -2202,10 +2146,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-true-false-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-true-false-container [data-type=exercise] [data-type=problem] {
@@ -2730,6 +2670,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > ul {

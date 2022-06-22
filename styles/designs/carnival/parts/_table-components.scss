@@ -25,11 +25,19 @@ $Table: (
     )
 );
 
-$Table--UnnumberedUnstyled: ( //use in Key Equations only now, will be clean within Key Equations cleaning
-    _name: "UnnumberedUnstyledTable",
-    _subselector: " > .unnumbered.unstyled",
+$Table__Container--ModuleWithUnstyledTable: (
+    _name: "TableContainerModuleWithUnstyledTable",
+    _subselector: " > .os-table.os-unstyled-container",
     _properties: (
-        margin-bottom: enum('ValueSet:::OPTIONAL'),
+        margin-bottom: 0,
+    )
+);
+
+$Table--ModuleWithUnstyledTable: (
+    _name: "TableModuleWithUnstyledTable",
+    _subselector: " > table.unstyled",
+    _properties: (
+        margin-bottom: 0,
     )
 );
 
@@ -109,6 +117,17 @@ $Table__Data: (
         padding-bottom: table-v-spacing(1),
         padding-right: enum('ValueSet:::REQUIRED'), //different value in exercises
         padding-left: enum('ValueSet:::REQUIRED'), //different value in exercises
+    )
+);
+
+$Table__Data--Unstyled: (
+    _name: "TableUnstyledData",
+    _subselector: " > td",
+    _properties: (
+        padding-top: table-v-spacing(1),
+        padding-bottom: table-v-spacing(1),
+        padding-right: table-h-spacing(1),
+        padding-left: table-h-spacing(1),
     )
 );
 

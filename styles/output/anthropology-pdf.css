@@ -1083,28 +1083,24 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-section-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1112,6 +1108,10 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 
 .os-critical-thinking-container section {
   margin-bottom: 0;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1470,6 +1470,30 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 
 [data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > ul {
@@ -2157,42 +2181,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-[data-type=chapter] > .os-section-summary-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ol {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
-}
-
 [data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -2259,10 +2247,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-references-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-references-container > section > p {

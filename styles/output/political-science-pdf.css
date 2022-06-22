@@ -1062,10 +1062,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   margin-left: 24px;
 }
 
-[data-type=chapter] > [data-type=page] {
-  margin-bottom: 1.4rem;
-}
-
 .introduction > .os-figure.has-splash {
   background-color: #000000;
   width: 8.8in;
@@ -2330,11 +2326,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
-.os-summary-container {
+[data-type=chapter] > [data-type=page] {
   margin-bottom: 1.4rem;
 }
 
-.os-eoc.os-glossary-container {
+.os-eoc[data-type=composite-page] {
   margin-bottom: 1.4rem;
 }
 
@@ -2353,17 +2349,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 2px;
 }
 
-.os-eoc.os-suggested-readings-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-suggested-readings-container p {
   text-indent: -16px;
   padding-left: 16px;
-}
-
-.os-eoc.os-review-questions-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-review-questions-container [data-type=exercise] {

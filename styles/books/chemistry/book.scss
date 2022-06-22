@@ -53,15 +53,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  EocKeyEquations:(
-    _selectors: (".os-eoc.os-key-equations-container"),
-    'UnnumberedUnstyledTable:::margin-bottom': 0,
-    'TableData:::padding-right': table-h-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-  ),
-  EocSummary:(
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   Exercises:(
     _selectors: ("[data-type = 'chapter'] > .os-exercises-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -139,16 +130,8 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-key-equations-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
-  ),
-));
-
-@include add_settings((
-  ModulesWithSectionTitles: (
-    _selectors: ('.os-exercises-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
   ),
 ));
 
@@ -161,8 +144,8 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
-@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -183,8 +166,7 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocKeyEquations','carnival:::EocKeyEquations');
-@include use('EocSummary','carnival:::EocSummary');
+@include use('KeyEquations','carnival:::ModuleWithUnstyledTableShape');
 
 // EoC Exercises
 @include use('Exercises','carnival:::ExercisesModuleShape');
@@ -195,6 +177,7 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
+@include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('EverydayLifeNote', 'carnival:::BoxedNoteShape');
 @include use('PortraitNote', 'carnival:::BoxedNoteShape');
 @include use('InterconnectNote', 'carnival:::IconNoteShape');
@@ -211,6 +194,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 

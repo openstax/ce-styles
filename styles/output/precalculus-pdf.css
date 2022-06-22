@@ -3250,10 +3250,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-eos.os-section-exercises-container > section.section-exercises > section {
-  margin-bottom: 0.7rem;
-}
-
 .os-eos.os-section-exercises-container > section.section-exercises > section > p > [data-effect=bold] {
   color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -3423,10 +3419,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -3453,7 +3445,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-indent: 0;
 }
 
-.os-eoc.os-review-exercises-container > section.review-exercises > section {
+.os-eoc[data-type=composite-page] {
   margin-bottom: 0.7rem;
 }
 
@@ -3624,10 +3616,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-review-exercises-container > section.review-exercises > section [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
   margin-left: 16px;
-}
-
-.os-eoc.os-practice-test-container > section.practice-test {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-practice-test-container > section.practice-test > p > [data-effect=bold] {

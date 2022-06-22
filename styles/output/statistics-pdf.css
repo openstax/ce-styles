@@ -1147,7 +1147,6 @@ a[role=doc-noteref] {
 }
 
 .os-formula-review-container {
-  margin-bottom: 1.4rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1975,6 +1974,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   color: #093D4C;
+}
+
+.os-formula-review-container > section > .os-table {
+  margin-bottom: 1.4rem;
+}
+
+.os-formula-review-container > section > .os-table > table {
+  table-layout: fixed;
+  max-width: 100%;
+  break-inside: avoid-column;
+}
+
+.os-formula-review-container > section > .os-table > .os-caption-container {
+  display: table-caption;
+  caption-side: bottom;
+  prince-caption-page: all;
+  break-inside: avoid-column;
 }
 
 [data-type=chapter] > [data-type=page]:not(.introduction) h2[data-type=document-title], h2[data-type=title] {
@@ -3029,48 +3045,9 @@ p > [data-type=title] {
   margin-left: 24px;
 }
 
-.os-eoc.os-formula-review-container {
-  margin-bottom: 1.4rem;
-}
-
-.os-eoc.os-formula-review-container h2[data-type=document-title], h2[data-type=title] {
-  color: #1E7E91;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-size: 1.728rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  column-span: all;
-}
-
-.os-eoc.os-formula-review-container > section > .os-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.os-eoc.os-formula-review-container > section > .os-table > table {
-  table-layout: fixed;
-  max-width: 100%;
-  break-inside: avoid-column;
-}
-
-.os-eoc.os-formula-review-container > section > .os-table > .os-caption-container {
-  display: table-caption;
-  caption-side: bottom;
-  prince-caption-page: all;
-  break-inside: avoid-column;
-}
-
-.os-eoc.os-references-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-references-container > section > p {
   text-indent: -16px;
   padding-left: 16px;
-}
-
-.os-eoc.os-practice-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-practice-container > p > [data-effect=bold] {
@@ -3238,10 +3215,6 @@ p > [data-type=title] {
   margin-left: 16px;
 }
 
-.os-eoc.os-bring-together-exercises-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-eoc.os-bring-together-exercises-container > p > [data-effect=bold] {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3407,10 +3380,6 @@ p > [data-type=title] {
   margin-left: 16px;
 }
 
-.os-eoc.os-free-response-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-eoc.os-free-response-container > p > [data-effect=bold] {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3574,10 +3543,6 @@ p > [data-type=title] {
 
 .os-eoc.os-free-response-container [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
   margin-left: 16px;
-}
-
-.os-eoc.os-bring-together-homework-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-bring-together-homework-container > p > [data-effect=bold] {
@@ -3833,10 +3798,6 @@ p > [data-type=title] {
   padding-right: 0.7rem;
 }
 
-.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -3861,4 +3822,8 @@ p > [data-type=title] {
 .os-glossary-container > dl > dd > ol {
   margin-left: 16px;
   text-indent: 0;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
