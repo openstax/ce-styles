@@ -1,6 +1,7 @@
 @import '_table-components';
 @import '_caption-components';
 @import '_lists-components';
+@import 'wrappers-components';
 
 @include create_shape('corn:::BasicTableShape',  (
     _components: (
@@ -218,4 +219,15 @@
         )),
     )
 ));
+
+@include create_shape('corn:::TableTopSpacingShape', (
+    _components: (
+        map-merge($TopSpacing__Container,(
+            _components: (
+                $Table--TopSpacing,
+            )
+        )),
+    )
+));
+
 

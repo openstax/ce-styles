@@ -1718,6 +1718,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
+.os-eos .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-solution-container > p + .os-table {
+  margin-top: 1rem;
+}
+
 [data-type=chapter] > [data-type=page]:not(.introduction) h2[data-type=document-title], h2[data-type=title] {
   color: #1E7E91;
   font-family: Roboto Slab, serif, StixGeneral;

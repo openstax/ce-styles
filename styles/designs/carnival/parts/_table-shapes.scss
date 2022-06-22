@@ -184,3 +184,14 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::TableTopSpacingShape', (
+    _components: (
+        map-merge($TopSpacing__Container,(
+            _components: (
+                $Table--TopSpacing,
+            )
+        )),
+    )
+));
+

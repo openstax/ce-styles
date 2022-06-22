@@ -223,3 +223,11 @@ $Table__BottomBorder: (
 // Table data container used in table list shape
 $Table__Data--Wrapper: empty_wrapper(TableData, ' > td');
 $Table--Wrapper: empty_wrapper(Table, ' > table');
+
+$Table--TopSpacing:(
+    _name: "TableTopSpacing",
+    _subselector: " + .os-table",
+    _properties: (
+        margin-top: 1rem,
+    )
+);

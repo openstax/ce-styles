@@ -203,3 +203,11 @@ $ListTable: (
 
 $Table__Container--FirstInList: empty_wrapper(TableContainerFirstChild, ' > li > .os-table:first-child');
 $Table__Container--FirstInCircledList: empty_wrapper(TableContainerFirst, ' > os.table:nth-child(2)');
+
+$Table--TopSpacing:(
+    _name: "TableTopSpacing",
+    _subselector: " + .os-table",
+    _properties: (
+        margin-top: 1rem,
+    )
+);
