@@ -143,6 +143,7 @@ $bandColor: #093D4C;
 @include use('FigureFromExercisesSolution','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
+@include use('ImageFromExercisesModule','corn:::ImageFromExercisesModuleShape');
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
@@ -167,9 +168,12 @@ $bandColor: #093D4C;
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 @include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
 
@@ -177,17 +181,20 @@ $bandColor: #093D4C;
 @include use('BasicTable', 'corn:::BasicTableShape');
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
+@include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
 
-// Exercises
-@include use('CoreqExercises', 'corn:::OneColumnExercisesModuleShape');
+// Coreq Exercises
+@include use('CoreqExercises', 'corn:::ExercisesModuleShape'); // one column
 
 // Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
+
+// EoC Exercises
+@include use('ReviewExercises', 'corn:::ExercisesModuleShape'); // three columns
+@include use('PracticeTest', 'corn:::ExercisesModuleShape'); // three columns
 
 // EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ReviewExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('PracticeTest', 'corn:::ThreeColumnsExercisesModuleShape');
 
 // Notes
 @include use('HowTo', 'corn:::IconBoxedNoteShape');

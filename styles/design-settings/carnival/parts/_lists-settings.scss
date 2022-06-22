@@ -9,3 +9,15 @@
         _selectors: ('.os-table'),
     ),
 ));
+
+@include add_settings((
+    ExercisesProblemQuestionLists: (
+        _selectors: ('[data-type="problem"]', '[data-type="exercise-question"]'),
+    ),
+));
+
+@include add_settings((
+    ExerciseCompositePageLists: (
+        _selectors: ('.os-eoc[data-type="composite-page"]'),
+    ),
+));

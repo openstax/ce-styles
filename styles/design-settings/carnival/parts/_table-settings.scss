@@ -139,3 +139,15 @@
         ),
     )
 ));
+
+// Tables from exercises
+@include add_settings((
+    TableFromEoCExercises:( // Only needed for EoC Multicolumn Exercises
+      _selectors: ('.os-eoc [data-type="problem"]', '.os-eoc [data-type="exercise-question"]'),
+      'Table:::max-width': 100%,
+      'Table:::table-layout': fixed,
+      'TableData:::text-align': center,
+      'TableData:::padding-right': $columnTablePadding,
+      'TableData:::padding-left': $columnTablePadding,
+    ),
+));
