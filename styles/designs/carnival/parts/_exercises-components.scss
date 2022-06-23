@@ -1,10 +1,4 @@
-$ExerciseModule__Container: (
-    _name: "ExerciseModuleContainer",
-    _subselector: "",
-    _properties: (
-        margin-bottom: v-spacing(1),
-    ),
-);
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
 $Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
 $InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');

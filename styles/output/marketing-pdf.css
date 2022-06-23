@@ -235,8 +235,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -3927,10 +3931,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
-.knowledge-check {
-  margin-bottom: 0.7rem;
-}
-
 .knowledge-check [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -4015,10 +4015,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-eoc.os-marketing-discussion-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-marketing-discussion-container [data-type=exercise] {
@@ -4107,10 +4103,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-eoc.os-critical-thinking-container {
-  margin-bottom: 0.7rem;
-}
-
 .os-eoc.os-critical-thinking-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -4195,10 +4187,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-eoc.os-company-case-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-company-case-container [data-type=exercise] {
@@ -4307,10 +4295,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-.os-eoc.os-references-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-references-container > section.references {
   margin: 0;
 }
@@ -4326,10 +4310,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   left: -0.8rem;
   width: 0;
   display: inline-block;
-}
-
-.appendix {
-  margin-bottom: 1.4rem;
 }
 
 .appendix > section.references {
@@ -4351,6 +4331,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 a[data-type=cite] {
   text-decoration: none;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eob[data-type=composite-chapter] > [data-type=composite-page] {

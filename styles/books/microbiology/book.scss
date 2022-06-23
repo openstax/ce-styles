@@ -90,9 +90,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  EocSummary: (
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -176,10 +173,9 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-multiple-choice-container', '.os-critical-thinking-container', '.os-short-answer-container',
                  '.os-fill-in-the-blank-container', '.os-matching-container', '.os-true-false-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -195,7 +191,8 @@ $ChapterIntroType: fullWidth;
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -215,9 +212,6 @@ $ChapterIntroType: fullWidth;
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
-
-// EOC
-@include use('EocSummary', 'carnival:::EocSummary');
 
 // EoC Exercises
 @include use('MultipleChoiceCompChapPage','carnival:::ExercisesModuleShape');
@@ -239,6 +233,7 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 

@@ -235,8 +235,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -2429,10 +2433,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
-.os-eoc.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-glossary-container > dl {
   text-indent: -24px;
   padding-left: 24px;
@@ -2448,16 +2448,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 2px;
 }
 
-.os-eoc.os-suggested-reading-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-suggested-reading-container p {
   text-indent: -16px;
   padding-left: 16px;
 }
 
-.os-eoc.os-review-questions-container {
+.os-eoc[data-type=composite-page] {
   margin-bottom: 0.7rem;
 }
 
@@ -2541,10 +2537,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-.os-eoc.os-critical-thinking-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-critical-thinking-container [data-type=exercise] {

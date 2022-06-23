@@ -245,8 +245,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -3008,10 +3012,6 @@ section.coreq-skills > section.learning-objectives > ul > li {
   margin-top: 1rem;
 }
 
-section.coreq-skills {
-  margin-bottom: 0.7rem;
-}
-
 section.coreq-skills > p > [data-effect=bold] {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3175,10 +3175,6 @@ section.coreq-skills [data-type=injected-exercise] [data-type=exercise-question]
 
 section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
   margin-left: 16px;
-}
-
-.os-eos.os-section-exercises-container > section.section-exercises > section {
-  margin-bottom: 0.7rem;
 }
 
 .os-eos.os-section-exercises-container > section.section-exercises > section > p > [data-effect=bold] {
@@ -3350,10 +3346,6 @@ section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [da
   margin-left: 16px;
 }
 
-.os-eoc.os-review-exercises-container > section.review-exercises > section {
-  margin-bottom: 0.7rem;
-}
-
 .os-eoc.os-review-exercises-container > section.review-exercises > section > p > [data-effect=bold] {
   color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -3521,10 +3513,6 @@ section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [da
 
 .os-eoc.os-review-exercises-container > section.review-exercises > section [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
   margin-left: 16px;
-}
-
-.os-eoc.os-practice-test-container > section.practice-test {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-practice-test-container > section.practice-test > p > [data-effect=bold] {
@@ -3696,10 +3684,6 @@ section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [da
   margin-left: 16px;
 }
 
-.os-glossary-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
@@ -3724,6 +3708,10 @@ section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [da
 .os-glossary-container > dl > dd > ol {
   margin-left: 16px;
   text-indent: 0;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .how-to-notitle {

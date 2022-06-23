@@ -236,8 +236,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -1232,46 +1236,37 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-section-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-conceptual-questions-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-problems-exercises-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
-.os-conceptual-questions-container section {
-  margin-bottom: 1.4rem;
-}
-
-.os-problems-exercises-container section {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1676,7 +1671,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-table.os-unstyled-container > table > tbody > tr > td:not(:only-of-type) {
+.os-table.os-unstyled-container > table > tbody > tr > td {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
@@ -1755,42 +1750,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-[data-type=chapter] > .os-section-summary-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-section-summary-container > section > ol {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-section-summary-container section > ul > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-conceptual-questions-container {
-  margin-bottom: 0.7rem;
-}
-
 [data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
@@ -1857,10 +1816,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-[data-type=chapter] > .os-problems-exercises-container {
-  margin-bottom: 0.7rem;
 }
 
 [data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] {
@@ -2235,6 +2190,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > ul {

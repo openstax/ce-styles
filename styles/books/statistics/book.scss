@@ -130,6 +130,13 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  TableFromTwoColumnsModule: (
+    _selectors: ('.os-formula-review-container > section > .os-table'),
+    'CaptionContainerTable:::break-inside': avoid-column,
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
@@ -166,6 +173,7 @@ $bandColor: #093D4C;
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
+@include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -195,7 +203,6 @@ $bandColor: #093D4C;
 @include use('NotesLists', 'corn:::NotesListsShape');
 
 // EoC
-@include use('FormulaReview', 'corn:::TwoColumnVerticalEocShape');
 @include use('ReferencesWithIndentation', 'corn:::ModuleWithIndentationShape');
 @include use('Practice', 'corn:::ExercisesModuleShape'); // one column
 @include use('BringingItTogetherPractice', 'corn:::ExercisesModuleShape'); // one column
@@ -203,3 +210,4 @@ $bandColor: #093D4C;
 @include use('BringingItTogetherHomework', 'corn:::ExercisesModuleShape'); // one column
 @include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');

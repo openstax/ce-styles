@@ -235,8 +235,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -977,10 +981,6 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
 
 [data-type=page] section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-}
-
-[data-type=chapter] > [data-type=page] {
-  margin-bottom: 1.4rem;
 }
 
 .centered-text {
@@ -2245,17 +2245,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: target-counter(attr(href, url), page);
 }
 
-.os-references-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-references-container p {
   text-indent: -16px;
   padding-left: 16px;
-}
-
-.os-eoc.os-glossary-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-eoc.os-glossary-container > dl {
@@ -2271,10 +2263,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eoc.os-glossary-container > dl > dd {
   display: inline;
   margin-left: 2px;
-}
-
-.os-eoc.os-review-questions-container {
-  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-review-questions-container [data-type=exercise] {
@@ -2359,10 +2347,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-summary-container {
+[data-type=chapter] > [data-type=page] {
   margin-bottom: 1.4rem;
 }
 
-.os-eoc.os-further-reading-container {
+.os-eoc[data-type=composite-page] {
   margin-bottom: 1.4rem;
 }

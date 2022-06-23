@@ -2,9 +2,11 @@
 @import 'wrappers-components';
 @import 'lists-components';
 
-@include create_shape('cardboard:::ModuleWithinChapterShape', (
+// All EOC modules should have margin bottom set to 0.7rem
+
+@include create_shape('cardboard:::ModuleWithMarginBottomShape', (
     _components: (
-        $Module__Container
+      $Module__Container--WithMarginBottom
     )
 ));
 

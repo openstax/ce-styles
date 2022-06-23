@@ -1,5 +1,13 @@
 @import 'module-components';
 
+// All EOC modules should have margin bottom set to 0.7rem
+
+@include create_shape('corn:::ModuleWithMarginBottomShape', (
+    _components: (
+      $Module__Container--WithMarginBottom
+    )
+));
+
 @include create_shape('corn:::ModuleWithTwoColumnsShape', ( // used in Statistics
     _components: (
       $Module__Container--WithTwoColumns

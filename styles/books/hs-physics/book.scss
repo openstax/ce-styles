@@ -128,15 +128,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include add_settings((
-  EocSummary:(
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
-  EocKeyEquations:(
-    _selectors: (".os-eoc.os-key-equations-container"),
-    'UnnumberedUnstyledTable:::margin-bottom': 0,
-    'TableData:::padding-right': table-h-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-  ),
   ConceptCompChapPage:(
     _selectors: (".os-concept-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
@@ -225,15 +216,6 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-@include add_settings((
-  ModulesWithSectionTitles: (
-    _selectors: ('.os-key-equations-container', '.os-concept-container', '.os-critical-thinking-container',
-                 '.os-problems-container', '.os-performance-container', '.os-multiple-choice-container',
-                 '.os-short-answer-container', '.os-extended-response-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
-  ),
-));
-
 // @use
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
@@ -245,7 +227,7 @@ $ChapterIntroType: fullWidth;
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -274,8 +256,6 @@ $ChapterIntroType: fullWidth;
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary','carnival:::EocSummary');
-@include use('EocKeyEquations','carnival:::EocKeyEquations');
 
 // Exercises
 @include use('ModuleExercises','carnival:::ExercisesModuleShape');
@@ -311,6 +291,7 @@ $ChapterIntroType: fullWidth;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 

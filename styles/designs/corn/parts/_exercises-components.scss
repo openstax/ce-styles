@@ -1,11 +1,5 @@
 // Containers
-$ExercisesModule__Container: (
-  _name: "ExercisesModuleContainer",
-  _subselector: ' ',
-  _properties: (
-      margin-bottom: v-spacing(1),
-  )
-);
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
 $Exercise__Container: (
       _name: "ExerciseContainer",
