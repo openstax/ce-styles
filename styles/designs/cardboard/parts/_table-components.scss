@@ -526,3 +526,12 @@ $Table__Timeline__Data__Cell--TwoRowSpan: (
         border-right-width: 0.08rem, //1px converted to rem
     )
 );
+
+$Table--TopSpacing:(
+    _name: "TableTopSpacing",
+    _subselector: " + .os-table",
+    _properties: (
+        margin-top: 1rem,
+    )
+);
+

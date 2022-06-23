@@ -147,3 +147,12 @@
       'TableData:::padding-left': $columnTablePadding,
     ),
 ));
+
+@include add_settings((
+    TableAfterExercisePara: (
+        _selectors: ('.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p'),
+    ),
+    TableAfterContentExercisePara: ( // used only in hs-physics
+        _selectors: ('[data-type="page"] :not(.os-note-body) .os-problem-container > p'),
+    ),
+));

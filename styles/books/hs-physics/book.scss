@@ -251,6 +251,8 @@ $ChapterIntroType: fullWidth;
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('TableAfterContentExercisePara', 'carnival:::TableTopSpacingShape');
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');

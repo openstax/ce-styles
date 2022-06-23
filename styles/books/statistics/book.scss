@@ -161,6 +161,10 @@ $bandColor: #093D4C;
 @include use('FigureFromExercisesSolution','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
+@include use('FigureAfterEocPara', 'corn:::FigureTopSpacingShape');
+@include use('FigureAfterEocSolutionsPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'corn:::ImageTopSpacingShape');
+@include use('ImageAfterEocSolutionsPara', 'corn:::ImageTopSpacingShape');
 
 // Tables
 @include use('BasicTable', 'corn:::BasicTableShape');
@@ -168,6 +172,7 @@ $bandColor: #093D4C;
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
+@include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 @include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
 
 // Titles

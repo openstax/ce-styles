@@ -1773,6 +1773,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
+.os-eoc .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+[data-type=page] :not(.os-note-body) .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;

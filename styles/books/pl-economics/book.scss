@@ -232,10 +232,10 @@ $bandColor: #217867;
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
 
-//Tables
+// Tables
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
 @include use('TopCaptionedTable', 'cosmos:::BasicTableShape');
-
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');
