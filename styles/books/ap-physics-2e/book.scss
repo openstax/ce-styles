@@ -23,3 +23,13 @@
 @include use('TestPrep', 'carnival:::ExercisesModuleShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
+
+
+// Book Specific Override
+// https://github.com/openstax/cnx-recipes/issues/4723
+
+.os-eoc {
+  > section > [data-type="exercise"] {
+    page-break-inside: inherit;
+  }
+}
