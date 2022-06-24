@@ -3,10 +3,7 @@
 // EOC exercises in double columns shouldn't be broken up
 
 .os-eoc {
-  > .ap-test-prep {
-    page-break-inside: avoid;
-  }
   > .ap-test-prep > [data-type="exercise"] {
-    page-break-inside: inherit;
+    page-break-inside: auto;
   }
 }
