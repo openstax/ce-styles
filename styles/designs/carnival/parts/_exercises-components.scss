@@ -1,7 +1,20 @@
 $ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
-$Exercise__Container: empty_wrapper(Container, ' [data-type="exercise"]');
-$InjectedExercise__Container: empty_wrapper(Container, ' [data-type="injected-exercise"]');
+$Exercise__Container: (
+    _name: "ExerciseContainer",
+    _subselector: ' [data-type="exercise"]',
+    _properties: (
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$InjectedExercise__Container: (
+    _name: "InjectedExerciseContainer",
+    _subselector: ' [data-type="injected-exercise"]',
+    _properties: (
+        margin-bottom: v-spacing(1),
+    )
+);
 
 // Problem component
 $Exercise__Problem__Wrapper: (
