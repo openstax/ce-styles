@@ -28,9 +28,14 @@ If you're in the repo's docker container (either using VScode or something else)
 
 `./script/build-styles`
 
-But if you can't open the container, just prepend with ./script/run:
+To build a single style:
+`./script/build-styles <style-name>` (works for everything except webview)
+or `dart styles/build/build.dart <input-file> <output-file>`
 
-`./script/run ./script/build-styles`
+Outside the container, just prepend with ./script/run:
+
+`./script/run ./script/build-styles` or `./script/run dart styles/build/build.dart ...`
+
 
 # Important Links
  - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
