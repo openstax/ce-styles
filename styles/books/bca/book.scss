@@ -235,11 +235,18 @@ TextHeavyWithTitleTable: (
     ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-conceptual-questions-container', '.os-eoc.os-you-try-container', '.os-eoc.os-practice-exercises-container', '.os-eoc.os-written-exercises-container', '.os-eoc.os-case-exercises-container', '.os-eoc.os-extension-exercises-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -293,7 +300,7 @@ TextHeavyWithTitleTable: (
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
 @include use('ReferencesWithLinkedNotes', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesCiteLink', 'cardboard:::ReferencesCiteLinkShape');
-@include use('ModuleWithMarginBottom','cardboard:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Exercises
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');

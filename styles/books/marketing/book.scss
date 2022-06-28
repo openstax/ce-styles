@@ -292,6 +292,12 @@ $bandColor: #9028A3;
     )
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.knowledge-check', '.os-eoc.os-marketing-discussion-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-company-case-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -299,6 +305,7 @@ $bandColor: #9028A3;
 @include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
 @include use('EmphasizedColoredText', 'common:::ColoredText');
 @include use('Equation', 'cardboard:::EquationShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -365,7 +372,7 @@ $bandColor: #9028A3;
 @include use('ReferencesWithLinkedNotes', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesFromAppendix', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesCiteLink', 'cardboard:::ReferencesCiteLinkShape');
-@include use('ModuleWithMarginBottom','cardboard:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // EOB
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');

@@ -268,13 +268,19 @@ $bandColor: #24739E;
   )
 ));
 
-// Common settings
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-review-questions-container', '.os-multiple-choice-container', '.os-problem-set-container'),
+  ),
+));
 
+// Common settings
 @include use('BookRoot', 'common:::BookRoot');
 @include use('EmphasizedColoredText', 'common:::ColoredText');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises excpet Video Activity which has section (not links) titles
 
 //Other settings
 @include use('Toc', 'cardboard:::NoUnitToc');
@@ -342,7 +348,7 @@ $bandColor: #24739E;
 
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','cardboard:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Lists
 @include use('PageLists', 'cardboard:::PageListsShape');

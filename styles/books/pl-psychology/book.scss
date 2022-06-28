@@ -203,10 +203,17 @@ $bandColor: #00627b;
     ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-personal-application-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
 @include use('LearningObjectivesAbstract', 'cosmos:::LearningObjectivesShape');
 @include use('PageWithIndentation', 'cosmos:::ModuleWithIndentationForPolishBooksShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cosmos:::ChapterIntroShape');
@@ -246,7 +253,7 @@ $bandColor: #00627b;
 
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','cosmos:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Exercises
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');

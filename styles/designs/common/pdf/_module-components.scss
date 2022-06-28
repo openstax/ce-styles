@@ -1,0 +1,17 @@
+$Module__Container: empty_wrapper(ModuleContainer, '');
+
+$Module__Container--WithMarginBottom: (
+  _name: "ModuleContainerWithMarginBottom",
+  _subselector: '',
+  _properties: (
+    margin-bottom: enum('ValueSet:::REQUIRED'), // different value for Philosophy and Political Science in cosmos theme, any other book - 0.7rem
+    )
+);
+
+$Module__Section--WithoutMarginBottom:(
+    _name: "ModuleSectionWithoutMarginBottom",
+    _subselector: " section",
+    _properties:(
+        margin-bottom: 0,
+    )
+);

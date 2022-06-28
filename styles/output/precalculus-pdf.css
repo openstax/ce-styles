@@ -1181,6 +1181,14 @@ a[role=doc-noteref] {
   content: target-counter(attr(href, url), page);
 }
 
+.os-eos.os-section-exercises-container > section.section-exercises section {
+  margin-bottom: 0;
+}
+
+.os-eoc.os-practice-test-container section {
+  margin-bottom: 0;
+}
+
 .os-figure:not(.has-splash) > figure {
   display: table;
   margin-left: auto;

@@ -2,30 +2,9 @@
 @import 'wrappers-components';
 @import 'table-components';
 
-// All EOC modules should have margin bottom set to 0.7rem
-
-@include create_shape('carnival:::ModuleWithMarginBottomShape', (
-    _components: (
-      $Module__Container--WithMarginBottom
-    )
-));
-
 @include create_shape('carnival:::ModuleWithTwoColumnsShape', (
     _components: (
       $Module__Container--WithTwoColumns
-    )
-));
-
-// Use for EOC modules that don't have section title links.
-// Otherwise there is a blank space between content from different sections.
-
-@include create_shape('carnival:::ModuleWithoutTitleLinksShape', (
-    _components: (
-      map-merge($Module__Container,(
-            _components:(
-                $Module__Section--WithoutMarginBottom
-            ),
-        )),
     )
 ));
 

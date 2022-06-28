@@ -262,12 +262,21 @@ $bandColor: #24739e;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: (".os-multiple-choice-container", ".os-questions-container", ".os-exercise-set-a-container",
+    ".os-exercise-set-b-container", ".os-problem-set-a-container", ".os-problem-set-b-container",
+    ".os-thought-provokers-container"),
+  ),
+));
+
 // Common settings
 @include use("BookRoot", "common:::BookRoot");
 @include use("EmphasizedColoredText", "common:::ColoredText");
 @include use("Footnote", "common:::FootnoteShape");
 @include use("FootnoteCall", "common:::FootnoteCallShape");
 @include use("Toc", "cardboard:::NoUnitToc");
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 //Chapter Intro
 @include use("ChapterIntro", "cardboard:::ChapterIntroShape");
@@ -330,7 +339,7 @@ $bandColor: #24739e;
 
 // Eoc
 @include use("KeyTerms", "cardboard:::KeyTermsShape");
-@include use('ModuleWithMarginBottom','cardboard:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Eob
 @include use("AnswerKey", "cardboard:::AnswerKeyShape");

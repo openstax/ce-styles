@@ -1,13 +1,5 @@
 @import 'module-components';
 
-// All EOC modules should have margin bottom set to 0.7rem
-
-@include create_shape('cosmos:::ModuleWithMarginBottomShape', (
-    _components: (
-      $Module__Container--WithMarginBottom
-    )
-));
-
 @include create_shape('cosmos:::ModuleWithIndentationShape',(
     _components:(
         map-merge($Module__Container,(

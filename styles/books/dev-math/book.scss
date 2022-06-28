@@ -146,6 +146,12 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises', '.os-eoc.os-practice-test-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesShape');
@@ -177,6 +183,7 @@ $bandColor: #093D4C;
 @include use('ImageAfterEobPara', 'corn:::ImageTopSpacingShape');
 @include use('FigureAfterEosPara', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterEosPara', 'corn:::ImageTopSpacingShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
 //Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -225,7 +232,7 @@ $bandColor: #093D4C;
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // EoC Exercises
 @include use('ReviewExercises', 'corn:::ExercisesModuleShape'); // three columns

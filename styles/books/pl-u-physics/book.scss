@@ -245,8 +245,8 @@ ChapterIntro: (
 @include use('PageWithIndentation', 'carnival:::ModuleWithIndentationForPolishBooksShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
-@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
