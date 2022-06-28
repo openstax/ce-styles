@@ -137,6 +137,12 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-bring-together-exercises-container'),
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
@@ -145,6 +151,7 @@ $bandColor: #093D4C;
 @include use('Example', 'corn:::ExampleShape');
 @include use('Index', 'corn:::IndexShape');
 @include use('TwoColumnsModules','corn:::ModuleWithTwoColumnsShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'corn:::ChapterIntroShape');
@@ -210,4 +217,4 @@ $bandColor: #093D4C;
 @include use('BringingItTogetherHomework', 'corn:::ExercisesModuleShape'); // one column
 @include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');

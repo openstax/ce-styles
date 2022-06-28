@@ -126,6 +126,12 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises', '.os-eoc.os-practice-test-container', 'section.coreq-skills'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('CoreqSkills', 'corn:::CoreqSkillsShape');
@@ -134,6 +140,7 @@ $bandColor: #093D4C;
 @include use('Index', 'corn:::IndexShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos coreq exercises
 
 //Figures
 @include use('Figure','corn:::FigureShape');
@@ -202,7 +209,7 @@ $bandColor: #093D4C;
 
 // EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Notes
 @include use('HowTo', 'corn:::IconBoxedNoteShape');

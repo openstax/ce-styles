@@ -1,13 +1,5 @@
 $Module__Container: empty_wrapper(ModuleContainer, '');
 
-$Module__Container--WithMarginBottom: (
-  _name: "ModuleContainerWithMarginBottom",
-  _subselector: '',
-  _properties: (
-    margin-bottom: v-spacing(1),
-  )
-);
-
 $Module__Container--WithTwoColumns: (
     _name: "ModuleContainerWithTwoColumns",
     _subselector: "",
@@ -16,14 +8,6 @@ $Module__Container--WithTwoColumns: (
         column-gap: 2.4rem,
         column-width: auto,
     ),
-);
-
-$Module__Section--WithoutMarginBottom:(
-    _name: "ModuleSectionWithoutMarginBottom",
-    _subselector: " section",
-    _properties:(
-        margin-bottom: 0,
-    )
 );
 
 $ModuleWithIndentation__Para: (

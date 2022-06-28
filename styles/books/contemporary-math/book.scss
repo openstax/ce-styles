@@ -343,12 +343,14 @@ $bandColor: #093D4C;
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
-//Exercises
-@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column
+//Content Exercises
+@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column 
 @include use('YourTurnNoteExercises', 'corn:::ExercisesModuleShape'); // one column
 @include use('SectionExercises', 'corn:::ExercisesModuleShape'); // one column
+
+// EoC Exercises
 @include use('ChapterTestExercises', 'corn:::ExercisesModuleShape'); // one column
 @include use('ChapterReviewExercises', 'corn:::ExercisesModuleShape'); // one column
 

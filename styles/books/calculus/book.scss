@@ -118,10 +118,17 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eos.os-section-exercises-container', '.os-eoc.os-review-exercises-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('Example', 'corn:::ExampleShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'corn:::ChapterIntroShape');
@@ -184,7 +191,7 @@ $bandColor: #093D4C;
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Exercises from Example
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');

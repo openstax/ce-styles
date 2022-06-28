@@ -1,0 +1,20 @@
+@import 'module-components';
+
+// All EOC modules should have margin bottom set to 0.7rem
+@include create_shape('common:::ModuleWithMarginBottomShape', (
+    _components: (
+      $Module__Container--WithMarginBottom
+    )
+));
+
+// Use for EOC modules that don't have section title links.
+// Otherwise there is a blank space between content from different sections.
+@include create_shape('common:::ModuleWithoutTitleLinksShape', (
+    _components: (
+      map-merge($Module__Container,(
+            _components:(
+                $Module__Section--WithoutMarginBottom
+            ),
+        )),
+    )
+));

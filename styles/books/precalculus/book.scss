@@ -110,6 +110,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises', '.os-eoc.os-practice-test-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesShape');
@@ -118,6 +124,7 @@ $ChapterIntroType: fullWidth;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Equation', 'corn:::EquationShape');
 @include use('Index', 'corn:::IndexShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
 //Figures
 @include use('Figure','corn:::FigureShape');
@@ -181,7 +188,7 @@ $ChapterIntroType: fullWidth;
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ModuleWithMarginBottom','corn:::ModuleWithMarginBottomShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // EoC Exercises
 @include use('ReviewExercises', 'corn:::ExercisesModuleShape'); // three columns

@@ -164,8 +164,8 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('Example', 'carnival:::ExampleShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModuleWithoutTitleLinks','carnival:::ModuleWithoutTitleLinksShape');
-@include use('ModuleWithMarginBottom','carnival:::ModuleWithMarginBottomShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
