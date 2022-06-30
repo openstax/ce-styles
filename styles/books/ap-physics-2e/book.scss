@@ -5,11 +5,6 @@
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
 ),
 ));
 
@@ -20,12 +15,21 @@
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-ap-test-prep-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
-@include use('TestPrep', 'carnival:::EOCAssesmentsShape');
+@include use('TestPrep', 'carnival:::ExercisesModuleShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+
+
+// Book Specific Override
+// https://github.com/openstax/cnx-recipes/issues/4723
+
+.os-eoc {
+  > section > [data-type="exercise"] {
+    page-break-inside: inherit;
+  }
+}

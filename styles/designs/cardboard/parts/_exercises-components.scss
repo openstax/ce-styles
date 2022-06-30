@@ -1,10 +1,4 @@
-$ExercisesModule__Container: (
-  _name: "ExercisesModuleContainer",
-  _subselector: '',
-  _properties: (
-    margin-bottom: v-spacing(2),
-  )
-);
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
 $Exercise__Container: (
     _name: "ExerciseContainer",
@@ -41,6 +35,7 @@ $InjectedExercise__Question__Wrapper: (
 );
 
 $Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
+$Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
 
 // Solution components
 $Exercise__Solution__Wrapper: (
@@ -81,8 +76,8 @@ $Exercise__ProblemSolution__Number: (
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
-    width:  enum('ValueSet:::OPTIONAL'),
-    text-align: enum('ValueSet:::OPTIONAL'),
+    width:  enum('ValueSet:::OPTIONAL'), // used only in one column exercises
+    text-align: enum('ValueSet:::OPTIONAL'), // used only in one column exercises
   )
 );
 

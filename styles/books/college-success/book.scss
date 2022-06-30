@@ -223,10 +223,14 @@ $bandColor: #24739E;
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('FakeTitleTable', 'cardboard:::TableWithBordersShape');
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 //Lists
 @include use('NotesLists', 'cardboard:::NotesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+
+// Eoc
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // eob
 @include use('Index', 'cardboard:::IndexShape');

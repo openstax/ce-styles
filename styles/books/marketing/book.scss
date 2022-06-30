@@ -108,6 +108,20 @@ $bandColor: #9028A3;
   'Subtitle:::color': (_ref: "colorMap:::noteOption12SubtitleColor"),
   'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
+  CareersInMarketing: (
+  _selectors: (".careers-marketing"),
+  'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-outlook.svg")) no-repeat top right,
+  'TitleIcon:::height': 5rem,
+  'TitleIcon:::width': 11rem,
+  'TitleIcon:::bottom':0,
+  'Title:::background-color': (_ref: "colorMap:::noteOption1HeaderBackgroundColor"),
+  'Title:::color': (_ref: "colorMap:::noteOption1HeaderColor"),
+  'Title:::font-family': (_ref: "typography:::titleFont"),
+  'Body:::font-family': (_ref: "typography:::baseFont"),
+  'Body:::background-color': (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
+  'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+  'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
   WordDocument: (
     _selectors: (".word-document"),
     "IconCondensedBody:::font-family": (_ref: "typography:::baseFont"),
@@ -278,6 +292,12 @@ $bandColor: #9028A3;
     )
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.knowledge-check', '.os-eoc.os-marketing-discussion-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-company-case-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -285,6 +305,7 @@ $bandColor: #9028A3;
 @include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
 @include use('EmphasizedColoredText', 'common:::ColoredText');
 @include use('Equation', 'cardboard:::EquationShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -306,6 +327,7 @@ $bandColor: #9028A3;
 // Tables
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('CondensedDefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 // Titles
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
@@ -329,7 +351,7 @@ $bandColor: #9028A3;
 // Lists
 @include use('PageLists', 'cardboard:::PageListsShape');
 @include use('NotesLists', 'cardboard:::NotesListsShape');
-@include use('ExercisesProblemLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 @include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
 
@@ -339,6 +361,7 @@ $bandColor: #9028A3;
 @include use('MarketingDashboard', 'cardboard:::IconBoxedNoteWithSubtitleShape');
 @include use('MarketingPractice', 'cardboard:::IconBoxedNoteWithSubtitleShape');
 @include use('CompaniesConscience', 'cardboard:::IconBoxedNoteWithSubtitleShape');
+@include use('CareersInMarketing', 'cardboard:::IconBoxedNoteWithSubtitleShape');
 @include use('WordDocument', 'cardboard:::IconCondensedShape');
 
 // Exercises
@@ -349,6 +372,7 @@ $bandColor: #9028A3;
 @include use('ReferencesWithLinkedNotes', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesFromAppendix', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesCiteLink', 'cardboard:::ReferencesCiteLinkShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // EOB
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');

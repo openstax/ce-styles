@@ -5,7 +5,25 @@
 ));
 
 @include add_settings((
+    CompositePageLists: (
+        _selectors: ('[data-type="composite-page"]'),
+    ),
+));
+
+@include add_settings((
     TableLists: (
         _selectors: ('.os-table'),
+    ),
+));
+
+@include add_settings((
+    ExercisesProblemQuestionLists: (
+        _selectors: ('[data-type="problem"]', '[data-type="exercise-question"]'),
+    ),
+));
+
+@include add_settings((
+    ExerciseCompositePageLists: (
+        _selectors: ('.os-eoc[data-type="composite-page"]'),
     ),
 ));

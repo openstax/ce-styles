@@ -2,7 +2,7 @@
 
 @include create_shape('cosmos:::ExercisesModuleShape',(
     _components: (
-        map-merge($ExercisesModule__Container, (
+        map-merge($ExerciseModule__Container, (
             _components: (
                 map-merge($Exercise__Container,(
                     _components:(
@@ -15,11 +15,12 @@
                                         $Exercise__Problem__Paragraph,
                                     )
                                 )),
+                                $Exercise__Problem__Container--WithImageTableOnTop,
                             )
                         )),
                     )
                 )),
-                map-merge($InjectedExercise__Container,(
+                map-merge($InjectedExercise__Container,( // used in English Composition
                     _components: (
                         map_merge($InjectedExercise__Question__Wrapper, (
                             _components:(
@@ -32,28 +33,7 @@
                                         $Exercise__Problem__Paragraph,
                                     )
                                 )),
-                            )
-                        )),
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-@include create_shape('cosmos:::InjectedExercisesOnPageShape',(
-    _components: (
-        map-merge($InjectedExercise--OnPage__Container,(
-            _components: (
-                map_merge($InjectedExercise__Question__Wrapper, (
-                    _components:(
-                        $Exercise__Problem__Number,
-                        $Exercise__Problem__Divider,
-                        map-merge($Exercise__Problem__Container, (
-                            _components: (
-                                $InjectedExercise__Context,
-                                $InjectedExercise__Divider,
-                                $Exercise__Problem__Paragraph,
+                                $Exercise__Problem__Container--WithImageTableOnTop,
                             )
                         )),
                     )

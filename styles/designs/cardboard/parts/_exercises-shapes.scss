@@ -2,7 +2,7 @@
 
 @include create_shape('cardboard:::ExercisesModuleShape',(
     _components: (
-        map-merge($ExercisesModule__Container, (
+        map-merge($ExerciseModule__Container, (
             _components: (
                 map-merge($Exercise__Container,(
                     _components:(
@@ -15,7 +15,8 @@
                                     _components: (
                                         $Exercise__ProblemSolution__Para,
                                     )
-                                ))
+                                )),
+                                $Exercise__Problem__Container--WithImageTableOnTop,
                             )
                         )),
                     )
@@ -31,7 +32,8 @@
                                     _components: (
                                         $Exercise__ProblemSolution__Para,
                                     )
-                                ))
+                                )),
+                                $Exercise__Problem__Container--WithImageTableOnTop
                             )
                         ))
                     )

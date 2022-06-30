@@ -1,11 +1,12 @@
 // Containers
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
 $Exercise__Container: (
       _name: "ExerciseContainer",
       _subselector: ' [data-type="exercise"]',
       _properties: (
-        margin-bottom: v-spacing(2),
-        display: enum('ValueSet:::OPTIONAL'), //used in 3 column exercises
+        margin-bottom: v-spacing(1),
+        display: enum('ValueSet:::OPTIONAL'), //used in three column exercises
         width: enum('ValueSet:::OPTIONAL'), //used in multicolumn layout
         padding-right: v-spacing(1),
       )
@@ -17,23 +18,13 @@ $Exercise__Container--MaterialSet2: (
       _subselector: ' [data-type="exercise"].material-set-2',
       _properties: (
         display: inline-table,
-        margin-bottom: v-spacing(2),
+        margin-bottom: v-spacing(1),
         width: 48%,
         padding-right: v-spacing(1),
       )
 );
 
 $Exercise__Container--FromExample: empty_wrapper(ExerciseFromExample, '');
-
-$ExercisesModule__Container: empty_wrapper(ExercisesModuleContainer, '');
-
-$ExercisesModule--Multicolumn__Container: (
-  _name: "ExercisesMulticolumnModuleContainer",
-  _subselector: ' ',
-  _properties: (
-      margin-bottom: v-spacing(2),
-  )
-);
 
 // Problem components
 $Exercise__Problem__Wrapper: (
@@ -56,11 +47,11 @@ $Exercise__Solution__Wrapper: (
   _name: "SolutionWrapper",
   _subselector: ' [data-type="solution"]',
   _properties: (
-    display: enum('ValueSet:::OPTIONAL'), //used in 3 column layout
-    overflow-wrap: enum('ValueSet:::OPTIONAL'), //used in 3 column layout
+    display: enum('ValueSet:::OPTIONAL'), //used in three column exercises
+    overflow-wrap: enum('ValueSet:::OPTIONAL'), //used in three column exercises
     margin-bottom: v-spacing(2),
-    width: enum('ValueSet:::OPTIONAL'), //used in 3 column layout
-    padding-right: enum('ValueSet:::OPTIONAL'), //used in 3 column layout
+    width: enum('ValueSet:::OPTIONAL'), //used in three column exercises
+    padding-right: enum('ValueSet:::OPTIONAL'), //used in three column exercises
   )
 );
 
@@ -79,9 +70,9 @@ $Exercise__ProblemSolution__Paragraph:(
   _name: "ProblemSolutionParagraph",
   _subselector: " > p",
   _properties:(
-    margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(1)),
     max-width: 100%,
     padding-right: v-spacing(1),
+    margin-bottom: 0
   )
 );
 
@@ -93,8 +84,8 @@ $Exercise__ProblemSolution__Number: (
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
-    width:  enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
-    text-align: enum('ValueSet:::OPTIONAL'), // Used in 1 column layout exercises, answer key
+    width:  enum('ValueSet:::OPTIONAL'), // Used in one column exercises, answer key
+    text-align: enum('ValueSet:::OPTIONAL'), // Used in one column exercises, answer key
   )
 );
 
@@ -103,17 +94,16 @@ $Exercise__ProblemSolution__Divider: (
   _subselector: " > .os-divider",
   _properties:(
     margin-right: h-spacing(1),
-    display: enum('ValueSet:::OPTIONAL'), //used in Answer Key
+    display: enum('ValueSet:::OPTIONAL'), //used in answer key
   )
 );
 
 // Injected exercise components
-
 $InjectedExercise__Container: (
       _name: "InjectedExerciseContainer",
       _subselector: ' [data-type="injected-exercise"]',
       _properties: (
-        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(1)),
         padding-right: v-spacing(1),
       )
 );
@@ -144,7 +134,6 @@ $InjectedExercise__Solution__Wrapper: (
 );
 
 // Exercise titles components
-
 $Exercise__Title--Problem: (
     _name: "ProblemTitle",
     _subselector: ' [data-type="title"]',
@@ -157,7 +146,7 @@ $Exercise__Title--Problem: (
     )
 );
 
-$Exercise__Title--ProblemDefault: ( //title created by recipe for statistics
+$Exercise__Title--ProblemDefault: ( // title created by recipe for statistics
     _name: "DefaultProblemTitle",
     _subselector: ' > [data-type="problem-title"]',
     _properties: (
@@ -213,7 +202,7 @@ $Exercise__Title__Icon--Commentary: (
     )
 );
 
-$Exercise__Title__Icon--Problem: ( 
+$Exercise__Title__Icon--Problem: (
     _name: "ExerciseTitleProblemIcon",
     _subselector: '::before',
     _properties: (
@@ -248,5 +237,32 @@ $Exercise__Title__Number: (
         line-height: line-height(0),
         font-weight: bold,
         margin-left: h-spacing(1),
+    )
+);
+
+
+$Exercises_ParagraphTitle: ( // should be styled in multi molumn exercises
+    _name: "ExercisesParagraphTitle",
+    _subselector: ' > p > [data-effect="bold"]',
+    _properties: (
+        color: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
+        font-family: enum('ValueSet:::OPTIONAL'), // Used only in multic olumn exercises
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        margin-top: enum('ValueSet:::OPTIONAL'),
+        font-style: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
+    )
+);
+
+$Exercises_ParagraphTitle--Italic: ( // should be styled in multi molumn exercises
+    _name: "ExercisesParagraphTitleItalic",
+    _subselector: ' > p',
+    _properties: (
+        color: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
+        font-family: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        font-style: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
+        margin-top: enum('ValueSet:::OPTIONAL'), // Used only in multi column exercises
     )
 );

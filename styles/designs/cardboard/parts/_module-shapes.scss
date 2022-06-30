@@ -2,12 +2,6 @@
 @import 'wrappers-components';
 @import 'lists-components';
 
-@include create_shape('cardboard:::ModuleWithinChapterShape', (
-    _components: (
-        $Module__Container
-    )
-));
-
 @include create_shape('cardboard:::ModuleWithIndentationShape',(
     _components:(
         map-merge($Module__Container,(

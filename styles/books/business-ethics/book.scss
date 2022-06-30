@@ -149,12 +149,19 @@ $bandColor: #24739E;
     ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-assessment-questions-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 //Figures
 @include use('Figure','cardboard:::FigureShape');
@@ -177,6 +184,7 @@ $bandColor: #24739E;
 @include use('FakeTitleTable', 'cardboard:::TableWithBordersShape');
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 //Notes
 @include use('LinkToLearning', 'cardboard:::BoxedNoteShape');
@@ -198,6 +206,7 @@ $bandColor: #24739E;
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
 @include use('ReferencesWithLinkedNotes', 'cardboard:::ReferencesWithLinkedNotesShape');
 @include use('ReferencesCiteLink', 'cardboard:::ReferencesCiteLinkShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Exercises
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
@@ -205,7 +214,7 @@ $bandColor: #24739E;
 //Lists
 @include use('PageLists', 'cardboard:::PageListsShape');
 @include use('NotesLists', 'cardboard:::NotesListsShape');
-@include use('ExercisesProblemLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 
 //Eob
 @include use('Index', 'cardboard:::IndexShape');

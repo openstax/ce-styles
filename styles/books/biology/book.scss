@@ -105,39 +105,18 @@ $ChapterIntroType: side;
   ),
 ));
 
-//EOC, define colors and column layout for all eoc sections here.This should be treated exactly like notes, where we use generic components and book specfic setting for each one of them. There is quite a bit of repetion but this keeps everything cleanly in here and follows the same principles as the notes.
-
-//Can we convert those into group settings? A mixin? Something to DRY it.
 @include add_settings((
-  EocSummary:(
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   VisualExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-visual-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   CriticalThinking: (
     _selectors: ("[data-type = 'chapter'] > .os-critical-thinking-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
 ));
 
@@ -182,9 +161,8 @@ $ChapterIntroType: side;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-visual-exercise-container', '.os-multiple-choice-container', '.os-critical-thinking-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -195,10 +173,10 @@ $ChapterIntroType: side;
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');
@@ -218,16 +196,18 @@ $ChapterIntroType: side;
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary','carnival:::EocSummary');
-@include use('VisualExercise', 'carnival:::EOCAssesmentsShape');
-@include use('MultipleChoice', 'carnival:::EOCAssesmentsShape');
-@include use('CriticalThinking', 'carnival:::EOCAssesmentsShape');
+
+// EoC Exercises
+@include use('VisualExercise', 'carnival:::ExercisesModuleShape');
+@include use('MultipleChoice', 'carnival:::ExercisesModuleShape');
+@include use('CriticalThinking', 'carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
-
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
 //Notes
 @include use('EverydayConnectionNote','carnival:::BoxedNoteShape');
@@ -249,6 +229,9 @@ $ChapterIntroType: side;
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

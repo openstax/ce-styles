@@ -236,8 +236,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -1233,120 +1237,6 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-left: 24px;
 }
 
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  width: 2%;
-  text-align: right;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-:not(.os-note-body) > [data-type=exercise] [data-type=solution] > .solution-title {
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
 [data-type=page] > [data-type=abstract] > h3[data-type=title] {
   color: #0074BC;
   font-family: Mulish, sans-serif;
@@ -1374,42 +1264,36 @@ nav#toc > ol > .os-toc-index > a::after {
 }
 
 .preface {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-glossary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-summary-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-visual-exercise-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-multiple-choice-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
 .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -1425,6 +1309,10 @@ nav#toc > ol > .os-toc-index > a::after {
 
 .os-critical-thinking-container section {
   margin-bottom: 0;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 [data-type=equation].unnumbered {
@@ -1671,816 +1559,232 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-[data-type=chapter] > .os-summary-container {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-summary-container > section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container > section > ol {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul {
-  margin-left: 24px;
-}
-
-[data-type=chapter] > .os-summary-container section > ul > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=chapter] > .os-visual-exercise-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container section > ul {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container section > ol {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] > .os-number {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] > .os-divider {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > p {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
+[data-type=chapter] > .os-visual-exercise-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] > .os-number {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] > .os-divider {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > p {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-visual-exercise-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-visual-exercise-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-[data-type=chapter] > .os-multiple-choice-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container section > ul {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container section > ol {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] > .os-number {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] > .os-divider {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > p {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
+[data-type=chapter] > .os-multiple-choice-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] > .os-number {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] > .os-divider {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > p {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-multiple-choice-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-[data-type=chapter] > .os-critical-thinking-container {
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container section > ul {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container section > ol {
-  margin-left: 32px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] > .os-number {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] > .os-divider {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > p {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
+[data-type=chapter] > .os-critical-thinking-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=problem] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] > .os-number {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] > .os-divider {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > p {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ol > li > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ol > li > ol {
-  margin-left: 16px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-problem-container.has-first-element > div > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-
-[data-type=chapter] > .os-critical-thinking-container [data-type=exercise-question] .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
 }
 
 .os-table:not(.os-unstyled-container) {
@@ -2670,11 +1974,45 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-table.os-unstyled-container > table > tbody > tr > td:not(:only-of-type) {
+.os-table.os-unstyled-container > table > tbody > tr > td {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
+}
+
+.os-eoc [data-type=problem] > div .os-table > table {
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.os-eoc [data-type=exercise-question] > div .os-table > table {
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.os-eoc .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-table {
+  margin-top: 1rem;
 }
 
 .everyday {
@@ -3484,6 +2822,120 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
 }
 
 .os-index-container {

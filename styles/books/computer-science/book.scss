@@ -304,7 +304,11 @@ $bandColor: #24739E;
     ),
 ));
 
-
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: (".os-lab-assessments-container", ".os-thought-provokers-container", ".os-problem-set-b-container", ".os-problem-set-a-container", ".os-practice-exercises-container", ".os-conceptual-questions-container", ".os-review-questions-container"),
+  ),
+));
 
 // Common settings
 @include use('BookRoot', "common:::BookRoot");
@@ -314,6 +318,7 @@ $bandColor: #24739E;
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
 @include use('UnitTitle', 'common:::Hidden');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -333,6 +338,7 @@ $bandColor: #24739E;
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 // Misc
 @include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
@@ -370,6 +376,7 @@ $bandColor: #24739E;
 
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Eob
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
@@ -380,4 +387,4 @@ $bandColor: #24739E;
 @include use('NotesLists', 'cardboard:::NotesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
 @include use('PageLists', 'cardboard:::PageListsShape');
-@include use('ExercisesProblemLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');

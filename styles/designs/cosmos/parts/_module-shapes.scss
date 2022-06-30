@@ -1,11 +1,5 @@
 @import 'module-components';
 
-@include create_shape('cosmos:::ModuleWithinChapterShape', (
-    _components: (
-        $Module__Container
-    )
-));
-
 @include create_shape('cosmos:::ModuleWithIndentationShape',(
     _components:(
         map-merge($Module__Container,(
@@ -18,7 +12,7 @@
 
 @include create_shape('cosmos:::ModuleWithIndentationForPolishBooksShape',(
     _components:(
-        map-merge($Module__Container--WithoutMargin,(
+        map-merge($Module__Container,(
             _components:(
                 $ModuleWithIndentation__Para--Inverted,
                 map-merge($SectionWrapper--FirstLevel,(

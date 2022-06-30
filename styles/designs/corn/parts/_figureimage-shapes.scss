@@ -1,5 +1,6 @@
-@import '_figureimage-components';
-@import '_caption-components';
+@import 'figureimage-components';
+@import 'caption-components';
+@import 'wrappers-components.scss';
 
 @include create_shape('corn:::FigureShape',(
     _components: (
@@ -65,5 +66,14 @@
                 $Image--TopSpacing,
             )
         )),
+    )
+));
+
+// This shape contains specific kind of image (span[data-type=media > img])present directly in multicolumn exercise module
+// outside of the exercise which needs to be styled simmilarly as figures (block, centered with margin bottom)
+// Used e.g Elementary Algebra Section Exercises Self Check, College Algebra section exercises Real World Application
+@include create_shape('corn:::ImageFromExercisesModuleShape',(
+    _components: (
+      $Image--InMedia,
     )
 ));

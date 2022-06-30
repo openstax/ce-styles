@@ -1,5 +1,11 @@
 @include add_settings((
   ReferencesWithIndentation: (
     _selectors: (".os-eoc.os-references-container")
-  )
+  ),
+  ModuleWithMarginBottom: (
+    _selectors: ('.os-eoc[data-type="composite-page"]'),
+    ModuleContainerWithMarginBottom: (
+        margin-bottom: v-spacing(1),
+      ),
+  ),
 ));

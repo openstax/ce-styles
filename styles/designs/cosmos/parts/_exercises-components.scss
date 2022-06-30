@@ -1,10 +1,4 @@
-$ExercisesModule__Container: (
-  _name: "ExercisesModuleContainer",
-  _subselector: '',
-  _properties: (
-    margin-bottom: v-spacing(2),
-  )
-);
+$ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
 
 $Exercise__Container: (
     _name: "ExerciseContainer",
@@ -17,14 +11,6 @@ $Exercise__Container: (
 $InjectedExercise__Container: (
     _name: "InjectedExerciseContainer",
     _subselector: ' [data-type="injected-exercise"]',
-    _properties: (
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$InjectedExercise--OnPage__Container: (
-    _name: "InjectedExerciseOnPageContainer",
-    _subselector: '[data-type="page"] [data-type="injected-exercise"]',
     _properties: (
         margin-bottom: v-spacing(1),
     )
@@ -48,6 +34,7 @@ $InjectedExercise__Question__Wrapper: (
 );
 
 $Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
+$Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true, hasInlineListOnTop: false));
 
 $Exercise__Problem__Number: (
   _name: "ProblemNumber",
@@ -95,7 +82,6 @@ $InjectedExercise__Divider: (
 );
 
 // Solution components (used in Answer Key with solutions displayed one after the other)
-
 $Exercise__Solution__Wrapper: (
     _name: "SolutionWrapper",
     _subselector: " [data-type='solution']",

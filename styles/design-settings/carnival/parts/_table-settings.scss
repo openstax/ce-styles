@@ -133,9 +133,26 @@
 @include add_settings((
     UnnumberedUnstyledTable: (
         _selectors: (".os-table.os-unstyled-container"),
-        TableData: (
-            padding-right: table-h-spacing(1),
-            padding-left: table-h-spacing(1),
-        ),
     )
+));
+
+// Tables from exercises
+@include add_settings((
+    TableFromEoCExercises:( // Only needed for EoC Multicolumn Exercises
+      _selectors: ('.os-eoc [data-type="problem"]', '.os-eoc [data-type="exercise-question"]'),
+      'Table:::max-width': 100%,
+      'Table:::table-layout': fixed,
+      'TableData:::text-align': center,
+      'TableData:::padding-right': $columnTablePadding,
+      'TableData:::padding-left': $columnTablePadding,
+    ),
+));
+
+@include add_settings((
+    TableAfterExercisePara: (
+        _selectors: ('.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p'),
+    ),
+    TableAfterContentExercisePara: ( // used only in hs-physics
+        _selectors: ('[data-type="page"] :not(.os-note-body) .os-problem-container > p'),
+    ),
 ));

@@ -90,62 +90,29 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  EocSummary: (
-    _selectors: ("[data-type = 'chapter'] > .os-summary-container"),
-  ),
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   FillInTheBlankCompChapPage:(
     _selectors: (".os-fill-in-the-blank-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   MatchingCompChapPage:(
     _selectors: (".os-matching-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   TrueFalseCompChapPage:(
     _selectors: (".os-true-false-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
 ));
 
@@ -206,10 +173,9 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-multiple-choice-container', '.os-critical-thinking-container', '.os-short-answer-container',
                  '.os-fill-in-the-blank-container', '.os-matching-container', '.os-true-false-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
   ),
 ));
 
@@ -219,16 +185,14 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('BasicTable', 'carnival:::BasicTableShape');
-@include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('Index', 'carnival:::IndexShape');
 @include use('AnswerKeyInline', 'carnival:::AnswerKeyInlineShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -243,14 +207,19 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 
-// EOC
-@include use('EocSummary', 'carnival:::EocSummary');
-@include use('MultipleChoiceCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('CriticalThinkingCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ShortAnswerCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('FillInTheBlankCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('MatchingCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('TrueFalseCompChapPage','carnival:::EOCAssesmentsShape');
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+
+// EoC Exercises
+@include use('MultipleChoiceCompChapPage','carnival:::ExercisesModuleShape');
+@include use('CriticalThinkingCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ShortAnswerCompChapPage','carnival:::ExercisesModuleShape');
+@include use('FillInTheBlankCompChapPage','carnival:::ExercisesModuleShape');
+@include use('MatchingCompChapPage','carnival:::ExercisesModuleShape');
+@include use('TrueFalseCompChapPage','carnival:::ExercisesModuleShape');
 
 // Notes
 @include use('ClinicalFocusNote', 'carnival:::BoxedNoteShape');
@@ -264,6 +233,9 @@ $ChapterIntroType: fullWidth;
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');

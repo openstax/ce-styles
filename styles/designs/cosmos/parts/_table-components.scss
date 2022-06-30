@@ -367,3 +367,11 @@ $Table__BottomBorder: (
         margin-bottom: v-spacing(1),
     )    
 );
+
+$Table--TopSpacing:(
+    _name: "TableTopSpacing",
+    _subselector: " + .os-table",
+    _properties: (
+        margin-top: 1rem,
+    )
+);

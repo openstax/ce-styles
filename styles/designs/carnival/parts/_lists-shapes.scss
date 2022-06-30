@@ -41,6 +41,31 @@
     )
 ));
 
+@include create_shape('carnival:::CompositePageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
 @include create_shape('carnival:::TableListShape',(
     _components: (
         map-merge($ListContainer,(
@@ -72,6 +97,64 @@
                       )),
                   )
               )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::ExercisesListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      $UnorderedList--FirstLevel--Exercise,
+                      map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          map-merge($OrderedList--SecondLevel--Exercise, (
+                            _components: (
+                              $OrderedList--SecondLevel--Exercise,
+                            )
+                          )),
+                        )
+                      )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                  _components: (
+                    $UnorderedList--FirstLevel--Exercise,
+                    map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          $OrderedList--SecondLevel--Exercise
+                        )
+                    )),
+                  )
+                )),
+              )
+        )),
+    )
+));
+
+// Composite Page List
+@include create_shape('carnival:::ExerciseCompositePageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      map-merge($OrderedList--FirstLevel--Exercise, (
+                        _components: (
+                          $OrderedList--SecondLevel--Exercise,
+                        )
+                      )),
+                    )
+                )),
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                      $UnorderedList--FirstLevel--Exercise,
+                      $OrderedList--FirstLevel--Exercise,
+                    )
+                )),
             )
         )),
     )

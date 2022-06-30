@@ -83,50 +83,21 @@ ChapterIntro: (
 
 //EOC
 @include add_settings((
-  EocSummary: (
-    _selectors: ("[data-type = 'composite-chapter'] > .os-key-concepts-container"),
-  ),
-  EocKeyEquations: (
-    _selectors: ("[data-type = 'composite-chapter'] > .os-key-equations-container"),
-    'UnnumberedUnstyledTable:::margin-bottom': 0,
-    'TableData:::padding-right': table-v-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-  ),
   ConceptualQuestionsCompChapPage:(
     _selectors: (".os-review-conceptual-questions-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   ProblemsCompChapPage:(
     _selectors: (".os-review-problems-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   AdditionalProblemsCompChapPage:(
     _selectors: (".os-review-additional-problems-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
   ChallengeProblemsCompChapPage:(
     _selectors: (".os-review-challenge-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'Table:::max-width': 100%,
-    'Table:::table-layout': fixed,
-    'TableData:::text-align': center,
-    'TableData:::padding-right': $columnTablePadding,
-    'TableData:::padding-left': $columnTablePadding,
   ),
 ));
 
@@ -259,16 +230,8 @@ ChapterIntro: (
 ));
 
 @include add_settings((
-  ModulesWithoutSectionTitles: (
+  ModuleWithoutTitleLinks: (
     _selectors: ('.os-key-equations-container', '.os-review-additional-problems-container', '.os-review-challenge-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': 0,
-  ),
-));
-
-@include add_settings((
-  ModulesWithSectionTitles: (
-    _selectors: ('.os-review-conceptual-questions-container', '.os-review-problems-container'),
-    'ModuleSectionWithMarginBottom:::margin-bottom': v-spacing(2),
   ),
 ));
 
@@ -281,10 +244,9 @@ ChapterIntro: (
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('PageWithIndentation', 'carnival:::ModuleWithIndentationForPolishBooksShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
-@include use('ContentExercises','carnival:::ExerciseShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
-@include use('ModulesWithoutSectionTitles','carnival:::ModuleWithCustomSectionShape');
-@include use('ModulesWithSectionTitles','carnival:::ModuleWithCustomSectionShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
@@ -317,17 +279,20 @@ ChapterIntro: (
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocSummary','carnival:::EocSummary');
-@include use('EocKeyEquations','carnival:::EocKeyEquations');
-@include use('ConceptualQuestionsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ProblemsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('AdditionalProblemsCompChapPage','carnival:::EOCAssesmentsShape');
-@include use('ChallengeProblemsCompChapPage','carnival:::EOCAssesmentsShape');
+@include use('KeyEquations','carnival:::ModuleWithUnstyledTableShape');
+
+// EoC Exercises
+@include use('ConceptualQuestionsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ProblemsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('AdditionalProblemsCompChapPage','carnival:::ExercisesModuleShape');
+@include use('ChallengeProblemsCompChapPage','carnival:::ExercisesModuleShape');
 
 // Tables
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
 @include use('UnnumberedUnstyledTable', 'carnival:::UnnumberedUnstyledTable');
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
@@ -339,6 +304,9 @@ ChapterIntro: (
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

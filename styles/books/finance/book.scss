@@ -268,13 +268,19 @@ $bandColor: #24739E;
   )
 ));
 
-// Common settings
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-review-questions-container', '.os-multiple-choice-container', '.os-problem-set-container'),
+  ),
+));
 
+// Common settings
 @include use('BookRoot', 'common:::BookRoot');
 @include use('EmphasizedColoredText', 'common:::ColoredText');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises excpet Video Activity which has section (not links) titles
 
 //Other settings
 @include use('Toc', 'cardboard:::NoUnitToc');
@@ -294,8 +300,6 @@ $bandColor: #24739E;
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
 
 // Titles
-
-// Titles
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
@@ -313,6 +317,7 @@ $bandColor: #24739E;
 @include use('FakeTitleTable', 'cardboard:::TableWithBordersShape');
 @include use('CondensedDefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 // Equations
 @include use('Equation', 'cardboard:::EquationShape');
@@ -342,13 +347,13 @@ $bandColor: #24739E;
 @include use('ExcelSpreadsheetIcon', 'cardboard:::IconCondensedShape');
 
 // Eoc
-@include use('SectionSummary', 'cardboard:::ModuleWithinChapterShape');
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Lists
 @include use('PageLists', 'cardboard:::PageListsShape');
 @include use('NotesLists', 'cardboard:::NotesListsShape');
-@include use('ExercisesProblemLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 @include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
 @include use('StepwiseLists', 'cardboard:::StepwiseListsShape');
 

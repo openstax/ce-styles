@@ -1,3 +1,4 @@
+$Exercises__Container: empty_wrapper(ExercisesContainer, '');
 $Table__Container: (
     _name: "TableContainer",
     _subselector: "",
@@ -100,7 +101,7 @@ $Table__Data--LeftAligned: (
     _subselector: " > td[data-align="left"]",
     _properties: (
         text-align: left,
-    )    
+    )
 );
 
 $Table__Data--RightAligned: (
@@ -108,7 +109,7 @@ $Table__Data--RightAligned: (
     _subselector: " > td[data-align="right"]",
     _properties: (
         text-align: right,
-    )    
+    )
 );
 
 $Table__Data--Centered: (
@@ -116,7 +117,7 @@ $Table__Data--Centered: (
     _subselector: " > td[data-align="center"]",
     _properties: (
         text-align: center,
-    )    
+    )
 );
 
 $Table__Head__Row: empty_wrapper(TableHeadRow, ' > tr');
@@ -128,7 +129,7 @@ $Table__Data--Last: (
     _subselector: " > td:last-child",
     _properties: (
         border-bottom-right-radius: 0.25rem,
-    )    
+    )
 );
 
 $Table__Data--First: (
@@ -136,7 +137,7 @@ $Table__Data--First: (
     _subselector: " > td:first-child",
     _properties: (
         border-bottom-left-radius: 0.25rem,
-    )    
+    )
 );
 
 $Table__Data--First--ColHeader: (
@@ -148,7 +149,7 @@ $Table__Data--First--ColHeader: (
         padding-bottom: table-v-spacing(1),
         padding-right: table-h-spacing(1),
         padding-left: table-h-spacing(1),
-    )    
+    )
 );
 
 $Table__Data--FirstType: (
@@ -162,7 +163,7 @@ $Table__Data--FirstType: (
     )
 );
 
-// Used in Exercises, Formula Review    
+// Used in Answer Key
 $Table--Eoc__Container: (
     _name: "EocTableContainer",
     _subselector: " > .os-table",
@@ -172,8 +173,17 @@ $Table--Eoc__Container: (
     )
 );
 
-// Used in Exercises List Shape
+// Used in Multicolumn Exercises
+$Table__Container--Exercises: (
+    _name: "EoxercisesTableContainer",
+    _subselector: " .os-table",
+    _properties: (
+        margin-left: 0,
+        margin-right: 0,
+    )
+);
 
+// Used in Exercises List Shape
 $Table--FirstInList: (
     _name: "TableFirstInList",
     _subselector: " table",
@@ -193,3 +203,22 @@ $ListTable: (
 
 $Table__Container--FirstInList: empty_wrapper(TableContainerFirstChild, ' > li > .os-table:first-child');
 $Table__Container--FirstInCircledList: empty_wrapper(TableContainerFirst, ' > os.table:nth-child(2)');
+
+$Table--TopSpacing:(
+    _name: "TableTopSpacing",
+    _subselector: " + .os-table",
+    _properties: (
+        margin-top: 1rem,
+    )
+); 
+       
+// Used in two columns modules
+$Table--FromTwoColumnsModule: (
+    _name: "TableFromTwoColumnsModule",
+    _subselector: " > table",
+    _properties: (
+      table-layout: fixed,
+      max-width: 100%,
+      break-inside: avoid-column,
+    )
+);

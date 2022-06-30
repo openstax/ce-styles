@@ -1,6 +1,7 @@
 @import '_table-components';
 @import '_caption-components';
 @import '_lists-components';
+@import 'wrappers-components';
 
 @include create_shape('corn:::BasicTableShape',  (
     _components: (
@@ -197,6 +198,47 @@
                     )
                 )),
             )
+        )),
+    )
+));
+
+@include create_shape('corn:::TableFromExercisesShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container--Exercises, (
+                          _components:(
+                            $Table,
+                          ),
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('corn:::TableTopSpacingShape', (
+    _components: (
+        map-merge($TopSpacing__Container,(
+            _components: (
+                $Table--TopSpacing,
+            )
+        )),
+    )
+));
+
+
+// To do: apply to all themes. For now it's added only in Statistics.
+@include create_shape('corn:::TableFromTwoColumnsModuleShape',(
+    _components:(
+        map-merge($Table__Container, (
+            _components: (
+                $Table--FromTwoColumnsModule,
+                $Caption__Container--Table
+            ),
         )),
     )
 ));

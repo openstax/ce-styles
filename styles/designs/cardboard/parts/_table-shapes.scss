@@ -368,3 +368,13 @@
         )),
     )
 ));
+
+@include create_shape('cardboard:::TableTopSpacingShape', (
+    _components: (
+        map-merge($TopSpacing__Container,(
+            _components: (
+                $Table--TopSpacing,
+            )
+        )),
+    )
+));

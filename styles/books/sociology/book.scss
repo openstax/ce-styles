@@ -103,11 +103,12 @@ $bandColor: #DCB83D;
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');
-@include use('ExercisesProblemLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
 @include use('NotesLists', 'cosmos:::NotesListsShape');
 
 //Tables
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 // Figure
 @include use('Figure', 'cosmos:::FigureShape');
@@ -135,4 +136,5 @@ $bandColor: #DCB83D;
 @include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('FurtherResearch', 'cosmos:::ModuleWithIndentationShape');
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 

@@ -16,8 +16,14 @@ ul[data-labeled-item="true"] {
   white-space: nowrap;
 }
 
-span[data-type="term"]:not(.no-emphasis) {
+// [data-type="foreign"] > span[data-type="term"] is specific only for pl books
+:not([data-type="foreign"]) > span[data-type="term"]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+// all foreign elements should be italicized
+[data-type="foreign"], [data-type="foreign"] > span[data-type="term"] {
+  font-style: italic;
 }
 
 h3, h4, h5 {

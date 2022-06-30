@@ -126,6 +126,12 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eos.os-section-exercises-container > section.section-exercises', '.os-eoc.os-practice-test-container', 'section.coreq-skills'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('CoreqSkills', 'corn:::CoreqSkillsShape');
@@ -134,6 +140,7 @@ $bandColor: #093D4C;
 @include use('Index', 'corn:::IndexShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos coreq exercises
 
 //Figures
 @include use('Figure','corn:::FigureShape');
@@ -143,6 +150,13 @@ $bandColor: #093D4C;
 @include use('FigureFromExercisesSolution','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
+@include use('ImageFromExercisesModule','corn:::ImageFromExercisesModuleShape');
+@include use('FigureAfterEocPara', 'corn:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'corn:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'corn:::ImageTopSpacingShape');
+@include use('FigureAfterEosPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEosPara', 'corn:::ImageTopSpacingShape');
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
@@ -167,9 +181,12 @@ $bandColor: #093D4C;
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 @include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
+@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
 @include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 
 
@@ -177,17 +194,22 @@ $bandColor: #093D4C;
 @include use('BasicTable', 'corn:::BasicTableShape');
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
+@include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 
-// Exercises
-@include use('CoreqExercises', 'corn:::OneColumnExercisesModuleShape');
+// Coreq Exercises
+@include use('CoreqExercises', 'corn:::ExercisesModuleShape'); // one column
 
 // Section Exercises
-@include use('ThreeColumnsModuleExercises', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
+
+// EoC Exercises
+@include use('ReviewExercises', 'corn:::ExercisesModuleShape'); // three columns
+@include use('PracticeTest', 'corn:::ExercisesModuleShape'); // three columns
 
 // EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('ReviewExercises', 'corn:::ThreeColumnsExercisesModuleShape');
-@include use('PracticeTest', 'corn:::ThreeColumnsExercisesModuleShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Notes
 @include use('HowTo', 'corn:::IconBoxedNoteShape');

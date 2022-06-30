@@ -235,8 +235,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -1132,6 +1136,10 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
+}
+
+.os-eoc.os-exercises-container section {
+  margin-bottom: 0;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2652,6 +2660,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #757474;
 }
 
+.os-eoc .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-table {
+  margin-top: 1rem;
+}
+
 [data-type=chapter] {
   height: 100%;
   position: relative;
@@ -3184,10 +3200,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-.os-further-exploration-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-further-exploration-container > section > p {
   text-indent: -16px;
   padding-left: 16px;
@@ -3196,10 +3208,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-further-exploration-container > section > section > section > p {
   text-indent: -16px;
   padding-left: 16px;
-}
-
-.os-group-activities-container {
-  margin-bottom: 1.4rem;
 }
 
 .os-group-activities-container > section > ol[type=A] {
@@ -3214,8 +3222,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.os-eoc.os-exercises-container {
-  margin-bottom: 1.4rem;
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eoc.os-exercises-container [data-type=exercise] {
@@ -3254,6 +3262,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eoc.os-exercises-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
@@ -3288,6 +3303,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) {

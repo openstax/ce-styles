@@ -260,3 +260,16 @@
             ),
         )
 ));
+
+@include add_settings((
+  TableFromMultiColumnExercises: ( // Used only in Multiple Column Exercises
+    _selectors: ('.os-eos.os-section-exercises-container [data-type="problem"]', '.os-eoc.os-review-exercises-container [data-type="problem"]', '.os-eoc.os-practice-test-container [data-type="problem"]', '.os-eos.os-section-exercises-container [data-type="exercise-question"]', '.os-eoc.os-review-exercises-container [data-type="exercise-question"]', '.os-eoc.os-practice-test-container [data-type="problem"] [data-type="exercise-question"]'),
+    Table: (
+        table-layout: fixed,
+        max-width: 100%,
+    ),
+  ),
+  TableAfterExercisePara: (
+      _selectors: ('.os-eos .os-problem-container > p', '.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p',  '.os-eoc .os-solution-container > p'),
+  ),
+));

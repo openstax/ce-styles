@@ -235,8 +235,12 @@ ul[data-labeled-item=true] {
   white-space: nowrap;
 }
 
-span[data-type=term]:not(.no-emphasis) {
+:not([data-type=foreign]) > span[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
+}
+
+[data-type=foreign], [data-type=foreign] > span[data-type=term] {
+  font-style: italic;
 }
 
 h3, h4, h5 {
@@ -969,6 +973,14 @@ a[role=doc-noteref] {
 
 a[data-type=cite] {
   text-decoration: none;
+}
+
+.os-eoc.os-manage-skills-container section {
+  margin-bottom: 0;
+}
+
+.os-eoc.os-manage-exercises-container section {
+  margin-bottom: 0;
 }
 
 .introduction > .os-figure.has-splash {
@@ -2280,10 +2292,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.os-eoc.os-manage-skills-container {
-  margin-bottom: 1.4rem;
-}
-
 .os-eoc.os-manage-skills-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
@@ -2318,6 +2326,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-manage-skills-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-eoc.os-manage-skills-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 .os-eoc.os-manage-skills-container [data-type=injected-exercise] {
@@ -2356,8 +2371,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-eoc.os-manage-exercises-container {
-  margin-bottom: 1.4rem;
+.os-eoc.os-manage-skills-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 .os-eoc.os-manage-exercises-container [data-type=exercise] {
@@ -2396,6 +2414,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-eoc.os-manage-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eoc.os-manage-exercises-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
@@ -2432,6 +2457,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-eoc.os-manage-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-glossary-container {
   margin-bottom: 1.4rem;
 }
@@ -2450,6 +2482,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
 }
 
 .os-eob.os-reference-container > .os-chapter-area {
@@ -3212,4 +3248,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
   color: #757474;
+}
+
+.os-eoc .os-problem-container > p + .os-table {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-table {
+  margin-top: 1rem;
 }

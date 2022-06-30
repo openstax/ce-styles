@@ -295,12 +295,12 @@ $Table__Title: (
   )
 );
 
-//Solution title used in HS Physics for in module exercises
-$SolutionTitle:(
+//Solution title used only in HS Physics in module exercises
+$Exercises__Solution__Title:(
   _name: "SolutionTitle",
   _subselector: " > .solution-title",
   _properties:(
-    font-family: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::OPTIONAL'),
     font-weight: bold,
     font-size: font-scale(1),
     line-height: line-height(1),

@@ -1,14 +1,14 @@
 @include add_settings((
-    ModuleWithinChapter: (
-        _selectors: ('[data-type="chapter"] > [data-type="page"]'),
-    ),
     ReferencesWithIndentation: (
         _selectors: ('.os-references-container'),
     ),
     PageWithIndentation: (
         _selectors: ('[data-type="page"]:not(.introduction)'),
     ),
-    Summary: (
-        _selectors: ('.os-summary-container'),
+    ModuleWithMarginBottom: (
+      _selectors: ('.os-eoc[data-type="composite-page"]'),
+      ModuleContainerWithMarginBottom: (
+        margin-bottom: v-spacing(1),
+      ),
     ),
 ));

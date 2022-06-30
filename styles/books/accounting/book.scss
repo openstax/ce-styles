@@ -262,12 +262,21 @@ $bandColor: #24739e;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: (".os-multiple-choice-container", ".os-questions-container", ".os-exercise-set-a-container",
+    ".os-exercise-set-b-container", ".os-problem-set-a-container", ".os-problem-set-b-container",
+    ".os-thought-provokers-container"),
+  ),
+));
+
 // Common settings
 @include use("BookRoot", "common:::BookRoot");
 @include use("EmphasizedColoredText", "common:::ColoredText");
 @include use("Footnote", "common:::FootnoteShape");
 @include use("FootnoteCall", "common:::FootnoteCallShape");
 @include use("Toc", "cardboard:::NoUnitToc");
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 //Chapter Intro
 @include use("ChapterIntro", "cardboard:::ChapterIntroShape");
@@ -303,6 +312,7 @@ $bandColor: #24739e;
 @include use("FakeTitleTable", "cardboard:::TableWithBordersShape");
 @include use("UnstyledTable", "cardboard:::UnstyledTableShape");
 @include use("TimelineTable", "cardboard:::TimelineTableShape");
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
 // Misc
 @include use("LOLink", "cardboard:::LOLinkShape");
@@ -325,10 +335,11 @@ $bandColor: #24739e;
 // Lists
 @include use("CompositePageLists", "cardboard:::CompositePageListsShape");
 @include use("PageLists", "cardboard:::PageListsShape");
-@include use("ExercisesProblemLists", "cardboard:::ExercisesListsShape");
+@include use("ExercisesProblemQuestionLists", "cardboard:::ExercisesListsShape");
 
 // Eoc
 @include use("KeyTerms", "cardboard:::KeyTermsShape");
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Eob
 @include use("AnswerKey", "cardboard:::AnswerKeyShape");

@@ -298,6 +298,12 @@ $bandColor: #093D4C;
 @include use('FigureFromExercisesSolution','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','corn:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','corn:::FigureFromExercisesShape');
+@include use('FigureAfterEocPara', 'corn:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'corn:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'corn:::ImageTopSpacingShape');
+@include use('FigureAfterEosPara', 'corn:::FigureTopSpacingShape');
+@include use('ImageAfterEosPara', 'corn:::ImageTopSpacingShape');
 
 //Titles
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
@@ -333,17 +339,20 @@ $bandColor: #093D4C;
 @include use('BasicTable', 'corn:::BasicTableShape');
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
+@include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
-@include use('FormulaReview', 'corn:::OneColumnVerticalEocShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
-//Exercises
-@include use('CheckUnderstandingExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('YourTurnNoteExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('SectionExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('ChapterTestExercises', 'corn:::OneColumnExercisesModuleShape');
-@include use('ChapterReviewExercises', 'corn:::OneColumnExercisesModuleShape');
+//Content Exercises
+@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column 
+@include use('YourTurnNoteExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('SectionExercises', 'corn:::ExercisesModuleShape'); // one column
+
+// EoC Exercises
+@include use('ChapterTestExercises', 'corn:::ExercisesModuleShape'); // one column
+@include use('ChapterReviewExercises', 'corn:::ExercisesModuleShape'); // one column
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');

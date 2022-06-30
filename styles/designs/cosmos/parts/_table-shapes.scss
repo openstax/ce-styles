@@ -109,3 +109,13 @@
         )),
     )
 ));
+
+@include create_shape('cosmos:::TableTopSpacingShape', (
+    _components: (
+        map-merge($TopSpacing__Container,(
+            _components: (
+                $Table--TopSpacing,
+            )
+        )),
+    )
+));

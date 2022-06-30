@@ -407,3 +407,9 @@
         ),
     )
 ));
+
+@include add_settings((
+    TableAfterExercisePara: ( // Use if para margin is removed
+        _selectors: ('.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p'),
+    ),
+));

@@ -243,12 +243,19 @@ $bandColor: #24739E;
   ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-manage-skills-container', '.os-eoc.os-manage-exercises-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('ReferencesCiteLink', 'cardboard:::ReferencesCiteLinkShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -292,6 +299,7 @@ $bandColor: #24739E;
 //EoC
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //EOB
 @include use('ReferencesWithNumberedNotes', 'cardboard:::ReferencesWithNumberedNotesShape');
@@ -300,4 +308,5 @@ $bandColor: #24739E;
 //Tables
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 

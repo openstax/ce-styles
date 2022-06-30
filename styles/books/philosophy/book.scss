@@ -126,15 +126,15 @@ $bandColor: #DCB83D;
 ));
 
 @include add_settings((
-  FurtherReading: (
-    _selectors: ('.os-eoc.os-further-reading-container'),
-  ),
+  ModuleWithMarginBottom: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"]', '.os-eoc[data-type="composite-page"]'),
+    'ModuleContainerWithMarginBottom:::margin-bottom': v-spacing(2),
+  )
 ));
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocNoUnitBlue', 'cosmos:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
-@include use('ModuleWithinChapter', 'cosmos:::ModuleWithinChapterShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
 
 // Chapter Intro
@@ -158,11 +158,12 @@ $bandColor: #DCB83D;
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');
-@include use('ExercisesProblemLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
 @include use('NotesLists', 'cosmos:::NotesListsShape');
 
 //Tables
 @include use('DefaultTableBlue', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 // Figure
 @include use('FigureBlue', 'cosmos:::FigureShape');
@@ -180,5 +181,4 @@ $bandColor: #DCB83D;
 @include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
-@include use('Summary', 'cosmos:::ModuleWithinChapterShape');
-@include use('FurtherReading', 'cosmos:::ModuleWithinChapterShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');

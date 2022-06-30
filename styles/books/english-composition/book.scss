@@ -134,7 +134,7 @@ $bandColor: #DCB83D;
 
 @include add_settings((
   DiscussionQuestions: (
-    _selectors: (''),
+    _selectors: ('[data-type="page"] > section'),
     'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemNumber:::width': 2%,
     'ProblemNumber:::text-align': right,
@@ -232,14 +232,16 @@ $bandColor: #DCB83D;
 // Tables
 @include use('FakeTitleTable', 'cosmos:::BasicTableShape');
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 //EoC
 @include use('FurtherReading', 'cosmos:::ModuleWithIndentationShape');
 @include use('WorksCited', 'cosmos:::ModuleWithIndentationShape');
 @include use('WorksConsulted', 'cosmos:::ModuleWithIndentationShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //EoB
 @include use('Index', 'cosmos:::IndexShape');
 
 //Exercises
-@include use('DiscussionQuestions', 'cosmos:::InjectedExercisesOnPageShape');
+@include use('DiscussionQuestions', 'cosmos:::ExercisesModuleShape');

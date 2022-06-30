@@ -90,6 +90,12 @@ $bandColor: #DCB83D;
     ),
 ));
 
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-self-check-questions-container', '.os-eoc.os-review-questions-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-problems-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesAbstract', 'cosmos:::LearningObjectivesShape');
 @include use('Footnote', 'common:::FootnoteShape');
@@ -97,6 +103,7 @@ $bandColor: #DCB83D;
 @include use('NarrowTable', 'common:::NarrowTableShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
 @include use('Equation', 'cosmos:::EquationShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntroWithBlockIntroHeader', 'cosmos:::ChapterIntroWithBlockIntroHeaderShape');
@@ -130,15 +137,17 @@ $bandColor: #DCB83D;
 
 //Tables
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');
 @include use('NotesLists', 'cosmos:::NotesListsShape');
-@include use('ExercisesProblemLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
 @include use('ExercisesSolutionLists', 'cosmos:::ExercisesListsShape');
 
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Exercises
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');

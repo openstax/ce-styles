@@ -137,12 +137,25 @@ $bandColor: #DCB83D;
   ),
 ));
 
+@include add_settings((
+  ModuleWithMarginBottom: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"]', '.os-eoc[data-type="composite-page"]'),
+    'ModuleContainerWithMarginBottom:::margin-bottom': v-spacing(2),
+  )
+));
+
+@include add_settings((
+  ModuleWithoutTitleLinks: (
+    _selectors: ('.os-eoc.os-review-questions-container'),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocUnitBlue', 'cosmos:::TocUnitShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
-@include use('ModuleWithinChapter', 'cosmos:::ModuleWithinChapterShape');
+@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
 @include use('ChapterIntro', 'cosmos:::ChapterIntroShape');
@@ -156,7 +169,7 @@ $bandColor: #DCB83D;
 @include use('UnitTitle', 'common:::Hidden');
 
 // Lists
-@include use('ExercisesProblemLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
 @include use('PageLists', 'cosmos:::PageListsShape');
 @include use('NotesLists', 'cosmos:::NotesListsShape');
 
@@ -171,6 +184,7 @@ $bandColor: #DCB83D;
 
 //Tables
 @include use('DefaultTableBlue', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
 // Notes
 @include use('ShowData', 'cosmos:::IconnedNoteWithSubtitleShape');
@@ -183,7 +197,7 @@ $bandColor: #DCB83D;
 @include use('Podcast', 'cosmos:::CondensedIconNoteShape');
 
 // Eoc
-@include use('Summary', 'cosmos:::ModuleWithinChapterShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('SuggestedReading', 'cosmos:::ModuleWithIndentationShape');
 
