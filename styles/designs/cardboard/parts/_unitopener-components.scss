@@ -83,6 +83,13 @@ $Unit__Page__Title: (
     _subselector: ' > [data-type="document-title"]',
     _properties: (
       margin-top: 2in,
+      display: table, // here starts the same properties that are used by H2 Numbered - to do check if we can exclude titles to separate shape and use existing titles components during cleaning and creating unit opener common shape
+      color: enum('ValueSet:::REQUIRED'),
+      font-family: enum('ValueSet:::REQUIRED'), 
+      font-size: font-scale(2),
+      line-height: font-scale(2),
+      margin-bottom: v-spacing(1),
+      font-weight: normal,
     )
 );
 

@@ -306,6 +306,8 @@ $bandColor: #9028A3;
 @include use('EmphasizedColoredText', 'common:::ColoredText');
 @include use('Equation', 'cardboard:::EquationShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
+@include use('UnitOpener', 'cardboard:::UnitOpenerShape');
+@include use('UnitOpenerPageTitle', 'common:::Hidden');
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -356,7 +358,6 @@ $bandColor: #9028A3;
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
 
 // Notes
-@include use('UnitOpener', 'cardboard:::UnitOpenerShape');;
 @include use('LinkToLearning', 'cardboard:::IconBoxedNoteWithSubtitleShape');
 @include use('MarketingDashboard', 'cardboard:::IconBoxedNoteWithSubtitleShape');
 @include use('MarketingPractice', 'cardboard:::IconBoxedNoteWithSubtitleShape');

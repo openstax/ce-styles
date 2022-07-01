@@ -46,12 +46,24 @@ $Toc__List--TopLevel: (
 
 $Toc__List--TopLevel__Item: (
   _name: 'TopLevelListItem',
-  _subselector: ' > li:not(.os-toc-unit)',
+  _subselector: ' > li:not(.os-toc-unit):not(.os-toc-unit-page)',
   _properties: (
     display: block,
     padding-top: v-spacing(1),
     padding-bottom: v-spacing(1),
     padding-right: h-spacing(5),
+    padding-left: h-spacing(1),
+  )
+);
+
+$Toc__ListItem--UnitPage: (
+  _name: 'UnitpageListItem',
+  _subselector: ' > li.os-toc-unit-page',
+  _properties: (
+    display: block,
+    padding-top: v-spacing(1),
+    margin-bottom: v-spacing(1),
+    margin-left: h-spacing(5),
     padding-left: h-spacing(1),
   )
 );
@@ -201,7 +213,6 @@ $Toc__Unit__Icon: (
     position: relative,
     bottom: -0.3rem,
     content: "''",
-    // margin-left: h-spacing(-1)
   )
 );
 
@@ -220,16 +231,6 @@ $Toc__Unit__Link: (
     margin: 0,
     text-decoration: none,
   )
-);
-
-$Toc__Link--TopLevel__Page--Unit: (
-  _name: 'TopLevelLinkPage',
-  _subselector: '::after',
-  _properties: (
-    content: "target-counter(attr(href), page)",
-    display: inline-block,
-    margin-left: h-spacing(1),
-  ),
 );
 
 $Toc__Number--Unit: (
