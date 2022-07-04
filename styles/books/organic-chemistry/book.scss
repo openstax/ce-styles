@@ -1,0 +1,17 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #00819A;
+
+$ChapterIntroType: fullWidth;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/folio';
+
+
+@include use('BookRoot', "common:::BookRoot");
