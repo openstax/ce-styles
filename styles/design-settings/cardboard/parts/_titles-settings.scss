@@ -1,6 +1,6 @@
 @include add_settings((
     PageTitles: (
-        _selectors: ('[data-type="page"]:not(.introduction)'),
+        _selectors: ('[data-type="page"]:not(.introduction):not(.unit-opener)'),
         H1Title: (
             color: (_ref: 'colorMap:::titleColor'),
             font-family: (_ref: 'typography:::titleFont'),
