@@ -184,3 +184,58 @@
     )),
   )
 ));
+
+//------------------------------------------------------------------------------------------
+// New styles, more consistent with Cosmos
+// (applied only to Organic Chemistry for now)
+
+@include create_shape('carnival:::TocNoUnitShape', (
+    _components: (
+        map-merge($Toc__Container, (
+            _components: (
+                $Toc__Title,
+                map-merge($Toc__List, (
+                    _components: (
+                        $Toc__ListItem--Preface,
+                        map-merge($Toc__ListItem--OutOfChapter, (
+                            _components: (
+                                map-merge($Toc__Link, (
+                                    _components: (
+                                        $Toc__LinkPage--OutOfChapter,
+                                        $Toc__LinkNumber--OutOfChapter,
+                                        $Toc__LinkText--OutOfChapter,
+                                    )
+                                )),
+                                $Toc__List--OutOfChapter,
+                            )
+                        )),
+                        map-merge($Toc__ListItem--Chapter, (
+                            _components: (
+                                map-merge($Toc__Link, (
+                                    _components: (
+                                        $Toc__LinkNumber--Chapter,
+                                        $Toc__LinkText--Chapter,
+                                        $Toc__LinkPage--Chapter,
+                                    )
+                                )),
+                                map-merge($Toc__List--Chapter, (
+                                    _components: (
+                                        map-merge($Toc__ListItem--Module, (
+                                            _components: (
+                                                map-merge($Toc__Link--Module, (
+                                                    _components: (
+                                                        $Toc__LinkPage--Module,
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                    )
+                                )),
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    ),
+));

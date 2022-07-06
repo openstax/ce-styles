@@ -13,5 +13,16 @@ $ChapterIntroType: fullWidth;
 @import '../../design-settings/carnival/_settings.scss';
 @import '../../designs/carnival/pdf/folio';
 
+@include add_settings((
+    TocNoUnit: (
+    _selectors: ('nav#toc'),
+    'TocTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'TocTitle:::border-bottom-color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'ChapterLinkText:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    ),
+));
 
 @include use('BookRoot', "common:::BookRoot");
+
+// Book specific styles
+@include use('TocNoUnit', 'carnival:::TocNoUnitShape');
