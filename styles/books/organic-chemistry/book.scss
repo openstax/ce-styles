@@ -59,8 +59,16 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'ListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
 
 @include use('BookRoot', "common:::BookRoot");
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
