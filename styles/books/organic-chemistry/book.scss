@@ -20,7 +20,27 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Chapter Intro
+@include add_settings((
+  ChapterIntro: (
+    _selectors: (".introduction"),
+    'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
+  ),
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
+  ),
+));
+
 //Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::chemistryHeaderColor"),
+  ),
+));
+
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
@@ -85,7 +105,12 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 
+// Chapter Intro
+@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+
 //Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
