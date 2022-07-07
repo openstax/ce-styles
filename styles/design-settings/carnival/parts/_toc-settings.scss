@@ -278,5 +278,45 @@
       font-size: font-scale(0),
       line-height: line-height(0)
     ),
-  )
+  ),
+  TocNoUnit: ( // new styles, more consistent with Cosmos
+    _selectors: ('nav#toc'),
+    TocTitle: (
+        // color: book specific
+        font-family: (_ref: 'typography:::titleOption2Font'),
+        // border-bottom-color: book specific
+    ),
+    OutOfChapterLinkPage: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+    OutOfChapterLinkNumber: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption1Font'),
+    ),
+    OutOfChapterLinkText: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+    ChapterLinkNumber: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption1Font'),
+    ),
+    ChapterLinkText: (
+        // color: book specific
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+    ChapterLinkPage: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+    ModuleLink: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+    ModuleLinkPage: (
+        color: (_ref: 'colorMap:::fontBodyColor'),
+        font-family: (_ref: 'typography:::titleOption2Font'),
+    ),
+  ),
 )); 

@@ -13,6 +13,22 @@ $ChapterIntroType: fullWidth;
 @import '../../design-settings/carnival/_settings.scss';
 @import '../../designs/carnival/pdf/folio';
 
+@include add_settings((
+    BookRoot: (
+        _selectors: (":root"),
+        'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
+    ),
+));
+
+@include add_settings((
+    TocNoUnit: (
+        _selectors: ('nav#toc'),
+        'TocTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+        'TocTitle:::border-bottom-color': (_ref: 'colorMap:::chemistryHeaderColor'),
+        'ChapterLinkText:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    ),
+));
+
 // Chapter Intro
 @include add_settings((
   ChapterIntro: (
@@ -23,6 +39,14 @@ $ChapterIntroType: fullWidth;
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
+  ),
+));
+
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'ListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
   ),
 ));
 
@@ -59,15 +83,35 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+// Inline colored text throughout the book
 @include add_settings((
-  LearningObjectivesSection: (
-    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
-    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-  ),
+    CyanColoredText: (
+        _selectors: ('.cyan-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textCyanColor'),
+    ),
+    MagentaColoredText: (
+        _selectors: ('.magenta-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textMagentaColor'),
+    ),
+    GreenColoredText: (
+        _selectors: ('.green-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textGreenColor'),
+    ),
+    GrayColoredText: (
+        _selectors: ('.gray-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textGrayColor'),
+    ),
 ));
 
+// Common Settings
 @include use('BookRoot', "common:::BookRoot");
+@include use('CyanColoredText', 'common:::ColoredText');
+@include use('MagentaColoredText', 'common:::ColoredText');
+@include use('GreenColoredText', 'common:::ColoredText');
+@include use('GrayColoredText', 'common:::ColoredText');
+
+// Book specific styles
+@include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 
 // Chapter Intro
