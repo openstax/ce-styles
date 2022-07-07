@@ -67,6 +67,15 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+    WhyChapter:(
+        _selectors: (".why-chapter"),
+        group-border-color: (_ref: 'colorMap:::whyChapterColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
+    ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 
@@ -79,3 +88,6 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Notes
+@include use('WhyChapter', 'carnival:::BoxedNoteShape');

@@ -1236,3 +1236,44 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.7rem;
   font-weight: 600;
 }
+
+.why-chapter {
+  border: solid;
+  border-color: #1E9575;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.why-chapter > .os-title {
+  color: #1E9575;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+.why-chapter > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+}
+
+.why-chapter > .os-note-body ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.why-chapter > .os-note-body ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
