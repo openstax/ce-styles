@@ -44,6 +44,10 @@
     );
 }
 
+// Will be removed during TOC refactoring. 
+// Styles should be more consistent with Cosmos theme.
+// Use TocNoUnitShape from the bottom of the file for new titles.
+
 @include create_shape('carnival:::NoUnitToc', (
   _components: (
     map-merge($Toc__Container, (
