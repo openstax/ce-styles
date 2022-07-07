@@ -1,7 +1,7 @@
 // @import "compass/typography" or some other vertical rhythm functions
 //usage in settings file: font-family: (_ref: 'typography:::sansFont'),
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&display=swap&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap&subset=latin,latin-ext');
 
@@ -11,9 +11,9 @@
   typography: (
     sansFont: ("IBM Plex Sans", sans-serif),
     baseFont: ("IBM Plex Sans", sans-serif), // I have left the above import for IBM Plex Serif font just in case we would like to change the base forn back to it
+    baseOption2Font: ("IBM Plex Serif", serif), // used in Organic Chemistry
     titleOption1Font: ('Mulish', sans-serif),
     titleOption2Font: ("IBM Plex Sans", sans-serif),
-    titleOption3Font: ("IBM Plex Serif", serif),
     baseFontSize: 12px,
     baseLineHeight:1.4rem,
   )

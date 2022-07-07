@@ -14,6 +14,13 @@ $ChapterIntroType: fullWidth;
 @import '../../designs/carnival/pdf/folio';
 
 @include add_settings((
+    BookRoot: (
+        _selectors: (":root"),
+        'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
+    ),
+));
+
+@include add_settings((
     TocNoUnit: (
         _selectors: ('nav#toc'),
         'TocTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
