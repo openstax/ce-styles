@@ -13,6 +13,22 @@ $ChapterIntroType: fullWidth;
 @import '../../design-settings/carnival/_settings.scss';
 @import '../../designs/carnival/pdf/folio';
 
+@include add_settings((
+    BookRoot: (
+        _selectors: (":root"),
+        'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
+    ),
+));
+
+@include add_settings((
+    TocNoUnit: (
+        _selectors: ('nav#toc'),
+        'TocTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+        'TocTitle:::border-bottom-color': (_ref: 'colorMap:::chemistryHeaderColor'),
+        'ChapterLinkText:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    ),
+));
+
 // Inline colored text throughout the book
 @include add_settings((
     CyanColoredText: (
@@ -35,8 +51,10 @@ $ChapterIntroType: fullWidth;
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
-
 @include use('CyanColoredText', 'common:::ColoredText');
 @include use('MagentaColoredText', 'common:::ColoredText');
 @include use('GreenColoredText', 'common:::ColoredText');
 @include use('GrayColoredText', 'common:::ColoredText');
+
+// Book specific styles
+@include use('TocNoUnit', 'carnival:::TocNoUnitShape');

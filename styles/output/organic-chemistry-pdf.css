@@ -889,7 +889,7 @@ div[data-type=composite-page].os-eob {
   margin-top: 0.8in;
 }
 :root {
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: IBM Plex Serif, serif;
   font-size: 12px;
   line-height: 1.4rem;
   color: #000000;
@@ -915,4 +915,123 @@ div[data-type=composite-page].os-eob {
 .gray-text {
   font-weight: normal;
   color: #757575;
+}
+
+nav#toc > .os-toc-title {
+  font-size: 2.985984rem;
+  line-height: 2.985984rem;
+  color: #00819A;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 2.1rem;
+  margin-bottom: 2.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #00819A;
+  border-bottom-width: 0.25rem;
+}
+
+nav#toc > ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav#toc > ol > li.os-toc-preface {
+  margin-bottom: 0.7rem;
+}
+
+nav#toc > ol > li:not(.os-toc-chapter) > a {
+  text-decoration: none;
+}
+
+nav#toc > ol > li:not(.os-toc-chapter) > a::after {
+  content: target-counter(attr(href), page);
+  display: inline-block;
+  margin-left: 24px;
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+nav#toc > ol > li:not(.os-toc-chapter) > a > .os-number {
+  font-family: Mulish, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+nav#toc > ol > li:not(.os-toc-chapter) > a > .os-text {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+nav#toc > ol > li:not(.os-toc-chapter) > ol {
+  display: none;
+}
+
+nav#toc > ol > li.os-toc-chapter {
+  margin-bottom: 0.7rem;
+}
+
+nav#toc > ol > li.os-toc-chapter > a {
+  text-decoration: none;
+}
+
+nav#toc > ol > li.os-toc-chapter > a > .os-number {
+  font-family: Mulish, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 900;
+}
+
+nav#toc > ol > li.os-toc-chapter > a > .os-text {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #00819A;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+nav#toc > ol > li.os-toc-chapter > a::after {
+  content: target-counter(attr(href), page);
+  display: inline-block;
+  margin-left: 24px;
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+nav#toc > ol > li.os-toc-chapter > ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: block;
+}
+
+nav#toc > ol > li.os-toc-chapter > ol > li > a {
+  text-decoration: none;
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
+  content: target-counter(attr(href), page);
+  display: inline-block;
+  margin-left: 24px;
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
