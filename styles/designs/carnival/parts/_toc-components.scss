@@ -202,3 +202,181 @@ $Toc__Chapter: (
   _subselector: ' > .os-toc-chapter',
   _properties: topLevelPageNotAppendixProperties(),
 );
+
+//---------------------------------------------------------------------------------------------------------------
+// New styles, more consistent with Cosmos
+
+$Toc__Title: (
+  _name: 'TocTitle',
+  _subselector: ' > .os-toc-title',
+  _properties: (
+    font-size: font-scale(6),
+    line-height: font-scale(6), //should be the same as font size
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    text-transform: uppercase,
+    padding-bottom: v-spacing(3),
+    margin-bottom: v-spacing(3),
+    border-bottom-style: solid,
+    border-bottom-color: enum('ValueSet:::REQUIRED'),
+    border-bottom-width: 0.25rem, //3px
+  )
+);
+
+$Toc__List: (
+  _name: 'ToclList',
+  _subselector: ' > ol',
+  _properties: (
+    list-style: none,
+    margin-left: 0,
+    padding-left: 0,
+  )
+);
+
+$Toc__Link: ( 
+  _name: 'TocLink',
+  _subselector: ' > a',
+  _properties: (
+    text-decoration: none,
+  ),
+);
+
+// OUT OF CHAPTER: li for Preface, Answer Key, Appendix, Index, References
+// (these elements are direct siblings of li.os-toc-chapter)
+
+$Toc__ListItem--Preface: (
+  _name: 'PrefaceListItem',
+  _subselector: ' > li.os-toc-preface',
+  _properties: (
+    margin-bottom: v-spacing(1),
+  )
+);
+
+$Toc__ListItem--OutOfChapter: empty_wrapper(OutOfChapterListItem, ' > li:not(.os-toc-chapter)');
+
+$Toc__LinkPage--OutOfChapter: (
+  _name: 'OutOfChapterLinkPage',
+  _subselector: '::after',
+  _properties: (
+    content: "target-counter(attr(href), page)",
+    display: inline-block,
+    margin-left: h-spacing(3),
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+  ),
+);
+
+$Toc__LinkNumber--OutOfChapter: (  //used for Appendix
+  _name: 'OutOfChapterLinkNumber',
+  _subselector: ' > .os-number',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    font-weight: bold,
+  ),
+);
+
+$Toc__LinkText--OutOfChapter: (
+  _name: 'OutOfChapterLinkText',
+  _subselector: ' > .os-text',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+  ),
+);
+
+$Toc__List--OutOfChapter: ( //child of Answer Key
+  _name: 'OutOfChapterList',
+  _subselector: ' > ol',
+  _properties: (
+    display: none,
+  )
+);
+
+// INSIDE OF CHAPTER
+
+$Toc__ListItem--Chapter: (
+  _name: 'ChapterListItem',
+  _subselector: ' > li.os-toc-chapter',
+  _properties: (
+    margin-bottom: v-spacing(1),
+  )
+);
+
+$Toc__LinkPage--Chapter: (
+  _name: 'ChapterLinkPage',
+  _subselector: '::after',
+  _properties: (
+    content: "target-counter(attr(href), page)",
+    display: inline-block,
+    margin-left: h-spacing(3),
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    font-weight: 400,
+  ),
+);
+
+$Toc__LinkNumber--Chapter: (
+  _name: 'ChapterLinkNumber',
+  _subselector: ' > .os-number',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    text-transform: uppercase,
+    display: block,
+    font-weight: 900,
+  ),
+);
+
+$Toc__LinkText--Chapter: (
+  _name: 'ChapterLinkText',
+  _subselector: ' > .os-text',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: line-height(3),
+    font-weight: 500,
+  ),
+);
+
+// MODULE: li for regular and EOC modules
+
+$Toc__ListItem--Module: empty_wrapper(ModuleListItem, ' > li');
+
+$Toc__Link--Module: (
+  _name: 'ModuleLink',
+  _subselector: ' > a',
+  _properties: (
+    text-decoration: none,
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+  ),
+);
+
+$Toc__LinkPage--Module: (
+  _name: 'ModuleLinkPage',
+  _subselector: '::after',
+  _properties: (
+    content: "target-counter(attr(href), page)",
+    display: inline-block,
+    margin-left: h-spacing(3),
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+  ),
+);
