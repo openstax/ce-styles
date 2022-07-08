@@ -74,6 +74,13 @@ $ChapterIntroType: fullWidth;
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
     ),
+    SomethingExtra:(
+        _selectors: (".something-extra"),
+        group-border-color: (_ref: 'colorMap:::somethingExtraColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::somethingExtraColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections.svg")) no-repeat top left,
+    ),
 ));
 
 @include use('BookRoot', "common:::BookRoot");
@@ -91,3 +98,4 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
+@include use('SomethingExtra', 'carnival:::IconNoteShape');

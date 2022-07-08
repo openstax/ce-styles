@@ -228,6 +228,17 @@ $Note--Icon__Title__Div: (
   )
 );
 
+$Note--Icon__Subtitle: (
+  _name: "IconSubtitle",
+  _subselector: " > .os-subtitle",
+  _properties: (
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-family: 'Mulish, sans-serif', // To do: specify in notes settings, don't use hard coded value
+    font-weight: 500,
+  )
+);
+
 $Note--Icon__Equation: (
   _name: "Equation",
   _subselector: " > [data-type='equation']",
