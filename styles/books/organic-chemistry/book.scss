@@ -34,6 +34,8 @@ $ChapterIntroType: fullWidth;
   ChapterIntro: (
     _selectors: (".introduction"),
     'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
+    'H2IntroTextHeader:::float': none,
+    'H2IntroTextHeader:::margin-bottom': v-spacing(2),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
