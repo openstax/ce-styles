@@ -119,8 +119,13 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterIntro', 'carnival:::ChapterIntroShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
-//Titles
+// Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
