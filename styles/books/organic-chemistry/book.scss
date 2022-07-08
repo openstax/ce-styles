@@ -105,12 +105,19 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Notes
 @include add_settings((
     WhyChapter:(
         _selectors: (".why-chapter"),
         group-border-color: (_ref: 'colorMap:::whyChapterColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
+    ),
+    WorkingProblems:(
+        _selectors: (".working-problems"),
+        group-border-color: (_ref: 'colorMap:::workingProblemsColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::workingProblemsColor'),
     ),
     SomethingExtra:(
         _selectors: (".something-extra"),
@@ -144,4 +151,5 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
+@include use('WorkingProblems', 'carnival:::BoxedNoteShape');
 @include use('SomethingExtra', 'carnival:::IconNoteShape');
