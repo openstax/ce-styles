@@ -140,13 +140,14 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('Example', 'carnival:::ExampleShape');
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
 @include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
-//Titles
+// Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
@@ -156,3 +157,11 @@ $ChapterIntroType: fullWidth;
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
 @include use('WorkingProblems', 'carnival:::BoxedNoteShape');
 @include use('SomethingExtra', 'carnival:::IconNoteShape');
+
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+
+// EOB
+@include use('Index', 'carnival:::IndexShape');
