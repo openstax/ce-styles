@@ -114,13 +114,12 @@ $H2TextHeader--ChapterIntro: (
     _name: "H2IntroTextHeader",
     _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
-        float: enum('ValueSet:::REQUIRED'), // different value for Organic Chemistry
+        float: left,
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
         text-transform: uppercase,
         margin: "0 .5rem 0 0",
         font-weight: 700,
-        margin-bottom: enum('ValueSet:::OPTIONAL'),
     )
 );
 

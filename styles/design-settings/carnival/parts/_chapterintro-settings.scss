@@ -25,13 +25,10 @@
         ),
         H2IntroTextHeader: (
             font-family: (_ref: 'typography:::baseFont'),
-            float: left,
-        ),
-        IntroFirstPara: (
-            margin-top: 0,
         ),
     ),
 ));
+
 @include add_settings((
     ChapterIntroMargin: (
         _selectors: (".introduction"),
@@ -57,10 +54,43 @@
         ),
         H2IntroTextHeader: (
             font-family: (_ref: 'typography:::baseFont'),
-            float: left,
         ),
-        IntroFirstPara: (
-            margin-top: 0,
+    ),
+));
+
+// Chapter Intro parts
+
+@include add_settings((
+    ChapterIntroSplashFigure: (
+        _selectors: (".introduction"),
+        SplashFigureBg: (
+            // background color is book specific set in the book.scss file
+            width: half-fullBleedsSize(8.5, in),
+            margin-left: fullBleedsMargin(-1, in),
+        ),
+        SplashCaptionBg: (
+            background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
+        ),
+        CaptionNumber: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitleLabel: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+        ),
+        CaptionText: (
+            font-family:(_ref:'typography:::sansFont'),
+        ),
+    ),
+    ChapterIntroBodyWithRegularHeader: (
+        _selectors: (".introduction"),
+        H2Title: (
+            font-family: (_ref: 'typography:::baseFont'),
+            // color: book specific
         ),
     ),
 ));

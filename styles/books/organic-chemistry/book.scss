@@ -31,11 +31,13 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include add_settings((
-  ChapterIntro: (
+  ChapterIntroSplashFigure: (
     _selectors: (".introduction"),
     'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
-    'H2IntroTextHeader:::float': none,
-    'H2IntroTextHeader:::margin-bottom': v-spacing(2),
+  ),
+  ChapterIntroBodyWithRegularHeader: (
+    _selectors: (".introduction"),
+    'H2Title:::color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
@@ -140,7 +142,8 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 
 // Chapter Intro
-@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
+@include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
+@include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 //Titles
