@@ -95,6 +95,18 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+// Exercises
+@include add_settings((
+    VisualizingChemistry:(
+        _selectors: (".os-visualizing-chemistry-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    AdditionalProblems:(
+        _selectors: (".os-additional-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+));
+
 // Inline colored text throughout the book
 @include add_settings((
     CyanColoredText: (
@@ -171,6 +183,11 @@ $ChapterIntroType: fullWidth;
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+
+// Exercises
+@include use('ModuleExercises','carnival:::ExercisesModuleShape');
+@include use('VisualizingChemistry','carnival:::ExercisesModuleShape');
+@include use('AdditionalProblems','carnival:::ExercisesModuleShape');
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
