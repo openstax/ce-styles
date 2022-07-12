@@ -80,6 +80,14 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  EocCompositeChapterTitles: (
+    _selectors: ('.os-eoc[data-type="composite-chapter"]'),
+    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
+
+@include add_settings((
   EobTitles: (
     _selectors: ('.os-eob'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
@@ -151,6 +159,7 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 
 // Notes
