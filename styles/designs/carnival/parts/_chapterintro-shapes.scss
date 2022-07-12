@@ -45,7 +45,6 @@
     )
 ));
 
-
 @include create_shape('carnival:::ChapterIntroMarginShape', ( // Used in Biology
     _components: (
         map-merge($ChapterIntro__Container, (
@@ -78,6 +77,63 @@
                         map-merge($ChapterIntro__Container--Text, (
                             _components: (
                                 $H2TextHeader--ChapterIntro,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+// Chapter Intro parts
+
+// To do: use ChapterIntroSplashFigureShape everywhere. Create shapes for Chapter Intro body 
+// with specific title and for body of margin type. Apply to all themes.
+
+@include create_shape('carnival:::ChapterIntroSplashFigureShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                map-merge($ChapterSplash__Figure__Wrapper, (
+                    _components: (
+                        map-merge($ChapterSplash__Figure, (
+                            _components: (
+                                $ChapterSplash__Figure--Bg,
+                                map-merge($ChapterSplash__Media, (
+                                    _components: (
+                                        $ChapterSplash__Img,
+                                    )
+                                )),
+                            )
+                        )),
+                        map-merge($Caption__Container--ChapterIntro, (
+                            _components: (
+                                $ChapterSplash__Caption--Bg,
+                                $Caption__Number,
+                                $Caption__TitleLabel,
+                                $Caption__Title,
+                                $Caption__Text,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::ChapterIntroBodyWithRegularHeaderShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                map-merge($ChapterIntro__Container--Body, (
+                    _components: (
+                        map-merge($ChapterIntro__Container--Text, (
+                            _components: (
+                                $H2,
+                                $Note__OrderedList--MarginLeftBottom, //added as e tamporary solution before the lists cleaning issue will be resolved
+
                             )
                         )),
                     )

@@ -31,9 +31,13 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include add_settings((
-  ChapterIntro: (
+  ChapterIntroSplashFigure: (
     _selectors: (".introduction"),
     'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
+  ),
+  ChapterIntroBodyWithRegularHeader: (
+    _selectors: (".introduction"),
+    'H2Title:::color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
@@ -103,6 +107,29 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Notes
+@include add_settings((
+    WhyChapter:(
+        _selectors: (".why-chapter"),
+        group-border-color: (_ref: 'colorMap:::whyChapterColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
+    ),
+    WorkingProblems:(
+        _selectors: (".working-problems"),
+        group-border-color: (_ref: 'colorMap:::workingProblemsColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::workingProblemsColor'),
+    ),
+    SomethingExtra:(
+        _selectors: (".something-extra"),
+        group-border-color: (_ref: 'colorMap:::somethingExtraColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::somethingExtraColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections.svg")) no-repeat top left,
+    ),
+));
+
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
 @include use('CyanColoredText', 'common:::ColoredText');
@@ -116,7 +143,8 @@ $ChapterIntroType: fullWidth;
 @include use('Example', 'carnival:::ExampleShape');
 
 // Chapter Intro
-@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
+@include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
+@include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles
@@ -124,6 +152,11 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Notes
+@include use('WhyChapter', 'carnival:::BoxedNoteShape');
+@include use('WorkingProblems', 'carnival:::BoxedNoteShape');
+@include use('SomethingExtra', 'carnival:::IconNoteShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
