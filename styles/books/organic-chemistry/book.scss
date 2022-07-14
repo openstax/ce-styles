@@ -158,6 +158,19 @@ $ChapterIntroType: fullWidth;
 @include use('WorkingProblems', 'carnival:::BoxedNoteShape');
 @include use('SomethingExtra', 'carnival:::IconNoteShape');
 
+// Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
+@include use('FigureFromExercisesSolution','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
+
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
