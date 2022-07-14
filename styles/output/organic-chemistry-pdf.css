@@ -1158,6 +1158,184 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.2rem;
 }
 
+[data-type=page] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > [data-type=list] > [data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=page] > [data-type=list] > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+[data-type=page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
+}
+
+[data-type=problem] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
 .introduction > .os-figure.has-splash {
   margin-bottom: 0.7rem;
 }
