@@ -28,7 +28,10 @@ for i in "${!STYLE_NAMES[@]}"; do
   css_file="${output_dir}/${style_name}-pdf.css"
 
   echo "Generating ${css_file} $((i + 1))/${#STYLE_NAMES[@]}"
-  dart styles/build/build.dart "${sass_file}" "${css_file}"
+    dart styles/build/build.dart "${sass_file}" "${css_file}" || {
+      echo "Generating ${css_file} failed"
+      break
+    }
 
   #disable web styles for the time being
   #do_progress "Building webpackable _web-styles.json" \

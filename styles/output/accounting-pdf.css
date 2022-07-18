@@ -980,7 +980,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) {
   display: block;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -988,7 +988,7 @@ nav#toc > ol > li:not(.os-toc-unit) {
   padding-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a {
   font-family: Noto Sans, StixGeneral;
   color: #24739E;
   font-size: 1.2rem;
@@ -1001,13 +1001,13 @@ nav#toc > ol > li:not(.os-toc-unit) > a {
   margin-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number {
   font-size: 1rem;
   line-height: 1rem;
   border-style: solid;
@@ -1024,11 +1024,11 @@ nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
   vertical-align: middle;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number > .os-part-text {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number > .os-part-text {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol {
   list-style: none;
   border-left-style: solid;
   border-left-width: 0.25rem;
@@ -1039,26 +1039,26 @@ nav#toc > ol > li:not(.os-toc-unit) > ol {
   padding-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li.os-toc-composite-chapter > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li.os-toc-composite-chapter > ol {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li {
   display: block;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a {
   color: #000000;
   font-size: 1rem;
   line-height: 1.5rem;
   text-decoration: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a > .os-number {
   font-weight: bold;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
@@ -1228,7 +1228,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   vertical-align: top;
 }
 
-[data-type=page]:not(.introduction).preface > h1 {
+[data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.728rem;
@@ -1237,7 +1237,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: normal;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
@@ -1247,16 +1247,16 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: normal;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-part-text {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
   display: none;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-text {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-number {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
   border-style: solid;
   border-width: 0.2rem;
   border-color: #344456;
@@ -1267,7 +1267,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   text-align: center;
 }
 
-[data-type=page]:not(.introduction) > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
@@ -1277,12 +1277,12 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: normal;
 }
 
-[data-type=page]:not(.introduction) > h2 > .os-text {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
 }
 
-[data-type=page]:not(.introduction) > h2 > .os-number {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
   border-style: solid;
   border-width: 0.2rem;
   border-color: #0DC0DC;
@@ -1293,7 +1293,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   text-align: center;
 }
 
-[data-type=page]:not(.introduction) > section > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
@@ -1302,7 +1302,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -1311,7 +1311,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -1320,7 +1320,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > h4 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
@@ -1329,7 +1329,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > section > h4 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
@@ -1338,7 +1338,7 @@ nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > section > h5 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h5 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;

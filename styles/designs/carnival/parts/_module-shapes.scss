@@ -27,27 +27,6 @@
     )
 ));
 
-@include create_shape('carnival:::ModuleWithIndentationForPolishBooksShape',(
-    _components:(
-        map-merge($Module__Container,(
-            _components:(
-                $ModuleWithIndentation__Para--Inverted,
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $ModuleWithIndentation__Para--Inverted,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $ModuleWithIndentation__Para--Inverted,
-                    ),
-                )),
-            ),
-        )),
-    )
-));
-
-
 // Used for Key Equations without links to modules to remove blank spaces
 // between tables from different sections.
 // See Chemistry and U-Physics

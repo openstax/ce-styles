@@ -46,10 +46,22 @@ $Note--Boxed__Title: (
     margin-top: 0,
     margin-bottom: v-spacing(1),
     box-decoration-break: slice,
+    text-transform: uppercase,
     // border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
     // padding-bottom: v-spacing(1),
     // border-bottom-style: dotted,
     // border-bottom-width: 0.2rem,
+  )
+);
+
+$Note--Boxed__Subtitle: (
+  _name: "BoxedSubtitle",
+  _subselector: " > .os-subtitle, h4[data-type="title"]",
+  _properties: (
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    font-family: "IBM Plex Sans, sans-serif", //too many places where it's  optional to fix now, TODO: fix later
+    font-weight: bold,
   )
 );
 
@@ -213,6 +225,17 @@ $Note--Icon__Title__Div: (
     display: enum('ValueSet:::OPTIONAL'),
     padding-right: enum('ValueSet:::OPTIONAL'),
     margin-bottom: enum('ValueSet:::OPTIONAL'),
+  )
+);
+
+$Note--Icon__Subtitle: (
+  _name: "IconSubtitle",
+  _subselector: " > .os-subtitle",
+  _properties: (
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-family: 'Mulish, sans-serif', // To do: specify in notes settings, don't use hard coded value
+    font-weight: 500,
   )
 );
 

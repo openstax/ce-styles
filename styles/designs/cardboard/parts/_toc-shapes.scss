@@ -77,11 +77,7 @@
                         map-merge($Toc__Unit, (
                             _components: (
                                 $Toc__Unit__Icon,
-                                map-merge($Toc__Unit__Link,(
-                                    _components: (
-                                        $Toc__Link--TopLevel__Page--Unit,
-                                    )
-                                )),
+                                $Toc__Unit__Link,
                                 map-merge($Toc__List--TopLevel--Unit, (
                                     _components: (
                                         $Toc__Chapter--OddItem,
@@ -110,6 +106,15 @@
                                                                 )),
                                                             )
                                                         )),
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                        map-merge($Toc__ListItem--UnitPage, (
+                                            _components: (
+                                                map-merge($Toc__Link--MiddleLevel, (
+                                                    _components: (
+                                                        $Toc__Link--MiddleLevel__Page
                                                     )
                                                 )),
                                             )
