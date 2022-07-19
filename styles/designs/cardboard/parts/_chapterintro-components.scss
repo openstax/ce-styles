@@ -3,7 +3,7 @@ $ChapterIntro__Container--Body: empty_wrapper(ChapterIntroBody, ' > .intro-body'
 $ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text');
 
 $ChapterSplash__Media: (
-    _name: "SplashImgMedia",
+    _name: "ChapterSplashImgMedia",
     _subselector: ' > span[data-type="media"]',
     _properties: (
         display: flex,
@@ -15,7 +15,7 @@ $ChapterSplash__Media: (
 );
 
 $ChapterSplash__Media__Bar: (
-    _name: "SplashImgMediaBar",
+    _name: "ChapterSplashMediaBar",
     _subselector: '::after',
     _properties: (
         width: 100%,
@@ -34,7 +34,7 @@ $ChapterSplash__Media__Bar: (
 );
 
 $ChapterSplash__Img: (
-    _name: "SplashImg",
+    _name: "ChapterSplashImg",
     _subselector: '> img',
     _properties: (
         width: fullBleedsSize(8.45, in),
@@ -44,23 +44,22 @@ $ChapterSplash__Img: (
 );
 
 $ChapterSplash__Figure: (
-    _name: "SplashFigure",
+    _name: "ChapterSplashFigure",
     _subselector: ' > figure.splash',
     _properties: (
         position: relative,
         width: fullBleedsSize(8.45, in),
         transform: translate3d(-1in, 0, 0),
         margin-left: fullBleedsMargin(0, rem),
-        padding-bottom: 0,
-        margin-bottom: 1.25rem
+        margin-bottom: 0,
     ),
 );
 
 $ChapterSplash__Figure__Wrapper: (
-    _name: "SplashFigureWrapper",
+    _name: "ChapterSplashFigureWrapper",
     _subselector: ' > .os-figure.has-splash',
     _properties: (
-        margin-bottom: 2rem,
+        margin-bottom: v-spacing(2),
         margin-top: -1.15in,
     ),
 );
