@@ -1599,6 +1599,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #C31427;
 }
 
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
 .os-table.top-titled {
   margin-bottom: 0.7rem;
   display: table;
@@ -1661,6 +1670,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Mulish, sans-serif;
   font-weight: bold;
   color: #C31427;
+}
+
+.os-table.top-titled .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table.top-titled .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-table.os-unstyled-container {
