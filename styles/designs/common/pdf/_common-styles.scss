@@ -1,4 +1,4 @@
-a[href^="http"]::after{
+a[href^="http"]::after {
   content: " (" attr(href) ")";
   overflow-wrap: break-word;
 }
@@ -38,9 +38,10 @@ pre > span {
   display: inline-block;
 }
 
-// iframes should be hidden library wide
-// https://github.com/openstax/cnx-recipes/issues/3874
-iframe {
+// Hide a switch element's children that are not marked for the print platform
+// This replaces hiding iframes, since all iframes will be marked up with data-media
+// https://github.com/openstax/cnx-recipes/issues/4765
+[data-type="switch"] > :not([data-media~="print"]) {
   display: none;
 }
 
