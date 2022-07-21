@@ -9,8 +9,6 @@
         map-merge($Note--Icon--Condensed__Body, (
           _components: (
             $Note--Icon--Condensed__Paragraph,
-            $Note__UnorderedList--MarginLeftBottom,
-            $Note__OrderedList--MarginLeftBottom,
           ),
         ))
         map-merge($Note--Icon--Condensed__Title, (
@@ -39,7 +37,7 @@
             map-merge($Note__Problem__Container, (
               _components: (
                 $Note--Icon--Condensed__Paragraph,
-                $Note__OrderedList--MarginLeftBottom,
+                $OrderedList--FirstLevel--MarginBottom, // The only case of such lists in problem container (which also need margin bottom)
               ),
             )
           )),
