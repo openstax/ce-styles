@@ -27,3 +27,9 @@
         _selectors: ('.os-eoc[data-type="composite-page"]'),
     ),
 ));
+
+@include add_settings((
+    NoteLists: (
+        _selectors: ('[data-type="note"]'),
+    ),
+));

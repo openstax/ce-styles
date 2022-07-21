@@ -74,7 +74,7 @@ $SubSection__Container__UnorderedList--MarginLeftBottom: list--marginLeft(main, 
 // Notes need to have bottom margin under lists
 // Notes, Chapter Intro in polish University Physics vol2
 
-$Note__UnorderedList--MarginLeftBottom:list--marginLeftBottom(main, " ul");
+// $Note__UnorderedList--MarginLeftBottom:list--marginLeftBottom(main, " ul");
 $Note__OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " ol");
 
 //AnswerKey
@@ -83,21 +83,7 @@ $AnswerKey__OrderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-
 $AnswerKey__UnorderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-removed, " > ul" );
 
 //Tables
-$List--Unstyled: (
-    _name: "ListUnstyled",
-    _subselector: " > ul[data-bullet-style='none']",
-    _properties: (
-        list-style-type: none,
-    )
-);
-// Lists in table cells need to have margin set withs table spacing functions - this component will be removed after list cleaning. There has been Table Lists Shape created below.
-$Table__UnorderedList--MarginLeft: (
-    _name: "TableUnorderedListMarginLeft",
-    _subselector: " > ul",
-    _properties: (
-        margin-left: table-v-spacing(1),
-    )
-);
+
 
 //--------------------------------------------------------------------------------------------------------------------
 //Lists in Carnival should be clean up. Since this theme was the first one, we weren't sure what would be the best way
@@ -207,7 +193,7 @@ $UnorderedList__Item--AppendixGlossary: (
 );
 
 // Exercises
-$UnorderedList--FirstLevel--Exercise: (
+$UnorderedList--FirstLevel--MarginBottom: (
     _name: "ExerciseFirstLevelUnorderedList",
     _subselector: " > ul",
     _properties: (
@@ -216,7 +202,7 @@ $UnorderedList--FirstLevel--Exercise: (
     )
 );
 
-$OrderedList--FirstLevel--Exercise: (
+$OrderedList--FirstLevel--MarginBottom: (
     _name: "ExerciseFirstLevelOrderedList",
     _subselector: " > ol",
     _properties: (
@@ -225,7 +211,7 @@ $OrderedList--FirstLevel--Exercise: (
     )
 );
 
-$UnorderedList--SecondLevel--Exercise: (
+$UnorderedList--SecondLevel--MarginBottom: (
     _name: "SecondLevelUnorderedList",
     _subselector: " > li > ul",
     _properties:(
@@ -234,11 +220,20 @@ $UnorderedList--SecondLevel--Exercise: (
     )
 );
 
-$OrderedList--SecondLevel--Exercise: (
+$OrderedList--SecondLevel--MarginBottom: (
     _name: "SecondLevelOrderedList",
     _subselector: " > li  > ol",
     _properties:(
         margin-left: h-spacing(2),
         margin-bottom: v-spacing(1),
+    )
+);
+
+// Custom lists
+$UnorderedList--Unstyled: (
+    _name: "UnorderedListUnstyled",
+    _subselector: " > ul[data-bullet-style='none']",
+    _properties: (
+        list-style-type: none,
     )
 );
