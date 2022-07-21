@@ -12,7 +12,11 @@
                             $Exercise__ProblemSolution__Divider,
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
+                                    map-merge($Exercise__ProblemSolution__Paragraph,(
+                                        _components:(
+                                            $Title--Problem,
+                                        ),
+                                    )),
                                 ),
                             )),
                             $Exercise__Problem__Container--WithImageTableOnTop,
@@ -20,7 +24,7 @@
                     )),
                     map-merge($Exercise__Solution__Wrapper,(
                       _components:(
-                          $Exercises__Solution__Title // present only in hs physics in module exercises
+                        $Title--Solution, // present only in hs physics in module exercises
                       ),
                     )),
                   )
@@ -33,7 +37,11 @@
                             $Exercise__ProblemSolution__Divider,
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
+                                    map-merge($Exercise__ProblemSolution__Paragraph,(
+                                        _components:(
+                                            $Title--Problem,
+                                        ),
+                                    )),
                                 ),
                             )),
                             $Exercise__Problem__Container--WithImageTableOnTop,
