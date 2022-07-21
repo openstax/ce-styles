@@ -139,6 +139,14 @@ $Toc__ListItem--UnitPage: (
   )
 );
 
+$Toc__Link__Number__PartText--Module--UnitPage: ( // Unit page link part text need to be hidden
+  _name: 'UnitPageModuleLinkNumberPartText',
+  _subselector: ' > .os-number > .os-part-text',
+  _properties: (
+    display: none,
+  )
+);
+
 // CHAPTER
 
 $Toc__List--Chapter: (

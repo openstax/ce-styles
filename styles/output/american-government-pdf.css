@@ -1024,6 +1024,10 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a {
   line-height: 1.5rem;
 }
 
+nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a > .os-number > .os-part-text {
+  display: none;
+}
+
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
