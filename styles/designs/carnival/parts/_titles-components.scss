@@ -296,7 +296,7 @@ $Table__Title: (
 );
 
 //Solution title used only in HS Physics in module exercises
-$Exercises__Solution__Title:(
+$Title--Solution:(
   _name: "SolutionTitle",
   _subselector: " > .solution-title",
   _properties:(
@@ -304,5 +304,13 @@ $Exercises__Solution__Title:(
     font-weight: bold,
     font-size: font-scale(1),
     line-height: line-height(1),
+  )
+);
+
+$Title--Problem:(
+  _name: "ProblemTitle",
+  _subselector: ' > span[data-type="title"]',
+  _properties:(
+    font-weight: bold,
   )
 );
