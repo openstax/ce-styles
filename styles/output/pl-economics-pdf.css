@@ -253,7 +253,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -2408,6 +2408,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob .os-solution-container > p + .os-table {
   margin-top: 1rem;
+}
+
+.os-narrow-table-container {
+  width: 50%;
+}
+
+.os-narrow-table-container td {
+  text-align: center;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) {
