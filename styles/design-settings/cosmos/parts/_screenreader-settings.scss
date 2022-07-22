@@ -1,5 +1,5 @@
 @include add_settings((
   ScreenreaderSpan: (
-    _selectors: ('span[data-screenreader-only="true"]')
+    _selectors: ('span[data-media~="screenreader"]')
   ),
 ));

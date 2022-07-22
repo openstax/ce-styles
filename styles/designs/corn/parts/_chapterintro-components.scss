@@ -4,7 +4,7 @@ $ChapterIntro__Container--Body: empty_wrapper(ChapterIntroBody, ' > .intro-body'
 $ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text');
 
 $ChapterSplash__Media: (
-    _name: "SplashImgMedia",
+    _name: "ChapterSplashImgMedia",
     _subselector: ' > span[data-type="media"]',
     _properties: (
         line-height: 0,
@@ -16,7 +16,7 @@ $ChapterSplash__Media: (
 );
 
 $ChapterSplash__Img: (
-    _name: "SplashImg",
+    _name: "ChapterSplashImg",
     _subselector: '> img',
     _properties: (
         width: half-fullBleedsSize(6.81, in),
@@ -25,7 +25,7 @@ $ChapterSplash__Img: (
 );
 
 $ChapterSplash__Media--Overlay: (
-    _name: "SplashMediaOverlay",
+    _name: "ChapterSplashMediaOverlay",
     _subselector: "::before",
     _properties: (
         content: "''",
@@ -44,7 +44,7 @@ $ChapterSplash__Media--Overlay: (
 
 
 $ChapterSplash__Figure: (
-    _name: "SplashFigure",
+    _name: "ChapterSplashFigure",
     _subselector: ' > figure.splash',
     _properties: (
         position: relative,
@@ -52,13 +52,13 @@ $ChapterSplash__Figure: (
     ),
 );
 
-$ChapterSplash__Figure--Bg: fullWidthBg("SplashFigure", enum('ValueSet:::REQUIRED'));
+$ChapterSplash__Figure--Bg: fullWidthBg("ChapterSplashFigure", enum('ValueSet:::REQUIRED'));
 
 $ChapterSplash__Figure__Wrapper: (
-    _name: "SplashFigureWrapper",
+    _name: "ChapterSplashFigureWrapper",
     _subselector: ' > .os-figure.has-splash',
     _properties: (
-        margin-bottom: 2rem,
+        margin-bottom: v-spacing(2),
         margin-top: -6rem,
     ),
 );

@@ -26,7 +26,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ChapterIntro: (
     _selectors: ('.introduction'),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::anatomyIntroColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::anatomyIntroColor"),
   ),
   ChapterObjectivesNote: (
     _selectors: ('[data-type="note"].chapter-objectives'),

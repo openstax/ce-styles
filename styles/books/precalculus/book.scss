@@ -20,10 +20,10 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ChapterIntro: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
     'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
     'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
-    'SplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
+    'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),

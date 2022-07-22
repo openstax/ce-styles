@@ -253,7 +253,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -996,16 +996,15 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   z-index: -1;
   box-sizing: border-box;
   top: 0;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.4rem;
   padding-top: 3.5rem;
   transform: translate3d(-1in, 0, 0);
   margin-left: -1.2rem;
-  padding-bottom: 1.4rem;
   margin-top: -0.1rem;
 }
 
 .introduction > .os-figure.has-splash > figure.splash {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0;
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -1023,7 +1022,8 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   width: 6.5in;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash > .os-caption-container > .os-number {
