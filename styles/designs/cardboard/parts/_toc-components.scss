@@ -68,6 +68,7 @@ $Toc__ListItem--UnitPage: (
   )
 );
 
+
 $Toc__Link--TopLevel: (
   _name: 'TopLevelLink',
   _subselector: ' > a',
@@ -178,6 +179,14 @@ $Toc__Link--MiddleLevel__Page: (
     display: inline-block,
     margin-left: h-spacing(1),
   ),
+);
+
+$Toc__Link--MiddleLevel__Number--UnitPage: ( // Unit page link number needs to be hidden
+  _name: 'UnitPageModuleLinkNumberPartText',
+  _subselector: ' > .os-number',
+  _properties: (
+    display: none,
+  )
 );
 
 //Specific elements
