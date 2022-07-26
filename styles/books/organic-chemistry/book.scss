@@ -95,6 +95,14 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type = "chapter"] > .section-exercises'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
+  VisualizingChemistry: (
+    _selectors: ('[data-type = "chapter"] > .visualizing-chemistry'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+  AdditionalProblems: (
+    _selectors: ('[data-type = "chapter"] > .additional-problems'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
 ));
 
 // Inline colored text throughout the book
@@ -144,3 +152,5 @@ $ChapterIntroType: fullWidth;
 @include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 @include use('SectionExercises', 'carnival:::ExercisesModuleShape');
+@include use('VisualizingChemistry', 'carnival:::ExercisesModuleShape');
+@include use('AdditionalProblems', 'carnival:::ExercisesModuleShape');
