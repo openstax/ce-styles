@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;900&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;900&display=swap&subset=latin,latin-ext");
 nav#toc > ol > .os-toc-unit > a > .os-text,
 nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
@@ -1419,12 +1419,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 0;
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  text-transform: uppercase;
 }
 
 .aging > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
 }
 
 .aging > .os-note-body ul {
@@ -1458,12 +1460,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 0;
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  text-transform: uppercase;
 }
 
 .diseases > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
 }
 
 .diseases > .os-note-body ul {
@@ -1497,12 +1501,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 0;
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  text-transform: uppercase;
 }
 
 .disorders > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
 }
 
 .disorders > .os-note-body ul {
@@ -1536,12 +1542,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 0;
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  text-transform: uppercase;
 }
 
 .everyday > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
 }
 
 .everyday > .os-note-body ul {
@@ -1613,10 +1621,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.career > .os-note-body > .os-subtitle, h4[data-type=title] {
+.career > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
 }
 
 .career > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
@@ -1693,10 +1702,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.homeostatic > .os-note-body > .os-subtitle, h4[data-type=title] {
+.homeostatic > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
 }
 
 .homeostatic > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
@@ -2585,6 +2595,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: IBM Plex Sans, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  text-indent: -8px;
+  padding-left: 8px;
 }
 
 .os-index-container > .group-by > .os-index-item > .os-term {
