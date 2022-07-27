@@ -254,7 +254,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -917,6 +917,11 @@ div[data-type=composite-page].os-eob {
   color: #757575;
 }
 
+.red-text {
+  font-weight: normal;
+  color: #C31427;
+}
+
 nav#toc > .os-toc-title {
   font-size: 2.985984rem;
   line-height: 2.985984rem;
@@ -1158,8 +1163,186 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.2rem;
 }
 
-.introduction > .os-figure.has-splash {
+[data-type=page] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > [data-type=list] > [data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=page] > [data-type=list] > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+[data-type=page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
+}
+
+[data-type=problem] > div > ul {
+  margin-left: 24px;
   margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-eoc[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.introduction > .os-figure.has-splash {
+  margin-bottom: 1.4rem;
 }
 
 .introduction > .os-figure.has-splash > figure.splash {
@@ -1373,10 +1556,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: bold;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-[data-type=page]:not(.introduction) span[data-type=title] {
-  margin-right: 8px;
 }
 
 [data-type=page]:not(.introduction).appendix > h1 {
@@ -1672,6 +1851,131 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
+.os-figure:not(.has-splash) > figure {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-figure:not(.has-splash) .os-caption-container {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.7rem;
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+}
+
+.os-figure:not(.has-splash) .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+  text-transform: uppercase;
+}
+
+.os-figure:not(.has-splash) .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+}
+
+.os-figure:not(.has-splash) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-figure:not(.has-splash) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
+h4.os-subtitle + .os-figure:not(.has-splash) > figure {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-problem-container > p + .os-figure > figure {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + .os-figure > figure {
+  margin-top: 1rem;
+}
+
+[data-type=solution] > h4[data-type=solution-title] + .has-first-element > .first-element > img {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-problem-container > p + [data-type=media] > img {
+  margin-top: 1rem;
+}
+
+.os-eob .os-solution-container > p + [data-type=media] > img {
+  margin-top: 1rem;
+}
+
+[data-type=problem] img {
+  max-width: 100%;
+}
+
+[data-type=problem] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] img {
+  max-width: 100%;
+}
+
+[data-type=solution] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] img {
+  max-width: 100%;
+}
+
+[data-type=exercise-question] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] img {
+  max-width: 100%;
+}
+
+[data-type=question-solution] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
 .os-table:not(.os-unstyled-container) {
   margin-bottom: 0.7rem;
   display: table;
@@ -1785,6 +2089,15 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-family: Mulish, sans-serif;
   font-weight: bold;
   color: #C31427;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table {

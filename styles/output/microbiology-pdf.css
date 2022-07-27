@@ -254,7 +254,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -1444,7 +1444,7 @@ a[role=doc-noteref] {
 }
 
 .introduction > .os-figure.has-splash {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
 }
 
 .introduction > .os-figure.has-splash > figure.splash {
@@ -1773,6 +1773,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #C31427;
 }
 
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
 .os-table.os-unstyled-container {
   margin-bottom: 0.7rem;
 }
@@ -1850,6 +1859,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-multiple-choice-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -1891,6 +1904,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -1924,6 +1941,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-critical-thinking-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -1967,6 +1988,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2000,6 +2025,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-short-answer-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-short-answer-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -2043,6 +2072,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2076,6 +2109,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-fill-in-the-blank-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -2119,6 +2156,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2152,6 +2193,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-matching-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-matching-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -2195,6 +2240,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-matching-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2228,6 +2277,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-true-false-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-true-false-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -2269,6 +2322,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
@@ -2698,6 +2755,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #C31427;
 }
 
+.os-table.os-top-titled-container .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table.os-top-titled-container .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
 [data-type=page] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2941,10 +3007,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-[data-type=page]:not(.introduction) span[data-type=title] {
-  margin-right: 8px;
 }
 
 [data-type=page]:not(.introduction).appendix > h1 {

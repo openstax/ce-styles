@@ -9,23 +9,3 @@
         )),
     )
 ));
-
-@include create_shape('cosmos:::ModuleWithIndentationForPolishBooksShape',(
-    _components:(
-        map-merge($Module__Container,(
-            _components:(
-                $ModuleWithIndentation__Para--Inverted,
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $ModuleWithIndentation__Para--Inverted,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $ModuleWithIndentation__Para--Inverted,
-                    ),
-                )),
-            ),
-        )),
-    )
-));

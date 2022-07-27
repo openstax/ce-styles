@@ -64,7 +64,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
 ChapterIntro: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::physicsIntroColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::physicsIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
@@ -242,7 +242,6 @@ ChapterIntro: (
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
-@include use('PageWithIndentation', 'carnival:::ModuleWithIndentationForPolishBooksShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');

@@ -33,7 +33,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ChapterIntroSplashFigure: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
   ChapterIntroBodyWithRegularHeader: (
     _selectors: (".introduction"),
@@ -125,6 +125,10 @@ $ChapterIntroType: fullWidth;
         _selectors: ('.gray-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::textGrayColor'),
     ),
+    RedColoredText: (
+        _selectors: ('.red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textRedColor'),
+    ),
 ));
 
 // Notes
@@ -156,11 +160,19 @@ $ChapterIntroType: fullWidth;
 @include use('MagentaColoredText', 'common:::ColoredText');
 @include use('GreenColoredText', 'common:::ColoredText');
 @include use('GrayColoredText', 'common:::ColoredText');
+@include use('RedColoredText', 'common:::ColoredText');
 
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('Example', 'carnival:::ExampleShape');
+
+//Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
@@ -178,6 +190,19 @@ $ChapterIntroType: fullWidth;
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
 @include use('WorkingProblems', 'carnival:::BoxedNoteShape');
 @include use('SomethingExtra', 'carnival:::IconNoteShape');
+
+// Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
+@include use('FigureFromExercisesSolution','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
