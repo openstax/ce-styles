@@ -87,6 +87,28 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+// Eoc
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.summary'),
+  ),
+));
+
+@include add_settings((
+  SectionExercises: (
+    _selectors: ('[data-type = "chapter"] > .section-exercises'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+  VisualizingChemistry: (
+    _selectors: ('[data-type = "chapter"] > .visualizing-chemistry'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+  AdditionalProblems: (
+    _selectors: ('[data-type = "chapter"] > .additional-problems'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
 // Inline colored text throughout the book
 @include add_settings((
     CyanColoredText: (
@@ -159,6 +181,15 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Eoc
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ModuleWithMarginBottom', 'common:::ModuleWithMarginBottomShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('SectionExercises', 'carnival:::ExercisesModuleShape');
+@include use('VisualizingChemistry', 'carnival:::ExercisesModuleShape');
+@include use('AdditionalProblems', 'carnival:::ExercisesModuleShape');
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
