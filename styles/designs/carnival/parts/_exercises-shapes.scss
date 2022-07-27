@@ -45,3 +45,19 @@
         )),
     ))
 );
+
+@include create_shape('carnival:::ExercisesMultipartQuestionShape',(
+    _components:(
+        map-merge($ExerciseMultipartQuestion__Container,(
+            _components:(
+                map-merge($Exercise__Problem__Container--FromMultipartQuestion,(
+                    _components:(
+                        $InjectedExercise__ProblemSolution__Letter,
+                        $Exercise__ProblemSolution__Divider,
+                        $InjectedExercise__Question__Stem,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
