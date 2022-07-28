@@ -137,6 +137,9 @@ $bandColor: #217867;
     'CaptionTitleLabel:::color': (_ref: "colorMap:::captionNumberPlEconomicsColor"),
     'CaptionNumber:::color': (_ref: "colorMap:::captionNumberPlEconomicsColor"),
   ),
+  NarrowTable: (
+    _selectors: ('.os-narrow-table-container'),
+  ),
 ));
 
 @include add_settings((
@@ -175,7 +178,7 @@ $bandColor: #217867;
   ChapterIntroWithBlockIntroHeader:(
     _selectors: ('.introduction'),
     'H2IntroTextHeaderBlock:::color': (_ref: "colorMap:::introContentHeaderColorPlEconomics"),
-    'SplashFigureWrapper:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgPlEconomicsColor"),
+    'ChapterSplashFigureWrapper:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgPlEconomicsColor"),
     'CaptionTitleLabel:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
     'CaptionNumber:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
   ),
@@ -243,6 +246,7 @@ $bandColor: #217867;
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
 @include use('TopCaptionedTable', 'cosmos:::BasicTableShape');
 @include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
+@include use('NarrowTable', 'common:::NarrowTableShape');
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');

@@ -254,7 +254,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -917,6 +917,11 @@ div[data-type=composite-page].os-eob {
   color: #757575;
 }
 
+.red-text {
+  font-weight: normal;
+  color: #C31427;
+}
+
 nav#toc > .os-toc-title {
   font-size: 2.985984rem;
   line-height: 2.985984rem;
@@ -1337,7 +1342,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 }
 
 .introduction > .os-figure.has-splash {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
 }
 
 .introduction > .os-figure.has-splash > figure.splash {
@@ -1551,10 +1556,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: bold;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-[data-type=page]:not(.introduction) span[data-type=title] {
-  margin-right: 8px;
 }
 
 [data-type=page]:not(.introduction).appendix > h1 {
@@ -2051,6 +2052,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Mulish, sans-serif;
   font-weight: bold;
   color: #C31427;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table {

@@ -263,7 +263,7 @@ pre > span {
   display: inline-block;
 }
 
-iframe {
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -1457,7 +1457,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .introduction > .os-figure.has-splash {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   margin-top: -6rem;
 }
 
@@ -1506,8 +1506,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .introduction > .os-figure.has-splash > .os-caption-container {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash > .os-caption-container > .os-number {
