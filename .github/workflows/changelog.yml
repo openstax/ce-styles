@@ -1,0 +1,24 @@
+name: CHANGELOG.md
+
+on:
+  pull_request:
+
+jobs:
+  exists:
+    timeout-minutes: 10
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Check for CHANGELOG.md in this PR
+        # https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+        run: |
+          if [[ $(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep CHANGELOG.md) ]]; then
+            echo "CHANGELOG.md is included in the pull request! Way to go!"
+            exit 0
+          else
+            echo "CHANGELOG.md was not modified in this pull request.  Boo!"
+            exit 1
+          fi
