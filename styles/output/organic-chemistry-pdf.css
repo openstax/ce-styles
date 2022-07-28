@@ -1688,6 +1688,43 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: 600;
 }
 
+.os-glossary-container > dl {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-glossary-container > dl > dt {
+  font-weight: bold;
+  padding-right: 8px;
+  display: inline;
+}
+
+.os-glossary-container > dl > dd {
+  display: inline;
+  margin-left: 0px;
+}
+
+.os-eoc[data-type=composite-page] {
+  margin-bottom: 0.7rem;
+}
+
+.os-glossary-container {
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.summary {
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-references-container > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
 .why-chapter {
   border: solid;
   border-color: #1E9575;
@@ -2164,6 +2201,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+[data-type=page] :not(.os-note-body) [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 [data-type=page] :not(.os-note-body) [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2206,6 +2247,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] :not(.os-note-body) [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+[data-type=page] :not(.os-note-body) [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 [data-type=page] :not(.os-note-body) [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
@@ -2262,6 +2307,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-visualizing-chemistry-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-visualizing-chemistry-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2303,6 +2352,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-visualizing-chemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
 .os-visualizing-chemistry-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2336,6 +2389,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-additional-problems-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-additional-problems-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-additional-problems-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
@@ -2377,6 +2434,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-additional-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
+}
+
+.os-additional-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
 }
 
 .os-additional-problems-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {

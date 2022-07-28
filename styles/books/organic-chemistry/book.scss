@@ -107,6 +107,13 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Eoc
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.summary'),
+  ),
+));
+
 // Inline colored text throughout the book
 @include add_settings((
     CyanColoredText: (
@@ -185,6 +192,12 @@ $ChapterIntroType: fullWidth;
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Eoc
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ModuleWithMarginBottom', 'common:::ModuleWithMarginBottomShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
