@@ -80,10 +80,37 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  EocCompositeChapterTitles: (
+    _selectors: ('.os-eoc[data-type="composite-chapter"]'),
+    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
+
+@include add_settings((
   EobTitles: (
     _selectors: ('.os-eob'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
+
+// Exercises
+@include add_settings((
+    VisualizingChemistry:(
+        _selectors: (".os-visualizing-chemistry-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    AdditionalProblems:(
+        _selectors: (".os-additional-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+));
+
+// Eoc
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.summary'),
   ),
 ));
 
@@ -163,7 +190,14 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Eoc
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ModuleWithMarginBottom', 'common:::ModuleWithMarginBottomShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
@@ -188,5 +222,12 @@ $ChapterIntroType: fullWidth;
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
+// Exercises
+@include use('ModuleExercises','carnival:::ExercisesModuleShape');
+@include use('MultipartQuestionExercises','carnival:::ExercisesMultipartQuestionShape');
+@include use('VisualizingChemistry','carnival:::ExercisesModuleShape');
+@include use('AdditionalProblems','carnival:::ExercisesModuleShape');
+
 // EOB
 @include use('Index', 'carnival:::IndexShape');
+@include use('AnswerKey', 'carnival:::AnswerKeyShape');
