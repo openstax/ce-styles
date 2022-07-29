@@ -185,9 +185,9 @@ $bandColor: #217867;
 ));
 
 @include add_settings((
-  ChapterObjectivesNote:(
+  ChapterObjectives:(
     _selectors: ('[data-type="note"].economics.chapter-objectives'),
-    'ChapterObjectivesTitle:::color': (_ref: "colorMap:::chapterObjectivesTitlePlEconomicsColor"),
+    'H3ObjectivesTitle:::color': (_ref: "colorMap:::chapterObjectivesTitlePlEconomicsColor"),
   ),
 ));
 
