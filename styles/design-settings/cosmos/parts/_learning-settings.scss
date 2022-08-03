@@ -9,6 +9,16 @@
 ));
 
 @include add_settings((
+    LearningObjectivesNote:(
+        _selectors: ('[data-type="page"] [data-type="note"].learning-objectives'),
+        H3ObjectivesTitle: (
+          font-family: (_ref: 'typography:::titleOption1Font'),
+          color: (_ref: 'colorMap:::learningObjectivesTitleColor'),
+        ),
+    ),
+));
+
+@include add_settings((
     LearningObjectivesAbstract:(
         _selectors: ('[data-type="page"] [data-type="abstract"]'),
         H3ObjectivesTitle: (
