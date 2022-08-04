@@ -192,8 +192,8 @@ $bandColor: #217867;
 ));
 
 @include add_settings((
-  LearningObjectivesAbstract:(
-    _selectors: ('[data-type="page"] [data-type="abstract"]'),
+  LearningObjectivesNote:(
+    _selectors: ('[data-type="page"] [data-type="note"].learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColorPlEconomics'),
   ),
 ));
@@ -206,7 +206,7 @@ $bandColor: #217867;
 
 
 @include use('BookRoot', "common:::BookRoot");
-@include use('LearningObjectivesAbstract', 'cosmos:::LearningObjectivesShape');
+@include use('LearningObjectivesNote', 'cosmos:::ChapterObjectivesShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
