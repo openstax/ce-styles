@@ -2037,8 +2037,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=example] > .body > ol {
   margin-left: 24px;
+}
+
+[data-type=example] > .body > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=example] > .body > h4[data-type=title] {
