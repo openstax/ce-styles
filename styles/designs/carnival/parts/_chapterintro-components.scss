@@ -82,7 +82,7 @@ $ChapterIntro__Container--Body--Margin: (
     _name: "MarginChapterIntroBodyMargin",
     _subselector: ' > .intro-body',
     _properties: (
-        display: flex, 
+        display: flex,
         flex-direction: row-reverse,
         justify-content: space-between,
         position: relative,
@@ -99,7 +99,7 @@ $ChapterOutline__Container: (
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
-        font-weight: 500,        
+        font-weight: enum('ValueSet:::REQUIRED'),
         line-height: line-height(0),
         width: 6.5in, // Width of the page minus margins
         margin: "0 0 1.5rem 0",
@@ -118,7 +118,7 @@ $ChapterOutline__Title: (
         margin: "0 0 0.5rem 0",
         font-size: font-scale(0),
         line-height: font-scale(0), // value has to be the same as font size
-        font-weight: bold, 
+        font-weight: bold,
         font-family: enum('ValueSet:::REQUIRED'),
         color: enum('ValueSet:::REQUIRED'),
         position:relative,
@@ -136,8 +136,8 @@ $ChapterObjective__Link: (
     _properties: (
         display: inline-block,
         color: enum('ValueSet:::REQUIRED'),
-        font-family: enum('ValueSet:::REQUIRED'), 
-        font-weight: bold, 
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: bold,
         font-size: font-scale(0),
         margin-bottom: 0rem,
         text-decoration: none,
@@ -187,18 +187,18 @@ $ChapterObjective__Link--Margin: (
     )
 );
 
-$ChapterObjective__Text--Margin: ( 
+$ChapterObjective__Text--Margin: (
     _name: "ChapterObjectiveTextMargin",
-    _subselector: ' > .os-text', 
+    _subselector: ' > .os-text',
     _properties: (
         margin-left: .5rem,
-        display: inline-block, 
+        display: inline-block,
     )
 );
 
 $ChapterObjective__Container--Margin: (
-    _name: "ChapterObjectiveContainerMargin", 
-    _subselector: ' > div.os-chapter-objective', 
+    _name: "ChapterObjectiveContainerMargin",
+    _subselector: ' > div.os-chapter-objective',
     _properties: (
         margin-bottom: .5rem,
         padding-right: enum('ValueSet:::REQUIRED'),
