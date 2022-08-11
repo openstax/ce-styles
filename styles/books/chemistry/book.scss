@@ -142,7 +142,6 @@ $ChapterIntroType: fullWidth;
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
@@ -191,7 +190,6 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');

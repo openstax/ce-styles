@@ -1,88 +1,3 @@
-@function list--marginLeft($element_type, $sub_selector,) {
-    $name: null;
-    $margin_left_value: null;
-
-    @if $element_type == main {
-        $name: "ListMarginLeft";
-        $margin_left_value: h-spacing(3);
-    } @else if $element_type == nested {
-        $name: "ListNestedMarginLeft";
-        $margin_left_value: h-spacing(2);
-    }
-
-    @return (
-        _name: "#{$name}",
-        _subselector: "#{$sub_selector}",
-        _properties:(
-            margin-left: $margin_left_value,
-        )
-    );
-
-}
-
-@function list--marginLeftBottom($element_type, $sub_selector,) {
-    $name: null;
-    $margin_left_value: null;
-    $margin_bottom_value: null;
-
-    @if $element_type == main {
-        $name: "ListMarginLeftBottom";
-        $margin_left_value: h-spacing(3);
-        $margin_bottom_value: v-spacing(1);
-    } @else if $element_type == nested {
-        $name: "ListNestedMarginLeftBottom";
-        $margin_left_value: h-spacing(2);
-        $margin_bottom_value: v-spacing(1);
-    } @else if $element_type == margin-left-increased {
-        $name: "ListMarginLeftBottomIncreased";
-        $margin_left_value: h-spacing(4);
-        $margin_bottom_value: v-spacing(1);
-    } @else if $element_type == margin-bottom-removed {
-        $name: "AnswerKeyListMarginBottomLeft";
-        $margin_left_value: h-spacing(3);
-        $margin_bottom_value: 0;
-
-    }
-
-    @return (
-        _name: "#{$name}",
-        _subselector: "#{$sub_selector}",
-        _properties:(
-            margin-left: $margin_left_value,
-            margin-bottom: $margin_bottom_value,
-        )
-    );
-
-}
-
-// General, Prefece, Modules, Summary, Appendices, Summary, Learning Objectives
-
-$UnorderedList--MarginLeft: list--marginLeft(main, " > ul");
-$OrderedList--MarginLeft: list--marginLeft(main, " > ol");
-$Section__UnorderedList--MarginLeft: list--marginLeft(main, " > section > ul");
-$Section__OrderedList--MarginLeft: list--marginLeft(main, " > section > ol");
-$SubSection__UnorderedList--MarginLeft: list--marginLeft(main, " > section > section > ul");
-$SubSection__OrderedList--MarginLeft: list--marginLeft(main, " > section > section > ol");
-$SubSubSection__OrderedList--MarginLeft: list--marginLeft(main, " > section > section > section > ol");
-$SubSubSection__UnorderedList--MarginLeft: list--marginLeft(main, " > section > section > section > ul");
-$UnorderedList--Nested--MarginLeft: list--marginLeft(nested, " > li > ul");
-$OrderedList--Nested--MarginLeft: list--marginLeft(nested, " > li > ol");
-$Summary__Section__UnorderedList--MarginLeft: list--marginLeft(main, " section > ul");
-$Summary__Section__OrderedList--MarginLeft: list--marginLeft(main, " section > ol");
-$SubSection__Container__UnorderedList--MarginLeftBottom: list--marginLeft(main, " > section > section > div > ul");  //added as a temporary solution for polish University Physics, before we start working on lists cleaning
-
-//AnswerKey
-$AnswerKey__OrderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-removed, " > ol");
-$AnswerKey__UnorderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-removed, " > ul" );
-
-//Tables
-//--------------------------------------------------------------------------------------------------------------------
-//Lists in Carnival should be clean up. Since this theme was the first one, we weren't sure what would be the best way
-//to implement styles for lists. In next themes we dicided to create separate shapes for lists, not to add lists components
-//to shapes of other elements.
-//
-//Below there are list components for new way of styling.
-
 // Containers
 $ListContainer: empty_wrapper(Container, '');
 
@@ -132,7 +47,6 @@ $TitledLists__Title: (
 
 // Tables lists
 // Lists in table cells need to have margin set withs table spacing functions
-
 $UnorderedList--FirstLevel--Table: (
     _name: "TableFirstLevelUnorderedList",
     _subselector: " > ul",
@@ -164,7 +78,6 @@ $OrderedList--SecondLevel--Table: (
 );
 
 // Appendix
-
 $UnorderedList--AppendixGlossary: (
   _name: "AppendixGlossaryUnorderedList",
   _subselector: " > ul",

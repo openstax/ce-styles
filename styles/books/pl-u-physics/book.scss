@@ -241,7 +241,6 @@ ChapterIntro: (
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
@@ -299,7 +298,6 @@ ChapterIntro: (
 @include use('EocCompositeChapterTitlesWithBorder', 'carnival:::EocCompositeChapterTitlesWithBorderShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');

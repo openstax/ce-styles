@@ -1074,15 +1074,15 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li::marker {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li::marker {
   color: #0074BC;
 }
 
@@ -1457,6 +1457,10 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
 }
 

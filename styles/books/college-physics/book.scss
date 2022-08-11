@@ -134,7 +134,6 @@ $ChapterIntroType: fullWidth;
 
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
@@ -187,7 +186,6 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
