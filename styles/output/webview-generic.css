@@ -2060,3 +2060,7 @@ p.student-sample {
 .os-teacher {
   display: none;
 }
+
+[data-type=switch] > :not([data-media~=screen]) {
+  display: none;
+}
