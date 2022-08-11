@@ -1357,7 +1357,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1544,14 +1544,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
@@ -1951,16 +1943,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-[data-type=note]:not([class]) > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-[data-type=note]:not([class]) > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 [data-type=example] {
   margin-bottom: 1.4rem;
   border-bottom-color: #C31427;
@@ -2063,11 +2045,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-element-type=check-understanding] > [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0.7rem;
-}
-
-[data-element-type=check-understanding] > [data-type=problem] > .os-problem-container ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -2252,8 +2229,42 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=problem] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2267,13 +2278,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2287,8 +2313,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2302,7 +2343,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2312,12 +2358,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2340,6 +2401,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eoc[data-type=composite-page] > section > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
 }
 
 [data-type=chapter] > h1 {
@@ -2635,6 +2716,71 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
+[data-type=solution] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] {
   margin-bottom: 1.4rem;
 }
@@ -2687,15 +2833,5 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ol {
-  margin-left: 24px;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ul {
-  margin-left: 24px;
   margin-bottom: 0;
 }

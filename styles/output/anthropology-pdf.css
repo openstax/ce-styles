@@ -1206,7 +1206,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1500,8 +1500,42 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=problem] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -1515,13 +1549,28 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -1535,8 +1584,23 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -1550,7 +1614,12 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -1560,12 +1629,27 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -1588,6 +1672,26 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 .os-eoc[data-type=composite-page] > section > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
 }
 
 .os-table:not(.os-unstyled-container) {
@@ -1650,14 +1754,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
@@ -1882,16 +1978,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.ethnographic-sketches ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.ethnographic-sketches ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .ethnographic-sketches > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1902,16 +1988,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .ethnographic-sketches > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.ethnographic-sketches > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.ethnographic-sketches > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .fieldwork-activity > .os-title {
@@ -1963,16 +2039,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.fieldwork-activity ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fieldwork-activity ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .fieldwork-activity > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1983,16 +2049,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .fieldwork-activity > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.fieldwork-activity > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fieldwork-activity > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .profiles-anthropology > .os-title {
@@ -2044,16 +2100,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.profiles-anthropology ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.profiles-anthropology ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .profiles-anthropology > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2064,16 +2110,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .profiles-anthropology > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.profiles-anthropology > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.profiles-anthropology > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .media-video {
@@ -2089,16 +2125,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .media-video > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.media-video > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.media-video > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -2144,16 +2170,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .media-podcast > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.media-podcast > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.media-podcast > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 

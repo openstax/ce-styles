@@ -71,20 +71,11 @@ $Summary__Section__UnorderedList--MarginLeft: list--marginLeft(main, " section >
 $Summary__Section__OrderedList--MarginLeft: list--marginLeft(main, " section > ol");
 $SubSection__Container__UnorderedList--MarginLeftBottom: list--marginLeft(main, " > section > section > div > ul");  //added as a temporary solution for polish University Physics, before we start working on lists cleaning
 
-// Notes need to have bottom margin under lists
-// Notes, Chapter Intro in polish University Physics vol2
-
-// $Note__UnorderedList--MarginLeftBottom:list--marginLeftBottom(main, " ul");
-$Note__OrderedList--MarginLeftBottom: list--marginLeftBottom(main, " ol");
-
 //AnswerKey
-
 $AnswerKey__OrderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-removed, " > ol");
 $AnswerKey__UnorderedList--MarginBottomLeft: list--marginLeftBottom(margin-bottom-removed, " > ul" );
 
 //Tables
-
-
 //--------------------------------------------------------------------------------------------------------------------
 //Lists in Carnival should be clean up. Since this theme was the first one, we weren't sure what would be the best way
 //to implement styles for lists. In next themes we dicided to create separate shapes for lists, not to add lists components
@@ -194,7 +185,7 @@ $UnorderedList__Item--AppendixGlossary: (
 
 // Exercises
 $UnorderedList--FirstLevel--MarginBottom: (
-    _name: "ExerciseFirstLevelUnorderedList",
+    _name: "RirstLevelUnorderedListMarginBottom",
     _subselector: " > ul",
     _properties: (
         margin-left: h-spacing(3),
@@ -203,7 +194,7 @@ $UnorderedList--FirstLevel--MarginBottom: (
 );
 
 $OrderedList--FirstLevel--MarginBottom: (
-    _name: "ExerciseFirstLevelOrderedList",
+    _name: "FirstLevelOrderedListMarginBottom",
     _subselector: " > ol",
     _properties: (
         margin-left: h-spacing(3),
@@ -212,7 +203,7 @@ $OrderedList--FirstLevel--MarginBottom: (
 );
 
 $UnorderedList--SecondLevel--MarginBottom: (
-    _name: "SecondLevelUnorderedList",
+    _name: "SecondLevelUnorderedListMarginBottom",
     _subselector: " > li > ul",
     _properties:(
         margin-left: h-spacing(2),
@@ -221,8 +212,26 @@ $UnorderedList--SecondLevel--MarginBottom: (
 );
 
 $OrderedList--SecondLevel--MarginBottom: (
-    _name: "SecondLevelOrderedList",
+    _name: "SecondLevelOrderedListMarginBottom",
     _subselector: " > li  > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$UnorderedList--ThirdLevel--MarginBottom: (
+    _name: "ThirdLevelUnorderedListMarginBottom",
+    _subselector: " > li > ul > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$OrderedList--ThirdLevel--MarginBottom: (
+    _name: "ThirdLevelOrderedListMarginBottom",
+    _subselector: " > li  > ol > li  > ol",
     _properties:(
         margin-left: h-spacing(2),
         margin-bottom: v-spacing(1),

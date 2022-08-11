@@ -1280,7 +1280,7 @@ nav#toc > ol > .os-toc-index > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1429,16 +1429,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.aging > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.aging > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .diseases {
   border: solid;
   border-color: #00819A;
@@ -1468,16 +1458,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.diseases > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.diseases > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .disorders {
@@ -1511,16 +1491,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.disorders > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.disorders > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .everyday {
   border: solid;
   border-color: #B10069;
@@ -1550,16 +1520,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.everyday > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.everyday > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .career > .os-title {
@@ -1611,16 +1571,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.career ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.career ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .career > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1631,16 +1581,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .career > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.career > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.career > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .homeostatic > .os-title {
@@ -1692,16 +1632,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.homeostatic ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.homeostatic ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .homeostatic > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1712,16 +1642,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .homeostatic > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.homeostatic > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.homeostatic > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .interactive {
@@ -1737,16 +1657,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .interactive > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.interactive > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.interactive > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -1792,16 +1702,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .link-to-learning > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.link-to-learning > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.link-to-learning > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -2009,6 +1909,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 .os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
   list-style-type: none;
 }
@@ -2034,6 +1958,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=problem] > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
@@ -2044,13 +1978,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2064,8 +2013,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2079,7 +2043,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2089,12 +2058,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2117,6 +2101,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eoc[data-type=composite-page] > section > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
 }
 
 .os-glossary-container > dl {

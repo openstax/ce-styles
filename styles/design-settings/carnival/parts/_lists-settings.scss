@@ -23,6 +23,12 @@
 ));
 
 @include add_settings((
+    ExercisesSolutionLists: (
+        _selectors: ('[data-type="solution"]'),
+    ),
+));
+
+@include add_settings((
     ExerciseCompositePageLists: (
         _selectors: ('.os-eoc[data-type="composite-page"]'),
     ),

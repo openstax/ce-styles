@@ -1343,7 +1343,7 @@ a[role=doc-noteref] {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1676,14 +1676,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
-}
-
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
@@ -1891,16 +1883,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.everyday-life > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.everyday-life > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .chemist-portrait {
   border: solid;
   border-color: #1E9575;
@@ -1930,16 +1912,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.chemist-portrait > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.chemist-portrait > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .sciences-interconnect > .os-title {
@@ -1991,16 +1963,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.sciences-interconnect ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.sciences-interconnect ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .sciences-interconnect > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2011,16 +1973,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .sciences-interconnect > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.sciences-interconnect > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.sciences-interconnect > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=example] {
@@ -2132,16 +2084,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .link-to-learning > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.link-to-learning > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.link-to-learning > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -2461,8 +2403,42 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=problem] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2476,13 +2452,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2496,8 +2487,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2511,7 +2517,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2521,12 +2532,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -2548,6 +2574,91 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc[data-type=composite-page] > section > ol {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
+}
+
+[data-type=solution] > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol {
+  margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=solution] > div > div > ol > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2644,15 +2755,5 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ol {
-  margin-left: 24px;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ul {
-  margin-left: 24px;
   margin-bottom: 0;
 }

@@ -1397,7 +1397,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1613,14 +1613,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
@@ -2463,16 +2455,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.virtual-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.virtual-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .snap-lab {
   border: solid;
   border-color: #0074BC;
@@ -2502,16 +2484,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.snap-lab > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.snap-lab > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .watch-physics > .os-title {
@@ -2563,16 +2535,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.watch-physics ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.watch-physics ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .watch-physics > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2583,16 +2545,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .watch-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.watch-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.watch-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .links-to-physics > .os-title {
@@ -2644,16 +2596,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.links-to-physics ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.links-to-physics ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .links-to-physics > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2664,16 +2606,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .links-to-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.links-to-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.links-to-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .boundless-physics > .os-title {
@@ -2725,16 +2657,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.boundless-physics ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.boundless-physics ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .boundless-physics > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2745,16 +2667,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .boundless-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.boundless-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.boundless-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .fun-in-physics > .os-title {
@@ -2806,16 +2718,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.fun-in-physics ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fun-in-physics ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .fun-in-physics > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2826,16 +2728,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .fun-in-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.fun-in-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fun-in-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .work-in-physics > .os-title {
@@ -2887,16 +2779,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.work-in-physics ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.work-in-physics ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .work-in-physics > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2907,16 +2789,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .work-in-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.work-in-physics > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.work-in-physics > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .worked-example > .os-title {
@@ -2975,16 +2847,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   box-decoration-break: slice;
 }
 
-.worked-example ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.worked-example ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .worked-example > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -2998,16 +2860,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.2rem;
-}
-
-.worked-example > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.worked-example > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .tips-for-success {
@@ -3032,16 +2884,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.tips-for-success ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.tips-for-success ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .grasp-check {
   background: #EEEAE0;
   padding-top: 0.7rem;
@@ -3062,16 +2904,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .grasp-check p:first-of-type {
   margin-bottom: 0;
-}
-
-.grasp-check ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.grasp-check ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=chapter] > h1 {
@@ -3382,8 +3214,42 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=problem] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -3397,13 +3263,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -3417,8 +3298,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -3432,7 +3328,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -3442,12 +3343,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }

@@ -61,6 +61,22 @@
                         )),
                     )
                 )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                      )),
+                      map-merge($UnorderedList--FirstLevel, (
+                        _components: (
+                            $UnorderedList--SecondLevel,
+                            $OrderedList--SecondLevel,
+                        )
+                      )),
+                    )
+                )),
             )
         )),
     )
@@ -108,24 +124,36 @@
             _components: (
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                      $UnorderedList--FirstLevel--Exercise,
-                      map-merge($OrderedList--FirstLevel--Exercise, (
+                      map-merge($UnorderedList--FirstLevel--MarginBottom, (
                         _components: (
-                          map-merge($OrderedList--SecondLevel--Exercise, (
+                            $OrderedList--SecondLevel--MarginBottom,
+                            $UnorderedList--SecondLevel--MarginBottom,
+                        )
+                      )),
+                      map-merge($OrderedList--FirstLevel--MarginBottom, (
+                        _components: (
+                          map-merge($OrderedList--SecondLevel--MarginBottom, (
                             _components: (
-                              $OrderedList--SecondLevel--Exercise,
+                              $OrderedList--ThirdLevel--MarginBottom,
                             )
                           )),
+                          $UnorderedList--SecondLevel--MarginBottom,
                         )
                       )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel, (
                   _components: (
-                    $UnorderedList--FirstLevel--Exercise,
-                    map-merge($OrderedList--FirstLevel--Exercise, (
+                    map-merge($UnorderedList--FirstLevel--MarginBottom, (
                         _components: (
-                          $OrderedList--SecondLevel--Exercise
+                            $OrderedList--SecondLevel--MarginBottom,
+                            $UnorderedList--SecondLevel--MarginBottom,
+                        )
+                    )),
+                    map-merge($OrderedList--FirstLevel--MarginBottom, (
+                        _components: (
+                          $OrderedList--SecondLevel--MarginBottom,
+                          $UnorderedList--SecondLevel--MarginBottom,
                         )
                     )),
                   )
@@ -134,8 +162,8 @@
         )),
     )
 ));
-
-// Composite Page List
+// ----------- probably will be coverded by CompositeListShape
+// // Composite Page List - used in exercises composite pages for lists outsiside [data-type="exercises"]
 @include create_shape('carnival:::ExerciseCompositePageListsShape',(
     _components: (
         map-merge($ListContainer,(

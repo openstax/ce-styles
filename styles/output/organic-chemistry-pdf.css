@@ -1226,6 +1226,30 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 .os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
   list-style-type: none;
 }
@@ -1251,6 +1275,16 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=problem] > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
@@ -1261,13 +1295,28 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -1281,8 +1330,23 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > ul {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -1296,7 +1360,12 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -1306,12 +1375,27 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.7rem;
 }
 
+[data-type=exercise-question] > div > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
   margin-bottom: 0.7rem;
 }
@@ -1422,11 +1506,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: 600;
-}
-
-.introduction > .intro-body > .intro-text ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .os-chapter-outline {
@@ -1681,16 +1760,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: bold;
 }
 
-.why-chapter > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.why-chapter > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .working-problems {
   border: solid;
   border-color: #B10069;
@@ -1720,16 +1789,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.working-problems > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.working-problems > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .something-extra > .os-title {
@@ -1781,16 +1840,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   box-decoration-break: slice;
 }
 
-.something-extra ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.something-extra ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .something-extra > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1801,16 +1850,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 .something-extra > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.something-extra > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.something-extra > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .os-figure:not(.has-splash) > figure {
@@ -1998,14 +2037,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
