@@ -163,31 +163,6 @@
         )),
     )
 ));
-// ----------- probably will be coverded by CompositeListShape
-// // Composite Page List - used in exercises composite pages for lists outsiside [data-type="exercises"]
-@include create_shape('carnival:::ExerciseCompositePageListsShape',(
-    _components: (
-        map-merge($ListContainer,(
-            _components: (
-                map-merge($DivWrapper--FirstLevel,(
-                    _components: (
-                      map-merge($OrderedList--FirstLevel--MarginBottom, (
-                        _components: (
-                          $OrderedList--SecondLevel--MarginBottom,
-                        )
-                      )),
-                    )
-                )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components: (
-                      $UnorderedList--FirstLevel--MarginBottom,
-                      $OrderedList--FirstLevel--MarginBottom,
-                    )
-                )),
-            )
-        )),
-    )
-));
 
 @include create_shape('carnival:::NotesListsShape',(
     _components: (
