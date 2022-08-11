@@ -18,6 +18,15 @@ $OrderedList--FirstLevel: (
     )
 );
 
+$OrderedList--FirstLevel--MarginBottom: ( // only needed in Introduction page in pl-u-physics
+    _name: "FirstLevelOrderedListMarginBottom",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+        margin-bottom: v-spacing(1),
+    )
+);
+
 $UnorderedList--SecondLevel: (
     _name: "SecondLevelUnorderedList",
     _subselector: " > li > ul",
@@ -34,9 +43,23 @@ $OrderedList--SecondLevel: (
     )
 );
 
-//Titled lists
-$TitledLists__Container: empty_wrapper(TitledListsContainer, ' > [data-type="list"]');
+$UnorderedList--ThirdLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
 
+$OrderedList--ThirdLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol > li > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+//Titled lists
 $TitledLists__Title: (
     _name: "TitledListsTitle",
     _subselector: ' > [data-type="title"]',
@@ -96,60 +119,6 @@ $UnorderedList__Item--AppendixGlossary: (
   )
 );
 
-// Exercises
-$UnorderedList--FirstLevel--MarginBottom: (
-    _name: "RirstLevelUnorderedListMarginBottom",
-    _subselector: " > ul",
-    _properties: (
-        margin-left: h-spacing(3),
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$OrderedList--FirstLevel--MarginBottom: (
-    _name: "FirstLevelOrderedListMarginBottom",
-    _subselector: " > ol",
-    _properties: (
-        margin-left: h-spacing(3),
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$UnorderedList--SecondLevel--MarginBottom: (
-    _name: "SecondLevelUnorderedListMarginBottom",
-    _subselector: " > li > ul",
-    _properties:(
-        margin-left: h-spacing(2),
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$OrderedList--SecondLevel--MarginBottom: (
-    _name: "SecondLevelOrderedListMarginBottom",
-    _subselector: " > li  > ol",
-    _properties:(
-        margin-left: h-spacing(2),
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$UnorderedList--ThirdLevel--MarginBottom: (
-    _name: "ThirdLevelUnorderedListMarginBottom",
-    _subselector: " > li > ul > li > ul",
-    _properties:(
-        margin-left: h-spacing(2),
-        margin-bottom: v-spacing(1),
-    )
-);
-
-$OrderedList--ThirdLevel--MarginBottom: (
-    _name: "ThirdLevelOrderedListMarginBottom",
-    _subselector: " > li  > ol > li  > ol",
-    _properties:(
-        margin-left: h-spacing(2),
-        margin-bottom: v-spacing(1),
-    )
-);
 
 // Custom lists
 $UnorderedList--Unstyled: (

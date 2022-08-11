@@ -2602,14 +2602,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=page] > [data-type=list] > [data-type=title] {
-  font-weight: bold;
-}
-
-[data-type=page] > [data-type=list] > ul[data-bullet-style=none] {
-  list-style-type: none;
-}
-
 [data-type=page] > section > ol {
   margin-left: 24px;
 }
@@ -2746,134 +2738,108 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=problem] > div > ul {
+[data-type=problem] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ul > li > ol {
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ul > li > ul {
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > div > ul {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > div > ul > li > ol {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > div > ul > li > ul {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ul {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ul > li > ol {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ul > li > ul {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > div > ul {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > div > ul > li > ol {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > div > ul > li > ul {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 .os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
@@ -2904,64 +2870,52 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0.7rem;
 }
 
-[data-type=note] > ul {
+[data-type=note] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=note] > ul > li > ol {
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=note] > ul > li > ul {
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=note] > div > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=note] > div > ul > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=note] > div > ul > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=note] > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=chapter] > h1 {

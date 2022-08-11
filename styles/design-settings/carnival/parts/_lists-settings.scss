@@ -33,3 +33,9 @@
         _selectors: ('[data-type="note"]'),
     ),
 ));
+
+@include add_settings((
+    TitledLists: (
+        _selectors: ('[data-type="page"] > [data-type="list"]'),
+    ),
+));

@@ -18,12 +18,6 @@
                         $OrderedList--SecondLevel,
                     )
                 )),
-                map-merge($TitledLists__Container,(
-                    _components: (
-                        $TitledLists__Title,
-                        $UnorderedList--Unstyled,
-                    )
-                )),
                 map-merge($SectionWrapper--FirstLevel,(
                     _components: (
                         map-merge($OrderedList--FirstLevel, (
@@ -172,36 +166,33 @@
             _components: (
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                      map-merge($UnorderedList--FirstLevel--MarginBottom, (
+                      map-merge($UnorderedList--FirstLevel, (
                         _components: (
-                            $OrderedList--SecondLevel--MarginBottom,
-                            $UnorderedList--SecondLevel--MarginBottom,
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
                         )
                       )),
-                      map-merge($OrderedList--FirstLevel--MarginBottom, (
+                      map-merge($OrderedList--FirstLevel, (
                         _components: (
-                          map-merge($OrderedList--SecondLevel--MarginBottom, (
-                            _components: (
-                              $OrderedList--ThirdLevel--MarginBottom,
-                            )
-                          )),
-                          $UnorderedList--SecondLevel--MarginBottom,
+                          $OrderedList--SecondLevel,
+                          $OrderedList--ThirdLevel,
+                          $UnorderedList--SecondLevel,
                         )
                       )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel, (
                   _components: (
-                    map-merge($UnorderedList--FirstLevel--MarginBottom, (
+                    map-merge($UnorderedList--FirstLevel, (
                         _components: (
-                            $OrderedList--SecondLevel--MarginBottom,
-                            $UnorderedList--SecondLevel--MarginBottom,
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
                         )
                     )),
-                    map-merge($OrderedList--FirstLevel--MarginBottom, (
+                    map-merge($OrderedList--FirstLevel, (
                         _components: (
-                          $OrderedList--SecondLevel--MarginBottom,
-                          $UnorderedList--SecondLevel--MarginBottom,
+                          $OrderedList--SecondLevel,
+                          $UnorderedList--SecondLevel,
                         )
                     )),
                   )
@@ -215,34 +206,45 @@
     _components: (
         map-merge($ListContainer,(
             _components: (
-                map-merge($UnorderedList--FirstLevel--MarginBottom, (
+                map-merge($UnorderedList--FirstLevel, (
                     _components: (
-                        $OrderedList--SecondLevel--MarginBottom,
-                        $UnorderedList--SecondLevel--MarginBottom,
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
                     )
                 )),
-                map-merge($OrderedList--FirstLevel--MarginBottom, (
+                map-merge($OrderedList--FirstLevel, (
                     _components: (
-                        $OrderedList--SecondLevel--MarginBottom,
-                        $UnorderedList--SecondLevel--MarginBottom,
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
                     )
                 )),
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel--MarginBottom, (
+                        map-merge($UnorderedList--FirstLevel, (
                             _components: (
-                                $OrderedList--SecondLevel--MarginBottom,
-                                $UnorderedList--SecondLevel--MarginBottom,
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
                             )
                         )),
-                        map-merge($OrderedList--FirstLevel--MarginBottom, (
+                        map-merge($OrderedList--FirstLevel, (
                             _components: (
-                                $OrderedList--SecondLevel--MarginBottom,
-                                $UnorderedList--SecondLevel--MarginBottom,
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
                             )
                         )),
                     ),
                 )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::TitledListsShape',( // Present only in pl-u-physics
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $TitledLists__Title,
+                $UnorderedList--Unstyled,
             )
         )),
     )
