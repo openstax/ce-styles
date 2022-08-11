@@ -2659,12 +2659,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: none;
 }
 
+[data-type=page] > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > ol {
-  margin-left: 24px;
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=page] > [data-type=list] > [data-type=title] {
@@ -2679,15 +2695,51 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ol {
   margin-left: 16px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
   margin-left: 16px;
 }
 
@@ -2695,16 +2747,36 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ol {
-  margin-left: 24px;
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
@@ -2897,11 +2969,19 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0.7rem;
 }
 
+.os-table > table > tbody > tr > td > ul > li > ol {
+  margin-left: 0.7rem;
+}
+
 .os-table > table > tbody > tr > td > ol {
   margin-left: 1.4rem;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ol {
   margin-left: 0.7rem;
 }
 
@@ -2975,8 +3055,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=note] > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=note] > ol {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
@@ -2985,8 +3085,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+[data-type=note] > div > ul > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > div > ul > li > ul {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
 [data-type=note] > div > ol {
   margin-left: 24px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > div > ol > li > ol {
+  margin-left: 16px;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
   margin-bottom: 0.7rem;
 }
 
