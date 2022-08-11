@@ -35,10 +35,6 @@ $ChapterIntroType: fullWidth;
     _selectors: (".introduction"),
     'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
-  ChapterIntroBodyWithRegularHeader: (
-    _selectors: (".introduction"),
-    'H2Title:::color': (_ref: "colorMap:::chemistryIntroColor"),
-  ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
@@ -183,7 +179,7 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
-@include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
+@include use('ChapterIntroBody', 'carnival:::ChapterIntroBodyShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles
