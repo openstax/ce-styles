@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Hide screenreader & non-screen switch elements version in Webview
+
 ## [v1.109.0] - 2022-08-11
 
 * Add more lists selectors to `ExampleShape` in Carnival
