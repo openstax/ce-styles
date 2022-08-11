@@ -65,25 +65,25 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'H4Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'H1AppendixText:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
   ),
 ));
 
 @include add_settings((
   EocCompositePageTitles: (
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
 @include add_settings((
   EocCompositeChapterTitles: (
     _selectors: ('.os-eoc[data-type="composite-chapter"]'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H3Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
