@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add H3 to `ChapterIntroWithBlockIntroHeaderShape` in `cosmos`
 * Change table color in `organic-chemistry`
 * Remove `font-weight: normal` from `ColoredText`
 * Change titles colors in `organic-chemistry`
