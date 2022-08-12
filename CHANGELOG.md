@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change titles colors in `organic-chemistry`
+## [v1.109.0] - 2022-08-11
+
 * Add more lists selectors to `ExampleShape` in Carnival
 * Add more lists selectors to `CompositePageListsShape` in Carnival
 * Style `Learning Objectives` note in `pl-economics`
