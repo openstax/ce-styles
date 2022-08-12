@@ -159,6 +159,16 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Tables
+@include add_settings((
+  BasicTable: (
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
+  ),
+));
+
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
 @include use('CyanColoredText', 'common:::ColoredText');

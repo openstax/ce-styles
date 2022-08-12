@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change table color in `organic-chemistry`
 * Remove `font-weight: normal` from `ColoredText`
 * Change titles colors in `organic-chemistry`
 ## [v1.109.0] - 2022-08-11
