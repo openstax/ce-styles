@@ -100,6 +100,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),

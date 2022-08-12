@@ -44,6 +44,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H2Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H3Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H4Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
