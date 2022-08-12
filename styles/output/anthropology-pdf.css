@@ -1283,7 +1283,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 2.1rem;
 }
 
-[data-type=page]:not(.introduction) > h2 {
+[data-type=page]:not(.introduction) > h2[data-type=document-title] {
   color: #0074BC;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
@@ -1503,6 +1503,22 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 
 [data-type=composite-page] > section > ol > li > ol {
   margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > ul {

@@ -1122,8 +1122,24 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-left: 24px;
 }
 
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=example] > .body > ol {
   margin-left: 24px;
+}
+
+[data-type=example] > .body > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=example] > .body > h4[data-type=title] {
@@ -1224,6 +1240,22 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 
 [data-type=composite-page] > section > ol > li > ol {
   margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
 }
 
 .os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
@@ -1415,13 +1447,13 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.introduction > .intro-body > .intro-text > h2 {
-  color: #00819A;
+.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type {
+  float: left;
   font-family: IBM Plex Sans, sans-serif;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 .5rem 0 0;
+  font-weight: 700;
 }
 
 .introduction > .intro-body > .intro-text ol {
@@ -1460,7 +1492,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   display: inline-block;
   color: #000000;
   font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1rem;
   margin-bottom: 0rem;
   text-decoration: none;
@@ -1501,8 +1533,8 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 2.1rem;
 }
 
-[data-type=page]:not(.introduction) > h2 {
-  color: #00819A;
+[data-type=page]:not(.introduction) > h2[data-type=document-title] {
+  color: #C31427;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
   line-height: 1.5rem;
@@ -1588,7 +1620,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 }
 
 [data-type=chapter] > .os-eoc[data-type=composite-page] > h2 {
-  color: #00819A;
+  color: #000000;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
   line-height: 1.5rem;
@@ -1614,7 +1646,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 }
 
 .os-eoc[data-type=composite-chapter] > h2 {
-  color: #00819A;
+  color: #000000;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
   line-height: 1.5rem;
@@ -1624,7 +1656,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 }
 
 .os-eoc[data-type=composite-chapter] > div > h3 {
-  color: #00819A;
+  color: #000000;
   font-family: Mulish, sans-serif;
   font-size: 1.2rem;
   line-height: 1.5rem;

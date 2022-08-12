@@ -35,14 +35,11 @@ $ChapterIntroType: fullWidth;
     _selectors: (".introduction"),
     'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
-  ChapterIntroBodyWithRegularHeader: (
-    _selectors: (".introduction"),
-    'H2Title:::color': (_ref: "colorMap:::chemistryIntroColor"),
-  ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
   ),
 ));
 
@@ -65,6 +62,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
@@ -75,15 +73,15 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocCompositePageTitles: (
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
 @include add_settings((
   EocCompositeChapterTitles: (
     _selectors: ('.os-eoc[data-type="composite-chapter"]'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H3Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
@@ -183,7 +181,7 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
-@include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
+@include use('ChapterIntroBody', 'carnival:::ChapterIntroBodyShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles

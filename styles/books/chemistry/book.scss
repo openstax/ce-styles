@@ -32,6 +32,7 @@ $ChapterIntroType: fullWidth;
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -101,6 +102,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
