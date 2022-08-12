@@ -2010,17 +2010,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-element-type=check-understanding] {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  padding: 0.7rem;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2rem;
+  border-bottom-color: #F37541;
 }
 
 [data-element-type=check-understanding] > [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0.7rem;
-}
-
-[data-element-type=check-understanding] > [data-type=solution] {
-  border-bottom-style: solid;
-  border-bottom-width: 0.2rem;
-  box-decoration-break: slice;
-  border-bottom-color: #F37541;
 }
 
 [data-element-type=check-understanding] > [data-type=solution] .solution-title {
@@ -2110,6 +2107,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .interactive > .os-note-body > .os-subtitle, h4[data-type=title] {

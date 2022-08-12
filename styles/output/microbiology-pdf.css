@@ -2357,13 +2357,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .link-to-learning {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
-}
-
-.link-to-learning > .os-note-body {
+  padding: 0.7rem;
   border-bottom-style: solid;
   border-bottom-width: 0.2rem;
   border-bottom-color: #78B042;
-  box-decoration-break: slice;
 }
 
 .link-to-learning > .os-note-body > p {
@@ -2402,13 +2399,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .check-your-understanding {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
-}
-
-.check-your-understanding > .os-note-body {
+  padding: 0.7rem;
   border-bottom-style: solid;
   border-bottom-width: 0.2rem;
   border-bottom-color: #F37541;
-  box-decoration-break: slice;
 }
 
 .check-your-understanding > .os-note-body > p {
@@ -2491,6 +2485,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .micro-connection > .os-note-body > .os-subtitle {

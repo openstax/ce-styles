@@ -86,13 +86,13 @@ $ChapterIntroType: side;
   ),
   LinkToLearningNote:(
     _selectors: (".interactive:not(.non-majors)"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
   ConceptsInActionNote:(
     _selectors: (".interactive.non-majors"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),

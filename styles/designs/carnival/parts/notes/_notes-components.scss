@@ -14,6 +14,7 @@ $Note__Subtitle: (
 $Note__Body:  empty_wrapper(Body, ' > .os-note-body');
 
 $Note__Problem: empty_wrapper(Problem, ' > [data-type="problem"]');
+$Note__Solution: empty_wrapper(Solution, ' > [data-type="solution"]');
 
 $Note__Problem__Container: empty_wrapper(ProblemContainer, ' > .os-problem-container');
 
@@ -140,6 +141,8 @@ $Note--Icon__Container: (
     border-bottom-width: 0.2rem,
     border-bottom-style: solid,
     box-decoration-break: slice,
+    padding-bottom: v-spacing(1),
+    padding-top: v-spacing(1),
   )
 );
 
@@ -255,8 +258,24 @@ $Note--Icon--Condensed__Container: (
   _properties: (
     margin-bottom: v-spacing(1),
     box-decoration-break: slice,
+    padding: v-spacing(1),
+    border-bottom-style: solid,
+    border-bottom-width: 0.2rem,
+    border-bottom-color: enum('ValueSet:::REQUIRED'),
   )
-  );
+);
+
+// $Note--Icon--CondensedExercise__Container: (
+//   _name: "CondensedExerciseContainer",
+//   _subselector: "",
+//   _properties: (
+//     margin-bottom: v-spacing(1),
+//     box-decoration-break: slice,
+//     padding: v-spacing(1),
+//   )
+// );
+
+
 $Note--Icon--Condensed__Title: (
   _name: "Title",
   _subselector: ' > .os-title',
@@ -291,16 +310,16 @@ $Note--Icon--Condensed__Number: (
   )
 );
 
-$Note--Icon--Condensed__Body: (
-  _name: "Body",
-  _subselector: " > .os-note-body",
-  _properties: (
-    border-bottom-style: solid,
-    border-bottom-width: 0.2rem,
-    border-bottom-color: enum('ValueSet:::REQUIRED'),
-    box-decoration-break: slice,
-  )
-);
+// $Note--Icon--Condensed__Body: (
+//   _name: "Body",
+//   _subselector: " > .os-note-body",
+//   _properties: (
+//     border-bottom-style: solid,
+//     border-bottom-width: 0.2rem,
+//     border-bottom-color: enum('ValueSet:::REQUIRED'),
+//     box-decoration-break: slice,
+//   )
+// );
 
 $Note--Icon--Condensed__Paragraph: (
   _name: "Paragraph",
@@ -326,16 +345,16 @@ $Note--Icon--Condensed__Title__Icon: (
 );
 
 // Icon Condensed Exercise
-$Note--Icon--Condensed__Exercise__Solution: (
-  _name: "Solution",
-  _subselector: ' > [data-type="solution"]',
-  _properties: (
-    border-bottom-style: solid,
-    border-bottom-width: 0.2rem,
-    box-decoration-break: slice,
-    border-bottom-color: enum('ValueSet:::REQUIRED'),
-  )
-);
+// $Note--Icon--Condensed__Exercise__Solution: (
+//   _name: "Solution",
+//   _subselector: ' > [data-type="solution"]',
+//   _properties: (
+//     border-bottom-style: solid,
+//     border-bottom-width: 0.2rem,
+//     box-decoration-break: slice,
+//     border-bottom-color: enum('ValueSet:::REQUIRED'),
+//   )
+// );
 
 $Note--Icon--Condensed__Exercise__Solution__Container: empty_wrapper(SolutionContainer, ' > .os-solution-container');
 
