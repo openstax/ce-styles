@@ -88,8 +88,8 @@
 
 // Chapter Intro parts
 
-// To do: use ChapterIntroSplashFigureShape everywhere. Create shapes for Chapter Intro body 
-// with specific title and for body of margin type. Apply to all themes.
+// To do: use ChapterIntroSplashFigureShape everywhere, create shape for Chapter Intro body 
+// for body of margin type and remove shapes from above. Apply to all themes.
 
 @include create_shape('carnival:::ChapterIntroSplashFigureShape', (
     _components: (
@@ -123,7 +123,7 @@
     )
 ));
 
-@include create_shape('carnival:::ChapterIntroBodyWithRegularHeaderShape', (
+@include create_shape('carnival:::ChapterIntroBodyShape', (
     _components: (
         map-merge($ChapterIntro__Container, (
             _components: (
@@ -131,7 +131,7 @@
                     _components: (
                         map-merge($ChapterIntro__Container--Text, (
                             _components: (
-                                $H2,
+                                $H2TextHeader--ChapterIntro,
                                 $Note__OrderedList--MarginLeftBottom, //added as e tamporary solution before the lists cleaning issue will be resolved
 
                             )

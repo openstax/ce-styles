@@ -22,6 +22,7 @@ $ChapterIntroType: fullWidth;
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::physicsIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::physicsIntroColor"),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -99,6 +100,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
