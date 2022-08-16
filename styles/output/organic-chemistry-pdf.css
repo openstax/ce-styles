@@ -1050,15 +1050,15 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li::marker {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li::marker {
   color: #00819A;
 }
 
@@ -1174,31 +1174,79 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-bottom: 0.2rem;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
 [data-type=page] > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > [data-type=list] > [data-type=title] {
-  font-weight: bold;
+[data-type=page] > ol > li > ol {
+  margin-left: 16px;
 }
 
-[data-type=page] > [data-type=list] > ul[data-bullet-style=none] {
-  list-style-type: none;
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > ol {
   margin-left: 24px;
 }
 
+[data-type=page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
   margin-left: 16px;
 }
 
@@ -1206,16 +1254,36 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ol {
-  margin-left: 24px;
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
@@ -1239,6 +1307,30 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 }
 
 [data-type=composite-page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
 }
 
@@ -1270,6 +1362,10 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-left: 0.7rem;
 }
 
+.os-table > table > tbody > tr > td > ul > li > ol {
+  margin-left: 0.7rem;
+}
+
 .os-table > table > tbody > tr > td > ol {
   margin-left: 1.4rem;
 }
@@ -1278,94 +1374,160 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   margin-left: 0.7rem;
 }
 
-[data-type=problem] > div > ul {
+.os-table > table > tbody > tr > td > ol > li > ol {
+  margin-left: 0.7rem;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > div > ul {
+[data-type=problem] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ul {
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=exercise-question] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > div > ul {
+[data-type=exercise-question] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-.os-eoc[data-type=composite-page] > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.os-eoc[data-type=composite-page] > div > ol > li > ol {
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-.os-eoc[data-type=composite-page] > section > ul {
+[data-type=note] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
-.os-eoc[data-type=composite-page] > section > ol {
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 .introduction > .os-figure.has-splash {
@@ -1456,7 +1618,7 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1783,16 +1945,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: bold;
 }
 
-.why-chapter > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.why-chapter > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .working-problems {
   border: solid;
   border-color: #B10069;
@@ -1822,16 +1974,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
   font-weight: bold;
-}
-
-.working-problems > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.working-problems > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .something-extra > .os-title {
@@ -1881,16 +2023,8 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-}
-
-.something-extra ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.something-extra ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .something-extra > .os-note-body > .os-subtitle {
@@ -1903,16 +2037,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 .something-extra > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.something-extra > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.something-extra > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .os-figure:not(.has-splash) > figure {
@@ -2100,14 +2224,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
@@ -2556,16 +2672,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container > ol {
-  margin-left: 24px;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container > ul {
-  margin-left: 24px;
-  margin-bottom: 0;
-}
-
 [data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -2574,16 +2680,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ol {
-  margin-left: 24px;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > ul {
-  margin-left: 24px;
   margin-bottom: 0;
 }
 

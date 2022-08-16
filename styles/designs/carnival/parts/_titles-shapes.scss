@@ -1,32 +1,4 @@
 @import 'titles-components';
-@import 'lists-components';
-
-//---------------------------------------------------------------------------------------------------------------------------
-@include create_shape('carnival:::ChapterModuleTitlesShape', ( //ToDo: remove this shape when clean up work for lists be done
-  _components: (
-    map-merge($Chapter__Container, (
-      _components: (
-        map-merge($Module__Container, (
-          _components: (
-            $UnorderedList--MarginLeft,
-            $OrderedList--MarginLeft,
-            map-merge($Section__UnorderedList--MarginLeft, (
-              _components: (
-                $UnorderedList--Nested--MarginLeft,
-                $OrderedList--Nested--MarginLeft,
-              ),
-            )),
-            $SubSection__UnorderedList--MarginLeft,
-            $SubSection__OrderedList--MarginLeft,
-          )
-        )),
-      )
-    )),
-  )
-));
-//--------------------------------------------------------------------------------------------------------------------------
-
-// Shapes with new convention
 
 @include create_shape('carnival:::ChapterTitlesShape', (
   _components: (

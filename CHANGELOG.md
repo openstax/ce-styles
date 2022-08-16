@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Refactor `lists` in `carnival`
 * Hide screenreader & non-screen switch elements version in Webview
 * Add H3 to `ChapterIntroWithBlockIntroHeaderShape` in `cosmos`
 * Change table color in `organic-chemistry`

@@ -85,7 +85,7 @@ $ChapterIntroType: fullWidth;
   ),
   LinkToLearningNote:(
     _selectors: (".link-to-learning"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
@@ -144,7 +144,6 @@ $ChapterIntroType: fullWidth;
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
@@ -193,13 +192,14 @@ $ChapterIntroType: fullWidth;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

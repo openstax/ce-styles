@@ -182,12 +182,12 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('Example', 'carnival:::ExampleShape');
 
-//Lists
+// Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
