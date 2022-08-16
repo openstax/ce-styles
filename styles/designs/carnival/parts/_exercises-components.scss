@@ -1,4 +1,5 @@
 $ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
+$ExerciseMultipartQuestion__Container: empty_wrapper(ExerciseMultipartQuestionContainer, '');
 
 $Exercise__Container: (
     _name: "ExerciseContainer",
@@ -33,8 +34,63 @@ $InjectedExercise__Question__Wrapper: (
     )
 );
 
-$Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false));
-$Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
+$InjectedExercise__Question__Stem: (
+    _name: "QuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: table-cell,
+        width: 100%,
+    )
+);
+
+$InjectedExercise__Question__Stem--WithFirstElement: (
+    _name: "QuestionStemWithFirstElement",
+    _subselector: " > [data-type='question-stem'].has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
+
+$InjectedExercise__ProblemSolution__Letter: (
+  _name: "ProblemSolutionLetter",
+  _subselector: ' > .problem-letter',
+  _properties: (
+    display: table-cell,
+    text-decoration: none,
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$Exercise__Problem__Container: (
+    _name: "ProblemContainer",
+    _subselector: " > .os-problem-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--WithFirstElement: (
+    _name: "ProblemContainerWithFirstElement",
+    _subselector: " > .os-problem-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromMultipartQuestion: (
+    _name: "ProblemContainerFromMultipartQuestion",
+    _subselector: " > .os-problem-container",
+    _properties:(
+        display: table,
+    )
+);
 
 // Solution components
 $Exercise__Solution__Wrapper: (
@@ -42,6 +98,22 @@ $Exercise__Solution__Wrapper: (
   _subselector: ' [data-type="solution"]',
   _properties: (
     display: enum('ValueSet:::OPTIONAL'), //used in Answer Key, in content exercises this component is empty wrapper
+  )
+);
+
+$InjectedExercise__Solution__Wrapper: (
+  _name: "InjectedSolutionWrapper",
+  _subselector: ' [data-type="question-solution"]',
+  _properties: (
+    display: table,
+  )
+);
+
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: table,
   )
 );
 

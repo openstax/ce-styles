@@ -1149,6 +1149,10 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a {
   text-decoration: none;
 }
 
+nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a > .os-number {
+  display: none;
+}
+
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
@@ -1200,7 +1204,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 }
 
 .colored-text {
-  font-weight: normal;
   color: #CC0000;
 }
 
@@ -1295,12 +1298,12 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 [data-type=unit] > [data-type=page] > [data-type=document-title] {
   margin-top: 2in;
   display: table;
-  color: #24739E;
+  color: #344456;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.44rem;
   line-height: 1.44rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number {
@@ -1308,7 +1311,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 }
 
 .introduction > .os-figure.has-splash {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   margin-top: -1.15in;
 }
 
@@ -1317,8 +1320,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   width: 8.75in;
   transform: translate3d(-1in, 0, 0);
   margin-left: -1.2rem;
-  padding-bottom: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 
 .introduction > .os-figure.has-splash > figure.splash > span[data-type=media] {
@@ -1351,8 +1353,8 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 }
 
 .introduction > .os-figure.has-splash > .os-caption-container {
-  margin-bottom: 0.7rem;
-  line-height: 1rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .introduction > .os-figure.has-splash > .os-caption-container > .os-title-label {

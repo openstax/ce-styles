@@ -67,6 +67,11 @@
                     map-merge($ChapterIntro__Container--Text, (
                         _components: (
                             $H2TextHeader--ChapterIntro--Block,
+                            map-merge($SectionWrapper--FirstLevel,(
+                                _components:(
+                                    $H3,
+                                ),
+                            )),
                         )
                     )),
                     )

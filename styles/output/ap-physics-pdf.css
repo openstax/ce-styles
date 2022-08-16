@@ -1238,7 +1238,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 }
 
 .introduction > .os-figure.has-splash {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.4rem;
 }
 
 .introduction > .os-figure.has-splash > figure.splash {
@@ -1747,16 +1747,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] .os-problem-container {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=chapter] > .os-conceptual-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -1788,16 +1792,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=chapter] > .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -1823,16 +1831,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container {
+[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
+[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=chapter] > .os-problems-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -1864,16 +1876,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=chapter] > .os-problems-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -1971,8 +1987,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=example] > .body > ol {
   margin-left: 24px;
+}
+
+[data-type=example] > .body > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=example] > .body > ol > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=example] > .body > h4[data-type=title] {
@@ -2010,17 +2042,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-element-type=check-understanding] {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2rem;
+  border-bottom-color: #F37541;
 }
 
 [data-element-type=check-understanding] > [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0.7rem;
-}
-
-[data-element-type=check-understanding] > [data-type=solution] {
-  border-bottom-style: solid;
-  border-bottom-width: 0.2rem;
-  box-decoration-break: slice;
-  border-bottom-color: #F37541;
 }
 
 [data-element-type=check-understanding] > [data-type=solution] .solution-title {
@@ -2110,6 +2140,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .interactive > .os-note-body > .os-subtitle, h4[data-type=title] {
@@ -2287,6 +2319,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) {
@@ -2504,7 +2552,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 2.1rem;
 }
 
-[data-type=page]:not(.introduction) > h2 {
+[data-type=page]:not(.introduction) > h2[data-type=document-title] {
   color: #00819A;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
@@ -2556,10 +2604,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
 }
 
-[data-type=page]:not(.introduction) span[data-type=title] {
-  margin-right: 8px;
-}
-
 [data-type=page]:not(.introduction).appendix > h1 {
   color: #000000;
   font-family: IBM Plex Sans, sans-serif;
@@ -2583,6 +2627,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-style: solid;
   border-top-width: 0.1rem;
   display: block;
+}
+
+[data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > h3 {
+  color: #00819A;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
 }
 
 [data-type=chapter] > .os-eoc[data-type=composite-page] > h2 {

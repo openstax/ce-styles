@@ -33,7 +33,11 @@
   )
 ));
 
-@include create_shape('cosmos:::ChapterObjectivesShape', (  // Used in economics books
+// Used in economics books
+// In pl-economics used also for Learning Objectives. 
+// To do: change name to more general, e.g ObjectivesNote
+
+@include create_shape('cosmos:::ChapterObjectivesShape', (
     _components: (
         map-merge($Objectives__Container, (
             _components: (
