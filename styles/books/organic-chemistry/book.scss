@@ -144,11 +144,11 @@ $ChapterIntroType: fullWidth;
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
     ),
-    WorkingProblems:(
-        _selectors: (".working-problems"),
-        group-border-color: (_ref: 'colorMap:::workingProblemsColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Title:::color': (_ref: 'colorMap:::workingProblemsColor'),
+    DefaultNoClassNote:(
+      _selectors:('[data-type="note"]:not([class])'),
+      group-border-color: (_ref: 'colorMap:::organicChemNoClassNoteColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'Title:::color': (_ref: 'colorMap:::organicChemNoClassNoteColor'),
     ),
     SomethingExtra:(
         _selectors: (".something-extra"),
@@ -209,8 +209,8 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('WorkingProblems', 'carnival:::BoxedNoteShape');
 @include use('SomethingExtra', 'carnival:::IconNoteShape');
+@include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
 @include use('Figure','carnival:::FigureShape');

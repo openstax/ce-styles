@@ -1945,37 +1945,6 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
   font-weight: bold;
 }
 
-.working-problems {
-  border: solid;
-  border-color: #B10069;
-  box-decoration-break: slice;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  position: relative;
-}
-
-.working-problems > .os-title {
-  color: #B10069;
-  font-family: Mulish, sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  box-decoration-break: slice;
-  text-transform: uppercase;
-}
-
-.working-problems > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
-}
-
 .something-extra > .os-title {
   font-family: Mulish, sans-serif;
   font-weight: 900;
@@ -2037,6 +2006,37 @@ nav#toc > ol > li.os-toc-chapter > ol > li > a::after {
 .something-extra > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+[data-type=note]:not([class]) {
+  border: solid;
+  border-color: #B10069;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+[data-type=note]:not([class]) > .os-title {
+  color: #B10069;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+[data-type=note]:not([class]) > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
 }
 
 .os-figure:not(.has-splash) > figure {
