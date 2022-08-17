@@ -34,7 +34,8 @@ body {
   -webkit-print-color-adjust: exact;
 }
 
-#main-content:not([data-dynamic-style="true"]), .content-excerpt:not([data-dynamic-style="true"]) {
+// #main-content:not([data-dynamic-style="true"]), .content-excerpt:not([data-dynamic-style="true"]) {
+body {
 
   @import "./content-baked.less";
 
@@ -279,4 +280,31 @@ body {
   dt {
     font-weight: 700;
   }
+}
+
+
+
+@blockish: {
+  note: Note;
+  equation: Equation;
+  example: Example;
+  exercise: Exercise;
+  problem: Problem;
+  solution: Solution;
+}
+
+// Default labels for elements
+each(@blockish, {
+  [data-type="@{key}"] {
+    &:not(data-label)::before {
+      font-weight: bold;
+      content: "@{value}:";
+    }
+  }
+})
+
+// Render the data-label attribute on any element that has it
+[data-label]::before { 
+  font-weight: bold;
+  content: attr(data-label) !important;
 }
