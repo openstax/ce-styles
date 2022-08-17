@@ -11,4 +11,5 @@ Just run the following (node needs to be installed):
 
 ```sh
 npx less@4.1.3 ./index.less ../../output/dummy-pdf.css           # --source-map --source-map-inline
+npx less@4.1.3 ./index.less ../../output/dummy-rex-web.css       # --source-map --source-map-inline
 ```
