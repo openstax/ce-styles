@@ -1,0 +1,282 @@
+// Constants from bootstrap/less/variables.less
+@gray-base:             #000;
+@gray-dark:             lighten(@gray-base, 20%);   // #333
+@gray:                  lighten(@gray-base, 33.5%); // #555
+@gray-medium:           #606163;
+@gray-light:            #cdcdcd;
+@gray-lighter:          gainsboro;
+@gray-lightest:         #ededed;
+@font-size-base:        14px;
+@line-height-base:      1.428571429; // 20/14
+@line-height-computed:  floor((@font-size-base * @line-height-base)); // ~20px
+@table-bg:              transparent;
+@table-border-color:    #ddd;
+@body-bg:               #fff;
+@table-bg-accent:       #f9f9f9;
+@screen-sm:             768px;
+@screen-sm-min:         @screen-sm;
+@screen-xs-max:         (@screen-sm-min - 1);
+
+.content-font-size(@size) {
+  font-size: calc(@size * var(--content-text-scale));
+}
+
+.content-line-height(@size) {
+  line-height: calc(@size * var(--content-text-scale));
+}
+
+:root {
+  --content-text-scale: 1;
+}
+
+body {
+  font-size: @font-size-base;
+  -webkit-print-color-adjust: exact;
+}
+
+#main-content:not([data-dynamic-style="true"]), .content-excerpt:not([data-dynamic-style="true"]) {
+
+  @import "./content-baked.less";
+
+  @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../static/fonts/ibm-plex-sans-v9-latin-italic.woff2') format('woff2'), url('../../static/fonts/ibm-plex-sans-v9-latin-italic.woff') format('woff');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../static/fonts/ibm-plex-sans-v9-latin-regular.woff2') format('woff2'), url('../../static/fonts/ibm-plex-sans-v9-latin-regular.woff') format('woff');
+  }
+
+  .content-font-size(1.6rem);
+  .content-line-height(2.3rem);
+
+  // gray is used for text color
+  @gray: #424242;
+
+  a {
+    color: #027EB5;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: #0064A0;
+    }
+  }
+
+  p {
+
+    &.public-domain,
+    &.student-sample {
+      font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+      padding: 1rem 2rem;
+      margin: 1rem 0 2rem;
+    }
+
+    &.public-domain {
+      border-left: 0.2rem solid #156851;
+    }
+
+    &.student-sample {
+      border-left: 0.2rem solid #005F9A;
+    }
+
+    &.annotation-text {
+      color: #156851;
+      font-style: italic;
+      font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+    }
+  }
+
+  span {
+    &.os-icons {
+      display: flex;
+      float: left;
+    }
+
+    &.linguistic-icon,
+    &.culture-icon,
+    &.dreaming-icon,
+    &.visual-icon,
+    &.speech-icon,
+    &.auditory-icon,
+    &.kinesthetic-icon {
+      width: 2rem;
+      height: 2rem;
+      margin: .15rem 1rem .15rem 0;
+    }
+
+    &.linguistic-icon {
+      background: url('../../static/icons/cosmos-linguistic.svg');
+    }
+
+    &.culture-icon {
+      background: url('../../static/icons/cosmos-culture.svg');
+    }
+
+    &.dreaming-icon {
+      background: url('../../static/icons/cosmos-dreaming.svg');
+    }
+
+    &.visual-icon {
+      background: url('../../static/icons/cosmos-visual.svg');
+    }
+
+    &.speech-icon {
+      background: url('../../static/icons/cosmos-speech.svg');
+    }
+
+    &.auditory-icon {
+      background: url('../../static/icons/cosmos-auditory.svg');
+    }
+
+    &.kinesthetic-icon {
+      background: url('../../static/icons/cosmos-kinesthetic.svg');
+    }
+  }
+
+  u[data-effect="double-underline"] {
+    text-decoration-style: double;
+  }
+
+  span[data-screenreader-only="true"] {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  sup {
+    top: -.5em;
+  }
+  sub {
+    bottom: -.25em;
+  }
+  h2 {
+    .content-font-size(3.2rem);
+    .content-line-height(3.5rem);
+  }
+  h3 {
+    .content-font-size(2.4rem);
+    .content-line-height(2.3rem);
+  }
+  h4 {
+    .content-font-size(1.8rem);
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  .os-figure .os-caption-container {
+    .content-line-height(1.7rem);
+  }
+  .os-glossary-container {
+    dt {
+      font-weight: 700;
+    }
+    dd {
+      margin-left: 0;
+      margin-inline-start: 0;
+    }
+  }
+  [data-type="composite-page"] [data-type="exercise"] [data-type="problem"] p:first-of-type a {
+    font-weight: 700;
+    margin-right: .5em;
+  }
+  code {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+  }
+  blockquote {
+    padding: 1rem 2rem;
+    margin: 1rem 0 2rem;
+    border-left: 0.5rem solid #dcdcdc;
+  }
+  figure {
+    margin: 0;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+      border-color: transparent;
+  }
+  .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
+  .btn-link {
+      color: #21366b;
+      font-weight: 400;
+      border-radius: 0;
+  }
+  input, button, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+  }
+  button, html input[type="button"], input[type="reset"], input[type="submit"] {
+      -webkit-appearance: button;
+      cursor: pointer;
+  }
+  button, select {
+      text-transform: none;
+  }
+  button {
+      overflow: visible;
+  }
+  button, input, optgroup, select, textarea {
+      color: inherit;
+      font: inherit;
+      margin: 0;
+  }
+  [data-type="footnote-ref-content"]:before {
+    /* In previous version there was a whitespace in the content */
+    content: " ";
+  }
+
+  .coreq-skills {
+    padding: 0 3rem 3rem 3rem;
+    border: 1px solid #dcdcdc;
+
+    > .os-title {
+      margin: 0 -3rem;
+      padding: 1.5rem 3rem;
+      font-size: 1.7rem;
+      color: @gray;
+      background-color: #ececec;
+      border-bottom: 1px solid #dcdcdc;
+      text-transform: uppercase;
+    }
+
+    .os-coreq-exercises .os-problem-container,
+    .os-coreq-exercises .os-problem-container > p:first-child {
+      display: inline;
+    }
+  }
+
+  .os-table td {
+    height: 3rem;
+  }
+}
+
+.content-excerpt:not([data-dynamic-style="true"]) {
+  > section {
+    margin-top: 0;
+  }
+  dt {
+    font-weight: 700;
+  }
+}
