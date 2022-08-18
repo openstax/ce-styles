@@ -2203,15 +2203,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-figure.has-mechanism-figure > .os-caption-text-container {
-  border-right-width: 1px;
+  border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #C3E2C3;
-  border-left-width: 1px;
+  border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #C3E2C3;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #C3E2C3;
   line-height: 1rem;
   padding: 0.7rem;
 }
@@ -2226,6 +2223,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 0;
   width: 100%;
   position: relative;
+  z-index: -2;
+  top: -3px;
 }
 
 .os-figure.has-mechanism-figure > figure.mechanism-figure > span[data-type=media] > img {

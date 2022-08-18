@@ -29,18 +29,14 @@ $Caption__Text__Container:(
     _name: "CaptionTextContainer",
     _subselector: " > .os-caption-text-container",
     _properties: (
-        border-right-width: 1px,
+        border-right-width: 2px,
         border-right-style: solid,
         border-right-color: enum('ValueSet:::REQUIRED'),
-        border-left-width: 1px,
+        border-left-width: 2px,
         border-left-style: solid,
         border-left-color: enum('ValueSet:::REQUIRED'),
-        border-bottom-width: 1px,
-        border-bottom-style: solid,
-        border-bottom-color: enum('ValueSet:::REQUIRED'),
         line-height: 1rem,
         padding: v-spacing(1),
-        // margin-bottom: -2px,
     )
 );
 
