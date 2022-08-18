@@ -13,6 +13,37 @@ $Caption__Container--Figure: (
     )
 );
 
+// Mechanism Figures
+
+$Caption__Title__Container:(
+    _name: "CaptionTitleContainer",
+    _subselector: " > .os-caption-title-container",
+    _properties: ( 
+        background-color: enum('ValueSet:::REQUIRED'),
+        line-height: 1rem,
+        padding: v-spacing(1),
+    )
+);
+
+$Caption__Text__Container:(
+    _name: "CaptionTextContainer",
+    _subselector: " > .os-caption-text-container",
+    _properties: (
+        border-right-width: 1px,
+        border-right-style: solid,
+        border-right-color: enum('ValueSet:::REQUIRED'),
+        border-left-width: 1px,
+        border-left-style: solid,
+        border-left-color: enum('ValueSet:::REQUIRED'),
+        border-bottom-width: 1px,
+        border-bottom-style: solid,
+        border-bottom-color: enum('ValueSet:::REQUIRED'),
+        line-height: 1rem,
+        padding: v-spacing(1),
+        // margin-bottom: -2px,
+    )
+);
+
 // Chapter Intro
 
 $Caption__Container--ChapterIntro: (

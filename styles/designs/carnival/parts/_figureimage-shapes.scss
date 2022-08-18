@@ -63,3 +63,34 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::MechanismFigureShape',(
+    _components: (
+        map-merge($Figure__Container--Mechanism,(
+            _components:(
+                map-merge($Caption__Title__Container, (
+                    _components: (
+                        $Caption__TitleLabel,
+                        $Caption__Number,
+                        $Caption__Title,
+                    )
+                )),
+                map-merge($Caption__Text__Container, (
+                    _components: (
+                        $Caption__Text,
+                    )
+                )),
+                map-merge($Figure--Mechanism, (
+                    _components: (
+                        map-merge($Media--Mechanism, (
+                            _components: (
+                                $Image--Mechanism,
+                            )
+                        )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+

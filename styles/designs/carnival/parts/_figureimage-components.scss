@@ -8,6 +8,16 @@ $Figure__Container: empty_wrapper(FigureContainer, '');
 
 $Figure__Container--FirstInOrderedList: empty_wrapper(FigureContainerFirstInOrderedList, ' > ol > li > .os-figure:first-child');
 
+$Figure__Container--Mechanism:(
+    _name: "MechanismFigureContainer",
+    _subselector: "",
+    _properties: (
+        display: table,
+        margin-right: auto,
+        margin-left: auto,
+    )
+);
+
 $Figure:(
     _name: "Figure",
     _subselector: "> figure",
@@ -26,6 +36,20 @@ $Figure--TopSpacing:(
     )
 );
 
+$Figure--Mechanism:(
+    _name: "MechanismFigure",
+    _subselector: " > figure.mechanism-figure",
+    _properties: (
+        margin-right: 0,
+        margin-left: 0,
+        margin-top: 0,
+        width: 100%,
+        position: relative,
+        // z-index: -2,
+        // top: -3px,
+    )
+);
+
 //Image
 
 $Image: (
@@ -33,6 +57,15 @@ $Image: (
     _subselector: " img",
     _properties:(
         max-width: 100%,
+    )
+);
+
+$Image--Mechanism: (
+    _name: "MechanismImage",
+    _subselector: " > img",
+    _properties:(
+        width: 100%,
+        margin-bottom: v-spacing(1)
     )
 );
 
@@ -57,3 +90,6 @@ $Image--TopSpacing:(
 //Media
 
 $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol > li > [data-type="media"]:first-child');
+
+$Media--Mechanism: empty_wrapper(MechanismMedia, ' > span[data-type="media"]');
+
