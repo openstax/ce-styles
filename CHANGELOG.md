@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-* Create `Mechanism Figure` style shape to cover figures with class `mechanism-figure` in `organic-chemistry`
+* Create `Mechanism Figure` shape to cover figures with class `mechanism-figure` in `organic-chemistry`
 * Refactor `lists` in `carnival`
 * Hide screenreader & non-screen switch elements version in Webview
 * Add H3 to `ChapterIntroWithBlockIntroHeaderShape` in `cosmos`
