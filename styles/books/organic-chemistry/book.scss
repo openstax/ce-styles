@@ -150,8 +150,8 @@ $ChapterIntroType: fullWidth;
       'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
       'Title:::color': (_ref: 'colorMap:::organicChemNoClassNoteColor'),
     ),
-    SomethingExtra:(
-        _selectors: (".something-extra"),
+    ChemistryMatters:(
+        _selectors: (".chemistry-matters"),
         group-border-color: (_ref: 'colorMap:::somethingExtraColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::somethingExtraColor'),
@@ -209,7 +209,7 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('SomethingExtra', 'carnival:::IconNoteShape');
+@include use('ChemistryMatters', 'carnival:::IconNoteShape');
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
