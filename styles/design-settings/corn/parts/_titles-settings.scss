@@ -54,13 +54,16 @@
     ChapterTitles:(
         _selectors: ('[data-type="chapter"]'),
         H1Numbered: (
+            display: flex,
             position: relative,
             top: 14rem,
             z-index: 2,
             font-family: (_ref: 'typography:::titleFont'),
             font-size: font-scale(2),
-            line-height: line-height(2),
+            line-height: 2.1rem,
             color: white,
+            // max-width: 5.9in,
+
         ),
         TitleText: (
             font-weight: bold,
@@ -68,6 +71,10 @@
             position: relative,
             margin-left: 8rem,
             prince-filter-resolution: 300dpi,
+            display: flex,
+            // justify-content: flex-start,
+            // align-items: flex-start,
+            max-width: 5.9in,
         ),
         TitleNumber: (
             font-weight: bold,
