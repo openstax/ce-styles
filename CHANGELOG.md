@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.110.0] - 2022-08-25
+
 * Style lists from stimulus in `corn`
 * Replace `Something Extra` note with `Chemistry Matters` in `organic-chemistry`
 * Refactor `lists` in `carnival`
