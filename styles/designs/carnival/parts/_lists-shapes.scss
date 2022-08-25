@@ -6,34 +6,74 @@
     _components: (
         map-merge($ListContainer,(
             _components: (
-                $UnorderedList--FirstLevel,
-                $OrderedList--FirstLevel,
-                map-merge($TitledLists__Container,(
+                map-merge($OrderedList--FirstLevel, (
                     _components: (
-                        $TitledLists__Title,
-                        $List--Unstyled,
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $UnorderedList--SecondLevel,
+                        $OrderedList--SecondLevel,
                     )
                 )),
                 map-merge($SectionWrapper--FirstLevel,(
                     _components: (
-                        $OrderedList--FirstLevel,
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($UnorderedList--FirstLevel,(
                             _components: (
-                                $UnorderedList--SecondLevel,
+                                map-merge($OrderedList--FirstLevel, (
+                                    _components: (
+                                        $OrderedList--SecondLevel,
+                                        $UnorderedList--SecondLevel,
+                                    )
+                                )),
+                                map-merge($UnorderedList--FirstLevel, (
+                                    _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
                             )
                         )),
                     )
                 )),
                 map-merge($SectionWrapper--SecondLevel,(
                     _components: (
-                        $UnorderedList--FirstLevel,
-                        $OrderedList--FirstLevel,
+                        map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                      )),
+                      map-merge($UnorderedList--FirstLevel, (
+                        _components: (
+                            $UnorderedList--SecondLevel,
+                            $OrderedList--SecondLevel,
+                        )
+                      )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel,(
                     _components: (
-                        $UnorderedList--FirstLevel,
-                        $OrderedList--FirstLevel,
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                      map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                     )
                 )),
             )
@@ -59,6 +99,22 @@
                                 $OrderedList--SecondLevel,
                             )
                         )),
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                      )),
+                      map-merge($UnorderedList--FirstLevel, (
+                        _components: (
+                            $UnorderedList--SecondLevel,
+                            $OrderedList--SecondLevel,
+                        )
+                      )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel,(
@@ -93,15 +149,17 @@
                                   _components: (
                                       map-merge($Table__Data--Wrapper, (
                                           _components: (
-                                              $List--Unstyled,
+                                            $UnorderedList--Unstyled,
                                               map-merge($UnorderedList--FirstLevel--Table,(
                                                   _components: (
                                                     $UnorderedList--SecondLevel--Table,
+                                                    $OrderedList--SecondLevel--Table,
                                                   )
                                               )),
                                               map-merge($OrderedList--FirstLevel--Table,(
                                                   _components: (
                                                     $UnorderedList--SecondLevel--Table,
+                                                    $OrderedList--SecondLevel--Table,
                                                   )
                                               )),
                                           )
@@ -123,24 +181,33 @@
             _components: (
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                      $UnorderedList--FirstLevel--Exercise,
-                      map-merge($OrderedList--FirstLevel--Exercise, (
+                      map-merge($UnorderedList--FirstLevel, (
                         _components: (
-                          map-merge($OrderedList--SecondLevel--Exercise, (
-                            _components: (
-                              $OrderedList--SecondLevel--Exercise,
-                            )
-                          )),
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                      )),
+                      map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                          $OrderedList--SecondLevel,
+                          $OrderedList--ThirdLevel,
+                          $UnorderedList--SecondLevel,
                         )
                       )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel, (
                   _components: (
-                    $UnorderedList--FirstLevel--Exercise,
-                    map-merge($OrderedList--FirstLevel--Exercise, (
+                    map-merge($UnorderedList--FirstLevel, (
                         _components: (
-                          $OrderedList--SecondLevel--Exercise
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                    )),
+                    map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                          $OrderedList--SecondLevel,
+                          $UnorderedList--SecondLevel,
                         )
                     )),
                   )
@@ -150,26 +217,49 @@
     )
 ));
 
-// Composite Page List
-@include create_shape('carnival:::ExerciseCompositePageListsShape',(
+@include create_shape('carnival:::NotesListsShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($OrderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                      map-merge($OrderedList--FirstLevel--Exercise, (
-                        _components: (
-                          $OrderedList--SecondLevel--Exercise,
-                        )
-                      )),
-                    )
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                    ),
                 )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components: (
-                      $UnorderedList--FirstLevel--Exercise,
-                      $OrderedList--FirstLevel--Exercise,
-                    )
-                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::TitledListsShape',( // Present only in pl-u-physics
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $TitledLists__Title,
+                $UnorderedList--Unstyled,
             )
         )),
     )

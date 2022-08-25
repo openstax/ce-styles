@@ -1,4 +1,4 @@
-//common components
+// Common components
 $Note__Subtitle: (
   _name: "Subtitle",
   _subselector: " > .os-subtitle, h4[data-type="title"]",
@@ -14,10 +14,11 @@ $Note__Subtitle: (
 $Note__Body:  empty_wrapper(Body, ' > .os-note-body');
 
 $Note__Problem: empty_wrapper(Problem, ' > [data-type="problem"]');
+$Note__Solution: empty_wrapper(Solution, ' > [data-type="solution"]');
 
 $Note__Problem__Container: empty_wrapper(ProblemContainer, ' > .os-problem-container');
 
-//boxed note
+// Boxed note
 $Note--Boxed__Container: (
   _name: "Container",
   _subselector: '',
@@ -65,7 +66,7 @@ $Note--Boxed__Subtitle: (
   )
 );
 
-//boxed condensed
+// Boxed condensed
 $Note--Boxed--Condensed__Container: (
   _name: "CondensedContainer",
   _subselector: '',
@@ -130,7 +131,7 @@ $Note--Boxed--Condensed__Paragraph--First: (
   )
 );
 
-//icon notes
+// Icon notes
 $Note--Icon__Container: (
   _name: "Container",
   _subselector: '',
@@ -140,6 +141,8 @@ $Note--Icon__Container: (
     border-bottom-width: 0.2rem,
     border-bottom-style: solid,
     box-decoration-break: slice,
+    padding-bottom: v-spacing(1),
+    padding-top: v-spacing(1),
   )
 );
 
@@ -248,15 +251,21 @@ $Note--Icon__Equation: (
   )
 );
 
-//icon condensed
+// Icon condensed
 $Note--Icon--Condensed__Container: (
   _name: "Container",
   _subselector: "",
   _properties: (
     margin-bottom: v-spacing(1),
     box-decoration-break: slice,
+    padding-top: v-spacing(1),
+    padding-bottom: v-spacing(1),
+    border-bottom-style: solid,
+    border-bottom-width: 0.2rem,
+    border-bottom-color: enum('ValueSet:::REQUIRED'),
   )
-  );
+);
+
 $Note--Icon--Condensed__Title: (
   _name: "Title",
   _subselector: ' > .os-title',
@@ -291,17 +300,6 @@ $Note--Icon--Condensed__Number: (
   )
 );
 
-$Note--Icon--Condensed__Body: (
-  _name: "Body",
-  _subselector: " > .os-note-body",
-  _properties: (
-    border-bottom-style: solid,
-    border-bottom-width: 0.2rem,
-    border-bottom-color: enum('ValueSet:::REQUIRED'),
-    box-decoration-break: slice,
-  )
-);
-
 $Note--Icon--Condensed__Paragraph: (
   _name: "Paragraph",
   _subselector: " > p",
@@ -322,18 +320,6 @@ $Note--Icon--Condensed__Title__Icon: (
     position: relative,
     content: "''",
     padding-right: h-spacing(1)
-  )
-);
-
-// Icon Condensed Exercise
-$Note--Icon--Condensed__Exercise__Solution: (
-  _name: "Solution",
-  _subselector: ' > [data-type="solution"]',
-  _properties: (
-    border-bottom-style: solid,
-    border-bottom-width: 0.2rem,
-    box-decoration-break: slice,
-    border-bottom-color: enum('ValueSet:::REQUIRED'),
   )
 );
 

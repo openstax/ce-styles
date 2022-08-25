@@ -1074,15 +1074,15 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li::marker {
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li::marker {
   color: #0074BC;
 }
 
@@ -1206,7 +1206,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 700;
 }
 
-.introduction > .intro-body > .intro-text ol {
+.introduction > .intro-body > .intro-text > ol {
   margin-left: 24px;
   margin-bottom: 0.7rem;
 }
@@ -1283,7 +1283,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 2.1rem;
 }
 
-[data-type=page]:not(.introduction) > h2 {
+[data-type=page]:not(.introduction) > h2[data-type=document-title] {
   color: #0074BC;
   font-family: Mulish, sans-serif;
   font-size: 1.44rem;
@@ -1437,31 +1437,79 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   font-weight: 600;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
 [data-type=page] > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > [data-type=list] > [data-type=title] {
-  font-weight: bold;
+[data-type=page] > ol > li > ol {
+  margin-left: 16px;
 }
 
-[data-type=page] > [data-type=list] > ul[data-bullet-style=none] {
-  list-style-type: none;
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > ol {
   margin-left: 24px;
 }
 
+[data-type=page] > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
   margin-left: 16px;
 }
 
@@ -1469,16 +1517,36 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ol {
-  margin-left: 24px;
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
@@ -1505,6 +1573,30 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 16px;
 }
 
+[data-type=composite-page] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -1521,94 +1613,184 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul {
+[data-type=problem] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=problem] > div > div > ul {
+[data-type=problem] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=problem] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=problem] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ul {
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=exercise-question] > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > ol > li > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-[data-type=exercise-question] > div > div > ul {
+[data-type=exercise-question] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=exercise-question] > div > div > ol {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-.os-eoc[data-type=composite-page] > div > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.os-eoc[data-type=composite-page] > div > ol > li > ol {
+[data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
-  margin-bottom: 0.7rem;
 }
 
-.os-eoc[data-type=composite-page] > section > ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
+.os-table > table > tbody > tr > td > ul[data-bullet-style=none] {
+  list-style-type: none;
 }
 
-.os-eoc[data-type=composite-page] > section > ol {
+.os-table > table > tbody > tr > td > ul {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ul > li > ol {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol {
+  margin-left: 1.4rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ul {
+  margin-left: 0.7rem;
+}
+
+.os-table > table > tbody > tr > td > ol > li > ol {
+  margin-left: 0.7rem;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-  margin-bottom: 0.7rem;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 .os-table:not(.os-unstyled-container) {
@@ -1671,14 +1853,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul {
-  margin-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
@@ -1901,16 +2075,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-}
-
-.ethnographic-sketches ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.ethnographic-sketches ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .ethnographic-sketches > .os-note-body > .os-subtitle {
@@ -1923,16 +2089,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .ethnographic-sketches > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.ethnographic-sketches > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.ethnographic-sketches > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .fieldwork-activity > .os-title {
@@ -1982,16 +2138,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-}
-
-.fieldwork-activity ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fieldwork-activity ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .fieldwork-activity > .os-note-body > .os-subtitle {
@@ -2004,16 +2152,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .fieldwork-activity > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.fieldwork-activity > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.fieldwork-activity > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
 }
 
 .profiles-anthropology > .os-title {
@@ -2063,16 +2201,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-}
-
-.profiles-anthropology ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.profiles-anthropology ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
 }
 
 .profiles-anthropology > .os-note-body > .os-subtitle {
@@ -2087,39 +2217,17 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
 }
 
-.profiles-anthropology > .os-note-body ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.profiles-anthropology > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .media-video {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
-}
-
-.media-video > .os-note-body {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
   border-bottom-style: solid;
   border-bottom-width: 0.2rem;
   border-bottom-color: #1E9575;
-  box-decoration-break: slice;
 }
 
 .media-video > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.media-video > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.media-video > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
@@ -2155,26 +2263,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .media-podcast {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
-}
-
-.media-podcast > .os-note-body {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
   border-bottom-style: solid;
   border-bottom-width: 0.2rem;
   border-bottom-color: #0074BC;
-  box-decoration-break: slice;
 }
 
 .media-podcast > .os-note-body > p {
-  margin-bottom: 0.7rem;
-}
-
-.media-podcast > .os-note-body ul {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
-.media-podcast > .os-note-body ol {
-  margin-left: 24px;
   margin-bottom: 0.7rem;
 }
 
