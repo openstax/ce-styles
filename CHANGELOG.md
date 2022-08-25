@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Create `Mechanism Figure` shape to cover figures with class `mechanism-figure` in `organic-chemistry`
+* Style lists from stimulus in `corn`
+* Replace `Something Extra` note with `Chemistry Matters` in `organic-chemistry`
 * Refactor `lists` in `carnival`
 * Hide screenreader & non-screen switch elements version in Webview
 * Add H3 to `ChapterIntroWithBlockIntroHeaderShape` in `cosmos`
@@ -21,3 +23,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `Learning Objectives` note in `pl-economics`
 * Fix settings for `ChapterObjectives` from `pl-economics`
 * Style exercises and Answer Key in `organic-chemistry`
+* Justify root text in `organic-chemistry`

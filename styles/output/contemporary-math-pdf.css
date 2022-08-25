@@ -113,6 +113,14 @@ div.handbook {
   page-break-before: avoid;
 }
 
+.os-caption-title-container {
+  page-break-after: avoid;
+}
+
+.os-caption-text-container {
+  page-break-after: avoid;
+}
+
 [data-type=equation] {
   page-break-inside: avoid;
 }
@@ -2812,6 +2820,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=page] [data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-stimulus] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-stimulus] > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
