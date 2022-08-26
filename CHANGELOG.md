@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style target labels
+
+## [v1.110.0] - 2022-08-25
+
 * Style lists from stimulus in `corn`
 * Replace `Something Extra` note with `Chemistry Matters` in `organic-chemistry`
 * Refactor `lists` in `carnival`
@@ -23,3 +26,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `Learning Objectives` note in `pl-economics`
 * Fix settings for `ChapterObjectives` from `pl-economics`
 * Style exercises and Answer Key in `organic-chemistry`
+* Justify root text in `organic-chemistry`
