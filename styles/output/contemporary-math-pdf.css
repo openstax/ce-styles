@@ -1523,6 +1523,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
   prince-filter-resolution: 300dpi;
   max-width: 5.9in;
+  justify-content: center;
+  align-items: center;
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-number {
@@ -1532,11 +1534,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translate(0, -50%);
   width: 2.1rem;
   height: 2.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  align-self: start;
 }
 
 [data-type=chapter] > [data-type=page]:not(.introduction) h2[data-type=document-title], h2[data-type=title] {

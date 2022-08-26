@@ -53,6 +53,8 @@ $H1--Numbered__Text: (
     filter: enum('ValueSet:::OPTIONAL'), //used in Chapters
     prince-filter-resolution: enum('ValueSet:::OPTIONAL'), //used only in Chapter Titles for drop-shadow filter    // max-width: enum('ValueSet:::OPTIONAL'), //used in Chapters
     max-width: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    justify-content: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
   )
 );
 
@@ -100,10 +102,10 @@ $H1--Numbered__Number--Chapter: (
     font-weight: enum('ValueSet:::REQUIRED'),
     text-transform: enum('ValueSet:::OPTIONAL'), //used in Chapters
     padding: 0.5rem,
-    // position: absolute,
-    // left: 0,
-    // top: 50%,
-    // transform: translate(0, -50%),
+    position: absolute,
+    left: 0,
+    top: 30%,
+    transform: translate(0, -50%),
     width:  enum('ValueSet:::REQUIRED'),
     height:  enum('ValueSet:::REQUIRED'),
     display: enum('ValueSet:::OPTIONAL'),
@@ -111,6 +113,9 @@ $H1--Numbered__Number--Chapter: (
     align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
     text-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
     vertical-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    font-size: enum('ValueSet:::REQUIRED'),
+    line-height: enum('ValueSet:::REQUIRED'),
+    align-self: start,
   )
 );
 
