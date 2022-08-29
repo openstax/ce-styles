@@ -26,7 +26,7 @@ $ChapterIntroType: side;
 @include add_settings((
   ChapterIntroMargin: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::biologyHeaderColor")
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::biologyHeaderColor")
   ),
   ChapterOutlineMargin: (
     _selectors: (".os-chapter-outline"),
@@ -86,13 +86,13 @@ $ChapterIntroType: side;
   ),
   LinkToLearningNote:(
     _selectors: (".interactive:not(.non-majors)"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
   ConceptsInActionNote:(
     _selectors: (".interactive.non-majors"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
@@ -131,6 +131,7 @@ $ChapterIntroType: side;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::biologyHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::biologyHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::biologyHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::biologyHeaderColor'),
@@ -172,7 +173,6 @@ $ChapterIntroType: side;
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
@@ -224,14 +224,14 @@ $ChapterIntroType: side;
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 @include use('UnitTitle', 'common:::Hidden');
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');

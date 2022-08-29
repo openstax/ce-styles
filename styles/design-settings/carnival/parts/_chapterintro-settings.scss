@@ -1,12 +1,12 @@
 @include add_settings((
     ChapterIntro: (
         _selectors: (".introduction"),
-        SplashFigureBg: (
+        ChapterSplashFigureBg: (
             // background color is book specific set in the book.scss file
             width: half-fullBleedsSize(8.5, in),
             margin-left: fullBleedsMargin(-1, in),
         ),
-        SplashCaptionBg: (
+        ChapterSplashCaptionBg: (
             background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
         ),
         CaptionNumber: (
@@ -32,10 +32,10 @@
 @include add_settings((
     ChapterIntroMargin: (
         _selectors: (".introduction"),
-        SplashFigureBg: (
+        ChapterSplashFigureBg: (
             // background color is book specific set in the book.scss file
         ),
-        SplashCaptionBg: (
+        ChapterSplashCaptionBg: (
             background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
         ),
         CaptionNumber: (
@@ -63,12 +63,12 @@
 @include add_settings((
     ChapterIntroSplashFigure: (
         _selectors: (".introduction"),
-        SplashFigureBg: (
+        ChapterSplashFigureBg: (
             // background color is book specific set in the book.scss file
             width: half-fullBleedsSize(8.5, in),
             margin-left: fullBleedsMargin(-1, in),
         ),
-        SplashCaptionBg: (
+        ChapterSplashCaptionBg: (
             background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
         ),
         CaptionNumber: (
@@ -86,11 +86,10 @@
             font-family:(_ref:'typography:::sansFont'),
         ),
     ),
-    ChapterIntroBodyWithRegularHeader: (
+    ChapterIntroBody: (
         _selectors: (".introduction"),
-        H2Title: (
+        H2IntroTextHeader: (
             font-family: (_ref: 'typography:::baseFont'),
-            // color: book specific
         ),
     ),
 ));

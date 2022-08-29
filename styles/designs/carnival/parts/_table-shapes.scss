@@ -30,12 +30,7 @@
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
-                                        map-merge($Table__Data, ( // Needs to be cleaned up after lists cleaning
-                                            _components: (
-                                                $Table__UnorderedList--MarginLeft,
-                                                $List--Unstyled,
-                                            )
-                                        )),
+                                        $Table__Data,
                                         $Table__Data--First,
                                         // Added as part of the fix for cnx-recipes#1827
                                         $Table__Data--BottomBorder,
@@ -51,6 +46,8 @@
                         $Table__BottomBorder,
                         $Caption__TitleLabel,
                         $Caption__Number,
+                        $Caption__Title,
+                        $Caption__Text
                     )
                 )),
             )
@@ -117,6 +114,8 @@
                         // TODO as part of carnival refactor: add a Table Bottom Border component here
                         $Caption__TitleLabel,
                         $Caption__Number,
+                        $Caption__Title,
+                        $Caption__Text
                     )
                 )),
             )

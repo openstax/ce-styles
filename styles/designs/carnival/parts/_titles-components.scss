@@ -1,12 +1,7 @@
-//-------------------------------------------------------------------------------------------
-//ToDo: delete this component when ChapterModuleTitlesShape be removed
-$Module__Container: empty_wrapper(Module, ' > [data-type="page"]:not(.introduction)');
-
-//-------------------------------------------------------------------------------------------
-
 //Empty Containers
 $Page__Container: empty_wrapper(PageContainer, '');
 $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
+$SectionExercises__Container: empty_wrapper(SectionExerciesContainer, ' > .os-eos.os-section-exercises-container');
 $Eob__Container: empty_wrapper(EobContainer, '');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterContainer, '');
@@ -121,6 +116,19 @@ $H2TextHeader--ChapterIntro: (
         margin: "0 .5rem 0 0",
         font-weight: 700,
     )
+);
+
+$H2--Module: (
+  _name:"H2ModuleTitle",
+  _subselector: ' > h2[data-type="document-title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
 );
 
 // H3 titles
@@ -274,16 +282,6 @@ $H5: (
   )
 );
 
-// Custom titles
-
-$Title--InParagraph: (
-  _name:"TitleInParagraph",
-  _subselector:' span[data-type="title"]',
-  _properties: (
-    margin-right: h-spacing(1),
-  )
-);
-
 //Tables titles
 $Table__Title: (
   _name: "TableTitle",
@@ -296,7 +294,7 @@ $Table__Title: (
 );
 
 //Solution title used only in HS Physics in module exercises
-$Exercises__Solution__Title:(
+$Title--Solution:(
   _name: "SolutionTitle",
   _subselector: " > .solution-title",
   _properties:(
@@ -304,5 +302,13 @@ $Exercises__Solution__Title:(
     font-weight: bold,
     font-size: font-scale(1),
     line-height: line-height(1),
+  )
+);
+
+$Title--Problem:(
+  _name: "ProblemTitle",
+  _subselector: ' > span[data-type="title"]',
+  _properties:(
+    font-weight: bold,
   )
 );

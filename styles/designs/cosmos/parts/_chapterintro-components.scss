@@ -1,8 +1,9 @@
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 $ChapterIntro__Container--Body: empty_wrapper(ChapterIntroBody, ' > .intro-body');
+$ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text'); 
 
 $ChapterSplash__Media: (
-_name: "SplashImgMedia",
+_name: "ChapterSplashImgMedia",
 _subselector: ' > span[data-type="media"]',
 _properties: (
     display: flex,
@@ -13,10 +14,10 @@ _properties: (
 );
 
 $ChapterSplash__Figure: (
-    _name: "SplashFigure",
+    _name: "ChapterSplashFigure",
     _subselector: ' > figure.splash',
     _properties: (
-        margin-bottom: v-spacing(2),
+        margin-bottom: 0,
         display: table,
         margin-left: auto,
         margin-right: auto,
@@ -24,7 +25,7 @@ $ChapterSplash__Figure: (
 );
 
 $ChapterSplash__Figure__Wrapper: (
-    _name: "SplashFigureWrapper",
+    _name: "ChapterSplashFigureWrapper",
     _subselector: ' > .os-figure.has-splash',
     _properties: (
         background-color: enum('ValueSet:::REQUIRED'),
@@ -33,16 +34,13 @@ $ChapterSplash__Figure__Wrapper: (
         z-index: -1,
         box-sizing: border-box,
         top: 0,
-        margin-bottom: v-spacing(5),
+        margin-bottom: v-spacing(2),
         padding-top: v-spacing(5),
         transform: translate3d(-1in, 0, 0),
         margin-left: fullBleedsMargin(0, rem),
-        padding-bottom: v-spacing(2),
         margin-top: -0.1rem,
     ),
 );
-
-$ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text'); 
 
 // Chapter Outline
 $ChapterOutline__Container: (

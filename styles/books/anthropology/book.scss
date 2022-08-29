@@ -15,12 +15,13 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ChapterIntro: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'ChapterSplashFigureBg:::background-color': (_ref: 'colorMap:::anthopologyAccentColor'),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'ChapterOutlineTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -43,6 +44,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H2Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H3Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H4Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
@@ -97,13 +99,13 @@ $ChapterIntroType: fullWidth;
   MediaVideo: (
     _selectors: ('.media-video'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-media.svg")) no-repeat top left,
   ),
   MediaPodcast: (
     _selectors: ('.media-podcast'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::mediaPodcastColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaPodcastColor'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-podcast.svg")) no-repeat top left,
   ),
 ));
@@ -153,7 +155,8 @@ $ChapterIntroType: fullWidth;
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 //Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');

@@ -1,7 +1,7 @@
 @include add_settings((
     ChapterIntro: (
         _selectors: (".introduction"),
-        SplashFigureWrapper: (
+        ChapterSplashFigureWrapper: (
             background-color: (_ref: "colorMap:::chapterSplashFigureWrapperBgColor"),
         ),
         CaptionTitleLabel:(
@@ -34,7 +34,11 @@
             font-family: (_ref: 'typography:::titleOption1Font'),
             color: (_ref: "colorMap:::introContentHeaderColorEconomics"),
         ),
-        SplashFigureWrapper: (
+        H3Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColor'),
+        ),
+        ChapterSplashFigureWrapper: (
             background-color: (_ref: "colorMap:::chapterSplashFigureWrapperBgColor"),
         ),
         CaptionTitleLabel:(

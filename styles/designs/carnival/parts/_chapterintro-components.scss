@@ -4,15 +4,15 @@ $ChapterIntro__Container--Body: empty_wrapper(ChapterIntroBody, ' > .intro-body'
 $ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text');
 
 $ChapterSplash__Figure__Wrapper: (
-    _name: "SplashFigureWrapper",
+    _name: "ChapterSplashFigureWrapper",
     _subselector: ' > .os-figure.has-splash',
     _properties: (
-        margin-bottom: v-spacing(1),
+        margin-bottom: v-spacing(2),
     ),
 );
 
 $ChapterSplash__Figure: (
-    _name: "SplashFigure",
+    _name: "ChapterSplashFigure",
     _subselector: ' > figure.splash',
     _properties: (
         position: relative,
@@ -21,7 +21,7 @@ $ChapterSplash__Figure: (
 );
 
 $ChapterSplash__Figure--Bg: (
-        _name: "SplashFigureBg",
+        _name: "ChapterSplashFigureBg",
         _subselector: '::before',
         _properties: (
             content: "''",
@@ -38,7 +38,7 @@ $ChapterSplash__Figure--Bg: (
 );
 
 $ChapterSplash__Media: (
-    _name: "SplashMedia",
+    _name: "ChapterSplashMedia",
     _subselector: ' > span[data-type="media"]',
     _properties: (
         line-height: 0,
@@ -52,7 +52,7 @@ $ChapterSplash__Media: (
 );
 
 $ChapterSplash__Img: (
-    _name: "SplashImg",
+    _name: "ChapterSplashImg",
     _subselector: '> img',
     _properties: (
         width: half-fullBleedsSize(8, in),
@@ -60,7 +60,7 @@ $ChapterSplash__Img: (
 );
 
 $ChapterSplash__Caption--Bg: (
-        _name: "SplashCaptionBg",
+        _name: "ChapterSplashCaptionBg",
         _subselector: '::before',
         _properties: (
             content: "''",
@@ -79,10 +79,10 @@ $ChapterSplash__Caption--Bg: (
 // Margin Chapter Intro
 
 $ChapterIntro__Container--Body--Margin: (
-    _name: "CahoterIntroBodyMargin",
+    _name: "MarginChapterIntroBodyMargin",
     _subselector: ' > .intro-body',
     _properties: (
-        display: flex, 
+        display: flex,
         flex-direction: row-reverse,
         justify-content: space-between,
         position: relative,
@@ -99,7 +99,7 @@ $ChapterOutline__Container: (
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
-        font-weight: 500,        
+        font-weight: 500,
         line-height: line-height(0),
         width: 6.5in, // Width of the page minus margins
         margin: "0 0 1.5rem 0",
@@ -118,7 +118,7 @@ $ChapterOutline__Title: (
         margin: "0 0 0.5rem 0",
         font-size: font-scale(0),
         line-height: font-scale(0), // value has to be the same as font size
-        font-weight: bold, 
+        font-weight: bold,
         font-family: enum('ValueSet:::REQUIRED'),
         color: enum('ValueSet:::REQUIRED'),
         position:relative,
@@ -136,8 +136,8 @@ $ChapterObjective__Link: (
     _properties: (
         display: inline-block,
         color: enum('ValueSet:::REQUIRED'),
-        font-family: enum('ValueSet:::REQUIRED'), 
-        font-weight: bold, 
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
         margin-bottom: 0rem,
         text-decoration: none,
@@ -187,18 +187,18 @@ $ChapterObjective__Link--Margin: (
     )
 );
 
-$ChapterObjective__Text--Margin: ( 
+$ChapterObjective__Text--Margin: (
     _name: "ChapterObjectiveTextMargin",
-    _subselector: ' > .os-text', 
+    _subselector: ' > .os-text',
     _properties: (
         margin-left: .5rem,
-        display: inline-block, 
+        display: inline-block,
     )
 );
 
 $ChapterObjective__Container--Margin: (
-    _name: "ChapterObjectiveContainerMargin", 
-    _subselector: ' > div.os-chapter-objective', 
+    _name: "ChapterObjectiveContainerMargin",
+    _subselector: ' > div.os-chapter-objective',
     _properties: (
         margin-bottom: .5rem,
         padding-right: enum('ValueSet:::REQUIRED'),

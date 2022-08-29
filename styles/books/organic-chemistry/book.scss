@@ -17,6 +17,7 @@ $ChapterIntroType: fullWidth;
     BookRoot: (
         _selectors: (":root"),
         'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
+        'BookRoot:::text-align': justify,
     ),
 ));
 
@@ -33,16 +34,13 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ChapterIntroSplashFigure: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
-  ),
-  ChapterIntroBodyWithRegularHeader: (
-    _selectors: (".introduction"),
-    'H2Title:::color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
   ),
 ));
 
@@ -65,6 +63,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
@@ -75,7 +74,15 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocCompositePageTitles: (
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
-    'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+@include add_settings((
+  EocCompositeChapterTitles: (
+    _selectors: ('.os-eoc[data-type="composite-chapter"]'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H3Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
@@ -84,6 +91,25 @@ $ChapterIntroType: fullWidth;
     _selectors: ('.os-eob'),
     'H2Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
+
+// Exercises
+@include add_settings((
+    VisualizingChemistry:(
+        _selectors: (".os-visualizing-chemistry-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    AdditionalProblems:(
+        _selectors: (".os-additional-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+));
+
+// Eoc
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.summary'),
   ),
 ));
 
@@ -105,6 +131,10 @@ $ChapterIntroType: fullWidth;
         _selectors: ('.gray-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::textGrayColor'),
     ),
+    RedColoredText: (
+        _selectors: ('.red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textRedColor'),
+    ),
 ));
 
 // Notes
@@ -115,19 +145,29 @@ $ChapterIntroType: fullWidth;
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::whyChapterColor'),
     ),
-    WorkingProblems:(
-        _selectors: (".working-problems"),
-        group-border-color: (_ref: 'colorMap:::workingProblemsColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Title:::color': (_ref: 'colorMap:::workingProblemsColor'),
+    DefaultNoClassNote:(
+      _selectors:('[data-type="note"]:not([class])'),
+      group-border-color: (_ref: 'colorMap:::organicChemNoClassNoteColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'Title:::color': (_ref: 'colorMap:::organicChemNoClassNoteColor'),
     ),
-    SomethingExtra:(
-        _selectors: (".something-extra"),
+    ChemistryMatters:(
+        _selectors: (".chemistry-matters"),
         group-border-color: (_ref: 'colorMap:::somethingExtraColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::somethingExtraColor'),
         'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections.svg")) no-repeat top left,
     ),
+));
+
+// Tables
+@include add_settings((
+  BasicTable: (
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
+  ),
 ));
 
 // Common Settings
@@ -136,34 +176,42 @@ $ChapterIntroType: fullWidth;
 @include use('MagentaColoredText', 'common:::ColoredText');
 @include use('GreenColoredText', 'common:::ColoredText');
 @include use('GrayColoredText', 'common:::ColoredText');
+@include use('RedColoredText', 'common:::ColoredText');
 
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
 @include use('Example', 'carnival:::ExampleShape');
 
-//Lists
+// Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
-@include use('ChapterIntroBodyWithRegularHeader', 'carnival:::ChapterIntroBodyWithRegularHeaderShape');
+@include use('ChapterIntroBody', 'carnival:::ChapterIntroBodyShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
+
+// Eoc
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ModuleWithMarginBottom', 'common:::ModuleWithMarginBottomShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('WorkingProblems', 'carnival:::BoxedNoteShape');
-@include use('SomethingExtra', 'carnival:::IconNoteShape');
+@include use('ChemistryMatters', 'carnival:::IconNoteShape');
+@include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
 @include use('Figure','carnival:::FigureShape');
@@ -183,5 +231,12 @@ $ChapterIntroType: fullWidth;
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
+// Exercises
+@include use('ModuleExercises','carnival:::ExercisesModuleShape');
+@include use('MultipartQuestionExercises','carnival:::ExercisesMultipartQuestionShape');
+@include use('VisualizingChemistry','carnival:::ExercisesModuleShape');
+@include use('AdditionalProblems','carnival:::ExercisesModuleShape');
+
 // EOB
 @include use('Index', 'carnival:::IndexShape');
+@include use('AnswerKey', 'carnival:::AnswerKeyShape');

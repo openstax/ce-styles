@@ -64,12 +64,13 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
 ChapterIntro: (
     _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::physicsIntroColor"),
+    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::physicsIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::physicsIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::physicsIntroColor"),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -105,14 +106,14 @@ ChapterIntro: (
 @include add_settings((
   CheckYourUnderstandingNote:(
     _selectors: (".check-understanding"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-check.svg")) no-repeat top left,
     'NoteNumber:::margin-left': h-spacing(1),
   ),
   LinkToLearningNote:(
     _selectors: (".media-2"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
@@ -157,6 +158,7 @@ ChapterIntro: (
 @include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
@@ -241,7 +243,6 @@ ChapterIntro: (
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
@@ -299,13 +300,15 @@ ChapterIntro: (
 @include use('EocCompositeChapterTitlesWithBorder', 'carnival:::EocCompositeChapterTitlesWithBorderShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
+@include use("NotesLists", "carnival:::NotesListsShape");
+@include use("TitledLists", "carnival:::TitledListsShape");
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
