@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `Key Terms` in `organic-chemistry`
 * Style target labels
 
 ## [v1.110.0] - 2022-08-25
