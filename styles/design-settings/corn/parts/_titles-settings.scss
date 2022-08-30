@@ -33,14 +33,6 @@
             TitleNumber: (
                 color: black,
                 border-color: (_ref: 'colorMap:::appendixTitleColor'),
-                border-width: 0.3rem,
-                border-style: solid,
-                font-weight: normal,
-                width: v-spacing(5),
-                height: v-spacing(5),
-                display: table-cell,
-                text-align: center,
-                vertical-align: middle,
             ),
             TitleText: (
                 font-weight: bold,
@@ -62,8 +54,6 @@
             font-size: font-scale(2),
             line-height: 2.1rem, // must be equal to font-size
             color: white,
-            // max-width: 5.9in,
-
         ),
         TitleText: (
             font-weight: bold,
@@ -77,17 +67,7 @@
             max-width: 5.9in,
         ),
         TitleNumber: (
-            font-weight: bold,
             border-color: white,
-            border-width: 0.07rem,
-            text-transform: uppercase,
-            width: v-spacing(3),
-            height: v-spacing(3),
-            display: flex,
-            justify-content: center,
-            align-items: center,
-            font-size: font-scale(1),
-            line-height: font-scale(1), // must be equal to font-size
         ),
     ),
 ));

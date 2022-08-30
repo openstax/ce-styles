@@ -66,28 +66,25 @@ $H1--Numbered__PartText: (
   )
 );
 
-$H1--Numbered__Number: (
+$H1--Numbered__Number--Appendix: (
   _name: "TitleNumber",
   _subselector: '> .os-number',
   _properties: (
-    color: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    color: enum('ValueSet:::REQUIRED'),
+    border-width: 0.3rem,
     border-style: solid,
-    border-width: enum('ValueSet:::REQUIRED'),
     border-color: enum('ValueSet:::REQUIRED'),
-    font-weight: enum('ValueSet:::REQUIRED'),
-    text-transform: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    font-weight: normal,
     padding: 0.5rem,
     position: absolute,
     left: 0,
     top: 50%,
     transform: translate(0, -50%),
-    width:  enum('ValueSet:::REQUIRED'),
-    height:  enum('ValueSet:::REQUIRED'),
-    display: enum('ValueSet:::OPTIONAL'),
-    justify-content: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    text-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    vertical-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    width: v-spacing(5),
+    height: v-spacing(5),
+    display: table-cell,
+    text-align: center,
+    vertical-align: middle,
   )
 );
 
@@ -95,27 +92,17 @@ $H1--Numbered__Number--Chapter: (
   _name: "TitleNumber",
   _subselector: '> .os-number',
   _properties: (
-    color: enum('ValueSet:::OPTIONAL'), //used in Appendices
     border-style: solid,
-    border-width: enum('ValueSet:::REQUIRED'),
+    border-width: 0.07rem,
     border-color: enum('ValueSet:::REQUIRED'),
-    font-weight: enum('ValueSet:::REQUIRED'),
-    text-transform: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    text-transform: uppercase,
     padding: 0.5rem,
-    position: absolute,
     left: 0,
-    top: 30%,
-    transform: translate(0, -50%),
-    width:  enum('ValueSet:::REQUIRED'),
-    height:  enum('ValueSet:::REQUIRED'),
-    display: enum('ValueSet:::OPTIONAL'),
-    justify-content: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    text-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    vertical-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    font-size: enum('ValueSet:::REQUIRED'),
-    line-height: enum('ValueSet:::REQUIRED'),
-    align-self: start,
+    width: v-spacing(4),
+    height: v-spacing(4),
+    display: flex,
+    justify-content: center,
+    align-items: center,
   )
 );
 
