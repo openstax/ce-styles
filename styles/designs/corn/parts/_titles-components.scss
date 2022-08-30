@@ -23,38 +23,59 @@ $H1: (
 );
 
 // Used in Chapter, Appendices
-$H1--Numbered: (
+$H1--Numbered--Chapter: (
   _name: "H1Numbered",
   _subselector: ' > h1[data-type="document-title"]',
   _properties: (
-    display: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    position: enum('ValueSet:::REQUIRED'), //different for Chapter and Appendix
-    top: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    z-index:enum('ValueSet:::OPTIONAL'), //used in Chapters
+    display: flex,
+    position: relative,
+    top: 14rem,
+    z-index: 2,
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: enum('ValueSet:::REQUIRED'),
-    line-height: enum('ValueSet:::REQUIRED'),
-    margin-bottom: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    // max-width: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    font-size: font-scale(4),
+    line-height: font-scale(4), // must be equal to font-size
+    max-width: 5.9in,
   )
 );
 
-$H1--Numbered__Text: (
+$H1--Numbered--Appendix: (
+  _name: "H1Numbered",
+  _subselector: ' > h1[data-type="document-title"]',
+  _properties: (
+    display: table,
+    position: relative,
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(4),
+    line-height: font-scale(4), //must be the same as font size
+    margin-bottom: v-spacing(3),
+  )
+);
+
+$H1--Numbered__Text--Chapter: (
   _name: "TitleText",
   _subselector: '> .os-text',
   _properties: (
-    display: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    display: flex,
     font-weight: bold,
     text-transform: uppercase,
-    position: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    margin-left: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    padding-left: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    filter: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    prince-filter-resolution: enum('ValueSet:::OPTIONAL'), //used only in Chapter Titles for drop-shadow filter    // max-width: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    max-width: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    justify-content: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    margin-left: 8rem,
+    filter: enum('ValueSet:::REQUIRED'),
+    prince-filter-resolution: 300dpi,
+    justify-content: center,
+    align-items: center,
+  )
+);
+
+$H1--Numbered__Text--Appendix: (
+  _name: "TitleText",
+  _subselector: '> .os-text',
+  _properties: (
+    display: table-cell,
+    font-weight: bold,
+    text-transform: uppercase,
+    padding-left: h-spacing(6),
   )
 );
 

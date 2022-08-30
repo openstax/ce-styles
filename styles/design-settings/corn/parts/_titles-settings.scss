@@ -22,22 +22,12 @@
                 color: (_ref: 'colorMap:::moduleTitleColor'),
             ),
             H1Numbered: (
-                display: table,
-                position: relative,
                 color: (_ref: 'colorMap:::appendixTitleColor'),
                 font-family: (_ref: 'typography:::titleFont'),
-                font-size: font-scale(4),
-                line-height: font-scale(4), //must be the same as font size
-                margin-bottom: v-spacing(3),
             ),
             TitleNumber: (
                 color: black,
                 border-color: (_ref: 'colorMap:::appendixTitleColor'),
-            ),
-            TitleText: (
-                font-weight: bold,
-                display: table-cell,
-                padding-left: h-spacing(6),
             ),
         ),
 ));
@@ -46,25 +36,13 @@
     ChapterTitles:(
         _selectors: ('[data-type="chapter"]'),
         H1Numbered: (
-            display: flex,
-            position: relative,
-            top: 14rem,
-            z-index: 2,
+            color: white,
             font-family: (_ref: 'typography:::titleFont'),
             font-size: font-scale(2),
             line-height: 2.1rem, // must be equal to font-size
-            color: white,
         ),
         TitleText: (
-            font-weight: bold,
             filter: drop-shadow(0.18rem 0.18rem 0.36rem #000),
-            position: relative,
-            margin-left: 8rem,
-            prince-filter-resolution: 300dpi,
-            display: flex,
-            justify-content: center,
-            align-items: center,
-            max-width: 5.9in,
         ),
         TitleNumber: (
             border-color: white,

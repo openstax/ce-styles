@@ -6,10 +6,10 @@
     _components: (
         map-merge($Chapter__Container, (
             _components: (
-              map-merge($H1--Numbered, (
+              map-merge($H1--Numbered--Chapter, (
                 _components: (
                     $H1--Numbered__PartText,
-                    $H1--Numbered__Text,
+                    $H1--Numbered__Text--Chapter,
                     $H1--Numbered__Number--Chapter,
                     )
                 )),
@@ -59,10 +59,10 @@
                 )),
                 map-merge($Appendix__Container, (
                     _components: (
-                        map-merge($H1--Numbered, (
+                        map-merge($H1--Numbered--Appendix, (
                             _components: (
                                 $H1--Numbered__PartText,
-                                $H1--Numbered__Text,
+                                $H1--Numbered__Text--Appendix,
                                 $H1--Numbered__Number--Appendix,
                             )
                         )),

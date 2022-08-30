@@ -2298,8 +2298,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   z-index: 2;
   color: white;
   font-family: Roboto Slab, serif, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 2.1rem;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
+  max-width: 5.9in;
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-part-text {
@@ -2310,11 +2311,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: flex;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
   margin-left: 8rem;
   filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
   prince-filter-resolution: 300dpi;
-  max-width: 5.9in;
   justify-content: center;
   align-items: center;
 }
