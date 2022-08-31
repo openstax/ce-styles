@@ -240,12 +240,9 @@ figure .scaled-down-30 ~ .os-caption-container {
 }
 
 .os-figure.has-mechanism-figure .os-caption-title-container {
-  display: table-caption;
-  padding-top: 1rem;
   color: #424242;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
-  caption-side: bottom;
 }
 
 .os-figure.has-mechanism-figure .os-caption-title-container > .os-title {
@@ -261,16 +258,13 @@ figure .scaled-down-30 ~ .os-caption-container {
 }
 
 .os-figure.has-mechanism-figure .os-caption-text-container {
-  display: table-caption;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: #424242;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
-  caption-side: bottom;
 }
 
 img {
-  max-width: 100%;
   margin-top: 1em;
   margin-bottom: 1em;
 }
