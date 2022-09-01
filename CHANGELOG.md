@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `MultipartQuestionExercises` to be displayed in line
 * Style `Eoc Composite Page Titles` in `world-history`
 * Style `Key Terms` in `organic-chemistry`
 * Style target labels
