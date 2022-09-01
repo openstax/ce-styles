@@ -2096,13 +2096,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=chapter] > h1[data-type=document-title] {
+  display: flex;
   position: relative;
   top: 14rem;
   z-index: 2;
   color: white;
   font-family: Roboto Slab, serif, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
+  max-width: 5.9in;
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-part-text {
@@ -2110,27 +2112,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-text {
+  display: flex;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
   margin-left: 8rem;
   filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
   prince-filter-resolution: 300dpi;
+  justify-content: center;
+  align-items: center;
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-number {
   border-style: solid;
   border-width: 0.07rem;
   border-color: white;
-  font-weight: bold;
   text-transform: uppercase;
   padding: 0.5rem;
-  position: absolute;
   left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2.8rem;
+  height: 2.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2198,8 +2198,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page]:not(.introduction).appendix > h1[data-type=document-title] > .os-number {
   color: black;
-  border-style: solid;
   border-width: 0.3rem;
+  border-style: solid;
   border-color: #1E7E91;
   font-weight: normal;
   padding: 0.5rem;

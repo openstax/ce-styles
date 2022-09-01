@@ -1,9 +1,3 @@
-//-------------------------------------------------------------------------------------------
-//ToDo: delete this component when ChapterModuleTitlesShape be removed
-$Module__Container: empty_wrapper(Module, ' > [data-type="page"]:not(.introduction)');
-
-//-------------------------------------------------------------------------------------------
-
 //Empty Containers
 $Page__Container: empty_wrapper(PageContainer, '');
 $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
@@ -122,6 +116,19 @@ $H2TextHeader--ChapterIntro: (
         margin: "0 .5rem 0 0",
         font-weight: 700,
     )
+);
+
+$H2--Module: (
+  _name:"H2ModuleTitle",
+  _subselector: ' > h2[data-type="document-title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
 );
 
 // H3 titles

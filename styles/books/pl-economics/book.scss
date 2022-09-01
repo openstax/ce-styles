@@ -178,6 +178,7 @@ $bandColor: #217867;
   ChapterIntroWithBlockIntroHeader:(
     _selectors: ('.introduction'),
     'H2IntroTextHeaderBlock:::color': (_ref: "colorMap:::introContentHeaderColorPlEconomics"),
+    'H3Title:::color': (_ref: "colorMap:::titlePlEconomicsColor"),
     'ChapterSplashFigureWrapper:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgPlEconomicsColor"),
     'CaptionTitleLabel:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
     'CaptionNumber:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
@@ -192,8 +193,8 @@ $bandColor: #217867;
 ));
 
 @include add_settings((
-  LearningObjectivesAbstract:(
-    _selectors: ('[data-type="page"] [data-type="abstract"]'),
+  LearningObjectivesNote:(
+    _selectors: ('[data-type="page"] [data-type="note"].learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColorPlEconomics'),
   ),
 ));
@@ -206,7 +207,7 @@ $bandColor: #217867;
 
 
 @include use('BookRoot', "common:::BookRoot");
-@include use('LearningObjectivesAbstract', 'cosmos:::LearningObjectivesShape');
+@include use('LearningObjectivesNote', 'cosmos:::ChapterObjectivesShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
