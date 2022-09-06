@@ -117,6 +117,14 @@ div.handbook {
   page-break-before: avoid;
 }
 
+.os-caption-title-container {
+  page-break-after: avoid;
+}
+
+.os-caption-text-container {
+  page-break-after: avoid;
+}
+
 [data-type=equation] {
   page-break-inside: avoid;
 }
@@ -1367,13 +1375,13 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   text-decoration: none;
 }
 
-.os-figure:not(.has-splash) > figure {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
 
-.os-figure:not(.has-splash) .os-caption-container {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container {
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -1382,25 +1390,25 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   line-height: 1rem;
 }
 
-.os-figure:not(.has-splash) .os-caption-container > .os-title-label {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-title-label {
   font-family: Mulish, sans-serif;
   font-weight: bold;
   color: #C31427;
   text-transform: uppercase;
 }
 
-.os-figure:not(.has-splash) .os-caption-container > .os-number {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-number {
   font-family: Mulish, sans-serif;
   font-weight: bold;
   color: #C31427;
 }
 
-.os-figure:not(.has-splash) .os-caption-container > .os-title {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-title {
   font-family: Mulish, sans-serif;
   font-weight: bold;
 }
 
-.os-figure:not(.has-splash) .os-caption-container > .os-caption {
+.os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
 }
 

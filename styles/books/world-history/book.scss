@@ -1,5 +1,5 @@
 $PagesWithBands: (
-  (pageName: eoc, firstSelector: '.os-eoc.os-assessments-container', generalSelector: '.os-eoc'),
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
@@ -140,6 +140,7 @@ $bandColor: #DCB83D;
 @include use('ChapterTitlesBlue', 'cosmos:::ChapterTitlesShape');
 @include use('EobTitlesBlue', 'cosmos:::EobTitlesShape');
 @include use('EocCompositeChapterTitlesBlue', 'cosmos:::EocCompositeChapterTitlesShape');
+@include use('EocCompositePageTitlesBlue', 'cosmos:::EocCompositePageTitlesShape');
 
 // Tables
 @include use('DefaultTableBlue', 'cosmos:::BasicTableShape');
