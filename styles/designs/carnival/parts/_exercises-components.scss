@@ -1,5 +1,12 @@
 $ExerciseModule__Container: empty_wrapper(ExerciseModuleContainer, '');
-$ExerciseMultipartQuestion__Container: empty_wrapper(ExerciseMultipartQuestionContainer, '');
+
+$ExerciseMultipartQuestion__Container: (
+    _name: "ExerciseMultipartQuestionContainer",
+    _subselector: '',
+    _properties: (
+        display: enum('ValueSet:::OPTIONAL'), // used in inline exercises
+    )
+);
 
 $Exercise__Container: (
     _name: "ExerciseContainer",
@@ -89,6 +96,7 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _subselector: " > .os-problem-container",
     _properties:(
         display: table,
+        margin-right: h-spacing(1),
     )
 );
 

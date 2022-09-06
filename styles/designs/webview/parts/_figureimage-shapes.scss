@@ -31,6 +31,18 @@
                 ))
             ),
         )),
+        map-merge($FigureClass--Mechanism, (
+            _components: (
+                map-merge($Caption__Title__Container--MechanismFigure, (
+                    _components: (
+                        $Caption__Title--Figure,
+                        $Caption__TitleLabel--Figure,
+                        $Caption__Number--Figure
+                    ),
+                )),
+                $Caption__Text__Container--MechanismFigure,
+            ),
+        )),
         $Image,
         $Image--InMedia,
         map-merge($NotFigure__Container, (
@@ -49,3 +61,4 @@
         ))
     ),
 ));
+

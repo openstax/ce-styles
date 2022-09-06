@@ -234,6 +234,36 @@ figure .scaled-down-30 ~ .os-caption-container {
   font-weight: bold;
 }
 
+.os-figure.has-mechanism-figure {
+  display: table;
+  margin: 3rem auto;
+}
+
+.os-figure.has-mechanism-figure .os-caption-title-container {
+  color: #424242;
+  font-size: calc(1.2rem * var(--content-text-scale));
+  line-height: calc(1.7rem * var(--content-text-scale));
+}
+
+.os-figure.has-mechanism-figure .os-caption-title-container > .os-title {
+  font-weight: bold;
+}
+
+.os-figure.has-mechanism-figure .os-caption-title-container > .os-title-label {
+  font-weight: bold;
+}
+
+.os-figure.has-mechanism-figure .os-caption-title-container > .os-number {
+  font-weight: bold;
+}
+
+.os-figure.has-mechanism-figure .os-caption-text-container {
+  padding-bottom: 1rem;
+  color: #424242;
+  font-size: calc(1.2rem * var(--content-text-scale));
+  line-height: calc(1.7rem * var(--content-text-scale));
+}
+
 img {
   max-width: 100%;
   margin-top: 1em;
