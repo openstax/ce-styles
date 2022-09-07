@@ -1,6 +1,8 @@
-$Equation__Container: (
-    _name: "EquationContainer",
-    _subselector: "",
+$Equation__Container: empty_wrapper(EquationContainer, '');
+
+$Equation__Wrapper: (
+    _name: "EquationWrapper",
+    _subselector: " > div",
     _properties: (
         display: flex,
         align-items: center,

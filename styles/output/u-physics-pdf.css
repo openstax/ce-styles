@@ -1541,7 +1541,7 @@ nav#toc > ol > .os-toc-index > a::after {
   box-decoration-break: slice;
 }
 
-[data-type=note].equation-callout > [data-type=equation] {
+[data-type=note].equation-callout > [data-type=equation] > {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -1550,7 +1550,7 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0;
 }
 
-[data-type=note].equation-callout > [data-type=equation] > .os-equation-number {
+[data-type=note].equation-callout > [data-type=equation] > > .os-equation-number {
   position: absolute;
   right: 0;
   top: 50%;
@@ -1563,7 +1563,7 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-right: 0.7rem;
 }
 
-[data-type=equation]:not(.unnumbered) {
+[data-type=equation]:not(.unnumbered) > div {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -1572,7 +1572,7 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0.7rem;
 }
 
-[data-type=equation]:not(.unnumbered) > .os-equation-number {
+[data-type=equation]:not(.unnumbered) > div > .os-equation-number {
   position: absolute;
   right: 0;
   top: 50%;
@@ -1585,7 +1585,7 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-right: 0.7rem;
 }
 
-[data-type=equation].unnumbered {
+[data-type=equation].unnumbered > div {
   display: flex;
   align-items: center;
   justify-content: center;

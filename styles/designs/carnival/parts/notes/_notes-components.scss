@@ -81,9 +81,9 @@ $Note--Boxed--Condensed__Container: (
   ),
 );
 
-$Note--Boxed--Condensed__Equation__Container: (
-  _name: "CondensedEquationContainer",
-  _subselector: " > [data-type="equation"]",
+$Note--Boxed--Condensed__Equation__Wrapper: (
+  _name: "CondensedEquationWrapper",
+  _subselector: ' > [data-type="equation"] > ',
   _properties: (
     position: relative,
     display: flex,
