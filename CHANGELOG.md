@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style additional `div` in eqautions
 * Create `Mechanism Figure` shape to cover figures with class `mechanism-figure` in `organic-chemistry`
 * Style `MultipartQuestionExercises` to be displayed in line
 * Style `Eoc Composite Page Titles` in `world-history`
