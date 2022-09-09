@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.111.0] - 2022-09-09
+
 * Change `Chapter Outline` font size & boldness in only `organic-chemistry`
 * Create `Mechanism Figure` shape to cover figures with class `mechanism-figure` in `organic-chemistry`
 * Style `MultipartQuestionExercises` to be displayed in line
