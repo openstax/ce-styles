@@ -98,8 +98,8 @@ $ChapterOutline__Container: (
     _subselector: '',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(0),
-        font-weight: 500,
+        font-weight: (enum('ValueSet:::OPTIONAL'), 500),
+        font-size: (enum('ValueSet:::OPTIONAL'), font-scale(0)),
         line-height: line-height(0),
         width: 6.5in, // Width of the page minus margins
         margin: "0 0 1.5rem 0",
