@@ -35,6 +35,8 @@
     FigureImage: (
         _selectors: (''),
         'CaptionContainerFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTitleContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTextContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
     ),
 ));
 
@@ -278,6 +280,7 @@
 @include use('EobPageTitles', 'webview:::EobPageTitlesShape');
 // Figures
 @include use('FigureImage', 'webview:::FigureImageShape');
+
 // Terms
 @include use('Terms', 'webview:::TermsShape');
 // Lists
