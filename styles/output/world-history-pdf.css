@@ -1254,7 +1254,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   padding-left: 0.3rem;
 }
 
-[data-type=page] section.learning-objectives > h3[data-type=title] {
+[data-type=page] > .learning-objectives > h3[data-type=title] {
   color: #8B693A;
   font-family: Archivo, sans-serif, StixGeneral;
   font-size: 1rem;
@@ -1263,23 +1263,20 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   text-transform: uppercase;
 }
 
-[data-type=page] section.learning-objectives > p {
+[data-type=page] > .learning-objectives > p {
   margin-bottom: 0;
 }
 
-[data-type=page] section.learning-objectives > ul.os-abstract {
-  list-style-type: none;
+[data-type=page] > .learning-objectives > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
 }
 
-[data-type=page] section.learning-objectives > ul.os-abstract > li {
-  display: flex;
+[data-type=page] > .learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=page] section.learning-objectives > ul.os-abstract > li span.os-abstract-token {
-  font-weight: 700;
+[data-type=page] > .learning-objectives > ul:not([data-labeled-item=true]) > li::marker {
   color: #8B693A;
-  padding-right: 8px;
 }
 
 .centered-text {

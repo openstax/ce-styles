@@ -22,6 +22,7 @@ $Caption__Title__Container:(
         background-color: enum('ValueSet:::REQUIRED'),
         line-height: 1rem,
         padding: v-spacing(1),
+        display: table-caption,
     )
 );
 
@@ -37,6 +38,7 @@ $Caption__Text__Container:(
         border-left-color: enum('ValueSet:::REQUIRED'),
         line-height: 1rem,
         padding: v-spacing(1),
+        display: table-caption,
     )
 );
 
@@ -63,6 +65,7 @@ $Caption__Container--Table: (
         display: table-caption,
         caption-side: bottom,
         prince-caption-page: all,
+        font-size: font-scale(-1),
     )
 );
 

@@ -43,7 +43,6 @@ $Figure--Mechanism:(
         margin-right: 0,
         margin-left: 0,
         margin-top: 0,
-        width: 100%,
         position: relative,
         z-index: -2,
         top: -3px,
@@ -64,8 +63,8 @@ $Image--Mechanism: (
     _name: "MechanismImage",
     _subselector: " > img",
     _properties:(
-        width: 100%,
-        margin-bottom: v-spacing(1)
+        max-width: 100%,
+        margin-bottom: v-spacing(1),
     )
 );
 
