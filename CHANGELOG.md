@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `NumberedEquations` in `statistics`
 * Style `H4` in Chapter Intro from `corn`
 * Style additional `div` in eqautions
 * Change way of displaying `mechanism-figures` in `organic-chemistry`
