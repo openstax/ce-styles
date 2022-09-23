@@ -286,9 +286,9 @@ $bandColor: #9028A3;
 
 // Inline colored text throughout the book
 @include add_settings((
-    EmphasizedColoredText: (
-        _selectors: ('.colored-text'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::emphasizedTextColor'),
+    RedColoredText: (
+        _selectors: (':not(.os-term) > .red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::redTextColor'),
     )
 ));
 
@@ -303,7 +303,7 @@ $bandColor: #9028A3;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
-@include use('EmphasizedColoredText', 'common:::ColoredText');
+@include use('RedColoredText', 'common:::ColoredText');
 @include use('Equation', 'cardboard:::EquationShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 @include use('UnitOpener', 'cardboard:::UnitOpenerShape');
