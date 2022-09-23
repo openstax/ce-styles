@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix selector for scaled-down figures in `FigureImage` for webview
+
 ## [v1.112.1] - 2022-09-23
 
 * add `dummy` style to match `dummy` recipe
