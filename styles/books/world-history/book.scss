@@ -107,6 +107,15 @@ $bandColor: #DCB83D;
 ));
 
 @include add_settings((
+    LearningObjectivesColoredDot:(
+        _selectors: ('[data-type="page"] > .learning-objectives'),
+        'ListDot:::color': (_ref: "colorMap:::learningObjectivesTitleColor"),
+        'H3ObjectivesTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'H3ObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColor'),
+    ),
+));
+
+@include add_settings((
   ModuleWithoutTitleLinks: (
     _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-check-understanding-container',
     '.os-eoc.os-reflection-questions-container', '.os-eoc.os-visual-questions-container',
@@ -120,7 +129,7 @@ $bandColor: #DCB83D;
 @include use('TocUnitBlue', 'cosmos:::TocUnitShape');
 @include use('ChapterIntro', 'cosmos:::ChapterIntroShape');
 @include use('ChapterOutline', 'cosmos:::ChapterOutlineShape');
-@include use('LearningObjectivesNumbered', 'cosmos:::LearningObjectivesNumberedShape');
+@include use('LearningObjectivesColoredDot', 'cosmos:::LearningObjectivesColoredDotShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');

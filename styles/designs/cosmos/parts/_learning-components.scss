@@ -32,7 +32,7 @@ $Objectives__Paragraph: (
 );
 
 $LearningObjectives__UnorderedList--WithoutBullets: (
-  _name: 'UnorderedListNumbered', 
+  _name: 'UnorderedListNumbered',
   _subselector: ' > ul.os-abstract',
   _properties: (
     list-style-type: none,
@@ -40,7 +40,7 @@ $LearningObjectives__UnorderedList--WithoutBullets: (
 );
 
 $LearningObjectives__ListItem--Flex: (
-  _name: 'ListItemFlex', 
+  _name: 'ListItemFlex',
   _subselector: ' > li',
   _properties: (
     display: flex,
@@ -48,11 +48,27 @@ $LearningObjectives__ListItem--Flex: (
   )
 );
 
+$LearningObjectives__ListItem: (
+  _name: 'ListItemFlex',
+  _subselector: ' > li',
+  _properties: (
+    max-width: 5.9in,
+  )
+);
+
 $ChapterObjectives__ListItem: (
-  _name: 'ListItem', 
+  _name: 'ListItem',
   _subselector: ' > li',
   _properties: (
     font-family: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$Objectives__List__Dot: (
+  _name: 'ListDot',
+  _subselector: '::marker',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
   )
 );
 

@@ -13,6 +13,26 @@
   ),
 ));
 
+@include create_shape('cosmos:::LearningObjectivesColoredDotShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        map-merge($UnorderedList--FirstLevel, (
+          _components: (
+            map-merge($LearningObjectives__ListItem, (
+              _components: (
+                $Objectives__List__Dot,
+              ),
+            ))
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
 @include create_shape('cosmos:::LearningObjectivesNumberedShape', (
   _components: (
     map-merge($Objectives__Container, (
@@ -34,7 +54,7 @@
 ));
 
 // Used in economics books
-// In pl-economics used also for Learning Objectives. 
+// In pl-economics used also for Learning Objectives.
 // To do: change name to more general, e.g ObjectivesNote
 
 @include create_shape('cosmos:::ChapterObjectivesShape', (
