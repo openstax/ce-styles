@@ -27,6 +27,10 @@
             font-size: font-scale(3),
             //color is book specific set in book.scss file
         ),
+        H4Title: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::moduleTitleColor'), // Todo: should be book specific; set proper colors during refactoring
+        ),
     )
 ));
 

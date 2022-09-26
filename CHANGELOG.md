@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `NumberedEquations` in `statistics`
+* Style `H4` in Chapter Intro from `corn`
+
 ## [v1.112.1] - 2022-09-23
 
 * add `dummy` style to match `dummy` recipe
