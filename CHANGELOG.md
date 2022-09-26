@@ -8,9 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Style `NumberedEquations` in `statistics`
 * Style `H4` in Chapter Intro from `corn`
+
+## [v1.112.1] - 2022-09-23
+
+* add `dummy` style to match `dummy` recipe
+
+## [v1.112.0] - 2022-09-23
+
 * Style additional `div` in eqautions
 * Change way of displaying `mechanism-figures` in `organic-chemistry`
 * Update `ColoredText` selectors in Accounting and Marketing
+
 
 ## [v1.111.0] - 2022-09-09
 
