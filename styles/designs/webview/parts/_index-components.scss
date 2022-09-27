@@ -1,0 +1,43 @@
+$Index__Container: (
+  _name: "IndexContainer",
+  _subselector: '',
+  _properties: (
+    margin-top: 1.5rem,
+  )
+);
+
+$Index__Group: (
+  _name: "IndexGroup",
+  _subselector: ' > .group-by',
+  _properties: (
+    margin-bottom: 1.5rem,
+  )
+);
+
+$Index__Group__Label: (
+  _name: "IndexGroupLabel",
+  _subselector: ' > .group-label',
+  _properties: (
+    margin-bottom: 1rem,
+    font-size: scaled_size(2.1rem),
+    font-weight: bold,
+    display: block,
+  )
+);
+
+$Index__Term__Container: (
+  _name: "IndexTermContainer",
+  _subselector: ' > .os-index-item',
+  _properties: (
+    margin-bottom: 0.5rem,
+  )
+);
+
+$Index__Term__Text: (
+  _name: "IndexTermText",
+  _subselector: ' > .os-term',
+  _properties: (
+    padding-right: 0.5rem,
+    font-weight: bold,
+  )
+);
