@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `Index` on `webview`
 * Fix long equations on `webview`
 * Fix selector for scaled-down figures in `FigureImage` for webview
 * Style `NumberedEquations` in `statistics`
