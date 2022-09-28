@@ -2115,3 +2115,27 @@ p.student-sample {
 [data-type=switch] > :not([data-media~=screen]) {
   display: none;
 }
+
+.os-index-container {
+  margin-top: 1.5rem;
+}
+
+.os-index-container > .group-by {
+  margin-bottom: 1.5rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  margin-bottom: 1rem;
+  font-size: calc(2.1rem * var(--content-text-scale));
+  font-weight: bold;
+  display: block;
+}
+
+.os-index-container > .group-by > .os-index-item {
+  margin-bottom: 0.5rem;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 0.5rem;
+  font-weight: bold;
+}
