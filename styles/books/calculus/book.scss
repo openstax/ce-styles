@@ -116,6 +116,9 @@ $bandColor: #093D4C;
   AnswerKeyExercisesSolutionLists: (
     _selectors: ('.os-eob.os-solutions-container [data-type="solution"]'),
   ),
+  KeyEquations:(
+      _selectors: (".os-key-equations-container"),
+  ),
 ));
 
 @include add_settings((
@@ -198,6 +201,9 @@ $bandColor: #093D4C;
 
 //Section Exercises
 @include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
+
+//Key Equations spacing
+@include use('KeyEquations','corn:::ModuleWithUnstyledTableShape');
 
 // EoC Exercises
 @include use('ReviewExercises', 'corn:::ExercisesModuleShape');
