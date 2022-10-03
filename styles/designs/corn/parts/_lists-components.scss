@@ -12,6 +12,14 @@ $DivWrapper--FourthLevel: empty_wrapper(ThirdLevel, ' > div > div > div > div');
 
 $ParaWrapper--FirstLevel: empty_wrapper(FirstLevel, ' > p');
 
+$SectionWrapper--FirstLevelNoBottomMargin: (
+    _name: "FirstLevel",
+    _subselector: ' > section',
+    _properties:(
+        margin-bottom: 0,
+    )
+);
+
 // Basic Lists
 $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
