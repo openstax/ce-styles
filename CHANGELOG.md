@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove spaces between tables in Key Equations subsections in `cardboard`
 * Change way of displaying `mechanism-figures` in `organic-chemistry`
 * Update `ColoredText` selectors in Accounting and Marketing
 
