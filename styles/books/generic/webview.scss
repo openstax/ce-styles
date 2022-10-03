@@ -274,6 +274,12 @@
   )
 ));
 
+@include add_settings((
+  Index: (
+      _selectors: (".os-index-container"),
+  )
+));
+
 // Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
@@ -331,3 +337,5 @@
 @include use('TeacherMaterial', 'common:::Hidden');
 // Hide Iframe links
 @include use('NonScreenElements', 'common:::Hidden');
+// EOC
+@include use('Index', 'webview:::IndexShape');

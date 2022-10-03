@@ -1158,7 +1158,7 @@ a[role=doc-noteref] {
   padding-right: 0.16rem;
 }
 
-[data-type=equation].unnumbered {
+[data-type=equation].unnumbered > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1569,6 +1569,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
+}
+
+.introduction > .intro-body > .intro-text > section > section > h4[data-type=title] {
+  font-family: Roboto Slab, serif, StixGeneral;
+  color: #1E7E91;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .os-chapter-outline {

@@ -2,7 +2,11 @@
 
 @include create_shape('carnival:::EquationShape', (
   _components: (
-    $Equation__Container,
+    map-merge($Equation__Container, (
+        _components: (
+          $Equation__Wrapper,
+        ),
+    ))
   ),
 ));
 
@@ -10,7 +14,11 @@
   _components: (
     map-merge($Equation__Container, (
         _components: (
-          $Equation__Number,
+          map-merge($Equation__Wrapper, (
+              _components: (
+                $Equation__Number,
+              ),
+          ))
         ),
     ))
   ),

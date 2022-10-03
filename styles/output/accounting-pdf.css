@@ -3873,14 +3873,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-[data-type=equation].unnumbered {
+[data-type=equation].unnumbered > div {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.7rem;
 }
 
-[data-type=equation]:not(.unnumbered) {
+[data-type=equation]:not(.unnumbered) > div {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -3889,7 +3889,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-[data-type=equation]:not(.unnumbered) > .os-equation-number {
+[data-type=equation]:not(.unnumbered) > div > .os-equation-number {
   position: absolute;
   right: 0;
   top: 50%;

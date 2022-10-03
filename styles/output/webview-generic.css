@@ -188,22 +188,22 @@ figure img {
   margin: 0;
 }
 
-figure .scaled-down {
+figure.scaled-down {
   width: 60%;
   margin: auto;
 }
 
-figure .scaled-down ~ .os-caption-container {
+figure.scaled-down ~ .os-caption-container {
   width: 60%;
   margin: auto;
 }
 
-figure .scaled-down-30 {
+figure.scaled-down-30 {
   width: 30%;
   margin: auto;
 }
 
-figure .scaled-down-30 ~ .os-caption-container {
+figure.scaled-down-30 ~ .os-caption-container {
   width: 30%;
   margin: auto;
 }
@@ -2025,23 +2025,27 @@ pre[data-type=code].centered-code {
 }
 
 .equation {
+  overflow: auto !important;
+}
+
+.equation > div {
   display: table;
   width: 100%;
 }
 
-.equation [data-type=title] {
+.equation > div [data-type=title] {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.equation .os-equation-number {
+.equation > div .os-equation-number {
   display: table-cell;
   width: 5%;
   vertical-align: middle;
 }
 
-.equation .os-equation-number .os-number {
+.equation > div .os-equation-number .os-number {
   padding: 5px;
   border-color: #000;
   border-style: solid;
@@ -2051,23 +2055,27 @@ pre[data-type=code].centered-code {
 }
 
 [data-type=equation] {
+  overflow: auto !important;
+}
+
+[data-type=equation] > div {
   display: table;
   width: 100%;
 }
 
-[data-type=equation] [data-type=title] {
+[data-type=equation] > div [data-type=title] {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-[data-type=equation] .os-equation-number {
+[data-type=equation] > div .os-equation-number {
   display: table-cell;
   width: 5%;
   vertical-align: middle;
 }
 
-[data-type=equation] .os-equation-number .os-number {
+[data-type=equation] > div .os-equation-number .os-number {
   padding: 5px;
   border-color: #000;
   border-style: solid;
@@ -2106,4 +2114,28 @@ p.student-sample {
 
 [data-type=switch] > :not([data-media~=screen]) {
   display: none;
+}
+
+.os-index-container {
+  margin-top: 1.5rem;
+}
+
+.os-index-container > .group-by {
+  margin-bottom: 1.5rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  margin-bottom: 1rem;
+  font-size: calc(2.1rem * var(--content-text-scale));
+  font-weight: bold;
+  display: block;
+}
+
+.os-index-container > .group-by > .os-index-item {
+  margin-bottom: 0.5rem;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 0.5rem;
+  font-weight: bold;
 }
