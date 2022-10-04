@@ -24,3 +24,23 @@
         )),
     )
 ));
+
+// Used to remove extra spaces between tables in sections like Key-Equations in calculus
+
+@include create_shape('corn:::ModuleWithUnstyledTableShape',(
+    _components:(
+        map-merge($Module__Container,(
+            _components:(
+                map-merge($SectionWrapper--FirstLevelNoBottomMargin,(
+                    _components:(
+                        map-merge($Table__Container--ModuleWithUnstyledTable,(
+                            _components:(
+                                $Table--ModuleWithUnstyledTable,
+                            ),
+                        )),
+                    ),
+                )),
+            ),
+        )),
+    )
+));

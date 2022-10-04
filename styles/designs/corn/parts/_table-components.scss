@@ -210,8 +210,8 @@ $Table--TopSpacing:(
     _properties: (
         margin-top: 1rem,
     )
-); 
-       
+);
+
 // Used in two columns modules
 $Table--FromTwoColumnsModule: (
     _name: "TableFromTwoColumnsModule",
@@ -220,5 +220,23 @@ $Table--FromTwoColumnsModule: (
       table-layout: fixed,
       max-width: 100%,
       break-inside: avoid-column,
+    )
+);
+
+// used for tables in same section like Key Equations in Calc
+
+$Table__Container--ModuleWithUnstyledTable: (
+    _name: "TableContainerModuleWithUnstyledTable",
+    _subselector: " > .os-table.os-unstyled-container",
+    _properties: (
+        margin-bottom: 0,
+    )
+);
+
+$Table--ModuleWithUnstyledTable: (
+    _name: "TableModuleWithUnstyledTable",
+    _subselector: " > table.unstyled",
+    _properties: (
+        margin-bottom: 0,
     )
 );
