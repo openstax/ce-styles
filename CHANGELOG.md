@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.113.0] - 2022-10-07
+
+* Create styles for `python` book
+* Remove spaces between tables in Key Equations subsections in `corn`
+* Style `Index` on `webview`
+* Fix long equations on `webview`
+* Fix selector for scaled-down figures in `FigureImage` for webview
+* Style `NumberedEquations` in `statistics`
+* Style `H4` in Chapter Intro from `corn`
+
 ## [v1.112.1] - 2022-09-23
 
 * add `dummy` style to match `dummy` recipe

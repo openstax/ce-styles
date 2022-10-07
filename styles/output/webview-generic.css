@@ -188,22 +188,22 @@ figure img {
   margin: 0;
 }
 
-figure .scaled-down {
+figure.scaled-down {
   width: 60%;
   margin: auto;
 }
 
-figure .scaled-down ~ .os-caption-container {
+figure.scaled-down ~ .os-caption-container {
   width: 60%;
   margin: auto;
 }
 
-figure .scaled-down-30 {
+figure.scaled-down-30 {
   width: 30%;
   margin: auto;
 }
 
-figure .scaled-down-30 ~ .os-caption-container {
+figure.scaled-down-30 ~ .os-caption-container {
   width: 30%;
   margin: auto;
 }
@@ -2025,7 +2025,7 @@ pre[data-type=code].centered-code {
 }
 
 .equation {
-  overflow: auto;
+  overflow: auto !important;
 }
 
 .equation > div {
@@ -2055,7 +2055,7 @@ pre[data-type=code].centered-code {
 }
 
 [data-type=equation] {
-  overflow: auto;
+  overflow: auto !important;
 }
 
 [data-type=equation] > div {
@@ -2114,4 +2114,28 @@ p.student-sample {
 
 [data-type=switch] > :not([data-media~=screen]) {
   display: none;
+}
+
+.os-index-container {
+  margin-top: 1.5rem;
+}
+
+.os-index-container > .group-by {
+  margin-bottom: 1.5rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  margin-bottom: 1rem;
+  font-size: calc(2.1rem * var(--content-text-scale));
+  font-weight: bold;
+  display: block;
+}
+
+.os-index-container > .group-by > .os-index-item {
+  margin-bottom: 0.5rem;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 0.5rem;
+  font-weight: bold;
 }
