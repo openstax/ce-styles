@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style headers in `python`
 * Create styles for `python` book
 * Remove spaces between tables in Key Equations subsections in `corn`
 * Style `Index` on `webview`

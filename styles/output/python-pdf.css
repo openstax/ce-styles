@@ -797,3 +797,167 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   display: inline-block;
   margin-left: 8px;
 }
+
+[data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
+  display: table;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
+  display: none;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
+  display: table-cell;
+  padding-left: 16px;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #344456;
+  padding: 0.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: table-cell;
+  text-align: center;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 {
+  display: table;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.44rem;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
+  display: table-cell;
+  padding-left: 8px;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #0DC0DC;
+  padding: 0.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: table-cell;
+  text-align: center;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=composite-chapter] > h1 {
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=composite-chapter] > div > h2 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=composite-chapter] > div > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-eob[data-type=composite-page] > h1 {
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  column-span: all;
+  font-weight: normal;
+}
+
+.os-eob[data-type=composite-page] > div > h2 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}

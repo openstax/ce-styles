@@ -9,5 +9,12 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/folio';
 
+// Settings
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
+
+//Titles
+@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
+@include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
