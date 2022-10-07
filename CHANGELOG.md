@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `Learning Objectives` in `python`
 * Style Introduction i `python`
 * Style headers in `python`
 * Create styles for `python` book
