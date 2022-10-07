@@ -11,10 +11,43 @@ $bandColor: #24739E;
 
 // Settings
 
+@include add_settings((
+  ChapterIntro: (
+    _selectors: (".introduction"),
+    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-intro2.svg")) no-repeat top left,
+    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
+    'ChapterSplashMediaBar:::background-color': (_ref: "colorMap:::chapterTitleBgColor"),
+    'ChapterSplashMediaBar:::border-top-color': (_ref: "colorMap:::chapterTitleBorderColor"),
+  )
+));
+
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterTitles: (
+  _selectors: ('[data-type="chapter"]'),
+  'H1ChapterIntroNumbered:::color': (_ref: 'colorMap:::chapterTitleColor'),
+  'H1ChapterIntroTitleNumber:::color': (_ref: 'colorMap:::chapterTitleNumberColor'),
+  'H1ChapterIntroIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-introskyline.svg")) no-repeat top left,
+  'H1ChapterIntroIcon:::bottom': 0.1rem,
+  'H1ChapterIntroIcon:::left': 0rem,
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 
+// Chapter Intro
+@include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
+@include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
 //Titles
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
