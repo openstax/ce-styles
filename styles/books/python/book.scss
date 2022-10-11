@@ -39,6 +39,56 @@ $bandColor: #24739E;
   )
 ));
 
+@include add_settings((
+  ConceptsInPracticeExercises: (
+    _selectors: ('.learning-questions'),
+    'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+    ),
+));
+
+@include add_settings((
+  Checkpoint: (
+    _selectors: (".guided-slides"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption5HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'SolutionTitleLabel:::font-weight': bold,
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption5BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+  TryIt: (
+    _selectors: (".practice-program"),
+    'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption4HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption4HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
+  ConceptsInPractice: (
+    _selectors: (".learning-questions"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
@@ -56,3 +106,16 @@ $bandColor: #24739E;
 //Tables
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+//Notes
+@include use('Checkpoint', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('TryIt', 'cardboard:::BoxedNoteWithBordersSubtitleShape');
+@include use('ConceptsInPractice', 'cardboard:::BoxedNoteWithSubtitleShape');
+
+//Exercises
+@include use('ConceptsInPracticeExercises', 'cardboard:::ExercisesModuleShape');
+
+//Lists
+@include use('PageLists', 'cardboard:::PageListsShape');
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
