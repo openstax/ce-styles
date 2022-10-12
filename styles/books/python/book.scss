@@ -92,7 +92,6 @@ $bandColor: #24739E;
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
-@include use('AnswerKey', 'cardboard:::AnswerKeyShape');
 
 // Chapter Intro
 @include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
@@ -120,3 +119,7 @@ $bandColor: #24739E;
 @include use('PageLists', 'cardboard:::PageListsShape');
 @include use('NotesLists', 'cardboard:::NotesListsShape');
 @include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
+
+//Eob
+@include use('AnswerKey', 'cardboard:::AnswerKeyShape');
+@include use('Index', 'cardboard:::IndexShape');
