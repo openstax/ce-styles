@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style headers in `python`
+* Change cells border color in tables from `corn`
+## [v1.113.0] - 2022-10-07
+
 * Create styles for `python` book
 * Remove spaces between tables in Key Equations subsections in `corn`
 * Style `Index` on `webview`
