@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `Learning Objectives` in `python`
 * Style Introduction in `python`
 * Style headers in `python`
 * Change cells border color in tables from `corn`
