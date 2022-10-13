@@ -827,66 +827,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   max-width: 5.9in;
 }
 
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] {
-  margin-bottom: 1.4rem;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] > .os-solution-area {
-  margin-bottom: 0.7rem;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] {
-  display: table;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  width: 2%;
-  text-align: right;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] .os-solution-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] .os-solution-container > p {
-  margin-bottom: 0;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] {
-  display: table;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  width: 2%;
-  text-align: right;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] .os-solution-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] .os-solution-container > p {
-  margin-bottom: 0;
-}
-
 .introduction > .os-figure.has-splash {
   margin-bottom: 1.4rem;
   margin-top: -1.15in;
@@ -2175,4 +2115,89 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 [data-type=exercise-question] > div > ol {
   margin-left: 24px;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] {
+  margin-bottom: 1.4rem;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] > .os-solution-area {
+  margin-bottom: 0.7rem;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] {
+  display: table;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] .os-solution-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] .os-solution-container > p {
+  margin-bottom: 0;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] {
+  display: table;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] .os-solution-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=question-solution] .os-solution-container > p {
+  margin-bottom: 0;
+}
+
+.os-index-container {
+  column-count: 3;
+  column-gap: 32px;
+}
+
+.os-index-container > .group-by {
+  font-family: Noto Sans, StixGeneral;
+  margin-bottom: 1.4rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #344456;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 8px;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term-section-link {
+  content: target-counter(attr(href, url), page);
 }
