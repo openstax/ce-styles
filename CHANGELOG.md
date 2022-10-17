@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add webview styles for cite
 * Style `Index` in `python`
 * Style `AnswerKey` in `python`
 * Style notes and exercises in `python`
