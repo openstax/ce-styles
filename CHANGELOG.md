@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove underline from links in references on `webview`
 * Style `Index` in `python`
 * Style `AnswerKey` in `python`
 * Style notes and exercises in `python`
@@ -14,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style Introduction in `python`
 * Style headers in `python`
 * Change cells border color in tables from `corn`
+
 ## [v1.113.0] - 2022-10-07
 
 * Create styles for `python` book
