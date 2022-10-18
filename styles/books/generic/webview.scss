@@ -221,6 +221,9 @@
     References: (
         _selectors: (".eob", ".eoc"),
     ),
+    ReferencesCiteLink: (
+        _selectors: ('a[data-type="cite"]'),
+    ),
 ));
 
 //Coreq skills
@@ -323,6 +326,7 @@
 @include use('ChapterIntro', 'webview:::ChapterIntroShape');
 // References
 @include use('References', 'webview:::ReferencesShape');
+@include use('ReferencesCiteLink', 'webview:::ReferencesCiteLinkShape');
 // Corq skills
 @include use('CoreqSkills', 'webview:::CoreqSkillsShape');
 // Footnote
