@@ -2017,6 +2017,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #027EB5;
 }
 
+[data-type=composite-chapter] > div > section > section > h4[data-type=title] {
+  font-family: Roboto Slab, serif, StixGeneral;
+  color: #1E7E91;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+[data-type=composite-chapter] > div > section > section > section > h5[data-type=title] {
+  font-family: Roboto Slab, serif, StixGeneral;
+  color: #1E7E91;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 [data-type=chapter] > h1[data-type=document-title] {
   display: flex;
   position: relative;
@@ -2377,6 +2391,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 .os-eoc[data-type=composite-page] > section > section > .circled {
   list-style-type: none;
   display: inline;
@@ -2394,6 +2432,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
 }
 
 .os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
