@@ -158,6 +158,18 @@
                 )),
                 map-merge($SectionWrapper--SecondLevel, (
                     _components: (
+                        map-merge($UnorderedList--FirstLevel,(
+                            _components:(
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            ),
+                        )),
+                        map-merge($OrderedList--FirstLevel,(
+                            _components:(
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            ),
+                        )),
                         map-merge($CircledList,(
                             _components: (
                                 map-merge($CircledList__Item,(
@@ -169,6 +181,22 @@
                             )
                         )),
                     )
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        map-merge($UnorderedList--FirstLevel,(
+                            _components:(
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            ),
+                        )),
+                        map-merge($OrderedList--FirstLevel,(
+                            _components:(
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            ),
+                        )),
+                    ),
                 )),
                 map-merge($DivWrapper--SecondLevel,(
                     _components:(
