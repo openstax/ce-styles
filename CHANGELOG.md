@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `Colored Text` on webview
 * Remove underline from links in references on `webview`
 * Style `Colored Text` in `python`
 * Add webview styles for cite
