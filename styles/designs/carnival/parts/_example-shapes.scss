@@ -1,5 +1,6 @@
 @import 'example-components';
 @import 'lists-components';
+@import 'figureimage-components';
 
 @include create_shape('carnival:::ExampleShape', (
     _components: (
@@ -31,6 +32,7 @@
                         $Example__Subtitle--FromFirstPara,
                         $Example__Subtitle--FromPara,
                         $Example__Subtitle--FromNote,
+                        $Media--FromPara
                     )
                 )),
             )

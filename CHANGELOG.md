@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Align media from para
 * Style `Colored Text` on webview
 * Wrap pre tags
 * Remove underline from links in references on `webview`
