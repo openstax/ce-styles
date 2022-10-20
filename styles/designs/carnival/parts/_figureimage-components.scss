@@ -92,3 +92,11 @@ $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol > li >
 
 $Media--Mechanism: empty_wrapper(MechanismMedia, ' > span[data-type="media"]');
 
+$Media--FromPara:(
+    _name: "MediaFromPara",
+    _subselector: ' > p > span[data-type="media"]',
+    _properties: (
+        vertical-align: top,
+    )
+);
+
