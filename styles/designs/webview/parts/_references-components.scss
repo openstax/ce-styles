@@ -18,6 +18,7 @@ $References__Link--InNote: (
   _subselector: ' .os-note-body > a',
   _properties: (
     margin-top: 10px,
+    text-decoration: none,
   )
 );
 
@@ -27,4 +28,12 @@ $ChapterArea__Paragraph--InSolution: (
   _properties: (
     display: inline,
   )
-)
+);
+
+$References__CiteLink: (
+    _name: "ReferencesCiteLink",
+    _subselector: " ",
+    _properties: (
+        text-decoration: none,
+    )
+);

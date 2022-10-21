@@ -271,6 +271,10 @@ pre > span {
   display: inline-block;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
@@ -1584,7 +1588,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #F1F1F1;
+  border-color: #757474;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -1684,7 +1688,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #F1F1F1;
+  border-color: #757474;
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-left: 0.16rem;
@@ -1784,7 +1788,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #F1F1F1;
+  border-color: #757474;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 1rem;
@@ -1882,7 +1886,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #093D4C;
   border-bottom-width: 0.09rem;
   border-bottom-style: solid;
-  border-bottom-color: #F1F1F1;
+  border-bottom-color: #757474;
 }
 
 .os-table.os-unstyled-container > table > tbody > tr > td > .token {
@@ -1952,7 +1956,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #F1F1F1;
+  border-color: #757474;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -3017,6 +3021,30 @@ p > [data-type=title] {
   margin-left: 24px;
 }
 
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 .os-eoc[data-type=composite-page] > section > section > .circled {
   list-style-type: none;
   display: inline;
@@ -3034,6 +3062,30 @@ p > [data-type=title] {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
 }
 
 .os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {

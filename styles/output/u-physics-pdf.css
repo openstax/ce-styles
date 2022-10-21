@@ -262,6 +262,10 @@ pre > span {
   display: inline-block;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
@@ -1343,6 +1347,10 @@ nav#toc > ol > .os-toc-index > a::after {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.2rem;
+}
+
+[data-type=example] > .body > p > span[data-type=media] {
+  vertical-align: top;
 }
 
 .preface {

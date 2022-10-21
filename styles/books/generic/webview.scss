@@ -219,7 +219,10 @@
 //References
 @include add_settings((
     References: (
-        _selectors: (".eob", ".eoc"),
+        _selectors: (".os-eob", ".os-eoc"),
+    ),
+    ReferencesCiteLink: (
+        _selectors: ('a[data-type="cite"]'),
     ),
 ));
 
@@ -280,6 +283,16 @@
   )
 ));
 
+@include add_settings((
+    RedColoredText: (
+        _selectors: ('*:not(.os-term) > .red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::RedTextColor'),
+    )
+));
+
+// Colored Text
+@include use('RedColoredText', 'webview:::ColoredText');
+
 // Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
@@ -323,6 +336,7 @@
 @include use('ChapterIntro', 'webview:::ChapterIntroShape');
 // References
 @include use('References', 'webview:::ReferencesShape');
+@include use('ReferencesCiteLink', 'webview:::ReferencesCiteLinkShape');
 // Corq skills
 @include use('CoreqSkills', 'webview:::CoreqSkillsShape');
 // Footnote
