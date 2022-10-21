@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.114.0] - 2022-10-21
+
 * Align media from para
 * Style `Colored Text` on webview
 * Wrap pre tags
