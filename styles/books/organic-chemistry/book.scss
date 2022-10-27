@@ -155,10 +155,10 @@ $ChapterIntroType: fullWidth;
     ),
     ChemistryMatters:(
         _selectors: (".chemistry-matters"),
-        group-border-color: (_ref: 'colorMap:::somethingExtraColor'),
+        group-border-color: (_ref: 'colorMap:::chemistryMattersColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Title:::color': (_ref: 'colorMap:::somethingExtraColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections.svg")) no-repeat top left,
+        'Title:::color': (_ref: 'colorMap:::chemistryMattersColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections2.svg")) no-repeat top left,
     ),
 ));
 
@@ -232,7 +232,7 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('ChemistryMatters', 'carnival:::IconNoteShape');
+@include use('ChemistryMatters', 'carnival:::IconIncreasedNoteShape');
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
