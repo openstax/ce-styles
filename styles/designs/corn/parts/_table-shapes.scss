@@ -210,11 +210,46 @@
                     _components: (
                       map-merge($Table__Container--Exercises, (
                           _components:(
-                            $Table,
+                            $Table--Exercises,
                           ),
                       )),
                     )
                 )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('corn:::TableFromAnswerKeyShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+              map-merge($Table__Container--Exercises,(
+                _components:(
+                    map-merge($Table--Exercises, (
+                        _components:(
+                          map-merge($Table__Head, (
+                            _components: (
+                              map-merge($Table__Head__Row, (
+                                _components: (
+                                  $Table__Head__Cell--AnswerKey
+                                )
+                              )),
+                            )
+                          )),
+                          map-merge($Table__Body, (
+                            _components: (
+                              map-merge($Table__Row, (
+                                _components: (
+                                  $Table__Data--AnswerKey,
+                                )
+                              )),
+                            )
+                          )),
+                        )
+                    )),
+                ),
+              )),
             ),
         )),
     )

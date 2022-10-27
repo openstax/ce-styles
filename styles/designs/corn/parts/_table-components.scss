@@ -163,23 +163,57 @@ $Table__Data--FirstType: (
     )
 );
 
-// Used in Answer Key
-$Table--Eoc__Container: (
-    _name: "EocTableContainer",
-    _subselector: " > .os-table",
-    _properties: (
-        margin-left: enum('ValueSet:::REQUIRED'),
-        margin-right: enum('ValueSet:::REQUIRED'),
-    )
-);
-
-// Used in Multicolumn Exercises
+// Used in Multicolumn Exercises and Answer Key
 $Table__Container--Exercises: (
-    _name: "EoxercisesTableContainer",
+    _name: "ExercisesTableContainer",
     _subselector: " .os-table",
     _properties: (
         margin-left: 0,
         margin-right: 0,
+    )
+);
+
+$Table--Exercises: (
+    _name: "ExercisesTable",
+    _subselector: " > table",
+    _properties: (
+        table-layout: fixed,
+        max-width: 100%,
+    )
+);
+
+$Table__Head__Cell--AnswerKey: (
+    _name: "AnswerKeyTableHeadCell",
+    _subselector: " > th",
+    _properties: (
+        font-size: font-scale(0),
+        padding-top: 0.4rem,
+        padding-bottom: 0.4rem,
+        padding-right:  0.4rem,
+        padding-left:  0.4rem,
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: bold,
+        color: enum('ValueSet:::REQUIRED'),
+        background-color: enum('ValueSet:::REQUIRED'), //different in Contemporary Math
+    )
+);
+
+$Table__Data--AnswerKey: (
+    _name: "AnswerKeyTableData",
+    _subselector: " > td",
+    _properties: (
+        font-size: font-scale(0),
+        padding-top: 0.4rem,
+        padding-bottom: 0.4rem,
+        padding-right: 0.4rem,
+        padding-left: 0.4rem,
+        font-family: enum('ValueSet:::REQUIRED'),
+        border-width: 0.09rem,
+        border-style: solid,
+        border-color: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        vertical-align: top,
+        text-align: center
     )
 );
 

@@ -277,6 +277,13 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  TableFromAnswerKey: (
+    _selectors: ('.os-eob .os-solution-container'),
+    'AnswerKeyTableHeadCell:::background-color': (_ref: "colorMap:::tableOption2Color"),
+  ),
+));
+
 // Common
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesSection', 'corn:::LearningObjectivesShape');
@@ -341,13 +348,14 @@ $bandColor: #093D4C;
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
+@include use('TableFromAnswerKey', 'corn:::TableFromAnswerKeyShape');
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Content Exercises
-@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column 
+@include use('CheckUnderstandingExercises', 'corn:::ExercisesModuleShape'); // one column
 @include use('YourTurnNoteExercises', 'corn:::ExercisesModuleShape'); // one column
 @include use('SectionExercises', 'corn:::ExercisesModuleShape'); // one column
 
