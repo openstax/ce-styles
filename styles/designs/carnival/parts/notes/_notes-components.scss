@@ -166,6 +166,26 @@ $Note--Icon__Title--Main: (
   )
 );
 
+$Note--Icon__Title--Main--Increased: (
+  _name: "Title",
+  _subselector: " > .os-title",
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 900,
+    letter-spacing: 0.05rem,
+    text-transform: uppercase,
+    font-size: font-scale(5),
+    line-height: line-height(5),
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-bottom-width: 0.2rem,
+    border-bottom-style: solid,
+    display: flex,
+    flex-direction: row,
+    align-items: flex-end,
+    margin-bottom: v-spacing(1)
+  )
+);
+
 $Note--Icon__Title--Main__Number: (
   _name: "TitleNumber",
   _subselector: " > .os-number",
@@ -208,6 +228,22 @@ $Note--Icon__Title--Main__Icon: (
     background-size: contain,
     height: v-spacing(4),
     width: v-spacing(4),
+    display: inline-block,
+    padding-right: 0.4rem,
+    position: relative,
+    bottom: -0.5rem,
+    content: "''",
+  )
+);
+
+$Note--Icon__Title--Main__Icon--Increased: (
+  _name: "TitleIcon",
+  _subselector: "::before",
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: contain,
+    height: v-spacing(6),
+    width: v-spacing(6),
     display: inline-block,
     padding-right: 0.4rem,
     position: relative,
