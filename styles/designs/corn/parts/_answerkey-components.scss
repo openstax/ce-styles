@@ -1,6 +1,6 @@
 $AnswerKey__Container: empty_wrapper(Container, '');
 
-$AnswerKey__Solution__Area: (
+$AnswerKey__SolutionArea: (
   _name: "SolutionArea",
   _subselector: " > .os-solution-area",
   _properties:(
@@ -10,16 +10,16 @@ $AnswerKey__Solution__Area: (
   )
 );
 
-$AnswerKey__Solution__Area__Note__Number: (
-  _name: "SolutionAreaNoteNumber",
-  _subselector: "> span.os-note-number",
+$AnswerKey__NoteNumber: (
+  _name: "NoteNumber",
+  _subselector: " > span.os-note-number",
   _properties:(
      font-weight: bold,
   )
 );
 
-$AnswerKey__Solution__Area__Container: (
-  _name: "SolutionAreaContainer",
+$AnswerKey__ModuleReset: (
+  _name: "ModuleReset",
   _subselector: " > .os-module-reset-solution-area",
   _properties:(
      display: table,
