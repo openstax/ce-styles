@@ -1,7 +1,7 @@
 @include add_settings((
     AnswerKey: ( // Used in chemistry, u-physics, pl-u-physics
         _selectors: ('[data-type="composite-chapter"]:not(.os-eoc)'),
-        SolutionWrapper: (
+        ExerciseSolution: (
             display: table,
         ),
         ProblemSolutionNumber: (
@@ -18,7 +18,7 @@
 @include add_settings((
     AnswerKeyInline: (
         _selectors: ('[data-type="composite-chapter"]:not(.os-eoc)'),
-        SolutionInlineNumber: (
+        ExerciseSolutionInlineNumber: (
             color: (_ref: 'colorMap:::fontBodyColor')
         )
     ),

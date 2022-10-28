@@ -7,7 +7,7 @@
             _components: (
                 map-merge($AnswerKey__CompositePage, (
                     _components: (
-                        map-merge($Exercise__Solution--Inline__Wrapper, (
+                        map-merge($Exercise__Solution--Inline, (
                             _components: (
                                 $Exercise__Solution--Inline__Number,
                                 map-merge($Exercise__Solution--Inline__Container, (
@@ -30,7 +30,7 @@
             _components: (
                 map-merge($AnswerKey__CompositePage, (
                     _components: (
-                        map-merge($Exercise__Solution__Wrapper, (
+                        map-merge($Exercise__Solution, (
                             _components: (
                                 $Exercise__Solution__Number,
                                 $Exercise__Solution__Divider,
@@ -39,7 +39,7 @@
                                         $Exercise__Solution__Paragraph,
                                     )
                                 )),
-                                map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+                                map-merge($Exercise__Solution__Container--WithFirstElement, (
                                     _components: (
                                         $Exercise__Solution__Paragraph,
                                     )

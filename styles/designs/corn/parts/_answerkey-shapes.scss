@@ -12,7 +12,7 @@
             map-merge($AnswerKey__SolutionArea, (
               _components: (
                 $AnswerKey__NoteNumber,
-                map-merge($Exercise__Solution__Wrapper, (
+                map-merge($Exercise__Solution, (
                   _components: (
                     $Exercise__ProblemSolution__Number,
                     $Exercise__ProblemSolution__Divider,
@@ -21,7 +21,7 @@
                         $Exercise__ProblemSolution__Paragraph,
                       ),
                     )),
-                    map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+                    map-merge($Exercise__Solution__Container--WithFirstElement, (
                       _components:(
                         $Exercise__ProblemSolution__Paragraph,
                       ),
@@ -33,7 +33,7 @@
                       )),
                     )
                 )),
-                map_merge($InjectedExercise__Solution__Wrapper, (
+                map_merge($InjectedExercise__Solution, (
                   _components: (
                     $Exercise__ProblemSolution__Number,
                     $Exercise__ProblemSolution__Divider,
@@ -42,7 +42,7 @@
                         $Exercise__ProblemSolution__Paragraph,
                       ),
                     )),
-                    map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+                    map-merge($Exercise__Solution__Container--WithFirstElement, (
                       _components:(
                         $Exercise__ProblemSolution__Paragraph,
                       ),
@@ -70,7 +70,7 @@
               _components: (
                 map-merge($AnswerKey__SolutionArea, (
                   _components: (
-                    map-merge($Exercise__Solution__Wrapper, (
+                    map-merge($Exercise__Solution, (
                       _components: (
                         $Exercise__ProblemSolution__Number,
                         $Exercise__ProblemSolution__Divider,
@@ -79,7 +79,7 @@
                             $Exercise__ProblemSolution__Paragraph,
                           ),
                         )),
-                        map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+                        map-merge($Exercise__Solution__Container--WithFirstElement, (
                           _components:(
                             $Exercise__ProblemSolution__Paragraph,
                           ),
@@ -97,7 +97,7 @@
             )),
             map-merge($AnswerKey__SolutionArea, (
               _components: (
-                map-merge($Exercise__Solution__Wrapper, (
+                map-merge($Exercise__Solution, (
                   _components: (
                     $Exercise__ProblemSolution__Number,
                     $Exercise__ProblemSolution__Divider,
@@ -106,7 +106,7 @@
                         $Exercise__ProblemSolution__Paragraph,
                       ),
                     )),
-                    map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+                    map-merge($Exercise__Solution__Container--WithFirstElement, (
                       _components:(
                         $Exercise__ProblemSolution__Paragraph,
                       ),
@@ -132,7 +132,7 @@
   _components: (
     map-merge($AnswerKey__Container, (
       _components: (
-        map-merge($Exercise__Solution__Wrapper, (
+        map-merge($Exercise__Solution, (
           _components: (
             $Exercise__ProblemSolution__Number,
             $Exercise__ProblemSolution__Divider,
@@ -141,14 +141,14 @@
                 $Exercise__ProblemSolution__Paragraph,
               ),
             )),
-            map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+            map-merge($Exercise__Solution__Container--WithFirstElement, (
               _components:(
                 $Exercise__ProblemSolution__Paragraph,
               ),
             )),
           )
         )),
-        map-merge($InjectedExercise__Solution__Wrapper, (
+        map-merge($InjectedExercise__Solution, (
           _components: (
             $Exercise__ProblemSolution__Number,
             $Exercise__ProblemSolution__Divider,
@@ -157,7 +157,7 @@
                 $Exercise__ProblemSolution__Paragraph,
               ),
             )),
-            map-merge($Exercise__Solution__Container--WithImageTableOnTop, (
+            map-merge($Exercise__Solution__Container--WithFirstElement, (
               _components:(
                 $Exercise__ProblemSolution__Paragraph,
               ),

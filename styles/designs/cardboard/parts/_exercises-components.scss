@@ -38,23 +38,30 @@ $Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "Pr
 $Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
 
 // Solution components
-$Exercise__Solution__Wrapper: (
-  _name: "SolutionWrapper",
-  _subselector: ' [data-type="solution"]',
+$Exercise__Solution: (
+  _name: "ExerciseSolution",
+  _subselector: ' [data-type="solution"]', // has to be non direct child
   _properties: (
     display: table,
   )
 );
 
-$InjectedExercise__Solution__Wrapper: (
-  _name: "InjectedSolutionWrapper",
-  _subselector: ' [data-type="question-solution"]',
+$InjectedExercise__Solution: (
+  _name: "InjectedSolution",
+  _subselector: ' [data-type="question-solution"]', // has to be non direct child
   _properties: (
     display: table,
   )
 );
 
-$Exercise__Solution__Container: exerciseChildContainer((child: solution, name: "SolutionContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
 
 // General problem and solution components
 $Exercise__ProblemSolution__Text: (
