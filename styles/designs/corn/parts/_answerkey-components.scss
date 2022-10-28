@@ -1,7 +1,7 @@
-$AnswerKey__Container: empty_wrapper(Container, '');
+$AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
 
 $AnswerKey__SolutionArea: (
-  _name: "SolutionArea",
+  _name: "AnswerKeySolutionArea",
   _subselector: " > .os-solution-area",
   _properties:(
      display: table,
@@ -11,7 +11,7 @@ $AnswerKey__SolutionArea: (
 );
 
 $AnswerKey__NoteNumber: (
-  _name: "NoteNumber",
+  _name: "AnswerKeyNoteNumber",
   _subselector: " > span.os-note-number",
   _properties:(
      font-weight: bold,
@@ -19,7 +19,7 @@ $AnswerKey__NoteNumber: (
 );
 
 $AnswerKey__ModuleReset: (
-  _name: "ModuleReset",
+  _name: "AnswerKeyModuleReset",
   _subselector: " > .os-module-reset-solution-area",
   _properties:(
      display: table,
@@ -29,7 +29,7 @@ $AnswerKey__ModuleReset: (
 );
 
 $AnswerKey__CompositePage: (
-  _name: "CompositePage",
+  _name: "AnswerKeyCompositePage",
   _subselector: ' > [data-type="composite-page"]',
   _properties: (
     margin-bottom: v-spacing(2),
