@@ -263,12 +263,11 @@ $bandColor: #093D4C;
 @include add_settings((
   AnswerKey: (
     _selectors: ('[data-type="composite-chapter"].os-eob.os-solutions-container'),
-    'SolutionWrapper:::width': 100%,
-    'TableHeadCell:::background-color': (_ref: "colorMap:::tableOption2Color"),
+    'ExerciseSolution:::width': 100%,
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
-    InjectedSolutionWrapper: (
+    InjectedSolution: (
       margin-bottom: 0,
     ),
     ProblemSolutionParagraph: (
