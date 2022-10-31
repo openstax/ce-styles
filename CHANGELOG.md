@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Standardize `AnswerKey` shapes
+* Add Text-Align to `TableFromAnswerKey` in `corn`
 * Create separate shape for `TableFromAnswerKey` in `corn`
 * Create `IconIncreasedNoteShape` in `carnival`
 
