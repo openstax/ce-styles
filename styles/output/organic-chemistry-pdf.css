@@ -2805,6 +2805,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
+.os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
