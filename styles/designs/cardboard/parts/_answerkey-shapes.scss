@@ -8,31 +8,25 @@
                 map-merge($AnswerKey__CompositePage, (
                     _components: (
                         $AnswerKey__SolutionArea,
-                        map-merge($Exercise__Solution, (
-                            _components: (
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Solution__Container, (
-                                    _components: (
-                                        $Exercise__ProblemSolution__Para,
-                                    )
-                                )),
-                            )
-                        )),
-                        map-merge($InjectedExercise__Solution, (
-                            _components: (
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Solution__Container, (
-                                    _components: (
-                                        $Exercise__ProblemSolution__Para,
-                                    )
-                                )),
-                            )
-                        )),
                     )
                 )),
             )
         )),
+    )
+));
+
+@include create_shape('cardboard:::AnswerKeySolutionShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                      $Exercise__ProblemSolution__Para,
+                  )
+              )),
+          )
+      )),
     )
 ));
