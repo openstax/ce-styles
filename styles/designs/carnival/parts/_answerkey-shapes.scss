@@ -10,40 +10,6 @@
         map-merge($AnswerKey__CompositePage, (
           _components: (
             $AnswerKey__SolutionArea,
-            map-merge($Exercise__Solution, (
-              _components: (
-                $Exercise__ProblemSolution__Number,
-                $Exercise__ProblemSolution__Divider,
-                map-merge($Exercise__Solution__Container, (
-                  _components:(
-                    $Exercise__ProblemSolution__Paragraph,
-                  ),
-                )),
-                map-merge($Exercise__Solution__Container--WithFirstElement, (
-                  _components:(
-                    $Exercise__ProblemSolution__Paragraph,
-                  ),
-                )),
-              )
-            )),
-            map-merge($InjectedExercise__Solution, (
-              _components: (
-                $Exercise__ProblemSolution__Number,
-                $Exercise__ProblemSolution__Divider,
-                map-merge($Exercise__Solution__Container, (
-                  _components: (
-                    map-merge($InjectedExercise__Solution__Part,(
-                      _components:(
-                          $InjectedExercise__ProblemSolution__Letter,
-                          $Exercise__ProblemSolution__Divider,
-                          $Exercise__Solution__Container,
-                      ),
-                  )),
-                  )
-                )),
-                $Exercise__Solution__Container--WithFirstElement,
-              )
-            )),
           )
         )),
       )
@@ -51,25 +17,57 @@
   )
 ));
 
-@include create_shape('carnival:::AnswerKeyInlineShape', (
-  _components: (
-    map-merge($AnswerKey__Container, (
+@include create_shape('carnival:::AnswerKeySolutionShape', (
       _components: (
-        map-merge($AnswerKey__CompositePage, (
+        map-merge($AnswerKeySolution__Container, (
           _components: (
-            map-merge($Exercise__Solution--Inline, (
-              _components: (
-                $Exercise__Solution--Inline__Number,
-                map-merge($Exercise__Solution--Inline__Container, (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
                   _components: (
-                    $Exercise__Solution--Inline__Paragraph,
+                      $Exercise__ProblemSolution__Paragraph,
                   )
-                )),
-              )
-            )),
+              )),
+              $Exercise__Solution__Container--WithFirstElement
+          )
+      )),
+    )
+));
+
+@include create_shape('carnival:::AnswerKeySolutionInlineShape', (
+  _components: (
+    map-merge($AnswerKeySolution__Container--Inline, (
+      _components: (
+        $Exercise__Solution--Inline__Number,
+        map-merge($Exercise__Solution--Inline__Container, (
+          _components: (
+            $Exercise__Solution--Inline__Paragraph,
           )
         )),
       )
     )),
   )
+));
+
+@include create_shape('carnival:::AnswerKeySolutionMultipartShape', ( // used in Organic Chemistry
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                    map-merge($InjectedExercise__Solution__Part,(
+                        _components:(
+                            $InjectedExercise__ProblemSolution__Letter,
+                            $Exercise__ProblemSolution__Divider,
+                            $Exercise__Solution__Container,
+                        ),
+                    )),
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement,
+          )
+      )),
+    )
 ));
