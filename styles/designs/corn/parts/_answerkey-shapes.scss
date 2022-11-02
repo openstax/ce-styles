@@ -12,43 +12,6 @@
             map-merge($AnswerKey__SolutionArea, (
               _components: (
                 $AnswerKey__NoteNumber,
-                map-merge($Exercise__Solution, (
-                  _components: (
-                    $Exercise__ProblemSolution__Number,
-                    $Exercise__ProblemSolution__Divider,
-                    map-merge($Exercise__Solution__Container, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                    map-merge($Exercise__Solution__Container--WithFirstElement, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                    map-merge($Exercise__Solution__Container--WithInlineListOnTop, (
-                        _components:(
-                          $Exercise__ProblemSolution__Paragraph,
-                        ),
-                      )),
-                    )
-                )),
-                map_merge($InjectedExercise__Solution, (
-                  _components: (
-                    $Exercise__ProblemSolution__Number,
-                    $Exercise__ProblemSolution__Divider,
-                    map-merge($Exercise__Solution__Container, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                    map-merge($Exercise__Solution__Container--WithFirstElement, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                  )
-                ))
               )
             )),
           )
@@ -68,58 +31,10 @@
           _components: (
             map-merge($AnswerKey__ModuleReset,(
               _components: (
-                map-merge($AnswerKey__SolutionArea, (
-                  _components: (
-                    map-merge($Exercise__Solution, (
-                      _components: (
-                        $Exercise__ProblemSolution__Number,
-                        $Exercise__ProblemSolution__Divider,
-                        map-merge($Exercise__Solution__Container, (
-                          _components:(
-                            $Exercise__ProblemSolution__Paragraph,
-                          ),
-                        )),
-                        map-merge($Exercise__Solution__Container--WithFirstElement, (
-                          _components:(
-                            $Exercise__ProblemSolution__Paragraph,
-                          ),
-                        )),
-                        map-merge($Exercise__Solution__Container--WithInlineListOnTop, (
-                          _components:(
-                            $Exercise__ProblemSolution__Paragraph,
-                          ),
-                        )),
-                      )
-                    )),
-                  )
-                )),
+                $AnswerKey__SolutionArea,
               )
             )),
-            map-merge($AnswerKey__SolutionArea, (
-              _components: (
-                map-merge($Exercise__Solution, (
-                  _components: (
-                    $Exercise__ProblemSolution__Number,
-                    $Exercise__ProblemSolution__Divider,
-                    map-merge($Exercise__Solution__Container, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                    map-merge($Exercise__Solution__Container--WithFirstElement, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                    map-merge($Exercise__Solution__Container--WithInlineListOnTop, (
-                      _components:(
-                        $Exercise__ProblemSolution__Paragraph,
-                      ),
-                    )),
-                  )
-                )),
-              )
-            )),
+            $AnswerKey__SolutionArea,
           )
         )),
       )
@@ -127,44 +42,37 @@
   )
 ));
 
-// Used in Statistics. There is no Answer Key in EOB there. Solutions are in EOC.
-@include create_shape('corn:::AnswerKeyEocShape', (
-  _components: (
-    map-merge($AnswerKey__Container, (
+@include create_shape('corn:::AnswerKeySolutionShape', (
       _components: (
-        map-merge($Exercise__Solution, (
+        map-merge($AnswerKeySolution__Container, (
           _components: (
-            $Exercise__ProblemSolution__Number,
-            $Exercise__ProblemSolution__Divider,
-            map-merge($Exercise__Solution__Container, (
-              _components:(
-                $Exercise__ProblemSolution__Paragraph,
-              ),
-            )),
-            map-merge($Exercise__Solution__Container--WithFirstElement, (
-              _components:(
-                $Exercise__ProblemSolution__Paragraph,
-              ),
-            )),
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                      $Exercise__ProblemSolution__Paragraph,
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement
           )
-        )),
-        map-merge($InjectedExercise__Solution, (
+      )),
+    )
+));
+
+@include create_shape('corn:::AnswerKeySolutionThreeColumnsShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container--ThreeColumns, (
           _components: (
-            $Exercise__ProblemSolution__Number,
-            $Exercise__ProblemSolution__Divider,
-            map-merge($Exercise__Solution__Container, (
-              _components:(
-                $Exercise__ProblemSolution__Paragraph,
-              ),
-            )),
-            map-merge($Exercise__Solution__Container--WithFirstElement, (
-              _components:(
-                $Exercise__ProblemSolution__Paragraph,
-              ),
-            )),
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                      $Exercise__ProblemSolution__Paragraph,
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement,
+              $Exercise__Solution__Container--WithInlineListOnTop,
           )
-        )),
-      )
-    )),
-  )
+      )),
+    )
 ));

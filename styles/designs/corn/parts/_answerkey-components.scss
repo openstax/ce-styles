@@ -1,5 +1,26 @@
 $AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
 
+$AnswerKeySolution__Container: (
+  _name: "AnswerKeySolutionContainer",
+  _subselector: '',
+  _properties: (
+    display: table,
+    margin-bottom: v-spacing(2),
+  )
+);
+
+$AnswerKeySolution__Container--ThreeColumns: (
+  _name: "AnswerKeySolutionContainerThreeColumns",
+  _subselector: '',
+  _properties: (
+    display: inline-table,
+    overflow-wrap: break-word,
+    margin-bottom: v-spacing(2),
+    width: 29%,
+    padding-right: v-spacing(1),
+  )
+);
+
 $AnswerKey__SolutionArea: (
   _name: "AnswerKeySolutionArea",
   _subselector: " > .os-solution-area",

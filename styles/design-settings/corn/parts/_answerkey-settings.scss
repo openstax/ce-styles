@@ -3,27 +3,6 @@
         //There is a .os-solutions-container and a .os-solution-container
         //This should be cleaned up so that we are using one not both in the recipe
         _selectors: ('[data-type="composite-chapter"].os-eob.os-solutions-container'),
-        ProblemSolutionNumber: (
-            color: (_ref: 'colorMap:::fontBodyColor'),
-        ),
-        ProblemSolutionDivider: (
-            display: table-cell,
-        ),
-        ExerciseSolutionContainer: (
-            padding-left: v-spacing(1),
-        ),
-        ExerciseSolutionContainerWithFirstElement: (
-            padding-left: v-spacing(1),
-        ),
-        ExerciseSolutionContainerWithInlineListOnTop: (
-            padding-left: v-spacing(1),
-        ),
-        ExerciseSolution: (
-            display: inline-table,
-            overflow-wrap: break-word,
-            width: 29%,
-            padding-right: v-spacing(1),
-        ),
     ),
 ));
 
@@ -32,6 +11,14 @@
         //There is a .os-solutions-container and a .os-solution-container
         //This should be cleaned up so that we are using one not both in the recipe
         _selectors: ('[data-type="composite-chapter"].os-eob.os-solution-container'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeyEobSolution: (
+        //There is a .os-solutions-container and a .os-solution-container
+        //This should be cleaned up so that we are using one not both in the recipe
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
         ),
@@ -47,18 +34,12 @@
         ExerciseSolutionContainerWithInlineListOnTop: (
             padding-left: v-spacing(1),
         ),
-        ExerciseSolution: (
-            display: inline-table,
-            overflow-wrap: break-word,
-            width: 29%,
-            padding-right: v-spacing(1),
-        ),
     ),
 ));
 
 @include add_settings((
-    AnswerKeyEoc: ( // Used in Statistics, Additive Manufactoring (retired),
-        _selectors: ('[data-type="composite-page"].os-eoc.os-solutions-container'),
+    AnswerKeyEocSolution: ( // Used in Statistics, Additive Manufactoring (retired),
+        _selectors: ('.os-eoc [data-type="solution"]', '.os-eoc [data-type="question-solution"]'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
