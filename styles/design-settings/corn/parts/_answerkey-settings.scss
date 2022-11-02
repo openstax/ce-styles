@@ -40,6 +40,9 @@
 @include add_settings((
     AnswerKeyEocSolution: ( // Used in Statistics, Additive Manufactoring (retired),
         _selectors: ('.os-eoc [data-type="solution"]', '.os-eoc [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          margin-bottom: v-spacing(2),
+        ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,

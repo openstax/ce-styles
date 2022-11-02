@@ -267,6 +267,15 @@ $bandColor: #093D4C;
   ),
 ));
 
+@include add_settings((
+  AnswerKeyEobSolution: (
+    _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+    'AnswerKeySolutionContainer:::margin-bottom': 0,
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+  ),
+));
+
 // Common
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesSection', 'corn:::LearningObjectivesShape');
