@@ -61,7 +61,7 @@ $Exercise__Solution__Container: (
     _properties:(
       display: table-cell,
       width: 100%,
-      padding-left: enum('ValueSet:::OPTIONAL'), // used in three columns answer key
+      padding-left: v-spacing(1),
     )
 );
 
@@ -73,7 +73,7 @@ $Exercise__Solution__Container--WithFirstElement: (
       vertical-align: bottom,
       padding-top: v-spacing(1),
       width: 100%,
-      padding-left: enum('ValueSet:::OPTIONAL'), // used in three columns answer key
+      padding-left: v-spacing(1),
     )
 );
 
@@ -84,7 +84,7 @@ $Exercise__Solution__Container--WithInlineListOnTop: (
       display: table-cell,
       vertical-align: bottom,
       width: 100%,
-      padding-left: enum('ValueSet:::OPTIONAL'), // used in three columns answer key
+      padding-left: v-spacing(1),
     )
 );
 
