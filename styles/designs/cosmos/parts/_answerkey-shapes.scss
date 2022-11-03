@@ -1,54 +1,48 @@
 @import 'answerkey-components';
 @import 'exercises-components';
 
-@include create_shape('cosmos:::AnswerKeyInlineShape', (
-    _components: (
-        map-merge($AnswerKey__Container, (
-            _components: (
-                map-merge($AnswerKey__CompositePage, (
-                    _components: (
-                        map-merge($Exercise__Solution--Inline, (
-                            _components: (
-                                $Exercise__Solution--Inline__Number,
-                                map-merge($Exercise__Solution--Inline__Container, (
-                                    _components: (
-                                        $Exercise__Solution--Inline__Paragraph,
-                                    )
-                                )),
-                            )
-                        )),
-                    )
-                )),
-            )
+@include create_shape('cosmos:::AnswerKeyShape', (
+  _components: (
+    map-merge($AnswerKey__Container, (
+      _components: (
+        map-merge($AnswerKey__CompositePage, (
+          _components: (
+            $AnswerKey__SolutionArea,
+          )
         )),
+      )
+    )),
+  )
+));
+
+@include create_shape('cosmos:::AnswerKeySolutionShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__Solution__Number,
+              $Exercise__Solution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                    $Exercise__Solution__Paragraph,
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement
+          )
+      )),
     )
 ));
 
-@include create_shape('cosmos:::AnswerKeyShape', (
-    _components: (
-        map-merge($AnswerKey__Container, (
-            _components: (
-                map-merge($AnswerKey__CompositePage, (
-                    _components: (
-                        map-merge($Exercise__Solution, (
-                            _components: (
-                                $Exercise__Solution__Number,
-                                $Exercise__Solution__Divider,
-                                map-merge($Exercise__Solution__Container, (
-                                    _components: (
-                                        $Exercise__Solution__Paragraph,
-                                    )
-                                )),
-                                map-merge($Exercise__Solution__Container--WithFirstElement, (
-                                    _components: (
-                                        $Exercise__Solution__Paragraph,
-                                    )
-                                )),
-                            )
-                        )),
-                    )
-                )),
-            )
+@include create_shape('cosmos:::AnswerKeySolutionInlineShape', (
+  _components: (
+    map-merge($AnswerKeySolution__Container--Inline, (
+      _components: (
+        $Exercise__Solution--Inline__Number,
+        map-merge($Exercise__Solution--Inline__Container, (
+          _components: (
+            $Exercise__Solution--Inline__Paragraph,
+          )
         )),
-    )
+      )
+    )),
+  )
 ));
