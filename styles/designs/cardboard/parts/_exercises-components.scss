@@ -63,6 +63,17 @@ $Exercise__Solution__Container: (
     )
 );
 
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
+
 // General problem and solution components
 $Exercise__ProblemSolution__Text: (
   _name: "ProblemSolutionText",

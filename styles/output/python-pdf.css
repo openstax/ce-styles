@@ -2187,6 +2187,13 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 0;
 }
 
+.os-eob [data-type=solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eob [data-type=question-solution] {
   display: table;
 }
@@ -2211,6 +2218,13 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 .os-eob [data-type=question-solution] > .os-solution-container > p {
   margin-bottom: 0;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 .os-index-container {

@@ -4084,6 +4084,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-eob [data-type=solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-eob [data-type=question-solution] {
   display: table;
 }
@@ -4108,6 +4115,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob [data-type=question-solution] > .os-solution-container > p {
   margin-bottom: 0;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 [data-type=composite-chapter] > h1 {
