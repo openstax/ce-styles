@@ -15,10 +15,15 @@
 ));
 
 @include add_settings((
-    AnswerKeyEobSolution: (
-        //There is a .os-solutions-container and a .os-solution-container
-        //This should be cleaned up so that we are using one not both in the recipe
+    AnswerKeyThreeColumnsSolution: (
         _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          display: inline-table,
+          overflow-wrap: break-word,
+          margin-bottom: v-spacing(2),
+          width: 29%,
+          padding-right: v-spacing(1),
+        ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
         ),
@@ -38,9 +43,10 @@
 ));
 
 @include add_settings((
-    AnswerKeyEocSolution: ( // Used in Statistics, Additive Manufactoring (retired),
+    AnswerKeyOneColumnEocSolution: ( // Used in Statistics, Additive Manufactoring (retired),
         _selectors: ('.os-eoc [data-type="solution"]', '.os-eoc [data-type="question-solution"]'),
         AnswerKeySolutionContainer: (
+          display: table,
           margin-bottom: v-spacing(2),
         ),
         ProblemSolutionNumber: (
@@ -51,12 +57,23 @@
         ProblemSolutionDivider: (
             display: table-cell,
         ),
-        ExerciseSolutionContainer: (
-            padding-left: v-spacing(1),
-            vertical-align: bottom,
+    ),
+));
+
+@include add_settings((
+    AnswerKeyOneColumnEobSolution: ( // Used in Contemporary Math
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          display: table,
+          margin-bottom: 0,
         ),
-        ExerciseSolutionContainerWithFirstElement: (
-            padding-left: v-spacing(1),
+        ProblemSolutionNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+            width: 2%,
+            text-align: right,
+        ),
+        ProblemSolutionDivider: (
+            display: table-cell,
         ),
     ),
 ));

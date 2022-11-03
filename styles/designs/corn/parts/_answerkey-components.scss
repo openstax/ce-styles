@@ -1,23 +1,19 @@
 $AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
 
+// In general, we try to not to use many OPTIONALS and REQUIREDS in components,
+// but in this case this is the only one component that has differences in shape.
+// If in the future there gonna be more different styles between one and three columns solutions
+// please split shape into two.
+
 $AnswerKeySolution__Container: (
   _name: "AnswerKeySolutionContainer",
   _subselector: '',
   _properties: (
-    display: table,
+    display: enum('ValueSet:::REQUIRED'),
+    overflow-wrap: enum('ValueSet:::OPTIONAL'), //used in three columns Answer Key
     margin-bottom: enum('ValueSet:::REQUIRED'), // different in Contemporary Math
-  )
-);
-
-$AnswerKeySolution__Container--ThreeColumns: (
-  _name: "AnswerKeySolutionContainerThreeColumns",
-  _subselector: '',
-  _properties: (
-    display: inline-table,
-    overflow-wrap: break-word,
-    margin-bottom: v-spacing(2),
-    width: 29%,
-    padding-right: v-spacing(1),
+    width: enum('ValueSet:::OPTIONAL'), //used in three three columns Answer Key
+    padding-right: enum('ValueSet:::OPTIONAL'), //used in three columns Answer Key
   )
 );
 

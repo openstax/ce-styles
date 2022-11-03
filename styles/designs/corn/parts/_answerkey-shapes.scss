@@ -53,23 +53,6 @@
                       $Exercise__ProblemSolution__Paragraph,
                   )
               )),
-              $Exercise__Solution__Container--WithFirstElement
-          )
-      )),
-    )
-));
-
-@include create_shape('corn:::AnswerKeySolutionThreeColumnsShape', (
-      _components: (
-        map-merge($AnswerKeySolution__Container--ThreeColumns, (
-          _components: (
-              $Exercise__ProblemSolution__Number,
-              $Exercise__ProblemSolution__Divider,
-              map-merge($Exercise__Solution__Container, (
-                  _components: (
-                      $Exercise__ProblemSolution__Paragraph,
-                  )
-              )),
               $Exercise__Solution__Container--WithFirstElement,
               $Exercise__Solution__Container--WithInlineListOnTop,
           )
