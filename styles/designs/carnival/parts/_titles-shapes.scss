@@ -14,6 +14,31 @@
   )
 ));
 
+@include create_shape('carnival:::ChapterIntroTitlesShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                $H2--ChapterIntro,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 @include create_shape('carnival:::PageTitlesShape', (
   _components: (
     map-merge($Page__Container, (
