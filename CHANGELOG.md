@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create shapes for titles from `ChapterIntro`
 * Add Text-Align to `TableFromAnswerKey` in `corn`
 * Create separate shape for `TableFromAnswerKey` in `corn`
 * Create `IconIncreasedNoteShape` in `carnival`
