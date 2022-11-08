@@ -1,7 +1,4 @@
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
-$ChapterIntro__Container--Body: empty_wrapper(ChapterIntroBody, ' > .intro-body');
-
-$ChapterIntro__Container--Text: empty_wrapper(ChapterIntroText, ' > .intro-text');
 
 $ChapterSplash__Media: (
     _name: "ChapterSplashImgMedia",
@@ -106,7 +103,7 @@ $ChapterObjective__Link: (
 
 $ChapterObjective__Text: (
     _name: "ChapterObjectiveText",
-    _subselector: ' > .os-text', 
+    _subselector: ' > .os-text',
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
     )
