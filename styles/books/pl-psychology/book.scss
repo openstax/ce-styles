@@ -157,8 +157,6 @@ $bandColor: #00627b;
 @include add_settings((
   ChapterIntro: (
     _selectors: (".introduction"),
-    'H2IntroTextHeaderInline:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'H2IntroTextHeaderInline:::color': (_ref: "colorMap:::introContentHeaderColorPlPsychology"),
     'ChapterSplashFigureWrapper:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgColorPlPsychology"),
     'CaptionTitleLabel:::color': (_ref: "colorMap:::chapterIntroCaptionNumberColorPlPsychology"),
     'CaptionNumber:::color': (_ref: "colorMap:::chapterIntroCaptionNumberColorPlPsychology"),
@@ -201,6 +199,11 @@ $bandColor: #00627b;
             background-color: (_ref: 'colorMap:::chapterTitleNumberBgColorPlPsychology'),
         ),
     ),
+    ChapterIntroTitlesInline: (
+      _selectors: ('[data-type="page"].introduction .intro-text'),
+      'H2ChapterIntroInline:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'H2ChapterIntroInline:::color': (_ref: "colorMap:::introContentHeaderColorPlPsychology"),
+    ),
 ));
 
 @include add_settings((
@@ -230,6 +233,7 @@ $bandColor: #00627b;
 // Titles
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesInline', 'cosmos:::ChapterIntroTitlesInlineShape');
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
 
