@@ -27,3 +27,30 @@
     ))
   )
 ));
+
+@include create_shape('carnival:::IconIncreasedNoteShape', (
+  _groups: (
+    group-border-color: enum('ValueSet:::REQUIRED'),
+  ),
+  _components: (
+    map-merge($Note--Icon__Title--Main--Increased, (
+      _components: (
+        $Note--Icon__Title--Main__Icon--Increased,
+        $Note--Icon__Title--Main__Number,
+        $Note--Icon__Title--Main__Label,
+        $Note--Icon__Title--Main__Text,
+      ),
+    ))
+    map-merge($Note--Icon__Container, (
+      _components: (
+        map-merge($Note__Body, (
+          _components: (
+            $Note--Icon__Subtitle,
+            $Note--Icon__Title__Div,
+          ),
+        )),
+        $Note--Icon__Equation,
+      ),
+    ))
+  )
+));
