@@ -45,3 +45,43 @@
     ))
   ),
 ));
+
+// Chapter Outline
+
+@include create_shape('carnival:::ChapterOutlineShape', (
+    _components: (
+        map-merge($ChapterOutline__Container, (
+            _components: (
+                $ChapterOutline__Title,
+                map-merge($ChapterObjective__Container, (
+                    _components: (
+                        $ChapterObjective__Link,
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::ChapterOutlineMarginShape', (
+    _components: (
+        map-merge($ChapterOutline__IntroBody--Margin, (
+            _components: (
+              map-merge($ChapterOutline__Container--Margin, (
+                  _components: (
+                      $ChapterOutline__Title--Margin,
+                      map-merge($ChapterObjective__Container--Margin, (
+                          _components: (
+                              map-merge($ChapterObjective__Link--Margin,(
+                                  _components: (
+                                      $ChapterObjective__Text--Margin,
+                                  )
+                              )),
+                          )
+                      )),
+                  )
+              )),
+            )
+        )),
+    )
+));

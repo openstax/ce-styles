@@ -61,3 +61,22 @@
     )
 ));
 
+// Chapter Outline
+
+@include add_settings((
+    ChapterOutline: (
+        _selectors: (".os-chapter-outline"),
+        ChapterOutlineTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref: "colorMap:::chapterOutlineTitleColor"),
+        ),
+        ChapterObjectiveLink: (
+            color: (_ref: "colorMap:::chapterObjectiveLinkColor"),
+            font-family: (_ref: "typography:::titleOption2Font"),
+        ),
+        ChapterObjectiveText: (
+            color: (_ref: "colorMap:::chapterOutlineObjectiveTextColor"),
+            font-family: (_ref: "typography:::titleOption2Font"),
+        ),
+    )
+));

@@ -33,24 +33,3 @@
         )),
     )
 ));
-
-@include create_shape('corn:::ChapterOutlineShape', (
-    _components: (
-        map-merge($ChapterOutline__Container, (
-            _components: (
-                $ChapterOutline__Title,
-                    map-merge($ChapterObjective__Container, (
-                        _components: (
-                            map-merge($ChapterObjective__Link,(
-                                _components: (
-                                    $ChapterObjective__Text,
-                                ),
-                            )),
-                        )
-                    )),
-            )
-        )),
-    )
-));
-
-// Chapter Objectives Shape and it's copmpoenents used in statistics have been moved to learning objectives files.

@@ -24,25 +24,3 @@
         ),
     )
 ));
-
-@include add_settings((
-    ChapterOutline: (
-        _selectors: (".os-chapter-outline"),
-        ChapterOutlineContainer: (
-            font-family: (_ref: "typography:::baseFont"),
-        ),
-        ChapterOutlineTitle: (
-            margin: 0 0 0.5rem 0,
-            font-family: (_ref: "typography:::titleFont"),
-            //color is book specific set in book.scss file
-        ),
-        ChapterObjectiveLink: (
-            color: (_ref: "colorMap:::chapterIntrolLinkColor"),
-            // font-family: (_ref: "typography:::baseFont"),
-            border-left-color: (_ref: "colorMap:::chapterOutlineBarColor"),
-        ),
-        ChapterObjectiveText: (
-            color: black,
-        ),
-    )
-));
