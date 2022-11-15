@@ -12,11 +12,11 @@ $bandColor: #24739E;
 
 
 //Settings
-@include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashMediaBar:::background-color': (_ref: "colorMap:::chapterTitleBgColor"),
-    'ChapterSplashMediaBar:::border-top-color': (_ref: "colorMap:::chapterTitleBorderColor"),
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
   ),
 ));
 
@@ -256,11 +256,11 @@ $bandColor: #24739E;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
 
 //Figures
 @include use('Figure','cardboard:::FigureShape');
+@include use('FigureSplash','cardboard:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cardboard:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'cardboard:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'cardboard:::ImageTopSpacingShape');

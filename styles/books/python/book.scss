@@ -11,12 +11,12 @@ $bandColor: #24739E;
 
 // Settings
 
-@include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashMediaBar:::background-color': (_ref: "colorMap:::chapterTitleBgColor"),
-    'ChapterSplashMediaBar:::border-top-color': (_ref: "colorMap:::chapterTitleBorderColor"),
-  )
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
+  ),
 ));
 
 @include add_settings((
@@ -129,8 +129,10 @@ $bandColor: #24739E;
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
 
 // Chapter Intro
-@include use('ChapterIntro', 'cardboard:::ChapterIntroShape');
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
+// Figures
+@include use('FigureSplash','cardboard:::FigureSplashShape');
 
 //Titles
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
