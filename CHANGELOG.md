@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `critical-thinking` list in `PDF` and on `webview`
+* Move `ChapterOutlineShape` to `objectives` files
+* Create shapes for titles from `ChapterIntro`
+* Standardize `AnswerKey` shapes
 * Add bullets to lists from `Preface` on `webview`
 
 ## [v1.115.0] - 2022-11-09

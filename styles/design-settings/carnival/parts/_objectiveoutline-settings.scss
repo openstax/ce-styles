@@ -65,4 +65,44 @@
     ),
 ));
 
+// Chapter Outline
 
+@include add_settings((
+    ChapterOutline: (
+        _selectors: (".os-chapter-outline"),
+        ChapterOutlineContainer: (
+            font-family: (_ref: "typography:::sansFont"),
+            //border-bottom-color is book specific set in the book.scss file
+        ),
+        ChapterOutlineTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            //color is book specific set in book.scss file
+        ),
+        ChapterObjectiveLink: (
+            color: (_ref: "colorMap:::fontBodyColor"),
+            font-family: (_ref: "typography:::sansFont"),
+        ),
+    )
+));
+
+@include add_settings((
+    ChapterOutlineMargin: (
+        _selectors: (".intro-body"),
+        ChapterOutlineContainerMargin: (
+            font-family: (_ref: "typography:::sansFont"),
+            color: (_ref: "colorMap:::chapterOutlineMarginTextColor"),
+            // background-color is book specific set in book.scss file
+            margin: 0 fullBleedsMargin(0, rem) 0 1.5rem,
+        ),
+        ChapterOutlineTitleMargin: (
+            padding: 0 fullBleedsPadding(1.5, rem) .5rem 0,
+            font-family: (_ref: "typography:::sansFont"),
+        ),
+        ChapterObjectiveContainerMargin: (
+            padding-right: fullBleedsPadding(1.5, rem),
+        ),
+        ChapterObjectiveLinkMargin: (
+            color: white,
+        ),
+    )
+));

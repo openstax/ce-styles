@@ -29,58 +29,6 @@
                         )),
                     )
                 )),
-                map-merge($ChapterIntro__Container--Body, (
-                    _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                                $OrderedList--FirstLevel--MarginBottom, // present only in pl-u-physics (needs bottom margin)
-
-                            )
-                        )),
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-@include create_shape('carnival:::ChapterIntroMarginShape', ( // Used in Biology
-    _components: (
-        map-merge($ChapterIntro__Container, (
-            _components: (
-                map-merge($ChapterSplash__Figure__Wrapper, (
-                    _components: (
-                        map-merge($ChapterSplash__Figure, (
-                            _components: (
-                                $ChapterSplash__Figure--Bg,
-                                map-merge($ChapterSplash__Media, (
-                                    _components: (
-                                        $ChapterSplash__Img,
-                                    )
-                                )),
-                            )
-                        )),
-                        map-merge($Caption__Container--ChapterIntro, (
-                            _components: (
-                                $ChapterSplash__Caption--Bg,
-                                $Caption__Number,
-                                $Caption__TitleLabel,
-                                $Caption__Title,
-                                $Caption__Text,
-                            )
-                        )),
-                    )
-                )),
-                map-merge($ChapterIntro__Container--Body--Margin, (
-                    _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                            )
-                        )),
-                    )
-                )),
             )
         )),
     )
@@ -88,7 +36,7 @@
 
 // Chapter Intro parts
 
-// To do: use ChapterIntroSplashFigureShape everywhere, create shape for Chapter Intro body 
+// To do: use ChapterIntroSplashFigureShape everywhere, create shape for Chapter Intro body
 // for body of margin type and remove shapes from above. Apply to all themes.
 
 @include create_shape('carnival:::ChapterIntroSplashFigureShape', (
@@ -122,61 +70,3 @@
         )),
     )
 ));
-
-@include create_shape('carnival:::ChapterIntroBodyShape', (
-    _components: (
-        map-merge($ChapterIntro__Container, (
-            _components: (
-                map-merge($ChapterIntro__Container--Body, (
-                    _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                                $OrderedList--FirstLevel--MarginBottom, // present only in pl-u-physics (needs bottom margin)
-                            )
-                        )),
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-// Chapter Outline
-
-@include create_shape('carnival:::ChapterOutlineShape', (
-    _components: (
-        map-merge($ChapterOutline__Container, (
-            _components: (
-                $ChapterOutline__Title,
-                map-merge($ChapterObjective__Container, (
-                    _components: (
-                        $ChapterObjective__Link,
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-@include create_shape('carnival:::ChapterOutlineMarginShape', (
-    _components: (
-        map-merge($ChapterOutline__Container--Margin, (
-            _components: (
-                $ChapterOutline__Title--Margin,
-                map-merge($ChapterObjective__Container--Margin, (
-                    _components: (
-                        map-merge($ChapterObjective__Link--Margin,(
-                            _components: (
-                                $ChapterObjective__Text--Margin,
-                            )
-                        )),
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-// Chapter Objectives shape and it's components ((used in anatomy) has been moved to learning objectives files. 
-// It utilizes ObjectivesNoteShape now.

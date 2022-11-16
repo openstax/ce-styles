@@ -81,3 +81,53 @@ $LearningObjectives__Token--Number: (
     padding-right: h-spacing(1),
   )
 );
+
+// Chapter Outline
+$ChapterOutline__Container: (
+    _name: "ChapterOutlineContainer",
+    _subselector: '',
+    _properties: (
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        margin-bottom: 1.5rem,
+    )
+);
+
+$ChapterOutline__Title: (
+    _name: "ChapterOutlineTitle",
+    _subselector: ' > .os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-weight: 700,
+        text-transform: uppercase,
+    )
+);
+
+$ChapterObjective__Container: empty_wrapper(ChapterObjectiveContainer, ' > div.os-chapter-objective');
+
+$ChapterObjective__Link: (
+    _name: "ChapterObjectiveLink",
+    _subselector: ' > a.os-chapter-objective',
+    _properties: (
+        display: inline-block,
+        text-decoration: none,
+        color: enum('ValueSet:::REQUIRED'),
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: 700,
+        text-indent: -2em,
+        margin-left: 2rem,
+    )
+);
+
+$ChapterObjective__Text: (
+    _name: "ChapterObjectiveText",
+    _subselector: ' > .os-text',
+    _properties: (
+        color: enum('ValueSet:::REQUIRED'),
+        font-weight: 400,
+        font-family: enum('ValueSet:::REQUIRED'),
+        padding-left: .3rem,
+    )
+);

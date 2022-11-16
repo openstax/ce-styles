@@ -18,6 +18,24 @@
     )
 ));
 
+@include create_shape('corn:::ChapterIntroTitlesShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                map-merge($H2--ChapterIntro, (
+                    _components: (
+                        $H2--ChapterIntro__Icon,
+                        $H2--ChapterIntro__Text,
+                    )
+                )),
+                $H3,
+                $H4,
+                $H5,
+            )
+        )),
+    )
+));
+
 @include create_shape('corn:::ModuleTitlesShape', (
     _components: (
         map-merge($Module__Container, (

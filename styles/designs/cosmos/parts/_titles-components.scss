@@ -6,6 +6,7 @@ $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $Page--Composite__EOC: empty_wrapper(EocCompositePage, ' > .os-eoc[data-type="composite-page"]');
 $Eob__Container: empty_wrapper(EobContainer, '');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 
 $Chapter__Container: (
   _name: "ChapterWrapper",
@@ -125,9 +126,9 @@ $H2__Divider--FromInlineBlock: (
 
 // Chapter Intro Text Header
 
-$H2TextHeader--ChapterIntro--Inline: (
-    _name: "H2IntroTextHeaderInline",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+$H2--ChapterIntro--Inline: (
+    _name: "H2ChapterIntroInline",
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
@@ -139,15 +140,15 @@ $H2TextHeader--ChapterIntro--Inline: (
     )
 );
 
-$H2TextHeader--ChapterIntro--Block: ( // Only present in Economics 
-    _name: "H2IntroTextHeaderBlock",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+$H2--ChapterIntro--Block: ( // Only present in Economics
+    _name: "H2ChapterIntroBlock",
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(3),
         font-weight: 600,
         color: enum('ValueSet:::REQUIRED'),
-        margin-bottom: v-spacing(1),            
+        margin-bottom: v-spacing(1),
     )
 );
 
@@ -177,7 +178,7 @@ $H3--Link:(
   )
 );
 
-//Section WorksCited 
+//Section WorksCited
 $H3--SectionWorksCited: (
   _name: "H3SectionWorksCited",
   _subselector: " > h3",
@@ -189,7 +190,7 @@ $H3--SectionWorksCited: (
     margin-bottom: v-spacing(1),
     font-weight: 600,
     display: table,
-    margin-left: auto, 
+    margin-left: auto,
     margin-right: auto,
   )
 );
@@ -295,7 +296,7 @@ $H1--ChapterIntro--Numbered: (
   _subselector: ' > h1',
   _properties: (
     display: flex,
-    font-family: enum('ValueSet:::REQUIRED'), 
+    font-family: enum('ValueSet:::REQUIRED'),
     position: relative,
     font-weight: normal,
     flex-direction: row,
@@ -376,10 +377,10 @@ $Table__Title: (
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         text-align: center,
-        font-weight: bold, 
+        font-weight: bold,
         font-family: enum('ValueSet:::REQUIRED'),
         padding: table-v-spacing(1) table-h-spacing(1),
-    )   
+    )
 );
 
 

@@ -1314,20 +1314,6 @@ a[role=doc-noteref] {
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type {
-  float: left;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin: 0 .5rem 0 0;
-  font-weight: 700;
-}
-
-.introduction > .intro-body > .intro-text > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .os-chapter-outline {
   font-family: IBM Plex Sans, sans-serif;
   font-weight: 500;
@@ -2152,6 +2138,40 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: block;
 }
 
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {
+  float: left;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 .5rem 0 0;
+  font-weight: 700;
+}
+
+[data-type=page].introduction .intro-text > section > h3 {
+  color: #00819A;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page].introduction .intro-text > section > section > h4 {
+  font-family: Mulish, sans-serif;
+  color: #00819A;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h5 {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 [data-type=page]:not(.introduction).preface > h1 {
   color: #000000;
   font-family: IBM Plex Sans, sans-serif;
@@ -2770,19 +2790,19 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: target-counter(attr(href, url), page);
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] {
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] {
   margin-bottom: 1.4rem;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] > .os-solution-area {
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] > .os-solution-area {
   margin-bottom: 0.7rem;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] {
+.os-eob [data-type=solution] {
   display: table;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] > .os-number {
+.os-eob [data-type=solution] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
@@ -2791,35 +2811,31 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: right;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] > .os-divider {
+.os-eob [data-type=solution] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container {
+.os-eob [data-type=solution] > .os-solution-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container > p {
+.os-eob [data-type=solution] > .os-solution-container > p {
   margin-bottom: 0;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element {
+.os-eob [data-type=solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=solution] .os-solution-container.has-first-element > p {
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] {
+.os-eob [data-type=question-solution] {
   display: table;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] > .os-number {
+.os-eob [data-type=question-solution] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
@@ -2828,35 +2844,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: right;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] > .os-divider {
+.os-eob [data-type=question-solution] > .os-divider {
   margin-right: 8px;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container {
+.os-eob [data-type=question-solution] > .os-solution-container {
   display: table-cell;
   width: 100%;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container > [data-type=solution-part] {
-  display: table;
+.os-eob [data-type=question-solution] > .os-solution-container > p {
+  margin-bottom: 0;
 }
 
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container > [data-type=solution-part] > .problem-letter {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container > [data-type=solution-part] > .os-divider {
-  margin-right: 8px;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container > [data-type=solution-part] .os-solution-container {
-  display: table-cell;
-  width: 100%;
-}
-
-[data-type=composite-chapter]:not(.os-eoc) > [data-type=composite-page] [data-type=question-solution] .os-solution-container.has-first-element {
+.os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;

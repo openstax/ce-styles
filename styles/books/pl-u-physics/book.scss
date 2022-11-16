@@ -156,6 +156,14 @@ ChapterIntro: (
 ));
 
 @include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::physicsHeaderColor'),
+  ),
+));
+
+@include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
     'H2ModuleTitle:::color': (_ref: 'colorMap:::physicsHeaderColor'),
@@ -296,6 +304,7 @@ ChapterIntro: (
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositeChapterTitlesWithBorder', 'carnival:::EocCompositeChapterTitlesWithBorderShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
@@ -316,3 +325,4 @@ ChapterIntro: (
 @include use('IndexTerm', 'carnival:::IndexShape');
 @include use('IndexForeign', 'carnival:::IndexShape');
 @include use('AnswerKey', 'carnival:::AnswerKeyShape');
+@include use('AnswerKeySolution', 'carnival:::AnswerKeySolutionShape');

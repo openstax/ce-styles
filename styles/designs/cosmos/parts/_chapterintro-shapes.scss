@@ -7,33 +7,24 @@
     _components: (
         map-merge($ChapterIntro__Container, (
             _components: (
-            map-merge($ChapterSplash__Figure__Wrapper, (
-                _components: (
-                    map-merge($ChapterSplash__Figure, (
-                        _components: (
-                            $ChapterSplash__Media,
-                                
-                        )
-                    )),
-                    map-merge($Caption__Container--ChapterIntro, (
-                        _components: (
-                            $Caption__Number,
-                            $Caption__TitleLabel,
-                            $Caption__Title--ChapterIntro,
-                            $Caption__Text,
-                        )
-                    )),
-                )
-            )),
-            map-merge($ChapterIntro__Container--Body, (
-                _components: (
-                    map-merge($ChapterIntro__Container--Text, (
-                        _components: (
-                            $H2TextHeader--ChapterIntro--Inline,
-                            )
-                        )),
-                    )
-                )),
+              map-merge($ChapterSplash__Figure__Wrapper, (
+                  _components: (
+                      map-merge($ChapterSplash__Figure, (
+                          _components: (
+                              $ChapterSplash__Media,
+
+                          )
+                      )),
+                      map-merge($Caption__Container--ChapterIntro, (
+                          _components: (
+                              $Caption__Number,
+                              $Caption__TitleLabel,
+                              $Caption__Title--ChapterIntro,
+                              $Caption__Text,
+                          )
+                      )),
+                  )
+              )),
             )
         )),
 
@@ -44,60 +35,25 @@
     _components: (
         map-merge($ChapterIntro__Container, (
             _components: (
-            map-merge($ChapterSplash__Figure__Wrapper, (
-                _components: (
-                    map-merge($ChapterSplash__Figure, (
-                        _components: (
-                            $ChapterSplash__Media,
-                        )
-                    )),
-                    map-merge($Caption__Container--ChapterIntro, (
-                        _components: (
-                            $Caption__Number,
-                            $Caption__TitleLabel,
-                            $Caption__Title--ChapterIntro,
-                            $Caption__Text,
-                        )
-                    )),
+              map-merge($ChapterSplash__Figure__Wrapper, (
+                  _components: (
+                      map-merge($ChapterSplash__Figure, (
+                          _components: (
+                              $ChapterSplash__Media,
+                          )
+                      )),
+                      map-merge($Caption__Container--ChapterIntro, (
+                          _components: (
+                              $Caption__Number,
+                              $Caption__TitleLabel,
+                              $Caption__Title--ChapterIntro,
+                              $Caption__Text,
+                          )
+                      )),
 
-                )
-            )),
-            map-merge($ChapterIntro__Container--Body, (
-                _components: (
-                    map-merge($ChapterIntro__Container--Text, (
-                        _components: (
-                            $H2TextHeader--ChapterIntro--Block,
-                            map-merge($SectionWrapper--FirstLevel,(
-                                _components:(
-                                    $H3,
-                                ),
-                            )),
-                        )
-                    )),
-                    )
-                )),
+                  )
+              )),
             )
         )),
     )
 ));
-
-@include create_shape('cosmos:::ChapterOutlineShape', (
-    _components: (
-        map-merge($ChapterOutline__Container, (
-            _components: (
-                $ChapterOutline__Title,
-                    map-merge($ChapterObjective__Container, (
-                        _components: (
-                            map-merge($ChapterObjective__Link,(
-                                _components: (
-                                    $ChapterObjective__Text,
-                                ),
-                            )),
-                        )
-                    )),
-            )
-        )),
-    )
-));
-
-// ChapterObjectivesShape and it's compoents used in economics books has been moved to learning objectives files.

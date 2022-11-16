@@ -82,16 +82,33 @@ $InjectedExercise__Divider: (
 );
 
 // Solution components (used in Answer Key with solutions displayed one after the other)
-$Exercise__Solution__Wrapper: (
-    _name: "SolutionWrapper",
+$Exercise__Solution: (
+    _name: "ExerciseSolution",
     _subselector: " [data-type='solution']",
     _properties:(
         display: table,
     )
 );
 
-$Exercise__Solution__Container: exerciseChildContainer((child: solution, name: "SolutionContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
-$Exercise__Solution__Container--WithImageTableOnTop: exerciseChildContainer((child: solution, name: "SolutionContainerWithImageTableOnTop", hasImageTableOnTop: true, hasInlineListOnTop: false));
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
 
 $Exercise__Solution__Number: (
   _name: "SolutionNumber",
@@ -123,8 +140,8 @@ $Exercise__Solution__Paragraph: (
 );
 
 // Solution components (used in inline Answer Key)
-$Exercise__Solution--Inline__Wrapper: (
-    _name: "SolutionInlineWrapper",
+$Exercise__Solution--Inline: (
+    _name: "ExerciseSolutionInline",
     _subselector: " [data-type='solution']",
     _properties:(
         display: inline,
@@ -132,7 +149,7 @@ $Exercise__Solution--Inline__Wrapper: (
 );
 
 $Exercise__Solution--Inline__Container: (
-    _name: "SolutionInlineContainer",
+    _name: "ExerciseSolutionInlineContainer",
     _subselector: " > .os-solution-container",
     _properties:(
         display: inline,
@@ -141,7 +158,7 @@ $Exercise__Solution--Inline__Container: (
 );
 
 $Exercise__Solution--Inline__Number: (
-  _name: "SolutionInlineNumber",
+  _name: "ExerciseSolutionInlineNumber",
   _subselector: ' > .os-number',
   _properties: (
     text-decoration: none,
@@ -151,7 +168,7 @@ $Exercise__Solution--Inline__Number: (
 );
 
 $Exercise__Solution--Inline__Paragraph: (
-  _name: "SolutionInlineParagraph",
+  _name: "ExerciseSolutionInlineParagraph",
   _subselector: " > p",
   _properties:(
     display: inline,

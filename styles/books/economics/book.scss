@@ -131,6 +131,7 @@ $bandColor: #DCB83D;
 // Titles
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlock', 'cosmos:::ChapterIntroTitlesBlockShape');
 @include use('IntroductionPageTitles', 'cosmos:::IntroductionPageTitlesShape');
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
@@ -156,3 +157,4 @@ $bandColor: #DCB83D;
 @include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('Index', 'cosmos:::IndexShape');
 @include use('AnswerKey', 'cosmos:::AnswerKeyShape');
+@include use('AnswerKeySolution', 'cosmos:::AnswerKeySolutionShape');

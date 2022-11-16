@@ -114,6 +114,7 @@ $bandColor: #DCB83D;
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesInline', 'cosmos:::ChapterIntroTitlesInlineShape');
 
 // Lists
 @include use('PageLists', 'cosmos:::PageListsShape');
@@ -158,4 +159,5 @@ $bandColor: #DCB83D;
 @include use('Index', 'cosmos:::IndexShape');
 @include use('ReferencesWithNumberedNotes', 'cosmos:::ReferencesWithNumberedNotesShape');
 @include use('ReferencesCiteLink', 'cosmos:::ReferencesCiteLinkShape');
-@include use('AnswerKeyInline', 'cosmos:::AnswerKeyInlineShape');
+@include use('AnswerKey', 'cosmos:::AnswerKeyShape');
+@include use('AnswerKeySolutionInline', 'cosmos:::AnswerKeySolutionInlineShape');
