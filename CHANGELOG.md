@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Create shapes for titles from `ChapterIntro`
+* Standardize `AnswerKey` shapes
+* Add bullets to lists from `Preface` on `webview`
+
+## [v1.115.0] - 2022-11-09
+
 * Add Text-Align to `TableFromAnswerKey` in `corn`
 * Create separate shape for `TableFromAnswerKey` in `corn`
 * Create `IconIncreasedNoteShape` in `carnival`

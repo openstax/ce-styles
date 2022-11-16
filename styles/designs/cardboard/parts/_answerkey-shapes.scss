@@ -7,32 +7,27 @@
             _components: (
                 map-merge($AnswerKey__CompositePage, (
                     _components: (
-                        $AnswerKey__SolutionWrapper,
-                        map-merge($Exercise__Solution__Wrapper, (
-                            _components: (
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Solution__Container, (
-                                    _components: (
-                                        $Exercise__ProblemSolution__Para,
-                                    )
-                                )),
-                            )
-                        )),
-                        map-merge($InjectedExercise__Solution__Wrapper, (
-                            _components: (
-                                $Exercise__ProblemSolution__Number,
-                                $Exercise__ProblemSolution__Divider,
-                                map-merge($Exercise__Solution__Container, (
-                                    _components: (
-                                        $Exercise__ProblemSolution__Para,
-                                    )
-                                )),
-                            )
-                        )),
+                        $AnswerKey__SolutionArea,
                     )
                 )),
             )
         )),
+    )
+));
+
+@include create_shape('cardboard:::AnswerKeySolutionShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                      $Exercise__ProblemSolution__Para,
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement,
+          )
+      )),
     )
 ));

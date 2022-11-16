@@ -3994,72 +3994,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] {
-  display: inline-table;
-  overflow-wrap: break-word;
-  margin-bottom: 1.4rem;
-  width: 29%;
-  padding-right: 0.7rem;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] > .os-divider {
-  margin-right: 8px;
-  display: table-cell;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container {
-  display: table-cell;
-  width: 100%;
-  padding-left: 0.7rem;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-  padding-left: 0.7rem;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container.has-first-element > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container.has-first-inline-list-element {
-  display: table-cell;
-  vertical-align: bottom;
-  width: 100%;
-  padding-left: 0.7rem;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area [data-type=solution] .os-solution-container.has-first-inline-list-element > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
 [data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area {
   display: table;
   margin-bottom: 1.4rem;
   width: 100%;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] {
+.os-eob [data-type=solution] {
   display: inline-table;
   overflow-wrap: break-word;
   margin-bottom: 1.4rem;
@@ -4067,31 +4008,31 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] > .os-number {
+.os-eob [data-type=solution] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] > .os-divider {
+.os-eob [data-type=solution] > .os-divider {
   margin-right: 8px;
   display: table-cell;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container {
+.os-eob [data-type=solution] > .os-solution-container {
   display: table-cell;
   width: 100%;
   padding-left: 0.7rem;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container > p {
+.os-eob [data-type=solution] > .os-solution-container > p {
   max-width: 100%;
   padding-right: 0.7rem;
   margin-bottom: 0;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container.has-first-element {
+.os-eob [data-type=solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -4099,21 +4040,56 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container.has-first-element > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container.has-first-inline-list-element {
+.os-eob [data-type=solution] > .os-solution-container.has-first-inline-list-element {
   display: table-cell;
   vertical-align: bottom;
   width: 100%;
   padding-left: 0.7rem;
 }
 
-[data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area [data-type=solution] .os-solution-container.has-first-inline-list-element > p {
+.os-eob [data-type=question-solution] {
+  display: inline-table;
+  overflow-wrap: break-word;
+  margin-bottom: 1.4rem;
+  width: 29%;
+  padding-right: 0.7rem;
+}
+
+.os-eob [data-type=question-solution] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-eob [data-type=question-solution] > .os-divider {
+  margin-right: 8px;
+  display: table-cell;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container {
+  display: table-cell;
+  width: 100%;
+  padding-left: 0.7rem;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container > p {
   max-width: 100%;
   padding-right: 0.7rem;
   margin-bottom: 0;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+  padding-left: 0.7rem;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+  padding-left: 0.7rem;
 }
