@@ -32,9 +32,9 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include add_settings((
-  ChapterIntroSplashFigure: (
-    _selectors: (".introduction"),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::chemistryIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
@@ -222,7 +222,6 @@ $ChapterIntroType: fullWidth;
 @include use("NotesLists", "carnival:::NotesListsShape");
 
 // Chapter Intro
-@include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles
@@ -245,6 +244,7 @@ $ChapterIntroType: fullWidth;
 
 // Figures
 @include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');

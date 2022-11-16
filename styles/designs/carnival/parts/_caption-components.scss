@@ -18,7 +18,7 @@ $Caption__Container--Figure: (
 $Caption__Title__Container:(
     _name: "CaptionTitleContainer",
     _subselector: " > .os-caption-title-container",
-    _properties: ( 
+    _properties: (
         background-color: enum('ValueSet:::REQUIRED'),
         line-height: 1rem,
         padding: v-spacing(1),
@@ -54,6 +54,23 @@ $Caption__Container--ChapterIntro: (
         font-size: font-scale(-1),
         line-height: 1rem,
     )
+);
+
+$Caption__Container--ChapterIntro__Bg: (
+        _name: "CaptionContainerChapterIntroBg",
+        _subselector: '::before',
+        _properties: (
+            content: "''",
+            background-color: enum('ValueSet:::REQUIRED'),
+            position: absolute,
+            height: 100%,
+            width: fullBleedsSize(8.5, in),
+            margin-left: fullBleedsMargin(-1, in),
+            z-index: -1,
+            box-sizing: border-box,
+            padding: inherit,
+            top: 0,
+        ),
 );
 
 // Tables

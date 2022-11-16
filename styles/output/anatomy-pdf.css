@@ -1172,85 +1172,6 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0.7rem;
 }
 
-.introduction > .os-figure.has-splash {
-  margin-bottom: 1.4rem;
-}
-
-.introduction > .os-figure.has-splash > figure.splash {
-  position: relative;
-  margin: 0;
-}
-
-.introduction > .os-figure.has-splash > figure.splash::before {
-  content: '';
-  background-color: #00819A;
-  position: absolute;
-  height: 100%;
-  width: 8.65in;
-  margin-left: -1.15in;
-  z-index: -3;
-  box-sizing: border-box;
-  padding: inherit;
-  top: 0;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] {
-  line-height: 0;
-  height: 100%;
-  display: flex;
-  width: 7.65in;
-  justify-content: flex-end;
-  z-index: -2;
-  position: relative;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] > img {
-  width: 8.15in;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container {
-  position: relative;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  font-size: 0.8333333333rem;
-  line-height: 1rem;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container::before {
-  content: '';
-  background-color: #EEEAE0;
-  position: absolute;
-  height: 100%;
-  width: 8.8in;
-  margin-left: -1.15in;
-  z-index: -1;
-  box-sizing: border-box;
-  padding: inherit;
-  top: 0;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container > .os-number {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container > .os-title-label {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-  text-transform: uppercase;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container > .os-title {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-}
-
-.introduction > .os-figure.has-splash .os-caption-container > .os-caption {
-  font-family: IBM Plex Sans, sans-serif;
-}
-
 [data-type=note].chapter-objectives > h3[data-type=title] {
   color: #00819A;
   font-family: Mulish, sans-serif;
@@ -1313,6 +1234,85 @@ nav#toc > ol > .os-toc-index > a::after {
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
+.os-figure.has-splash {
+  margin-bottom: 1.4rem;
+}
+
+.os-figure.has-splash > figure.splash {
+  position: relative;
+  margin: 0;
+}
+
+.os-figure.has-splash > figure.splash::before {
+  content: '';
+  background-color: #00819A;
+  position: absolute;
+  height: 100%;
+  width: 8.65in;
+  margin-left: -1.15in;
+  z-index: -3;
+  box-sizing: border-box;
+  padding: inherit;
+  top: 0;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  line-height: 0;
+  height: 100%;
+  display: flex;
+  width: 7.65in;
+  justify-content: flex-end;
+  z-index: -2;
+  position: relative;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] > img {
+  width: 8.15in;
+}
+
+.os-figure.has-splash .os-caption-container {
+  position: relative;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+}
+
+.os-figure.has-splash .os-caption-container::before {
+  content: '';
+  background-color: #EEEAE0;
+  position: absolute;
+  height: 100%;
+  width: 8.8in;
+  margin-left: -1.15in;
+  z-index: -1;
+  box-sizing: border-box;
+  padding: inherit;
+  top: 0;
+}
+
+.os-figure.has-splash .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+  text-transform: uppercase;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-figure.has-splash .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
 }
 
