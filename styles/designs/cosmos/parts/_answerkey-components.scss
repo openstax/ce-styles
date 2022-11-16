@@ -1,5 +1,29 @@
 $AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
 
+$AnswerKeySolution__Container: (
+  _name: "AnswerKeySolutionContainer",
+  _subselector: '',
+  _properties: (
+    display: table,
+  )
+);
+
+$AnswerKeySolution__Container--Inline: (
+  _name: "AnswerKeySolutionContainer",
+  _subselector: '',
+  _properties: (
+    display: inline,
+  )
+);
+
+$AnswerKey__SolutionArea: (
+  _name: "AnswerKeySolutionArea",
+  _subselector: " > .os-solution-area",
+  _properties:(
+    margin-bottom: v-spacing(1),
+  )
+);
+
 $AnswerKey__CompositePage: (
   _name: "CompositePage",
   _subselector: ' > [data-type="composite-page"]',

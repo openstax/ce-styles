@@ -1,9 +1,32 @@
 @include add_settings((
-    AnswerKey: ( // Used in chemistry, u-physics, pl-u-physics
-        _selectors: ('[data-type="composite-chapter"]:not(.os-eoc)'),
-        SolutionWrapper: (
-            display: table,
+    AnswerKey: (
+        _selectors: ('.os-eob[data-type="composite-chapter"]'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolution: (
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+        ProblemSolutionNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+            width: 2%,
+            text-align: right,
         ),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolutionInline: (
+        _selectors: ('.os-eob [data-type="solution"]'),
+        ExerciseSolutionInlineNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor')
+        )
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolutionMultipart: (
+        _selectors: ('.os-eob [data-type="question-solution"]'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
@@ -12,14 +35,5 @@
         ProblemSolutionLetter: (
             color: (_ref: 'colorMap:::fontBodyColor'),
         ),
-    ),
-));
-
-@include add_settings((
-    AnswerKeyInline: (
-        _selectors: ('[data-type="composite-chapter"]:not(.os-eoc)'),
-        SolutionInlineNumber: (
-            color: (_ref: 'colorMap:::fontBodyColor')
-        )
     ),
 ));

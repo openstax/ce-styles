@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Standardize `AnswerKey` shapes
 * Add bullets to lists from `Preface` on `webview`
 
 ## [v1.115.0] - 2022-11-09

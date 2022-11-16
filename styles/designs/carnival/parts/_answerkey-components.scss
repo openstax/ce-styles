@@ -1,9 +1,25 @@
 @import 'titles-components';
 
-$AnswerKey__Container: empty_wrapper(Container, '');
+$AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
 
-$AnswerKey__Solution__Area: (
-  _name: "SolutionArea",
+$AnswerKeySolution__Container: (
+  _name: "AnswerKeySolutionContainer",
+  _subselector: '',
+  _properties: (
+    display: table,
+  )
+);
+
+$AnswerKeySolution__Container--Inline: (
+  _name: "AnswerKeySolutionContainer",
+  _subselector: '',
+  _properties: (
+    display: inline,
+  )
+);
+
+$AnswerKey__SolutionArea: (
+  _name: "AnswerKeySolutionArea",
   _subselector: " > .os-solution-area",
   _properties:(
     margin-bottom: v-spacing(1),
@@ -11,7 +27,7 @@ $AnswerKey__Solution__Area: (
 );
 
 $AnswerKey__CompositePage: (
-  _name: "CompositePage",
+  _name: "AnswerKeyCompositePage",
   _subselector: ' > [data-type="composite-page"]',
   _properties: (
     margin-bottom: v-spacing(2),
