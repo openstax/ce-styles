@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Move `ChapterOutlineShape` to `objectives` files
 * Create shapes for titles from `ChapterIntro`
 * Standardize `AnswerKey` shapes
 * Add bullets to lists from `Preface` on `webview`
