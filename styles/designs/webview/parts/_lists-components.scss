@@ -27,6 +27,17 @@ $UnorderedList--NumberedLearningObjectives: (
   )
 );
 
+$UnorderedList--NotesQuestionSection: (
+  _name: "NotesQuestionSectionList",
+  _subselector: ' ul.critical-thinking',
+  _properties: (
+    padding-top: 1rem,
+    border-top-style: solid ,
+    border-top-width: 0.2rem,
+    border-top-color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
 // these "UnorderedList--InAbstractClass" components should be inside a wrapper with a ".abstract" class
 // TODO: change the name of these components
 $UnorderedList--InAbstractClass: (
