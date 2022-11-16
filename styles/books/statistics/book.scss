@@ -21,11 +21,7 @@ $bandColor: #093D4C;
   ChapterIntro: (
     _selectors: (".introduction"),
     'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
     'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-    'H3IntroSectionHeader:::font-family': (_ref: 'typography:::titleFont'),
-    'H3IntroSectionHeader:::color': (_ref: "colorMap:::moduleTitleColor"),
   ),
 ));
 
@@ -185,6 +181,7 @@ $bandColor: #093D4C;
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'corn:::CompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'corn:::CompositePageTitlesShape');

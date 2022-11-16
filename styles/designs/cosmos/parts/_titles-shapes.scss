@@ -112,6 +112,56 @@
     )
 ));
 
+@include create_shape('cosmos:::ChapterIntroTitlesInlineShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                $H2--ChapterIntro--Inline,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cosmos:::ChapterIntroTitlesBlockShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                $H2--ChapterIntro--Block,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 //Composite pages
 @include create_shape('cosmos:::EocCompositePageTitlesShape', (
     _components: (

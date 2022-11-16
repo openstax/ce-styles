@@ -1490,20 +1490,6 @@ nav#toc > ol > .os-toc-index > a::after {
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type {
-  float: left;
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin: 0 .5rem 0 0;
-  font-weight: 700;
-}
-
-.introduction > .intro-body > .intro-text > ol {
-  margin-left: 24px;
-  margin-bottom: 0.7rem;
-}
-
 .os-chapter-outline {
   font-family: IBM Plex Sans, sans-serif;
   font-weight: 500;
@@ -2526,6 +2512,40 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 300;
   text-transform: none;
   display: block;
+}
+
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {
+  float: left;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 .5rem 0 0;
+  font-weight: 700;
+}
+
+[data-type=page].introduction .intro-text > section > h3 {
+  color: #00819A;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page].introduction .intro-text > section > section > h4 {
+  font-family: Mulish, sans-serif;
+  color: #00819A;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h5 {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {

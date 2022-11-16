@@ -63,6 +63,14 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+  ),
+));
+
+@include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
     'H2ModuleTitle:::color': (_ref: 'colorMap:::organicChemistryHeaderColor'),
@@ -215,11 +223,11 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include use('ChapterIntroSplashFigure', 'carnival:::ChapterIntroSplashFigureShape');
-@include use('ChapterIntroBody', 'carnival:::ChapterIntroBodyShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');

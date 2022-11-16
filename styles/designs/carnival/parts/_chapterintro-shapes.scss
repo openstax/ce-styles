@@ -29,17 +29,6 @@
                         )),
                     )
                 )),
-                map-merge($ChapterIntro__Container--Body, (
-                    _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                                $OrderedList--FirstLevel--MarginBottom, // present only in pl-u-physics (needs bottom margin)
-
-                            )
-                        )),
-                    )
-                )),
             )
         )),
     )
@@ -74,11 +63,6 @@
                 )),
                 map-merge($ChapterIntro__Container--Body--Margin, (
                     _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                            )
-                        )),
                     )
                 )),
             )
@@ -88,7 +72,7 @@
 
 // Chapter Intro parts
 
-// To do: use ChapterIntroSplashFigureShape everywhere, create shape for Chapter Intro body 
+// To do: use ChapterIntroSplashFigureShape everywhere, create shape for Chapter Intro body
 // for body of margin type and remove shapes from above. Apply to all themes.
 
 @include create_shape('carnival:::ChapterIntroSplashFigureShape', (
@@ -114,25 +98,6 @@
                                 $Caption__TitleLabel,
                                 $Caption__Title,
                                 $Caption__Text,
-                            )
-                        )),
-                    )
-                )),
-            )
-        )),
-    )
-));
-
-@include create_shape('carnival:::ChapterIntroBodyShape', (
-    _components: (
-        map-merge($ChapterIntro__Container, (
-            _components: (
-                map-merge($ChapterIntro__Container--Body, (
-                    _components: (
-                        map-merge($ChapterIntro__Container--Text, (
-                            _components: (
-                                $H2TextHeader--ChapterIntro,
-                                $OrderedList--FirstLevel--MarginBottom, // present only in pl-u-physics (needs bottom margin)
                             )
                         )),
                     )
@@ -178,5 +143,5 @@
     )
 ));
 
-// Chapter Objectives shape and it's components ((used in anatomy) has been moved to learning objectives files. 
+// Chapter Objectives shape and it's components ((used in anatomy) has been moved to learning objectives files.
 // It utilizes ObjectivesNoteShape now.

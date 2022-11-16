@@ -51,6 +51,31 @@
 ));
 
 @include add_settings((
+    ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+            H2ChapterIntro: (
+                font-family: (_ref: 'typography:::baseFont'),
+                color: (_ref: "colorMap:::introContentHeaderColor"),
+            ),
+            H2ChapterIntroIcon: (
+                background: url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
+            ),
+            H3Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+            H4Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+            H5Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+        ),
+));
+
+@include add_settings((
     ModuleTitles:(
         _selectors: ('[data-type="chapter"] > [data-type="page"]:not(.introduction)'),
         H2Title: (

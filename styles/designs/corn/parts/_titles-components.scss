@@ -7,6 +7,7 @@ $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
 $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterWrapper, '');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 
 //h1 titles without numbers (pages like preface)
 $H1: (
@@ -141,18 +142,18 @@ $H2: (
 );
 
 // Chapter Intro Text Header
-$H2TextHeader--ChapterIntro: (
-    _name: "H2IntroTextHeader",
+$H2--ChapterIntro: (
+    _name: "H2ChapterIntro",
     _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
-        font-size: enum('ValueSet:::OPTIONAL'),
+        font-size: font-scale(3),
         margin-bottom: v-spacing(1),
         color: enum('ValueSet:::REQUIRED'),
     )
 );
 
-$H2TextHeader__Icon--ChapterIntro: (
-  _name: "H2IntroTextHeaderIcon",
+$H2--ChapterIntro__Icon: (
+  _name: "H2ChapterIntroIcon",
   _subselector: "::before",
   _properties: (
     background: enum('ValueSet:::REQUIRED'),
@@ -164,8 +165,8 @@ $H2TextHeader__Icon--ChapterIntro: (
   )
 );
 
-$H2TextHeader__Text--ChapterIntro: (
-    _name: "H2IntroTextHeaderText",
+$H2--ChapterIntro__Text: (
+    _name: "H2ChapterIntroText",
     _subselector: ' > .os-text',
     _properties: (
         display: inline-block,
@@ -230,18 +231,6 @@ $H3--Link:(
         line-height: line-height(1),
         margin-bottom: v-spacing(1),
         color: enum('ValueSet:::REQUIRED'),
-    )
-);
-
-$H3SectionTextHeader--ChapterIntro: ( // Title used only in HS Statistics
-    _name: "H3IntroSectionHeader",
-    _subselector: ' > section > h3[data-type="title"]',
-    _properties: (
-        color: enum('ValueSet:::OPTIONAL'), // set to OPTIONAL to not create separate Chapter Intro for this component
-        font-family: enum('ValueSet:::OPTIONAL'), // set to OPTIONAL to not create separate Chapter Intro for this component
-        font-size: font-scale(2),
-        line-height: line-height(2),
-        margin-bottom: v-spacing(1),
     )
 );
 

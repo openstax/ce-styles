@@ -13,6 +13,27 @@
 ));
 
 @include add_settings((
+    ChapterIntroTitles: (
+        _selectors: ('[data-type="page"].introduction .intro-text'),
+        H2ChapterIntro: (
+            font-family: (_ref: 'typography:::baseFont'),
+        ),
+        H3Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            //color: define in book.scss file
+        ),
+        H4Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            //color: define in book.scss file
+        ),
+        H5Title: (
+            font-family: (_ref: 'typography:::titleOption2Font'),
+            color: (_ref: 'colorMap:::pagetitleColor'),
+        ),
+    ),
+));
+
+@include add_settings((
     PageTitles: (
         _selectors: ('[data-type="page"]:not(.introduction)'),
         H1Title: (
