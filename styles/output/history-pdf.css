@@ -1155,72 +1155,6 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   margin-bottom: 0;
 }
 
-.introduction > .os-figure.has-splash {
-  background-color: #000000;
-  width: 8.8in;
-  position: relative;
-  z-index: -1;
-  box-sizing: border-box;
-  top: 0;
-  margin-bottom: 1.4rem;
-  padding-top: 3.5rem;
-  transform: translate3d(-1in, 0, 0);
-  margin-left: -1.2rem;
-  margin-top: -0.1rem;
-}
-
-.introduction > .os-figure.has-splash > figure.splash {
-  margin-bottom: 0;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] {
-  display: flex;
-  width: 6.5in;
-  line-height: 0;
-  justify-content: center;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container {
-  display: table;
-  width: 6.5in;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-number {
-  font-family: Archivo, sans-serif, StixGeneral;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #DCB83D;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title-label {
-  font-family: Archivo, sans-serif, StixGeneral;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #DCB83D;
-  text-transform: uppercase;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title {
-  font-family: Archivo, sans-serif, StixGeneral;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #FFFFFF;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-caption {
-  font-family: IBM Plex Sans, sans-serif, StixGeneral;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #FFFFFF;
-}
-
 .os-chapter-outline {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1292,6 +1226,72 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   font-size: 1rem;
   font-weight: 400;
   color: #000000;
+}
+
+.os-figure.has-splash {
+  background-color: #000000;
+  width: 8.8in;
+  position: relative;
+  z-index: -1;
+  box-sizing: border-box;
+  top: 0;
+  margin-bottom: 1.4rem;
+  padding-top: 3.5rem;
+  transform: translate3d(-1in, 0, 0);
+  margin-left: -1.2rem;
+  margin-top: -0.1rem;
+}
+
+.os-figure.has-splash > figure.splash {
+  margin-bottom: 0;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  display: flex;
+  width: 6.5in;
+  line-height: 0;
+  justify-content: center;
+}
+
+.os-figure.has-splash > .os-caption-container {
+  display: table;
+  width: 6.5in;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-number {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #DCB83D;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title-label {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #DCB83D;
+  text-transform: uppercase;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 h4.os-subtitle + .os-figure:not(.has-splash) > figure {

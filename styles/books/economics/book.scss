@@ -106,11 +106,11 @@ $bandColor: #DCB83D;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntroWithBlockIntroHeader', 'cosmos:::ChapterIntroWithBlockIntroHeaderShape');
 @include use('ChapterObjectives', 'cosmos:::ChapterObjectivesShape');
 
 // Figures
 @include use('Figure','cosmos:::FigureShape');
+@include use('FigureSplash', 'cosmos:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'cosmos:::FigureTopSpacingShape');

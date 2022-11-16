@@ -181,9 +181,9 @@ $bandColor: #217867;
 ));
 
 @include add_settings((
-  ChapterIntroWithBlockIntroHeader:(
-    _selectors: ('.introduction'),
-    'ChapterSplashFigureWrapper:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgPlEconomicsColor"),
+  FigureSplash:(
+    _selectors: ('.os-figure.has-splash'),
+    'FigureContainerSplash:::background-color': (_ref: "colorMap:::chapterSplashFigureWrapperBgPlEconomicsColor"),
     'CaptionTitleLabel:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
     'CaptionNumber:::color': (_ref: "colorMap:::chapterIntroCaptionNumberPlEconomicsColor"),
   ),
@@ -219,11 +219,11 @@ $bandColor: #217867;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntroWithBlockIntroHeader', 'cosmos:::ChapterIntroWithBlockIntroHeaderShape');
 @include use('ChapterObjectives', 'cosmos:::ChapterObjectivesShape');
 
 //Figures
 @include use('Figure','cosmos:::FigureShape');
+@include use('FigureSplash', 'cosmos:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'cosmos:::FigureTopSpacingShape');
