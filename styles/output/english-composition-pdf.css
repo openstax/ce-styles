@@ -1211,38 +1211,6 @@ span[data-media~=screenreader] {
   box-sizing: border-box;
 }
 
-[data-type=unit] > h1[data-type=document-title] {
-  position: absolute;
-  top: 2.2in;
-  margin-top: 0;
-  margin-left: -1.15in;
-  width: 6.5in;
-  font-size: 2.985984rem;
-  line-height: 3rem;
-  padding: 5rem;
-  z-index: 1;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-part-text {
-  color: #8B1504;
-  font-family: Archivo Black, sans-serif, StixGeneral;
-  font-weight: 400;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-number {
-  color: #8B1504;
-  font-family: Archivo Black, sans-serif, StixGeneral;
-  font-weight: 400;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-text {
-  color: #000000;
-  font-family: Archivo Black, sans-serif, StixGeneral;
-  font-weight: 400;
-  display: block;
-  margin-top: 1.4rem;
-}
-
 [data-type=unit] > [data-type=page] {
   color: #000000;
   font-family: Archivo, sans-serif, StixGeneral;
@@ -1257,10 +1225,6 @@ span[data-media~=screenreader] {
   width: 6.5in;
   margin-left: -1.15in;
   padding: 5rem;
-}
-
-[data-type=unit] > [data-type=page] > [data-type=document-title] {
-  margin-top: 2in;
 }
 
 span.emphasis-punctuation {
@@ -1775,6 +1739,42 @@ p.annotation > .os-icons {
   font-weight: 400;
   font-size: 1rem;
   text-align: center;
+}
+
+[data-type=unit] > h1[data-type=document-title] {
+  position: absolute;
+  top: 2.2in;
+  margin-top: 0;
+  margin-left: -1.15in;
+  width: 6.5in;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding: 5rem;
+  z-index: 1;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-part-text {
+  color: #8B1504;
+  font-family: Archivo Black, sans-serif, StixGeneral;
+  font-weight: 400;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-number {
+  color: #8B1504;
+  font-family: Archivo Black, sans-serif, StixGeneral;
+  font-weight: 400;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-text {
+  color: #000000;
+  font-family: Archivo Black, sans-serif, StixGeneral;
+  font-weight: 400;
+  display: block;
+  margin-top: 1.4rem;
+}
+
+[data-type=unit] > div > h2[data-type=document-title] {
+  margin-top: 2in;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {

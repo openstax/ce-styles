@@ -1259,38 +1259,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   box-sizing: border-box;
 }
 
-[data-type=unit] > h1[data-type=document-title] {
-  position: absolute;
-  top: 2.2in;
-  margin-top: 0;
-  margin-left: -1.15in;
-  width: 6.5in;
-  font-size: 2.985984rem;
-  line-height: 3rem;
-  padding: 5rem;
-  z-index: 1;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-part-text {
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 700;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-number {
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 700;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-text {
-  color: #000000;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 400;
-  display: block;
-  margin-top: 1.4rem;
-}
-
 [data-type=unit] > [data-type=page] {
   color: #000000;
   font-family: Noto Sans, StixGeneral;
@@ -1305,17 +1273,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   width: 6.5in;
   margin-left: -1.15in;
   padding: 5rem;
-}
-
-[data-type=unit] > [data-type=page] > [data-type=document-title] {
-  margin-top: 2in;
-  display: table;
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
 }
 
 .unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number {
@@ -2695,6 +2652,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob .os-solution-container > p + .os-table {
   margin-top: 1rem;
+}
+
+[data-type=unit] > h1[data-type=document-title] {
+  position: absolute;
+  top: 2.2in;
+  margin-top: 0;
+  margin-left: -1.15in;
+  width: 6.5in;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding: 5rem;
+  z-index: 1;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-part-text {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 700;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-number {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 700;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-text {
+  color: #000000;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 400;
+  display: block;
+  margin-top: 1.4rem;
+}
+
+[data-type=unit] > div > h2[data-type=document-title] {
+  margin-top: 2in;
+  display: table;
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.44rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
