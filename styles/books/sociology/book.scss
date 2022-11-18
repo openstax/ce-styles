@@ -96,6 +96,7 @@ $bandColor: #DCB83D;
 
 //Titles
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesInline', 'cosmos:::ChapterIntroTitlesInlineShape');
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
@@ -129,7 +130,8 @@ $bandColor: #DCB83D;
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
 
 //EoB
-@include use('AnswerKeyInline', 'cosmos:::AnswerKeyInlineShape');
+@include use('AnswerKey', 'cosmos:::AnswerKeyShape');
+@include use('AnswerKeySolutionInline', 'cosmos:::AnswerKeySolutionInlineShape');
 @include use('Index', 'cosmos:::IndexShape');
 
 // Eoc

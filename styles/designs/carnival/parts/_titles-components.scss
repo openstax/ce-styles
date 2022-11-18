@@ -7,6 +7,7 @@ $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 
 // H1 headers
 $H1: (
@@ -105,8 +106,8 @@ $H2: (
 );
 
 // Chapter Intro Text Header
-$H2TextHeader--ChapterIntro: (
-    _name: "H2IntroTextHeader",
+$H2--ChapterIntro: (
+    _name: "H2ChapterIntro",
     _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         float: left,

@@ -17,8 +17,6 @@ $bandColor: #093D4C;
   ChapterIntro: (
     _selectors: (".introduction"),
     'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
     'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
   ),
   ChapterOutline: (
@@ -261,23 +259,6 @@ $bandColor: #093D4C;
 ));
 
 @include add_settings((
-  AnswerKey: (
-    _selectors: ('[data-type="composite-chapter"].os-eob.os-solutions-container'),
-    'SolutionWrapper:::width': 100%,
-    'TableHeadCell:::background-color': (_ref: "colorMap:::tableOption2Color"),
-    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'ProblemSolutionNumber:::width': 2%,
-    'ProblemSolutionNumber:::text-align': right,
-    InjectedSolutionWrapper: (
-      margin-bottom: 0,
-    ),
-    ProblemSolutionParagraph: (
-      margin-bottom: 0,
-    )
-  ),
-));
-
-@include add_settings((
   TableFromAnswerKey: (
     _selectors: ('.os-eob .os-solution-container'),
     'AnswerKeyTableHeadCell:::background-color': (_ref: "colorMap:::tableOption2Color"),
@@ -314,6 +295,7 @@ $bandColor: #093D4C;
 
 //Titles
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('CompositeChapterTitles', 'corn:::CompositeChapterTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
@@ -365,4 +347,5 @@ $bandColor: #093D4C;
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
+@include use('AnswerKeyOneColumnEobSolution', 'corn:::AnswerKeySolutionShape');
 @include use('Index', 'corn:::IndexShape');

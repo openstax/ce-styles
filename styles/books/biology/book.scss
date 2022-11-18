@@ -24,12 +24,12 @@ $ChapterIntroType: side;
 ));
 
 @include add_settings((
-  ChapterIntroMargin: (
+  ChapterIntro: (
     _selectors: (".introduction"),
     'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::biologyHeaderColor")
   ),
   ChapterOutlineMargin: (
-    _selectors: (".os-chapter-outline"),
+    _selectors: (".intro-body"),
     'ChapterOutlineContainerMargin:::background-color': (_ref: "colorMap:::biologyChapterOutlineColor"),
   ),
 ));
@@ -129,6 +129,14 @@ $ChapterIntroType: side;
 ));
 
 @include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+  ),
+));
+
+@include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
     'H2ModuleTitle:::color': (_ref: 'colorMap:::biologyHeaderColor'),
@@ -182,7 +190,7 @@ $ChapterIntroType: side;
 @include use('Equation', 'carnival:::EquationShape');
 
 // Chapter Intro
-@include use('ChapterIntroMargin', 'carnival:::ChapterIntroMarginShape');
+@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
 @include use('ChapterOutlineMargin', 'carnival:::ChapterOutlineMarginShape');
 
 //Figures
@@ -221,6 +229,7 @@ $ChapterIntroType: side;
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');

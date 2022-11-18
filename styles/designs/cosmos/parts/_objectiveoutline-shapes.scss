@@ -1,4 +1,4 @@
-@import 'learning-components';
+@import 'objectiveoutline-components';
 @import 'lists-components';
 
 @include create_shape('cosmos:::LearningObjectivesShape', (
@@ -68,6 +68,25 @@
                         $UnorderedList--FirstLevel,
                     )
                 )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cosmos:::ChapterOutlineShape', (
+    _components: (
+        map-merge($ChapterOutline__Container, (
+            _components: (
+                $ChapterOutline__Title,
+                    map-merge($ChapterObjective__Container, (
+                        _components: (
+                            map-merge($ChapterObjective__Link,(
+                                _components: (
+                                    $ChapterObjective__Text,
+                                ),
+                            )),
+                        )
+                    )),
             )
         )),
     )

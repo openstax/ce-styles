@@ -1,6 +1,12 @@
 @include add_settings((
     AnswerKey: (
         _selectors: ('.os-eob[data-type="composite-chapter"]'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolution: (
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,

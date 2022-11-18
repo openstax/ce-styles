@@ -20,24 +20,12 @@
             font-family: (_ref: "typography:::titleOption2Font"),
             color: (_ref: "colorMap:::chapterIntrocaptionTextColor"),
         ),
-        H2IntroTextHeaderInline: (
-            font-family: (_ref: 'typography:::titleOption1Font'),
-            color: (_ref: "colorMap:::introContentHeaderColor"),
-        ),
     )
 ));
 
 @include add_settings((
     ChapterIntroWithBlockIntroHeader: ( // Used in Economics
         _selectors: (".introduction"),
-        H2IntroTextHeaderBlock: (
-            font-family: (_ref: 'typography:::titleOption1Font'),
-            color: (_ref: "colorMap:::introContentHeaderColorEconomics"),
-        ),
-        H3Title: (
-            font-family: (_ref: 'typography:::titleOption1Font'),
-            color: (_ref: 'colorMap:::titleColor'),
-        ),
         ChapterSplashFigureWrapper: (
             background-color: (_ref: "colorMap:::chapterSplashFigureWrapperBgColor"),
         ),
@@ -59,24 +47,3 @@
         ),
     )
 ));
-
-// Chapter Outline
-
-@include add_settings((
-    ChapterOutline: (
-        _selectors: (".os-chapter-outline"),
-        ChapterOutlineTitle: (
-            font-family: (_ref: "typography:::titleOption1Font"),
-            color: (_ref: "colorMap:::chapterOutlineTitleColor"),
-        ),
-        ChapterObjectiveLink: (
-            color: (_ref: "colorMap:::chapterObjectiveLinkColor"),
-            font-family: (_ref: "typography:::titleOption2Font"),
-        ),
-        ChapterObjectiveText: (
-            color: (_ref: "colorMap:::chapterOutlineObjectiveTextColor"),
-            font-family: (_ref: "typography:::titleOption2Font"),
-        ),
-    )
-));
-

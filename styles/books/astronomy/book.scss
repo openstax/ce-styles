@@ -15,8 +15,6 @@ $bandColor: #772949;
 @include add_settings((
   ChapterIntro: (
     _selectors: (".introduction"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-intro1.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColorAstronomy"),
     'ChapterSplashMediaBar:::background-color': (_ref: "colorMap:::chapterTitleBgColorAstronomy"),
     'ChapterSplashMediaBar:::border-top-color': (_ref: "colorMap:::chapterTitleBorderColorAstronomy"),
   ),
@@ -364,6 +362,7 @@ $bandColor: #772949;
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesPurple', 'cardboard:::ChapterIntroTitlesShape');
 @include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('PageTitles', 'cardboard:::PageTitlesShape');

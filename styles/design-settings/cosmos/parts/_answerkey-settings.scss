@@ -1,16 +1,25 @@
 @include add_settings((
-    AnswerKeyInline: (
-        _selectors: ('.os-eob[data-type="composite-chapter"]'),
-        SolutionInlineNumber: (
-            color: (_ref: 'colorMap:::fontBodyColor')
-        )
-    ),
     AnswerKey: (
         _selectors: ('.os-eob[data-type="composite-chapter"]'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolution: (
+        _selectors: ('.os-eob [data-type="solution"]'),
         SolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
             text-align: right,
+        ),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolutionInline: (
+        _selectors: ('.os-eob [data-type="solution"]'),
+        ExerciseSolutionInlineNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor')
         )
     ),
 ));

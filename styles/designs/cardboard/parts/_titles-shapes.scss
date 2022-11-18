@@ -79,6 +79,36 @@
     )
 ));
 
+@include create_shape('cardboard:::ChapterIntroTitlesShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                map-merge($H2--ChapterIntro, (
+                    _components: (
+                        $H2--ChapterIntro__Icon,
+                        $H2--ChapterIntro__Text,
+                    )
+                )),
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 //Composite pages
 
 @include create_shape('cardboard:::EocCompositePageTitlesShape', ( // settings for this shape are defined in book.scss file, because each module use different icon
