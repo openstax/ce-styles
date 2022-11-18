@@ -1,12 +1,12 @@
 @include add_settings((
   UnitOpener: (
     _selectors: ('[data-type="unit"]'),
-    UnitPage: (
+    UnitOpenerPage: (
         color: (_ref: 'colorMap:::fontBodyColor'),
         font-family: (_ref: 'typography:::baseFont'),
         background-color: (_ref: 'colorMap:::unitOpenerBackgroundLightColor'),
     ),
-    UnitPageBg: (
+    UnitOpenerPageBg: (
         background-color: (_ref: 'colorMap:::unitOpenerBackgroundColor'),
     ),
   )

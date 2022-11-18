@@ -1,5 +1,5 @@
-$Unit__Wrapper: (
-  _name: "UnitWrapper",
+$UnitOpener__Container: (
+  _name: "UnitOpenerContainer",
   _subselector: '',
   _properties: (
     position: relative,
@@ -10,8 +10,8 @@ $Unit__Wrapper: (
 // 0.8in (top margin) + 2.2in (from top) = 3in (from top) -> place where starts unit page
 // 9.4in - 2.2in = 7.2in -> height of the unit page
 // 7.2in + 0.8in (bottom page margin) + 0.15in (bleed) = 8.15in -> total height of unit page
-$Unit__Page: (
-    _name: "UnitPage",
+$UnitOpener__Page: (
+    _name: "UnitOpenerPage",
     _subselector: ' > [data-type="page"]',
     _properties: (
       color: enum('ValueSet:::REQUIRED'),
@@ -30,8 +30,8 @@ $Unit__Page: (
     )
 );
 
-$Unit__Page__Bg: (
-  _name: "UnitPageBg",
+$UnitOpener__Page__Bg: (
+  _name: "UnitOpenerPageBg",
   _subselector: '::before',
   _properties: (
     content: "''",

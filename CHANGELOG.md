@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Move `UnitOpener` files to `common` directory
 * Create shapes for titles from `UnitOpener`
 * Style `critical-thinking` list in `PDF` and on `webview`
 * Move `ChapterOutlineShape` to `objectives` files
