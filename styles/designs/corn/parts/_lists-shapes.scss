@@ -18,25 +18,6 @@
                         )),
                     )
                 )),
-                map-merge($DivWrapper--EOS, (
-                    _components:(
-                        map-merge($SectionWrapper--SecondLevel, (
-                            _components: (
-                                map-merge($UnorderedList--FirstLevel,(
-                                    _components:(
-                                        $ListItem--EOSIntructions,
-                                        map-merge($UnorderedList--SecondLevel,(
-                                            _components: (
-                                                $ListItem--EOSIntructions
-                                            )
-                                        )),
-
-                                    )
-                                )),
-                            )
-                        )),
-                    )
-                )),
                 map-merge($DivWrapper--SecondLevel, (
                     _components:(
                         $OrderedList--FirstLevel,
@@ -427,5 +408,29 @@
                 )),
             ),
         )),
+    )
+));
+
+@include create_shape('corn:::EosListsShape', (
+    _components: (
+      map-merge($ListContainer, (
+        _components:(
+            map-merge($SectionWrapper--SecondLevel, (
+                _components: (
+                    map-merge($UnorderedList--FirstLevel,(
+                        _components:(
+                            $ListItem--EOSIntructions,
+                            map-merge($UnorderedList--SecondLevel,(
+                                _components: (
+                                    $ListItem--EOSIntructions
+                                )
+                            )),
+
+                        )
+                    )),
+                )
+            )),
+        )
+      )),
     )
 ));
