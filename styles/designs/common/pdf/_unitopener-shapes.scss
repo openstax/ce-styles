@@ -1,0 +1,12 @@
+@import 'unitopener-components';
+
+@include create_shape('common:::UnitOpenerShape', (
+    _components: (
+        map-merge($UnitOpener__Container, (
+            _components: (
+                $UnitOpener__Page__Bg,
+                $UnitOpener__Page,
+            )
+        )),
+    )
+));
