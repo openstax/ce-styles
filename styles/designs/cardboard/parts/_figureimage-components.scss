@@ -7,6 +7,15 @@ $Figure__Container: empty_wrapper(FigureContainer, '');
 
 $Figure__Container--FirstInOrderedList: empty_wrapper(FigureContainerFirstInOrderedList, ' > ol:not(.os-stepwise) > li > .os-figure:first-child');
 
+$Figure__Container--Splash: (
+    _name: "FigureContainerSplash",
+    _subselector: '',
+    _properties: (
+        margin-bottom: v-spacing(2),
+        margin-top: -1.15in,
+    ),
+);
+
 $Figure:(
     _name: "Figure",
     _subselector: " > figure",
@@ -15,6 +24,18 @@ $Figure:(
         margin-left: auto,
         margin-right: auto,
     )
+);
+
+$Figure--Splash: (
+    _name: "FigureSplash",
+    _subselector: ' > figure.splash',
+    _properties: (
+        position: relative,
+        width: fullBleedsSize(8.45, in),
+        transform: translate3d(-1in, 0, 0),
+        margin-left: fullBleedsMargin(0, rem),
+        margin-bottom: 0,
+    ),
 );
 
 $Figure--TopSpacing:(
@@ -32,6 +53,16 @@ $Image: (
     _subselector: " img",
     _properties:(
         max-width: 100%,
+    )
+);
+
+$Image--Splash: (
+    _name: "ImageSplash",
+    _subselector: ' > img',
+    _properties: (
+        width: fullBleedsSize(8.45, in),
+        height: 3.58in,
+        display: inline,
     )
 );
 
@@ -56,3 +87,34 @@ $Image--TopSpacing:(
 //Media
 
 $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol:not(.os-stepwise) > li > [data-type="media"]:first-child');
+
+$Media--Splash: (
+    _name: "MediaSplash",
+    _subselector: ' > span[data-type="media"]',
+    _properties: (
+        display: flex,
+        width: fullBleedsSize(8.45, in),
+        border-left: none,
+        height: 4.3in,
+        position: relative,
+    ),
+);
+
+$Media--Splash__Bar: (
+    _name: "MediaSplashBar",
+    _subselector: '::after',
+    _properties: (
+        width: 100%,
+        content: "''",
+        display: block,
+        position: absolute,
+        bottom: 0,
+        right: 0,
+        height: 5.83rem,
+        background-color: enum('ValueSet:::REQUIRED'),
+        border-top-width: 0.25rem,
+        border-top-style: solid,
+        border-top-color: enum('ValueSet:::REQUIRED'),
+        z-index: 1,
+    ),
+);
