@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create shapes for titles from `UnitOpener`
 * Move `SplashFigure` to `figureimage` files
 
 ## [v1.116.0] - 2022-11-18
