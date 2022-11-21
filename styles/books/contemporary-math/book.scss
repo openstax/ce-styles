@@ -14,11 +14,6 @@ $bandColor: #093D4C;
 
 //Settings
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
@@ -272,7 +267,6 @@ $bandColor: #093D4C;
 @include use('Example', 'corn:::ExampleShape');
 
 //Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
 
 //Exercises
@@ -280,6 +274,7 @@ $bandColor: #093D4C;
 
 //Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');

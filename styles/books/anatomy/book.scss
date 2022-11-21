@@ -24,9 +24,9 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include add_settings((
-  ChapterIntro: (
-    _selectors: ('.introduction'),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::anatomyIntroColor"),
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::anatomyIntroColor"),
   ),
   ChapterObjectivesNote: (
     _selectors: ('[data-type="note"].chapter-objectives'),
@@ -189,11 +189,11 @@ $ChapterIntroType: fullWidth;
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
-@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
 @include use('ChapterObjectivesNote', 'carnival:::ObjectivesNoteShape');
 
 //Figures
 @include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');

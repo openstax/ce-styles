@@ -18,14 +18,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
-));
-
-@include add_settings((
   CollaborativeExercise: (
     _selectors: (".collab"),
     'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
@@ -150,7 +142,6 @@ $bandColor: #093D4C;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterObjectives', 'corn:::ChapterObjectivesShape');
 
 //Exercises
@@ -158,6 +149,7 @@ $bandColor: #093D4C;
 
 // Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
