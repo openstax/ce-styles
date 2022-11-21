@@ -8,20 +8,6 @@
             _components:(
                 $UnorderedList--FirstLevel,
                 $OrderedList--FirstLevel,
-                map-merge($OrderedList--Stepwise,(
-                    _components:(
-                        map-merge($OrderedList--Stepwise__Item,(
-                            _components:(
-                                $OrderedList--Stepwise__Token,
-                                map-merge($OrderedList--Stepwise__Content,(
-                                    _components: (
-                                        $UnorderedList--FirstLevel,
-                                    )
-                                )),
-                            ),
-                        )),
-                    ),
-                )),
                 map-merge($DivWrapper--FirstLevel, (
                     _components:(
                         $UnorderedList--FirstLevel,
@@ -209,20 +195,6 @@
                                     ),
                                 )),
                                 $OrderedList--FirstLevel,
-                                map-merge($OrderedList--Stepwise,(
-                                    _components:(
-                                        map-merge($OrderedList--Stepwise__Item,(
-                                            _components:(
-                                                $OrderedList--Stepwise__Token,
-                                                map-merge($OrderedList--Stepwise__Content,(
-                                                    _components: (
-                                                        $UnorderedList--FirstLevel,
-                                                    )
-                                                )),
-                                            ),
-                                        )),
-                                    ),
-                                )),
                             ),
                         )),
                     ),
@@ -423,7 +395,7 @@
 ));
 
 // Note: during refactoring we tried to create shapes that can be used for many elements.
-// That's how we end up with ExercisesInOneColumnListsShape which we are using for 
+// That's how we end up with ExercisesInOneColumnListsShape which we are using for
 // [data-type="problem"], [data-type="solution"], [data-type="exercise-question"] and [data-type="question-solution"].
 // In Contemporary Math there is a case with list in [data-type="exercise-stimulus"], which is a sibling of [data-type="exercise-question"].
 // In new project we need to decide if we want to create separate shape for injected exercises, that will cover question and stimulus
@@ -435,6 +407,25 @@
                 $UnorderedList--FirstLevel,
                 $OrderedList--FirstLevel,
             )
+        )),
+    )
+));
+
+@include create_shape('corn:::StepwiseListsShape', (
+    _components: (
+        map-merge($ListContainer,(
+            _components:(
+                map-merge($OrderedList--Stepwise__Item,(
+                    _components:(
+                        $OrderedList--Stepwise__Token,
+                        map-merge($OrderedList--Stepwise__Content,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                            )
+                        )),
+                    ),
+                )),
+            ),
         )),
     )
 ));

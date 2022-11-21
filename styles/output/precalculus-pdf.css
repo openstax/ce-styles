@@ -1927,20 +1927,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] ol.os-stepwise > li {
-  display: flex;
-  flex-direction: row;
-}
-
-[data-type=page] ol.os-stepwise > li > .os-stepwise-token {
-  flex-shrink: 0;
-  margin-right: 8px;
-}
-
-[data-type=page] ol.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
 [data-type=page] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2194,17 +2180,17 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li {
+.os-stepwise > li {
   display: flex;
   flex-direction: row;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li > .os-stepwise-token {
+.os-stepwise > li > .os-stepwise-token {
   flex-shrink: 0;
   margin-right: 8px;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 

@@ -2625,20 +2625,6 @@ p > [data-type=title] {
   margin-left: 24px;
 }
 
-[data-type=page] ol.os-stepwise > li {
-  display: flex;
-  flex-direction: row;
-}
-
-[data-type=page] ol.os-stepwise > li > .os-stepwise-token {
-  flex-shrink: 0;
-  margin-right: 8px;
-}
-
-[data-type=page] ol.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
 [data-type=page] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2786,6 +2772,20 @@ p > [data-type=title] {
 }
 
 [data-type=page] > section > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-stepwise > li {
+  display: flex;
+  flex-direction: row;
+}
+
+.os-stepwise > li > .os-stepwise-token {
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
@@ -3108,20 +3108,6 @@ p > [data-type=title] {
 }
 
 .os-eoc[data-type=composite-page] > div > div > section > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li {
-  display: flex;
-  flex-direction: row;
-}
-
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li > .os-stepwise-token {
-  flex-shrink: 0;
-  margin-right: 8px;
-}
-
-.os-eoc[data-type=composite-page] > div > div > section ol.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
