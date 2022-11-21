@@ -71,3 +71,29 @@
         ),
     )
 ));
+
+@include add_settings((
+    FigureSplash: (
+        _selectors: (".os-figure.has-splash"),
+        FigureSplashBg: (
+            // background color is book specific set in the book.scss file
+        ),
+        CaptionContainerChapterIntroBg: (
+            background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
+        ),
+        CaptionNumber: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitleLabel: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+        ),
+        CaptionText: (
+            font-family:(_ref:'typography:::sansFont'),
+        ),
+    ),
+));

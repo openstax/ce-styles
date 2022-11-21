@@ -20,6 +20,29 @@
     )
 ));
 
+@include create_shape('cosmos:::FigureSplashShape', (
+    _components: (
+      map-merge($Figure__Container--Splash, (
+        _components: (
+            map-merge($Figure--Splash, (
+                _components: (
+                    $Media--Splash,
+
+                )
+            )),
+            map-merge($Caption__Container--ChapterIntro, (
+                _components: (
+                    $Caption__Number,
+                    $Caption__TitleLabel,
+                    $Caption__Title--ChapterIntro,
+                    $Caption__Text,
+                )
+            )),
+        )
+      )),
+    )
+));
+
 @include create_shape('cosmos:::FigureTopSpacingShape', (
     _components: (
         map-merge($TopSpacing__Container,(

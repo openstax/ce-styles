@@ -5,6 +5,7 @@ $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$Unit__Container: empty_wrapper(UnitContainer, '');
 
 $Chapter__Container: (
   _name: "ChapterWrapper",
@@ -152,6 +153,56 @@ $H1--ChapterIntro--Numbered__Icon: (
   )
 );
 
+// Unit Opener h1 components
+
+$H1--UnitOpener: (
+  _name: "H1UnitOpener",
+  _subselector: ' > h1[data-type="document-title"]',
+  _properties: (
+    position: absolute,
+    top: 2.2in,
+    margin-top: 0,
+    margin-left: fullBleedsMargin(-1, in),
+    width: 6.5in,
+    font-size: font-scale(6),
+    line-height: line-height(6),
+    padding: 5rem,
+    z-index: 1,
+ )
+);
+
+$H1--UnitOpener__PartText: (
+  _name: "H1UnitOpenerPartText",
+  _subselector: ' > .os-part-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 700,
+  )
+);
+
+$H1--UnitOpener__Number: (
+  _name: "H1UnitOpenerNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 700,
+  )
+);
+
+$H1--UnitOpener__Text: (
+  _name: "H1UnitOpenerText",
+  _subselector: ' > .os-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 400,
+    display: block,
+    margin-top: v-spacing(2),
+  )
+);
+
 // H2 headers
 $H2: (
     _name:"H2Title",
@@ -267,6 +318,20 @@ $H2--ChapterIntro__Text: (
     )
 );
 
+$H2--UnitOpener: (
+    _name: "H2UnitOpener",
+    _subselector: ' > h2[data-type="document-title"]',
+    _properties: (
+      margin-top: 2in,
+      display: table,
+      color: enum('ValueSet:::REQUIRED'),
+      font-family: enum('ValueSet:::REQUIRED'),
+      font-size: font-scale(2),
+      line-height: font-scale(2),
+      margin-bottom: v-spacing(1),
+      font-weight: bold,
+    )
+);
 
 // H3 headers
 $H3: (
