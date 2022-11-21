@@ -101,17 +101,17 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
 );
 
 // Solution components
-$Exercise__Solution__Wrapper: (
-  _name: "SolutionWrapper",
-  _subselector: ' [data-type="solution"]',
+$Exercise__Solution: (
+  _name: "ExerciseSolution",
+  _subselector: ' [data-type="solution"]', // has to be non direct child
   _properties: (
     display: enum('ValueSet:::OPTIONAL'), //used in Answer Key, in content exercises this component is empty wrapper
   )
 );
 
-$InjectedExercise__Solution__Wrapper: (
-  _name: "InjectedSolutionWrapper",
-  _subselector: ' [data-type="question-solution"]',
+$InjectedExercise__Solution: (
+  _name: "InjectedSolution",
+  _subselector: ' [data-type="question-solution"]', // has to be non direct child
   _properties: (
     display: table,
   )
@@ -125,12 +125,29 @@ $InjectedExercise__Solution__Part: (
   )
 );
 
-$Exercise__Solution__Container: exerciseChildContainer((child: solution, name: "SolutionContainer", hasImageTableOnTop: false));
-$Exercise__Solution__Container--WithImageTableOnTop: exerciseChildContainer((child: solution, name: "SolutionContainerWithImageTableOnTop", hasImageTableOnTop: true));
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
 
 // Solution components used in inline Answer Key
-$Exercise__Solution--Inline__Wrapper: (
-  _name: "SolutionInlineWrapper",
+$Exercise__Solution--Inline: (
+  _name: "ExerciseSolutionInline",
   _subselector: " [data-type='solution']",
   _properties:(
     display: inline,
@@ -138,7 +155,7 @@ $Exercise__Solution--Inline__Wrapper: (
 );
 
 $Exercise__Solution--Inline__Container: (
-  _name: "SolutionInlineContainer",
+  _name: "ExerciseSolutionInlineContainer",
   _subselector: " > .os-solution-container",
   _properties:(
     display: inline,
@@ -148,7 +165,7 @@ $Exercise__Solution--Inline__Container: (
 );
 
 $Exercise__Solution--Inline__Number: (
-  _name: "SolutionInlineNumber",
+  _name: "ExerciseSolutionInlineNumber",
   _subselector: ' > .os-number',
   _properties: (
     text-decoration: none,
@@ -158,7 +175,7 @@ $Exercise__Solution--Inline__Number: (
 );
 
 $Exercise__Solution--Inline__Paragraph: (
-  _name: "SolutionInlineParagraph",
+  _name: "ExerciseSolutionInlineParagraph",
   _subselector: " > p",
   _properties:(
     display: inline,

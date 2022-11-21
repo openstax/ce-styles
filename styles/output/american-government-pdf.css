@@ -1808,7 +1808,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .middle-ground {
@@ -1853,7 +1852,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .insider-perspective {
@@ -1898,7 +1896,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .american.government.link-to-learning {
@@ -1988,7 +1985,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .middle-ground {
@@ -2033,7 +2029,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .insider-perspective {
@@ -2078,7 +2073,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   border-top-style: solid;
   border-top-width: 0.1rem;
-  font-weight: 700;
 }
 
 .american.government.link-to-learning {
@@ -2722,21 +2716,25 @@ a[data-type=cite] {
   margin-bottom: 1.4rem;
 }
 
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] {
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] > .os-solution-area {
+  margin-bottom: 0.7rem;
+}
+
+.os-eob [data-type=solution] {
   display: inline;
 }
 
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-number {
+.os-eob [data-type=solution] > .os-number {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-solution-container {
+.os-eob [data-type=solution] > .os-solution-container {
   display: inline;
   margin-right: 8px;
 }
 
-.os-eob[data-type=composite-chapter] > [data-type=composite-page] [data-type=solution] > .os-solution-container > p {
+.os-eob [data-type=solution] > .os-solution-container > p {
   display: inline;
 }
