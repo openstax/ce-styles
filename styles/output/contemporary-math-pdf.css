@@ -2552,11 +2552,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eob.os-solutions-container [data-type=solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
-  vertical-align: top;
-  display: inline-table;
-}
-
 .os-eob.os-solutions-container [data-type=solution] > div > p > .token {
   color: #1E7E91;
   font-size: 1.728rem;
@@ -2580,11 +2575,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   vertical-align: middle;
   margin-right: 0.4rem;
-}
-
-.os-eob.os-solutions-container [data-type=solution] > div > .circled > li > os.table:nth-child(2) table {
-  vertical-align: top;
-  display: inline-table;
 }
 
 .os-eob.os-solutions-container [data-type=solution] > div > ul[data-labeled-item=true] > li > .token {
@@ -2623,11 +2613,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > :not(.os-eos) [data-type=problem] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
-  vertical-align: top;
-  display: inline-table;
-}
-
 [data-type=page] > :not(.os-eos) [data-type=problem] > div > p > .token {
   color: #1E7E91;
   font-size: 1.728rem;
@@ -2653,11 +2638,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
-}
-
-[data-type=page] > :not(.os-eos) [data-type=problem] > div > .circled > li > os.table:nth-child(2) table {
-  vertical-align: top;
-  display: inline-table;
 }
 
 [data-type=page] > :not(.os-eos) [data-type=problem] > div > ul[data-labeled-item=true] > li > .token {
@@ -2696,11 +2676,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] [data-type=solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
-  vertical-align: top;
-  display: inline-table;
-}
-
 [data-type=page] [data-type=solution] > div > p > .token {
   color: #1E7E91;
   font-size: 1.728rem;
@@ -2726,11 +2701,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
-}
-
-[data-type=page] [data-type=solution] > div > .circled > li > os.table:nth-child(2) table {
-  vertical-align: top;
-  display: inline-table;
 }
 
 [data-type=page] [data-type=solution] > div > ul[data-labeled-item=true] > li > .token {
@@ -2769,11 +2739,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section:not(.os-eos) [data-type=exercise-question] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
-  vertical-align: top;
-  display: inline-table;
-}
-
 [data-type=page] > section:not(.os-eos) [data-type=exercise-question] > div > p > .token {
   color: #1E7E91;
   font-size: 1.728rem;
@@ -2799,11 +2764,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
-}
-
-[data-type=page] > section:not(.os-eos) [data-type=exercise-question] > div > .circled > li > os.table:nth-child(2) table {
-  vertical-align: top;
-  display: inline-table;
 }
 
 [data-type=page] > section:not(.os-eos) [data-type=exercise-question] > div > ul[data-labeled-item=true] > li > .token {
@@ -2842,11 +2802,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] [data-type=question-solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
-  vertical-align: top;
-  display: inline-table;
-}
-
 [data-type=page] [data-type=question-solution] > div > p > .token {
   color: #1E7E91;
   font-size: 1.728rem;
@@ -2872,11 +2827,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
-}
-
-[data-type=page] [data-type=question-solution] > div > .circled > li > os.table:nth-child(2) table {
-  vertical-align: top;
-  display: inline-table;
 }
 
 [data-type=page] [data-type=question-solution] > div > ul[data-labeled-item=true] > li > .token {
@@ -3281,6 +3231,54 @@ li > table {
 
 .os-eob .os-solution-container .os-table > table > tbody > tr > td[data-align=center] {
   text-align: center;
+}
+
+[data-type=problem] > div > ol > li > .os-table:first-child table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=problem] > div > .circled > li > os.table:nth-child(2) table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > .os-table:first-child table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div > .circled > li > os.table:nth-child(2) table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] > div > ol > li > .os-table:first-child table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] > div > .circled > li > os.table:nth-child(2) table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] > div > ol > li > .os-table:first-child table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] > div > .circled > li > os.table:nth-child(2) table {
+  vertical-align: top;
+  display: inline-table;
+  padding-top: 0.7rem;
 }
 
 .os-glossary-container > dl {

@@ -224,6 +224,7 @@ $Table--FirstInList: (
     _properties:(
         vertical-align: top,
         display: inline-table,
+        padding-top: v-spacing(1),
     )
 );
 
@@ -235,8 +236,8 @@ $ListTable: (
     )
 );
 
-$Table__Container--FirstInList: empty_wrapper(TableContainerFirstChild, ' > li > .os-table:first-child');
-$Table__Container--FirstInCircledList: empty_wrapper(TableContainerFirst, ' > os.table:nth-child(2)');
+$Table__Container--FirstInOrderedList: empty_wrapper(TableContainerFirstInOrderedList, ' > ol > li > .os-table:first-child');
+$Table__Container--FirstInCircledList: empty_wrapper(FirstInCircledList, ' > .circled > li > os.table:nth-child(2)');
 
 $Table--TopSpacing:(
     _name: "TableTopSpacing",
