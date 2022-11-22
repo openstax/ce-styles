@@ -3004,7 +3004,7 @@ section.coreq-skills > section.learning-objectives > ul > li {
   max-width: 100%;
 }
 
-[data-type=problem] > div > ol > li > .os-table:first-child table {
+[data-type=problem] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -3016,7 +3016,7 @@ section.coreq-skills > section.learning-objectives > ul > li {
   padding-top: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > .os-table:first-child table {
+[data-type=exercise-question] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -3028,7 +3028,7 @@ section.coreq-skills > section.learning-objectives > ul > li {
   padding-top: 0.7rem;
 }
 
-[data-type=solution] > div > ol > li > .os-table:first-child table {
+[data-type=solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -3040,7 +3040,7 @@ section.coreq-skills > section.learning-objectives > ul > li {
   padding-top: 0.7rem;
 }
 
-[data-type=question-solution] > div > ol > li > .os-table:first-child table {
+[data-type=question-solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;

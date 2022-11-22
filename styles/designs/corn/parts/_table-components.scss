@@ -236,8 +236,8 @@ $ListTable: (
     )
 );
 
-$Table__Container--FirstInOrderedList: empty_wrapper(TableContainerFirstInOrderedList, ' > ol > li > .os-table:first-child');
-$Table__Container--FirstInCircledList: empty_wrapper(FirstInCircledList, ' > .circled > li > os.table:nth-child(2)');
+$Table__Container--FirstInOrderedList: empty_wrapper(TableContainerFirstInOrderedList, ' > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child');
+$Table__Container--FirstInCircledList: empty_wrapper(TableContainerFirstInCircledList, ' > .circled > li > os.table:nth-child(2)');
 
 $Table--TopSpacing:(
     _name: "TableTopSpacing",

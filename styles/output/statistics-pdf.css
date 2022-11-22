@@ -2017,7 +2017,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   break-inside: avoid-column;
 }
 
-[data-type=problem] > div > ol > li > .os-table:first-child table {
+[data-type=problem] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -2029,7 +2029,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
-[data-type=exercise-question] > div > ol > li > .os-table:first-child table {
+[data-type=exercise-question] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -2041,7 +2041,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
-[data-type=solution] > div > ol > li > .os-table:first-child table {
+[data-type=solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
@@ -2053,7 +2053,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
-[data-type=question-solution] > div > ol > li > .os-table:first-child table {
+[data-type=question-solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-table:first-child table {
   vertical-align: top;
   display: inline-table;
   padding-top: 0.7rem;
