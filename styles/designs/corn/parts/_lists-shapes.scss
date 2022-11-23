@@ -185,7 +185,7 @@
     ),
 ));
 
-@include create_shape('corn:::ExercisesInOneColumnListsShape',(
+@include create_shape('corn:::ListsFromExercisesShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
@@ -203,6 +203,24 @@
                                 $OrderedList--SecondLevel,
                             )
                         )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                    _components: (
+                        $UnorderedList--FirstLevel,
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::CircledListsFromOneColumnExercisesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
                         map-merge($ParaWrapper--FirstLevel,(
                             _components: (
                                 $CircledList__Token,
@@ -230,34 +248,17 @@
                         )),
                     )
                 )),
-                map-merge($DivWrapper--SecondLevel, (
-                    _components: (
-                        $UnorderedList--FirstLevel,
-                    )
-                )),
             )
         )),
     )
 ));
 
-@include create_shape('corn:::ExercisesInMultiColumnListsShape',(
+@include create_shape('corn:::CircledListsFromMultiColumnsExercisesShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel, (
-                            _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($OrderedList--FirstLevel, (
-                            _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
-                            )
-                        )),
                         map-merge($ParaWrapper--FirstLevel,(
                             _components: (
                                 $CircledList__Token--MultiColumn,
@@ -283,11 +284,6 @@
 
                             )
                         )),
-                    )
-                )),
-                map-merge($DivWrapper--SecondLevel, (
-                    _components: (
-                        $UnorderedList--FirstLevel,
                     )
                 )),
             )

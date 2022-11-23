@@ -176,14 +176,9 @@ $bandColor: #093D4C;
 @include use('StepwiseLists', 'corn:::StepwiseListsShape');
 @include use('EosLists', 'corn:::EosListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
-@include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
+@include use('CircledListsFromOneColumnExercises', 'corn:::CircledListsFromOneColumnExercisesShape');
+@include use('CircledListsFromMultiColumnsExercises', 'corn:::CircledListsFromMultiColumnsExercisesShape');
 
 
 // Tables
