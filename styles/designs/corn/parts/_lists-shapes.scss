@@ -45,15 +45,6 @@
                                 $UnorderedList--SecondLevel,
                             )
                         )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-                            )
-                        )),
                         map-merge($DivWrapper--FirstLevel, (
                             _components: (
                                 $UnorderedList--FirstLevel,
@@ -80,15 +71,6 @@
                                 $UnorderedList--FirstLevel,
                                 $OrderedList--FirstLevel,
                             ),
-                        )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-                            )
                         )),
                     ),
                 )),
@@ -137,16 +119,6 @@
                                 $OrderedList--SecondLevel,
                             ),
                         )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-
-                            )
-                        )),
                     )
                 )),
                 map-merge($SectionWrapper--ThirdLevel,(
@@ -183,6 +155,41 @@
             ),
         )),
     ),
+));
+
+@include create_shape('corn:::CircledListsFromModulesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+              map-merge($SectionWrapper--FirstLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+              map-merge($SectionWrapper--SecondLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+            )
+        )),
+    )
 ));
 
 @include create_shape('corn:::ListsFromExercisesShape',(

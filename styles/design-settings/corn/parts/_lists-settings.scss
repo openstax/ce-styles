@@ -1,12 +1,15 @@
 @include add_settings((
     PageLists: (
         _selectors: ('[data-type="page"]'),
-        CircledListToken: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
     ),
     CompositePageLists: (
         _selectors: ('.os-eoc[data-type="composite-page"]'),
+    ),
+));
+
+@include add_settings((
+    CircledListsFromModules: (
+        _selectors: ('[data-type="page"]', '.os-eoc[data-type="composite-page"]'),
         CircledListToken: (
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
