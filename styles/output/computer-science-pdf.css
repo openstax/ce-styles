@@ -4720,6 +4720,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=composite-page] > section > ol {
   margin-left: 24px;
 }
@@ -4732,11 +4740,59 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
 [data-type=composite-page] > section > section > div > ol {
   margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ol {
   margin-left: 24px;
 }
 
