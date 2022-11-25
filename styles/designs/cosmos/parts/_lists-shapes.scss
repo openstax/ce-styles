@@ -8,11 +8,13 @@
                 map-merge($UnorderedList--FirstLevel, (
                     _components: (
                         $UnorderedList--SecondLevel,
+                        $OrderedList--SecondLevel,
                     )
                 )),
                 $UnorderedList--FirstLevel--NoBullet,
                 map-merge($OrderedList--FirstLevel, (
                     _components: (
+                        $UnorderedList--SecondLevel,
                         $OrderedList--SecondLevel,
                     )
                 )),
@@ -21,10 +23,12 @@
                         map-merge($UnorderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
+                                $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
                             )
                         )),
@@ -35,10 +39,12 @@
                         map-merge($UnorderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
+                                $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
                             )
                         )),
@@ -46,8 +52,18 @@
                 )),
                 map-merge($DivWrapper--SecondLevel, (
                     _components: (
-                        $UnorderedList--FirstLevel,
-                        $OrderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($SectionWrapper--FirstLevel, (
                             _components: (
                                 $UnorderedList--FirstLevel,
@@ -58,20 +74,32 @@
                 )),
                 map-merge($SectionWrapper--ThirdLevel,(
                     _components: (
-                        $UnorderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                     )
                 )),
                 map-merge($SectionWrapper--FourthLevel,(
                     _components: (
-                        $UnorderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                     )
