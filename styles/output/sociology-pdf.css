@@ -239,6 +239,10 @@ ul[data-labeled-item=true] {
   list-style-type: none;
 }
 
+ul[data-bullet-style=none] {
+  list-style-type: none;
+}
+
 .os-math-in-para {
   white-space: nowrap;
 }
@@ -1282,10 +1286,6 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
 
 [data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
-}
-
-[data-type=page] > ul[data-bullet-style=none] {
-  list-style-type: none;
 }
 
 [data-type=page] > ol {
