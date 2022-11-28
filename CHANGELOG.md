@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Split lists shapes in `corn`
+* Fix column breaking in `AppendixGlossary` from `cosmos`
 * Move `UnitOpener` files to `common` directory
 * Create shapes for titles from `UnitOpener`
 * Move `SplashFigure` to `figureimage` files
