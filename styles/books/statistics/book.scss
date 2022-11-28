@@ -169,6 +169,7 @@ $bandColor: #093D4C;
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 @include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -193,9 +194,9 @@ $bandColor: #093D4C;
 
 // Lists
 @include use('PageLists', 'corn:::PageListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 

@@ -153,21 +153,20 @@ $ChapterIntroType: fullWidth;
 //Lists
 @include use('PageLists', 'corn:::PageListsShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
+@include use('CircledListsFromModules', 'corn:::CircledListsFromModulesShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
-@include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
+@include use('CircledListsFromOneColumnExercises', 'corn:::CircledListsFromOneColumnExercisesShape');
+@include use('CircledListsFromMultiColumnsExercises', 'corn:::CircledListsFromMultiColumnsExercisesShape');
 
 //Tables
 @include use('BasicTable', 'corn:::BasicTableShape');
 @include use('ColumnHeader', 'corn:::ColumnHeaderTableShape');
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 @include use('TableFromAnswerKey', 'corn:::TableFromAnswerKeyShape');
 

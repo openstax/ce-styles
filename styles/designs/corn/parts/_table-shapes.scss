@@ -220,6 +220,29 @@
     )
 ));
 
+@include create_shape('corn:::TableFromExercisesListsShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container--FirstInOrderedList, (
+                          _components: (
+                              $Table--FirstInList,
+                          )
+                      )),
+                      map-merge($Table__Container--FirstInCircledList, (
+                          _components: (
+                              $Table--FirstInList,
+                          )
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
 @include create_shape('corn:::TableFromAnswerKeyShape',(
     _components: (
         map-merge($Exercises__Container,(
@@ -278,5 +301,14 @@
                 $Caption__Container--Table
             ),
         )),
+    )
+));
+
+// To do: decide if it should be removed
+// Selector 'li > table' is wrong. It means that table wasn't baked properly.
+// It should be wrapped into .os-table.
+@include create_shape('corn:::ListTableShape',(
+    _components: (
+        $ListTable
     )
 ));
