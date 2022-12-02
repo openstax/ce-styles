@@ -1,32 +1,13 @@
 @include add_settings((
   UnitOpener: (
     _selectors: ('[data-type="unit"]'),
-    UnitTitlePartText: (
-        color: (_ref: 'colorMap:::unitTitleColor'),
-        font-family: (_ref: 'typography:::titleOption3Font'),
-    ),
-    UnitTitleNumber: (
-        color: (_ref: 'colorMap:::unitTitleColor'),
-        font-family: (_ref: 'typography:::titleOption3Font'),
-    ),
-    UnitTitleText: (
-        color: (_ref: 'colorMap:::unitTitleTextColor'),
-        font-family: (_ref: 'typography:::titleOption3Font'),
-    ),
-    UnitPage: (
+    UnitOpenerPage: (
         color: (_ref: 'colorMap:::unitTitleTextColor'),
         font-family: (_ref: 'typography:::titleOption1Font'),
         background-color: (_ref: 'colorMap:::unitLightBoxBgColor'),
     ),
-    UnitPageBg: (
+    UnitOpenerPageBg: (
         background-color: (_ref: 'colorMap:::unitBgColor'),
     ),
-  )
-));
-
-// Settings for hide unit opener page title prefix
-@include add_settings((
-  UnitOpenerPageTitle: (
-    _selectors: ('.unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number')
   )
 ));

@@ -8,45 +8,12 @@
             _components:(
                 $UnorderedList--FirstLevel,
                 $OrderedList--FirstLevel,
-                map-merge($OrderedList--Stepwise,(
-                    _components:(
-                        map-merge($OrderedList--Stepwise__Item,(
-                            _components:(
-                                $OrderedList--Stepwise__Token,
-                                map-merge($OrderedList--Stepwise__Content,(
-                                    _components: (
-                                        $UnorderedList--FirstLevel,
-                                    )
-                                )),
-                            ),
-                        )),
-                    ),
-                )),
                 map-merge($DivWrapper--FirstLevel, (
                     _components:(
                         $UnorderedList--FirstLevel,
                         map-merge($SectionWrapper--SecondLevel, (
                             _components:(
                                 $UnorderedList--FirstLevel,
-                            )
-                        )),
-                    )
-                )),
-                map-merge($DivWrapper--EOS, (
-                    _components:(
-                        map-merge($SectionWrapper--SecondLevel, (
-                            _components: (
-                                map-merge($UnorderedList--FirstLevel,(
-                                    _components:(
-                                        $ListItem--EOSIntructions,
-                                        map-merge($UnorderedList--SecondLevel,(
-                                            _components: (
-                                                $ListItem--EOSIntructions
-                                            )
-                                        )),
-
-                                    )
-                                )),
                             )
                         )),
                     )
@@ -78,15 +45,6 @@
                                 $UnorderedList--SecondLevel,
                             )
                         )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-                            )
-                        )),
                         map-merge($DivWrapper--FirstLevel, (
                             _components: (
                                 $UnorderedList--FirstLevel,
@@ -113,15 +71,6 @@
                                 $UnorderedList--FirstLevel,
                                 $OrderedList--FirstLevel,
                             ),
-                        )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-                            )
                         )),
                     ),
                 )),
@@ -170,16 +119,6 @@
                                 $OrderedList--SecondLevel,
                             ),
                         )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-
-                            )
-                        )),
                     )
                 )),
                 map-merge($SectionWrapper--ThirdLevel,(
@@ -209,20 +148,6 @@
                                     ),
                                 )),
                                 $OrderedList--FirstLevel,
-                                map-merge($OrderedList--Stepwise,(
-                                    _components:(
-                                        map-merge($OrderedList--Stepwise__Item,(
-                                            _components:(
-                                                $OrderedList--Stepwise__Token,
-                                                map-merge($OrderedList--Stepwise__Content,(
-                                                    _components: (
-                                                        $UnorderedList--FirstLevel,
-                                                    )
-                                                )),
-                                            ),
-                                        )),
-                                    ),
-                                )),
                             ),
                         )),
                     ),
@@ -232,7 +157,42 @@
     ),
 ));
 
-@include create_shape('corn:::ExercisesInOneColumnListsShape',(
+@include create_shape('corn:::CircledListsFromModulesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+              map-merge($SectionWrapper--FirstLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+              map-merge($SectionWrapper--SecondLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::ListsFromExercisesShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
@@ -248,41 +208,6 @@
                             _components: (
                                 $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
-                                map-merge($Table__Container--FirstInList, (
-                                    _components: (
-                                        $Table--FirstInList,
-                                    )
-                                )),
-                            )
-                        )),
-                        map-merge($ParaWrapper--FirstLevel,(
-                            _components: (
-                                $CircledList__Token,
-                            )
-                        )),
-                        map-merge($CircledList,(
-                            _components: (
-                                map-merge($CircledList__Item,(
-                                    _components: (
-                                        $CircledList__Token,
-                                        map-merge($Table__Container--FirstInCircledList, (
-                                            _components: (
-                                                $Table--FirstInList,
-                                            )
-                                        ))
-                                    )
-                                )),
-
-                            )
-                        )),
-                        map-merge($UnorderedList--Labeled,(
-                            _components: (
-                                map-merge($ListItem__Wrapper,(
-                                    _components: (
-                                        $CircledList__Token,
-                                    )
-                                )),
-
                             )
                         )),
                     )
@@ -297,29 +222,50 @@
     )
 ));
 
-@include create_shape('corn:::ExercisesInMultiColumnListsShape',(
+@include create_shape('corn:::CircledListsFromOneColumnExercisesShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel, (
+                        map-merge($ParaWrapper--FirstLevel,(
                             _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
+                                $CircledList__Token,
                             )
                         )),
-                        map-merge($OrderedList--FirstLevel, (
+                        map-merge($CircledList,(
                             _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
-                                map-merge($Table__Container--FirstInList, (
+                                map-merge($CircledList__Item,(
                                     _components: (
-                                        $Table--FirstInList,
+                                        $CircledList__Token,
                                     )
                                 )),
+
                             )
                         )),
+                        map-merge($UnorderedList--Labeled,(
+                            _components: (
+                                map-merge($ListItem__Wrapper,(
+                                    _components: (
+                                        $CircledList__Token,
+                                    )
+                                )),
+
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::CircledListsFromMultiColumnsExercisesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
                         map-merge($ParaWrapper--FirstLevel,(
                             _components: (
                                 $CircledList__Token--MultiColumn,
@@ -330,11 +276,6 @@
                                 map-merge($CircledList__Item--MultiColumn,(
                                     _components: (
                                         $CircledList__Token--MultiColumn,
-                                        map-merge($Table__Container--FirstInCircledList, (
-                                            _components: (
-                                                $Table--FirstInList,
-                                            )
-                                        ))
                                     )
                                 )),
 
@@ -350,11 +291,6 @@
 
                             )
                         )),
-                    )
-                )),
-                map-merge($DivWrapper--SecondLevel, (
-                    _components: (
-                        $UnorderedList--FirstLevel,
                     )
                 )),
             )
@@ -416,14 +352,8 @@
     )
 ));
 
-@include create_shape('corn:::ListTableShape',(
-    _components: (
-        $ListTable
-    )
-));
-
 // Note: during refactoring we tried to create shapes that can be used for many elements.
-// That's how we end up with ExercisesInOneColumnListsShape which we are using for 
+// That's how we end up with ExercisesInOneColumnListsShape which we are using for
 // [data-type="problem"], [data-type="solution"], [data-type="exercise-question"] and [data-type="question-solution"].
 // In Contemporary Math there is a case with list in [data-type="exercise-stimulus"], which is a sibling of [data-type="exercise-question"].
 // In new project we need to decide if we want to create separate shape for injected exercises, that will cover question and stimulus
@@ -436,5 +366,48 @@
                 $OrderedList--FirstLevel,
             )
         )),
+    )
+));
+
+@include create_shape('corn:::StepwiseListsShape', (
+    _components: (
+        map-merge($ListContainer,(
+            _components:(
+                map-merge($OrderedList--Stepwise__Item,(
+                    _components:(
+                        $OrderedList--Stepwise__Token,
+                        map-merge($OrderedList--Stepwise__Content,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                            )
+                        )),
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('corn:::EosListsShape', (
+    _components: (
+      map-merge($ListContainer, (
+        _components:(
+            map-merge($SectionWrapper--SecondLevel, (
+                _components: (
+                    map-merge($UnorderedList--FirstLevel,(
+                        _components:(
+                            $ListItem--EOSIntructions,
+                            map-merge($UnorderedList--SecondLevel,(
+                                _components: (
+                                    $ListItem--EOSIntructions
+                                )
+                            )),
+
+                        )
+                    )),
+                )
+            )),
+        )
+      )),
     )
 ));

@@ -1,0 +1,48 @@
+$UnitOpener__Container: (
+  _name: "UnitOpenerContainer",
+  _subselector: '',
+  _properties: (
+    position: relative,
+  )
+);
+
+// 11in (total page height) - 2*0.8in (bottom/top page margin) = 9.4in -> page height
+// 0.8in (top margin) + 2.2in (from top) = 3in (from top) -> place where starts unit page
+// 9.4in - 2.2in = 7.2in -> height of the unit page
+// 7.2in + 0.8in (bottom page margin) + 0.15in (bleed) = 8.15in -> total height of unit page
+$UnitOpener__Page: (
+    _name: "UnitOpenerPage",
+    _subselector: ' > [data-type="page"]',
+    _properties: (
+      color: enum('ValueSet:::REQUIRED'),
+      font-family: enum('ValueSet:::REQUIRED'),
+      font-weight: 400,
+      font-size: font-scale(1),
+      line-height: line-height(1),
+      background-color: enum('ValueSet:::REQUIRED'),
+      border-top-right-radius: 135px,
+      position: relative,
+      top: 2.2in,
+      height: 8.15in,
+      width: 6.5in,
+      margin-left: fullBleedsMargin(-1, in),
+      padding: 5rem,
+    )
+);
+
+$UnitOpener__Page__Bg: (
+  _name: "UnitOpenerPageBg",
+  _subselector: '::before',
+  _properties: (
+    content: "''",
+    background-color: enum('ValueSet:::REQUIRED'),
+    position: absolute,
+    height: fullBleedsSize(11, in),
+    width: fullBleedsSize(8.5, in),
+    margin-left: fullBleedsMargin(-1, in),
+    margin-top: fullBleedsMargin(-0.8, in),
+    margin-bottom: fullBleedsMargin(-0.8, in),
+    z-index: -1,
+    box-sizing: border-box,
+  ),
+);

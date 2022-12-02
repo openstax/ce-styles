@@ -182,7 +182,7 @@ $bandColor: #DCB83D;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('ScreenreaderSpan', 'common:::VisuallyHiddenShape');
 @include use('HandbookOutline', 'cosmos:::HandbookOutlineShape');
-@include use('UnitOpener', 'cosmos:::UnitOpenerShape');
+@include use('UnitOpener', 'common:::UnitOpenerShape');
 @include use('PunctuationEmphasis', 'cosmos:::PunctuationEmphasisShape');
 @include use('SectionWorksCited', 'cosmos:::SectionWorksCitedShape');
 @include use('HandbookWorksCited', 'cosmos:::ModuleWithIndentationShape');
@@ -190,11 +190,11 @@ $bandColor: #DCB83D;
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 
 // Chapter Intro
-@include use('ChapterIntro', 'cosmos:::ChapterIntroShape');
 @include use('ChapterOutline', 'cosmos:::ChapterOutlineShape');
 
 // Figure
 @include use('Figure', 'cosmos:::FigureShape');
+@include use('FigureSplash', 'cosmos:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'cosmos:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'cosmos:::ImageTopSpacingShape');
@@ -220,6 +220,7 @@ $bandColor: #DCB83D;
 @include use('AuthorQuote', 'cosmos:::PhotoQuoteNoteShape');
 
 // Titles
+@include use('UnitOpenerTitles', 'cosmos:::UnitOpenerTitlesShape');
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesInline', 'cosmos:::ChapterIntroTitlesInlineShape');

@@ -53,6 +53,31 @@
 ));
 
 @include add_settings((
+    UnitOpenerTitles:(
+        _selectors: ('[data-type="unit"]'),
+        H1UnitOpenerPartText: (
+            color: (_ref: 'colorMap:::unitOpenerTitleColor'),
+            font-family: (_ref: 'typography:::titleFont'),
+        ),
+        H1UnitOpenerNumber: (
+            color: (_ref: 'colorMap:::unitOpenerTitleColor'),
+            font-family: (_ref: 'typography:::titleFont'),
+        ),
+        H1UnitOpenerText: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+            font-family: (_ref: 'typography:::titleFont'),
+        ),
+        H2UnitOpener: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::unitOpenerTitleColor'),
+        ),
+    ),
+    UnitOpenerPageTitle: ( // Settings for hide unit opener page title prefix
+        _selectors: ('.unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number')
+    ),
+));
+
+@include add_settings((
     ChapterTitles:(
         _selectors: ('[data-type="chapter"]'),
         H1ChapterIntroNumbered: (

@@ -96,6 +96,27 @@
     ),
 ));
 
+@include add_settings((
+    UnitOpenerTitles:(
+        _selectors: ('[data-type="unit"]'),
+        H1UnitOpenerPartText: (
+            color: (_ref: 'colorMap:::unitTitleColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+        H1UnitOpenerNumber: (
+            color: (_ref: 'colorMap:::unitTitleColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+        H1UnitOpenerText: (
+            color: (_ref: 'colorMap:::unitTitleTextColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+    ),
+    UnitOpenerPageTitle: ( // Settings for hide unit opener page title prefix
+        _selectors: ('.unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number')
+    ),
+));
+
 // Chapter Intro titles
 @include add_settings((
     ChapterTitles:(

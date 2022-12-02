@@ -94,6 +94,29 @@
     )
 ));
 
+// Unit Opener
+
+@include create_shape('cosmos:::UnitOpenerTitlesShape', (
+    _components: (
+        map-merge($Unit__Container, (
+            _components: (
+                map-merge($H1--UnitOpener, (
+                    _components: (
+                        $H1--UnitOpener__PartText,
+                        $H1--UnitOpener__Number,
+                        $H1--UnitOpener__Text,
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components:(
+                        $H2--UnitOpener,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 // Chapter Titles Shape
 @include create_shape('cosmos:::ChapterTitlesShape', (
     _components: (

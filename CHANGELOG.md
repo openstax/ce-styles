@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+# [v1.117.0] - 2022-12-2
+
+* Fix `cosmos` `ChapterObjectives` list font
+* Split lists shapes in `corn`
+* Fix column breaking in `AppendixGlossary` from `cosmos`
+* Move `UnitOpener` files to `common` directory
+* Create shapes for titles from `UnitOpener`
+* Move `SplashFigure` to `figureimage` files
+
 ## [v1.116.0] - 2022-11-18
 
 * Style `critical-thinking` list in `PDF` and on `webview`

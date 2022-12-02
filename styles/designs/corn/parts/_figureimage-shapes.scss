@@ -20,6 +20,34 @@
     )
 ));
 
+@include create_shape('corn:::FigureSplashShape', (
+    _components: (
+      map-merge($Figure__Container--Splash, (
+        _components: (
+            map-merge($Figure--Splash, (
+                _components: (
+                    $Figure--Splash__Bg,
+                    map-merge($Media--Splash, (
+                        _components: (
+                            $Media--Splash__Overlay,
+                            $Image--Splash,
+                        )
+                    )),
+                )
+            )),
+            map-merge($Caption__Container--ChapterIntro, (
+                _components: (
+                    $Caption__Number,
+                    $Caption__TitleLabel,
+                    $Caption__Title,
+                    $Caption__Text,
+                )
+            )),
+        )
+      )),
+    )
+));
+
 @include create_shape('corn:::FigureFromExercisesShape',(
     _components: (
         map-merge($Exercises__Container,(

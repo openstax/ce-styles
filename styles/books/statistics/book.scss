@@ -18,14 +18,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
-));
-
-@include add_settings((
   CollaborativeExercise: (
     _selectors: (".collab"),
     'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
@@ -150,7 +142,6 @@ $bandColor: #093D4C;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterObjectives', 'corn:::ChapterObjectivesShape');
 
 //Exercises
@@ -158,6 +149,7 @@ $bandColor: #093D4C;
 
 // Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
@@ -177,6 +169,7 @@ $bandColor: #093D4C;
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 @include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
@@ -201,9 +194,9 @@ $bandColor: #093D4C;
 
 // Lists
 @include use('PageLists', 'corn:::PageListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 

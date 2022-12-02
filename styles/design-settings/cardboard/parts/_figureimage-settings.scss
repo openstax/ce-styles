@@ -49,3 +49,29 @@
       _selectors: ('[data-type="solution"] > h4[data-type="solution-title"] + .has-first-element > .first-element'),
     ),
 ));
+
+@include add_settings((
+    FigureSplash: (
+        _selectors: (".os-figure.has-splash"),
+        MediaSplashBar: (
+            //background-color is book specific set in book.scss file
+            //border-top-color is book specific set in book.scss file
+        ),
+        CaptionTitleLabel:(
+            font-family: (_ref: "typography:::baseFont"),
+            color: (_ref: "colorMap:::captionNumberColor"),
+        ),
+        CaptionNumber:(
+            font-family: (_ref: "typography:::baseFont"),
+            color: (_ref: "colorMap:::captionNumberColor"),
+        ),
+        CaptionTitle:(
+            font-family: (_ref: "typography:::baseFont"),
+            color: (_ref: "colorMap:::captionNumberColor"),
+        ),
+        CaptionText:(
+            font-family: (_ref: "typography:::baseFont"),
+            color: (_ref: "colorMap:::captionTextColor"),
+        ),
+    )
+));

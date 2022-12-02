@@ -1259,38 +1259,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   box-sizing: border-box;
 }
 
-[data-type=unit] > h1[data-type=document-title] {
-  position: absolute;
-  top: 2.2in;
-  margin-top: 0;
-  margin-left: -1.15in;
-  width: 6.5in;
-  font-size: 2.985984rem;
-  line-height: 3rem;
-  padding: 5rem;
-  z-index: 1;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-part-text {
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 700;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-number {
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 700;
-}
-
-[data-type=unit] > h1[data-type=document-title] > .os-text {
-  color: #000000;
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 400;
-  display: block;
-  margin-top: 1.4rem;
-}
-
 [data-type=unit] > [data-type=page] {
   color: #000000;
   font-family: Noto Sans, StixGeneral;
@@ -1307,93 +1275,8 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   padding: 5rem;
 }
 
-[data-type=unit] > [data-type=page] > [data-type=document-title] {
-  margin-top: 2in;
-  display: table;
-  color: #344456;
-  font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number {
   display: none;
-}
-
-.introduction > .os-figure.has-splash {
-  margin-bottom: 1.4rem;
-  margin-top: -1.15in;
-}
-
-.introduction > .os-figure.has-splash > figure.splash {
-  position: relative;
-  width: 8.75in;
-  transform: translate3d(-1in, 0, 0);
-  margin-left: -1.2rem;
-  margin-bottom: 0;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] {
-  display: flex;
-  width: 8.75in;
-  border-left: none;
-  height: 4.3in;
-  position: relative;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media]::after {
-  width: 100%;
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 5.83rem;
-  background-color: #24739E;
-  border-top-width: 0.25rem;
-  border-top-style: solid;
-  border-top-color: #344456;
-  z-index: 1;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] > img {
-  width: 8.75in;
-  height: 3.58in;
-  display: inline;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container {
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title-label {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-number {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-caption {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 0.8333333333rem;
-  color: #757474;
 }
 
 .os-chapter-outline {
@@ -1464,6 +1347,80 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 }
 
 .os-figure:not(.has-splash) > .os-caption-container > .os-caption {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 0.8333333333rem;
+  color: #757474;
+}
+
+.os-figure.has-splash {
+  margin-bottom: 1.4rem;
+  margin-top: -1.15in;
+}
+
+.os-figure.has-splash > figure.splash {
+  position: relative;
+  width: 8.75in;
+  transform: translate3d(-1in, 0, 0);
+  margin-left: -1.2rem;
+  margin-bottom: 0;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  display: flex;
+  width: 8.75in;
+  border-left: none;
+  height: 4.3in;
+  position: relative;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media]::after {
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 5.83rem;
+  background-color: #24739E;
+  border-top-width: 0.25rem;
+  border-top-style: solid;
+  border-top-color: #344456;
+  z-index: 1;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] > img {
+  width: 8.75in;
+  height: 3.58in;
+  display: inline;
+}
+
+.os-figure.has-splash > .os-caption-container {
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title-label {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-number {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
   color: #757474;
@@ -2695,6 +2652,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob .os-solution-container > p + .os-table {
   margin-top: 1rem;
+}
+
+[data-type=unit] > h1[data-type=document-title] {
+  position: absolute;
+  top: 2.2in;
+  margin-top: 0;
+  margin-left: -1.15in;
+  width: 6.5in;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding: 5rem;
+  z-index: 1;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-part-text {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 700;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-number {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 700;
+}
+
+[data-type=unit] > h1[data-type=document-title] > .os-text {
+  color: #000000;
+  font-family: Roboto Condensed, StixGeneral;
+  font-weight: 400;
+  display: block;
+  margin-top: 1.4rem;
+}
+
+[data-type=unit] > div > h2[data-type=document-title] {
+  margin-top: 2in;
+  display: table;
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.44rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
