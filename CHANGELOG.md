@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add missing components to `PageListsShape`
+
+# [v1.117.0] - 2022-12-2
+
+* Fix `cosmos` `ChapterObjectives` list font
 * Split lists shapes in `corn`
+* Fix column breaking in `AppendixGlossary` from `cosmos`
 * Move `UnitOpener` files to `common` directory
 * Create shapes for titles from `UnitOpener`
 * Move `SplashFigure` to `figureimage` files
