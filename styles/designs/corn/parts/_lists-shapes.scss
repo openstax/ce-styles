@@ -254,6 +254,8 @@
     _components: (
         map-merge($ListContainer,(
             _components: (
+                $UnorderedList--FirstLevel, // in unnumbered exercises
+                $OrderedList--FirstLevel,
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
                         map-merge($UnorderedList--FirstLevel, (
@@ -272,7 +274,18 @@
                 )),
                 map-merge($DivWrapper--SecondLevel, (
                     _components: (
-                        $UnorderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
                     )
                 )),
             )

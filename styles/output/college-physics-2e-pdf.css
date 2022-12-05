@@ -2384,6 +2384,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=problem] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ol {
+  margin-left: 24px;
+}
+
 [data-type=problem] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2434,6 +2442,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=problem] > div > div > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=exercise-question] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > ol {
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
@@ -2866,6 +2882,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob .os-solution-container > p + [data-type=media] > img {
   margin-top: 1rem;
+}
+
+[data-type=solution] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > ol {
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > ul:not([data-labeled-item=true]) {

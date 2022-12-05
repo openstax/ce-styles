@@ -183,8 +183,34 @@
                 $OrderedList--FirstLevel,
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                        $UnorderedList--FirstLevel,
-                        $OrderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
                     )
                 )),
             )

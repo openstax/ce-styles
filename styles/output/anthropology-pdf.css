@@ -1610,6 +1610,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 16px;
 }
 
+[data-type=problem] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ol {
+  margin-left: 24px;
+}
+
 [data-type=problem] > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -1660,6 +1668,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 
 [data-type=problem] > div > div > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=exercise-question] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > ol {
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
