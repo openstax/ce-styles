@@ -3137,7 +3137,35 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
+[data-type=note] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -3151,6 +3179,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > div > ol > li > ol {
   margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=note] > div > div > ul:not([data-labeled-item=true]) {

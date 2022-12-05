@@ -222,18 +222,32 @@
     _components: (
         map-merge($ListContainer,(
             _components: (
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($OrderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
                 map-merge($DivWrapper--FirstLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel, (
-                            _components: (
-                                $UnorderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($OrderedList--FirstLevel, (
-                            _components: (
-                                $OrderedList--SecondLevel,
-                            )
-                        )),
+                      map-merge($UnorderedList--FirstLevel, (
+                          _components: (
+                              $OrderedList--SecondLevel,
+                              $UnorderedList--SecondLevel,
+                          )
+                      )),
+                      map-merge($OrderedList--FirstLevel, (
+                          _components: (
+                              $OrderedList--SecondLevel,
+                              $UnorderedList--SecondLevel,
+                          )
+                      )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel,(
