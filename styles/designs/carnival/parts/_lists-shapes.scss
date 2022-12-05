@@ -149,7 +149,12 @@
                                         $OrderedList--SecondLevel,
                                     ),
                                 )),
-                                $OrderedList--FirstLevel,
+                                map-merge($OrderedList--FirstLevel, (
+                                    _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
                             ),
                         )),
                     ),
