@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add missing components to `ExercisesListsShape`
 * Add missing components to `CompositePageListsShape`
 * Add missing components to `PageListsShape`
 * Split lists shapes in `corn`
