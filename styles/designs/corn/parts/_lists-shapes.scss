@@ -374,7 +374,12 @@
     _components: (
         map-merge($ListContainer,(
             _components: (
-                $UnorderedList--FirstLevel,
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
                 map-merge($OrderedList--FirstLevel,(
                     _components: (
                         $UnorderedList--SecondLevel,
@@ -387,9 +392,15 @@
                 )),
                 map-merge($DivWrapper--FirstLevel, (
                     _components: (
-                        $UnorderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
+                                $UnorderedList--SecondLevel,
                                 map-merge($OrderedList--SecondLevel, (
                                     _components: (
                                         $OrderedList--SecondLevel,
@@ -402,6 +413,7 @@
                 map-merge($DivWrapper--SecondLevel, (  // styles list within regular exercise within note
                     _components: (
                         $OrderedList--FirstLevel,
+                        $UnorderedList--FirstLevel,
                     )
                 )),
                 map-merge($DivWrapper--FourthLevel, ( // styles list within injected exercise within note
