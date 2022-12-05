@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add missing components to `PageListsShape`
+
 # [v1.117.0] - 2022-12-2
 
 * Fix `cosmos` `ChapterObjectives` list font

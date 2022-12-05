@@ -26,20 +26,10 @@
                                 $UnorderedList--SecondLevel,
                             )
                         )),
-                        map-merge($UnorderedList--FirstLevel,(
+                        map-merge($UnorderedList--FirstLevel, (
                             _components: (
-                                map-merge($OrderedList--FirstLevel, (
-                                    _components: (
-                                        $OrderedList--SecondLevel,
-                                        $UnorderedList--SecondLevel,
-                                    )
-                                )),
-                                map-merge($UnorderedList--FirstLevel, (
-                                    _components: (
-                                        $UnorderedList--SecondLevel,
-                                        $OrderedList--SecondLevel,
-                                    )
-                                )),
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                     )
@@ -58,6 +48,38 @@
                             $OrderedList--SecondLevel,
                         )
                       )),
+                    )
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($SectionWrapper--FourthLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                     )
                 )),
                 map-merge($DivWrapper--SecondLevel,(

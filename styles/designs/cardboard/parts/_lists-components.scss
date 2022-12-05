@@ -10,14 +10,6 @@ $UnorderedList--FirstLevel: (
     )
 );
 
-$UnorderedList--FirstLevel--NoBullet: (
-    _name: "UnorderedListNoBullet",
-    _subselector: " > ul[data-bullet-style='none']",
-    _properties:(
-        list-style-type: none,
-    )
-);
-
 $OrderedList--FirstLevel: (
     _name: "FirstLevelOrderedList",
     _subselector: " > ol",
