@@ -162,7 +162,16 @@ $ListItem--EOSIntructions: (
 );
 
 // Stepwise lists
-$OrderedList--Stepwise__Item: (
+
+$StepwiseList__Container: (
+    _name: "StepwiseListContainer",
+    _subselector: "",
+    _properties: (
+        list-style-type: none,
+    )
+);
+
+$StepwiseList__Item: (
     _name: "StepwiseListItem",
     _subselector: " > li",
     _properties:(
@@ -171,7 +180,7 @@ $OrderedList--Stepwise__Item: (
     )
 );
 
-$OrderedList--Stepwise__Token: (
+$StepwiseList__Token: (
     _name: "StepwiseListToken",
     _subselector: " > .os-stepwise-token",
     _properties:(
@@ -180,4 +189,4 @@ $OrderedList--Stepwise__Token: (
     )
 );
 
-$OrderedList--Stepwise__Content: empty_wrapper(StepwiseContent, ' > .os-stepwise-content');
+$StepwiseList__Content: empty_wrapper(StepwiseListContent, ' > .os-stepwise-content');

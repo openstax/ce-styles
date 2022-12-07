@@ -454,12 +454,12 @@
 
 @include create_shape('corn:::StepwiseListsShape', (
     _components: (
-        map-merge($ListContainer,(
+        map-merge($StepwiseList__Container,(
             _components:(
-                map-merge($OrderedList--Stepwise__Item,(
+                map-merge($StepwiseList__Item,(
                     _components:(
-                        $OrderedList--Stepwise__Token,
-                        map-merge($OrderedList--Stepwise__Content,(
+                        $StepwiseList__Token,
+                        map-merge($StepwiseList__Content,(
                             _components: (
                                 $UnorderedList--FirstLevel,
                             )
