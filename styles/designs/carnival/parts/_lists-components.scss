@@ -118,13 +118,3 @@ $UnorderedList__Item--AppendixGlossary: (
     padding-left: 5px,
   )
 );
-
-
-// Custom lists
-$UnorderedList--Unstyled: (
-    _name: "UnorderedListUnstyled",
-    _subselector: " > ul[data-bullet-style='none']",
-    _properties: (
-        list-style-type: none,
-    )
-);
