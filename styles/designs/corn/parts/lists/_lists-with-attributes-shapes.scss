@@ -1,0 +1,132 @@
+@import 'lists-components';
+@import '../wrappers-components';
+
+@include create_shape('corn:::CircledListsFromModulesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+              map-merge($SectionWrapper--FirstLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+              map-merge($SectionWrapper--SecondLevel,(
+                _components:(
+                    map-merge($CircledList,(
+                        _components: (
+                            map-merge($CircledList__Item,(
+                                _components: (
+                                    $CircledList__Token,
+                                )
+                            )),
+                        )
+                    )),
+                ),
+              )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::CircledListsFromOneColumnExercisesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($ParaWrapper--FirstLevel,(
+                            _components: (
+                                $CircledList__Token,
+                            )
+                        )),
+                        map-merge($CircledList,(
+                            _components: (
+                                map-merge($CircledList__Item,(
+                                    _components: (
+                                        $CircledList__Token,
+                                    )
+                                )),
+
+                            )
+                        )),
+                        map-merge($UnorderedList--Labeled,(
+                            _components: (
+                                map-merge($ListItem__Wrapper,(
+                                    _components: (
+                                        $CircledList__Token,
+                                    )
+                                )),
+
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::CircledListsFromMultiColumnsExercisesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($ParaWrapper--FirstLevel,(
+                            _components: (
+                                $CircledList__Token--MultiColumn,
+                            )
+                        )),
+                        map-merge($CircledList--MultiColumn,(
+                            _components: (
+                                map-merge($CircledList__Item--MultiColumn,(
+                                    _components: (
+                                        $CircledList__Token--MultiColumn,
+                                    )
+                                )),
+
+                            )
+                        )),
+                        map-merge($UnorderedList--Labeled,(
+                            _components: (
+                                map-merge($ListItem__Wrapper,(
+                                    _components: (
+                                        $CircledList__Token--MultiColumn,
+                                    )
+                                )),
+
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::StepwiseListsShape', (
+    _components: (
+        map-merge($StepwiseList__Container,(
+            _components:(
+                map-merge($StepwiseList__Item,(
+                    _components:(
+                        $StepwiseList__Token,
+                        map-merge($StepwiseList__Content,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                            )
+                        )),
+                    ),
+                )),
+            ),
+        )),
+    )
+));
