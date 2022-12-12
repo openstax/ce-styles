@@ -2640,14 +2640,14 @@ p > [data-type=title] {
   width: 100%;
 }
 
-[data-type=equation].unnumbered > div {
+[data-type=equation].unnumbered {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.7rem;
 }
 
-[data-type=equation]:not(.unnumbered) > div {
+[data-type=equation]:not(.unnumbered) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2656,7 +2656,7 @@ p > [data-type=title] {
   flex-direction: row;
 }
 
-[data-type=equation]:not(.unnumbered) > div > .os-equation-number {
+[data-type=equation]:not(.unnumbered) > .os-equation-number {
   position: absolute;
   right: 0;
   top: 50%;
