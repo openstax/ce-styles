@@ -2039,26 +2039,23 @@ a[data-type=cite] {
 
 .equation {
   overflow: auto !important;
-}
-
-.equation > div {
   display: table;
   width: 100%;
 }
 
-.equation > div [data-type=title] {
+.equation [data-type=title] {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.equation > div .os-equation-number {
+.equation .os-equation-number {
   display: table-cell;
   width: 5%;
   vertical-align: middle;
 }
 
-.equation > div .os-equation-number .os-number {
+.equation .os-equation-number .os-number {
   padding: 5px;
   border-color: #000;
   border-style: solid;
@@ -2069,26 +2066,23 @@ a[data-type=cite] {
 
 [data-type=equation] {
   overflow: auto !important;
-}
-
-[data-type=equation] > div {
   display: table;
   width: 100%;
 }
 
-[data-type=equation] > div [data-type=title] {
+[data-type=equation] [data-type=title] {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-[data-type=equation] > div .os-equation-number {
+[data-type=equation] .os-equation-number {
   display: table-cell;
   width: 5%;
   vertical-align: middle;
 }
 
-[data-type=equation] > div .os-equation-number .os-number {
+[data-type=equation] .os-equation-number .os-number {
   padding: 5px;
   border-color: #000;
   border-style: solid;

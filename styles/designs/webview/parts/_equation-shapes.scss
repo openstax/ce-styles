@@ -4,14 +4,10 @@
     _components: (
         map-merge($Equation__Container, (
             _components: (
-                map-merge($Equation__Wrapper, (
+                $Equation__Title,
+                map-merge($Equation__Number__Container, (
                     _components: (
-                        $Equation__Title,
-                        map-merge($Equation__Number__Container, (
-                            _components: (
-                                $Equation__Number,
-                            ),
-                        )),
+                        $Equation__Number,
                     ),
                 )),
             ),
