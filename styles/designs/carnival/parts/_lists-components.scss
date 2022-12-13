@@ -59,15 +59,6 @@ $OrderedList--ThirdLevel: (
     )
 );
 
-//Titled lists
-$TitledLists__Title: (
-    _name: "TitledListsTitle",
-    _subselector: ' > [data-type="title"]',
-    _properties:(
-        font-weight: bold,
-    )
-);
-
 // Tables lists
 // Lists in table cells need to have margin set withs table spacing functions
 $UnorderedList--FirstLevel--Table: (
@@ -117,14 +108,4 @@ $UnorderedList__Item--AppendixGlossary: (
     text-indent: -5px, // creates a hanging indent
     padding-left: 5px,
   )
-);
-
-
-// Custom lists
-$UnorderedList--Unstyled: (
-    _name: "UnorderedListUnstyled",
-    _subselector: " > ul[data-bullet-style='none']",
-    _properties: (
-        list-style-type: none,
-    )
 );

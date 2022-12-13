@@ -176,7 +176,6 @@
                                   _components: (
                                       map-merge($Table__Data--Wrapper, (
                                           _components: (
-                                            $UnorderedList--Unstyled,
                                               map-merge($UnorderedList--FirstLevel--Table,(
                                                   _components: (
                                                     $UnorderedList--SecondLevel--Table,
@@ -278,17 +277,6 @@
                         )),
                     ),
                 )),
-            )
-        )),
-    )
-));
-
-@include create_shape('carnival:::TitledListsShape',( // Present only in pl-u-physics
-    _components: (
-        map-merge($ListContainer,(
-            _components: (
-                $TitledLists__Title,
-                $UnorderedList--Unstyled,
             )
         )),
     )

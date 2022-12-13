@@ -8,6 +8,7 @@ $Chapter__Container: empty_wrapper(ChapterContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$ListContainer: empty_wrapper(ListContainer, '');
 
 // H1 headers
 $H1: (
@@ -312,4 +313,13 @@ $Title--Problem:(
   _properties:(
     font-weight: bold,
   )
+);
+
+//Titled lists
+$Title--FromList: (
+    _name: "TitleFromList",
+    _subselector: ' > [data-type="list"] > [data-type="title"]',
+    _properties:(
+        font-weight: bold,
+    )
 );

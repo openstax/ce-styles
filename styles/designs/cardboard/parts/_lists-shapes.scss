@@ -265,10 +265,14 @@
     _components: (
         map-merge($StepwiseList__Container, (
             _components: (
-                map-merge($StepwiseList__FirstLevel,  (
+                map-merge($StepwiseList__Item,  (
                     _components: (
-                       $StepwiseList__CustomBullet,
-                       $StepwiseList__Content,
+                        $StepwiseList__Token,
+                        map-merge($StepwiseList__Content,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                            )
+                        )),
                     )
                 ))
             )

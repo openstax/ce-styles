@@ -241,10 +241,6 @@ a[href^=http]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
-  list-style-type: none;
-}
-
 ul[data-labeled-item=true] {
   list-style-type: none;
 }
@@ -2219,6 +2215,10 @@ section.coreq-skills > section.learning-objectives > ul > li {
   margin-right: 8px;
   line-height: 1.5rem;
   vertical-align: middle;
+}
+
+.os-stepwise {
+  list-style-type: none;
 }
 
 .os-stepwise > li {

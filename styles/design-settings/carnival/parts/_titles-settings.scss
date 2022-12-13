@@ -150,3 +150,9 @@
         ),
     ),
 ));
+
+@include add_settings((
+    TitlesFromLists: (
+        _selectors: ('[data-type="page"]'),
+    ),
+));
