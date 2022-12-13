@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Group lists shapes
 * Refactor lists with classes
 * Revert changes for additional `div` in equations
 * Add missing components to `NotesListsShape`

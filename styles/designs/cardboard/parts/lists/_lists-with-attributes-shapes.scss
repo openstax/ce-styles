@@ -1,0 +1,21 @@
+@import 'lists-components';
+@import '../wrappers-components';
+
+@include create_shape('cardboard:::StepwiseListsShape', (
+    _components: (
+        map-merge($StepwiseList__Container, (
+            _components: (
+                map-merge($StepwiseList__Item,  (
+                    _components: (
+                        $StepwiseList__Token,
+                        map-merge($StepwiseList__Content,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                            )
+                        )),
+                    )
+                ))
+            )
+        )),
+    )
+));

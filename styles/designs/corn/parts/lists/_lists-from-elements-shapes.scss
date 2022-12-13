@@ -1,0 +1,127 @@
+@import 'lists-components';
+@import '../wrappers-components';
+
+@include create_shape('corn:::ListsFromExercisesShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $UnorderedList--FirstLevel, // in unnumbered exercises
+                $OrderedList--FirstLevel,
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+// Note: during refactoring we tried to create shapes that can be used for many elements.
+// That's how we end up with shape which we are using for
+// [data-type="problem"], [data-type="solution"], [data-type="exercise-question"] and [data-type="question-solution"].
+// In Contemporary Math there is a case with list in [data-type="exercise-stimulus"], which is a sibling of [data-type="exercise-question"].
+// In new project we need to decide if we want to create separate shape for injected exercises, that will cover question and stimulus
+// or use solution from here, so create shape just for stimulus.
+@include create_shape('corn:::ListsFromStimulusShape',(
+    _components: (
+        map-merge($ListContainer, (
+            _components: (
+                $UnorderedList--FirstLevel,
+                $OrderedList--FirstLevel,
+            )
+        )),
+    )
+));
+
+@include create_shape('corn:::NotesListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($OrderedList--FirstLevel,(
+                    _components: (
+                        $UnorderedList--SecondLevel,
+                        map-merge($OrderedList--SecondLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (  // styles list within regular exercise within note
+                    _components: (
+                        $OrderedList--FirstLevel,
+                        $UnorderedList--FirstLevel,
+                    )
+                )),
+                map-merge($DivWrapper--FourthLevel, ( // styles list within injected exercise within note
+                    _components: (
+                        $UnorderedList--FirstLevel,
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
