@@ -59,10 +59,10 @@
         ChapterOutlineContainer: (
             font-family: (_ref: "typography:::baseFont"),
         ),
-        ChapterOutlineTitle: (
+        H3ChapterOutlineTitle: (
             margin: 0 0 0.5rem 0,
             font-family: (_ref: "typography:::titleFont"),
-            //color is book specific set in book.scss file
+            color: (_ref: "colorMap:::chapterOutlineTitleColor"),
         ),
         ChapterObjectiveLink: (
             color: (_ref: "colorMap:::chapterIntrolLinkColor"),

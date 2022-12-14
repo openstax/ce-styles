@@ -16,13 +16,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
-));
-
-@include add_settings((
   BePrepared: (
     _selectors: (".be-prepared"),
     'Container:::display': table,
