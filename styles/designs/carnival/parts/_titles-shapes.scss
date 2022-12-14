@@ -189,3 +189,13 @@
     )),
   )
 ));
+
+@include create_shape('carnival:::TitlesFromListsShape',( // Present only in pl-u-physics
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $Title--FromList,
+            )
+        )),
+    )
+));

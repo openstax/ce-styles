@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Move titles from `objectiveoutline-components` to titles file
+* Group lists shapes
+* Refactor lists with classes
 * Revert changes for additional `div` in equations
 * Add missing components to `NotesListsShape`
 * Add missing components to `ExercisesListsShape`

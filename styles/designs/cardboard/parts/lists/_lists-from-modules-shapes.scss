@@ -1,7 +1,7 @@
 @import 'lists-components';
-@import 'wrappers-components';
+@import '../wrappers-components';
 
-@include create_shape('cosmos:::PageListsShape',(
+@include create_shape('cardboard:::PageListsShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
@@ -13,22 +13,28 @@
                 )),
                 map-merge($OrderedList--FirstLevel, (
                     _components: (
-                        $UnorderedList--SecondLevel,
                         $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
                     )
                 )),
                 map-merge($SectionWrapper--FirstLevel,(
                     _components: (
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
                         map-merge($UnorderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
                             )
                         )),
-                        map-merge($OrderedList--FirstLevel, (
+                        map-merge($DivWrapper--FirstLevel, (
                             _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
+                                $UnorderedList--FirstLevel,
+                                $OrderedList--FirstLevel,
                             )
                         )),
                     )
@@ -47,28 +53,6 @@
                                 $OrderedList--SecondLevel,
                             )
                         )),
-                    )
-                )),
-                map-merge($DivWrapper--SecondLevel, (
-                    _components: (
-                        map-merge($UnorderedList--FirstLevel, (
-                            _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($OrderedList--FirstLevel, (
-                            _components: (
-                                $UnorderedList--SecondLevel,
-                                $OrderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($SectionWrapper--FirstLevel, (
-                            _components: (
-                                $UnorderedList--FirstLevel,
-                                $OrderedList--FirstLevel,
-                            )
-                        ))
                     )
                 )),
                 map-merge($SectionWrapper--ThirdLevel,(
@@ -103,22 +87,38 @@
                         )),
                     )
                 )),
+                map-merge($DivWrapper--SecondLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                          _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
             )
         )),
     )
 ));
 
-@include create_shape('cosmos:::CompositePageListsShape',( //TODO: apply to all books; it's added only to pl-psychology
+@include create_shape('cardboard:::CompositePageListsShape',(
     _components: (
         map-merge($ListContainer,(
             _components: (
                 map-merge($SectionWrapper--FirstLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel,(
-                            _components:(
+                        map-merge($UnorderedList--FirstLevel, (
+                          _components: (
                                 $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
-                            ),
+                            )
                         )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
@@ -128,85 +128,47 @@
                         )),
                     )
                 )),
-            )
-        )),
-    )
-));
-
-@include create_shape('cosmos:::ExercisesListsShape',(
-    _components: (
-        map-merge($ListContainer,(
-            _components: (
-                $UnorderedList--FirstLevel, // in unnumbered exercises
-                $OrderedList--FirstLevel,
-                map-merge($DivWrapper--FirstLevel,(
+                map-merge($SectionWrapper--SecondLevel,(
                     _components: (
                         map-merge($UnorderedList--FirstLevel, (
-                            _components: (
-                                $OrderedList--SecondLevel,
+                          _components: (
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
                             )
                         )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
-                                $OrderedList--SecondLevel,
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($DivWrapper--FirstLevel,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                                $OrderedList--FirstLevel,
                             )
                         )),
                     )
                 )),
-                map-merge($DivWrapper--SecondLevel, (
+                map-merge($DivWrapper--SecondLevel,(
                     _components: (
-                        map-merge($UnorderedList--FirstLevel, (
+                        map-merge($SectionWrapper--FirstLevel,(
                             _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($OrderedList--FirstLevel, (
-                            _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
+                                map-merge($UnorderedList--FirstLevel, (
+                                  _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--FirstLevel, (
+                                    _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
                             )
                         )),
                     )
-                )),
-            )
-        )),
-    )
-));
-
-@include create_shape('cosmos:::NotesListsShape',(
-    _components: (
-        map-merge($ListContainer,(
-            _components: (
-                map-merge($UnorderedList--FirstLevel, (
-                    _components: (
-                        $OrderedList--SecondLevel,
-                        $UnorderedList--SecondLevel,
-                    )
-                )),
-                map-merge($OrderedList--FirstLevel, (
-                    _components: (
-                        $OrderedList--SecondLevel,
-                        $UnorderedList--SecondLevel,
-                    )
-                )),
-                map-merge($DivWrapper--FirstLevel,(
-                    _components: (
-                        map-merge($UnorderedList--FirstLevel, (
-                            _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
-                            )
-                        )),
-                        map-merge($OrderedList--FirstLevel, (
-                            _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
-                            )
-                        )),
-                    ),
                 )),
             )
         )),

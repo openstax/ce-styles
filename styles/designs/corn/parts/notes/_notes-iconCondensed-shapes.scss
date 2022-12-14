@@ -1,5 +1,5 @@
 @import 'notes-components';
-@import '../lists-components';
+@import '../lists/lists-components';
 
 @include create_shape('corn:::IconCondensedNoteShape', (
     _components: (
@@ -48,7 +48,7 @@
                 map-merge($Notes--IconCondensed__Body, (
                     _components: (
                         $Notes--IconCondensed__Subtitle,
-                        $UnorderedList--Unstyled,
+                        $UnorderedList--UnstyledInNote,
                     )
                 )),
             )

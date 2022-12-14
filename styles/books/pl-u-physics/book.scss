@@ -309,6 +309,7 @@ $ChapterIntroType: fullWidth;
 @include use('EocCompositeChapterTitlesWithBorder', 'carnival:::EocCompositeChapterTitlesWithBorderShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
+@include use("TitlesFromLists", "carnival:::TitlesFromListsShape");
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
@@ -317,7 +318,6 @@ $ChapterIntroType: fullWidth;
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
 @include use("NotesLists", "carnival:::NotesListsShape");
-@include use("TitledLists", "carnival:::TitledListsShape");
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
