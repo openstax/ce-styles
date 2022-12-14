@@ -223,12 +223,44 @@ $H3--Objectives: (
   _properties: (
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: enum('ValueSet:::REQUIRED'),
+    font-size: enum('ValueSet:::REQUIRED'), // different for learning and chapter objectives
     line-height: enum('ValueSet:::REQUIRED'),
     text-transform: uppercase,
     font-weight: bold,
     margin-bottom: 0, // Needed for Learning Objectives title in College Physics (doesn't change the styling anywhere else)
   )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-size: font-scale(0),
+        line-height: font-scale(0), // value has to be the same as font size
+        font-weight: bold,
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        position:relative,
+        display: flex,
+        flex-direction: row,
+        text-transform: uppercase,
+    )
+);
+
+$H3--ChapterOutline--Margin: (
+    _name: "H3ChapterOutlineMarginTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        overflow: visible,
+        border-bottom: '1px solid white',
+        padding: enum('ValueSet:::REQUIRED'),
+        margin: ".5rem 0 .5rem 0",
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        font-weight: 500, //medium
+        font-family: enum('ValueSet:::REQUIRED'),
+    )
 );
 
 $H3--AppendixGlossary: (
