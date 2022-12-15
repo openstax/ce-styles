@@ -1,14 +1,14 @@
 @include add_settings((
     LearningObjectives:(
         _selectors: ('[data-type="page"] .learning-objectives'),
-        H3LearningObjectivesTitle: (
+        H3ObjectivesTitle: (
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::titleColor'),
         ),
     ),
     NumberedLearningObjectives:(
         _selectors: ('[data-type="page"] .learning-objectives'),
-        H3LearningObjectivesTitle: (
+        H3ObjectivesTitle: (
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::titleColor'),
         ),
@@ -19,12 +19,12 @@
     ),
     LearningObjectivesWithCustomBulletIcon: (
         _selectors: ('[data-type="page"] .learning-objectives'),
-        H3LearningObjectivesTitle: (
+        H3ObjectivesTitle: (
         ),
     ),
     LearningObjectivesNumberedWithLOIcon:(
         _selectors: ('[data-type="page"] .learning-objectives'),
-        H3LearningObjectivesTitle: (
+        H3ObjectivesTitle: (
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::titleColor'),
         ),

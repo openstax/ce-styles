@@ -305,8 +305,8 @@ $bandColor: #772949;
 @include add_settings((
   LearningObjectivesWithCustomBulletIcon: (
     _selectors: ('[data-type="page"] .learning-objectives'),
-    'H3LearningObjectivesTitle:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H3LearningObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColorAstronomy'),
+    'H3ObjectivesTitle:::font-family': (_ref: 'typography:::titleFontAstronomy'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColorAstronomy'),
     'CustomBulletIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lobullet.svg")) no-repeat center center,
   )
 ));
