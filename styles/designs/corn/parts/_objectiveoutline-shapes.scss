@@ -8,9 +8,9 @@
       _components: (
         $H3--Objectives,
         $Objectives__Paragraph,
-        map-merge($Objectives__UnorderedList, (
+        map-merge($UnorderedList--Objectives, (
           _components: (
-            $Objectives__ListItem,
+            $UnorderedList--Objectives__Item,
           ),
         ))
       ),
@@ -23,9 +23,9 @@
     map-merge($Objectives__Container, (
       _components: (
         $H4--LearningObjectives--Coreq,
-        map-merge($Objectives__UnorderedList, (
+        map-merge($UnorderedList--Objectives, (
           _components: (
-            $Objectives__ListItem,
+            $UnorderedList--Objectives__Item,
           ),
         ))
       ),
@@ -39,7 +39,7 @@
     map-merge($Objectives__Container, (
       _components: (
         $H3--Objectives,
-        map-merge($Objectives__UnorderedList, (
+        map-merge($UnorderedList--Objectives, (
           _components: (
             map-merge($LearningObjectives__ListItem--Flex, (
               _components: (
@@ -54,17 +54,17 @@
 ));
 
 // Used in Statistics. Appears in Introduction Page. There is no Learning Objectives or Chapter Outline in this book.
-@include create_shape('corn:::ChapterObjectivesShape', (
+@include create_shape('corn:::ObjectivesNoteShape', (
   _components: (
     map-merge($Objectives__Container, (
       _components: (
         $H3--Objectives,
-        map-merge($ChapterObjectives__NoteBody, (
+        map-merge($Objectives__NoteBody, (
           _components: (
             $Objectives__Paragraph,
-            map-merge($Objectives__UnorderedList, (
+            map-merge($UnorderedList--Objectives, (
               _components: (
-                $Objectives__ListItem,
+                $UnorderedList--Objectives__Item,
               ),
             ))
           ),
