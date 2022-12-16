@@ -231,11 +231,11 @@ a[href^=http]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item=true] {
   list-style-type: none;
 }
 
-ul[data-labeled-item=true] {
+ul[data-bullet-style=none] {
   list-style-type: none;
 }
 
@@ -2031,12 +2031,36 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 24px;
 }
 
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > ol {
   margin-left: 24px;
 }
 
+[data-type=page] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
@@ -2047,15 +2071,15 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 16px;
 }
 
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=page] > div > div > ol {
+[data-type=page] > section > div > ol {
   margin-left: 24px;
 }
 
@@ -2067,6 +2091,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > ol {
   margin-left: 24px;
 }
@@ -2075,11 +2103,19 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul[data-bullet-style=none] {
-  list-style-type: none;
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -2087,11 +2123,91 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > section > section > ol > li > ol {
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -2105,6 +2221,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 [data-type=note] > div > ol > li > ol {
   margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=note] > div > div > ul:not([data-labeled-item=true]) {
@@ -2127,8 +2247,48 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 24px;
 }
 
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=problem] > div > ol {
   margin-left: 24px;
+}
+
+[data-type=problem] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=exercise-question] > ul:not([data-labeled-item=true]) {
@@ -2143,8 +2303,48 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 24px;
 }
 
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=exercise-question] > div > ol {
   margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
+  margin-left: 16px;
 }
 
 .hljs-comment {

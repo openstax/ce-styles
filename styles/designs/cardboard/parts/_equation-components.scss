@@ -1,8 +1,6 @@
-$Equation__Container: empty_wrapper(EquationContainer, '');
-
-$Equation__Wrapper: (
-    _name: "EquationWrapper",
-    _subselector: " > div",
+$Equation__Container: (
+    _name: "EquationContainer",
+    _subselector: "",
     _properties: (
         position: enum('ValueSet:::OPTIONAL'),
         display: flex,

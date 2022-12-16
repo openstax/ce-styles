@@ -241,11 +241,11 @@ a[href^=http]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item=true] {
   list-style-type: none;
 }
 
-ul[data-labeled-item=true] {
+ul[data-bullet-style=none] {
   list-style-type: none;
 }
 
@@ -1162,7 +1162,7 @@ a[role=doc-noteref] {
   padding-right: 0.16rem;
 }
 
-[data-type=equation].unnumbered > div {
+[data-type=equation].unnumbered {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1923,8 +1923,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
+}
+
+[data-type=page] > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
 }
 
 [data-type=page] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
@@ -1932,10 +1948,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=page] > div > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=page] > div > div > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1947,7 +1959,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1959,6 +1991,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
@@ -1967,7 +2003,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > div > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2007,7 +2051,47 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2019,7 +2103,19 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 .os-eoc[data-type=composite-page] > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2092,6 +2188,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eoc[data-type=composite-page] > div > div > section > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+.os-eoc[data-type=composite-page] > div > div > section > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+.os-eoc[data-type=composite-page] > div > div > section > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2171,6 +2275,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
+.os-stepwise {
+  list-style-type: none;
+}
+
 .os-stepwise > li {
   display: flex;
   flex-direction: row;
@@ -2217,6 +2325,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
 [data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
@@ -2237,8 +2353,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
 [data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
+}
+
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
 }
 
 [data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
@@ -2250,6 +2378,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
@@ -2266,6 +2398,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2297,6 +2437,34 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2322,6 +2490,34 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2353,6 +2549,34 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=question-solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=question-solution] > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2379,6 +2603,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
   margin-left: 24px;
+}
+
+[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=question-solution] > div > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=question-solution] > div > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=question-solution] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
 }
 
 [data-type=page] > :not(.os-eos) [data-type=problem] > div > p > .token {

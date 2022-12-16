@@ -10,14 +10,6 @@ $UnorderedList--FirstLevel: (
     )
 );
 
-$UnorderedList--FirstLevel--NoBullet: (
-    _name: "UnorderedListNoBullet",
-    _subselector: " > ul[data-bullet-style='none']",
-    _properties:(
-        list-style-type: none,
-    )
-);
-
 $OrderedList--FirstLevel: (
     _name: "FirstLevelOrderedList",
     _subselector: " > ol",
@@ -42,6 +34,8 @@ $OrderedList--SecondLevel: (
     )
 );
 
+// Stepwise lists
+
 $StepwiseList__Container: (
     _name: "StepwiseListContainer",
     _subselector: "",
@@ -52,8 +46,8 @@ $StepwiseList__Container: (
     )
 );
 
-$StepwiseList__FirstLevel: (
-    _name: "FirstLevelStepwiseList",
+$StepwiseList__Item: (
+    _name: "StepwiseListItem",
     _subselector: "> li ",
     _properties: (
         padding-left: h-spacing(0),
@@ -63,8 +57,8 @@ $StepwiseList__FirstLevel: (
     )
 );
 
-$StepwiseList__CustomBullet: (
-    _name: "StepwiseListCustomBullet",
+$StepwiseList__Token: (
+    _name: "StepwiseListToken",
     _subselector: " > .os-stepwise-token",
     _properties: (
         font-weight: bold,

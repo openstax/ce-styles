@@ -2,10 +2,6 @@
 
 @include create_shape('cosmos:::EquationShape', (
   _components: (
-    map-merge($Equation__Container, (
-        _components: (
-          $Equation__Wrapper,
-        ),
-    ))
+    $Equation__Container,
   ),
 ));

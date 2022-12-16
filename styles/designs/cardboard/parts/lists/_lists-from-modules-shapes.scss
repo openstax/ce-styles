@@ -1,0 +1,176 @@
+@import 'lists-components';
+@import '../wrappers-components';
+
+@include create_shape('cardboard:::PageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $UnorderedList--SecondLevel,
+                        $OrderedList--SecondLevel,
+                    )
+                )),
+                map-merge($OrderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($DivWrapper--FirstLevel, (
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                                $OrderedList--FirstLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($SectionWrapper--FourthLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                          _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cardboard:::CompositePageListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                          _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                          _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($DivWrapper--FirstLevel,(
+                            _components: (
+                                $UnorderedList--FirstLevel,
+                                $OrderedList--FirstLevel,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel,(
+                    _components: (
+                        map-merge($SectionWrapper--FirstLevel,(
+                            _components: (
+                                map-merge($UnorderedList--FirstLevel, (
+                                  _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--FirstLevel, (
+                                    _components: (
+                                        $UnorderedList--SecondLevel,
+                                        $OrderedList--SecondLevel,
+                                    )
+                                )),
+                            )
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));

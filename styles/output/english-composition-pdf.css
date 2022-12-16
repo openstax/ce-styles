@@ -231,11 +231,11 @@ a[href^=http]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item=true] {
   list-style-type: none;
 }
 
-ul[data-labeled-item=true] {
+ul[data-bullet-style=none] {
   list-style-type: none;
 }
 
@@ -2085,12 +2085,16 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 16px;
 }
 
-[data-type=page] > ul[data-bullet-style=none] {
-  list-style-type: none;
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > ol > li > ol {
@@ -2105,8 +2109,16 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 16px;
 }
 
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > ol > li > ol {
@@ -2121,8 +2133,16 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > section > ol > li > ol {
@@ -2133,7 +2153,23 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 24px;
 }
 
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -2149,6 +2185,14 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > section > ol {
   margin-left: 24px;
 }
@@ -2157,7 +2201,19 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -2167,6 +2223,10 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
 
 [data-type=page] > section > section > section > section > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ol {
+  margin-left: 24px;
 }
 
 .os-table.os-top-titled-container {

@@ -3,11 +3,11 @@ a[href^="http"]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item="true"] {
   list-style-type: none;
 }
 
-ul[data-labeled-item="true"] {
+ul[data-bullet-style='none'] {
   list-style-type: none;
 }
 
