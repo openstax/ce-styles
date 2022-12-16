@@ -54,24 +54,20 @@
   )
 ));
 
-// Used in economics books
-// In pl-economics used also for Learning Objectives.
-// To do: change name to more general, e.g ObjectivesNote
-
-@include create_shape('cosmos:::ChapterObjectivesShape', (
-    _components: (
-        map-merge($Objectives__Container, (
-            _components: (
-                $H3--Objectives,
-                map-merge($ChapterObjectives__NoteBody, (
-                    _components: (
-                        $Objectives__Paragraph,
-                        $UnorderedList--FirstLevel,
-                    )
-                )),
-            )
+@include create_shape('cosmos:::ObjectivesNoteShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($Objectives__NoteBody, (
+          _components: (
+            $Objectives__Paragraph,
+            $UnorderedList--FirstLevel,
+          )
         )),
-    )
+      )
+    )),
+  )
 ));
 
 @include create_shape('cosmos:::ChapterOutlineShape', (

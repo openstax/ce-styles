@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Standardize `ObjectivesNoteShape`
 * Move titles from `objectiveoutline-components` to titles file
 * Group lists shapes
 * Refactor lists with classes

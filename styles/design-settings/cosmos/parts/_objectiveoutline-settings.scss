@@ -42,7 +42,7 @@
 ));
 
 @include add_settings((
-    ChapterObjectives: (
+    ChapterObjectivesNote: (
         _selectors: ('[data-type="note"].economics.chapter-objectives'),
         Container: (
           margin-bottom: v-spacing(3)
@@ -53,9 +53,6 @@
           margin-bottom:v-spacing(1),
         ),
         Paragraph: (
-          font-family: (_ref: "typography:::baseFont"),
-        ),
-        ChapterObjectivesListItem: (
           font-family: (_ref: "typography:::baseFont"),
         ),
     )
