@@ -48,6 +48,21 @@
     )
 ));
 
+@include create_shape('carnival:::FigureDedicationShape',(
+    _components: (
+        map-merge($Figure__Container,(
+            _components:(
+                $Figure,
+                map-merge($Caption__Container--Figure, (
+                    _components: (
+                        $Caption__Text--Dedication,
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
 @include create_shape('carnival:::FigureFromExercisesShape',(
     _components: (
         map-merge($Exercises__Container,(
