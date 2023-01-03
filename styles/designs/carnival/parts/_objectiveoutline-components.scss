@@ -28,20 +28,6 @@ $Objectives__List__Dot: (
 
 $Objectives__NoteBody: empty_wrapper(NoteBody, ' .os-note-body');
 
-$H3--Objectives: (
-  _name: "H3ObjectivesTitle",
-  _subselector: ' > h3[data-type="title"]',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: enum('ValueSet:::REQUIRED'),
-    line-height: enum('ValueSet:::REQUIRED'),
-    text-transform: uppercase,
-    font-weight: bold,
-    margin-bottom: 0, // Needed for Learning Objectives title in College Physics (doesn't change the styling anywhere else)
-  )
-);
-
 // Chapter Outline
 
 $ChapterOutline__Container: (
@@ -59,23 +45,6 @@ $ChapterOutline__Container: (
         border-bottom-width: 0.2rem ,
         border-bottom-style: solid,
         box-decoration-break: slice,
-    )
-);
-
-$ChapterOutline__Title: (
-    _name: "ChapterOutlineTitle",
-    _subselector: ' > .os-title',
-    _properties: (
-        margin: "0 0 0.5rem 0",
-        font-size: font-scale(0),
-        line-height: font-scale(0), // value has to be the same as font size
-        font-weight: bold,
-        font-family: enum('ValueSet:::REQUIRED'),
-        color: enum('ValueSet:::REQUIRED'),
-        position:relative,
-        display: flex,
-        flex-direction: row,
-        text-transform: uppercase,
     )
 );
 
@@ -123,21 +92,6 @@ $ChapterOutline__Container--Margin: (
         color: enum('ValueSet:::REQUIRED'),
         margin: enum('ValueSet:::REQUIRED'),
         padding: "1.5rem 0 1.5rem 1.5rem",
-    )
-);
-
-$ChapterOutline__Title--Margin: (
-    _name: "ChapterOutlineTitleMargin",
-    _subselector: ' > .os-title',
-    _properties: (
-        overflow: visible,
-        border-bottom: '1px solid white',
-        padding: enum('ValueSet:::REQUIRED'),
-        margin: ".5rem 0 .5rem 0",
-        font-size: font-scale(0),
-        line-height: line-height(0),
-        font-weight: 500, //medium
-        font-family: enum('ValueSet:::REQUIRED'),
     )
 );
 

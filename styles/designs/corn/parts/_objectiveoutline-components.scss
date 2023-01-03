@@ -1,30 +1,6 @@
 $Objectives__Container: empty_wrapper(Container, '');
 
-$ChapterObjectives__NoteBody: empty_wrapper(ObjectivesNoteBody, ' > .os-note-body');
-
-$H3--Objectives: (
-  _name: "H3ObjectivesTitle",
-  _subselector: ' > h3[data-type="title"]',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(1),
-    line-height: line-height(1),
-    font-weight: bold,
-  )
-);
-
-$H4--LearningObjectives--Coreq: (
-  _name: "H4LearningObjectivesCoreqTitle",
-  _subselector: ' > h4[data-type="title"]',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(1),
-    line-height: line-height(1),
-    font-weight: bold,
-  )
-);
+$Objectives__NoteBody: empty_wrapper(ObjectivesNoteBody, ' > .os-note-body');
 
 $Objectives__Paragraph: (
   _name: "Paragraph",
@@ -43,18 +19,6 @@ $LearningObjectives__ListItem--Flex: (
   )
 );
 
-$Objectives__ListItem: (
-  _name: 'ListItem',
-  _subselector: ' > li',
-  _properties: (
-    background: enum('ValueSet:::REQUIRED'),
-    background-size: 0.5rem,
-    padding-left: h-spacing(2),
-    display: block,
-    max-width: 5.9in,
-  )
-);
-
 $LearningObjectives__Token--Number: (
   _name: "NumberToken",
   _subselector: ' > span.os-abstract-token',
@@ -63,15 +27,6 @@ $LearningObjectives__Token--Number: (
     color: enum('ValueSet:::REQUIRED'),
     margin-right: h-spacing(1),
   )
-);
-
-$Objectives__UnorderedList: (
-    _name: "ObjectivesUnorderedList",
-    _subselector: " > ul",
-    _properties:(
-        margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
-        list-style-type: none,
-    )
 );
 
 // Chapter Outline
@@ -84,18 +39,6 @@ $ChapterOutline__Container: (
         font-size: font-scale(0),
         line-height: line-height(0),
         margin-bottom: 1.5rem,
-    )
-);
-
-$ChapterOutline__Title: (
-    _name: "ChapterOutlineTitle",
-    _subselector: ' > .os-title',
-    _properties: (
-        margin: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(1),
-        line-height: font-scale(1),
-        font-family: enum('ValueSet:::REQUIRED'),
-        color: enum('ValueSet:::REQUIRED'),
     )
 );
 

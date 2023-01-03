@@ -234,6 +234,30 @@ $H3--Link:(
     )
 );
 
+$H3--Objectives: (
+  _name: "H3ObjectivesTitle",
+  _subselector: ' > h3[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+  )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: font-scale(1),
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+    )
+);
+
 $H4: (
     _name: "H4Title",
     _subselector: ' > section > section > h4[data-type="title"]',
@@ -257,6 +281,18 @@ $H4--SectionExercises: (
         margin-bottom: v-spacing(2),
         margin-top: v-spacing(1),
         )
+);
+
+$H4--LearningObjectives--Coreq: (
+  _name: "H4LearningObjectivesCoreqTitle",
+  _subselector: ' > h4[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+  )
 );
 
 $H5: (

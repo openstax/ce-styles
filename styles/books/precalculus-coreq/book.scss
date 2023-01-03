@@ -15,20 +15,13 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
-));
-
-@include add_settings((
   LearningObjectivesCoreq:(
     _selectors: ('section.coreq-skills > section.learning-objectives'),
     H4LearningObjectivesCoreqTitle: (
       font-family: (_ref: 'typography:::titleFont'),
       color: (_ref: 'colorMap:::moduleTitleColor'),
     ),
-    ListItem: (
+    ObjectivesUnorderedListItem: (
       background: url(toDataUri("svg+xml", "designs/corn/resources/corn-lolist.svg")) no-repeat left 0.4rem,
     )
   )

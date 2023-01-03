@@ -190,7 +190,7 @@ $bandColor: #217867;
 ));
 
 @include add_settings((
-  ChapterObjectives:(
+  ChapterObjectivesNote:(
     _selectors: ('[data-type="note"].economics.chapter-objectives'),
     'H3ObjectivesTitle:::color': (_ref: "colorMap:::chapterObjectivesTitlePlEconomicsColor"),
   ),
@@ -211,7 +211,7 @@ $bandColor: #217867;
 
 
 @include use('BookRoot', "common:::BookRoot");
-@include use('LearningObjectivesNote', 'cosmos:::ChapterObjectivesShape');
+@include use('LearningObjectivesNote', 'cosmos:::ObjectivesNoteShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
@@ -219,7 +219,7 @@ $bandColor: #217867;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterObjectives', 'cosmos:::ChapterObjectivesShape');
+@include use('ChapterObjectivesNote', 'cosmos:::ObjectivesNoteShape');
 
 //Figures
 @include use('Figure','cosmos:::FigureShape');
