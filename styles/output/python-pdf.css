@@ -831,6 +831,53 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   max-width: 5.9in;
 }
 
+[data-type=example] {
+  margin-bottom: 1.4rem;
+}
+
+[data-type=example] > h3.os-title {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #1E9575;
+  padding: 0.7rem;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+[data-type=example] > .body {
+  padding: 0.7rem;
+  background-color: #F2F2F2;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body > ol {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body h4[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=example] > .body > [data-type=note] > h3[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
 .os-chapter-outline {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;

@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `example` in `python`
 * Style `NoClass` note in `python`
 * Standardize `ObjectivesNoteShape`
 * Move titles from `objectiveoutline-components` to titles file
