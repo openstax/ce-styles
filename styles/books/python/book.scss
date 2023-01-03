@@ -85,6 +85,17 @@ $bandColor: #24739E;
     'Subtitle:::font-family': (_ref: "typography:::titleFont"),
     'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
   ),
+  NoClassNote:(
+    _selectors:('[data-type="note"]:not([class])'),
+    'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption3HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
 ));
 
 // Code Colors
@@ -149,6 +160,7 @@ $bandColor: #24739E;
 @include use('Checkpoint', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('TryIt', 'cardboard:::BoxedNoteWithBordersSubtitleShape');
 @include use('ConceptsInPractice', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('NoClassNote', 'cardboard:::BoxedNoteWithSubtitleShape');
 
 //Exercises
 @include use('ConceptsInPracticeExercises', 'cardboard:::ExercisesModuleShape');

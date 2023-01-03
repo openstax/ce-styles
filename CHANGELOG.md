@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `NoClass` note in `python`
+
 ## [v1.118.0] - 2022-12-16
 * Group lists shapes
 * Refactor lists with classes
