@@ -6,20 +6,6 @@ $Objectives__Container: (
     ),
 );
 
-$H3--Objectives: (
-  _name: "H3ObjectivesTitle",
-  _subselector: ' > h3[data-type="title"]',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(0),
-    line-height: line-height(0),
-    font-weight: 700,
-    text-transform: uppercase,
-    margin-bottom: enum('ValueSet:::OPTIONAL'), // property used in chapter objectives economics
-  )
-);
-
 $ChapterObjectives__NoteBody: empty_wrapper(ObjectivesNoteBody, ' > .os-note-body');
 
 $Objectives__Paragraph: (
@@ -90,18 +76,6 @@ $ChapterOutline__Container: (
         font-size: font-scale(0),
         line-height: line-height(0),
         margin-bottom: 1.5rem,
-    )
-);
-
-$ChapterOutline__Title: (
-    _name: "ChapterOutlineTitle",
-    _subselector: ' > .os-title',
-    _properties: (
-        margin: "0 0 0.5rem 0",
-        font-family: enum('ValueSet:::REQUIRED'),
-        color: enum('ValueSet:::REQUIRED'),
-        font-weight: 700,
-        text-transform: uppercase,
     )
 );
 

@@ -23,14 +23,14 @@ $bandColor: #24739E;
 @include add_settings((
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
   ),
 ));
 
 @include add_settings((
   LearningObjectives:(
     _selectors: ('.learning-outcomes'), //has different selector then other books
-    H3LearningObjectivesTitle: (
+    H3ObjectivesTitle: (
       font-family: (_ref: 'typography:::sansFont'),
       color: (_ref: 'colorMap:::titleColor'),
     ),
