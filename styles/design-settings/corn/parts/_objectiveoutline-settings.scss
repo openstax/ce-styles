@@ -5,7 +5,7 @@
             font-family: (_ref: 'typography:::titleFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
         ),
-        ListItem: (
+        ObjectivesUnorderedListItem: (
             background: url(toDataUri("svg+xml", "designs/corn/resources/corn-lolist.svg")) no-repeat left 0.4rem,
         ),
     ),
@@ -18,7 +18,7 @@
             font-family: (_ref: 'typography:::titleFont'),
             color: (_ref: 'colorMap:::moduleTitleColor'),
         ),
-        ListItem: (
+        ObjectivesUnorderedListItem: (
             background: url(toDataUri("svg+xml", "designs/corn/resources/corn-lolist.svg")) no-repeat left 0.4rem,
         ),
     ),
@@ -38,7 +38,7 @@
 ));
 
 @include add_settings((
-    ChapterObjectives:(
+    ChapterObjectivesNote:(
         _selectors: ('[data-type="note"].chapter-objectives'),
         H3ObjectivesTitle: (
             font-family: (_ref: 'typography:::titleFont'),
@@ -47,7 +47,7 @@
         ObjectivesUnorderedList: (
             margin-left: h-spacing(1),
         ),
-        ListItem: (
+        ObjectivesUnorderedListItem: (
             background: url(toDataUri("svg+xml", "designs/corn/resources/corn-lolist.svg")) no-repeat left 0.4rem,
         ),
     ),
