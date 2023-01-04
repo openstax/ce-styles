@@ -1,18 +1,5 @@
 $LearningObjectives__Container: empty_wrapper(Container, '');
 
-$H3--LearningObjectives: (
-  _name: "H3LearningObjectivesTitle",
-  _subselector: ' > h3[data-type="title"]',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(1),
-    line-height: line-height(1),
-    font-weight: bold,
-    margin-bottom: 0,
-  )
-);
-
 $LearningObjectives__Paragraph: (
   _name: "Paragraph",
   _subselector: ' > p:first-of-type',
@@ -98,19 +85,6 @@ $ChapterOutline__Container: (
         font-size: font-scale(0),
         line-height: line-height(0),
         margin-bottom: 1.5rem,
-    )
-);
-
-$ChapterOutline__Title: (
-    _name: "ChapterOutlineTitle",
-    _subselector: ' > .os-title',
-    _properties: (
-        margin: "0 0 0.5rem 0",
-        font-size: font-scale(3),
-        line-height: font-scale(3),
-        font-family: enum('ValueSet:::REQUIRED'),
-        color: enum('ValueSet:::REQUIRED'),
-        font-weight: normal,
     )
 );
 

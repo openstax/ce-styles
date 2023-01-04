@@ -75,6 +75,27 @@ $OrderedList--KeyTerms: (
 
 $UnorderedList--Labeled: empty_wrapper(LabeledList, ' > ul[data-labeled-item="true"]');
 
+$UnorderedList--Objectives: (
+    _name: "ObjectivesUnorderedList",
+    _subselector: " > ul",
+    _properties:(
+        margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
+        list-style-type: none,
+    )
+);
+
+$UnorderedList--Objectives__Item: (
+  _name: 'ObjectivesUnorderedListItem',
+  _subselector: ' > li',
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: 0.5rem,
+    padding-left: h-spacing(2),
+    display: block,
+    max-width: 5.9in,
+  )
+);
+
 // Circled lists components used in One Column Layout
 $CircledList__Token: (
     _name: "CircledListToken",
