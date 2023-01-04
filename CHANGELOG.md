@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `dedication-page` from `organic-chemistry`
 * Style `example` in `python`
 * Style `NoClass` note in `python`
 * Standardize `ObjectivesNoteShape`
