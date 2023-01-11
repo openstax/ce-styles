@@ -97,6 +97,12 @@ $StepwiseList__Container: (
     )
 );
 
+$StepwiseList__Item: (
+    _name: "StepwiseListItem",
+    _subselector: ' > li',
+    _properties: ()
+);
+
 $StepwiseList__CustomBullet: (
     _name: "StepwiseListCustomBullet",
     _subselector: " .os-stepwise-token",
