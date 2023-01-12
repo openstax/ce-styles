@@ -10,12 +10,12 @@
         $LearningObjectives__Paragraph,
         map-merge($UnorderedList--FirstLevel, (
           _components: (
-            $LearningObjectives__ListItem,
+            $ListItem--Objectives,
           )
         )),
         map-merge($OrderedList--FirstLevel, (
           _components: (
-            $LearningObjectives__ListItem,
+            $ListItem--Objectives,
           )
         )),
       )
@@ -30,11 +30,11 @@
       _components: (
         $H3--Objectives,
         $LearningObjectives__Paragraph,
-        map-merge($LearningObjectives__UnorderedList--WithoutBullet, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            map-merge($LearningObjectives__ListItem--Flex, (
+            map-merge($ListItem--Objectives--Flex, (
               _components: (
-                $LearningObjectives__CustomBulletIcon,
+                $ListItem--Objectives__CustomBulletIcon,
               ),
             ))
           ),
@@ -50,11 +50,11 @@
       _components: (
         $H3--Objectives,
         $LearningObjectives__Paragraph,
-        map-merge($LearningObjectives__UnorderedList--WithoutBullet, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            map-merge($LearningObjectives__ListItem--Flex, (
+            map-merge($ListItem--Objectives--Flex, (
               _components: (
-                $LearningObjectives__Token--Number,
+                $ListItem--Objectives__NumberToken,
               )
             ))
           )
@@ -71,12 +71,12 @@
       _components: (
         $H3--Objectives,
         $LearningObjectives__Paragraph,
-        map-merge($LearningObjectives__UnorderedList--WithoutBullet, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            map-merge($LearningObjectives__ListItem--Flex, (
+            map-merge($ListItem--Objectives--Flex, (
               _components: (
-              $LearningObjectives__LOIcon,
-              $LearningObjectives__Token--Number,
+                $ListItem--Objectives__LOIcon,
+                $ListItem--Objectives__NumberToken,
               ),
             ))
           )

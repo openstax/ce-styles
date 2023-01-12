@@ -50,7 +50,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
   ),
 ));
 
@@ -210,7 +210,7 @@ $ChapterIntroType: fullWidth;
 
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
-@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('Example', 'carnival:::ExampleShape');
 
 // Target labels

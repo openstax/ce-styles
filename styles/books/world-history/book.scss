@@ -109,7 +109,7 @@ $bandColor: #DCB83D;
 @include add_settings((
     LearningObjectivesColoredDot:(
         _selectors: ('[data-type="page"] > .learning-objectives'),
-        'ListDot:::color': (_ref: "colorMap:::learningObjectivesTitleColor"),
+        'ObjectivesListDot:::color': (_ref: "colorMap:::learningObjectivesTitleColor"),
         'H3ObjectivesTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
         'H3ObjectivesTitle:::color': (_ref: 'colorMap:::learningObjectivesTitleColor'),
     ),
