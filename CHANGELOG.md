@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `NoClass` note in `python`
 * Standardize `ObjectivesNoteShape`
 * Move titles from `objectiveoutline-components` to titles file
+* Remove flex from Stepwise list items
+* Add inline media style
 
 ## [v1.118.0] - 2022-12-16
 

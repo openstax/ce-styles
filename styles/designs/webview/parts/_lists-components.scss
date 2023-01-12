@@ -97,13 +97,7 @@ $StepwiseList__Container: (
     )
 );
 
-$StepwiseList__Item: (
-    _name: "StepwiseListItem",
-    _subselector: ' > li',
-    _properties: (
-      display: flex,
-    )
-);
+$StepwiseList__Item: empty_wrapper(StepwiseListItem, ' > li');
 
 $StepwiseList__CustomBullet: (
     _name: "StepwiseListCustomBullet",
