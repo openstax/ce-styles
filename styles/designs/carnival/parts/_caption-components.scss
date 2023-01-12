@@ -42,6 +42,23 @@ $Caption__Text__Container:(
     )
 );
 
+// Dedication
+
+$Caption__Text--Dedication:(
+    _name: "CaptionDedicationText",
+    _subselector: " > .os-caption",
+    _properties:(
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(2),
+        font-weight: bold,
+        margin-top: v-spacing(1),
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+    )
+);
+
 // Chapter Intro
 
 $Caption__Container--ChapterIntro: (

@@ -1,5 +1,6 @@
 @import 'objectiveoutline-components';
 @import 'lists/lists-components';
+@import 'titles-components';
 
 @include create_shape('cosmos:::LearningObjectivesShape', (
   _components: (
@@ -53,40 +54,36 @@
   )
 ));
 
-// Used in economics books
-// In pl-economics used also for Learning Objectives.
-// To do: change name to more general, e.g ObjectivesNote
-
-@include create_shape('cosmos:::ChapterObjectivesShape', (
-    _components: (
-        map-merge($Objectives__Container, (
-            _components: (
-                $H3--Objectives,
-                map-merge($ChapterObjectives__NoteBody, (
-                    _components: (
-                        $Objectives__Paragraph,
-                        $UnorderedList--FirstLevel,
-                    )
-                )),
-            )
+@include create_shape('cosmos:::ObjectivesNoteShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($Objectives__NoteBody, (
+          _components: (
+            $Objectives__Paragraph,
+            $UnorderedList--FirstLevel,
+          )
         )),
-    )
+      )
+    )),
+  )
 ));
 
 @include create_shape('cosmos:::ChapterOutlineShape', (
     _components: (
         map-merge($ChapterOutline__Container, (
             _components: (
-                $ChapterOutline__Title,
-                    map-merge($ChapterObjective__Container, (
-                        _components: (
-                            map-merge($ChapterObjective__Link,(
-                                _components: (
-                                    $ChapterObjective__Text,
-                                ),
-                            )),
-                        )
-                    )),
+                $H3--ChapterOutline,
+                map-merge($ChapterObjective__Container, (
+                    _components: (
+                        map-merge($ChapterObjective__Link,(
+                            _components: (
+                                $ChapterObjective__Text,
+                            ),
+                        )),
+                    )
+                )),
             )
         )),
     )

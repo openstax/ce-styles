@@ -131,6 +131,22 @@ $Note--Boxed--Condensed__Paragraph--First: (
   )
 );
 
+// Lines notes
+$Note--Lines__Container: (
+  _name: "LinesContainer",
+  _subselector: '',
+  _properties: (
+    margin-bottom: v-spacing(1),
+    border-bottom: '0.2rem solid',
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-top: '0.2rem solid',
+    border-top-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    box-decoration-break: slice,
+    padding-bottom: v-spacing(1),
+    padding-top: v-spacing(1),
+  )
+);
+
 // Icon notes
 $Note--Icon__Container: (
   _name: "Container",

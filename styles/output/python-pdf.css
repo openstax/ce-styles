@@ -831,6 +831,53 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   max-width: 5.9in;
 }
 
+[data-type=example] {
+  margin-bottom: 1.4rem;
+}
+
+[data-type=example] > h3.os-title {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #1E9575;
+  padding: 0.7rem;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+[data-type=example] > .body {
+  padding: 0.7rem;
+  background-color: #F2F2F2;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body > ol {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body h4[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=example] > .body > [data-type=note] > h3[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
 .os-chapter-outline {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
@@ -838,7 +885,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 1.5rem;
 }
 
-.os-chapter-outline > .os-title {
+.os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-size: 1.728rem;
   line-height: 1.728rem;
@@ -1936,6 +1983,56 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .learning-questions > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+[data-type=note]:not([class]) {
+  margin-bottom: 1.4rem;
+}
+
+[data-type=note]:not([class]) > .os-title {
+  color: #000000;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #D34D32;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding: 0.7rem;
+}
+
+[data-type=note]:not([class]) > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #D6D9DD;
+  padding: 0.7rem;
+}
+
+[data-type=note]:not([class]) > .os-note-body > .os-subtitle {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=note]:not([class]) > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+[data-type=note]:not([class]) > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
+  margin-left: 8px;
+  padding-left: 16px;
+}
+
+[data-type=note]:not([class]) > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
   font-weight: bold;

@@ -14,10 +14,6 @@ $bandColor: #093D4C;
 
 //Settings
 @include add_settings((
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
   ChapterTitles: (
     _selectors: ('[data-type="chapter"]'),
     'H1Numbered:::font-size': font-scale(4),
