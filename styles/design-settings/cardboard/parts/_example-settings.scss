@@ -1,10 +1,13 @@
 @include add_settings((
-    Example:(
+    ExampleBlue:(
         _selectors: ('[data-type="example"]'),
         ExampleTitle: (
             font-family: (_ref: 'typography:::titleFontAstronomy'),
             color: (_ref: 'colorMap:::exampleTitleColor'),
             background-color: (_ref: 'colorMap:::exampleTitleBackgroundColor'),
+            font-weight: bold,
+            letter-spacing: 0.25rem, //3px
+            padding: v-spacing(2),
         ),
         ExampleBody: (
             background-color: (_ref: 'colorMap:::exampleBodyBackgroundColor'),
@@ -12,10 +15,35 @@
         ExampleSubtitle: (
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::exampleSubtitleColor'),
+            font-weight: bold,
         ),
         ExampleSubtitleFromNote: (
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::exampleSubtitleColor'),
+            font-weight: bold,
+        ),
+    ),
+    ExampleGreen:(
+        _selectors: ('[data-type="example"]'),
+        ExampleTitle: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::exampleOption2TitleColor'),
+            background-color: (_ref: 'colorMap:::exampleOption2TitleBackgroundColor'),
+            font-weight: normal,
+            padding: v-spacing(1),
+        ),
+        ExampleBody: (
+            background-color: (_ref: 'colorMap:::exampleOption2BodyBackgroundColor'),
+        ),
+        ExampleSubtitle: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::exampleOption2SubtitleColor'),
+            font-weight: normal,
+        ),
+        ExampleSubtitleFromNote: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::exampleOption2SubtitleColor'),
+            font-weight: normal,
         ),
     ),
 ));

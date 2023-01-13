@@ -267,6 +267,32 @@ $H3--Handbook: (
     )
 );
 
+$H3--Objectives: (
+  _name: "H3ObjectivesTitle",
+  _subselector: ' > h3[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    font-weight: 700,
+    text-transform: uppercase,
+    margin-bottom: enum('ValueSet:::OPTIONAL'), // property used in chapter objectives economics
+  )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-weight: 700,
+        text-transform: uppercase,
+    )
+);
+
 // H4 headers
 $H4: (
     _name:"H4Title",

@@ -38,7 +38,7 @@ $ChapterIntroType: fullWidth;
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::chemistryIntroColor"),
     'ChapterObjectiveLink:::font-weight': normal,
     'ChapterOutlineContainer:::font-weight': normal,
@@ -149,6 +149,10 @@ $ChapterIntroType: fullWidth;
 
 // Notes
 @include add_settings((
+    DedicationPage:(
+        _selectors: (".dedication-page"),
+        group-border-color: (_ref: 'colorMap:::organicChemistryDedicationColor'),
+    ),
     WhyChapter:(
         _selectors: (".why-chapter"),
         group-border-color: (_ref: 'colorMap:::whyChapterColor'),
@@ -238,6 +242,7 @@ $ChapterIntroType: fullWidth;
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // Notes
+@include use('DedicationPage', 'carnival:::LinesNoteShape');
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
 @include use('ChemistryMatters', 'carnival:::IconIncreasedNoteShape');
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
@@ -256,6 +261,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 @include use('MechanismFigure','carnival:::MechanismFigureShape');
+@include use('FigureDedication','carnival:::FigureDedicationShape');
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');

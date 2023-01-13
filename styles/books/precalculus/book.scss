@@ -18,13 +18,6 @@ $ChapterIntroType: fullWidth;
 //Settings
 
 @include add_settings((
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
-));
-
-@include add_settings((
   HowTo: (
     _selectors: (".how-to-notitle"),
     'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),

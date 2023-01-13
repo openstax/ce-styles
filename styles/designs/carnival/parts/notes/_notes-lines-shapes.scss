@@ -1,0 +1,10 @@
+@import 'notes-components';
+
+@include create_shape('carnival:::LinesNoteShape', (
+  _groups: (
+    group-border-color: enum('ValueSet:::REQUIRED'),
+  ),
+  _components: (
+    $Note--Lines__Container,
+  )
+));

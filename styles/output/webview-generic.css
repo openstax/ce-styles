@@ -67,6 +67,10 @@ u[data-effect=double-underline] {
   text-decoration-style: double;
 }
 
+[data-type=media][data-display=inline] {
+  display: inline-flex;
+}
+
 *:not(.os-term) > .red-text {
   color: #CC0000;
 }
@@ -345,10 +349,6 @@ ul.critical-thinking {
   padding-left: 0;
 }
 
-.stepwise > li {
-  display: flex;
-}
-
 .stepwise > li .os-stepwise-token {
   white-space: pre;
 }
@@ -364,10 +364,6 @@ ul.critical-thinking {
 .os-stepwise {
   list-style-type: none;
   padding-left: 0;
-}
-
-.os-stepwise > li {
-  display: flex;
 }
 
 .os-stepwise > li .os-stepwise-token {
