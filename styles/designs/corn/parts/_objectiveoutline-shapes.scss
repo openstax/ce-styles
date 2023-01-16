@@ -2,7 +2,7 @@
 @import 'titles-components';
 @import 'lists/lists-components';
 
-@include create_shape('corn:::LearningObjectivesShape', (
+@include create_shape('corn:::LearningObjectivesWithCustomBulletIconShape', (
   _components: (
     map-merge($Objectives__Container, (
       _components: (
@@ -54,7 +54,7 @@
 ));
 
 // Used in Statistics. Appears in Introduction Page. There is no Learning Objectives or Chapter Outline in this book.
-@include create_shape('corn:::ObjectivesNoteShape', (
+@include create_shape('corn:::ObjectivesNoteWithCustomBulletIconShape', (
   _components: (
     map-merge($Objectives__Container, (
       _components: (
