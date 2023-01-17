@@ -8,9 +8,9 @@
       _components: (
         $H3--Objectives,
         $Objectives__Paragraph,
-        map-merge($UnorderedList--Objectives, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            $UnorderedList--Objectives__Item,
+            $ListItem--Objectives--WithCustomBulletIcon,
           ),
         ))
       ),
@@ -23,9 +23,9 @@
     map-merge($Objectives__Container, (
       _components: (
         $H4--LearningObjectives--Coreq,
-        map-merge($UnorderedList--Objectives, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            $UnorderedList--Objectives__Item,
+            $ListItem--Objectives--WithCustomBulletIcon,
           ),
         ))
       ),
@@ -39,11 +39,11 @@
     map-merge($Objectives__Container, (
       _components: (
         $H3--Objectives,
-        map-merge($UnorderedList--Objectives, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            map-merge($LearningObjectives__ListItem--Flex, (
+            map-merge($ListItem--Objectives--Flex, (
               _components: (
-                $LearningObjectives__Token--Number,
+                $ListItem--Objectives__NumberToken,
               )
             )),
           )
@@ -62,9 +62,9 @@
         map-merge($Objectives__NoteBody, (
           _components: (
             $Objectives__Paragraph,
-            map-merge($UnorderedList--Objectives, (
+            map-merge($UnorderedList--UnstyledFromObjectives, (
               _components: (
-                $UnorderedList--Objectives__Item,
+                $ListItem--Objectives--WithCustomBulletIcon,
               ),
             ))
           ),

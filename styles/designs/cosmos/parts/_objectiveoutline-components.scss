@@ -17,54 +17,11 @@ $Objectives__Paragraph: (
   )
 );
 
-$LearningObjectives__UnorderedList--WithoutBullets: (
-  _name: 'UnorderedListNumbered',
-  _subselector: ' > ul.os-abstract',
-  _properties: (
-    list-style-type: none,
-  )
-);
-
-$LearningObjectives__ListItem--Flex: (
-  _name: 'ListItemFlex',
-  _subselector: ' > li',
-  _properties: (
-    display: flex,
-    max-width: 5.9in,
-  )
-);
-
-$LearningObjectives__ListItem: (
-  _name: 'ListItemFlex',
-  _subselector: ' > li',
-  _properties: (
-    max-width: 5.9in,
-  )
-);
-
 $ChapterObjectives__ListItem: (
   _name: 'ListItem',
   _subselector: ' > li',
   _properties: (
     font-family: enum('ValueSet:::REQUIRED'),
-  )
-);
-
-$Objectives__List__Dot: (
-  _name: 'ListDot',
-  _subselector: '::marker',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-  )
-);
-
-$LearningObjectives__Token--Number: (
-  _name: "NumberToken",
-  _subselector: ' span.os-abstract-token',
-  _properties: (
-    font-weight: 700,
-    color: enum('ValueSet:::REQUIRED'),
-    padding-right: h-spacing(1),
   )
 );
 

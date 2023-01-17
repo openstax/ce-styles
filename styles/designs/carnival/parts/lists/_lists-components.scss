@@ -109,3 +109,22 @@ $UnorderedList__Item--AppendixGlossary: (
     padding-left: 5px,
   )
 );
+
+// Objectives
+
+$ListItem--Objectives: (
+  _name: 'ObjectivesListItem',
+  _subselector: ' > li',
+  _properties: (
+    font-family: enum('ValueSet:::OPTIONAL'), // needed for chapter objectives in anatomy
+    max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives__Dot: (
+  _name: 'ObjectivesListDot',
+  _subselector: '::marker',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
