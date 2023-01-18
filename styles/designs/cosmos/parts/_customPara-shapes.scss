@@ -26,6 +26,22 @@
   )
 ));
 
+// Citation
+
+@include create-shape('cosmos:::ParaCitationShape', (
+    _components: (
+      $Para--Citation,
+    ),
+));
+
+// Citation with left border
+
+@include create-shape('cosmos:::ParaCitationWithLeftBorderShape', (
+    _components: (
+      $Para--Citation--WithLeftBorder,
+    ),
+));
+
 // Para with left border
 
 @include create-shape('cosmos:::ParaWithLeftBorderShape', (

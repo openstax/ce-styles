@@ -121,6 +121,21 @@ $bandColor: #DCB83D;
     'ItalicAnnotationPara:::font-family': (_ref: 'typography:::titleOption2Font'),
     'ItalicAnnotationPara:::color': (_ref: "colorMap:::AnnotationTextColor"),
   ),
+  ParaCitation: (
+    _selectors: ('p.citation:not(.student-sample):not(.public-domain)'),
+  ),
+  ParaCitationPublicDomain: (
+    _selectors:("p.citation.public-domain"),
+    'ParaCitationWithLeftBorder:::border-color': (_ref: 'colorMap:::publicDomainBorderColor'),
+    'ParaCitationWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaCitationWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+  ),
+  ParaCitationStudentSample: (
+    _selectors:("p.citation.student-sample"),
+    'ParaCitationWithLeftBorder:::border-color': (_ref: 'colorMap:::studentSampleBorderColor'),
+    'ParaCitationWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaCitationWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+  ),
   ParaPublicDomain: (
     _selectors:("p.public-domain"),
     'ParaWithLeftBorder:::border-color': (_ref: 'colorMap:::publicDomainBorderColor'),
@@ -173,8 +188,6 @@ $bandColor: #DCB83D;
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cosmos:::TocUnitShape');
-@include use('CitationPara', 'cosmos:::CitationParaShape');
-@include use('CitationParaForSideLine', 'cosmos:::CitationParaForSideLineShape');
 @include use('UnderlineYellow', 'cosmos:::UnderlineShape');
 @include use('DoubleUnderlineYellow', 'cosmos:::DoubleUnderlineShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
@@ -206,6 +219,10 @@ $bandColor: #DCB83D;
 @include use('ParaAnnotationItalic', 'cosmos:::ParaAnnotationItalicShape');
 @include use('ParaPublicDomain', 'cosmos:::ParaWithLeftBorderShape');
 @include use('ParaStudentSample', 'cosmos:::ParaWithLeftBorderShape');
+
+@include use('ParaCitation', 'cosmos:::ParaCitationShape');
+@include use('ParaCitationPublicDomain', 'cosmos:::ParaCitationWithLeftBorderShape');
+@include use('ParaCitationStudentSample', 'cosmos:::ParaCitationWithLeftBorderShape');
 
 @include use('ParaAnnotationWithIcon', 'cosmos:::ParaAnnotationWithIconShape');
 @include use('CultureAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');

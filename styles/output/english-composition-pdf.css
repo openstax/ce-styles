@@ -1030,21 +1030,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   display: none;
 }
 
-p.citation:not(.student-sample):not(.public-domain) {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-p.citation.student-sample {
-  text-indent: -8px;
-  padding-left: 16px;
-}
-
-p.citation.public-domain {
-  text-indent: -8px;
-  padding-left: 16px;
-}
-
 u[data-effect=underline] {
   text-decoration: none;
   background-color: #FFF7E5;
@@ -1459,6 +1444,37 @@ p.student-sample {
   display: inline-block;
   margin-left: 16px;
   padding-left: 8px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #0074BC;
+}
+
+p.citation:not(.student-sample):not(.public-domain) {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+p.citation.public-domain {
+  display: inline-block;
+  margin-left: 16px;
+  text-indent: -8px;
+  padding-left: 16px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #1E9575;
+}
+
+p.citation.student-sample {
+  display: inline-block;
+  margin-left: 16px;
+  text-indent: -8px;
+  padding-left: 16px;
   font-family: IBM Plex Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   color: #000000;
