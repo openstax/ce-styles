@@ -27,6 +27,14 @@ $Exercise__Problem2: (
   ),
 );
 
+$Exercise__ExerciseQuestion: (
+  _name: "Problem1",
+  _subselector: ' [data-type="exercise-question"]',
+  _properties: (
+    padding: '0.5em 1em',
+  ),
+);
+
 $Exercise__Solution1: (
   _name: "Solution1",
   _subselector: ' [data-type="solution"]',
@@ -156,7 +164,7 @@ $Exercise--Inlined__Child--OrderedList: (
   _name: "ExerciseInlinedChildOrderedList",
   _subselector: (' > ol'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
 
@@ -164,7 +172,7 @@ $Exercise--Inlined__Child--UnOrderedList: (
   _name: "ExerciseInlinedChildUnOrderedList",
   _subselector: (' > ul'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
 
@@ -172,15 +180,22 @@ $Exercise--Inlined__Child--Note: (
   _name: "ExerciseInlinedChildNote",
   _subselector: (' > [data-type="note"]'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
-
 
 $Exercise--Inlined__Child--Figure: (
   _name: "ExerciseInlinedChildFigure",
   _subselector: (' .os-figure'),
   _properties: (
     margin: '3rem 0',
+  ),
+);
+
+$Exercise--Inlined__Child--Img: (
+  _name: "ExerciseInlinedChildImg",
+  _subselector: (' img'),
+  _properties: (
+    display: block,
   ),
 );
