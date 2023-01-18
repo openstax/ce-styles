@@ -1,3 +1,5 @@
+// Annotation Italic
+
 $Para--Annotation--Italic: (
   _name: 'ItalicAnnotationPara',
   _subselector: '',
@@ -8,6 +10,43 @@ $Para--Annotation--Italic: (
     color: enum('ValueSet:::REQUIRED'),
   )
 );
+
+// Annotation with Icon
+
+$Para--Annotation--WithIcon: (
+  _name: "ParaAnnotationWithIcon",
+  _subselector: '',
+  _properties:(
+    display: flex,
+    margin-left: h-spacing(-4),
+  )
+);
+
+$Para--Annotation__IconContainer: (
+  _name: "ParaAnnotationIconContainer",
+  _subselector: ' > .os-icons',
+  _properties:(
+    display: flex,
+    flex-direction: column,
+    height: fit-content,
+  )
+);
+
+$Para--Annotation__Icon: (
+  _name: "ParaAnnotationIcon",
+  _subselector: '',
+  _properties:(
+    height: v-spacing(3),
+    width: v-spacing(3),
+    background: enum('ValueSet:::REQUIRED'),
+    content: "''",
+    background-repeat: no-repeat,
+    margin-right: h-spacing(1),
+    margin-bottom: h-spacing(1),
+  )
+);
+
+// Para with left border
 
 $Para--WithLeftBorder: (
   _name: 'ParaWithLeftBorder',

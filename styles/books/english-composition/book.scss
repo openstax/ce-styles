@@ -12,33 +12,36 @@ $bandColor: #DCB83D;
 @import '../../designs/cosmos/pdf/folio';
 
 @include add_settings((
-  CultureAnnotation:(
+  ParaAnnotationWithIcon: (
+    _selectors: ('p.annotation'),
+  ),
+  CultureAnnotationIcon:(
     _selectors: ("span.culture-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg")) no-repeat top left
   ),
-  LinguisticAnnotation: (
+  LinguisticAnnotationIcon: (
     _selectors: ("span.linguistic-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg")) no-repeat top left
   ),
-  DreamingAnnotation: (
+  DreamingAnnotationIcon: (
     _selectors: ("span.dreaming-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")) no-repeat top left
   ),
-  VisualAnnotation: (
+  VisualAnnotationIcon: (
     _selectors: ("span.visual-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg")) no-repeat top left
   ),
-  SpeechAnnotation: (
+  SpeechAnnotationIcon: (
     _selectors: ("span.speech-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg")) no-repeat top left
   ),
-  AuditoryAnnotation: (
+  AuditoryAnnotationIcon: (
     _selectors: ("span.auditory-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg")) no-repeat top left
   ),
-  KinestheticAnnotation: (
+  KinestheticAnnotationIcon: (
     _selectors: ("span.kinesthetic-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg")) no-repeat top left
   ),
 ));
 
@@ -204,15 +207,16 @@ $bandColor: #DCB83D;
 @include use('ParaPublicDomain', 'cosmos:::ParaWithLeftBorderShape');
 @include use('ParaStudentSample', 'cosmos:::ParaWithLeftBorderShape');
 
+@include use('ParaAnnotationWithIcon', 'cosmos:::ParaAnnotationWithIconShape');
+@include use('CultureAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('LinguisticAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('DreamingAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('VisualAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('SpeechAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('AuditoryAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('KinestheticAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+
 //Notes & Annotations
-@include use('CultureAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('LinguisticAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('DreamingAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('VisualAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('SpeechAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('AuditoryAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('KinestheticAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('Annotation', 'cosmos:::AnnotationShape');
 @include use('Trailblazer', 'cosmos:::IconFullPageNoteShape');
 @include use('QuickLaunch', 'cosmos:::SectionIconnedShape');
 @include use('Drafting', 'cosmos:::SectionIconnedShape');

@@ -1467,6 +1467,17 @@ p.student-sample {
   border-color: #0074BC;
 }
 
+p.annotation {
+  display: flex;
+  margin-left: -32px;
+}
+
+p.annotation > .os-icons {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
 span.culture-icon {
   height: 2.1rem;
   width: 2.1rem;
@@ -1535,17 +1546,6 @@ span.kinesthetic-icon {
   background-repeat: no-repeat;
   margin-right: 8px;
   margin-bottom: 8px;
-}
-
-p.annotation {
-  display: flex;
-  margin-left: -32px;
-}
-
-p.annotation > .os-icons {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
 }
 
 [data-type=page].narrative-trailblazer {
