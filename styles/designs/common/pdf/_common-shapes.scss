@@ -22,12 +22,6 @@
     ),
 ));
 
-@include create-shape('common:::PublicDomainTextShape', (
-    _components: (
-      $PublicDomain__Text,
-    ),
-));
-
 @include create-shape('common:::NarrowTableShape', (
     _components: (
       map-merge($NarrowTable__Container, (
