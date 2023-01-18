@@ -114,3 +114,71 @@ $OrderedList--TypeA__Marker: (
         font-weight: bold,
     )
 );
+
+// Objectives
+
+$ListItem--Objectives: (
+    _name: "ObjectivesListItem",
+    _subselector: ' > li',
+    _properties:(
+        max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties:(
+        display: flex,
+        max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__CustomBulletIcon: (
+    _name: "ObjectivesCustomBulletIcon",
+    _subselector: '::before',
+    _properties: (
+        content: "''",
+        display: inline-block,
+        height: v-spacing(1),
+        background: enum('ValueSet:::REQUIRED'),
+        background-size: contain,
+        padding-left: h-spacing(3),
+        position: relative,
+        top: 3px,
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    margin-right: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$ListItem--Objectives__LOIcon: (
+    _name: "ObjectivesLOIcon",
+    _subselector: '::before',
+    _properties: (
+        content: "''",
+        display: inline-block,
+        height: font-scale(0),
+        width: font-scale(1),
+        background: enum('ValueSet:::REQUIRED'),
+        background-size: contain,
+        padding-right:  h-spacing(1),
+        position: relative,
+        top: 3px,
+    )
+);
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: ' > ul',
+    _properties:(
+        list-style-type: none,
+    )
+);

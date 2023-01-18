@@ -10,25 +10,6 @@ $Objectives__Paragraph: (
   )
 );
 
-$LearningObjectives__ListItem--Flex: (
-  _name: 'ListItemFlex',
-  _subselector: ' > li',
-  _properties: (
-    display: flex,
-    max-width: 5.9in,
-  )
-);
-
-$LearningObjectives__Token--Number: (
-  _name: "NumberToken",
-  _subselector: ' > span.os-abstract-token',
-  _properties: (
-    font-weight: bold,
-    color: enum('ValueSet:::REQUIRED'),
-    margin-right: h-spacing(1),
-  )
-);
-
 // Chapter Outline
 $ChapterOutline__Container: (
     _name: "ChapterOutlineContainer",

@@ -40,7 +40,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesAbstract: (
       _selectors: ('[data-type="page"] > [data-type="abstract"]'),
       'H3ObjectivesTitle:::color': (_ref: "colorMap:::physicsHeaderColor"),
-      'ListDot:::color': (_ref: "colorMap:::physicsHeaderColor"),
+      'ObjectivesListDot:::color': (_ref: "colorMap:::physicsHeaderColor"),
     ),
 ));
 
@@ -170,7 +170,7 @@ $ChapterIntroType: fullWidth;
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('Example', 'carnival:::ExampleShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');

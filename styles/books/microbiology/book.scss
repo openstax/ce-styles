@@ -30,7 +30,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::microbioHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::microbioHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::microbioHeaderColor'),
   ),
 ));
 
@@ -196,7 +196,7 @@ $ChapterIntroType: fullWidth;
 @include use('Index', 'carnival:::IndexShape');
 @include use('AnswerKey', 'carnival:::AnswerKeyShape');
 @include use('AnswerKeySolutionInline', 'carnival:::AnswerKeySolutionInlineShape');
-@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');

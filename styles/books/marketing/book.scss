@@ -40,7 +40,7 @@ $bandColor: #9028A3;
 @include add_settings((
   LearningObjectivesNumberedWithLOIcon: (
     _selectors: ('[data-type="page"] .learning-objectives'),
-    'LOIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lo.svg")) no-repeat center center,
+    'ObjectivesLOIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lo.svg")) no-repeat center center,
   )
 ));
 
