@@ -1,0 +1,13 @@
+@import './customPara-components';
+
+@include create-shape('cosmos:::ParaAnnotationItalicShape', (
+    _components: (
+      $Para--Annotation--Italic,
+    ),
+));
+
+@include create-shape('cosmos:::ParaWithLeftBorderShape', (
+    _components: (
+      $Para--WithLeftBorder,
+    ),
+));
