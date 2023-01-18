@@ -21,7 +21,7 @@ $bandColor: #093D4C;
       font-family: (_ref: 'typography:::titleFont'),
       color: (_ref: 'colorMap:::moduleTitleColor'),
     ),
-    ObjectivesUnorderedListItem: (
+    ObjectivesListItemWithCustomBulletIcon: (
       background: url(toDataUri("svg+xml", "designs/corn/resources/corn-lolist.svg")) no-repeat left 0.4rem,
     )
   )
@@ -153,7 +153,7 @@ $bandColor: #093D4C;
 
 // Learning Objectives
 @include use('LearningObjectivesCoreq', 'corn:::LearningObjectivesCoreqShape');
-@include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesShape');
+@include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesWithCustomBulletIconShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');

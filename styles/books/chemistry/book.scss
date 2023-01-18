@@ -40,7 +40,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesAbstract: (
     _selectors: ('[data-type="page"] > [data-type="abstract"]'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::chemistryHeaderColor'),
   ),
 ));
 
@@ -151,7 +151,7 @@ $ChapterIntroType: fullWidth;
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');

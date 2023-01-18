@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Create files for `customPara`
+* Create files for `customPara`
+* Standardize `objectives` and `outline` shapes
+* Move lists from `objectiveoutline-components` to lists file
 
 ## [v1.119.0] - 2023-01-13
 

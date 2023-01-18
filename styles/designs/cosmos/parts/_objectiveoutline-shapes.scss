@@ -9,7 +9,7 @@
         $H3--Objectives,
         $Objectives__Paragraph,
         $UnorderedList--FirstLevel,
-        ),
+      ),
     ))
   ),
 ));
@@ -22,9 +22,9 @@
         $Objectives__Paragraph,
         map-merge($UnorderedList--FirstLevel, (
           _components: (
-            map-merge($LearningObjectives__ListItem, (
+            map-merge($ListItem--Objectives, (
               _components: (
-                $Objectives__List__Dot,
+                $ListItem--Objectives__Dot,
               ),
             ))
           ),
@@ -40,11 +40,11 @@
       _components: (
         $H3--Objectives,
         $Objectives__Paragraph,
-        map-merge($LearningObjectives__UnorderedList--WithoutBullets, (
+        map-merge($UnorderedList--UnstyledFromObjectives, (
           _components: (
-            map-merge($LearningObjectives__ListItem--Flex, (
+            map-merge($ListItem--Objectives--Flex, (
               _components: (
-                $LearningObjectives__Token--Number,
+                $ListItem--Objectives__NumberToken,
               )
             )),
           )

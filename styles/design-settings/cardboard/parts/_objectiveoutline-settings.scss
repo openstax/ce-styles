@@ -12,15 +12,13 @@
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::titleColor'),
         ),
-        NumberToken:(
+        ObjectivesNumberToken:(
             color: (_ref: 'colorMap:::learningObjectivesTitleColor'),
             margin-right: h-spacing(1),
         ),
     ),
     LearningObjectivesWithCustomBulletIcon: (
         _selectors: ('[data-type="page"] .learning-objectives'),
-        H3ObjectivesTitle: (
-        ),
     ),
     LearningObjectivesNumberedWithLOIcon:(
         _selectors: ('[data-type="page"] .learning-objectives'),
@@ -28,7 +26,7 @@
             font-family: (_ref: 'typography:::sansFont'),
             color: (_ref: 'colorMap:::titleColor'),
         ),
-        NumberToken:(
+        ObjectivesNumberToken:(
             color: (_ref: 'colorMap:::titleColor'),
             margin-right: 4px,
         )

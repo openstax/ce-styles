@@ -9,23 +9,6 @@ $Objectives__Paragraph: (
   )
 );
 
-$Objectives__List__Item: (
-  _name: 'ListItem',
-  _subselector: ' > li',
-  _properties: (
-    font-family: enum('ValueSet:::OPTIONAL'), // needed for chapter objectives in anatomy
-    max-width: 5.9in,
-  )
-);
-
-$Objectives__List__Dot: (
-  _name: 'ListDot',
-  _subselector: '::marker',
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-  )
-);
-
 $Objectives__NoteBody: empty_wrapper(NoteBody, ' .os-note-body');
 
 // Chapter Outline
