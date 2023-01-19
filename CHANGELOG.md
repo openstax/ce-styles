@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create files for `customPara`
 * Style `equations` in `organic-chemistry`
 * Standardize `objectives` and `outline` shapes
 * Move lists from `objectiveoutline-components` to lists file

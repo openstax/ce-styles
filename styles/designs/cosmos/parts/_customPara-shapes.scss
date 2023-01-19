@@ -1,0 +1,51 @@
+@import './customPara-components';
+
+// Annotation Italic
+
+@include create-shape('cosmos:::ParaAnnotationItalicShape', (
+    _components: (
+      $Para--Annotation--Italic,
+    ),
+));
+
+// Annotation with Icon
+
+@include create_shape('cosmos:::ParaAnnotationWithIconShape', (
+  _components: (
+    map-merge($Para--Annotation--WithIcon,(
+      _components: (
+        $Para--Annotation__IconContainer,
+      ),
+    ))
+  ),
+));
+
+@include create_shape('cosmos:::ParaAnnotationIconShape', (
+  _components: (
+    $Para--Annotation__Icon,
+  )
+));
+
+// Citation
+
+@include create-shape('cosmos:::ParaCitationShape', (
+    _components: (
+      $Para--Citation,
+    ),
+));
+
+// Citation with left border
+
+@include create-shape('cosmos:::ParaCitationWithLeftBorderShape', (
+    _components: (
+      $Para--Citation--WithLeftBorder,
+    ),
+));
+
+// Para with left border
+
+@include create-shape('cosmos:::ParaWithLeftBorderShape', (
+    _components: (
+      $Para--WithLeftBorder,
+    ),
+));

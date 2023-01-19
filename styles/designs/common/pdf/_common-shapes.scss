@@ -22,24 +22,6 @@
     ),
 ));
 
-@include create-shape('common:::AnnotationTextShape', (
-    _components: (
-      $Annotation__Text,
-    ),
-));
-
-@include create-shape('common:::AnnotationTextLeftBorderShape', (
-    _components: (
-      $AnnotationText--WithLeftBorder,
-    ),
-));
-
-@include create-shape('common:::PublicDomainTextShape', (
-    _components: (
-      $PublicDomain__Text,
-    ),
-));
-
 @include create-shape('common:::NarrowTableShape', (
     _components: (
       map-merge($NarrowTable__Container, (
