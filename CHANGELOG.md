@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix newline after question number for inline exercise
 * Create files for `customPara`
 * Style `equations` in `organic-chemistry`
 * Standardize `objectives` and `outline` shapes
