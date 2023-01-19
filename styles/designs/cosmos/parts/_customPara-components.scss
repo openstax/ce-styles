@@ -1,0 +1,95 @@
+// Annotation Italic
+
+$Para--Annotation--Italic: (
+  _name: 'ItalicAnnotationPara',
+  _subselector: '',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-style: italic,
+    font-size: font-scale(0),
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+// Annotation with Icon
+
+$Para--Annotation--WithIcon: (
+  _name: "ParaAnnotationWithIcon",
+  _subselector: '',
+  _properties:(
+    display: flex,
+    margin-left: h-spacing(-4),
+  )
+);
+
+$Para--Annotation__IconContainer: (
+  _name: "ParaAnnotationIconContainer",
+  _subselector: ' > .os-icons',
+  _properties:(
+    display: flex,
+    flex-direction: column,
+    height: fit-content,
+  )
+);
+
+$Para--Annotation__Icon: (
+  _name: "ParaAnnotationIcon",
+  _subselector: '',
+  _properties:(
+    height: v-spacing(3),
+    width: v-spacing(3),
+    background: enum('ValueSet:::REQUIRED'),
+    content: "''",
+    background-repeat: no-repeat,
+    margin-right: h-spacing(1),
+    margin-bottom: h-spacing(1),
+  )
+);
+
+// Citation
+
+$Para--Citation: (
+    _name: "CitationPara",
+    _subselector: '',
+    _properties:(
+        text-indent: h-spacing(-2),
+        padding-left: h-spacing(2),
+    )
+);
+
+// Citation with left border
+
+$Para--Citation--WithLeftBorder: (
+  _name: 'ParaCitationWithLeftBorder',
+  _subselector: '',
+  _properties: (
+    display: inline-block,
+    margin-left: h-spacing(2),
+    text-indent: h-spacing(-1),
+    padding-left: h-spacing(2),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    color: enum('ValueSet:::OPTIONAL'),
+    border-left-style: solid,
+    border-width: .1rem,
+    border-color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+// Para with left border
+
+$Para--WithLeftBorder: (
+  _name: 'ParaWithLeftBorder',
+  _subselector: '',
+  _properties: (
+    display: inline-block,
+    margin-left: h-spacing(2),
+    padding-left: h-spacing(1),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    color: enum('ValueSet:::OPTIONAL'),
+    border-left-style: solid,
+    border-width: .1rem,
+    border-color: enum('ValueSet:::REQUIRED'),
+  )
+);
