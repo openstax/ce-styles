@@ -104,6 +104,15 @@ $bandColor: #093D4C;
   ),
   KeyEquations:(
       _selectors: (".os-key-equations-container"),
+            'TableData:::font-family': (_ref: "typography:::baseFont"),
+            'TableData:::padding-top': table-v-spacing(1),
+            'TableData:::padding-bottom': table-v-spacing(1),
+            'TableData:::padding-left': table-h-spacing(1),
+            'TableData:::padding-right': table-h-spacing(1),
+            'TableData:::border-bottom-width': 0.09rem,
+            'TableData:::border-bottom-style': solid,
+            'TableData:::border-bottom-color': (_ref: "colorMap:::basicTableCellBorderColor"),
+            'TableData:::color': (_ref: "colorMap:::tableColor"),
   ),
 ));
 

@@ -35,7 +35,19 @@
                     _components:(
                         map-merge($Table__Container--ModuleWithUnstyledTable,(
                             _components:(
-                                $Table--ModuleWithUnstyledTable,
+                                map-merge($Table--ModuleWithUnstyledTable, (
+                                    _components:(
+                                        map-merge($Table__Body, (
+                                            _components: (
+                                                map-merge($Table__Row, (
+                                                _components: (
+                                                    $Table__Data
+                                                ),
+                                                )),
+                                            ),
+                                        )),
+                                    ),
+                                )),
                             ),
                         )),
                     ),
