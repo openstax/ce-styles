@@ -3444,11 +3444,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-key-equations-container > section > .os-table.os-unstyled-container {
   margin-bottom: 0;
-  border-bottom-color: red;
 }
 
 .os-key-equations-container > section > .os-table.os-unstyled-container > table.unstyled {
   margin-bottom: 0;
+}
+
+.os-key-equations-container > section > .os-table.os-unstyled-container > table.unstyled > tbody > tr > td {
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  color: #093D4C;
+  border-bottom-width: 0.09rem;
+  border-bottom-style: solid;
+  border-bottom-color: #F1F1F1;
 }
 
 .os-eoc.os-review-exercises-container > section.review-exercises > p > [data-effect=bold] {
