@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fix folio in `corn`
 * Style `equations` in `contemporary-math`
 * Clean up `common` files
+* Added `img.scaled-down` styling to `FigureImage` shapes & components in `webview`
 * Fix newline after question number for inline exercise
 * Create files for `customPara`
 * Style `equations` in `organic-chemistry`
