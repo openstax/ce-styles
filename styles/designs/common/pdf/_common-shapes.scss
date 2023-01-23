@@ -1,5 +1,9 @@
 @import 'common-components';
 
+// Contains shapes that have one component with some OPTIONAL or REQUIRED properties
+// and/or selector that differs between books/themes.
+// If selector and all their properties are always the same, move it to common-styles.scss file.
+
 @include create_shape('common:::BookRoot', (
   _components: ($bookRoot)
 ));
@@ -26,6 +30,12 @@
     _components: (
       $CenteredText,
     ),
+));
+
+@include create_shape('common:::CalculatorButtonShape', (
+  _components: (
+      $Calculator__Button
+    )
 ));
 
 // differs from Hidden by hiding elements visually but not from screenreaders
