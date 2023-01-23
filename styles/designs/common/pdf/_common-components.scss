@@ -42,6 +42,16 @@ $Calculator__Button: (
     )
 );
 
+$PunctuationEmphasis: (
+  _name: "PunctuationEmphasis",
+  _subselector: '',
+  _properties: (
+    font-size: font-scale(1),
+    font-weight: 700,
+    background-color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
 // differs from Hidden by hiding elements visually but not from screenreaders
 $VisuallyHidden: (
     _name: 'VisuallyHidden',

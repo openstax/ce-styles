@@ -38,6 +38,12 @@
     )
 ));
 
+@include create_shape('common:::PunctuationEmphasisShape', (
+    _components: (
+        $PunctuationEmphasis,
+    )
+));
+
 // differs from Hidden by hiding elements visually but not from screenreaders
 @include create_shape('common:::VisuallyHiddenShape', (
   _components: (
