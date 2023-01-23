@@ -323,8 +323,8 @@ $bandColor: #24739E;
 @include use('NumberedEquation', 'cardboard:::NumberedEquationShape');
 
 // Calculator
-@include use('PrimaryCalculator', 'cardboard:::CalculatorButton');
-@include use('SecondaryCalculator', 'cardboard:::CalculatorButton');
+@include use('PrimaryCalculator', 'common:::CalculatorButtonShape');
+@include use('SecondaryCalculator', 'common:::CalculatorButtonShape');
 
 //Exercises
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
