@@ -119,3 +119,13 @@
         )),
     )
 ));
+
+@include create-shape('cosmos:::NarrowTableShape', (
+    _components: (
+      map-merge($NarrowTable__Container, (
+        _components: (
+          $NarrowTable__Data,
+      )
+    )),
+  )
+));

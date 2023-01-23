@@ -22,16 +22,6 @@
     ),
 ));
 
-@include create-shape('common:::NarrowTableShape', (
-    _components: (
-      map-merge($NarrowTable__Container, (
-        _components: (
-          $NarrowTable__Data,
-      )
-    )),
-  )
-));
-
 @include create-shape('common:::CenteredTextShape', (
     _components: (
       $CenteredText,
