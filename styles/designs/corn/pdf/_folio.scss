@@ -11,7 +11,7 @@
 [data-type="chapter"] > {
   [data-type="page"].introduction .intro-text > h2[data-type="document-title"] {
     string-set: module-number string(chapter-number);
-    
+
     .os-text {
       string-set: module-title content();
     }
@@ -41,7 +41,7 @@
   }
 }
 
-div[data-type="composite-page"].os-eob > h1[data-type="document-title"] {
+div.os-eob > h1[data-type="document-title"] {
   .os-text {
     string-set: eob-title content();
   }
@@ -140,7 +140,7 @@ div[data-type="composite-page"].os-eob {
     z-index: -1;
     content: " ";
   }
-} 
+}
 
 @mixin CornFolioStyles() {
     font-size: font-scale(-1);
@@ -164,7 +164,7 @@ div[data-type="composite-page"].os-eob {
           content: $bottomContent;
       }
     }
-  
+
     @page #{$page}:right {
       @top-right {
         @include CornFolioStyles();
@@ -187,7 +187,7 @@ div[data-type="composite-page"].os-eob {
         content: $bottomContent;
       }
     }
-  
+
     @page #{$page}:right {
       @top-right {
         @include CornFolioStyles();
@@ -198,7 +198,7 @@ div[data-type="composite-page"].os-eob {
 
   $defaultLeftContent: string(chapter-number) " • " string(chapter-title);
   $defaultRightContent: string(module-number) " • " string(module-title);
-  
+
   $prefaceContent: string(preface-msg);
   $accessContent: string(access-for-free-msg);
 
@@ -213,7 +213,7 @@ div[data-type="composite-page"].os-eob {
   @include folioWithBand($eocContent, $eocContent, $accessContent,  eoc);
   @include folioWithBand($appendixContent, $appendixContent, $accessContent, appendix);
   @include folioWithBand($eobContent, $eobContent, $accessContent, eob);
-  
+
   //Page margins
   @page {
     margin-left: 1in;
