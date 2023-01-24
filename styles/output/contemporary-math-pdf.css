@@ -1244,6 +1244,13 @@ nav#toc > ol > li > ol > li > a::after {
   font-weight: bold;
 }
 
+[data-type=equation].unnumbered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
 .os-figure:not(.has-splash) > figure {
   display: table;
   margin-left: auto;
