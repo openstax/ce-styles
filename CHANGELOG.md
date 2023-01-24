@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `equations` in `contemporary-math`
 * Clean up `common` files
 * Fix newline after question number for inline exercise
 * Create files for `customPara`
