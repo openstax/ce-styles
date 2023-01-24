@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add Yellow and Purple text to `organic-chemistry`
 * Fix folio in `corn`
 * Style `equations` in `contemporary-math`
 * Clean up `common` files

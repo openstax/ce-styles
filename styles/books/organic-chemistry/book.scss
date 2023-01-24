@@ -145,6 +145,14 @@ $ChapterIntroType: fullWidth;
         _selectors: ('.red-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::textRedColor'),
     ),
+    YellowColoredText: (
+        _selectors: ('.yellow-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textYellowColor'),
+    ),
+    PurpleColoredText: (
+        _selectors: ('.purple-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::textPurpleColor'),
+    ),
 ));
 
 // Notes
@@ -207,6 +215,8 @@ $ChapterIntroType: fullWidth;
 @include use('GreenColoredText', 'common:::ColoredText');
 @include use('GrayColoredText', 'common:::ColoredText');
 @include use('RedColoredText', 'common:::ColoredText');
+@include use('YellowColoredText', 'common:::ColoredText');
+@include use('PurpleColoredText', 'common:::ColoredText');
 
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
