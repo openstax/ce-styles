@@ -20,22 +20,6 @@ $ColoredText__Container: (
     )
 );
 
-$NarrowTable__Container: (
-    _name: 'NarrowTableContainer',
-    _subselector: '',
-    _properties: (
-        width: 50%,
-    )
-);
-
-$NarrowTable__Data: (
-  _name: 'NarrowTableData',
-  _subselector: ' td',
-  _properties: (
-      text-align: center,
-  )
-);
-
 $CenteredText: (
     _name: 'CenteredText',
     _subselector: '',
@@ -44,6 +28,28 @@ $CenteredText: (
         font-weight: normal,
         text-align: center,
     )
+);
+
+$Calculator__Button: (
+    _name: "CalculatorButton",
+    _subselector: "",
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        background-color: enum('ValueSet:::OPTIONAL'), // Not used in secondary
+        font-size: font-scale(0),
+        font-weight: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
+$PunctuationEmphasis: (
+  _name: "PunctuationEmphasis",
+  _subselector: '',
+  _properties: (
+    font-size: font-scale(1),
+    font-weight: 700,
+    background-color: enum('ValueSet:::REQUIRED'),
+  )
 );
 
 // differs from Hidden by hiding elements visually but not from screenreaders

@@ -169,6 +169,13 @@ $bandColor: #DCB83D;
 ));
 
 @include add_settings((
+  PunctuationEmphasis: (
+    _selectors: ('span.emphasis-punctuation'),
+    'PunctuationEmphasis:::background-color': (_ref: "colorMap:::punctuationEmphasisHighlightColor"),
+  )
+));
+
+@include add_settings((
   WorksCited: (
     _selectors: ('.os-eoc.os-works-cited-container'),
   ),
@@ -196,7 +203,7 @@ $bandColor: #DCB83D;
 @include use('ScreenreaderSpan', 'common:::VisuallyHiddenShape');
 @include use('HandbookOutline', 'cosmos:::HandbookOutlineShape');
 @include use('UnitOpener', 'common:::UnitOpenerShape');
-@include use('PunctuationEmphasis', 'cosmos:::PunctuationEmphasisShape');
+@include use('PunctuationEmphasis', 'common:::PunctuationEmphasisShape');
 @include use('SectionWorksCited', 'cosmos:::SectionWorksCitedShape');
 @include use('HandbookWorksCited', 'cosmos:::ModuleWithIndentationShape');
 @include use('HandbookFurtherReading', 'cosmos:::ModuleWithIndentationShape');
