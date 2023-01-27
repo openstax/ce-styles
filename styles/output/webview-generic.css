@@ -300,6 +300,14 @@ span[data-type=media] img {
   width: 30%;
 }
 
+:not(figure) img.scaled-down {
+  width: 60%;
+}
+
+:not(figure) img.scaled-down-30 {
+  width: 30%;
+}
+
 [data-type=term] {
   font-weight: bold;
 }
@@ -895,6 +903,10 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+[data-type=example] [data-type=exercise-question] {
+  padding: 0.5em 1em;
+}
+
 [data-type=example] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1060,6 +1072,10 @@ a:hover {
 }
 
 .example .problem {
+  padding: 0.5em 1em;
+}
+
+.example [data-type=exercise-question] {
   padding: 0.5em 1em;
 }
 
@@ -1231,6 +1247,10 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+[data-type=exercise] [data-type=exercise-question] {
+  padding: 0.5em 1em;
+}
+
 [data-type=exercise] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1399,6 +1419,10 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+.exercise [data-type=exercise-question] {
+  padding: 0.5em 1em;
+}
+
 .exercise [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1555,152 +1579,408 @@ a:hover {
   margin: 0;
 }
 
+.injected-exercise div[data-type=title] {
+  font-weight: bold;
+}
+
+.injected-exercise [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+.injected-exercise .problem {
+  padding: 0.5em 1em;
+}
+
+.injected-exercise [data-type=exercise-question] {
+  padding: 0.5em 1em;
+}
+
+.injected-exercise [data-type=solution] {
+  padding: 0.5em 1em;
+  border-top-width: 0.1rem;
+  border-top-color: #dcdcdc;
+  border-top-style: solid;
+}
+
+.injected-exercise [data-type=solution] .btn-link {
+  color: #21366b;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.injected-exercise [data-type=solution] > .ui-toggle {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+}
+
+.injected-exercise [data-type=solution] > .ui-toggle::before {
+  content: "[Show/Hide Solution]";
+}
+
+.injected-exercise [data-type=solution] > summary.ui-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.injected-exercise .solution {
+  padding: 0.5em 1em;
+  border-top-width: 0.1rem;
+  border-top-color: #dcdcdc;
+  border-top-style: solid;
+}
+
+.injected-exercise .solution .btn-link {
+  color: #21366b;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.injected-exercise .solution > .ui-toggle {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+}
+
+.injected-exercise .solution > .ui-toggle::before {
+  content: "[Show/Hide Solution]";
+}
+
+.injected-exercise .solution > summary.ui-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.injected-exercise.problems-exercises [data-type=problem]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+.injected-exercise.problems-exercises .problem::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+.injected-exercise.problems-exercises [data-type=solution]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+.injected-exercise.problems-exercises .solution::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+.injected-exercise[data-type=problems-exercises] [data-type=problem]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+.injected-exercise[data-type=problems-exercises] .problem::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+.injected-exercise[data-type=problems-exercises] [data-type=solution]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+.injected-exercise[data-type=problems-exercises] .solution::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+.injected-exercise.check-understanding [data-type=title]::before {
+  margin-right: 0;
+  content: "";
+}
+
+.injected-exercise.check-understanding .title::before {
+  margin-right: 0;
+  content: "";
+}
+
+.injected-exercise.conceptual-questions [data-type=problem] {
+  border-top: none;
+}
+
+.injected-exercise.conceptual-questions [data-type=problem] p {
+  margin: 0;
+}
+
+.injected-exercise.conceptual-questions .problem {
+  border-top: none;
+}
+
+.injected-exercise.conceptual-questions .problem p {
+  margin: 0;
+}
+
+[data-type=injected-exercise] div[data-type=title] {
+  font-weight: bold;
+}
+
+[data-type=injected-exercise] [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+[data-type=injected-exercise] .problem {
+  padding: 0.5em 1em;
+}
+
+[data-type=injected-exercise] [data-type=exercise-question] {
+  padding: 0.5em 1em;
+}
+
+[data-type=injected-exercise] [data-type=solution] {
+  padding: 0.5em 1em;
+  border-top-width: 0.1rem;
+  border-top-color: #dcdcdc;
+  border-top-style: solid;
+}
+
+[data-type=injected-exercise] [data-type=solution] .btn-link {
+  color: #21366b;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+[data-type=injected-exercise] [data-type=solution] > .ui-toggle {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+}
+
+[data-type=injected-exercise] [data-type=solution] > .ui-toggle::before {
+  content: "[Show/Hide Solution]";
+}
+
+[data-type=injected-exercise] [data-type=solution] > summary.ui-toggle::-webkit-details-marker {
+  display: none;
+}
+
+[data-type=injected-exercise] .solution {
+  padding: 0.5em 1em;
+  border-top-width: 0.1rem;
+  border-top-color: #dcdcdc;
+  border-top-style: solid;
+}
+
+[data-type=injected-exercise] .solution .btn-link {
+  color: #21366b;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+[data-type=injected-exercise] .solution > .ui-toggle {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+}
+
+[data-type=injected-exercise] .solution > .ui-toggle::before {
+  content: "[Show/Hide Solution]";
+}
+
+[data-type=injected-exercise] .solution > summary.ui-toggle::-webkit-details-marker {
+  display: none;
+}
+
+[data-type=injected-exercise].problems-exercises [data-type=problem]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+[data-type=injected-exercise].problems-exercises .problem::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+[data-type=injected-exercise].problems-exercises [data-type=solution]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+[data-type=injected-exercise].problems-exercises .solution::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+[data-type=injected-exercise][data-type=problems-exercises] [data-type=problem]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+[data-type=injected-exercise][data-type=problems-exercises] .problem::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Problem";
+}
+
+[data-type=injected-exercise][data-type=problems-exercises] [data-type=solution]::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+[data-type=injected-exercise][data-type=problems-exercises] .solution::before {
+  color: #424242;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  content: "Solution";
+}
+
+[data-type=injected-exercise].check-understanding [data-type=title]::before {
+  margin-right: 0;
+  content: "";
+}
+
+[data-type=injected-exercise].check-understanding .title::before {
+  margin-right: 0;
+  content: "";
+}
+
+[data-type=injected-exercise].conceptual-questions [data-type=problem] {
+  border-top: none;
+}
+
+[data-type=injected-exercise].conceptual-questions [data-type=problem] p {
+  margin: 0;
+}
+
+[data-type=injected-exercise].conceptual-questions .problem {
+  border-top: none;
+}
+
+[data-type=injected-exercise].conceptual-questions .problem p {
+  margin: 0;
+}
+
 .appendix [data-type=exercise] .os-problem-container p {
   margin-top: 0;
 }
 
-.os-eoc .os-problem-container {
+.os-number ~ .os-problem-container {
   display: inline;
 }
 
-.os-eoc .os-problem-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
+.os-number ~ .os-problem-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
   display: inline;
 }
 
-.os-eoc .os-problem-container > ol {
-  display: inline;
+.os-number ~ .os-problem-container > ol {
+  margin-top: 0;
 }
 
-.os-eoc .os-problem-container > ul {
-  display: inline;
+.os-number ~ .os-problem-container > ul {
+  margin-top: 0;
 }
 
-.os-eoc .os-problem-container > [data-type=note] {
-  display: inline;
+.os-number ~ .os-problem-container > [data-type=note] {
+  margin-top: 0;
 }
 
-.os-eoc .os-problem-container .os-figure {
+.os-number ~ .os-problem-container .os-figure {
   margin: 3rem 0;
 }
 
-.os-eoc .os-solution-container {
+.os-number ~ .os-problem-container img {
+  display: block;
+}
+
+.os-number ~ .os-solution-container {
   display: inline;
 }
 
-.os-eoc .os-solution-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
+.os-number ~ .os-solution-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
   display: inline;
 }
 
-.os-eoc .os-solution-container > ol {
-  display: inline;
+.os-number ~ .os-solution-container > ol {
+  margin-top: 0;
 }
 
-.os-eoc .os-solution-container > ul {
-  display: inline;
+.os-number ~ .os-solution-container > ul {
+  margin-top: 0;
 }
 
-.os-eoc .os-solution-container > [data-type=note] {
-  display: inline;
+.os-number ~ .os-solution-container > [data-type=note] {
+  margin-top: 0;
 }
 
-.os-eoc .os-solution-container .os-figure {
+.os-number ~ .os-solution-container .os-figure {
   margin: 3rem 0;
 }
 
-.os-eob .os-problem-container {
-  display: inline;
-}
-
-.os-eob .os-problem-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
-  display: inline;
-}
-
-.os-eob .os-problem-container > ol {
-  display: inline;
-}
-
-.os-eob .os-problem-container > ul {
-  display: inline;
-}
-
-.os-eob .os-problem-container > [data-type=note] {
-  display: inline;
-}
-
-.os-eob .os-problem-container .os-figure {
-  margin: 3rem 0;
-}
-
-.os-eob .os-solution-container {
-  display: inline;
-}
-
-.os-eob .os-solution-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
-  display: inline;
-}
-
-.os-eob .os-solution-container > ol {
-  display: inline;
-}
-
-.os-eob .os-solution-container > ul {
-  display: inline;
-}
-
-.os-eob .os-solution-container > [data-type=note] {
-  display: inline;
-}
-
-.os-eob .os-solution-container .os-figure {
-  margin: 3rem 0;
-}
-
-.section-exercises .os-problem-container {
-  display: inline;
-}
-
-.section-exercises .os-problem-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
-  display: inline;
-}
-
-.section-exercises .os-problem-container > ol {
-  display: inline;
-}
-
-.section-exercises .os-problem-container > ul {
-  display: inline;
-}
-
-.section-exercises .os-problem-container > [data-type=note] {
-  display: inline;
-}
-
-.section-exercises .os-problem-container .os-figure {
-  margin: 3rem 0;
-}
-
-.section-exercises .os-solution-container {
-  display: inline;
-}
-
-.section-exercises .os-solution-container > :first-child:not(ul):not(ol):not([data-type=note]):not(.os-figure) {
-  display: inline;
-}
-
-.section-exercises .os-solution-container > ol {
-  display: inline;
-}
-
-.section-exercises .os-solution-container > ul {
-  display: inline;
-}
-
-.section-exercises .os-solution-container > [data-type=note] {
-  display: inline;
-}
-
-.section-exercises .os-solution-container .os-figure {
-  margin: 3rem 0;
+.os-number ~ .os-solution-container img {
+  display: block;
 }
 
 .os-table {

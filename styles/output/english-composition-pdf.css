@@ -1030,21 +1030,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   display: none;
 }
 
-p.citation:not(.student-sample):not(.public-domain) {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-p.citation.student-sample {
-  text-indent: -8px;
-  padding-left: 16px;
-}
-
-p.citation.public-domain {
-  text-indent: -8px;
-  padding-left: 16px;
-}
-
 u[data-effect=underline] {
   text-decoration: none;
   background-color: #FFF7E5;
@@ -1076,37 +1061,6 @@ u[data-effect=double-underline] {
 
 [data-type=page] section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-}
-
-p.annotation-text {
-  font-family: IBM Plex Sans, sans-serif, StixGeneral;
-  font-style: italic;
-  font-size: 1rem;
-  color: #156851;
-}
-
-p.public-domain {
-  display: inline-block;
-  margin-left: 16px;
-  padding-left: 8px;
-  font-family: IBM Plex Sans, sans-serif, StixGeneral;
-  font-size: 1rem;
-  color: #000000;
-  border-left-style: solid;
-  border-width: 0.1rem;
-  border-color: #1E9575;
-}
-
-p.student-sample {
-  display: inline-block;
-  margin-left: 16px;
-  padding-left: 8px;
-  font-family: IBM Plex Sans, sans-serif, StixGeneral;
-  font-size: 1rem;
-  color: #000000;
-  border-left-style: solid;
-  border-width: 0.1rem;
-  border-color: #0074BC;
 }
 
 aside[role=doc-footnote] {
@@ -1467,6 +1421,79 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+p.annotation-text {
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-style: italic;
+  font-size: 1rem;
+  color: #156851;
+}
+
+p.public-domain {
+  display: inline-block;
+  margin-left: 16px;
+  padding-left: 8px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #1E9575;
+}
+
+p.student-sample {
+  display: inline-block;
+  margin-left: 16px;
+  padding-left: 8px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #0074BC;
+}
+
+p.citation:not(.student-sample):not(.public-domain) {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+p.citation.public-domain {
+  display: inline-block;
+  margin-left: 16px;
+  text-indent: -8px;
+  padding-left: 16px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #1E9575;
+}
+
+p.citation.student-sample {
+  display: inline-block;
+  margin-left: 16px;
+  text-indent: -8px;
+  padding-left: 16px;
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  color: #000000;
+  border-left-style: solid;
+  border-width: 0.1rem;
+  border-color: #0074BC;
+}
+
+p.annotation {
+  display: flex;
+  margin-left: -32px;
+}
+
+p.annotation > .os-icons {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
 span.culture-icon {
   height: 2.1rem;
   width: 2.1rem;
@@ -1535,17 +1562,6 @@ span.kinesthetic-icon {
   background-repeat: no-repeat;
   margin-right: 8px;
   margin-bottom: 8px;
-}
-
-p.annotation {
-  display: flex;
-  margin-left: -32px;
-}
-
-p.annotation > .os-icons {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
 }
 
 [data-type=page].narrative-trailblazer {

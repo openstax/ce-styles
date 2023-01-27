@@ -249,7 +249,7 @@ $bandColor: #093D4C;
 
 // Common
 @include use('BookRoot', "common:::BookRoot");
-@include use('LearningObjectivesSection', 'corn:::LearningObjectivesShape');
+@include use('LearningObjectivesSection', 'corn:::LearningObjectivesWithCustomBulletIconShape');
 @include use('Toc', 'corn:::NoUnitToc');
 @include use('Example', 'corn:::ExampleShape');
 
@@ -258,6 +258,9 @@ $bandColor: #093D4C;
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
+
+// Equations
+@include use('Equation', 'corn:::EquationShape');
 
 //Figures
 @include use('Figure','corn:::FigureShape');

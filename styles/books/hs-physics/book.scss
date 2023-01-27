@@ -39,7 +39,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesNote: (
     _selectors: ('[data-type="note"].learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: "colorMap:::physicsHeaderColor"),
-    'ListDot:::color': (_ref: "colorMap:::physicsHeaderColor"),
+    'ObjectivesListDot:::color': (_ref: "colorMap:::physicsHeaderColor"),
   ),
 ));
 
@@ -234,7 +234,7 @@ $ChapterIntroType: fullWidth;
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
 @include use('TeacherMaterial', 'common:::Hidden');
-@include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteShape');
+@include use('LearningObjectivesNote', 'carnival:::ObjectivesNoteColoredDotShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 

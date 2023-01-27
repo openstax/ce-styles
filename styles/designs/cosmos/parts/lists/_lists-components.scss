@@ -68,3 +68,48 @@ $UnorderedList__Item--AppendixGlossary: (
     break-inside: avoid,
   )
 );
+
+// Objectives
+
+$ListItem--Objectives: (
+  _name: "ObjectivesListItem",
+  _subselector: ' > li',
+  _properties: (
+    max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives__Dot: (
+  _name: 'ObjectivesListDot',
+  _subselector: '::marker',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: ' > ul.os-abstract',
+    _properties: (
+      list-style-type: none,
+  )
+);
+
+$ListItem--Objectives--Flex: (
+  _name: "ObjectivesFlexListItem",
+  _subselector: ' > li',
+  _properties: (
+    display: flex,
+    max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' span.os-abstract-token',
+  _properties: (
+    font-weight: 700,
+    color: enum('ValueSet:::REQUIRED'),
+    padding-right: h-spacing(1),
+  )
+);

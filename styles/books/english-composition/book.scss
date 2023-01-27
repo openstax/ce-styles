@@ -12,33 +12,36 @@ $bandColor: #DCB83D;
 @import '../../designs/cosmos/pdf/folio';
 
 @include add_settings((
-  CultureAnnotation:(
+  ParaAnnotationWithIcon: (
+    _selectors: ('p.annotation'),
+  ),
+  CultureAnnotationIcon:(
     _selectors: ("span.culture-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg")) no-repeat top left
   ),
-  LinguisticAnnotation: (
+  LinguisticAnnotationIcon: (
     _selectors: ("span.linguistic-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg")) no-repeat top left
   ),
-  DreamingAnnotation: (
+  DreamingAnnotationIcon: (
     _selectors: ("span.dreaming-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")) no-repeat top left
   ),
-  VisualAnnotation: (
+  VisualAnnotationIcon: (
     _selectors: ("span.visual-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg")) no-repeat top left
   ),
-  SpeechAnnotation: (
+  SpeechAnnotationIcon: (
     _selectors: ("span.speech-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg")) no-repeat top left
   ),
-  AuditoryAnnotation: (
+  AuditoryAnnotationIcon: (
     _selectors: ("span.auditory-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg")) no-repeat top left
   ),
-  KinestheticAnnotation: (
+  KinestheticAnnotationIcon: (
     _selectors: ("span.kinesthetic-icon"),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg")) no-repeat top left
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg")) no-repeat top left
   ),
 ));
 
@@ -113,22 +116,37 @@ $bandColor: #DCB83D;
 ));
 
 @include add_settings((
-  AnnotationText: (
-    _selectors:("p"),
-    'AnnotationText:::font-family': (_ref: 'typography:::titleOption2Font'),
-    'AnnotationText:::color': (_ref: "colorMap:::AnnotationTextColor"),
+  ParaAnnotationItalic: (
+    _selectors:("p.annotation-text"),
+    'ItalicAnnotationPara:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ItalicAnnotationPara:::color': (_ref: "colorMap:::AnnotationTextColor"),
   ),
-  PublicDomainText: (
+  ParaCitation: (
+    _selectors: ('p.citation:not(.student-sample):not(.public-domain)'),
+  ),
+  ParaCitationPublicDomain: (
+    _selectors:("p.citation.public-domain"),
+    'ParaCitationWithLeftBorder:::border-color': (_ref: 'colorMap:::publicDomainBorderColor'),
+    'ParaCitationWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaCitationWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+  ),
+  ParaCitationStudentSample: (
+    _selectors:("p.citation.student-sample"),
+    'ParaCitationWithLeftBorder:::border-color': (_ref: 'colorMap:::studentSampleBorderColor'),
+    'ParaCitationWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaCitationWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+  ),
+  ParaPublicDomain: (
     _selectors:("p.public-domain"),
-    'AnnotationTextWithLeftBorder:::border-color': (_ref: 'colorMap:::publicDomainBorderColor'),
-    'AnnotationTextWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
-    'AnnotationTextWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ParaWithLeftBorder:::border-color': (_ref: 'colorMap:::publicDomainBorderColor'),
+    'ParaWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
   ),
-  StudentSampleText: (
+  ParaStudentSample: (
     _selectors:("p.student-sample"),
-    'AnnotationTextWithLeftBorder:::border-color': (_ref: 'colorMap:::studentSampleBorderColor'),
-    'AnnotationTextWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
-    'AnnotationTextWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ParaWithLeftBorder:::border-color': (_ref: 'colorMap:::studentSampleBorderColor'),
+    'ParaWithLeftBorder:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'ParaWithLeftBorder:::color': (_ref: "colorMap:::fontBodyColor"),
   )
 ));
 
@@ -147,6 +165,13 @@ $bandColor: #DCB83D;
     'PhotoQuoteContainer:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption4Color'),
     'PQBlockquoteFirstPara:::font-family': (_ref: 'typography:::titleOption1Font'),
     'PQBlockquoteSecondPara:::font-family': (_ref: 'typography:::titleOption2Font'),
+  )
+));
+
+@include add_settings((
+  PunctuationEmphasis: (
+    _selectors: ('span.emphasis-punctuation'),
+    'PunctuationEmphasis:::background-color': (_ref: "colorMap:::punctuationEmphasisHighlightColor"),
   )
 ));
 
@@ -170,20 +195,15 @@ $bandColor: #DCB83D;
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cosmos:::TocUnitShape');
-@include use('CitationPara', 'cosmos:::CitationParaShape');
-@include use('CitationParaForSideLine', 'cosmos:::CitationParaForSideLineShape');
 @include use('UnderlineYellow', 'cosmos:::UnderlineShape');
 @include use('DoubleUnderlineYellow', 'cosmos:::DoubleUnderlineShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
-@include use('AnnotationText', 'common:::AnnotationTextShape');
-@include use('PublicDomainText', 'common:::AnnotationTextLeftBorderShape');
-@include use('StudentSampleText', 'common:::AnnotationTextLeftBorderShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('ScreenreaderSpan', 'common:::VisuallyHiddenShape');
 @include use('HandbookOutline', 'cosmos:::HandbookOutlineShape');
 @include use('UnitOpener', 'common:::UnitOpenerShape');
-@include use('PunctuationEmphasis', 'cosmos:::PunctuationEmphasisShape');
+@include use('PunctuationEmphasis', 'common:::PunctuationEmphasisShape');
 @include use('SectionWorksCited', 'cosmos:::SectionWorksCitedShape');
 @include use('HandbookWorksCited', 'cosmos:::ModuleWithIndentationShape');
 @include use('HandbookFurtherReading', 'cosmos:::ModuleWithIndentationShape');
@@ -202,15 +222,25 @@ $bandColor: #DCB83D;
 @include use('FigureFromExercisesProblem','cosmos:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cosmos:::FigureFromExercisesShape');
 
+// Custom paras
+@include use('ParaAnnotationItalic', 'cosmos:::ParaAnnotationItalicShape');
+@include use('ParaPublicDomain', 'cosmos:::ParaWithLeftBorderShape');
+@include use('ParaStudentSample', 'cosmos:::ParaWithLeftBorderShape');
+
+@include use('ParaCitation', 'cosmos:::ParaCitationShape');
+@include use('ParaCitationPublicDomain', 'cosmos:::ParaCitationWithLeftBorderShape');
+@include use('ParaCitationStudentSample', 'cosmos:::ParaCitationWithLeftBorderShape');
+
+@include use('ParaAnnotationWithIcon', 'cosmos:::ParaAnnotationWithIconShape');
+@include use('CultureAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('LinguisticAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('DreamingAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('VisualAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('SpeechAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('AuditoryAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+@include use('KinestheticAnnotationIcon', 'cosmos:::ParaAnnotationIconShape');
+
 //Notes & Annotations
-@include use('CultureAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('LinguisticAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('DreamingAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('VisualAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('SpeechAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('AuditoryAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('KinestheticAnnotation', 'cosmos:::AnnotationIconShape');
-@include use('Annotation', 'cosmos:::AnnotationShape');
 @include use('Trailblazer', 'cosmos:::IconFullPageNoteShape');
 @include use('QuickLaunch', 'cosmos:::SectionIconnedShape');
 @include use('Drafting', 'cosmos:::SectionIconnedShape');

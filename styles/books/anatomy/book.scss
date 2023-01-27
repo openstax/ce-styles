@@ -31,7 +31,7 @@ $ChapterIntroType: fullWidth;
   ChapterObjectivesNote: (
     _selectors: ('[data-type="note"].chapter-objectives'),
     'H3ObjectivesTitle:::color': (_ref: "colorMap:::anatomyIntroColor"),
-    'ListDot:::color': (_ref: "colorMap:::anatomyIntroColor"),
+    'ObjectivesListDot:::color': (_ref: "colorMap:::anatomyIntroColor"),
   ),
 ));
 
@@ -39,7 +39,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesAbstract: (
     _selectors: ('[data-type="page"] > [data-type="abstract"]'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::anatomyHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::anatomyHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::anatomyHeaderColor'),
     ),
 ));
 
@@ -183,13 +183,13 @@ $ChapterIntroType: fullWidth;
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
-@include use('ChapterObjectivesNote', 'carnival:::ObjectivesNoteShape');
+@include use('ChapterObjectivesNote', 'carnival:::ObjectivesNoteColoredDotShape');
 
 //Figures
 @include use('Figure','carnival:::FigureShape');

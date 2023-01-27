@@ -75,8 +75,10 @@ $OrderedList--KeyTerms: (
 
 $UnorderedList--Labeled: empty_wrapper(LabeledList, ' > ul[data-labeled-item="true"]');
 
-$UnorderedList--Objectives: (
-    _name: "ObjectivesUnorderedList",
+// Objectives
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
     _subselector: " > ul",
     _properties:(
         margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
@@ -84,8 +86,8 @@ $UnorderedList--Objectives: (
     )
 );
 
-$UnorderedList--Objectives__Item: (
-  _name: 'ObjectivesUnorderedListItem',
+$ListItem--Objectives--WithCustomBulletIcon: (
+  _name: 'ObjectivesListItemWithCustomBulletIcon',
   _subselector: ' > li',
   _properties: (
     background: enum('ValueSet:::REQUIRED'),
@@ -93,6 +95,25 @@ $UnorderedList--Objectives__Item: (
     padding-left: h-spacing(2),
     display: block,
     max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties: (
+      display: flex,
+      max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+    margin-right: h-spacing(1),
   )
 );
 

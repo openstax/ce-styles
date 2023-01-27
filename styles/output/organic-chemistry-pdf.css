@@ -930,6 +930,14 @@ div[data-type=composite-page].os-eob {
   color: #C31427;
 }
 
+.yellow-text {
+  color: #8F7200;
+}
+
+.purple-text {
+  color: #8d4c83;
+}
+
 nav#toc > .os-toc-title {
   font-size: 2.985984rem;
   line-height: 2.985984rem;
@@ -2822,6 +2830,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+[data-type=equation].unnumbered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
 }
 
 .os-index-container {

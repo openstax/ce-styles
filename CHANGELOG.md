@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.120.0] - 2023-01-27
+
+* Added `img.scaled-down` styling to `FigureImage` shapes & components in `webview`
+* Add Yellow and Purple text to `organic-chemistry`
+* Fix folio in `corn`
+* Style `equations` in `contemporary-math`
+* Clean up `common` files
+* Fix newline after question number for inline exercise
+* Create files for `customPara`
+* Style `equations` in `organic-chemistry`
+* Standardize `objectives` and `outline` shapes
+* Move lists from `objectiveoutline-components` to lists file
+
 ## [v1.119.0] - 2023-01-13
 
 * Style `dedication-page` from `organic-chemistry`

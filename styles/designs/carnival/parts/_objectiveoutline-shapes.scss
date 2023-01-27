@@ -2,7 +2,7 @@
 @import 'titles-components';
 @import 'lists/lists-components';
 
-@include create_shape('carnival:::LearningObjectivesShape', (
+@include create_shape('carnival:::LearningObjectivesColoredDotShape', (
   _components: (
     map-merge($Objectives__Container, (
       _components: (
@@ -10,9 +10,9 @@
         $Objectives__Paragraph,
         map-merge($UnorderedList--FirstLevel, (
           _components: (
-            map-merge($Objectives__List__Item, (
+            map-merge($ListItem--Objectives, (
               _components: (
-                $Objectives__List__Dot,
+                $ListItem--Objectives__Dot,
               ),
             ))
           ),
@@ -22,7 +22,7 @@
   ),
 ));
 
-@include create_shape('carnival:::ObjectivesNoteShape', ( // used for Learning Objectives in hs-physics and for Chapter Objectives in Chapter Intro in anatomy
+@include create_shape('carnival:::ObjectivesNoteColoredDotShape', ( // used for Learning Objectives in hs-physics and for Chapter Objectives in Chapter Intro in anatomy
   _components: (
     map-merge($Objectives__Container, (
       _components: (
@@ -32,9 +32,9 @@
             $Objectives__Paragraph,
             map-merge($UnorderedList--FirstLevel, (
               _components: (
-                map-merge($Objectives__List__Item, (
+                map-merge($ListItem--Objectives, (
                   _components: (
-                    $Objectives__List__Dot,
+                    $ListItem--Objectives__Dot,
                   ),
                 ))
               ),
