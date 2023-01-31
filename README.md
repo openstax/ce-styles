@@ -36,6 +36,14 @@ Outside the container, just prepend with ./script/run:
 
 `./script/run ./script/build-styles` or `./script/run dart styles/build/build.dart ...`
 
+# Troubleshooting Docker builds
+
+There is a known issue with installing dart dependencies. The connection sometimes times out on `dart pub get` (called within the Dockerfile). Look out for an error message reading `Connection closed before full header was received`. Since this is a network error/problem with how Dart manages its packages, this is outside the scope of anything we can fix. It's also not very reproducible, and seems to be pretty dependent on location/time of day/network traffic.
+
+Workarounds:
+- Retry building the image & eventually it should build
+- Use a VPN or work from a different location (aka different IP address)
+- Comment out the line `RUN dart pub get` in the Dockerfile, build the image, and run `dart pub get` within the container to get the dependencies manually
 
 # Important Links
  - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
