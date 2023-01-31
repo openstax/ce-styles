@@ -286,9 +286,14 @@
 
 @include add_settings((
   WorksCited: (
-      _selectors: ("section.works-cited, section.section-workscited"),
+      _selectors: ("section.works-cited"),
+  ),
+  SectionWorksCited: (
+      _selectors: ("section.section-workscited"),
   )
 ));
+
+
 
 
 @include add_settings((
