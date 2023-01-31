@@ -286,9 +286,10 @@
 
 @include add_settings((
   WorksCited: (
-      _selectors: ("section.works-cited"),
+      _selectors: ("section.works-cited, section.workscited"),
   )
 ));
+
 
 @include add_settings((
     RedColoredText: (
