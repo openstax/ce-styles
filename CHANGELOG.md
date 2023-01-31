@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+* Added works cited and further reading styles to `webview`
 
 ## [v1.120.0] - 2023-01-27
 
@@ -13,7 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fix folio in `corn`
 * Style `equations` in `contemporary-math`
 * Clean up `common` files
-* Added `img.scaled-down` styling to `FigureImage` shapes & components in `webview`
 * Fix newline after question number for inline exercise
 * Create files for `customPara`
 * Style `equations` in `organic-chemistry`
