@@ -19,8 +19,17 @@
 
 #############################################################################################################
 
-FROM dart:stable AS build
+FROM dart:2.19.0 AS build
 WORKDIR /code
+
+# Install dependencies
+COPY \
+    package.json \
+    yarn.lock \
+    pubspec.* \
+    ./
+
+RUN dart pub get
 
 RUN apt-get update
 RUN apt-get install \
@@ -39,12 +48,12 @@ RUN apt-get install -y curl && \
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
 ENV NODE_VERSION=14.16.1
-RUN . "$NVM_DIR/nvm.sh" && nvm install $NODE_VERSION
-RUN . "$NVM_DIR/nvm.sh" && nvm use v$NODE_VERSION
-RUN . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION
+RUN . "$NVM_DIR/nvm.sh" && nvm install $NODE_VERSION && \
+    . "$NVM_DIR/nvm.sh" && nvm use v$NODE_VERSION && \
+    . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION
 ENV PATH="/root/.nvm/versions/node/v$NODE_VERSION/bin/:${PATH}"
 
-# Install yarn 
+# Install yarn
 #
 # When you run npm as root (this is the default user in Docker build) and
 # install a global package, for security reasons, npm installs and executes
@@ -53,15 +62,6 @@ ENV PATH="/root/.nvm/versions/node/v$NODE_VERSION/bin/:${PATH}"
 #
 # Get around this by adding the --unsafe-perm flag
 RUN npm install --global --unsafe-perm yarn
-
-# Install dependencies
-COPY \
-    package.json \
-    yarn.lock \
-    pubspec.* \
-    ./
-
-RUN dart pub get
 
 # Post-install builds the styles/output/_web-styles.json
 # which is not needed for being in a docker container.
