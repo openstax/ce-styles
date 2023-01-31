@@ -290,6 +290,9 @@
   ),
   SectionWorksCited: (
       _selectors: ("section.section-workscited"),
+  ),
+  FurtherReading: (
+      _selectors: ("section.further-reading"),
   )
 ));
 
@@ -368,4 +371,5 @@
 @include use('Index', 'webview:::IndexShape');
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');
 @include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentationShape');
 
