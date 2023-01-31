@@ -300,6 +300,14 @@ span[data-type=media] img {
   width: 30%;
 }
 
+:not(figure) img.scaled-down {
+  width: 60%;
+}
+
+:not(figure) img.scaled-down-30 {
+  width: 30%;
+}
+
 [data-type=term] {
   font-weight: bold;
 }
@@ -2413,9 +2421,4 @@ p.student-sample {
 .os-index-container > .group-by > .os-index-item > .os-term {
   padding-right: 0.5rem;
   font-weight: bold;
-}
-
-section.works-cited p {
-  text-indent: -1.25rem;
-  padding-left: 1.25rem;
 }
