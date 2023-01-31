@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Update dockerfile
+
 ## [v1.120.0] - 2023-01-27
 
 * Added `img.scaled-down` styling to `FigureImage` shapes & components in `webview`
