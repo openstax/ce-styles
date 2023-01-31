@@ -1,0 +1,12 @@
+@import 'module-components';
+
+@include create_shape('webview:::ModuleWithIndentationShape',(
+    _components:(
+        map-merge($Module__Container,(
+            _components:(
+                $Title--Centered,
+                $ModuleWithIndentation__Para
+            ),
+        )),
+    )
+));
