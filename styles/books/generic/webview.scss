@@ -285,6 +285,21 @@
 ));
 
 @include add_settings((
+  WorksCited: (
+      _selectors: ("section.works-cited"),
+  ),
+  SectionWorksCited: (
+      _selectors: ("section.section-workscited"),
+  ),
+  FurtherReading: (
+      _selectors: ("section.further-reading"),
+  )
+));
+
+
+
+
+@include add_settings((
     RedColoredText: (
         _selectors: ('*:not(.os-term) > .red-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::RedTextColor'),
@@ -354,3 +369,7 @@
 @include use('NonScreenElements', 'common:::Hidden');
 // EOC
 @include use('Index', 'webview:::IndexShape');
+@include use('WorksCited', 'webview:::ModuleWithIndentationShape');
+@include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentationShape');
+
