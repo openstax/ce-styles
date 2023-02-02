@@ -57,6 +57,64 @@
 ));
 
 @include add_settings((
+    BasicTableWithCaptionOnTop: (
+        _selectors: (".os-table:not(.os-unstyled-container)"),
+        TableContainer: (
+            display: table,
+            margin-left: auto,
+            margin-right: auto,
+        ),
+        Table: (
+            border-collapse: collapse,
+            margin-bottom: 0,
+            width: 100%,
+        ),
+        TableData: (
+            font-family: (_ref: "typography:::baseFont"),
+            border-left: 0.025rem solid black,
+            padding-right: table-h-spacing(1),
+            padding-left: table-h-spacing(1),
+        ),
+        // Added as part of the fix for cnx-recipes#1827.
+        // Will need to be refactored to make a clean split between
+        // tables and borders as part of a clean-up sprint.
+        TableBottomBorderData: (
+            border-bottom: 0.025rem solid black,
+        ),
+        // Altered as part of the fix for cnx-recipes#1827.
+        // Will need to be refactored to make a clean split between
+        // tables and borders as part of a clean-up sprint.
+        //border-right: 0.025rem solid black,
+        FirstTableData: (
+            border-right: 0.025rem solid black,
+        ),
+        TableHeadCell: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            font-weight: 700,
+            border-bottom: 0.1rem solid black,
+            border-top: 0.1rem solid black,
+        ),
+        TableBottomBorderAfterTable: (
+            // border-bottom-color: book specific
+        ),
+        CaptionTitleLabel:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:'colorMap:::figureNumberColor'),
+        ),
+        CaptionNumber:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:'colorMap:::figureNumberColor'),
+        ),
+        CaptionTitle: (
+            font-family: (_ref:'typography:::titleOption1Font'),
+        ),
+        CaptionText:(
+            font-family:(_ref:'typography:::sansFont'),
+        ),
+    )
+));
+
+@include add_settings((
     ColumnHeaderTable: (
         _selectors: (".os-table.os-column-header-container"),
         TableContainer: (
