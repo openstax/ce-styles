@@ -86,6 +86,12 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
     'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
+  ChemistryMattersTitles:(
+        _selectors: (".os-chemistry-matters-container"),
+        group-border-color: (_ref: 'colorMap:::chemistryMattersColor'),
+        'H2TitleWithIconText:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'H2TitleWithIconIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections2.svg")) no-repeat top left,
+    ),
 ));
 
 @include add_settings((
@@ -173,13 +179,6 @@ $ChapterIntroType: fullWidth;
       'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
       'Title:::color': (_ref: 'colorMap:::organicChemNoClassNoteColor'),
     ),
-    ChemistryMatters:(
-        _selectors: (".chemistry-matters"),
-        group-border-color: (_ref: 'colorMap:::chemistryMattersColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Title:::color': (_ref: 'colorMap:::chemistryMattersColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections2.svg")) no-repeat top left,
-    ),
 ));
 
 // Tables
@@ -243,6 +242,7 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('ChemistryMattersTitles', 'carnival:::EocCompositePageTitlesWithIconShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 
@@ -254,7 +254,6 @@ $ChapterIntroType: fullWidth;
 // Notes
 @include use('DedicationPage', 'carnival:::LinesNoteShape');
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('ChemistryMatters', 'carnival:::IconIncreasedNoteShape');
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
