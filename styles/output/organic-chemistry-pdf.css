@@ -638,8 +638,7 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-}
-/* stylelint-disable-next-line meowtec/no-px */
+} /* stylelint-disable-next-line meowtec/no-px */
 /* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
@@ -2594,6 +2593,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: table-cell;
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
 }
 
 [data-type=injected-exercise].exercise-block [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
@@ -2625,6 +2625,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: table-cell;
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
 }
 
 [data-type=injected-exercise]:not(.exercise-block) [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
@@ -2901,6 +2902,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: table-cell;
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-divider {
