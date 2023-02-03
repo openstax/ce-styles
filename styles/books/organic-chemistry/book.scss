@@ -120,6 +120,18 @@ $ChapterIntroType: fullWidth;
         _selectors: (".os-additional-problems-container"),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     ),
+    MechanismProblems:(
+        _selectors: (".os-mechanism-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    GeneralProblems:(
+        _selectors: (".os-general-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    EnergyReaction:(
+        _selectors: (".os-energy-reaction-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
 ));
 
 // Eoc
@@ -283,6 +295,9 @@ $ChapterIntroType: fullWidth;
 @include use('InlineMultipartQuestionExercises','carnival:::ExercisesMultipartQuestionShape');
 @include use('VisualizingChemistry','carnival:::ExercisesModuleShape');
 @include use('AdditionalProblems','carnival:::ExercisesModuleShape');
+@include use('MechanismProblems','carnival:::ExercisesModuleShape');
+@include use('GeneralProblems','carnival:::ExercisesModuleShape');
+@include use('EnergyReaction','carnival:::ExercisesModuleShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');
