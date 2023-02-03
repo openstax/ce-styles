@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change superscipt and subscript size to 83%
+* Create `BasicTableWithCaptionOnTop` shape
+* Style new exercises in `organic-chemistry`
+* Create `EocCompositePageTitlesWithIcon` shape
 * Add bold to `problem-letter`
 * Added works cited and further reading styles to `webview`
-
 * Update dockerfile
 
 ## [v1.120.0] - 2023-01-27
