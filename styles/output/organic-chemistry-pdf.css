@@ -2352,6 +2352,34 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: auto;
 }
 
+.os-table:not(.os-unstyled-container) .os-caption-container {
+  display: table-caption;
+  prince-caption-page: all;
+  font-size: 0.8333333333rem;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #0078a3;
+  text-transform: uppercase;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #0078a3;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
 .os-table:not(.os-unstyled-container) > table {
   border-collapse: collapse;
   width: 100%;
@@ -2421,44 +2449,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right: none;
 }
 
-.os-table:not(.os-unstyled-container) .os-caption-container {
-  display: table-caption;
-  caption-side: bottom;
-  prince-caption-page: all;
-  font-size: 0.8333333333rem;
-}
-
-.os-table:not(.os-unstyled-container) .os-caption-container:before {
+.os-table:not(.os-unstyled-container):after {
   content: '';
   width: 100%;
-  border-bottom-color: #0078a3;
-  border-bottom-width: 0.12rem;
-  border-bottom-style: solid;
+  border-top-color: #0078a3;
+  border-top-width: 0.12rem;
+  border-top-style: solid;
   display: block;
   position: relative;
   top: -0.1rem;
-}
-
-.os-table:not(.os-unstyled-container) .os-caption-container > .os-title-label {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #0078a3;
-  text-transform: uppercase;
-}
-
-.os-table:not(.os-unstyled-container) .os-caption-container > .os-number {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #0078a3;
-}
-
-.os-table:not(.os-unstyled-container) .os-caption-container > .os-title {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-}
-
-.os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
-  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table {

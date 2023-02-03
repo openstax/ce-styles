@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create `BasicTableWithCaptionOnTop` shape
 * Style new exercises in `organic-chemistry`
 * Create `EocCompositePageTitlesWithIcon` shape
 * Add bold to `problem-letter`

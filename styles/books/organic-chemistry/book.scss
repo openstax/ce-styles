@@ -195,9 +195,9 @@ $ChapterIntroType: fullWidth;
 
 // Tables
 @include add_settings((
-  BasicTable: (
+  BasicTableWithCaptionOnTop: (
     _selectors: ('.os-table:not(.os-unstyled-container)'),
-    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::organicChemistryTableColor'),
     'CaptionTitleLabel:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
     'CaptionNumber:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
   ),
@@ -285,7 +285,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureDedication','carnival:::FigureDedicationShape');
 
 // Tables
-@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
