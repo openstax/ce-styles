@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove empty space from splash image `corn`
 * Change superscipt and subscript size to 83%
 * Create `BasicTableWithCaptionOnTop` shape
 * Style new exercises in `organic-chemistry`
