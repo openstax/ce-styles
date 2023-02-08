@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Hide screenreader spans in more books
 * Change superscipt and subscript size to 83%
 * Create `BasicTableWithCaptionOnTop` shape
 * Style new exercises in `organic-chemistry`
