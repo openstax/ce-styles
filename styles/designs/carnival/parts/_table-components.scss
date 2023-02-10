@@ -238,6 +238,21 @@ $Table__BottomBorder: (
     )
 );
 
+$Table__BottomBorder--AfterTable: (
+    _name: "TableBottomBorderAfterTable",
+    _subselector: ":after",
+    _properties: (
+        content: "''",
+        width: 100%,
+        border-top-color: enum('ValueSet:::REQUIRED'),
+        border-top-width: .12rem,
+        border-top-style: solid,
+        display: block,
+        position: relative,
+        top: -0.1rem,
+    )
+);
+
 // Table data container used in table list shape
 $Table__Data--Wrapper: empty_wrapper(TableData, ' > td');
 $Table--Wrapper: empty_wrapper(Table, ' > table');

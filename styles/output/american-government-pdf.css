@@ -204,7 +204,7 @@ math {
 }
 
 sub, sup {
-  font-size: 75%;
+  font-size: 83%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -637,8 +637,7 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-}
-/* stylelint-disable-next-line meowtec/no-px */
+} /* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
 }
@@ -1149,6 +1148,19 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
 
 [data-type=unit] > h1 {
   display: none;
+}
+
+span[data-media~=screenreader] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  opacity: 0;
 }
 
 [data-type=page] section.learning-objectives > h3[data-type=title] {

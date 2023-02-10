@@ -86,6 +86,12 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
     'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
   ),
+  ChemistryMattersTitles:(
+        _selectors: (".os-chemistry-matters-container"),
+        group-border-color: (_ref: 'colorMap:::chemistryMattersColor'),
+        'H2TitleWithIconText:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'H2TitleWithIconIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections2.svg")) no-repeat top left,
+    ),
 ));
 
 @include add_settings((
@@ -112,6 +118,18 @@ $ChapterIntroType: fullWidth;
     ),
     AdditionalProblems:(
         _selectors: (".os-additional-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    MechanismProblems:(
+        _selectors: (".os-mechanism-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    GeneralProblems:(
+        _selectors: (".os-general-problems-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    EnergyReaction:(
+        _selectors: (".os-energy-reaction-container"),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     ),
 ));
@@ -173,20 +191,13 @@ $ChapterIntroType: fullWidth;
       'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
       'Title:::color': (_ref: 'colorMap:::organicChemNoClassNoteColor'),
     ),
-    ChemistryMatters:(
-        _selectors: (".chemistry-matters"),
-        group-border-color: (_ref: 'colorMap:::chemistryMattersColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Title:::color': (_ref: 'colorMap:::chemistryMattersColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections2.svg")) no-repeat top left,
-    ),
 ));
 
 // Tables
 @include add_settings((
-  BasicTable: (
+  BasicTableWithCaptionOnTop: (
     _selectors: ('.os-table:not(.os-unstyled-container)'),
-    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::organicChemistryTableColor'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::organicChemistryTableColor'),
     'CaptionTitleLabel:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
     'CaptionNumber:::color': (_ref: 'colorMap:::organicChemistryTableColor'),
   ),
@@ -243,6 +254,7 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('ChemistryMattersTitles', 'carnival:::EocCompositePageTitlesWithIconShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 
@@ -254,7 +266,6 @@ $ChapterIntroType: fullWidth;
 // Notes
 @include use('DedicationPage', 'carnival:::LinesNoteShape');
 @include use('WhyChapter', 'carnival:::BoxedNoteShape');
-@include use('ChemistryMatters', 'carnival:::IconIncreasedNoteShape');
 @include use('DefaultNoClassNote', 'carnival:::BoxedNoteShape');
 
 // Figures
@@ -274,7 +285,7 @@ $ChapterIntroType: fullWidth;
 @include use('FigureDedication','carnival:::FigureDedicationShape');
 
 // Tables
-@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
@@ -284,6 +295,9 @@ $ChapterIntroType: fullWidth;
 @include use('InlineMultipartQuestionExercises','carnival:::ExercisesMultipartQuestionShape');
 @include use('VisualizingChemistry','carnival:::ExercisesModuleShape');
 @include use('AdditionalProblems','carnival:::ExercisesModuleShape');
+@include use('MechanismProblems','carnival:::ExercisesModuleShape');
+@include use('GeneralProblems','carnival:::ExercisesModuleShape');
+@include use('EnergyReaction','carnival:::ExercisesModuleShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');

@@ -10,6 +10,18 @@ $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 $ListContainer: empty_wrapper(ListContainer, '');
 
+$Page--Composite__Container--WithIcon: (
+  _name:"CompositePageContainerWithIcon",
+  _subselector: '',
+  _properties: (
+    margin-bottom: v-spacing(1),
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-bottom-width: 0.2rem,
+    border-bottom-style: solid,
+    box-decoration-break: slice,
+  )
+);
+
 // H1 headers
 $H1: (
   _name:"H1Title",
@@ -130,6 +142,56 @@ $H2--Module: (
     line-height: line-height(2),
     margin-bottom: v-spacing(1),
     font-weight: 600,
+  )
+);
+
+$H2--WithIcon: (
+  _name:"H2TitleWithIcon",
+  _subselector: ' > h2',
+  _properties: (
+    display: flex,
+    flex-direction: column,
+  )
+);
+
+$H2--WithIcon__Text: (
+  _name: "H2TitleWithIconText",
+  _subselector: " > .os-text",
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 900,
+    letter-spacing: 0.05rem,
+    text-transform: uppercase,
+    font-size: font-scale(5),
+    line-height: line-height(5),
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-bottom-width: 0.2rem,
+    border-bottom-style: solid,
+    margin-bottom: v-spacing(1),
+  )
+);
+
+$H2--WithIcon__Divider: (
+  _name: "H2TitleWithIconDivider",
+  _subselector: " > .os-divider",
+  _properties: (
+    display: none,
+  )
+);
+
+$H2--WithIcon__Icon: (
+  _name: "H2TitleWithIconIcon",
+  _subselector: "::before",
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: contain,
+    height: v-spacing(6),
+    width: v-spacing(6),
+    display: inline-block,
+    padding-right: 0.4rem,
+    position: relative,
+    bottom: -1rem,
+    content: "''",
   )
 );
 

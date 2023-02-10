@@ -103,6 +103,16 @@ $Caption__Container--Table: (
     )
 );
 
+$Caption__Container--Table--OnTop: (
+    _name: "CaptionContainerTableOnTop",
+    _subselector: ' .os-caption-container',
+    _properties: (
+        display: table-caption,
+        prince-caption-page: all,
+        font-size: font-scale(-1),
+    )
+);
+
 // Common components
 
 $Caption__Text:(

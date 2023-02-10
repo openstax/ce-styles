@@ -102,6 +102,7 @@ $bandColor: #DCB83D;
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cosmos:::TocUnitShape');
 @include use('UnitTitle', 'common:::Hidden');
+@include use('ScreenreaderSpan', 'common:::VisuallyHiddenShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
