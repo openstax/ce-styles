@@ -178,6 +178,7 @@ $ChapterIntroType: side;
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('ScreenreaderSpan', 'common:::VisuallyHiddenShape');
 
 // Book specific styles
 @include use('UnitToc', 'carnival:::UnitToc');

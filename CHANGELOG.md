@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Remove empty space from splash image `corn`
+
+## [v1.121.0] - 2023-02-10
+
+* Hide screenreader spans in more books
 * Change superscipt and subscript size to 83%
 * Create `BasicTableWithCaptionOnTop` shape
 * Style new exercises in `organic-chemistry`

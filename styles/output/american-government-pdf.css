@@ -1150,6 +1150,19 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   display: none;
 }
 
+span[data-media~=screenreader] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
 [data-type=page] section.learning-objectives > h3[data-type=title] {
   color: #8B693A;
   font-family: Archivo, sans-serif, StixGeneral;
