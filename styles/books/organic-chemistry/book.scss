@@ -110,6 +110,14 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::chemistryHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
+
 // Exercises
 @include add_settings((
     VisualizingChemistry:(
@@ -303,6 +311,7 @@ $ChapterIntroType: fullWidth;
 @include use('Equation', 'carnival:::EquationShape');
 
 // EOB
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
 @include use('Index', 'carnival:::IndexShape');
 @include use('AnswerKey', 'carnival:::AnswerKeyShape');
 @include use('AnswerKeySolutionMultipart', 'carnival:::AnswerKeySolutionMultipartShape');
