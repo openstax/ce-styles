@@ -3070,6 +3070,38 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+.appendix > .column-container {
+  column-count: 2;
+  column-gap: 16px;
+}
+
+.appendix > .column-container > section {
+  margin-bottom: 0.7rem;
+}
+
+.appendix > .column-container > section > h3[data-type=title] {
+  color: #00819A;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.appendix > .column-container > section > ul {
+  font-size: 0.8333333333rem;
+  list-style-type: none;
+}
+
+.appendix > .column-container > section > ul > li {
+  text-indent: -5px;
+  padding-left: 5px;
+}
+
+.appendix > .column-container > section > ul > li > strong {
+  padding-right: 3px;
+}
+
 .os-index-container {
   column-count: 3;
   column-gap: 32px;
