@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Decrease font size of `h5` from `webview`
 * Style Appendix Glossary in `organic-chemistry`
 * Remove empty space from splash image `corn`
 
