@@ -2292,6 +2292,14 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 24px;
 }
 
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
 [data-type=note] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
