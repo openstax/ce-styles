@@ -4212,6 +4212,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
 [data-type=problem] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }

@@ -105,6 +105,12 @@
                                 $OrderedList--SecondLevel,
                             )
                         )),
+                        map-merge($SectionWrapper--FirstLevel, (
+                            _components:(
+                                $UnorderedList--FirstLevel,
+                                $OrderedList--FirstLevel,
+                            ),
+                        )),
                     )
                 )),
             )
