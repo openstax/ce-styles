@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change cells border color in tables from `cardboard`
 * Style exercise distractors `organic chemistry`
-=======
 * Style lists from Introduction in `cardboard`
 
 * Style third level lists from pages in `cardboard`
