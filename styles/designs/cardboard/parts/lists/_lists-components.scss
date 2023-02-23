@@ -34,6 +34,22 @@ $OrderedList--SecondLevel: (
     )
 );
 
+$UnorderedList--ThirdLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+$OrderedList--ThirdLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol > li > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
 // Stepwise lists
 
 $StepwiseList__Container: (

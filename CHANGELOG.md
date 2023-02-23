@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add Link styling to `organic-chemistry`
+* Change cells border color in tables from `cardboard`
+* Style exercise distractors `organic chemistry`
+* Style lists from Introduction in `cardboard`
+* Style third level lists from pages in `cardboard`
+* Decrease font size of `h5` from `webview`
+* Style Appendix Glossary in `organic-chemistry`
+* Remove empty space from splash image `corn`
+
+## [v1.121.0] - 2023-02-10
 
 * Hide screenreader spans in more books
 * Change superscipt and subscript size to 83%
