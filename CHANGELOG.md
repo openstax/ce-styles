@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.122.0] - 2023-02-24
+
 * Add Link styling to `organic-chemistry`
 * Change cells border color in tables from `cardboard`
 * Style exercise distractors `organic chemistry`
