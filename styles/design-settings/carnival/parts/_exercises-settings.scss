@@ -11,13 +11,16 @@
         ),
     ),
     MultipartQuestionExercises: (
-        _selectors: ('[data-type="injected-exercise"].exercise-block [data-type="alphabetical-question-multipart"]'),
+        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"].exercise-block'),
+        ExerciseMultipartQuestionContainer: (
+          display: block,
+        ),
         ProblemSolutionLetter: (
             color: (_ref: 'colorMap:::fontBodyColor'),
         ),
     ),
     InlineMultipartQuestionExercises: (
-        _selectors: ('[data-type="injected-exercise"]:not(.exercise-block) [data-type="alphabetical-question-multipart"]'),
+        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]:not(.exercise-block)'),
         ExerciseMultipartQuestionContainer: (
             display: inline-table,
         ),
