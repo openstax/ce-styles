@@ -444,6 +444,10 @@ nav#toc {
   page: table-of-contents;
 }
 
+div[data-type=unit] {
+  page: unit;
+}
+
 div[data-type=page].preface {
   page: preface;
   counter-reset: page 1;
@@ -581,6 +585,45 @@ div[data-type=composite-page].os-eob {
     color: #000000;
     font-weight: 700;
     content: string(preface-msg);
+  }
+  @top-right-corner {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "     " counter(page);
+  }
+}
+@page unit:left {
+  @top-left {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "";
+  }
+  @top-left-corner {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: counter(page) "     ";
+  }
+  @bottom-left {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: string(access-for-free-msg);
+  }
+}
+@page unit:right {
+  @top-right {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "";
   }
   @top-right-corner {
     font-size: 0.8333333333rem;
