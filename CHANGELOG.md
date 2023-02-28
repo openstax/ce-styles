@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix unit folio from `marketing`
 * Bake `CenteredText` in `organic-chemistry`
 
 ## [v1.122.0] - 2023-02-24
