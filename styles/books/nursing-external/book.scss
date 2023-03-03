@@ -1,0 +1,176 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #00819A;
+$ChapterIntroType: fullWidth;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/folio';
+
+
+@include add_settings((
+  UnitToc:(
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocUnitLink:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::nursingTocColor'),
+  ),
+));
+
+// Chapter Intro
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::nursingIntroColor"),
+  ),
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
+    'ChapterOutlineContainer:::font-weight': normal,
+    'ChapterOutlineContainer:::font-size': font-scale(-1),
+  ),
+));
+
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+//Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::nursingHeaderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  PageTitles: (
+    _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  EocCompositeChapterTitles: (
+    _selectors: ('.os-eoc[data-type="composite-chapter"]'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H3Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+@include add_settings((
+  EocCompositePageTitles: (
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+@include add_settings((
+  EobTitles: (
+    _selectors: ('.os-eob'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.os-summary-container'),
+  ),
+));
+
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::nursingHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
+
+
+// Tables
+@include add_settings((
+  BasicTableWithCaptionOnTop: (
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
+  ),
+));
+
+// Target labels
+@include add_settings((
+  FigureTargetLabel: (
+    _selectors: ('a.figure-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::figureNumberColor"),
+  ),
+  TableTargetLabel: (
+    _selectors: ('a.table-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::nursingTableColor"),
+  ),
+));
+
+
+// Common Settings
+@include use('BookRoot', "common:::BookRoot");
+
+// Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
+
+
+
+//Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EobTitles', 'carnival:::EobTitlesShape');
+@include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
+
+//Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
+
+// Book Specific Styles
+@include use('UnitToc', 'carnival:::UnitToc');
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+
+// Tables
+@include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+
+// EOB
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
+@include use('Index', 'carnival:::IndexShape');
