@@ -282,32 +282,29 @@ span[data-type=media] img {
   display: block;
 }
 
-:not(figure) > [data-type=media].scaled-down {
+*:not(figure) > [data-type=media].scaled-down {
   display: block;
   text-align: center;
-  width: 60%;
-  background-color: red;
 }
 
-:not(figure) > [data-type=media].scaled-down img {
+*:not(figure) > [data-type=media].scaled-down img {
   width: 60%;
 }
 
-:not(figure) > [data-type=media].scaled-down-30 {
+*:not(figure) > [data-type=media].scaled-down-30 {
   display: block;
   text-align: center;
+}
+
+*:not(figure) > [data-type=media].scaled-down-30 img {
   width: 30%;
 }
 
-:not(figure) > [data-type=media].scaled-down-30 img {
-  width: 30%;
-}
-
-:not(figure) img.scaled-down {
+*:not(figure) img.scaled-down {
   width: 60%;
 }
 
-:not(figure) img.scaled-down-30 {
+*:not(figure) img.scaled-down-30 {
   width: 30%;
 }
 
