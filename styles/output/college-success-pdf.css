@@ -1127,7 +1127,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 1.728rem;
   font-family: Roboto Condensed, StixGeneral;
   color: #344456;
-  font-weight: normal;
 }
 
 .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
@@ -1319,11 +1318,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: flex;
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   position: relative;
   top: 26rem;
-  font-weight: normal;
   flex-direction: row;
   justify-content: flex-start;
   z-index: 2;
@@ -1400,7 +1398,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page].introduction .intro-text > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1409,7 +1407,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page].introduction .intro-text > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1426,20 +1424,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
-  line-height: 1.728rem;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
@@ -1449,6 +1445,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
@@ -1460,21 +1457,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
@@ -1486,12 +1484,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1500,7 +1499,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1509,7 +1508,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1518,7 +1517,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1527,7 +1526,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1546,10 +1545,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-summary-container > h2::before {
@@ -1564,7 +1562,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-summary-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1572,7 +1570,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-summary-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1581,7 +1579,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-summary-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1590,7 +1588,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-summary-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1609,10 +1607,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-career-connection-container > h2::before {
@@ -1627,7 +1624,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-career-connection-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1635,7 +1632,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-career-connection-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1644,7 +1641,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-career-connection-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1653,7 +1650,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-career-connection-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1672,10 +1669,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-rethinking-container > h2::before {
@@ -1690,7 +1686,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-rethinking-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1698,7 +1694,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-rethinking-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1707,7 +1703,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-rethinking-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1716,7 +1712,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-rethinking-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1735,10 +1731,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-where-go-container > h2::before {
@@ -1753,7 +1748,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-where-go-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1761,7 +1756,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-where-go-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1770,7 +1765,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-where-go-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1779,7 +1774,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-where-go-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3583,17 +3578,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eob[data-type=composite-page] > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   column-span: all;
-  font-weight: normal;
 }
 
 .os-eob[data-type=composite-page] > div > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
