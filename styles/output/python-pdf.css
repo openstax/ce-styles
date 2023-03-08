@@ -2153,6 +2153,14 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   width: 100%;
 }
 
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
+}
+
 .learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }

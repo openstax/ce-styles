@@ -37,6 +37,22 @@ $InjectedExercise__Question__Wrapper: (
 $Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
 $Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
 
+$InjectedExercise__Context: (
+  _name: "InjectedexerciseContext",
+  _subselector: ' > div[data-type="exercise-context"]',
+  _properties: (
+    display: inline,
+  )
+);
+
+$InjectedExercise__Divider: (
+  _name: "InjectedexerciseDivider",
+  _subselector: ' > span.os-divider',
+  _properties: (
+    display: inline,
+  )
+);
+
 // Solution components
 $Exercise__Solution: (
   _name: "ExerciseSolution",
