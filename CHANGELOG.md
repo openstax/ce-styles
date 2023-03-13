@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.223.0] - 2023-03-13
+
+* Style `full-width` tables in `college-success`
+* Bake exercise context in `cardboard`
+* Increase titles font size in `cardboard`
+* Display `organic-chemistry` Answer Key in two columns
+* Fix unit folio from `marketing`
+* Bake `CenteredText` in `organic-chemistry`
+* Fix scaled down non-figures in `webview`
+
 ## [v1.122.0] - 2023-02-24
 
 * Add Link styling to `organic-chemistry`

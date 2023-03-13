@@ -145,7 +145,7 @@ $ChapterIntroType: fullWidth;
 // Eoc
 @include add_settings((
   TwoColumnsModules: (
-    _selectors: ('.os-key-terms-container', '.summary'),
+    _selectors: ('.os-key-terms-container', '.summary', '.os-eob[data-type="composite-chapter"]'),
   ),
 ));
 
@@ -233,6 +233,12 @@ $ChapterIntroType: fullWidth;
   )
 ));
 
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
 @include use('CyanColoredText', 'common:::ColoredText');
@@ -242,6 +248,7 @@ $ChapterIntroType: fullWidth;
 @include use('RedColoredText', 'common:::ColoredText');
 @include use('YellowColoredText', 'common:::ColoredText');
 @include use('PurpleColoredText', 'common:::ColoredText');
+@include use('CenteredText', 'common:::CenteredTextShape');
 
 // Book specific styles
 @include use('TocNoUnit', 'carnival:::TocNoUnitShape');
