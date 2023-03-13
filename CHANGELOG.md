@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.223.0] - 2023-03-13
+
 * Style `full-width` tables in `college-success`
 * Bake exercise context in `cardboard`
 * Increase titles font size in `cardboard`
