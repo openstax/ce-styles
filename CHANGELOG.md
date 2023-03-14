@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change `Checkpoint` into `Mac Tip` in `bca`
+
 ## [v1.223.0] - 2023-03-13
 
 * Style `full-width` tables in `college-success`
