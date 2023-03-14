@@ -48,8 +48,8 @@ $bandColor: #24739E;
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
   ),
-  Checkpoint: (
-    _selectors: (".check-point"),
+  MacTip: (
+    _selectors: (".mac-tip"),
     'Title:::background-color': (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
     'Title:::color': (_ref: "colorMap:::noteOption5HeaderColor"),
     'Title:::font-family': (_ref: "typography:::titleFont"),
@@ -273,7 +273,7 @@ TextHeavyWithTitleTable: (
 
 //Notes
 @include use('LinkToLearning', 'cardboard:::BoxedNoteShape');
-@include use('Checkpoint', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('MacTip', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('SpotlightOnEthics', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('RealWorldApplication', 'cardboard:::BoxedNoteWithSubtitleShape');
 
