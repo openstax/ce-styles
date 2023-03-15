@@ -417,3 +417,13 @@ $Title--FromList: (
         font-weight: bold,
     )
 );
+
+//Colored Text
+$ColoredText: (
+  _name: "ColorText",
+  _subselector: "",
+  _properties:(
+      font-weight: bold,
+      color: enum('ValueSet:::OPTIONAL'),
+  )
+)

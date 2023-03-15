@@ -253,6 +253,14 @@ $Table__BottomBorder--AfterTable: (
     )
 );
 
+$Table__Row--AlternateShading: ( //nursing external (even rows)
+    _name: "LightGrayShading",
+    _subselector: "> tr:nth-child(even)",
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
+    )
+);
+
 // Table data container used in table list shape
 $Table__Data--Wrapper: empty_wrapper(TableData, ' > td');
 $Table--Wrapper: empty_wrapper(Table, ' > table');

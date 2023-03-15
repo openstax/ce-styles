@@ -221,3 +221,13 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::ColoredTextShape',( // heading in tables-nursing
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $ColoredText,
+            )
+        )),
+    )
+));

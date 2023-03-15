@@ -201,6 +201,15 @@
 ));
 
 @include add_settings((
+  AlternateShading: (
+        _selectors: ('.alternate-shading'),
+        LightGrayShading: (
+          background-color: (_ref:'colorMap:::tableRowGreyShadingColor'),
+        ),
+  )
+));
+
+@include add_settings((
     UnnumberedUnstyledTable: (
         _selectors: (".os-table.os-unstyled-container"),
     )

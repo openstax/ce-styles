@@ -156,3 +156,12 @@
         _selectors: ('[data-type="page"]'),
     ),
 ));
+
+@include add_settings((
+    ColoredText: (
+        _selectors: ('.blue-text'),
+        TextColor: (
+          color: (_ref: 'colorMap:::blueTextColor'),
+        )
+    ),
+));

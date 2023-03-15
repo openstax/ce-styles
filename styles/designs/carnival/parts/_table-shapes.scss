@@ -245,3 +245,12 @@
     )
 ));
 
+@include create_shape('carnival:::AlternateShading', (
+    _components: (
+      map-merge($Table__Body, (
+        _components:(
+          $Table__Row--AlternateShading,
+        )
+      )),
+    )
+));
