@@ -948,8 +948,41 @@ div[data-type=composite-page].os-eob {
   text-decoration: none;
 }
 
-.blue-text {
-  color: #0074BC;
+.os-chapter-outline {
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: normal;
+  font-size: 0.8333333333rem;
+  line-height: 1.5rem;
+  width: 6.5in;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom-color: #00819A;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  box-decoration-break: slice;
+}
+
+.os-chapter-outline > h3.os-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-family: Mulish, sans-serif;
+  color: #00819A;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+  display: inline-block;
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  text-decoration: none;
 }
 
 [data-type=chapter] > [data-type=page] > section.learning-objectives > h3[data-type=title] {
@@ -1344,7 +1377,6 @@ div[data-type=composite-page].os-eob {
 .os-figure.has-splash .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
 }
-
 
 h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
@@ -3116,35 +3148,6 @@ alternate-shading > tbody > tr:nth-child(even) {
 }
 
 os-review-questions-container {
-=======
-.os-glossary-container > dl {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.os-glossary-container > dl > dt {
-  font-weight: bold;
-  padding-right: 8px;
-  display: inline;
-}
-
-.os-glossary-container > dl > dd {
-  display: inline;
-  margin-left: 0px;
-}
-
-.os-references-container > section > p {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.os-glossary-container {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-summary-container {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
@@ -3236,6 +3239,45 @@ os-review-questions-container {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+.os-glossary-container > dl {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-glossary-container > dl > dt {
+  font-weight: bold;
+  padding-right: 8px;
+  display: inline;
+}
+
+.os-glossary-container > dl > dd {
+  display: inline;
+  margin-left: 0px;
+}
+
+.os-references-container > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-glossary-container {
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+.os-section-summary-container {
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
+}
+
+os-review-questions-container {
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-width: auto;
 }
 
 .appendix > .column-container {
