@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `ProblemPrefix` from exercises in `organic-chemistry`
 * Change `Checkpoint` into `Mac Tip` in `bca`
 * Change `WrittenExercises` into `WrittenQuestions` in `bca`
 
