@@ -39,13 +39,6 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-@include add_settings((
-  LearningObjectivesAbstract: (
-    _selectors: ('[data-type="page"] > [data-type="abstract"]'),
-    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
-    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
-  ),
-));
 
 //Titles
 @include add_settings((
@@ -130,9 +123,16 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  ColorText: (
+  BlueText:(
     _selectors: ('.blue-text'),
-    'ColorText:::color': (_ref: "colorMap:::blueTextColor"),
+    'ColoredTextContainer:::color': (_ref: "colorMap:::blueTextColor"),
+  ),
+));
+
+@include add_settings((
+  AlternateShadingTable: (
+    _selectors:('alternate-shading'),
+    'AlternateShadingTable:::color' : (_ref: "colorMap:::tableRowGreyShadingColor")
   ),
 ));
 
@@ -320,7 +320,7 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
-
+@include use('BlueText', 'common:::ColoredText');
 
 
 //Titles
@@ -330,7 +330,7 @@ $ChapterIntroType: fullWidth;
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
-@include use('ColorText', 'carnival:::ColoredTextShape');
+
 
 
 //Figures
@@ -351,14 +351,13 @@ $ChapterIntroType: fullWidth;
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('LearningObjectivesAbstract', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Tables
 @include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
-@include use('AlternateShading', 'carnival:::AlternateShading');
+@include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');

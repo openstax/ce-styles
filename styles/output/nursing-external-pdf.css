@@ -638,14 +638,11 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-} /* stylelint-disable-next-line meowtec/no-px */
+}
+/* .alternate-shading is a new class for tables and cookbook will need to be updated to reflect this.
+    This shape should be modified after cookbook change*/
 /* stylelint-disable-next-line meowtec/no-px */
-/*@include add_settings((
-    RemoveLineBreakExerciseProblemQuestionLists: ( //nursing-external
-    _selectors: ('.os-problem-container'),
-    RemoveLineBreak:(display: inline-table),
-    )
-));*/
+/* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
 }
@@ -951,6 +948,10 @@ div[data-type=composite-page].os-eob {
   text-decoration: none;
 }
 
+.blue-text {
+  color: #0074BC;
+}
+
 [data-type=chapter] > h1 {
   color: #00819A;
   font-family: Mulish, sans-serif;
@@ -1200,11 +1201,6 @@ div[data-type=composite-page].os-eob {
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: 600;
-}
-
-.blue-text {
-  font-weight: bold;
-  color: #0074BC;
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
@@ -1713,32 +1709,6 @@ a[role=doc-noteref] {
   padding-right: 0.16rem;
 }
 
-[data-type=page] > [data-type=abstract] > h3[data-type=title] {
-  color: #00819A;
-  font-family: Mulish, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-[data-type=page] > [data-type=abstract] > p {
-  margin-bottom: 0;
-}
-
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) > li {
-  max-width: 5.9in;
-}
-
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) > li::marker {
-  color: #00819A;
-}
-
 .os-eoc[data-type=composite-page] {
   margin-bottom: 0.7rem;
 }
@@ -1892,8 +1862,8 @@ a[role=doc-noteref] {
   margin-top: 1rem;
 }
 
-.alternate-shading > tbody > tr:nth-child(even) {
-  background-color: #EFF3FA;
+alternate-shading > tbody > tr:nth-child(even) {
+  background-color: ENUM__ValueSet:::REQUIRED;
 }
 
 [data-type=page] > ol {

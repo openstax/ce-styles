@@ -201,10 +201,10 @@
 ));
 
 @include add_settings((
-  AlternateShading: (
+  AlternateShadingTable: (
         _selectors: ('.alternate-shading'),
-        LightGrayShading: (
-          background-color: (_ref:'colorMap:::tableRowGreyShadingColor'),
+        AlternateShadingTableRow: (
+          background-color: enum('ValueSet:::REQUIRED'),
         ),
   )
 ));
