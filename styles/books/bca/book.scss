@@ -48,8 +48,8 @@ $bandColor: #24739E;
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
   ),
-  Checkpoint: (
-    _selectors: (".check-point"),
+  MacTip: (
+    _selectors: (".mac-tip"),
     'Title:::background-color': (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
     'Title:::color': (_ref: "colorMap:::noteOption5HeaderColor"),
     'Title:::font-family': (_ref: "typography:::titleFont"),
@@ -177,8 +177,8 @@ $bandColor: #24739E;
     'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
     'H5Title:::font-family': (_ref: 'typography:::baseFont'),
   ),
-  WrittenExercisesTitles: (
-    _selectors: (".os-written-exercises-container"),
+  WrittenQuestionsTitles: (
+    _selectors: (".os-written-questions-container"),
     'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
     'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
     'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-written.svg")) no-repeat top left,
@@ -220,7 +220,7 @@ $bandColor: #24739E;
 
 @include add_settings((
   ExercisesModule: (
-    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-conceptual-questions-container', '.os-eoc.os-you-try-container', '.os-eoc.os-practice-exercises-container', '.os-eoc.os-written-exercises-container', '.os-eoc.os-case-exercises-container', '.os-eoc.os-extension-exercises-container'),
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-conceptual-questions-container', '.os-eoc.os-you-try-container', '.os-eoc.os-practice-exercises-container', '.os-eoc.os-written-questions-container', '.os-eoc.os-case-exercises-container', '.os-eoc.os-extension-exercises-container'),
     'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
@@ -235,7 +235,7 @@ TextHeavyWithTitleTable: (
 
 @include add_settings((
   ModuleWithoutTitleLinks: (
-    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-conceptual-questions-container', '.os-eoc.os-you-try-container', '.os-eoc.os-practice-exercises-container', '.os-eoc.os-written-exercises-container', '.os-eoc.os-case-exercises-container', '.os-eoc.os-extension-exercises-container'),
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-conceptual-questions-container', '.os-eoc.os-you-try-container', '.os-eoc.os-practice-exercises-container', '.os-eoc.os-written-questions-container', '.os-eoc.os-case-exercises-container', '.os-eoc.os-extension-exercises-container'),
   ),
 ));
 
@@ -273,7 +273,7 @@ TextHeavyWithTitleTable: (
 
 //Notes
 @include use('LinkToLearning', 'cardboard:::BoxedNoteShape');
-@include use('Checkpoint', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('MacTip', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('SpotlightOnEthics', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('RealWorldApplication', 'cardboard:::BoxedNoteWithSubtitleShape');
 
@@ -287,7 +287,7 @@ TextHeavyWithTitleTable: (
 @include use('ConceptualQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('NowYouTryItTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('PracticeExercisesTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('WrittenExercisesTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('WrittenQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('CaseExercisesTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('ExtensionExercisesTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('ChapterReviewTitles', 'cardboard:::EocCompositePageTitlesShape');

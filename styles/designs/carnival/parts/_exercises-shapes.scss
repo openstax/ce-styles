@@ -70,3 +70,19 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::ExercisesQuestionWithProblemPrefixShape',(
+    _components:(
+        map-merge($ExerciseQuestion__Container,(
+            _components:(
+                map-merge($Exercise__ProblemSolution__Prefix,(
+                    _components:(
+                        $Exercise__ProblemSolution__Prefix__Label,
+                        $Exercise__ProblemSolution__Prefix__Number,
+                    ),
+                )),
+                $Exercise__Problem__Container--Prefix,
+            ),
+        )),
+    )
+));

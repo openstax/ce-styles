@@ -39,6 +39,13 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
 
 //Titles
 @include add_settings((
@@ -114,6 +121,7 @@ $ChapterIntroType: fullWidth;
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));
+
 
 @include add_settings((
   FakeTitleTable: (
@@ -301,6 +309,7 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+
 // Target labels
 @include add_settings((
   FigureTargetLabel: (
@@ -317,10 +326,14 @@ $ChapterIntroType: fullWidth;
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
 
+// Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
-@include use('BlueText', 'common:::ColoredText');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
+
+
 
 
 //Titles
@@ -330,6 +343,8 @@ $ChapterIntroType: fullWidth;
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
+
+
 
 
 
@@ -347,11 +362,13 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
+
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+
 
 // Tables
 @include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
@@ -392,6 +409,12 @@ $ChapterIntroType: fullWidth;
 @include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 @include use('ExercisesModule', 'carnival:::ExercisesModuleShape');
 
+=======
+
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 
 // EOB
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');

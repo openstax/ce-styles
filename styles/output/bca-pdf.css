@@ -1117,7 +1117,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 [data-type=page] .learning-objectives > h3[data-type=title] {
   color: #24739E;
   font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
@@ -1158,7 +1158,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 0;
 }
 
-.os-eoc.os-written-exercises-container section {
+.os-eoc.os-written-questions-container section {
   margin-bottom: 0;
 }
 
@@ -1183,7 +1183,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 1.728rem;
   font-family: Roboto Condensed, StixGeneral;
   color: #344456;
-  font-weight: normal;
 }
 
 .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
@@ -2968,11 +2967,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.check-point {
+.mac-tip {
   margin-bottom: 1.4rem;
 }
 
-.check-point > .os-title {
+.mac-tip > .os-title {
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.2rem;
@@ -2984,7 +2983,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.check-point > .os-note-body {
+.mac-tip > .os-note-body {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2992,7 +2991,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.check-point > .os-note-body > .os-subtitle {
+.mac-tip > .os-note-body > .os-subtitle {
   color: #344456;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.2rem;
@@ -3001,24 +3000,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.check-point > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
+.mac-tip > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.check-point > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
+.mac-tip > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
   margin-left: 8px;
   padding-left: 16px;
 }
 
-.check-point > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
+.mac-tip > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.check-point > .os-note-body > [data-type=exercise] > [data-type=solution] > .os-title-label {
+.mac-tip > .os-note-body > [data-type=exercise] > [data-type=solution] > .os-title-label {
   font-weight: bold;
 }
 
@@ -3125,20 +3124,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
-  line-height: 1.728rem;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
@@ -3148,6 +3145,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
@@ -3159,21 +3157,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
@@ -3185,12 +3184,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3199,7 +3199,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3208,7 +3208,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3217,7 +3217,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3226,7 +3226,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3250,11 +3250,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: flex;
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   position: relative;
   top: 26rem;
-  font-weight: normal;
   flex-direction: row;
   justify-content: flex-start;
   z-index: 2;
@@ -3331,7 +3330,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page].introduction .intro-text > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3340,7 +3339,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page].introduction .intro-text > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3359,10 +3358,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-glossary-container > h2::before {
@@ -3377,7 +3375,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-glossary-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3385,7 +3383,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-glossary-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3394,7 +3392,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3403,7 +3401,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3422,10 +3420,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-section-summary-container > h2::before {
@@ -3440,7 +3437,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-section-summary-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3448,7 +3445,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-section-summary-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3457,7 +3454,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-section-summary-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3466,7 +3463,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-section-summary-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3485,10 +3482,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-review-questions-container > h2::before {
@@ -3503,7 +3499,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-questions-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3511,7 +3507,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-review-questions-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3520,7 +3516,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-review-questions-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3529,7 +3525,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-review-questions-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3548,10 +3544,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-conceptual-questions-container > h2::before {
@@ -3566,7 +3561,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-conceptual-questions-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3574,7 +3569,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-conceptual-questions-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3583,7 +3578,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-conceptual-questions-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3592,7 +3587,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-conceptual-questions-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3611,10 +3606,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-you-try-container > h2::before {
@@ -3629,7 +3623,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-you-try-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3637,7 +3631,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-you-try-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3646,7 +3640,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-you-try-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3655,7 +3649,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-you-try-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3674,10 +3668,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-practice-exercises-container > h2::before {
@@ -3692,7 +3685,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-practice-exercises-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3700,7 +3693,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-practice-exercises-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3709,7 +3702,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-practice-exercises-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3718,7 +3711,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-practice-exercises-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3732,18 +3725,17 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.os-written-exercises-container > h2 {
+.os-written-questions-container > h2 {
   display: flex;
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
-.os-written-exercises-container > h2::before {
+.os-written-questions-container > h2::before {
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOiMyODczOUU7fQoJLnN0MXtmaWxsOiMzOTQ1NTc7fQoJLnN0MntmaWxsOiMzNDQ0NTY7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxnPgoJCQk8ZGVmcz4KCQkJCTxyZWN0IGlkPSJTVkdJRF8xXyIgd2lkdGg9IjIxIiBoZWlnaHQ9IjIzLjgiLz4KCQkJPC9kZWZzPgoJCQk8Y2xpcFBhdGggaWQ9IlNWR0lEXzJfIj4KCQkJCTx1c2UgeGxpbms6aHJlZj0iI1NWR0lEXzFfIiAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7Ii8+CgkJCTwvY2xpcFBhdGg+CgkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLjksMC45aDE5LjN2MjJIMC45VjAuOXogTTAsMjMuOGgyMVYwSDBWMjMuOHoiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTUuNiw4LjJ2LTJINS4ydjEyLjRoMmg4LjNDMTUuNiwxOC42LDE1LjYsOC4yLDE1LjYsOC4yeiBNNi4xLDcuMmg4LjR2MTAuNUg2LjFWNy4yeiIvPgoJPHJlY3QgeD0iOC43IiB5PSIxMCIgY2xhc3M9InN0MSIgd2lkdGg9IjMuMyIgaGVpZ2h0PSIwLjgiLz4KCTxyZWN0IHg9IjguNyIgeT0iMTIiIGNsYXNzPSJzdDEiIHdpZHRoPSIzLjMiIGhlaWdodD0iMC44Ii8+Cgk8cmVjdCB4PSI4LjciIHk9IjE0IiBjbGFzcz0ic3QxIiB3aWR0aD0iMy4zIiBoZWlnaHQ9IjAuOCIvPgo8L2c+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMi44LDguNmwzLjQtNS40TDE3LDMuN2wtMy40LDUuNEwxMi44LDguNnogTTE3LjYsMy41bC0xLjUtMC45bC0zLjgsNi4xbDEuNSwwLjlMMTcuNiwzLjV6Ii8+Cjxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMTMuNyw5LjYgMTIuMyw4LjcgMTIuMywxMC4zICIvPgo8L3N2Zz4K") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
@@ -3753,7 +3745,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: inline-block;
 }
 
-.os-written-exercises-container > section > a > h3[data-type=document-title] {
+.os-written-questions-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-written-questions-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -3761,15 +3761,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.os-written-exercises-container > div > div > section > a > h4 {
+.os-written-questions-container > div > h3 {
+  color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
 
-.os-written-exercises-container > div > h3 {
+.os-written-questions-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -3778,16 +3779,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-.os-written-exercises-container > section > section > h4 {
-  color: #24739E;
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-written-exercises-container > section > section > section > h5 {
+.os-written-questions-container > section > section > section > h5 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3800,10 +3792,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-case-exercises-container > h2::before {
@@ -3818,7 +3809,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-case-exercises-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3826,7 +3817,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-case-exercises-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3835,7 +3826,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-case-exercises-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3844,7 +3835,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-case-exercises-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3863,10 +3854,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-extension-exercises-container > h2::before {
@@ -3881,7 +3871,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-extension-exercises-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3889,7 +3879,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-extension-exercises-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3898,7 +3888,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-extension-exercises-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3907,7 +3897,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-extension-exercises-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3926,10 +3916,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-chapter-review-container > h2::before {
@@ -3944,7 +3933,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-chapter-review-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3952,7 +3941,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-chapter-review-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3961,7 +3950,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-chapter-review-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3970,7 +3959,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-chapter-review-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -3987,16 +3976,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=composite-chapter] > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 [data-type=composite-chapter] > div > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -4005,7 +3993,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=composite-chapter] > div > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -4014,17 +4002,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eob[data-type=composite-page] > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   column-span: all;
-  font-weight: normal;
 }
 
 .os-eob[data-type=composite-page] > div > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -4150,6 +4137,14 @@ a[data-type=cite] {
   width: 100%;
 }
 
+.os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
+}
+
 .os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
@@ -4234,6 +4229,14 @@ a[data-type=cite] {
 .os-eoc.os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-eoc.os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
 }
 
 .os-eoc.os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
@@ -4322,6 +4325,14 @@ a[data-type=cite] {
   width: 100%;
 }
 
+.os-eoc.os-you-try-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-you-try-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
+}
+
 .os-eoc.os-you-try-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
@@ -4408,6 +4419,14 @@ a[data-type=cite] {
   width: 100%;
 }
 
+.os-eoc.os-practice-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-practice-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
+}
+
 .os-eoc.os-practice-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
@@ -4419,21 +4438,21 @@ a[data-type=cite] {
   width: 100%;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] {
+.os-eoc.os-written-questions-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] > .os-text {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] > .os-text {
   display: table-cell;
   text-decoration: none;
   font-weight: bold;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] > .os-number {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
@@ -4442,41 +4461,41 @@ a[data-type=cite] {
   text-align: right;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] > .os-divider {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-eoc.os-written-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+.os-eoc.os-written-questions-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-text {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-text {
   display: table-cell;
   text-decoration: none;
   font-weight: bold;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
@@ -4485,20 +4504,28 @@ a[data-type=cite] {
   text-align: right;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
+}
+
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-eoc.os-written-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-eoc.os-written-questions-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -4578,6 +4605,14 @@ a[data-type=cite] {
 .os-eoc.os-case-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-eoc.os-case-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-case-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
 }
 
 .os-eoc.os-case-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
@@ -4664,6 +4699,14 @@ a[data-type=cite] {
 .os-eoc.os-extension-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-eoc.os-extension-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-eoc.os-extension-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+  display: inline;
 }
 
 .os-eoc.os-extension-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
