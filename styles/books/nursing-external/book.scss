@@ -139,8 +139,8 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   AlternateShadingTable: (
-    _selectors:('alternate-shading'),
-    'AlternateShadingTable:::color' : (_ref: "colorMap:::tableRowGreyShadingColor")
+    _selectors:('.alternate-shading'),
+    'AlternateShadingTableRow:::background-color': (_ref: "colorMap:::tableRowGreyShadingColor"),
   ),
 ));
 
@@ -328,9 +328,6 @@ $ChapterIntroType: fullWidth;
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
-
-// Chapter Intro
-@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 
 
@@ -406,11 +403,7 @@ $ChapterIntroType: fullWidth;
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 @include use('ExercisesModule', 'carnival:::ExercisesModuleShape');
-
-//EOC
-@include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 @include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 

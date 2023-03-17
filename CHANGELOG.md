@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+* Nursing Style Review Updates
 * Nursing Styles Updates
 * Added fearure styles for Nursing Series
 * Style `ProblemPrefix` from exercises in `organic-chemistry`
@@ -13,9 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.223.0] - 2023-03-13
 
-* Style `full-width` tables in `college-success`
-* Bake exercise context in `cardboard`
-* Increase titles font size in `cardboard`
 * Style `full-width` tables in `college-success`
 * Bake exercise context in `cardboard`
 * Increase titles font size in `cardboard`
