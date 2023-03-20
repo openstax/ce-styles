@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Revert changes for `exercise-block` class
 * Nursing Style Review Updates
 * Nursing Styles Updates
 * Added fearure styles for Nursing Series
