@@ -245,3 +245,15 @@
     )
 ));
 
+/* .alternate-shading is a new class for tables and cookbook will need to be updated to reflect this.
+    This shape should be modified after cookbook change*/
+
+@include create_shape('carnival:::AlternateShadingTableShape', (
+    _components: (
+      map-merge($Table__Body, (
+        _components:(
+          $Table__Row--AlternateShading,
+        )
+      )),
+    )
+));

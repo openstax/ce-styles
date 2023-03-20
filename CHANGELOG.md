@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Revert changes for `exercise-block` class
+* Nursing Style Review Updates
+* Nursing Styles Updates
+* Added fearure styles for Nursing Series
+* Add additional styling to  `carnival` `ModuleWithIndentation` Styling
 * Style `ProblemPrefix` from exercises in `organic-chemistry`
 * Change `Checkpoint` into `Mac Tip` in `bca`
 * Change `WrittenExercises` into `WrittenQuestions` in `bca`
@@ -19,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Display `organic-chemistry` Answer Key in two columns
 * Fix unit folio from `marketing`
 * Bake `CenteredText` in `organic-chemistry`
+* Add styles for Nursing Series
 * Fix scaled down non-figures in `webview`
 
 ## [v1.122.0] - 2023-02-24
