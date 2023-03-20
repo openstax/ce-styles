@@ -22,6 +22,15 @@
                         $ModuleWithIndentation__Para,
                     ),
                 )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components:(
+                      map-merge($SectionWrapper--FirstLevel,(
+                        _components:(
+                          $ModuleWithIndentation__Para,
+                        )
+                      )),
+                    ),
+                )),
             ),
         )),
     )

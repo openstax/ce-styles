@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Nursing Style Review Updates
 * Nursing Styles Updates
 * Added fearure styles for Nursing Series
+* Add additional styling to  `carnival` `ModuleWithIndentation` Styling
 * Style `ProblemPrefix` from exercises in `organic-chemistry`
 * Change `Checkpoint` into `Mac Tip` in `bca`
 * Change `WrittenExercises` into `WrittenQuestions` in `bca`
