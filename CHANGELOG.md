@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add top margin to `tables` in `cosmos`
 * Revert `summary` to one column in `organic-chemistry`
 * Revert changes for `exercise-block` class
 * Nursing Style Review Updates
