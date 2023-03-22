@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Enable scrolling for wide equations on `webview`
 * Enable scrolling for wide tables on `webview`
 * Add top margin to `tables` in `cosmos`
 * Style `client teaching boxed note` in `nursing`
