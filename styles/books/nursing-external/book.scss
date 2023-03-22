@@ -249,9 +249,9 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   ClientTeachingNote:(
     _selectors: (".client-teaching"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::clientTeachingColor'),
+    group-border-color: (_ref: 'colorMap:::clientTeachingColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-group.svg")) no-repeat top left,
+    'Title:::color': (_ref: 'colorMap:::clientTeachingColor'),
   ),
 ));
 
@@ -393,7 +393,7 @@ $ChapterIntroType: fullWidth;
 @include use('TheoryActionNote', 'carnival:::IconCondensedShape');
 @include use('SpecialConsiderationsNote', 'carnival:::BoxedNoteShape');
 @include use('BlackBoxNote', 'carnival:::BoxedNoteShape');
-@include use('ClientTeachingNote', 'carnival:::IconCondensedShape');
+@include use('ClientTeachingNote', 'carnival:::BoxedNoteShape');
 @include use('PracticeProblemsNote', 'carnival:::BoxedNoteShape');
 @include use('UnfoldingCasestudyNote', 'carnival:::IconCondensedShape');
 @include use('SingleCasestudyNote', 'carnival:::IconCondensedShape');
