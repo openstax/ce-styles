@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* fix icon size for `clinical-tip` note in `nursing-external`
+
 * Enable scrolling for wide equations on `webview`
 * Enable scrolling for wide tables on `webview`
 * Add top margin to `tables` in `cosmos`
