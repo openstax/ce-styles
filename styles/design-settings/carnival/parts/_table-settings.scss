@@ -201,6 +201,15 @@
 ));
 
 @include add_settings((
+  AlternateShadingTable: (
+        _selectors: ('.alternate-shading'),
+        AlternateShadingTableRow: (
+          //book specific
+        ),
+  )
+));
+
+@include add_settings((
     UnnumberedUnstyledTable: (
         _selectors: (".os-table.os-unstyled-container"),
     )

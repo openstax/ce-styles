@@ -99,7 +99,7 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   TwoColumnsModules: (
-    _selectors: ('.os-glossary-container', '.os-summary-container'),
+    _selectors: ('.os-glossary-container', '.os-section-summary-container', 'os-review-questions-container'),
   ),
 ));
 
@@ -121,6 +121,194 @@ $ChapterIntroType: fullWidth;
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));
+
+
+@include add_settings((
+  FakeTitleTable: (
+    _selectors: ('.os-table.os-top-titled-container'),
+    'TableTitle:::color': (_ref: "colorMap:::nursingTableColor"),
+  ),
+));
+
+@include add_settings((
+  BlueText:(
+    _selectors: ('.blue-text'),
+    'ColoredTextContainer:::color': (_ref: "colorMap:::blueTextColor"),
+  ),
+));
+
+@include add_settings((
+  AlternateShadingTable: (
+    _selectors:('.alternate-shading'),
+    'AlternateShadingTableRow:::background-color': (_ref: "colorMap:::tableRowGreyShadingColor"),
+  ),
+));
+
+
+// EOC exercises
+@include add_settings((
+  ExercisesModule: (
+    _selectors: (".os-eoc.os-review-questions-container"),
+    'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+  ),
+));
+
+// Notes
+@include add_settings((
+  LinkToLearningNote:(
+    _selectors: (".link-to-learning"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  SafetyAlertNote:(
+    _selectors: (".safety-alert"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::alertColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alert.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  ClinicalTipNote:(
+    _selectors: (".clinical-tip"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::scienceColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientific.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  HealthAlertNote:(
+    _selectors: (".health-alert"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-check.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  HealthyPeopleNote:(
+    _selectors: (".healthy-people"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::healthyPeopleColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-group.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  TrendingTodayNote:(
+    _selectors: (".trending-today"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::trendingColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaper.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  CultureConversationsNote:(
+    _selectors: (".culture-conversations"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::cultureColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-debate.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  TheoryActionNote:(
+    _selectors: (".theory-action"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::connectedColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-connected.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  SpecialConsiderationsNote:(
+    _selectors: (".special-considerations"),
+    group-border-color: (_ref: 'colorMap:::specialConsiderationsColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::specialConsiderationsColor'),
+  ),
+));
+
+@include add_settings((
+  BlackBoxNote:(
+    _selectors: (".black-box"),
+    group-border-color: (_ref: 'colorMap:::nursingBlackBoxColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::nursingBlackBoxColor'),
+  ),
+));
+
+@include add_settings((
+  ClientTeachingNote:(
+    _selectors: (".client-teaching"),
+    group-border-color: (_ref: 'colorMap:::clientTeachingColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::clientTeachingColor'),
+  ),
+));
+
+@include add_settings((
+  PracticeProblemsNote:(
+    _selectors: (".practice-problems"),
+    group-border-color: (_ref: 'colorMap:::practiceProblemsColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::practiceProblemsColor'),
+  ),
+));
+
+@include add_settings((
+  UnfoldingCasestudyNote:(
+    _selectors: (".unfolding-casestudy"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::unfoldingCaseStudyColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  SingleCasestudyNote:(
+    _selectors: (".single-casestudy"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::nursingNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  MediaFeatureNote:(
+    _selectors: (".media-feature"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-media.svg")) no-repeat top left,
+  ),
+));
+
+
+
+@include add_settings((
+  CaseReflectionNote:(
+    _selectors: (".case-reflection"),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::nursingNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  NoteExercises: (
+    _selectors: ('[data-type="exercises"] :not(.os-review-container)'),
+    'NoteExerciseQuestions:::display': inline-flex,
+  ),
+));
+
 
 // Target labels
 @include add_settings((
@@ -144,6 +332,7 @@ $ChapterIntroType: fullWidth;
 
 
 
+
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
@@ -152,22 +341,69 @@ $ChapterIntroType: fullWidth;
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 
+
+
+
+
 //Figures
 @include use('Figure','carnival:::FigureShape');
 @include use('FigureSplash','carnival:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
+@include use('FigureFromExercisesSolution','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
+
 
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+
 
 // Tables
 @include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
+
+//Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
+@include use("NotesLists", "carnival:::NotesListsShape");
+
+//Notes
+@include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
+@include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
+@include use('SafetyAlertNote', 'carnival:::IconCondensedShape');
+@include use('ClinicalTipNote', 'carnival:::IconCondensedShape');
+@include use('HealthAlertNote', 'carnival:::IconCondensedShape');
+@include use('HealthyPeopleNote', 'carnival:::IconCondensedShape');
+@include use('TrendingTodayNote', 'carnival:::IconCondensedShape');
+@include use('CultureConversationsNote', 'carnival:::IconCondensedShape');
+@include use('TheoryActionNote', 'carnival:::IconCondensedShape');
+@include use('SpecialConsiderationsNote', 'carnival:::BoxedNoteShape');
+@include use('BlackBoxNote', 'carnival:::BoxedNoteShape');
+@include use('ClientTeachingNote', 'carnival:::BoxedNoteShape');
+@include use('PracticeProblemsNote', 'carnival:::BoxedNoteShape');
+@include use('UnfoldingCasestudyNote', 'carnival:::IconCondensedShape');
+@include use('SingleCasestudyNote', 'carnival:::IconCondensedShape');
+@include use('CaseReflectionNote', 'carnival:::IconCondensedShape');
+@include use('MediaFeatureNote', 'carnival:::IconCondensedShape');
+
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ExercisesModule', 'carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 @include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 

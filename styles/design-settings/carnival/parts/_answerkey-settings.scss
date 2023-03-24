@@ -37,3 +37,12 @@
         ),
     ),
 ));
+
+@include add_settings((
+    AnswerKeySolutionWithProblemPrefix: (
+        _selectors: ('.os-eob [data-type="question-solution"]'),
+        ProblemSolutionPrefix: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+    ),
+));

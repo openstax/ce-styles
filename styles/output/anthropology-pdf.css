@@ -521,7 +521,10 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-} /* stylelint-disable-next-line meowtec/no-px */
+}
+/* .alternate-shading is a new class for tables and cookbook will need to be updated to reflect this.
+    This shape should be modified after cookbook change*/
+/* stylelint-disable-next-line meowtec/no-px */
 /* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
@@ -2487,6 +2490,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-references-container > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-references-container > div > section > p {
   text-indent: -16px;
   padding-left: 16px;
 }

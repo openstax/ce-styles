@@ -6,7 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.223.0] - 2023-03-13
+## [v1.124.0] - 2023-03-24
+
+* Enable scrolling for wide equations on `webview`
+* Enable scrolling for wide tables on `webview`
+* Add top margin to `tables` in `cosmos`
+* Style `client teaching boxed note` in `nursing`
+* Revert `summary` to one column in `organic-chemistry`
+* Revert changes for `exercise-block` class
+* Nursing Style Review Updates
+* Nursing Styles Updates
+* Added fearure styles for Nursing Series
+* Add additional styling to  `carnival` `ModuleWithIndentation` Styling
+* Style `ProblemPrefix` from exercises in `organic-chemistry`
+* Change `Checkpoint` into `Mac Tip` in `bca`
+* Change `WrittenExercises` into `WrittenQuestions` in `bca`
+
+## [v1.123.0] - 2023-03-13
 
 * Style `full-width` tables in `college-success`
 * Bake exercise context in `cardboard`
@@ -14,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Display `organic-chemistry` Answer Key in two columns
 * Fix unit folio from `marketing`
 * Bake `CenteredText` in `organic-chemistry`
+* Add styles for Nursing Series
 * Fix scaled down non-figures in `webview`
 
 ## [v1.122.0] - 2023-02-24
