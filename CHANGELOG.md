@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * fix icon size for `clinical-tip` note in `nursing-external`
+* Hide unit in `nursing`
+
+## [v1.124.0] - 2023-03-24
 
 * Enable scrolling for wide equations on `webview`
 * Enable scrolling for wide tables on `webview`
@@ -22,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Change `Checkpoint` into `Mac Tip` in `bca`
 * Change `WrittenExercises` into `WrittenQuestions` in `bca`
 
-## [v1.223.0] - 2023-03-13
+## [v1.123.0] - 2023-03-13
 
 * Style `full-width` tables in `college-success`
 * Bake exercise context in `cardboard`
