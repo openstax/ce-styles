@@ -1,0 +1,143 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #00819A;
+
+$ChapterIntroType: fullWidth;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/folio';
+
+@include add_settings((
+    BookRoot: (
+        _selectors: (":root"),
+        'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
+        'BookRoot:::text-align': justify,
+    ),
+));
+
+@include add_settings((
+  UnitToc:(
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocUnitLink:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::nursingTocColor'),
+  ),
+));
+
+// Chapter Intro
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::nursingIntroColor"),
+  ),
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
+    'ChapterOutlineContainer:::font-weight': normal,
+    'ChapterOutlineContainer:::font-size': font-scale(-1),
+  ),
+));
+
+//Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::nursingHeaderColor"),
+  ),
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+  PageTitles: (
+    _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+  EobTitles: (
+    _selectors: ('.os-eob'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+// Learning Objectives
+@include add_settings((
+  LearningObjectivesNumbered: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+// Tables
+@include add_settings((
+  BasicTable: (
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
+  ),
+));
+
+//Centered Text
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
+
+// Common Settings
+@include use('BookRoot', "common:::BookRoot");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('CenteredText', 'common:::CenteredTextShape');
+
+// Book Specific Styles
+@include use('UnitToc', 'carnival:::UnitToc');
+@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
+
+// Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+
+// Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EobTitles', 'carnival:::EobTitlesShape');
+@include use('UnitTitle', 'common:::Hidden');
+
+// Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
+@include use('FigureFromExercisesSolution','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
+@include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
+
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+
+// Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use("NotesLists", "carnival:::NotesListsShape");

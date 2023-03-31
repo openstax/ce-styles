@@ -22,6 +22,25 @@
   ),
 ));
 
+@include create_shape('carnival:::LearningObjectivesNumberedShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            map-merge($ListItem--Objectives--Flex, (
+              _components: (
+                $ListItem--Objectives__NumberToken,
+              )
+            )),
+          )
+        )),
+      )
+    )),
+  )
+));
+
 @include create_shape('carnival:::ObjectivesNoteColoredDotShape', ( // used for Learning Objectives in hs-physics and for Chapter Objectives in Chapter Intro in anatomy
   _components: (
     map-merge($Objectives__Container, (

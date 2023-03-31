@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create basic styles for `nursing-internal`
 * Hide unit in `nursing`
 
 ## [v1.124.0] - 2023-03-24

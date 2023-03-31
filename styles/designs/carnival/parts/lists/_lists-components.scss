@@ -128,3 +128,31 @@ $ListItem--Objectives__Dot: (
     color: enum('ValueSet:::REQUIRED'),
   )
 );
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: " > ul",
+    _properties:(
+        margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
+        list-style-type: none,
+    )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties: (
+      display: flex,
+      max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+    margin-right: h-spacing(1),
+  )
+);
