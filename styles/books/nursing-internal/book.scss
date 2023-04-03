@@ -97,6 +97,90 @@ $ChapterIntroType: fullWidth;
   )
 ));
 
+// Notes
+@include add_settings((
+    LinkToLearningNote:(
+        _selectors: (".link-to-learning"),
+        'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
+    ),
+    UnfoldingCasestudyNote:(
+        _selectors: (".unfolding-casestudy"),
+        group-border-color: (_ref: 'colorMap:::unfoldingCaseStudyColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::unfoldingCaseStudyColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
+    ),
+    RNStoriesNote:(
+        _selectors: (".rn-stories"),
+        group-border-color: (_ref: 'colorMap:::RNStoriesColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::RNStoriesColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-rnstories.svg")) no-repeat top left,
+    ),
+    ClinicalSafetyNote:(
+        _selectors: (".clinical-safety"),
+        group-border-color: (_ref: 'colorMap:::checkYourUnderstanding'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::checkYourUnderstanding'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-check.svg")) no-repeat top left,
+    ),
+    CulturalContextNote:(
+        _selectors: (".cultural-context"),
+        group-border-color: (_ref: 'colorMap:::culturalContextColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::culturalContextColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-lifestageculture.svg")) no-repeat top left,
+    ),
+    PatientConversationsNote:(
+        _selectors: (".patient-conversations"),
+        group-border-color: (_ref: 'colorMap:::patientConversationsColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::patientConversationsColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-debate.svg")) no-repeat top left,
+    ),
+    PharmaConnectionsNote:(
+        _selectors: (".pharma-connections"),
+        group-border-color: (_ref: 'colorMap:::pharmaConnectionsColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::pharmaConnectionsColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-pharmacology.svg")) no-repeat top left,
+    ),
+    LegalEthicalNote:(
+        _selectors: (".legal-ethical"),
+        group-border-color: (_ref: 'colorMap:::legalEthicalColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::legalEthicalColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-homestaticimbalance.svg")) no-repeat top left,
+    ),
+    MultiDisciplinaryNote:(
+        _selectors: (".multi-disciplinary"),
+        group-border-color: (_ref: 'colorMap:::microConnectionColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::microConnectionColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-microconnections.svg")) no-repeat top left,
+    ),
+    ClinicalJudgmentNote:(
+        _selectors: (".clinical-judgment"),
+        group-border-color: (_ref: 'colorMap:::clinicalJudgmentColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::clinicalJudgmentColor'),
+    ),
+    ElectronicHrNote:(
+        _selectors: (".electronic-hr"),
+        group-border-color: (_ref: 'colorMap:::electronicHrColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::electronicHrColor'),
+    ),
+    PsychosocialConsiderationsNote:(
+        _selectors: (".psychosocial-considerations"),
+        group-border-color: (_ref: 'colorMap:::psychosocialConsiderationsColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+        'Title:::color': (_ref: 'colorMap:::psychosocialConsiderationsColor'),
+    ),
+));
+
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
@@ -141,3 +225,17 @@ $ChapterIntroType: fullWidth;
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use("NotesLists", "carnival:::NotesListsShape");
+
+// Notes
+@include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
+@include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
+@include use('RNStoriesNote', 'carnival:::IconNoteShape');
+@include use('ClinicalSafetyNote', 'carnival:::IconNoteShape');
+@include use('CulturalContextNote', 'carnival:::IconNoteShape');
+@include use('PatientConversationsNote', 'carnival:::IconNoteShape');
+@include use('PharmaConnectionsNote', 'carnival:::IconNoteShape');
+@include use('LegalEthicalNote', 'carnival:::IconNoteShape');
+@include use('MultiDisciplinaryNote', 'carnival:::IconNoteShape');
+@include use('ClinicalJudgmentNote', 'carnival:::BoxedNoteShape');
+@include use('ElectronicHrNote', 'carnival:::BoxedNoteShape');
+@include use('PsychosocialConsiderationsNote', 'carnival:::BoxedNoteShape');
