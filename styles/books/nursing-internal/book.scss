@@ -202,6 +202,14 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::nursingHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
+
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
@@ -270,3 +278,9 @@ $ChapterIntroType: fullWidth;
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+
+// EOB
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
+@include use('AnswerKey', 'carnival:::AnswerKeyShape');
+@include use('AnswerKeySolution', 'carnival:::AnswerKeySolutionShape');
+@include use('Index', 'carnival:::IndexShape');
