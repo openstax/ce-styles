@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style eoc modules from `nursing-internal`
 * Style notes from `nursing-internal`
 * Create basic styles for `nursing-internal`
 * fix icon size for `clinical-tip` note in `nursing-external`

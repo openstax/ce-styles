@@ -66,6 +66,10 @@ $ChapterIntroType: fullWidth;
     'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
     'H1AppendixText:::color': (_ref: 'colorMap:::nursingHeaderColor'),
   ),
+  EocCompositePageTitles: (
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
   EobTitles: (
     _selectors: ('.os-eob'),
     'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
@@ -181,12 +185,30 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
+// Modules
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-glossary-container', '.os-summary-container'),
+  ),
+));
+
+@include add_settings((
+  EocExercisesModules: (
+    _selectors: (
+        '.os-review-questions-container', '.os-check-understanding-container', '.os-critical-thinking-container',
+        '.os-competency-based-container', '.os-reflection-questions-container', '.os-what-nurses-do-container'
+    ),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('CenteredText', 'common:::CenteredTextShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
@@ -199,6 +221,7 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
 
@@ -218,6 +241,8 @@ $ChapterIntroType: fullWidth;
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
@@ -239,3 +264,9 @@ $ChapterIntroType: fullWidth;
 @include use('ClinicalJudgmentNote', 'carnival:::BoxedNoteShape');
 @include use('ElectronicHrNote', 'carnival:::BoxedNoteShape');
 @include use('PsychosocialConsiderationsNote', 'carnival:::BoxedNoteShape');
+
+// EOC
+@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('EocExercisesModules','carnival:::ExercisesModuleShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
