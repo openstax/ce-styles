@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.125.0] - 2023-04-07
+
 * Style eob modules from `nursing-internal`
 * Style eoc modules from `nursing-internal`
 * Style notes from `nursing-internal`
