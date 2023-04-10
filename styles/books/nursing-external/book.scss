@@ -115,10 +115,24 @@ $ChapterIntroType: fullWidth;
 // Tables
 @include add_settings((
   BasicTableWithCaptionOnTop: (
-    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    _selectors: ('.os-table:not(.os-unstyled-container):not(.no-cellborder)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
+  ),
+));
+
+@include add_settings((
+  NoCellBordersTable: (
+    _selectors: ('.os-table.no-cellborder'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionTitle:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionNumber:::font-family': (_ref: 'typography:::sansFont'),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));
 
@@ -372,6 +386,8 @@ $ChapterIntroType: fullWidth;
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
+@include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
+// Okay, so none are using the basic table shape which has the no sides. class no-cellborders
 
 //Lists
 @include use('PageLists', 'carnival:::PageListsShape');

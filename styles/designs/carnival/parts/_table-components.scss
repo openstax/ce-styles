@@ -120,6 +120,20 @@ $Table__Data: (
     )
 );
 
+$Table__Data--NoCellBorder: (
+  _name: "TableDataNoCellBorder",
+    _subselector: " > td",
+    _properties: (
+        border: none,
+        font-family: enum('ValueSet:::OPTIONAL'),
+        font-weight: enum('ValueSet:::OPTIONAL'),
+        padding-top: table-v-spacing(1),
+        padding-bottom: table-v-spacing(1),
+        padding-right: table-h-spacing(1),
+        padding-left: table-h-spacing(1),
+    )
+);
+
 $Table__Data--Unstyled: (
     _name: "TableUnstyledData",
     _subselector: " > td",
