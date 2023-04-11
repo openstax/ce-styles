@@ -148,7 +148,7 @@ $ChapterIntroType: fullWidth;
 // EOC exercises
 @include add_settings((
   ExercisesModule: (
-    _selectors: (".os-eoc.os-review-questions-container"),
+    _selectors: ('.os-eoc.os-review-questions-container', '.unfolding-casestudy', '.single-casestudy'),
     'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
@@ -292,7 +292,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 
-
 @include add_settings((
   CaseReflectionNote:(
     _selectors: (".case-reflection"),
@@ -302,13 +301,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-@include add_settings((
-  NoteExercises: (
-    _selectors: ('[data-type="exercises"] :not(.os-review-container)'),
-    'NoteExerciseQuestions:::display': inline-flex,
-  ),
-));
-
+// @include add_settings((
+//   NoteExercises: (
+//     _selectors: ('.os-note-body[data-type="injected-exercise"]'),
+//     'NoteExerciseQuestions:::display': inline-flex,
+//   ),
+// ));
 
 // Target labels
 @include add_settings((
@@ -331,8 +329,6 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 
 
-
-
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
@@ -341,8 +337,6 @@ $ChapterIntroType: fullWidth;
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
-
-
 
 
 //Figures
