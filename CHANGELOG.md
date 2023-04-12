@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `key terms header color` in `nursing-external`
 * Style `casestudy notes exercises` in `nursing-external`
 * Style `blue text` in `nursing-external`
+* Update icons for carnival-lifestageculture.svg and carnival-rnstories.svg
 
 ## [v1.125.0] - 2023-04-07
 
