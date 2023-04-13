@@ -122,7 +122,7 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise', '.injected-exercise', '[data-type="injected-exercise"]'),
+        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
@@ -130,6 +130,12 @@
         'ProblemsExercisesSolutionBefore1:::color': (_ref: 'colorMap:::NoteText'),
         'ProblemsExercisesSolutionBefore2:::color': (_ref: 'colorMap:::NoteText'),
         'ButtonInExerciseSolution:::color': (_ref: 'colorMap:::SolutionButtonText'),
+    ),
+));
+
+@include add_settings((
+    InjectedExercise: (
+        _selectors: ('[data-type="injected-exercise"]'),
     ),
 ));
 
@@ -331,6 +337,7 @@
 @include use('Note', 'webview:::NoteShape');
 // Exercises
 @include use('Exercise', 'webview:::ExerciseShape');
+@include use('InjectedExercise', 'webview:::InjectedExerciseShape');
 @include use('ExerciseInAppendix', 'webview:::ExerciseInAppendixShape');
 @include use('ExerciseInlined', 'webview:::ExerciseInlined');
 // Tables
