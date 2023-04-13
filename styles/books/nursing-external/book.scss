@@ -115,7 +115,7 @@ $ChapterIntroType: fullWidth;
 // Tables
 @include add_settings((
   BasicTableWithCaptionOnTop: (
-    _selectors: ('.os-table:not(.os-unstyled-container):not(.no-cellborder)'),
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
@@ -124,14 +124,14 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   NoCellBordersTable: (
-    _selectors: ('table.no-cellborder'),
+    _selectors: ('.os-table > table.no-cellborder'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionTitleLabel:::color': red, //(_ref: 'colorMap:::nursingTableColor'),
-    'CaptionTitleLabel:::font-family': (_ref: 'typography:::sansFont'),
-    'CaptionTitle:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
     'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionNumber:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
     'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));

@@ -33,6 +33,17 @@ $Table__Container--ModuleWithUnstyledTable: (
     )
 );
 
+$Table__Wrapper--NoCellBorder: (
+    _name: "TableWrapperNoCellBorder",
+    _subselector: "",
+    _properties: (
+        border-collapse: collapse,
+        margin-top: v-spacing(1),
+        margin-bottom: 0,
+        width: 100%
+    )
+);
+
 $Table--ModuleWithUnstyledTable: (
     _name: "TableModuleWithUnstyledTable",
     _subselector: " > table.unstyled",
@@ -66,6 +77,23 @@ $Table__Head__Cell: (
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
         padding: table-v-spacing(1) table-h-spacing(1), //left as a temporary solution (the values of these functions are the sema in this case), we need to investigate the second function value are not showing in the output file (it only happens when the functions are defined together for padding property value in compoents, when they are defined in settings file it works fine)
+    )
+);
+
+$Table__Head__Cell--NoCellBorder: (
+    _name: "NoBordersTableHeadCell",
+    _subselector: " > th",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        font-family: enum('ValueSet:::OPTIONAL'),
+        font-weight: enum('ValueSet:::OPTIONAL'),
+        padding: 0.16rem table-h-spacing(1),
+
     )
 );
 
@@ -124,11 +152,10 @@ $Table__Data--NoCellBorder: (
   _name: "TableDataNoCellBorder",
     _subselector: " > td",
     _properties: (
-        border: none,
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
         padding-right: table-h-spacing(1),
         padding-left: table-h-spacing(1),
     )
@@ -233,6 +260,20 @@ $Table__Row--Last--MergedCells__Data: (
     _subselector: " > tr:last-of-type > td:only-of-type",
     _properties: (
         border-right: none,
+    )
+);
+
+$Table__Row--HeaderNoCellBorders: (
+    _name: "NoCellBordersHeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding: 0.16rem table-h-spacing(1),
     )
 );
 
