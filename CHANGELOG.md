@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style injected exercises on `webview`
 * Decrease table caption line height in `carnival`
 * Style `key terms header color` in `nursing-external`
 * Style `casestudy notes exercises` in `nursing-external`
