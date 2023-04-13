@@ -15,7 +15,7 @@ $Table__Container__Wrapper: empty_wrapper(TableContainer, ' .os-table');
 
 $Table: (
     _name: "Table",
-    _subselector: " > table:not(.no-cellborders)",
+    _subselector: " > table:not(.no-cellborder)",
     _properties: (
         border-collapse: enum('ValueSet:::OPTIONAL'),
         width: enum('ValueSet:::OPTIONAL'),
