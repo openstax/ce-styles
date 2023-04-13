@@ -85,7 +85,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocCompositePageTitles: (
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
-    'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
   ),
 ));
 
@@ -162,7 +162,7 @@ $ChapterIntroType: fullWidth;
 // EOC exercises
 @include add_settings((
   ExercisesModule: (
-    _selectors: (".os-eoc.os-review-questions-container"),
+    _selectors: ('.os-eoc.os-review-questions-container', '.unfolding-casestudy', '.single-casestudy'),
     'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
@@ -306,7 +306,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 
-
 @include add_settings((
   CaseReflectionNote:(
     _selectors: (".case-reflection"),
@@ -315,14 +314,6 @@ $ChapterIntroType: fullWidth;
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
   ),
 ));
-
-@include add_settings((
-  NoteExercises: (
-    _selectors: ('[data-type="exercises"] :not(.os-review-container)'),
-    'NoteExerciseQuestions:::display': inline-flex,
-  ),
-));
-
 
 // Target labels
 @include add_settings((
@@ -339,12 +330,11 @@ $ChapterIntroType: fullWidth;
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
+@include use('BlueText', "common:::ColoredText");
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
-
-
 
 
 //Titles
@@ -355,8 +345,6 @@ $ChapterIntroType: fullWidth;
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
-
-
 
 
 //Figures

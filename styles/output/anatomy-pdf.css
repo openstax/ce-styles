@@ -1752,6 +1752,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   caption-side: bottom;
   prince-caption-page: all;
   font-size: 0.8333333333rem;
+  line-height: 1rem;
 }
 
 .os-table.os-top-titled-container .os-caption-container > .os-title-label {
@@ -2752,6 +2753,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-index-container > .group-by > .os-index-item > .os-term-section-link {
   content: target-counter(attr(href, url), page);
+}
+
+.os-references-container > p {
+  text-indent: -16px;
+  padding-left: 16px;
 }
 
 .os-references-container > section > p {
