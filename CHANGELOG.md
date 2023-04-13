@@ -6,8 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-<<<<<<< HEAD
-=======
+* Style `no-cellborder` tables in `carnival` for `nursing-external`
 * Style injected exercises on `webview`
 * Decrease table caption line height in `carnival`
 * Style `key terms header color` in `nursing-external`
@@ -21,7 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style eoc modules from `nursing-internal`
 * Style notes from `nursing-internal`
 * Create basic styles for `nursing-internal`
->>>>>>> hysterical.herbology
 * fix icon size for `clinical-tip` note in `nursing-external`
 * Hide unit in `nursing`
 
