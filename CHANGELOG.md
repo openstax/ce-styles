@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `Answer Key` on `webview` 
+* Fix styles for `organic-chemistry` TOC
+* Style `no-cellborder` tables in `carnival` for `nursing-external`
 * Style injected exercises on `webview`
 * Decrease table caption line height in `carnival`
 * Style `key terms header color` in `nursing-external`

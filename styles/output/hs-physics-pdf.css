@@ -1528,13 +1528,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: auto;
 }
 
-.os-table:not(.os-unstyled-container) > table {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 0;
 }
 
-.os-table:not(.os-unstyled-container) > table > thead > tr > th {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th {
   border-bottom: 0.1rem solid black;
   border-top: 0.1rem solid black;
   font-family: Mulish, sans-serif;
@@ -1542,39 +1542,39 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-valign=top] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=left] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=left] {
   text-align: left;
 }
 
-.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=right] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=right] {
   text-align: right;
 }
 
-.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=center] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=center] {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=left] {
   text-align: left;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=right] {
   text-align: right;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=center] {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
   font-family: IBM Plex Sans, sans-serif;
   border-left: 0.025rem solid black;
   padding-top: 0.7rem;
@@ -1583,17 +1583,17 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td {
   border-bottom: 0.025rem solid black;
   padding: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:only-of-type {
+.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
 }
 
@@ -1651,12 +1651,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-.os-table.os-top-titled-container > table {
+.os-table.os-top-titled-container > table:not(.no-cellborder) {
   border-collapse: collapse;
   width: 100%;
 }
 
-.os-table.os-top-titled-container > table > thead > tr > th {
+.os-table.os-top-titled-container > table:not(.no-cellborder) > thead > tr > th {
   border-bottom: 0.1rem solid black;
   border-top: 0.1rem solid black;
   font-family: Mulish, sans-serif;
@@ -1664,7 +1664,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr > td:not(:only-of-type) {
+.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
   font-family: IBM Plex Sans, sans-serif;
   border-left: 0.025rem solid black;
   border-bottom: 0.025rem solid black;
@@ -1674,12 +1674,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr:last-of-type {
+.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr:last-of-type {
   border-bottom: 0.1rem solid black;
 }
 
@@ -1717,23 +1717,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
-.os-table.os-unstyled-container > table > thead > tr > th {
+.os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th {
   padding: 0.7rem;
 }
 
-.os-table.os-unstyled-container > table > tbody > tr > td {
+.os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
 
-.os-eoc [data-type=problem] > div .os-table > table {
+.os-eoc [data-type=problem] > div .os-table > table:not(.no-cellborder) {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-eoc [data-type=problem] > div .os-table > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -1741,12 +1741,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-eoc [data-type=exercise-question] > div .os-table > table {
+.os-eoc [data-type=exercise-question] > div .os-table > table:not(.no-cellborder) {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-eoc [data-type=exercise-question] > div .os-table > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
