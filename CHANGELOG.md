@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `answer key exercises` in `nursing-external`
 * Style `casestudy notes exercises` in `nursing-external`
 * Style `blue text` in `nursing-external`
 
