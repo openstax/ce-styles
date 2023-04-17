@@ -1,0 +1,16 @@
+@import 'answerkey-components';
+
+@include create_shape('webview:::AnswerKeyShape', (
+    _components: (
+        map-merge($AnswerKey__Container, (
+            _components: (
+                map-merge($AnswerKey__SolutionArea, (
+                    _components: (
+                        $AnswerKey__Solution__NoteNumber,
+                    ),
+                )),
+                $AnswerKey__Solution__Number,
+            ),
+        )),
+    )
+));

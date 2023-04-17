@@ -1,0 +1,21 @@
+$AnswerKey__Container: empty_wrapper(AnswerKeyContainer, '');
+
+$AnswerKey__SolutionArea: empty_wrapper(AnswerKeySolutionArea, ' > .os-solution-area');
+
+$AnswerKey__Solution__NoteNumber: (
+  _name: "AnswerKeySolutionNoteNumber",
+  _subselector: (' > .os-note-number'),
+  _properties: (
+    font-weight: bold,
+    font-size: scaled_size(1.8rem),
+  ),
+);
+
+$AnswerKey__Solution__Number: (
+  _name: "AnswerKeySolutionNumber",
+  _subselector: (' .os-number'),
+  _properties: (
+    font-weight: bold,
+    text-decoration: none,
+  ),
+);

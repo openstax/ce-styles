@@ -312,6 +312,12 @@
     )
 ));
 
+@include add_settings((
+    AnswerKey: (
+        _selectors: ('.os-eob.os-solutions-container'),
+    )
+));
+
 // Colored Text
 @include use('RedColoredText', 'webview:::ColoredText');
 
@@ -375,8 +381,10 @@
 // Hide Iframe links
 @include use('NonScreenElements', 'common:::Hidden');
 // EOC
-@include use('Index', 'webview:::IndexShape');
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');
 @include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');
 @include use('FurtherReading', 'webview:::ModuleWithIndentationShape');
 
+// EOB
+@include use('Index', 'webview:::IndexShape');
+@include use('AnswerKey', 'webview:::AnswerKeyShape');
