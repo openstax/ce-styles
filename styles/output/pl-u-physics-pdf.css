@@ -2345,8 +2345,40 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+.os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th[data-valign=top] {
+  vertical-align: top;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th[data-align=left] {
+  text-align: left;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th[data-align=right] {
+  text-align: right;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th[data-align=center] {
+  text-align: center;
+}
+
 .os-table.os-unstyled-container > table:not(.no-cellborder) > thead > tr > th {
   padding: 0.7rem;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td[data-valign=top] {
+  vertical-align: top;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td[data-align=left] {
+  text-align: left;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td[data-align=right] {
+  text-align: right;
+}
+
+.os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td[data-align=center] {
+  text-align: center;
 }
 
 .os-table.os-unstyled-container > table:not(.no-cellborder) > tbody > tr > td {

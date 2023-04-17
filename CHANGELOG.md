@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `indented-text` in `nursing-internal`
-* Style `Answer Key` on `webview` 
+* Style `Answer Key` on `webview`
 * Fix styles for `organic-chemistry` TOC
 * Style `no-cellborder` tables in `carnival` for `nursing-external`
 * Style injected exercises on `webview`
@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `casestudy notes exercises` in `nursing-external`
 * Style `blue text` in `nursing-external`
 * Update icons for carnival-lifestageculture.svg and carnival-rnstories.svg
+* Fix alignment in carnival `UnnumberedUnstyledTable` shape
 
 ## [v1.125.0] - 2023-04-07
 
