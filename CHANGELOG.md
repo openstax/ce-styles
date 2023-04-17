@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix base font for `nursing-internal`
 * Style `indented-text` in `nursing-internal`
 * Style `Answer Key` on `webview` 
 * Fix styles for `organic-chemistry` TOC
