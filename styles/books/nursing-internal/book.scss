@@ -13,13 +13,6 @@ $ChapterIntroType: fullWidth;
 @import '../../design-settings/carnival/_settings.scss';
 @import '../../designs/carnival/pdf/folio';
 
-@include add_settings((
-    BookRoot: (
-        _selectors: (":root"),
-        'BookRoot:::font-family': (_ref: 'typography:::baseOption2Font'),
-        'BookRoot:::text-align': justify,
-    ),
-));
 
 @include add_settings((
   UnitToc:(
@@ -221,6 +214,7 @@ $ChapterIntroType: fullWidth;
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
+@include use('ParaIndented', 'carnival:::ParaIndentedShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
