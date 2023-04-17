@@ -184,6 +184,10 @@
                             _components: (
                                 map-merge($Table__Row, (
                                     _components: (
+                                        $Table__HeadCell--TopAligned,
+                                        $Table__HeadCell--LeftAligned,
+                                        $Table__HeadCell--RightAligned,
+                                        $Table__HeadCell--Centered,
                                         $Table__Head__Cell,
                                     )
                                 )),
@@ -193,6 +197,10 @@
                             _components: (
                                 map-merge($Table__Row, (
                                     _components: (
+                                        $Table__Data--TopAligned,
+                                        $Table__Data--LeftAligned,
+                                        $Table__Data--RightAligned,
+                                        $Table__Data--Centered,
                                         $Table__Data--Unstyled,
                                     )
                                 )),
