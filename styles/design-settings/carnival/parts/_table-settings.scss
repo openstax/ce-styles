@@ -14,6 +14,8 @@
         TableData: (
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
@@ -72,6 +74,8 @@
         TableData: (
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
@@ -129,6 +133,8 @@
             border-bottom: 0.025rem solid black,
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
@@ -174,6 +180,8 @@
             border-bottom: 0.025rem solid black,
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
@@ -219,11 +227,17 @@
 @include add_settings((
     TableFromEoCExercises:( // Only needed for EoC Multicolumn Exercises
       _selectors: ('.os-eoc [data-type="problem"]', '.os-eoc [data-type="exercise-question"]'),
-      'Table:::max-width': 100%,
-      'Table:::table-layout': fixed,
-      'TableData:::text-align': center,
-      'TableData:::padding-right': $columnTablePadding,
-      'TableData:::padding-left': $columnTablePadding,
+      Table: (
+        max-width: 100%,
+        table-layout: fixed,
+      ),
+      TableData: (
+        text-align: center,
+        padding-top: table-v-spacing(1),
+        padding-bottom: table-v-spacing(1),
+        padding-right: $columnTablePadding,
+        padding-left: $columnTablePadding,
+      )
     ),
 ));
 

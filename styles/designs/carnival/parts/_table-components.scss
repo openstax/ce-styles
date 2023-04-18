@@ -141,23 +141,10 @@ $Table__Data: (
         border-left: enum('ValueSet:::OPTIONAL'),
         border-bottom: enum('ValueSet:::OPTIONAL'),
         text-align: enum('ValueSet:::OPTIONAL'), //used in exercises
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
+        padding-bottom: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
         padding-right: enum('ValueSet:::REQUIRED'), //different value in exercises
         padding-left: enum('ValueSet:::REQUIRED'), //different value in exercises
-    )
-);
-
-$Table__Data--NoCellBorder: (
-  _name: "TableDataNoCellBorder",
-    _subselector: " > td",
-    _properties: (
-        font-family: enum('ValueSet:::OPTIONAL'),
-        font-weight: enum('ValueSet:::OPTIONAL'),
-        padding-top: 0.16rem,
-        padding-bottom: 0.16rem,
-        padding-right: table-h-spacing(1),
-        padding-left: table-h-spacing(1),
     )
 );
 
@@ -273,7 +260,10 @@ $Table__Row--HeaderNoCellBorders: (
         border-bottom-color: black,
         border-bottom-width: 0.1rem,
         border-bottom-style: solid,
-        padding: 0.16rem table-h-spacing(1),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
     )
 );
 

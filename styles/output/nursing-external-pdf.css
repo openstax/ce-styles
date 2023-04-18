@@ -1911,7 +1911,10 @@ a[role=doc-noteref] {
   border-bottom-color: black;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
-  padding: 0.16rem;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .os-table > table.no-cellborder > thead > tr > th {
@@ -1947,10 +1950,13 @@ a[role=doc-noteref] {
   border-bottom-color: black;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
-  padding: 0.16rem;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td {
+.os-table > table.no-cellborder > tbody > tr > td:not(:only-of-type) {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-right: 0.7rem;
