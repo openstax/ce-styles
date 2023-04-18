@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Restyle `Learning Objectives` in `bca`
+* Style `regular iconned notes` in `nursing-external`
 * Style `answer key exercises` in `nursing-external`
 * Fix base font for `nursing-internal`
 * Style `indented-text` in `nursing-internal`
