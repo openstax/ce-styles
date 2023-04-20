@@ -224,36 +224,36 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   HealthyPeopleNote:(
     _selectors: (".healthy-people"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::healthyPeopleColor'),
+    group-border-color: (_ref: 'colorMap:::healthyPeopleColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-group.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-group.svg")) no-repeat top left,
   ),
 ));
 
 @include add_settings((
   TrendingTodayNote:(
     _selectors: (".trending-today"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::trendingColor'),
+    group-border-color: (_ref: 'colorMap:::trendingColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaper.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaper.svg")) no-repeat top left,
   ),
 ));
 
 @include add_settings((
   CultureConversationsNote:(
     _selectors: (".culture-conversations"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::cultureColor'),
+    group-border-color: (_ref: 'colorMap:::cultureColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-debate.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-debate.svg")) no-repeat top left,
   ),
 ));
 
 @include add_settings((
   TheoryActionNote:(
     _selectors: (".theory-action"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::connectedColor'),
+    group-border-color: (_ref: 'colorMap:::connectedColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-connected.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-connected.svg")) no-repeat top left,
   ),
 ));
 
@@ -296,27 +296,28 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   UnfoldingCasestudyNote:(
     _selectors: (".unfolding-casestudy"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::unfoldingCaseStudyColor'),
+    group-border-color: (_ref: 'colorMap:::unfoldingCaseStudyColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
   ),
 ));
 
 @include add_settings((
   SingleCasestudyNote:(
     _selectors: (".single-casestudy"),
+    group-border-color: (_ref: 'colorMap:::nursingNoteColor'),
     'Container:::border-bottom-color': (_ref: 'colorMap:::nursingNoteColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
   ),
 ));
 
 @include add_settings((
   MediaFeatureNote:(
     _selectors: (".media-feature"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
+    group-border-color: (_ref: 'colorMap:::mediaVideoColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-media.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-media.svg")) no-repeat top left,
   ),
 ));
 
@@ -324,9 +325,9 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   CaseReflectionNote:(
     _selectors: (".case-reflection"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::nursingNoteColor'),
+    group-border-color: (_ref: 'colorMap:::nursingNoteColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-exampleblue.svg")) no-repeat top left,
   ),
 ));
 
@@ -407,18 +408,18 @@ $ChapterIntroType: fullWidth;
 @include use('SafetyAlertNote', 'carnival:::IconCondensedShape');
 @include use('ClinicalTipNote', 'carnival:::IconCondensedShape');
 @include use('HealthAlertNote', 'carnival:::IconCondensedShape');
-@include use('HealthyPeopleNote', 'carnival:::IconCondensedShape');
-@include use('TrendingTodayNote', 'carnival:::IconCondensedShape');
-@include use('CultureConversationsNote', 'carnival:::IconCondensedShape');
-@include use('TheoryActionNote', 'carnival:::IconCondensedShape');
+@include use('HealthyPeopleNote', 'carnival:::IconNoteShape');
+@include use('TrendingTodayNote', 'carnival:::IconNoteShape');
+@include use('CultureConversationsNote', 'carnival:::IconNoteShape');
+@include use('TheoryActionNote', 'carnival:::IconNoteShape');
 @include use('SpecialConsiderationsNote', 'carnival:::BoxedNoteShape');
 @include use('BlackBoxNote', 'carnival:::BoxedNoteShape');
 @include use('ClientTeachingNote', 'carnival:::BoxedNoteShape');
 @include use('PracticeProblemsNote', 'carnival:::BoxedNoteShape');
-@include use('UnfoldingCasestudyNote', 'carnival:::IconCondensedShape');
-@include use('SingleCasestudyNote', 'carnival:::IconCondensedShape');
-@include use('CaseReflectionNote', 'carnival:::IconCondensedShape');
-@include use('MediaFeatureNote', 'carnival:::IconCondensedShape');
+@include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
+@include use('SingleCasestudyNote', 'carnival:::IconNoteShape');
+@include use('CaseReflectionNote', 'carnival:::IconNoteShape');
+@include use('MediaFeatureNote', 'carnival:::IconNoteShape');
 
 
 //EOC

@@ -2660,6 +2660,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 16px;
 }
 
 [data-type=injected-exercise].exercise-block [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
@@ -2668,14 +2669,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=injected-exercise].exercise-block [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
   display: table-cell;
-  width: 100%;
 }
 
 [data-type=injected-exercise].exercise-block [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
-  width: 100%;
 }
 
 [data-type=injected-exercise]:not(.exercise-block) [data-type=alphabetical-question-multipart] {
@@ -2692,6 +2691,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 16px;
 }
 
 [data-type=injected-exercise]:not(.exercise-block) [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
@@ -2700,14 +2700,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=injected-exercise]:not(.exercise-block) [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
   display: table-cell;
-  width: 100%;
 }
 
 [data-type=injected-exercise]:not(.exercise-block) [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
-  width: 100%;
 }
 
 [data-type=exercise-question] {
@@ -3278,6 +3276,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 16px;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-divider {
@@ -3333,5 +3332,5 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-solution-container {
-  width: 90% !important;
+  width: auto !important;
 }
