@@ -252,6 +252,14 @@
   _components: (
     map-merge($Table__Container, (
           _components: (
+              map-merge($Caption__Container--Table--OnTop, (
+                  _components: (
+                      $Caption__TitleLabel,
+                      $Caption__Number,
+                      $Caption__Title,
+                      $Caption__Text
+                  )
+              )),
               map-merge($Table, (
                   _components: (
                     map-merge($Table__Head, (

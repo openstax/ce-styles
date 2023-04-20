@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Restyle `no-cellborder` caption, bugfix for `vertically-tight` tables
 * Style `vertically-tight` Tables for `nursing-external`
 * Fix `no-cellborder` Tables up
 * Fix exercises alignment in `organic-chemistry`
