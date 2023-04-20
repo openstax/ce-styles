@@ -1834,7 +1834,7 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:is(:first-of-type:not(:only-of-type)) {
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
@@ -1899,6 +1899,38 @@ a[role=doc-noteref] {
 
 .os-table.os-no-cellborder-container {
   margin-bottom: 0.7rem;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-table.os-no-cellborder-container .os-caption-container {
+  display: table-caption;
+  prince-caption-page: all;
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+}
+
+.os-table.os-no-cellborder-container .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #0074BC;
+  text-transform: uppercase;
+}
+
+.os-table.os-no-cellborder-container .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #0074BC;
+}
+
+.os-table.os-no-cellborder-container .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table.os-no-cellborder-container .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-table.os-no-cellborder-container > table {
@@ -1988,8 +2020,23 @@ a[role=doc-noteref] {
   text-align: center;
 }
 
+.os-table.os-no-cellborder-container > table > tbody > tr > td {
+  padding: 0.7rem;
+}
+
 .os-table.os-no-cellborder-container > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
+}
+
+.os-table.os-no-cellborder-container:after {
+  content: '';
+  width: 100%;
+  border-top-color: #0074BC;
+  border-top-width: 0.12rem;
+  border-top-style: solid;
+  display: block;
+  position: relative;
+  top: -0.1rem;
 }
 
 .os-table.os-vertically-tight-container > table.vertically-tight > thead > tr > th {
@@ -1997,7 +2044,7 @@ a[role=doc-noteref] {
   padding-bottom: 0.16rem;
 }
 
-.os-table.os-vertically-tight-container > table.vertically-tight > tbody > tr > td:not(.regular-spacing) {
+.os-table.os-vertically-tight-container > table.vertically-tight > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
 }
@@ -2506,7 +2553,7 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr > td:is(:first-of-type:not(:only-of-type)) {
+.os-table.os-top-titled-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }

@@ -133,6 +133,9 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   NoCellBordersTable: (
     _selectors: ('.os-table.os-no-cellborder-container'),
+    'TableContainer:::display': table,
+    'TableContainer:::margin-left': auto,
+    'TableContainer:::margin-right': auto,
     'Table:::border-collapse': collapse,
     'Table:::margin-top': v-spacing(1),
     'Table:::margin-bottom': 0,

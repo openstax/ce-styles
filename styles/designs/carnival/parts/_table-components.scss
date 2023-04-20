@@ -195,7 +195,7 @@ $Table__Data--Centered: (
 
 $Table__Data--VerticallyTight: (
     _name: "VerticallyTightTableData",
-    _subselector: "> td:not(.regular-spacing)",     // not class for css precedence
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",     // not classes for css precedence
     _properties: (
         padding-top: 0.16rem,
         padding-bottom: 0.16rem
@@ -215,7 +215,7 @@ $Table__Data--BottomBorder: (
 // Altered as part of the fix for cnx-recipes#1827.
 $Table__Data--First: (
     _name: "FirstTableData",
-    _subselector: " > td:is(:first-of-type:not(:only-of-type))",
+    _subselector: " > td:first-of-type:not(:only-of-type)",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
