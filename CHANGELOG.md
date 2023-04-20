@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix exercises alignment in `organic-chemistry`
 * Restyle `Learning Objectives` in `bca`
 * Style `regular iconned notes` in `nursing-external`
 * Style `answer key exercises` in `nursing-external`
