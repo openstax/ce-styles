@@ -60,7 +60,7 @@
 
 @include add_settings((
     BasicTableWithCaptionOnTop: (
-        _selectors: (".os-table:not(.os-unstyled-container)"),
+        _selectors: (".os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)"),
         TableContainer: (
             display: table,
             margin-left: auto,

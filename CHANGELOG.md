@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `vertically-tight` Tables for `nursing-external`
+* Fix `no-cellborder` Tables up
 * Style `answer key exercises` in `nursing-external`
 * Fix base font for `nursing-internal`
 * Style `indented-text` in `nursing-internal`

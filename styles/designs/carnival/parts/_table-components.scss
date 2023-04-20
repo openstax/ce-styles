@@ -81,7 +81,10 @@ $Table__Head__Cell--NoCellBorder: (
         border-bottom-style: solid,
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
-        padding: 0.16rem table-h-spacing(1),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        padding-right: table-h-spacing(1),
+        padding-left: table-h-spacing(1),
 
     )
 );
@@ -115,6 +118,15 @@ $Table__HeadCell--Centered: (
     _subselector: "> th[data-align="center"]",
     _properties: (
         text-align: center,
+    )
+);
+
+$Table__HeadCell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
     )
 );
 
@@ -181,6 +193,15 @@ $Table__Data--Centered: (
     )
 );
 
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing)",     // not class for css precedence
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
+    )
+);
+
 // Added as part of the fix for cnx-recipes#1827.
 $Table__Data--BottomBorder: (
     _name: "TableBottomBorderData",
@@ -194,7 +215,7 @@ $Table__Data--BottomBorder: (
 // Altered as part of the fix for cnx-recipes#1827.
 $Table__Data--First: (
     _name: "FirstTableData",
-    _subselector: " > td:first-of-type:not(:only-of-type)",
+    _subselector: " > td:is(:first-of-type:not(:only-of-type))",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
@@ -239,8 +260,8 @@ $Table__Row--Last--MergedCells__Data: (
     )
 );
 
-$Table__Row--HeaderNoCellBorders: (
-    _name: "NoCellBordersHeaderRow",
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
     _subselector: " > tr.header-row > td",
     _properties: (
         border-top-color: black,
@@ -251,6 +272,7 @@ $Table__Row--HeaderNoCellBorders: (
         border-bottom-style: solid,
         padding-top: 0.16rem,
         padding-bottom: 0.16rem,
+        font-weight: 700,
         padding-left: table-h-spacing(1),
         padding-right: table-h-spacing(1),
     )

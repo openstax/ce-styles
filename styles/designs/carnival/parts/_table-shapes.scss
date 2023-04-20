@@ -24,6 +24,7 @@
                         map-merge($Table__Body, (
                             _components: (
                                 map-merge($Table__Row, (
+                                  $Table__Row--HeaderRowClass
                                     _components: (
                                         $Table__Data--TopAligned,
                                         $Table__Data--LeftAligned,
@@ -255,7 +256,7 @@
                   _components: (
                     map-merge($Table__Head, (
                         _components: (
-                          $Table__Row--HeaderNoCellBorders,
+                          $Table__Row--HeaderRowClass,
                             map-merge($Table__Row, (
                                 _components: (
                                     $Table__Head__Cell--NoCellBorder,
@@ -269,7 +270,7 @@
                     )),
                     map-merge($Table__Body, (
                         _components: (
-                          $Table__Row--HeaderNoCellBorders,
+                          $Table__Row--HeaderRowClass,
                             map-merge($Table__Row, (
                                 _components: (
                                     $Table__Data,
@@ -297,6 +298,29 @@
             )
         )),
     )
+));
+
+@include create_shape('carnival:::VerticallyTightTableShape',  (
+  _components: (
+    map-merge($Table__Head, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                  $Table__HeadCell--VerticallyTight
+                )
+            )),
+        )
+    )),
+    map-merge($Table__Body, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                    $Table__Data--VerticallyTight,
+                )
+            )),
+        )
+    )),
+  )
 ));
 
 /* .alternate-shading is a new class for tables and cookbook will need to be updated to reflect this.

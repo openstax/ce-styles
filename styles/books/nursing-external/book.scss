@@ -115,7 +115,7 @@ $ChapterIntroType: fullWidth;
 // Tables
 @include add_settings((
   BasicTableWithCaptionOnTop: (
-    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    _selectors: ('.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
@@ -132,7 +132,7 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   NoCellBordersTable: (
-    _selectors: ('.os-table > table.no-cellborder'),
+    _selectors: ('.os-table.os-no-cellborder-container'),
     'Table:::border-collapse': collapse,
     'Table:::margin-top': v-spacing(1),
     'Table:::margin-bottom': 0,
@@ -144,6 +144,7 @@ $ChapterIntroType: fullWidth;
     'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
     'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
     'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'NoBordersTableHeadCell:::font-weight': 700,
     'TableData:::padding-top': 0.16rem,
     'TableData:::padding-bottom': 0.16rem,
     'TableData:::padding-right': table-h-spacing(1),
@@ -154,19 +155,7 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   VerticallyTightTable: (
-    _selectors: ('.os-table > table.vertically-tight'),
-    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionTitleLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'CaptionTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
-    'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TableData:::padding-top': 0.16rem,
-    'TableData:::padding-bottom': 0.16rem,
-    'TableData:::padding-right': table-h-spacing(1),
-    'TableData:::padding-left': table-h-spacing(1),
-    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
+    _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
   )
 ));
 
@@ -401,6 +390,7 @@ $ChapterIntroType: fullWidth;
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
 @include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
+@include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
 
 
 //Lists
