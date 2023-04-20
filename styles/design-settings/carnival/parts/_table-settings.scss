@@ -1,6 +1,6 @@
 @include add_settings((
     BasicTable: (
-        _selectors: (".os-table:not(.os-unstyled-container)"),
+        _selectors: (".os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)"),
         TableContainer: (
             display: table,
             margin-left: auto,
@@ -240,6 +240,7 @@
       )
     ),
 ));
+
 
 @include add_settings((
     TableAfterExercisePara: (

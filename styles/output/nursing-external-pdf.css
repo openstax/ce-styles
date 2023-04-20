@@ -1779,13 +1779,13 @@ a[role=doc-noteref] {
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) {
+.os-table:not(.os-unstyled-container) > table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 0;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th {
+.os-table:not(.os-unstyled-container) > table > thead > tr > th {
   border-bottom: 0.1rem solid black;
   border-top: 0.1rem solid black;
   font-family: Mulish, sans-serif;
@@ -1793,39 +1793,39 @@ a[role=doc-noteref] {
   padding: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-valign=top] {
+.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=left] {
+.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=left] {
   text-align: left;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=right] {
+.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=right] {
   text-align: right;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > thead > tr > th[data-align=center] {
+.os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=center] {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-valign=top] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=left] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
   text-align: left;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=right] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
   text-align: right;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td[data-align=center] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
   font-family: IBM Plex Sans, sans-serif;
   border-left: 0.025rem solid black;
   padding-top: 0.7rem;
@@ -1834,17 +1834,17 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr > td {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td {
   border-bottom: 0.025rem solid black;
   padding: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container) > table:not(.no-cellborder) > tbody > tr:last-of-type > td:only-of-type {
+.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
 }
 
@@ -1859,12 +1859,12 @@ a[role=doc-noteref] {
   top: -0.1rem;
 }
 
-.os-eoc [data-type=problem] > div .os-table > table:not(.no-cellborder) {
+.os-eoc [data-type=problem] > div .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-eoc [data-type=problem] > div .os-table > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
+.os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -1872,12 +1872,12 @@ a[role=doc-noteref] {
   padding-left: 4px;
 }
 
-.os-eoc [data-type=exercise-question] > div .os-table > table:not(.no-cellborder) {
+.os-eoc [data-type=exercise-question] > div .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
 
-.os-eoc [data-type=exercise-question] > div .os-table > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
+.os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -1898,13 +1898,16 @@ a[role=doc-noteref] {
 }
 
 .os-table > table.no-cellborder {
-  border-collapse: collapse;
-  margin-top: 0.7rem;
-  margin-bottom: 0;
-  width: 100%;
+  margin-bottom: 0.7rem;
 }
 
-.os-table > table.no-cellborder > thead > tr.header-row > td {
+.os-table > table.no-cellborder > table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.os-table > table.no-cellborder > table > thead > tr.header-row > td {
   border-top-color: black;
   border-top-width: 0.1rem;
   border-top-style: solid;
@@ -1917,7 +1920,7 @@ a[role=doc-noteref] {
   padding-right: 0.7rem;
 }
 
-.os-table > table.no-cellborder > thead > tr > th {
+.os-table > table.no-cellborder > table > thead > tr > th {
   border-top-color: black;
   border-top-width: 0.1rem;
   border-top-style: solid;
@@ -1927,23 +1930,23 @@ a[role=doc-noteref] {
   padding: 0.16rem;
 }
 
-.os-table > table.no-cellborder > thead > tr > th[data-valign=top] {
+.os-table > table.no-cellborder > table > thead > tr > th[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table > table.no-cellborder > thead > tr > th[data-align=left] {
+.os-table > table.no-cellborder > table > thead > tr > th[data-align=left] {
   text-align: left;
 }
 
-.os-table > table.no-cellborder > thead > tr > th[data-align=right] {
+.os-table > table.no-cellborder > table > thead > tr > th[data-align=right] {
   text-align: right;
 }
 
-.os-table > table.no-cellborder > thead > tr > th[data-align=center] {
+.os-table > table.no-cellborder > table > thead > tr > th[data-align=center] {
   text-align: center;
 }
 
-.os-table > table.no-cellborder > tbody > tr.header-row > td {
+.os-table > table.no-cellborder > table > tbody > tr.header-row > td {
   border-top-color: black;
   border-top-width: 0.1rem;
   border-top-style: solid;
@@ -1956,30 +1959,30 @@ a[role=doc-noteref] {
   padding-right: 0.7rem;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td:not(:only-of-type) {
+.os-table > table.no-cellborder > table > tbody > tr > td:not(:only-of-type) {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td[data-valign=top] {
+.os-table > table.no-cellborder > table > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td[data-align=left] {
+.os-table > table.no-cellborder > table > tbody > tr > td[data-align=left] {
   text-align: left;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td[data-align=right] {
+.os-table > table.no-cellborder > table > tbody > tr > td[data-align=right] {
   text-align: right;
 }
 
-.os-table > table.no-cellborder > tbody > tr > td[data-align=center] {
+.os-table > table.no-cellborder > table > tbody > tr > td[data-align=center] {
   text-align: center;
 }
 
-.os-table > table.no-cellborder > tbody > tr:last-of-type > td:only-of-type {
+.os-table > table.no-cellborder > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
 }
 
@@ -2464,12 +2467,12 @@ a[role=doc-noteref] {
   text-align: center;
 }
 
-.os-table.os-top-titled-container > table:not(.no-cellborder) {
+.os-table.os-top-titled-container > table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.os-table.os-top-titled-container > table:not(.no-cellborder) > thead > tr > th {
+.os-table.os-top-titled-container > table > thead > tr > th {
   border-bottom: 0.1rem solid black;
   border-top: 0.1rem solid black;
   font-family: Mulish, sans-serif;
@@ -2477,7 +2480,7 @@ a[role=doc-noteref] {
   padding: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr > td:not(:only-of-type) {
+.os-table.os-top-titled-container > table > tbody > tr > td:not(:only-of-type) {
   font-family: IBM Plex Sans, sans-serif;
   border-left: 0.025rem solid black;
   border-bottom: 0.025rem solid black;
@@ -2487,12 +2490,12 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table.os-top-titled-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
 
-.os-table.os-top-titled-container > table:not(.no-cellborder) > tbody > tr:last-of-type {
+.os-table.os-top-titled-container > table > tbody > tr:last-of-type {
   border-bottom: 0.1rem solid black;
 }
 

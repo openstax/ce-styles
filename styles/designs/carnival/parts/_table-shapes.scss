@@ -248,39 +248,43 @@
 // middle has a rov class="header-row"
 
 @include create_shape('carnival:::NoCellBordersTableShape',  (
-    _components: (
-      map-merge($Table__Wrapper--NoCellBorder, (
-        _components: (
-          map-merge($Table__Head, (
-              _components: (
-                $Table__Row--HeaderNoCellBorders,
-                  map-merge($Table__Row, (
-                      _components: (
-                          $Table__Head__Cell--NoCellBorder,
-                          $Table__HeadCell--TopAligned,
-                          $Table__HeadCell--LeftAligned,
-                          $Table__HeadCell--RightAligned,
-                          $Table__HeadCell--Centered,
-                      )
-                  )),
-              )
-          )),
-          map-merge($Table__Body, (
-              _components: (
-                $Table__Row--HeaderNoCellBorders,
-                  map-merge($Table__Row, (
-                      _components: (
-                          $Table__Data,
-                          $Table__Data--TopAligned,
-                          $Table__Data--LeftAligned,
-                          $Table__Data--RightAligned,
-                          $Table__Data--Centered,
-                      )
-                  )),
-                  $Table__Row--Last--MergedCells__Data,
-              )
-          )),
-      )
+  _components: (
+    map-merge($Table__Container, (
+          _components: (
+              map-merge($Table, (
+                  _components: (
+                    map-merge($Table__Head, (
+                        _components: (
+                          $Table__Row--HeaderNoCellBorders,
+                            map-merge($Table__Row, (
+                                _components: (
+                                    $Table__Head__Cell--NoCellBorder,
+                                    $Table__HeadCell--TopAligned,
+                                    $Table__HeadCell--LeftAligned,
+                                    $Table__HeadCell--RightAligned,
+                                    $Table__HeadCell--Centered,
+                                )
+                            )),
+                        )
+                    )),
+                    map-merge($Table__Body, (
+                        _components: (
+                          $Table__Row--HeaderNoCellBorders,
+                            map-merge($Table__Row, (
+                                _components: (
+                                    $Table__Data,
+                                    $Table__Data--TopAligned,
+                                    $Table__Data--LeftAligned,
+                                    $Table__Data--RightAligned,
+                                    $Table__Data--Centered,
+                                )
+                            )),
+                            $Table__Row--Last--MergedCells__Data,
+                        )
+                    )),
+                  )
+                ))
+            )
     ))
   )
 ));
