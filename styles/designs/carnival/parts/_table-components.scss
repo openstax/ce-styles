@@ -15,7 +15,7 @@ $Table__Container__Wrapper: empty_wrapper(TableContainer, ' .os-table');
 
 $Table: (
     _name: "Table",
-    _subselector: " > table:not(.no-cellborder)",
+    _subselector: " > table",
     _properties: (
         border-collapse: enum('ValueSet:::OPTIONAL'),
         width: enum('ValueSet:::OPTIONAL'),
@@ -30,17 +30,6 @@ $Table__Container--ModuleWithUnstyledTable: (
     _subselector: " > .os-table.os-unstyled-container",
     _properties: (
         margin-bottom: 0,
-    )
-);
-
-$Table__Wrapper--NoCellBorder: (
-    _name: "TableWrapperNoCellBorder",
-    _subselector: "",
-    _properties: (
-        border-collapse: collapse,
-        margin-top: v-spacing(1),
-        margin-bottom: 0,
-        width: 100%
     )
 );
 
@@ -92,7 +81,10 @@ $Table__Head__Cell--NoCellBorder: (
         border-bottom-style: solid,
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
-        padding: 0.16rem table-h-spacing(1),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        padding-right: table-h-spacing(1),
+        padding-left: table-h-spacing(1),
 
     )
 );
@@ -129,6 +121,15 @@ $Table__HeadCell--Centered: (
     )
 );
 
+$Table__HeadCell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
+    )
+);
+
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
 
 $Table__Row: empty_wrapper(TableRow, ' > tr');
@@ -141,23 +142,10 @@ $Table__Data: (
         border-left: enum('ValueSet:::OPTIONAL'),
         border-bottom: enum('ValueSet:::OPTIONAL'),
         text-align: enum('ValueSet:::OPTIONAL'), //used in exercises
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
+        padding-bottom: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
         padding-right: enum('ValueSet:::REQUIRED'), //different value in exercises
         padding-left: enum('ValueSet:::REQUIRED'), //different value in exercises
-    )
-);
-
-$Table__Data--NoCellBorder: (
-  _name: "TableDataNoCellBorder",
-    _subselector: " > td",
-    _properties: (
-        font-family: enum('ValueSet:::OPTIONAL'),
-        font-weight: enum('ValueSet:::OPTIONAL'),
-        padding-top: 0.16rem,
-        padding-bottom: 0.16rem,
-        padding-right: table-h-spacing(1),
-        padding-left: table-h-spacing(1),
     )
 );
 
@@ -205,6 +193,15 @@ $Table__Data--Centered: (
     )
 );
 
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing)",     // not class for css precedence
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
+    )
+);
+
 // Added as part of the fix for cnx-recipes#1827.
 $Table__Data--BottomBorder: (
     _name: "TableBottomBorderData",
@@ -218,7 +215,7 @@ $Table__Data--BottomBorder: (
 // Altered as part of the fix for cnx-recipes#1827.
 $Table__Data--First: (
     _name: "FirstTableData",
-    _subselector: " > td:first-of-type:not(:only-of-type)",
+    _subselector: " > td:is(:first-of-type:not(:only-of-type))",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
@@ -263,8 +260,8 @@ $Table__Row--Last--MergedCells__Data: (
     )
 );
 
-$Table__Row--HeaderNoCellBorders: (
-    _name: "NoCellBordersHeaderRow",
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
     _subselector: " > tr.header-row > td",
     _properties: (
         border-top-color: black,
@@ -273,7 +270,11 @@ $Table__Row--HeaderNoCellBorders: (
         border-bottom-color: black,
         border-bottom-width: 0.1rem,
         border-bottom-style: solid,
-        padding: 0.16rem table-h-spacing(1),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
     )
 );
 
