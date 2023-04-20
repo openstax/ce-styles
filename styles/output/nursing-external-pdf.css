@@ -2017,8 +2017,23 @@ a[role=doc-noteref] {
   text-align: center;
 }
 
+.os-table.os-no-cellborder-container > table > tbody > tr > td {
+  padding: 0.7rem;
+}
+
 .os-table.os-no-cellborder-container > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
+}
+
+.os-table.os-no-cellborder-container:after {
+  content: '';
+  width: 100%;
+  border-top-color: #0074BC;
+  border-top-width: 0.12rem;
+  border-top-style: solid;
+  display: block;
+  position: relative;
+  top: -0.1rem;
 }
 
 .os-table.os-vertically-tight-container > table.vertically-tight > thead > tr > th {

@@ -251,49 +251,51 @@
 @include create_shape('carnival:::NoCellBordersTableShape',  (
   _components: (
     map-merge($Table__Container, (
-          _components: (
-              map-merge($Caption__Container--Table--OnTop, (
-                  _components: (
-                      $Caption__TitleLabel,
-                      $Caption__Number,
-                      $Caption__Title,
-                      $Caption__Text
-                  )
-              )),
-              map-merge($Table, (
-                  _components: (
-                    map-merge($Table__Head, (
-                        _components: (
-                          $Table__Row--HeaderRowClass,
-                            map-merge($Table__Row, (
-                                _components: (
-                                    $Table__Head__Cell--NoCellBorder,
-                                    $Table__HeadCell--TopAligned,
-                                    $Table__HeadCell--LeftAligned,
-                                    $Table__HeadCell--RightAligned,
-                                    $Table__HeadCell--Centered,
-                                )
-                            )),
-                        )
-                    )),
-                    map-merge($Table__Body, (
-                        _components: (
-                          $Table__Row--HeaderRowClass,
-                            map-merge($Table__Row, (
-                                _components: (
-                                    $Table__Data,
-                                    $Table__Data--TopAligned,
-                                    $Table__Data--LeftAligned,
-                                    $Table__Data--RightAligned,
-                                    $Table__Data--Centered,
-                                )
-                            )),
-                            $Table__Row--Last--MergedCells__Data,
-                        )
-                    )),
-                  )
-                ))
-            )
+      _components: (
+          map-merge($Caption__Container--Table--OnTop, (
+              _components: (
+                  $Caption__TitleLabel,
+                  $Caption__Number,
+                  $Caption__Title,
+                  $Caption__Text
+              )
+          )),
+          map-merge($Table, (
+              _components: (
+                map-merge($Table__Head, (
+                    _components: (
+                      $Table__Row--HeaderRowClass,
+                        map-merge($Table__Row, (
+                            _components: (
+                                $Table__Head__Cell--NoCellBorder,
+                                $Table__HeadCell--TopAligned,
+                                $Table__HeadCell--LeftAligned,
+                                $Table__HeadCell--RightAligned,
+                                $Table__HeadCell--Centered,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($Table__Body, (
+                    _components: (
+                      $Table__Row--HeaderRowClass,
+                        map-merge($Table__Row, (
+                            _components: (
+                                $Table__Data,
+                                $Table__Data--TopAligned,
+                                $Table__Data--LeftAligned,
+                                $Table__Data--RightAligned,
+                                $Table__Data--Centered,
+                                $Table__Data--BottomBorder,
+                            )
+                        )),
+                        $Table__Row--Last--MergedCells__Data,
+                    )
+                )),
+              )
+            )),
+            $Table__BottomBorder--AfterTable,
+      )
     ))
   )
 ));
