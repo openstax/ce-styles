@@ -10,7 +10,6 @@
                 $Exercise__Title,
                 $Exercise__Problem1,
                 $Exercise__Problem2,
-                $Exercise__ExerciseQuestion,
                 map-merge($Exercise__Solution1, (
                     _components: (
                         $Button--InExerciseSolution,
@@ -64,6 +63,22 @@
             ),
         )),
     ),
+));
+
+@include create_shape('webview:::InjectedExerciseShape', (
+    _components: (
+        map-merge($Exercise__Container, (
+            _components: (
+                map-merge($Exercise__ExerciseQuestion, (
+                    _components: (
+                        $Exercise__ProblemSolution__Number,
+                        $Exercise__ProblemSolution__Divider,
+                        $Exercise__Problem__Container,
+                    ),
+                )),
+            ),
+        )),
+    )
 ));
 
 @include create_shape('webview:::ExerciseInAppendixShape', (

@@ -903,10 +903,6 @@ a:hover {
   padding: 0.5em 1em;
 }
 
-[data-type=example] [data-type=exercise-question] {
-  padding: 0.5em 1em;
-}
-
 [data-type=example] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1072,10 +1068,6 @@ a:hover {
 }
 
 .example .problem {
-  padding: 0.5em 1em;
-}
-
-.example [data-type=exercise-question] {
   padding: 0.5em 1em;
 }
 
@@ -1247,10 +1239,6 @@ a:hover {
   padding: 0.5em 1em;
 }
 
-[data-type=exercise] [data-type=exercise-question] {
-  padding: 0.5em 1em;
-}
-
 [data-type=exercise] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1419,10 +1407,6 @@ a:hover {
   padding: 0.5em 1em;
 }
 
-.exercise [data-type=exercise-question] {
-  padding: 0.5em 1em;
-}
-
 .exercise [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1579,348 +1563,21 @@ a:hover {
   margin: 0;
 }
 
-.injected-exercise div[data-type=title] {
-  font-weight: bold;
-}
-
-.injected-exercise [data-type=problem] {
-  padding: 0.5em 1em;
-}
-
-.injected-exercise .problem {
-  padding: 0.5em 1em;
-}
-
-.injected-exercise [data-type=exercise-question] {
-  padding: 0.5em 1em;
-}
-
-.injected-exercise [data-type=solution] {
-  padding: 0.5em 1em;
-  border-top-width: 0.1rem;
-  border-top-color: #dcdcdc;
-  border-top-style: solid;
-}
-
-.injected-exercise [data-type=solution] .btn-link {
-  color: #21366b;
-  font-weight: 400;
-  border-radius: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
-}
-
-.injected-exercise [data-type=solution] > .ui-toggle {
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  list-style: none;
-  cursor: pointer;
-}
-
-.injected-exercise [data-type=solution] > .ui-toggle::before {
-  content: "[Show/Hide Solution]";
-}
-
-.injected-exercise [data-type=solution] > summary.ui-toggle::-webkit-details-marker {
-  display: none;
-}
-
-.injected-exercise .solution {
-  padding: 0.5em 1em;
-  border-top-width: 0.1rem;
-  border-top-color: #dcdcdc;
-  border-top-style: solid;
-}
-
-.injected-exercise .solution .btn-link {
-  color: #21366b;
-  font-weight: 400;
-  border-radius: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
-}
-
-.injected-exercise .solution > .ui-toggle {
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  list-style: none;
-  cursor: pointer;
-}
-
-.injected-exercise .solution > .ui-toggle::before {
-  content: "[Show/Hide Solution]";
-}
-
-.injected-exercise .solution > summary.ui-toggle::-webkit-details-marker {
-  display: none;
-}
-
-.injected-exercise.problems-exercises [data-type=problem]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-.injected-exercise.problems-exercises .problem::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-.injected-exercise.problems-exercises [data-type=solution]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-.injected-exercise.problems-exercises .solution::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-.injected-exercise[data-type=problems-exercises] [data-type=problem]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-.injected-exercise[data-type=problems-exercises] .problem::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-.injected-exercise[data-type=problems-exercises] [data-type=solution]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-.injected-exercise[data-type=problems-exercises] .solution::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-.injected-exercise.check-understanding [data-type=title]::before {
-  margin-right: 0;
-  content: "";
-}
-
-.injected-exercise.check-understanding .title::before {
-  margin-right: 0;
-  content: "";
-}
-
-.injected-exercise.conceptual-questions [data-type=problem] {
-  border-top: none;
-}
-
-.injected-exercise.conceptual-questions [data-type=problem] p {
-  margin: 0;
-}
-
-.injected-exercise.conceptual-questions .problem {
-  border-top: none;
-}
-
-.injected-exercise.conceptual-questions .problem p {
-  margin: 0;
-}
-
-[data-type=injected-exercise] div[data-type=title] {
-  font-weight: bold;
-}
-
-[data-type=injected-exercise] [data-type=problem] {
-  padding: 0.5em 1em;
-}
-
-[data-type=injected-exercise] .problem {
-  padding: 0.5em 1em;
-}
-
 [data-type=injected-exercise] [data-type=exercise-question] {
   padding: 0.5em 1em;
+  display: table;
 }
 
-[data-type=injected-exercise] [data-type=solution] {
-  padding: 0.5em 1em;
-  border-top-width: 0.1rem;
-  border-top-color: #dcdcdc;
-  border-top-style: solid;
+[data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
 }
 
-[data-type=injected-exercise] [data-type=solution] .btn-link {
-  color: #21366b;
-  font-weight: 400;
-  border-radius: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
+[data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 0.5em;
 }
 
-[data-type=injected-exercise] [data-type=solution] > .ui-toggle {
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  list-style: none;
-  cursor: pointer;
-}
-
-[data-type=injected-exercise] [data-type=solution] > .ui-toggle::before {
-  content: "[Show/Hide Solution]";
-}
-
-[data-type=injected-exercise] [data-type=solution] > summary.ui-toggle::-webkit-details-marker {
-  display: none;
-}
-
-[data-type=injected-exercise] .solution {
-  padding: 0.5em 1em;
-  border-top-width: 0.1rem;
-  border-top-color: #dcdcdc;
-  border-top-style: solid;
-}
-
-[data-type=injected-exercise] .solution .btn-link {
-  color: #21366b;
-  font-weight: 400;
-  border-radius: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
-}
-
-[data-type=injected-exercise] .solution > .ui-toggle {
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  list-style: none;
-  cursor: pointer;
-}
-
-[data-type=injected-exercise] .solution > .ui-toggle::before {
-  content: "[Show/Hide Solution]";
-}
-
-[data-type=injected-exercise] .solution > summary.ui-toggle::-webkit-details-marker {
-  display: none;
-}
-
-[data-type=injected-exercise].problems-exercises [data-type=problem]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-[data-type=injected-exercise].problems-exercises .problem::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-[data-type=injected-exercise].problems-exercises [data-type=solution]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-[data-type=injected-exercise].problems-exercises .solution::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-[data-type=injected-exercise][data-type=problems-exercises] [data-type=problem]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-[data-type=injected-exercise][data-type=problems-exercises] .problem::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Problem";
-}
-
-[data-type=injected-exercise][data-type=problems-exercises] [data-type=solution]::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-[data-type=injected-exercise][data-type=problems-exercises] .solution::before {
-  color: #424242;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  content: "Solution";
-}
-
-[data-type=injected-exercise].check-understanding [data-type=title]::before {
-  margin-right: 0;
-  content: "";
-}
-
-[data-type=injected-exercise].check-understanding .title::before {
-  margin-right: 0;
-  content: "";
-}
-
-[data-type=injected-exercise].conceptual-questions [data-type=problem] {
-  border-top: none;
-}
-
-[data-type=injected-exercise].conceptual-questions [data-type=problem] p {
-  margin: 0;
-}
-
-[data-type=injected-exercise].conceptual-questions .problem {
-  border-top: none;
-}
-
-[data-type=injected-exercise].conceptual-questions .problem p {
-  margin: 0;
+[data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+  display: table-cell;
 }
 
 .appendix [data-type=exercise] .os-problem-container p {
@@ -2397,30 +2054,6 @@ p.student-sample {
   display: none;
 }
 
-.os-index-container {
-  margin-top: 1.5rem;
-}
-
-.os-index-container > .group-by {
-  margin-bottom: 1.5rem;
-}
-
-.os-index-container > .group-by > .group-label {
-  margin-bottom: 1rem;
-  font-size: calc(2.1rem * var(--content-text-scale));
-  font-weight: bold;
-  display: block;
-}
-
-.os-index-container > .group-by > .os-index-item {
-  margin-bottom: 0.5rem;
-}
-
-.os-index-container > .group-by > .os-index-item > .os-term {
-  padding-right: 0.5rem;
-  font-weight: bold;
-}
-
 section.works-cited [data-type=title] {
   text-align: center;
 }
@@ -2446,4 +2079,38 @@ section.further-reading [data-type=title] {
 section.further-reading p {
   text-indent: -2.5rem;
   padding-left: 2.5rem;
+}
+
+.os-index-container {
+  margin-top: 1.5rem;
+}
+
+.os-index-container > .group-by {
+  margin-bottom: 1.5rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  margin-bottom: 1rem;
+  font-size: calc(2.1rem * var(--content-text-scale));
+  font-weight: bold;
+  display: block;
+}
+
+.os-index-container > .group-by > .os-index-item {
+  margin-bottom: 0.5rem;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 0.5rem;
+  font-weight: bold;
+}
+
+.os-eob.os-solutions-container > .os-solution-area > .os-note-number {
+  font-weight: bold;
+  font-size: calc(1.8rem * var(--content-text-scale));
+}
+
+.os-eob.os-solutions-container .os-number {
+  font-weight: bold;
+  text-decoration: none;
 }

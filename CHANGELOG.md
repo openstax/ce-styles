@@ -6,6 +6,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [v1.126.0] 2023-04-21
+
+* Restyle `no-cellborder` caption, bugfix for `vertically-tight` tables
+* Style `vertically-tight` Tables for `nursing-external`
+* Fix `no-cellborder` Tables up
+* Fix exercises alignment in `organic-chemistry`
+* Restyle `Learning Objectives` in `bca`
+* Style `regular iconned notes` in `nursing-external`
+* Style `answer key exercises` in `nursing-external`
+* Fix base font for `nursing-internal`
+* Style `indented-text` in `nursing-internal`
+* Style `Answer Key` on `webview`
+* Fix styles for `organic-chemistry` TOC
+* Style `no-cellborder` tables in `carnival` for `nursing-external`
+* Style injected exercises on `webview`
+* Decrease table caption line height in `carnival`
+* Style `key terms header color` in `nursing-external`
+* Style `casestudy notes exercises` in `nursing-external`
+* Style `blue text` in `nursing-external`
+* Update icons for carnival-lifestageculture.svg and carnival-rnstories.svg
+* Fix alignment in carnival `UnnumberedUnstyledTable` shape
+
 ## [v1.125.0] - 2023-04-07
 
 * Style eob modules from `nursing-internal`

@@ -27,13 +27,40 @@ $Exercise__Problem2: (
   ),
 );
 
+/// Aproach from PDFs
 $Exercise__ExerciseQuestion: (
   _name: "Problem1",
   _subselector: ' [data-type="exercise-question"]',
   _properties: (
     padding: '0.5em 1em',
+    display: table,
   ),
 );
+
+$Exercise__ProblemSolution__Number: (
+  _name: "ProblemSolutionNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    display: table-cell,
+  )
+);
+
+$Exercise__ProblemSolution__Divider:(
+  _name: "ProblemSolutionDivider",
+  _subselector: " > .os-divider",
+  _properties:(
+    margin-right: 0.5em,
+  )
+);
+
+$Exercise__Problem__Container: (
+    _name: "ProblemContainer",
+    _subselector: " > .os-problem-container",
+    _properties:(
+      display: table-cell,
+    )
+);
+///
 
 $Exercise__Solution1: (
   _name: "Solution1",

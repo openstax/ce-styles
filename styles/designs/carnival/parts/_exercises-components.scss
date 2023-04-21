@@ -54,7 +54,6 @@ $InjectedExercise__Question__Stem: (
     _subselector: " > [data-type='question-stem']",
     _properties:(
         display: table-cell,
-        width: 100%,
     )
 );
 
@@ -65,7 +64,6 @@ $InjectedExercise__Question__Stem--WithFirstElement: (
       display: table-cell,
       vertical-align: bottom,
       padding-top: v-spacing(1),
-      width: 100%,
     )
 );
 
@@ -77,6 +75,7 @@ $InjectedExercise__ProblemSolution__Letter: (
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
+    width: 16px,
   )
 );
 
@@ -156,6 +155,14 @@ $Exercise__Solution__Container--Prefix: (
     _subselector: " > .os-solution-container",
     _properties:(
       width: '90% !important', // ToDo: refactor, set width to REQUIRED in ExerciseSolutionContainer
+    )
+);
+
+$Exercise__Solution__Container--Part: (
+    _name: "ExercisePartSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      width: 'auto !important',
     )
 );
 
