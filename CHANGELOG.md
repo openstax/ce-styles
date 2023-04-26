@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add more selectors to set text align in `organic-chemistry`
 * Fix text align in `organic-chemistry`
 
 ## [v1.126.0] 2023-04-21
