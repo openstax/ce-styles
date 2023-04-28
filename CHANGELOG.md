@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `centered-text` paragraphs in `nursing-internal`
 * Add more selectors to set text align in `organic-chemistry`
 * Fix text align in `organic-chemistry`
 
