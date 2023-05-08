@@ -208,13 +208,13 @@ $ChapterIntroType: fullWidth;
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('CenteredText', 'common:::CenteredTextShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
 @include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
 @include use('ParaIndented', 'carnival:::ParaIndentedShape');
+@include use('ParaCentered', 'carnival:::ParaCenteredShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
