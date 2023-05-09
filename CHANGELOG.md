@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Rebuild `all styles`  for `table update` in `nursing-internal`
 * Fix tables in `nursing-internal`
 
 ## [v1.127.0] - 2023-04-08
