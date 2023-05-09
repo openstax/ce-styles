@@ -7,11 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Display `Answer Key` solutions inline in `organic-chemistry`
+
+## [v1.127.0] - 2023-04-08
+
 * Style `centered-text` paragraphs in `nursing-internal`
 * Add more selectors to set text align in `organic-chemistry`
 * Fix text align in `organic-chemistry`
 
-## [v1.126.0] 2023-04-21
+## [v1.126.0] - 2023-04-21
 
 * Restyle `no-cellborder` caption, bugfix for `vertically-tight` tables
 * Style `vertically-tight` Tables for `nursing-external`
