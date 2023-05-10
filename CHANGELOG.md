@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Style `initial styless` for  `hs-college-success`
 
+* Rebuild `all styles`  for `table update` in `nursing-internal`
+* Fix tables in `nursing-internal`
+* Display `Answer Key` solutions inline in `organic-chemistry`
+
+
+
 ## [v1.127.0] - 2023-04-08
 
 * Style `centered-text` paragraphs in `nursing-internal`
