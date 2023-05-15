@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
-* Style `initial styless` for  `hs-college-success`
+* Style `The Real Deal note` in `hs-college-success`
+* Style `initial styles` for  `hs-college-success`
 
 * Rebuild `all styles`  for `table update` in `nursing-internal`
 * Fix tables in `nursing-internal`
