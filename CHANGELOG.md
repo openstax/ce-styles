@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fixed merge issues in `hs-college-success`
 * Style `The Real Deal note` in `hs-college-success`
 * Style `initial styles` for  `hs-college-success`
 
