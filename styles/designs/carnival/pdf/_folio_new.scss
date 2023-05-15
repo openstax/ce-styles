@@ -1,0 +1,198 @@
+// TODO: apply to all books and remove old file with folio
+
+@mixin folioStyles() {
+    font-size: font-scale(-1);
+    font-family: ('Mulish', sans-serif);
+    color: #A5A5A5; 
+    font-weight: 700;
+}
+
+@mixin parasWithBand($leftSelector, $rightSelector, $leftPosition, $rightPosition) {
+    #{$leftSelector} {
+        position: running(#{$leftPosition});
+        @include folioStyles();
+    }
+    
+    #{$leftSelector}::before { 
+        content: counter(page) "\00a0\00a0\00a0\00a0\00a0"; 
+    }
+    
+    #{$rightSelector} {
+        position: running(#{$rightPosition});
+        text-align: right;
+        @include folioStyles();
+    }
+    
+    #{$rightSelector}::after {
+        content: "\00a0\00a0\00a0\00a0\00a0" counter(page); 
+    }
+}
+
+// Paras
+p.folio-chapter {
+    position: running(folio_chapter);
+    @include folioStyles();
+}
+
+p.folio-module {
+    position: running(folio_module);
+    text-align: right;
+    @include folioStyles();
+}
+
+@include parasWithBand('p.folio-eoc-left', 'p.folio-eoc-right', folio_eoc_left, folio_eoc_right);
+@include parasWithBand('p.folio-appendix-left', 'p.folio-appendix-right', folio_appendix_left, folio_appendix_right);
+@include parasWithBand('p.folio-eob-left', 'p.folio-eob-right', folio_eob_left, folio_eob_right);
+
+
+//Page definitions
+nav#toc {
+    page: table-of-contents;
+}
+  
+div[data-type="page"].preface {
+    page: preface;
+    counter-reset: page 1;
+}
+
+.os-eoc {
+    page: eoc;
+}
+
+[data-type="chapter"] {
+    page: chapter;
+    prince-page-group: start;
+}
+
+div[data-type="page"].appendix {
+    page: appendix;
+}
+
+div[data-type="composite-page"].os-eob {
+    page: eob;
+}
+
+//Unnumbered pages
+@page chapter:first {
+    @top-left-corner {
+      content: none;
+    }
+    @top-right-corner {
+      content: none;
+    }
+    @top-left {
+      content: none;
+    }
+    @top-center {
+      content: none;
+    }
+    @top-right {
+      content: none;
+    }
+}
+
+@page table-of-contents {
+    @top-left-corner {
+      content: none;
+    }
+    @top-left {
+      content: none;
+    }
+    @top-right-corner {
+      content: none;
+    }
+    @top-right {
+      content: none;
+    }
+}
+
+@mixin folio($leftContent, $rightContent, $bottomContent, $page: null ) {
+    @page #{$page}:left {
+      @top-left {
+        content: $leftContent;
+        @include folioStyles();
+      }
+      @top-left-corner {
+        content: counter(page);
+        margin-right: h-spacing(5);
+        @include folioStyles();
+      }
+      @bottom-left {
+          content: $bottomContent;
+          @include folioStyles();
+      }
+    }
+  
+    @page #{$page}:right {
+      @top-right {
+        content: $rightContent;
+        @include folioStyles();
+      }
+      @top-right-corner {
+        content: counter(page);
+        margin-left: h-spacing(5);
+        @include folioStyles();
+      }
+    }
+}
+
+@mixin folioWithBand($leftContent, $rightContent, $bottomContent, $page) {
+    @page #{$page}:left {
+        @top-left {
+            content: $leftContent;
+            @include folioStyles();
+        }
+        @bottom-left {
+            content: $bottomContent;
+            @include folioStyles();
+        }
+    }
+  
+    @page #{$page}:right {
+        @top-right {
+            content: $rightContent;
+            @include folioStyles();
+        }
+    }
+}
+
+
+$defaultLeftContent: element(folio_chapter);
+$defaultRightContent: element(folio_module);
+
+$prefaceContent: string(preface-msg);
+$accessContent: string(access-for-free-msg);
+
+[data-pdf-folio-preface-message][data-pdf-folio-access-message] {
+  string-set: preface-msg attr(data-pdf-folio-preface-message) access-for-free-msg attr(data-pdf-folio-access-message); }
+
+$eocLeftContent: element(folio_eoc_left);
+$eocRightContent: element(folio_eoc_right);
+$appendixLeftContent: element(folio_appendix_left);
+$appendixRightContent: element(folio_appendix_right);
+$eobLeftContent: element(folio_eob_left);
+$eobRightContent: element(folio_eob_right);
+
+@include folio($defaultLeftContent, $defaultRightContent, $accessContent);
+@include folio($prefaceContent, $prefaceContent, $accessContent, preface );
+@include folioWithBand($eocLeftContent, $eocRightContent, $accessContent, eoc);
+@include folioWithBand($appendixLeftContent, $appendixRightContent, $accessContent, appendix);
+@include folioWithBand($eobLeftContent, $eobRightContent, $accessContent, eob);
+
+// Pages margins
+@page {
+  margin-left: 1in;
+  margin-right: 1in;
+  margin-bottom: 0.8in;
+  margin-top: 0.8in;
+}
+
+@if $ChapterIntroType == side {
+  @page chapter:first {
+    margin-right: 2in;
+  }
+  
+  @page chapter:nth(2) {
+    margin-right: 2in;
+  }
+}
