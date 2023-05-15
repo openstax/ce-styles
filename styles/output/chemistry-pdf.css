@@ -1627,6 +1627,55 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[data-valign=top] {
+  vertical-align: top;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[data-align=left] {
+  text-align: left;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[data-align=right] {
+  text-align: right;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[data-align=center] {
+  text-align: center;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type) {
+  font-family: IBM Plex Sans, sans-serif;
+  border-left: 0.025rem solid black;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+  border-left: none;
+  border-right: 0.025rem solid black;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td {
+  border-bottom: 0.025rem solid black;
+  padding: 0.7rem;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
 }
