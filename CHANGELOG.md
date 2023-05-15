@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create new approach for styling `folio`
 * Display `Answer Key` solutions inline in `organic-chemistry`
 
 ## [v1.127.0] - 2023-04-08
