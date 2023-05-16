@@ -137,6 +137,19 @@ $bandColor: #24739E;
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
   ),
+  StudentStory: (
+    _selectors: (".student-story"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-conversation.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+  ),
 ));
 
 // EoC titles
@@ -232,6 +245,7 @@ $bandColor: #24739E;
 @include use('WhatStudentsSay', 'cardboard:::IconBoxedNoteShape');
 @include use('StudentProfile', 'cardboard:::BoxedNoteWithBordersShape');
 @include use('TheRealDeal', 'cardboard:::IconBoxedNoteShape');
+@include use('StudentStory', 'cardboard:::IconBoxedNoteShape');
 
 //Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');

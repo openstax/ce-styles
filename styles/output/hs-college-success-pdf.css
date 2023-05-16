@@ -2109,6 +2109,46 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
+.student-story {
+  margin-bottom: 1.4rem;
+}
+
+.student-story > .os-title {
+  color: #FFFFFF;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #24739E;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  position: relative;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.student-story > .os-title::after {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjQuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyOC41IDI1LjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI4LjUgMjUuNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQoJLnN0MXtmaWxsOiMyMjc1OUY7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xLjEsNC4xdjExLjZjMCwwLjIsMCwwLjQsMC4xLDAuNmMwLDAuMiwwLjEsMC40LDAuMiwwLjVjMCwwLjEsMC4xLDAuMiwwLjEsMC4zYzAuMSwwLjIsMC4zLDAuNSwwLjUsMC43CgkJYzAuMSwwLjEsMC4zLDAuMywwLjQsMC40czAuMywwLjIsMC41LDAuM2MwLjQsMC4xLDAuNywwLjIsMS4xLDAuMmgzLjF2NS42bDEuOC0xLjdsMy45LTMuOEgyNGMxLjYsMCwyLjktMS4zLDIuOS0yLjlWNS41VjQuMQoJCWMwLTAuMiwwLTAuNC0wLjEtMC42UzI2LjcsMy4xLDI2LjYsM2MwLTAuMS0wLjEtMC4yLTAuMS0wLjNjLTAuMS0wLjItMC4zLTAuNS0wLjUtMC43Yy0wLjEtMC4xLTAuMy0wLjMtMC40LTAuNHMtMC4zLTAuMi0wLjUtMC4zCgkJYy0wLjQtMC4xLTAuNy0wLjItMS4xLTAuMkg0Yy0wLjQsMC0wLjgsMC4xLTEuMSwwLjJDMi43LDEuNSwyLjYsMS42LDIuNCwxLjdDMi4zLDEuOCwyLjEsMS45LDIsMi4xQzEuOCwyLjIsMS42LDIuNSwxLjUsMi43CgkJYzAsMC4xLTAuMSwwLjItMC4xLDAuM0MxLjMsMy4xLDEuMiwzLjMsMS4yLDMuNUMxLjEsMy43LDEuMSwzLjksMS4xLDQuMXoiLz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik04LjMsMTAuMmMwLTAuMywwLjEtMC42LDAuMy0wLjlDOC45LDkuMSw5LjIsOSw5LjUsOWMwLjQsMCwwLjcsMC4xLDAuOSwwLjNjMC4yLDAuMiwwLjQsMC41LDAuNCwwLjkKCQkJYzAsMC40LTAuMSwwLjYtMC40LDAuOXMtMC41LDAuMy0wLjksMC4zYy0wLjQsMC0wLjctMC4xLTAuOS0wLjNDOC40LDEwLjgsOC4zLDEwLjUsOC4zLDEwLjJ6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTEyLjgsMTAuMmMwLTAuMywwLjEtMC42LDAuMy0wLjlDMTMuNCw5LjEsMTMuNyw5LDE0LjEsOWMwLjQsMCwwLjcsMC4xLDAuOSwwLjNzMC40LDAuNSwwLjQsMC45CgkJCWMwLDAuNC0wLjEsMC42LTAuNCwwLjlzLTAuNSwwLjMtMC45LDAuM2MtMC40LDAtMC43LTAuMS0wLjktMC4zQzEyLjksMTAuOCwxMi44LDEwLjUsMTIuOCwxMC4yeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xNy40LDEwLjJjMC0wLjMsMC4xLTAuNiwwLjMtMC45QzE3LjksOS4xLDE4LjIsOSwxOC42LDljMC40LDAsMC43LDAuMSwwLjksMC4zczAuNCwwLjUsMC40LDAuOQoJCQljMCwwLjQtMC4xLDAuNi0wLjQsMC45Yy0wLjIsMC4yLTAuNSwwLjMtMC45LDAuM2MtMC40LDAtMC43LTAuMS0wLjktMC4zQzE3LjUsMTAuOCwxNy40LDEwLjUsMTcuNCwxMC4yeiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=") no-repeat top right;
+  background-size: contain;
+  height: 5rem;
+  width: 11rem;
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0.2rem;
+  margin-right: 0.7rem;
+}
+
+.student-story > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #D3E3EB;
+  padding: 0.7rem;
+}
+
 .os-table.os-unstyled-container {
   margin-bottom: 1.4rem;
 }
