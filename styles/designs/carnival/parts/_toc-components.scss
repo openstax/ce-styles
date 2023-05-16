@@ -73,7 +73,10 @@ $Toc__Chapter: (
 $Toc__Preface: (
   _name: 'TocPreface',
   _subselector: '> .os-toc-preface',
-  _properties: topLevelPageNotAppendixProperties(),
+  _properties: (
+    display: block,
+    margin-bottom: v-spacing(2)
+  ),
 );
 
 $Toc__Preface__Link:  tocLink('TocPreface');
@@ -89,13 +92,7 @@ $Toc__Appendix__Number: (
   ),
 );
 
-$Toc__Appendix: (
-  _name: 'TocAppendix',
-  _subselector: '> .os-toc-appendix',
-  _properties: (
-    margin-bottom: v-spacing(1),
-  ),
-);
+$Toc__Appendix: empty_wrapper(TocAppendix, '> .os-toc-appendix');
 
 $Toc__Appendix__Link: tocLink('TocAppendix');
 $Toc__Appendix__Link--Page: tocLinkPage('TocAppendix');
@@ -200,7 +197,10 @@ $Toc__Unit__Link: (
 $Toc__Chapter: (
   _name: 'TocChapter',
   _subselector: ' > .os-toc-chapter',
-  _properties: topLevelPageNotAppendixProperties(),
+  _properties: (
+    display: block,
+    margin-bottom: v-spacing(2)
+  ),
 );
 
 //---------------------------------------------------------------------------------------------------------------
