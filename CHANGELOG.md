@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix table border in `BasicTableWithCaptionOnTopShape`
+* Decrease margins for eob links in `TOC` from `carnival`
+* Style `The Real Deal note` in `hs-college-success`
 * Create new approach for styling `folio`
 * Style `initial styless` for  `hs-college-success`
 * Rebuild `all styles`  for `table update` in `nursing-internal`
