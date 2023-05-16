@@ -1832,6 +1832,10 @@ a[role=doc-noteref] {
   border-right: 0.025rem solid black;
 }
 
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type):not(:last-of-type) {
+  border-right: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td {
   border-bottom: 0.025rem solid black;
   padding: 0.7rem;

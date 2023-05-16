@@ -224,6 +224,14 @@ $Table__Data--First: (
     )
 );
 
+$Table__Data--NotLast: (
+    _name: "NotLastTableData",
+    _subselector: " > td:not(:only-of-type):not(:last-of-type)",
+    _properties: (
+        border-right: '0.025rem solid black',
+    )
+);
+
 $Table__Row--First: (
     _name: "FirstTableRow",
     _subselector: " > tr:first-of-type",
