@@ -643,39 +643,96 @@ a {
     This shape should be modified after cookbook change*/
 /* stylelint-disable-next-line meowtec/no-px */
 /* stylelint-disable-next-line meowtec/no-px */
-[data-type=chapter] > h1[data-type=document-title] .os-number {
-  string-set: chapter-number content();
-}
-[data-type=chapter] > h1[data-type=document-title] .os-text {
-  string-set: chapter-title content();
-}
-
-[data-type=chapter] > [data-type=page].introduction .intro-text > h2[data-type=document-title] {
-  string-set: module-number string(chapter-number);
-}
-[data-type=chapter] > [data-type=page].introduction .intro-text > h2[data-type=document-title] .os-text {
-  string-set: module-title content();
-}
-[data-type=chapter] > [data-type=page]:not(.introduction) > h2[data-type=document-title] .os-number {
-  string-set: module-number content();
-}
-[data-type=chapter] > [data-type=page]:not(.introduction) > h2[data-type=document-title] .os-text {
-  string-set: module-title content();
+p.folio-chapter {
+  position: running(folio_chapter);
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
 }
 
-.os-eoc > h2[data-type=document-title] .os-text {
-  string-set: eoc-title content();
+p.folio-module {
+  position: running(folio_module);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
 }
 
-.appendix > h1[data-type=document-title] .os-number {
-  string-set: appendix-number content();
-}
-.appendix > h1[data-type=document-title] .os-text {
-  string-set: appendix-title content();
+p.folio-eoc-left {
+  position: running(folio_eoc_left);
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
 }
 
-div[data-type=composite-page].os-eob > h1[data-type=document-title] .os-text {
-  string-set: eob-title content();
+p.folio-eoc-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-eoc-right {
+  position: running(folio_eoc_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
+}
+
+p.folio-eoc-right::after {
+  content: "     " counter(page);
+}
+
+p.folio-appendix-left {
+  position: running(folio_appendix_left);
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
+}
+
+p.folio-appendix-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-appendix-right {
+  position: running(folio_appendix_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
+}
+
+p.folio-appendix-right::after {
+  content: "     " counter(page);
+}
+
+p.folio-eob-left {
+  position: running(folio_eob_left);
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
+}
+
+p.folio-eob-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-eob-right {
+  position: running(folio_eob_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Mulish", sans-serif;
+  color: #A5A5A5;
+  font-weight: 700;
+}
+
+p.folio-eob-right::after {
+  content: "     " counter(page);
 }
 
 nav#toc {
@@ -704,7 +761,7 @@ div[data-type=composite-page].os-eob {
   page: eob;
 }
 
-@page chapter:nth(1) {
+@page chapter:first {
   @top-left-corner {
     content: none;
   }
@@ -741,159 +798,159 @@ div[data-type=composite-page].os-eob {
 
 @page :left {
   @top-left {
+    content: element(folio_chapter);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(chapter-number) " • " string(chapter-title);
   }
   @top-left-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Mulish", sans-serif;
-    color: #A5A5A5;
-    font-weight: 700;
     content: counter(page);
     margin-right: 40px;
-  }
-  @bottom-left {
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
+  }
+  @bottom-left {
     content: string(access-for-free-msg);
+    font-size: 0.8333333333rem;
+    font-family: "Mulish", sans-serif;
+    color: #A5A5A5;
+    font-weight: 700;
   }
 }
 @page :right {
   @top-right {
+    content: element(folio_module);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(module-number) " • " string(module-title);
   }
   @top-right-corner {
+    content: counter(page);
+    margin-left: 40px;
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: counter(page);
-    margin-left: 40px;
   }
 }
 @page preface:left {
   @top-left {
+    content: string(preface-msg);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(preface-msg);
   }
   @top-left-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Mulish", sans-serif;
-    color: #A5A5A5;
-    font-weight: 700;
     content: counter(page);
     margin-right: 40px;
-  }
-  @bottom-left {
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
+  }
+  @bottom-left {
     content: string(access-for-free-msg);
+    font-size: 0.8333333333rem;
+    font-family: "Mulish", sans-serif;
+    color: #A5A5A5;
+    font-weight: 700;
   }
 }
 @page preface:right {
   @top-right {
+    content: string(preface-msg);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(preface-msg);
   }
   @top-right-corner {
+    content: counter(page);
+    margin-left: 40px;
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: counter(page);
-    margin-left: 40px;
   }
 }
 @page eoc:left {
   @top-left {
+    content: element(folio_eoc_left);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: counter(page) "     " string(chapter-number) " • " string(eoc-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page eoc:right {
   @top-right {
+    content: element(folio_eoc_right);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(chapter-number) " • " string(eoc-title) "     " counter(page);
   }
 }
 @page appendix:left {
   @top-left {
+    content: element(folio_appendix_left);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: counter(page) "     " string(appendix-number) " • " string(appendix-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page appendix:right {
   @top-right {
+    content: element(folio_appendix_right);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(appendix-number) " • " string(appendix-title) "     " counter(page);
   }
 }
 @page eob:left {
   @top-left {
+    content: element(folio_eob_left);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: counter(page) "     " string(eob-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page eob:right {
   @top-right {
+    content: element(folio_eob_right);
     font-size: 0.8333333333rem;
     font-family: "Mulish", sans-serif;
     color: #A5A5A5;
     font-weight: 700;
-    content: string(eob-title) "     " counter(page);
   }
 }
 @page {
@@ -2465,6 +2522,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right: 0.025rem solid black;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type):not(:last-of-type) {
+  border-right: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td {
   border-bottom: 0.025rem solid black;
   padding: 0.7rem;
@@ -3273,7 +3334,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] {
-  display: table;
+  display: inline-table;
+  margin-right: 8px;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .problem-letter {
@@ -3333,7 +3395,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] {
-  display: table;
+  display: inline-table;
+  margin-right: 8px;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-solution-container {

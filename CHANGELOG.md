@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.127.0] - 2023-04-08
+## [Unreleased]
+
+## [v1.128.0] - 2023-05-17
+
+* Move table caption to the bottom in `nursing-external`
+* Style `Student Story Note` in `hs-college-success`
+* Fix table border in `BasicTableWithCaptionOnTopShape`
+* Decrease margins for eob links in `TOC` from `carnival`
+* Style `The Real Deal note` in `hs-college-success`
+* Create new approach for styling `folio`
+* Style `initial styless` for  `hs-college-success`
+* Rebuild `all styles`  for `table update` in `nursing-internal`
+* Fix tables in `nursing-internal`
+* Display `Answer Key` solutions inline in `organic-chemistry`
+
+## [v1.127.0] - 2023-05-08
 
 * Style `centered-text` paragraphs in `nursing-internal`
 * Add more selectors to set text align in `organic-chemistry`
