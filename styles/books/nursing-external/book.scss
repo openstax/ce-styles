@@ -111,14 +111,11 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-
 // Tables
 @include add_settings((
-  BasicTableWithCaptionOnTop: (
+  BasicTable: (
     _selectors: ('.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)'),
-    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
-    'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));
 
@@ -389,7 +386,7 @@ $ChapterIntroType: fullWidth;
 
 
 // Tables
-@include use('BasicTableWithCaptionOnTop', 'carnival:::BasicTableWithCaptionOnTopShape');
+@include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
