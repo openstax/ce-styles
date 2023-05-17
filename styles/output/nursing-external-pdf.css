@@ -1743,35 +1743,6 @@ a[role=doc-noteref] {
   margin-right: auto;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container {
-  display: table-caption;
-  prince-caption-page: all;
-  font-size: 0.8333333333rem;
-  line-height: 1rem;
-}
-
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title-label {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #0074BC;
-  text-transform: uppercase;
-}
-
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-number {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #0074BC;
-}
-
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-}
-
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-caption {
-  font-family: IBM Plex Sans, sans-serif;
-}
-
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table {
   border-collapse: collapse;
   width: 100%;
@@ -1800,6 +1771,20 @@ a[role=doc-noteref] {
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > thead > tr > th[data-align=center] {
   text-align: center;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[data-valign=top] {
@@ -1832,10 +1817,6 @@ a[role=doc-noteref] {
   border-right: 0.025rem solid black;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type):not(:last-of-type) {
-  border-right: 0.025rem solid black;
-}
-
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td {
   border-bottom: 0.025rem solid black;
   padding: 0.7rem;
@@ -1845,15 +1826,45 @@ a[role=doc-noteref] {
   border-right: none;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container):after {
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container {
+  display: table-caption;
+  caption-side: bottom;
+  prince-caption-page: all;
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container:before {
   content: '';
   width: 100%;
-  border-top-color: #0074BC;
-  border-top-width: 0.12rem;
-  border-top-style: solid;
+  border-bottom-color: #0074BC;
+  border-bottom-width: 0.12rem;
+  border-bottom-style: solid;
   display: block;
   position: relative;
   top: -0.1rem;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+  text-transform: uppercase;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table {
