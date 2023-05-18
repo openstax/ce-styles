@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix bug with margins in `TOC` from `carnival`
+
+## [v1.128.0] - 2023-05-17
+
+* Move table caption to the bottom in `nursing-external`
 * Style `Student Story Note` in `hs-college-success`
 * Fix table border in `BasicTableWithCaptionOnTopShape`
 * Decrease margins for eob links in `TOC` from `carnival`
@@ -17,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fix tables in `nursing-internal`
 * Display `Answer Key` solutions inline in `organic-chemistry`
 
-## [v1.127.0] - 2023-04-08
+## [v1.127.0] - 2023-05-08
 
 * Style `centered-text` paragraphs in `nursing-internal`
 * Add more selectors to set text align in `organic-chemistry`
