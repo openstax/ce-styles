@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix bug with margins in `TOC` from `carnival`
+
 ## [v1.128.0] - 2023-05-17
 
 * Move table caption to the bottom in `nursing-external`
