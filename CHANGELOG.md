@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix bug with margins in `TOC` from `carnival`
 * Style `Student Story Note` in `hs-college-success`
 * Fix table border in `BasicTableWithCaptionOnTopShape`
 * Decrease margins for eob links in `TOC` from `carnival`
