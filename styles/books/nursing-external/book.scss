@@ -99,7 +99,13 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   TwoColumnsModules: (
-    _selectors: ('.os-glossary-container', '.os-section-summary-container', 'os-review-questions-container'),
+    _selectors: (
+      '.os-glossary-container',
+      '.os-section-summary-container',
+      '.os-chapter-summary-container',
+      '.os-review-questions-container',
+      '.os-suggested-reading-container'
+    ),
   ),
 ));
 
