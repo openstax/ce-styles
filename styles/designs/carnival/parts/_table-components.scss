@@ -10,20 +10,13 @@ $Table__Container: (
 );
 
 // Used in notes
-$Notes__Container: (
-    _name: "NotesContainer",
-    _subselector: '',
-    _properties: (
-        // width: 100%,
-    )
-);
+$Notes__Container: empty_wrapper(NotesContainer, '');
 
 $Table__Container--FromNote: (
     _name: "TableContainerFromNote",
     _subselector: ' .os-table',
     _properties: (
-        max-width: 75%,
-        width: 6in,
+        width: 75%,
     )
 );
 
