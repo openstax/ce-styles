@@ -38,8 +38,8 @@
             border-bottom: 0.1rem solid black,
             border-top: 0.1rem solid black,
         ),
-        TableBottomBorder: (
-            border-bottom-color: (_ref:"colorMap:::figureNumberColor"),
+        TableBottomBorderAfterTable: (
+            border-top-color: (_ref:"colorMap:::figureNumberColor"),
         ),
         CaptionTitleLabel:(
             font-family: (_ref:'typography:::titleOption1Font'),
@@ -238,6 +238,9 @@
         padding-right: $columnTablePadding,
         padding-left: $columnTablePadding,
       )
+    ),
+    TableFromNotes: (
+        _selectors: ('[data-type="note"]'),
     ),
 ));
 

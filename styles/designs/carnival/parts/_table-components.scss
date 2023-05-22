@@ -9,6 +9,24 @@ $Table__Container: (
     )
 );
 
+// Used in notes
+$Notes__Container: (
+    _name: "NotesContainer",
+    _subselector: '',
+    _properties: (
+        // width: 100%,
+    )
+);
+
+$Table__Container--FromNote: (
+    _name: "TableContainerFromNote",
+    _subselector: ' .os-table',
+    _properties: (
+        max-width: 75%,
+        width: 6in,
+    )
+);
+
 // Used in exercises
 $Exercises__Container: empty_wrapper(ExercisesContainer, '');
 $Table__Container__Wrapper: empty_wrapper(TableContainer, ' .os-table');

@@ -83,7 +83,7 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   BasicTable: (
     _selectors: ('.os-table:not(.os-unstyled-container)'),
-    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
   ),
 ));
 
