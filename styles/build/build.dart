@@ -39,7 +39,13 @@ void main(List<String> arguments) {
   if ((result.css.length > 0) & (outputFilePath.length > 0)) {
     var outputFile = new File(outputFilePath);
     outputFile.writeAsStringSync(result.css);
-    new File("${outputFilePath}.map").writeAsStringSync(json.encode(result.sourceMap.toJson()));
+    // Replace all absolute mapping paths with relative
+    var map_json = result.sourceMap.toJson();
+    map_json['sources'] = result.sourceMap.urls.map(
+      (path) => path.replaceFirst("file:///code/styles", "../build/..")
+    ).toList();
+    // Write map file & append map path to css
+    new File("${outputFilePath}.map").writeAsStringSync(json.encode(map_json));
     outputFile.writeAsStringSync("\n/*# sourceMappingURL=${styleName}-pdf.css.map */\n", mode: FileMode.append);
   } else {
     throw Exception("Empty output");
