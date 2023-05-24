@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Create new notes shape for `nursing-external`
+* Fix tables from notes in `nursing-external`
 * Set EOC sections to two columns in `nursing-external`
 * Fix bug with margins in `TOC` from `carnival`
 
