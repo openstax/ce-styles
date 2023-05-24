@@ -194,72 +194,96 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   LinkToLearningNote:(
     _selectors: (".link-to-learning"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearningbig.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::linkToLearningBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   SafetyAlertNote:(
     _selectors: (".safety-alert"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::alertColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alert.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alertbig.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::alertColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::alertBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   ClinicalTipNote:(
     _selectors: (".clinical-tip"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::scienceColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientificsmall.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientificTrimmed.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::scienceColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::scienceBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   HealthAlertNote:(
     _selectors: (".health-alert"),
-    'Container:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-check.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-checkTrimmed.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::checkYourUnderstanding'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::checkYourUnderstandingBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   HealthyPeopleNote:(
     _selectors: (".healthy-people"),
-    group-border-color: (_ref: 'colorMap:::healthyPeopleColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-group.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-group.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::healthyPeopleColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::notesHeaderColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::healthyPeopleBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   TrendingTodayNote:(
     _selectors: (".trending-today"),
-    group-border-color: (_ref: 'colorMap:::trendingColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaper.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaperTrimmed.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::trendingColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::notesHeaderColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::trendingBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   CultureConversationsNote:(
     _selectors: (".culture-conversations"),
-    group-border-color: (_ref: 'colorMap:::cultureColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-debate.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-debate.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::cultureColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::cultureBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
 @include add_settings((
   TheoryActionNote:(
     _selectors: (".theory-action"),
-    group-border-color: (_ref: 'colorMap:::connectedColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-connected.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-connectedpink.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::trendingColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::notesHeaderColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::trendingBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
@@ -321,9 +345,12 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   MediaFeatureNote:(
     _selectors: (".media-feature"),
-    group-border-color: (_ref: 'colorMap:::mediaVideoColor'),
-    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/cosmos-media.svg")) no-repeat top left,
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-mediablue.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::scienceColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::scienceBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
   ),
 ));
 
@@ -410,14 +437,14 @@ $ChapterIntroType: fullWidth;
 
 //Notes
 @include use('FakeTitleTable', 'carnival:::FakeTitleTableShape');
-@include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
-@include use('SafetyAlertNote', 'carnival:::IconCondensedShape');
-@include use('ClinicalTipNote', 'carnival:::IconCondensedShape');
-@include use('HealthAlertNote', 'carnival:::IconCondensedShape');
-@include use('HealthyPeopleNote', 'carnival:::IconNoteShape');
-@include use('TrendingTodayNote', 'carnival:::IconNoteShape');
-@include use('CultureConversationsNote', 'carnival:::IconNoteShape');
-@include use('TheoryActionNote', 'carnival:::IconNoteShape');
+@include use('LinkToLearningNote', 'carnival:::IconBoxedNoteShape');
+@include use('SafetyAlertNote', 'carnival:::IconBoxedNoteShape');
+@include use('ClinicalTipNote', 'carnival:::IconBoxedNoteShape');
+@include use('HealthAlertNote', 'carnival:::IconBoxedNoteShape');
+@include use('HealthyPeopleNote', 'carnival:::IconBoxedNoteShape');
+@include use('TrendingTodayNote', 'carnival:::IconBoxedNoteShape');
+@include use('CultureConversationsNote', 'carnival:::IconBoxedNoteShape');
+@include use('TheoryActionNote', 'carnival:::IconBoxedNoteShape');
 @include use('SpecialConsiderationsNote', 'carnival:::BoxedNoteShape');
 @include use('BlackBoxNote', 'carnival:::BoxedNoteShape');
 @include use('ClientTeachingNote', 'carnival:::BoxedNoteShape');
@@ -425,7 +452,7 @@ $ChapterIntroType: fullWidth;
 @include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
 @include use('SingleCasestudyNote', 'carnival:::IconNoteShape');
 @include use('CaseReflectionNote', 'carnival:::IconNoteShape');
-@include use('MediaFeatureNote', 'carnival:::IconNoteShape');
+@include use('MediaFeatureNote', 'carnival:::IconBoxedNoteShape');
 
 
 //EOC
