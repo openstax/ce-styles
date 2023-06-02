@@ -318,6 +318,15 @@
     )
 ));
 
+@include add_settings((
+    FolioParagraphs: (
+        _selectors: (
+            '.folio-chapter', '.folio-module', '.folio-eoc-left', '.folio-eoc-right',
+            '.folio-appendix-left', '.folio-appendix-right', '.folio-eob-left', '.folio-eob-right'
+        ),
+    )
+));
+
 // Colored Text
 @include use('RedColoredText', 'webview:::ColoredText');
 
@@ -380,6 +389,8 @@
 @include use('TeacherMaterial', 'common:::Hidden');
 // Hide Iframe links
 @include use('NonScreenElements', 'common:::Hidden');
+@include use('FolioParagraphs', 'common:::Hidden');
+
 // EOC
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');
 @include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');

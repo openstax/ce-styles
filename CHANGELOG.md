@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v.129.0] - 2023-06-02
+
+* Fix caption in `mechanism-figures`
+* Decrease paddings in unstyled tables from `carnival`
+* Hide folio paragraphs on `webview`
+* Fix index alignment in `organic-chemistry`
+* Create new notes shape for `nursing-external`
+* Fix tables from notes in `nursing-external`
+* Set EOC sections to two columns in `nursing-external`
+* Fix bug with margins in `TOC` from `carnival`
+
 ## [v1.128.0] - 2023-05-17
 
 * Move table caption to the bottom in `nursing-external`

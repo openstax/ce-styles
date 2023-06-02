@@ -41,9 +41,9 @@
                         )),
                     )
                 )),
+                $Table__BottomBorder--AfterTable,
                 map-merge($Caption__Container--Table, (
                     _components: (
-                        $Table__BottomBorder,
                         $Caption__TitleLabel,
                         $Caption__Number,
                         $Caption__Title,
@@ -240,6 +240,16 @@
                       )),
                     )
                 )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('carnival:::TableFromNotesShape',(
+    _components: (
+        map-merge($Notes__Container,(
+            _components:(
+                $Table__Container--FromNote,
             ),
         )),
     )

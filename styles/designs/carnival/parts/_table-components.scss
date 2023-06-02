@@ -9,6 +9,17 @@ $Table__Container: (
     )
 );
 
+// Used in notes
+$Notes__Container: empty_wrapper(NotesContainer, '');
+
+$Table__Container--FromNote: (
+    _name: "TableContainerFromNote",
+    _subselector: ' .os-table',
+    _properties: (
+        width: 75%,
+    )
+);
+
 // Used in exercises
 $Exercises__Container: empty_wrapper(ExercisesContainer, '');
 $Table__Container__Wrapper: empty_wrapper(TableContainer, ' .os-table');
@@ -153,8 +164,8 @@ $Table__Data--Unstyled: (
     _name: "TableUnstyledData",
     _subselector: " > td",
     _properties: (
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: 0,
+        padding-bottom: 0,
         padding-right: table-h-spacing(1),
         padding-left: table-h-spacing(1),
     )

@@ -369,3 +369,75 @@ $Note--Logo__Icon: (
     content: "' '",
   )
 );
+
+// Icon Boxed
+$Notes--IconBoxed__Container: (
+  _name: "IconBoxedContainer",
+  _subselector: "",
+  _properties: (
+    margin-bottom: v-spacing(1),
+    box-decoration-break: slice,
+  )
+);
+
+$Notes--IconBoxed__Title: (
+    _name: "IconBoxedTitle",
+    _subselector: ' > .os-title',
+    _properties: (
+        color: enum('ValueSet:::REQUIRED'),
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: line-height(1),
+        text-transform: uppercase,
+        font-weight: 900,
+        background-color: enum('ValueSet:::REQUIRED'),
+        height: 32.5px,
+        display: flex,
+        align-items: center,
+    )
+);
+
+$Notes--IconBoxed__Title__Icon: (
+    _name: "IconBoxedTitleIcon",
+    _subselector: '::before',
+    _properties: (
+        background: enum('ValueSet:::REQUIRED'),
+        background-size: 33px,
+        height: 33px,
+        width: 33px,
+        content: "''",
+        display: block,
+        position: relative,
+        left: -15px,
+    )
+);
+
+$Notes--IconBoxed__Title__Label: (
+    _name: "IconBoxedTitleText",
+    _subselector: ' > .os-title-label',
+    _properties: (
+        position: relative,
+        left: -7px,
+    )
+);
+
+$Notes--IconBoxed__Body: (
+    _name: "IconBoxedBody",
+    _subselector: ' > .os-note-body',
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
+        padding: v-spacing(1),
+    )
+);
+
+$Notes--IconBoxed__Subtitle: (
+    _name: "IconBoxedSubtitle",
+    _subselector: ' > h4.os-subtitle',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: line-height(1),
+        font-weight: 500,
+        margin-bottom: v-spacing(1),
+    )
+);
