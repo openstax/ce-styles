@@ -2528,6 +2528,14 @@ a[role=doc-noteref] {
   margin-left: 16px;
 }
 
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
+}
+
 .os-table.os-top-titled-container {
   margin-bottom: 0.7rem;
   display: table;
@@ -2639,7 +2647,10 @@ a[role=doc-noteref] {
 
 .link-to-learning > .os-note-body {
   background-color: rgba(120, 176, 66, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .link-to-learning > .os-note-body > h4.os-subtitle {
@@ -2648,6 +2659,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.link-to-learning > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .safety-alert {
@@ -2686,7 +2702,10 @@ a[role=doc-noteref] {
 
 .safety-alert > .os-note-body {
   background-color: rgba(195, 20, 39, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .safety-alert > .os-note-body > h4.os-subtitle {
@@ -2695,6 +2714,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.safety-alert > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .clinical-tip {
@@ -2733,7 +2757,10 @@ a[role=doc-noteref] {
 
 .clinical-tip > .os-note-body {
   background-color: rgba(13, 191, 219, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .clinical-tip > .os-note-body > h4.os-subtitle {
@@ -2742,6 +2769,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.clinical-tip > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .health-alert {
@@ -2780,7 +2812,10 @@ a[role=doc-noteref] {
 
 .health-alert > .os-note-body {
   background-color: rgba(243, 117, 65, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .health-alert > .os-note-body > h4.os-subtitle {
@@ -2789,6 +2824,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.health-alert > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .healthy-people {
@@ -2827,7 +2867,10 @@ a[role=doc-noteref] {
 
 .healthy-people > .os-note-body {
   background-color: rgba(0, 116, 188, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .healthy-people > .os-note-body > h4.os-subtitle {
@@ -2836,6 +2879,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.healthy-people > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .trending-today {
@@ -2874,7 +2922,10 @@ a[role=doc-noteref] {
 
 .trending-today > .os-note-body {
   background-color: rgba(177, 0, 105, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .trending-today > .os-note-body > h4.os-subtitle {
@@ -2883,6 +2934,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.trending-today > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .culture-conversations {
@@ -2921,7 +2977,10 @@ a[role=doc-noteref] {
 
 .culture-conversations > .os-note-body {
   background-color: rgba(30, 149, 117, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .culture-conversations > .os-note-body > h4.os-subtitle {
@@ -2930,6 +2989,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.culture-conversations > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .theory-action {
@@ -2968,7 +3032,10 @@ a[role=doc-noteref] {
 
 .theory-action > .os-note-body {
   background-color: rgba(177, 0, 105, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .theory-action > .os-note-body > h4.os-subtitle {
@@ -2977,6 +3044,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.theory-action > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .special-considerations {
@@ -3150,7 +3222,6 @@ a[role=doc-noteref] {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -3164,6 +3235,11 @@ a[role=doc-noteref] {
 .unfolding-casestudy > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.unfolding-casestudy > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .single-casestudy > .os-title {
@@ -3213,7 +3289,6 @@ a[role=doc-noteref] {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -3227,6 +3302,11 @@ a[role=doc-noteref] {
 .single-casestudy > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.single-casestudy > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .case-reflection > .os-title {
@@ -3276,7 +3356,6 @@ a[role=doc-noteref] {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -3290,6 +3369,11 @@ a[role=doc-noteref] {
 .case-reflection > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.case-reflection > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .media-feature {
@@ -3328,7 +3412,10 @@ a[role=doc-noteref] {
 
 .media-feature > .os-note-body {
   background-color: rgba(13, 191, 219, 0.0509803922);
-  padding: 0.7rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-top: 0.7rem;
 }
 
 .media-feature > .os-note-body > h4.os-subtitle {
@@ -3337,6 +3424,11 @@ a[role=doc-noteref] {
   line-height: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
+}
+
+.media-feature > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .os-glossary-container > dl {
