@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Reduce paddings in notes from `carnival`
+
+## [v.129.0] - 2023-06-02
+
 * Fix caption in `mechanism-figures`
 * Decrease paddings in unstyled tables from `carnival`
 * Hide folio paragraphs on `webview`
