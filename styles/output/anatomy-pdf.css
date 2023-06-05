@@ -1529,7 +1529,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -1543,6 +1542,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .career > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.career > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .homeostatic > .os-title {
@@ -1592,7 +1596,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -1606,6 +1609,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .homeostatic > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.homeostatic > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .interactive {
@@ -2209,6 +2217,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > div > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
 }
 
 .os-glossary-container > dl {

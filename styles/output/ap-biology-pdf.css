@@ -2154,7 +2154,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2168,6 +2167,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .career > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.career > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .evolution > .os-title {
@@ -2217,7 +2221,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2231,6 +2234,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .evolution > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.evolution > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .scientific > .os-title {
@@ -2280,7 +2288,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2294,6 +2301,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .scientific > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.scientific > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .visual-connection > .os-title {
@@ -2343,7 +2355,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2357,6 +2368,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .visual-connection > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.visual-connection > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .sciences-interconnect > .os-title {
@@ -2406,7 +2422,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2420,6 +2435,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .sciences-interconnect > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.sciences-interconnect > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .interactive:not(.non-majors) {
@@ -3143,6 +3163,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
+}
+
 .os-index-container {
   column-count: 3;
   column-gap: 32px;
@@ -3287,7 +3315,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -3301,6 +3328,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .ap-science-practices > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.ap-science-practices > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .os-teacher {
@@ -3385,7 +3417,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -3399,6 +3430,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .experiment > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.experiment > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .os-table.os-column-header-container {

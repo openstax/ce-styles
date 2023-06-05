@@ -2606,7 +2606,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2620,6 +2619,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .watch-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.watch-physics > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .links-to-physics > .os-title {
@@ -2669,7 +2673,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2683,6 +2686,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .links-to-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.links-to-physics > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .boundless-physics > .os-title {
@@ -2732,7 +2740,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2746,6 +2753,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .boundless-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.boundless-physics > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .fun-in-physics > .os-title {
@@ -2795,7 +2807,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2809,6 +2820,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .fun-in-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.fun-in-physics > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .work-in-physics > .os-title {
@@ -2858,7 +2874,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2872,6 +2887,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .work-in-physics > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.work-in-physics > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .worked-example > .os-title {
@@ -2928,7 +2948,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2945,6 +2964,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.2rem;
+}
+
+.worked-example > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .tips-for-success {
@@ -3648,6 +3672,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > div > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
 }
 
 .os-index-container {

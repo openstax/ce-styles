@@ -2185,7 +2185,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2612,6 +2611,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > div > ol > li > ul {
   margin-left: 16px;
+}
+
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
 }
 
 [data-type=chapter] > h1 {
