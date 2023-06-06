@@ -81,26 +81,3 @@
         )),
     )
 ));
-
-@include create_shape('carnival:::ChapterOutlineMarginShape', (
-    _components: (
-        map-merge($ChapterOutline__IntroBody--Margin, (
-            _components: (
-              map-merge($ChapterOutline__Container--Margin, (
-                  _components: (
-                      $H3--ChapterOutline--Margin,
-                      map-merge($ChapterObjective__Container--Margin, (
-                          _components: (
-                              map-merge($ChapterObjective__Link--Margin,(
-                                  _components: (
-                                      $ChapterObjective__Text--Margin,
-                                  )
-                              )),
-                          )
-                      )),
-                  )
-              )),
-            )
-        )),
-    )
-));
