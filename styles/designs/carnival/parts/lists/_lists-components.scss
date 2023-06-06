@@ -91,6 +91,24 @@ $OrderedList--SecondLevel--Table: (
     )
 );
 
+// Notes lists
+
+$UnorderedList--FromLastChild: (
+    _name: "UnorderedListFromLastChild",
+    _subselector: " > :last-child ul",
+    _properties: (
+        margin-bottom: 0,
+    )
+);
+
+$OrderedList--FromLastChild: (
+    _name: "OrderedListFromLastChild",
+    _subselector: " > :last-child ol",
+    _properties: (
+        margin-bottom: 0,
+    )
+);
+
 // Appendix
 $UnorderedList--AppendixGlossary: (
   _name: "AppendixGlossaryUnorderedList",
