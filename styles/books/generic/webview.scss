@@ -327,6 +327,17 @@
     )
 ));
 
+@include add_settings((
+    QuestionWithProblemPrefix: (
+        _selectors: ('[data-type="exercise-question"]'),
+        'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+    MultipartQuestionExercises: (
+        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+));
+
 // Colored Text
 @include use('RedColoredText', 'webview:::ColoredText');
 
@@ -355,6 +366,8 @@
 @include use('InjectedExercise', 'webview:::InjectedExerciseShape');
 @include use('ExerciseInAppendix', 'webview:::ExerciseInAppendixShape');
 @include use('ExerciseInlined', 'webview:::ExerciseInlined');
+@include use('QuestionWithProblemPrefix','webview:::ExercisesQuestionWithProblemPrefixShape');
+@include use('MultipartQuestionExercises','webview:::ExercisesMultipartQuestionShape');
 // Tables
 @include use('Table', 'webview:::TableShape');
 // Blockquote

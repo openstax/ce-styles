@@ -1640,6 +1640,53 @@ a:hover {
   display: block;
 }
 
+[data-type=exercise-question] {
+  display: table;
+}
+
+[data-type=exercise-question] > .os-prefix {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5em;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+[data-type=exercise-question] > .os-prefix > .os-label {
+  text-transform: uppercase;
+}
+
+[data-type=exercise-question] > .os-prefix > .os-number {
+  align-self: flex-end;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container {
+  display: table;
+  width: 100%;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .problem-letter {
+  display: table-cell;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  width: 16px;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
+  margin-right: 0.5em;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
 .os-table {
   overflow: auto !important;
   margin: 20px 0;
