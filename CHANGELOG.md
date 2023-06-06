@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Switch biology to `ChapterOutlineShape`
+* Delete `ChapterOutlineMarginShape` and depreciated variables associated
+
 ## [v.129.0] - 2023-06-02
 
 * Fix caption in `mechanism-figures`
