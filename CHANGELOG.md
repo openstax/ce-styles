@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Switch biology to `ChapterOutlineShape`
+* Delete `ChapterOutlineMarginShape` and depreciated variables associated
 * Style `ExercisesMultipartQuestion` and `ExercisesQuestionWithProblemPrefix` on `webview`
 * Reduce paddings in notes from `carnival`
 
