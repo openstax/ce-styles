@@ -81,6 +81,38 @@
     )
 ));
 
+@include create_shape('webview:::ExercisesQuestionWithProblemPrefixShape',(
+    _components:(
+        map-merge($ExerciseQuestion__Container,(
+            _components:(
+                map-merge($Exercise__ProblemSolution__Prefix,(
+                    _components:(
+                        $Exercise__ProblemSolution__Prefix__Label,
+                        $Exercise__ProblemSolution__Prefix__Number,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('webview:::ExercisesMultipartQuestionShape',(
+    _components:(
+        map-merge($Exercise__Container,(
+            _components:(
+                map-merge($Exercise__Problem__Container--FromMultipartQuestion,(
+                    _components:(
+                        $InjectedExercise__ProblemSolution__Letter,
+                        $Exercise__ProblemSolution__Divider,
+                        $InjectedExercise__Question__Stem,
+                        $InjectedExercise__Question__Stem--WithFirstElement,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
 @include create_shape('webview:::ExerciseInAppendixShape', (
     _components: (
         map-merge($Exercise__Container, (

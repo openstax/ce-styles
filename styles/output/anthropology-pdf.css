@@ -1792,6 +1792,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-left: 16px;
 }
 
+[data-type=note] > div > :last-child ul {
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > :last-child ol {
+  margin-bottom: 0;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) {
   margin-bottom: 0.7rem;
   display: table;
@@ -2168,7 +2176,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2182,6 +2189,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .ethnographic-sketches > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.ethnographic-sketches > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .fieldwork-activity > .os-title {
@@ -2231,7 +2243,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2245,6 +2256,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .fieldwork-activity > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.fieldwork-activity > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .profiles-anthropology > .os-title {
@@ -2294,7 +2310,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   box-decoration-break: slice;
-  padding-bottom: 0.7rem;
   padding-top: 0.7rem;
 }
 
@@ -2308,6 +2323,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .profiles-anthropology > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.profiles-anthropology > .os-note-body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
 }
 
 .media-video {
