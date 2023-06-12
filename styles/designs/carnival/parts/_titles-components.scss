@@ -310,21 +310,6 @@ $H3--ChapterOutline: (
     )
 );
 
-$H3--ChapterOutline--Margin: (
-    _name: "H3ChapterOutlineMarginTitle",
-    _subselector: ' > h3.os-title',
-    _properties: (
-        overflow: visible,
-        border-bottom: '1px solid white',
-        padding: enum('ValueSet:::REQUIRED'),
-        margin: ".5rem 0 .5rem 0",
-        font-size: font-scale(0),
-        line-height: line-height(0),
-        font-weight: 500, //medium
-        font-family: enum('ValueSet:::REQUIRED'),
-    )
-);
-
 $H3--AppendixGlossary: (
   _name: "H3AppendixGlossaryTitle",
   _subselector: ' > h3[data-type="title"]',
