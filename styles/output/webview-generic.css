@@ -71,10 +71,6 @@ u[data-effect=double-underline] {
   display: inline-flex;
 }
 
-*:not(.os-term) > .red-text {
-  color: #CC0000;
-}
-
 h1 {
   color: #333;
   margin: 1.5rem 0 1rem 0;
@@ -1569,15 +1565,16 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 0.5em;
+  margin-right: 0;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
+  display: inline;
 }
 
 .appendix [data-type=exercise] .os-problem-container p {
@@ -1638,6 +1635,53 @@ a:hover {
 
 .os-number ~ .os-solution-container img {
   display: block;
+}
+
+[data-type=exercise-question] {
+  display: table;
+}
+
+[data-type=exercise-question] > .os-prefix {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5em;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+[data-type=exercise-question] > .os-prefix > .os-label {
+  text-transform: uppercase;
+}
+
+[data-type=exercise-question] > .os-prefix > .os-number {
+  align-self: flex-end;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container {
+  display: table;
+  width: 100%;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .problem-letter {
+  display: table-cell;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  width: 16px;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
+  margin-right: 0;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
 }
 
 .os-table {
@@ -1767,6 +1811,7 @@ a:hover {
 .os-table table ol[data-bullet-style=none] {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .os-table table ol[data-bullet-style=none] li {
@@ -1780,6 +1825,7 @@ a:hover {
 .os-table table ul[data-bullet-style=none] {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .os-table table ul[data-bullet-style=none] li {
@@ -1962,6 +2008,7 @@ a[data-type=cite] {
 }
 
 [data-type=footnote-refs] [data-type=footnote-ref] {
+  font-size: calc(1.4rem * var(--content-text-scale));
   padding-left: 27px;
   text-indent: -27px;
 }
@@ -2084,6 +2131,34 @@ p.student-sample {
 
 .folio-eob-right {
   display: none;
+}
+
+*:not(.os-term) > .red-text {
+  color: #CC0000;
+}
+
+*:not(.os-term) > .cyan-text {
+  color: #0078a3;
+}
+
+*:not(.os-term) > .magenta-text {
+  color: #E00087;
+}
+
+*:not(.os-term) > .green-text {
+  color: #007A49;
+}
+
+*:not(.os-term) > .gray-text {
+  color: #757575;
+}
+
+*:not(.os-term) > .yellow-text {
+  color: #8F7200;
+}
+
+*:not(.os-term) > .purple-text {
+  color: #8d4c83;
 }
 
 section.works-cited [data-type=title] {

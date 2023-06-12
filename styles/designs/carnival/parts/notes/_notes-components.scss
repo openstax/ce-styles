@@ -18,6 +18,15 @@ $Note__Solution: empty_wrapper(Solution, ' > [data-type="solution"]');
 
 $Note__Problem__Container: empty_wrapper(ProblemContainer, ' > .os-problem-container');
 
+$Note__LastChild: (
+  _name: "NoteLastChild",
+  _subselector: ' > :last-child',
+  _properties: (
+    margin-bottom: 0,
+    padding-bottom: v-spacing(1),
+  ),
+);
+
 // Boxed note
 $Note--Boxed__Container: (
   _name: "Container",
@@ -157,7 +166,6 @@ $Note--Icon__Container: (
     border-bottom-width: 0.2rem,
     border-bottom-style: solid,
     box-decoration-break: slice,
-    padding-bottom: v-spacing(1),
     padding-top: v-spacing(1),
   )
 );
@@ -426,7 +434,10 @@ $Notes--IconBoxed__Body: (
     _subselector: ' > .os-note-body',
     _properties: (
         background-color: enum('ValueSet:::REQUIRED'),
-        padding: v-spacing(1),
+        padding-left: h-spacing(1),
+        padding-right: h-spacing(1),
+        padding-bottom: 0,
+        padding-top: v-spacing(1),
     )
 );
 
