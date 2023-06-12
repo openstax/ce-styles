@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix formatting discrepancies vs Rex
 * Add more Colored Text to `webview`
 * Switch biology to `ChapterOutlineShape`
 * Delete `ChapterOutlineMarginShape` and depreciated variables associated
