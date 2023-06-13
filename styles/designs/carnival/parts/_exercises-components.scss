@@ -76,7 +76,6 @@ $InjectedExercise__ProblemSolution__Letter: (
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
     width: 16px,
-    vertical-align: top,
   )
 );
 
@@ -114,6 +113,7 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _properties:(
         display: table,
         margin-right: h-spacing(1),
+        vertical-align: top,
     )
 );
 
