@@ -154,11 +154,37 @@ $bandColor: #24739E;
 
 // EoC titles
 @include add_settings((
+  FamilyFriendsTitles: (
+    _selectors: (".os-family-friends-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-managegroup.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
   SummaryTitles: (
     _selectors: (".os-summary-container"),
     'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
     'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
     'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  CheckingInTitles: (
+    _selectors: (".os-checking-in-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-multiplechoice.svg")) no-repeat top left,
     'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
     'H3Title:::font-family': (_ref: 'typography:::baseFont'),
     'H3Title:::color': (_ref: 'colorMap:::titleColor'),
@@ -232,7 +258,9 @@ $bandColor: #24739E;
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('FamilyFriendsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CheckingInTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('CareerConnectionTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('RethinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('WhereGoTitles', 'cardboard:::EocCompositePageTitlesShape');
