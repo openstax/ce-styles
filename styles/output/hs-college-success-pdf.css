@@ -1540,6 +1540,68 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+.os-family-friends-container > h2 {
+  display: flex;
+  align-items: center;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-family-friends-container > h2::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOiMyODczOUU7fQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTQ1NTc7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Qye2ZpbGw6I0ZGRkZGRjtzdHJva2U6IzM5NDU1NztzdHJva2Utd2lkdGg6MC41O3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDN7ZmlsbDojMzk0NTU3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8ZGVmcz4KCQkJPHJlY3QgaWQ9IlNWR0lEXzFfIiB5PSIwIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuOCIvPgoJCTwvZGVmcz4KCQk8Y2xpcFBhdGggaWQ9IlNWR0lEXzJfIj4KCQkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTsiLz4KCQk8L2NsaXBQYXRoPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLjksMC45aDE5LjN2MjJIMC45VjAuOXogTTAsMjMuOGgyMVYwSDBWMjMuOHoiLz4KCTwvZz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01LjksMTAuOWMtMC43LDEtMC45LDIuNy0wLjksMi43bDMuNywwYzAsMC0wLjUtMi4yLTEtMi43TDUuOSwxMC45eiIvPgoJPGNpcmNsZSBjbGFzcz0ic3QyIiBjeD0iNi44IiBjeT0iOS41IiByPSIxLjciLz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMi44LDEwLjdjLTAuNywxLTAuOSwyLjctMC45LDIuN2wzLjcsMGMwLDAtMC41LTIuMi0xLTIuN0wxMi44LDEwLjd6Ii8+Cgk8Y2lyY2xlIGNsYXNzPSJzdDIiIGN4PSIxMy43IiBjeT0iOS4zIiByPSIxLjciLz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05LjIsNy44Yy0wLjcsMS0wLjksMi43LTAuOSwyLjdsMy43LDBjMCwwLTAuNS0yLjItMS0yLjdMOS4yLDcuOHoiLz4KCTxjaXJjbGUgY2xhc3M9InN0MiIgY3g9IjEwLjEiIGN5PSI2LjQiIHI9IjEuNyIvPgo8L2c+CjxnPgoJPGNpcmNsZSBjbGFzcz0ic3QzIiBjeD0iMTAuMiIgY3k9IjExLjMiIHI9IjIuNyIvPgoJPHBhdGggY2xhc3M9InN0MyIgZD0iTTguOSwxMy41Yy0xLjEsMS41LTEuNCw0LjItMS40LDQuMmw1LjgsMGMwLDAtMC44LTMuNC0xLjYtNC4yTDguOSwxMy41eiIvPgo8L2c+Cjwvc3ZnPgo=") no-repeat top left;
+  background-size: contain;
+  height: 2.1rem;
+  width: 2.1rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+}
+
+.os-family-friends-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-family-friends-container > div > div > section > a > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-family-friends-container > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-family-friends-container > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-family-friends-container > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
 .os-summary-container > h2 {
   display: flex;
   align-items: center;
@@ -1595,6 +1657,68 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-summary-container > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-checking-in-container > h2 {
+  display: flex;
+  align-items: center;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-checking-in-container > h2::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOiMyODczOUU7fQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTQ1NTc7c3Ryb2tlLXdpZHRoOjAuNzU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0MntmaWxsOiMzNTQ0NTY7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjAuMjU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxkZWZzPgoJCQk8cmVjdCBpZD0iU1ZHSURfMV8iIHk9IjAiIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMy44Ii8+CgkJPC9kZWZzPgoJCTxjbGlwUGF0aCBpZD0iU1ZHSURfMl8iPgoJCQk8dXNlIHhsaW5rOmhyZWY9IiNTVkdJRF8xXyIgIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlOyIvPgoJCTwvY2xpcFBhdGg+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAuOSwwLjloMTkuM3YyMkgwLjlWMC45eiBNMCwyMy44aDIxVjBIMFYyMy44eiIvPgoJPC9nPgo8L2c+CjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjEwLjUiIGN5PSIxMS44IiByPSI0Ii8+Cjxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMTUuNSw4LjYgMTAuNSwxMy42IDguNCwxMS40IDkuMSwxMC43IDEwLjUsMTIuMiAxNC44LDcuOSAiLz4KPC9zdmc+Cg==") no-repeat top left;
+  background-size: contain;
+  height: 2.1rem;
+  width: 2.1rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+}
+
+.os-checking-in-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-checking-in-container > div > div > section > a > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-checking-in-container > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-checking-in-container > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-checking-in-container > section > section > section > h5 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;

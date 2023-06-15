@@ -1565,15 +1565,16 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 0.5em;
+  margin-right: 0;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
+  display: inline;
 }
 
 .appendix [data-type=exercise] .os-problem-container p {
@@ -1671,7 +1672,7 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
-  margin-right: 0.5em;
+  margin-right: 0;
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
@@ -1810,6 +1811,7 @@ a:hover {
 .os-table table ol[data-bullet-style=none] {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .os-table table ol[data-bullet-style=none] li {
@@ -1823,6 +1825,7 @@ a:hover {
 .os-table table ul[data-bullet-style=none] {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .os-table table ul[data-bullet-style=none] li {
@@ -2005,6 +2008,7 @@ a[data-type=cite] {
 }
 
 [data-type=footnote-refs] [data-type=footnote-ref] {
+  font-size: calc(1.4rem * var(--content-text-scale));
   padding-left: 27px;
   text-indent: -27px;
 }

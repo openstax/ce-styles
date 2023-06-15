@@ -6,10 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v.130.0] - 2023-06-15
+
+* Fix font in tables with caption on top
+* Style additional EOC sections in `hs-college-success`
+* Fix formatting discrepancies vs Rex
+* Add more Colored Text to `webview`
+* Switch biology to `ChapterOutlineShape`
+* Delete `ChapterOutlineMarginShape` and depreciated variables associated with it
+* Style `ExercisesMultipartQuestion` and `ExercisesQuestionWithProblemPrefix` on `webview`
 * Add more Colored Text to `webview`
 * Switch biology to `ChapterOutlineShape`
 * Delete `ChapterOutlineMarginShape` and depreciated variables associated
-* Style `ExercisesMultipartQuestion` and `ExercisesQuestionWithProblemPrefix` on `webview`
 * Reduce paddings in notes from `carnival`
 
 ## [v.129.0] - 2023-06-02
