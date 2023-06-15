@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix Injected Exercises bolded lettering to align with the top of the paragraph
 
 ## [v.130.0] - 2023-06-15
 
