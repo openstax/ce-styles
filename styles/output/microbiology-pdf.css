@@ -1870,21 +1870,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-multiple-choice-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
@@ -1966,21 +1967,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
@@ -2062,21 +2064,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-short-answer-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
@@ -2158,21 +2161,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-fill-in-the-blank-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
@@ -2254,21 +2258,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-matching-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
@@ -2350,21 +2355,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p {
-  display: table-cell;
-}
-
-.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > [data-type=question-stem] > p > b {
-  display: table-cell;
-}
-
 .os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table-cell;
+}
+
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
+  display: table;
+}
+
+.os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
+  display: table-cell;
+  vertical-align: top;
 }
 
 .os-true-false-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
