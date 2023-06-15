@@ -35,6 +35,15 @@
                         _components:(
                             $Exercise__ProblemSolution__Number,
                             $Exercise__ProblemSolution__Divider,
+                            map-merge($InjectedExercise__Question__Stem, (
+                                _components:(
+                                  map-merge($InjectedExercise__Question__Stem__Paragraph, (
+                                    _components:(
+                                      $InjectedExercise__Question__Stem__Bolded
+                                    )
+                                  )),
+                                )
+                            )),
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
                                     map-merge($Exercise__ProblemSolution__Paragraph,(

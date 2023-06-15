@@ -54,6 +54,24 @@ $InjectedExercise__Question__Stem: (
     _subselector: " > [data-type='question-stem']",
     _properties:(
         display: table-cell,
+    )
+);
+
+// To align the bolded multiple choice injected exercises with the top of the images
+
+$InjectedExercise__Question__Stem__Paragraph: (
+    _name: "QuestionStem",
+    _subselector: " > p",
+    _properties:(
+        display: table,
+    )
+);
+
+$InjectedExercise__Question__Stem__Bolded: (
+    _name: "QuestionStem",
+    _subselector: " > b",
+    _properties:(
+        display: table-cell,
         vertical-align: top,
     )
 );
