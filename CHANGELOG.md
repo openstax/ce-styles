@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove margin in `AppendixGlossary` from `carnival`
+
 ## [v.130.0] - 2023-06-15
 
 * Fix font in tables with caption on top
