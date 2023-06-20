@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Fix Injected Exercises bolded lettering to align with the top of the paragraph
 * Remove margin in `AppendixGlossary` from `carnival`
+* Fix page breaking on injected exercises
 
 ## [v.130.0] - 2023-06-15
 
