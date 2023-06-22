@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Remove components from devcontainer
+* Fix Injected Exercises bolded lettering to align with the top of the paragraph
+* Remove margin in `AppendixGlossary` from `carnival`
+* Fix page breaking on injected exercises
+
+## [v.130.0] - 2023-06-15
+
 * Fix font in tables with caption on top
 * Style additional EOC sections in `hs-college-success`
 * Fix formatting discrepancies vs Rex

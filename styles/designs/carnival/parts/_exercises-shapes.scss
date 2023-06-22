@@ -37,11 +37,20 @@
                             $Exercise__ProblemSolution__Divider,
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
-                                    map-merge($Exercise__ProblemSolution__Paragraph,(
-                                        _components:(
-                                            $Title--Problem,
-                                        ),
-                                    )),
+                                  map-merge($InjectedExercise__Question__Stem, (
+                                      _components:(
+                                        map-merge($InjectedExercise__Question__Stem__Paragraph, (
+                                          _components:(
+                                            $InjectedExercise__Question__Stem__Bolded
+                                          )
+                                        )),
+                                      )
+                                  )),
+                                  map-merge($Exercise__ProblemSolution__Paragraph,(
+                                      _components:(
+                                          $Title--Problem,
+                                      ),
+                                  )),
                                 ),
                             )),
                             $Exercise__Problem__Container--WithFirstElement,
