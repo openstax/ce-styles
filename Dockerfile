@@ -32,16 +32,7 @@ COPY \
 RUN dart pub get
 
 RUN apt-get update
-RUN apt-get install \
-    libxml2-utils \
-    xsltproc \
-    shellcheck \
-    libxslt1.1
-
-# Install docker
-RUN apt-get install -y curl && \
-    curl -sSL https://get.docker.com | sh
-
+RUN apt-get install shellcheck
 
 # Install node
 # https://stackoverflow.com/questions/36399848/install-node-in-dockerfile/57546198#57546198
