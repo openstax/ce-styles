@@ -113,14 +113,8 @@ p.has-noteref {
   }
 }
 
-.os-eoc {
-  > section > [data-type="injected-exercise"] {
-    page-break-inside: avoid;
-  }
-}
-
 .os-eos {
-  > section.section-exercises [data-type="injected-exercise"] {
+  > section [data-type="injected-exercise"] > [data-type="exercise-question"] > .os-prefix{
     page-break-inside: avoid;
   }
 }
