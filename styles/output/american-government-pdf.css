@@ -100,11 +100,7 @@ p.has-noteref {
   page-break-inside: avoid;
 }
 
-.os-eoc > section > [data-type=injected-exercise] {
-  page-break-inside: avoid;
-}
-
-.os-eos > section.section-exercises [data-type=injected-exercise] {
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
   page-break-inside: avoid;
 }
 

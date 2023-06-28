@@ -128,6 +128,15 @@ $Image--TopSpacing:(
     )
 );
 
+$Image--AfterBold: (
+    _name: "ImageAfterBold",
+    _subselector: " b + img",
+    _properties:(
+        vertical-align: top,
+        padding-top: v-spacing(1),
+    )
+);
+
 //Media
 
 $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol > li > [data-type="media"]:first-child');
