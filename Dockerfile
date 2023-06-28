@@ -36,6 +36,8 @@ RUN apt-get install shellcheck
 
 # Install node
 # https://stackoverflow.com/questions/36399848/install-node-in-dockerfile/57546198#57546198
+# Info: within https://github.com/openstax/ce-styles/pull/272 curl installation was removed from Dockerfile
+# because devcontainer was working without it. Leaving this just in case there are some problems in the future.
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
 ENV NODE_VERSION=14.16.1
