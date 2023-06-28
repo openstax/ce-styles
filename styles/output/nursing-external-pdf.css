@@ -1393,6 +1393,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=problem] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=solution] img {
   max-width: 100%;
 }
@@ -1406,6 +1411,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=solution] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 
@@ -1425,6 +1435,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=exercise-question] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=question-solution] img {
   max-width: 100%;
 }
@@ -1438,6 +1453,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=question-solution] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 
@@ -3524,19 +3544,6 @@ a[role=doc-noteref] {
   width: 100%;
 }
 
-.os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
-  display: table;
-}
-
-.os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
-  display: table-cell;
-  vertical-align: top;
-}
-
 .os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
@@ -3625,19 +3632,6 @@ a[role=doc-noteref] {
   width: 100%;
 }
 
-.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
-  display: table;
-}
-
-.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
-  display: table-cell;
-  vertical-align: top;
-}
-
 .unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
@@ -3724,19 +3718,6 @@ a[role=doc-noteref] {
 .single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
-}
-
-.single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
-  display: table-cell;
-}
-
-.single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p {
-  display: table;
-}
-
-.single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] > p > b {
-  display: table-cell;
-  vertical-align: top;
 }
 
 .single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {

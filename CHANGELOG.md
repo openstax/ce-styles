@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix regression of alignment of bolded lettering and images
 * Fix Injected Exercises bolded lettering to align with the top of the paragraph
 * Remove margin in `AppendixGlossary` from `carnival`
 * Fix page breaking on injected exercises
