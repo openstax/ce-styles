@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Restyle `smallcaps`
 * Style `smallcaps` elements
 * Remove components from devcontainer
 * Fix regression of alignment of bolded lettering and images
