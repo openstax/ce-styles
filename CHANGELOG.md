@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style EOC Composite Chapter in `nursing-internal`
 * Restyle `smallcaps`
 * Style `smallcaps` elements
 * Remove components from devcontainer
