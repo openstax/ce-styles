@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Delete `ChapterOutlineMarginShape` and depreciated variables associated with it
 * Style `ExercisesMultipartQuestion` and `ExercisesQuestionWithProblemPrefix` on `webview`
 * Reduce paddings in notes from `carnival`
+* Fix typos in README.md
 
 ## [v.129.0] - 2023-06-02
 

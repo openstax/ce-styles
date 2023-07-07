@@ -7,7 +7,7 @@ The ce-styles repo contains the styles framework. If you're looking to manipulat
 
 ## Installation
 
-The ce-styles repo uses a docker container to simplify installation requirements. It's reccomended that you either run the container in vs code, or prepend the `./script/run` script before the desired command to run that command in a docker container.
+The ce-styles repo uses a docker container to simplify installation requirements. It's recommended that you either run the container in vs code, or prepend the `./script/run` script before the desired command to run that command in a docker container.
 
 [To install docker, follow the instructions here.](https://docs.docker.com/get-docker/)
 
@@ -15,7 +15,7 @@ The ce-styles repo uses a docker container to simplify installation requirements
 
 ## Create a baked pdf for a new book
 
-Currently, [the enki platform](https://github.com/openstax/enki) is the reccomended way to build a pdf of any given book.
+Currently, [the enki platform](https://github.com/openstax/enki) is the recommended way to build a pdf of any given book.
 
 To take a book completely from git repo to pdf, you'll need to run a variation of the command:
 
