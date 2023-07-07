@@ -35,13 +35,15 @@ $Exercise__Problem2: (
   ),
 );
 
-/// Aproach from PDFs
+/// Approach from PDFs
 $Exercise__ExerciseQuestion: (
   _name: "Problem1",
   _subselector: ' [data-type="exercise-question"]',
   _properties: (
     padding: '0.5em 1em',
     display: table,
+    table-layout: fixed,
+    width: 100%,
   ),
 );
 
