@@ -3263,6 +3263,90 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
+.os-preview-carbonylchemistry-container [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] {
+  display: table;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.os-preview-carbonylchemistry-container [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] {
+  display: table;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+.os-preview-carbonylchemistry-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 [data-type=equation].unnumbered {
   display: flex;
   align-items: center;
