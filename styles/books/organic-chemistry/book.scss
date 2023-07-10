@@ -148,6 +148,10 @@ nav, [data-type="document-title"], [data-type="title"],
         _selectors: (".os-energy-reaction-container"),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
     ),
+    CarbonylChemistry:(
+        _selectors: (".os-preview-carbonylchemistry-container"),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
 ));
 
 // Eoc
@@ -330,6 +334,7 @@ nav, [data-type="document-title"], [data-type="title"],
 @include use('MechanismProblems','carnival:::ExercisesModuleShape');
 @include use('GeneralProblems','carnival:::ExercisesModuleShape');
 @include use('EnergyReaction','carnival:::ExercisesModuleShape');
+@include use('CarbonylChemistry','carnival:::ExercisesModuleShape');
 
 // Equations
 @include use('Equation', 'carnival:::EquationShape');
