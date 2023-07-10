@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Remove margin in `AppendixGlossary` from `carnival`
 * Fix page breaking on injected exercises
 * Undo injected exercise removing page breaking in between, limit it to just
+* Fix table overflow
 
 ## [v.130.0] - 2023-06-15
 
