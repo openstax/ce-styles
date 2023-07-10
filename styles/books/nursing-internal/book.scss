@@ -63,6 +63,11 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
     'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
   ),
+  EocCompositeChapterTitles: (
+    _selectors: ('.os-eoc[data-type="composite-chapter"]'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
   EobTitles: (
     _selectors: ('.os-eob'),
     'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
@@ -224,6 +229,7 @@ $ChapterIntroType: fullWidth;
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
 @include use('UnitTitle', 'common:::Hidden');
 
