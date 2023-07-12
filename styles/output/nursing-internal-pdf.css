@@ -1227,19 +1227,20 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul {
-  list-style-type: none;
+[data-type=chapter] > [data-type=page] > section.learning-objectives > p {
+  margin-bottom: 0;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li {
-  display: flex;
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=chapter] > [data-type=page] > section.learning-objectives > ul > li > span.os-abstract-token {
-  font-weight: bold;
+[data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li::marker {
   color: #00819A;
-  margin-right: 8px;
 }
 
 p.indented-text {

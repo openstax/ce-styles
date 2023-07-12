@@ -77,10 +77,10 @@ $ChapterIntroType: fullWidth;
 
 // Learning Objectives
 @include add_settings((
-  LearningObjectivesNumbered: (
+  LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
-    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
   ),
 ));
 
@@ -217,7 +217,7 @@ $ChapterIntroType: fullWidth;
 
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('ParaIndented', 'carnival:::ParaIndentedShape');
 @include use('ParaCentered', 'carnival:::ParaCenteredShape');
 
