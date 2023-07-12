@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Feature Design Changes to `iconned notes` in `nursing-internal`
 * Style EOC Composite Chapter in `nursing-internal`
 * Style `preview-carbonylchemistry` section in `organic-chemistry`
 * Restyle `smallcaps`
