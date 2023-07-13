@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change `unfolding casestudy to boxed note` in `nursing-internal`
+* Change `nursing-internal` Learning Objectives from numbers to bullets
 
 
 ## [v.131.0]
