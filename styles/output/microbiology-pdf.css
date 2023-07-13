@@ -101,6 +101,10 @@ p.has-noteref {
   page-break-inside: avoid;
 }
 
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
+  page-break-inside: avoid;
+}
+
 div.preface,
 div[data-type=chapter],
 div.appendix,
@@ -277,6 +281,10 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: 0.8333333333rem;
 }
 
 [data-type=chapter] > .os-summary-container {
@@ -1280,7 +1288,7 @@ a[role=doc-noteref] {
 
 .appendix > .column-container {
   column-count: 3;
-  column-gap: 16px;
+  column-gap: 24px;
 }
 
 .appendix > .column-container > section {
@@ -1299,6 +1307,7 @@ a[role=doc-noteref] {
 .appendix > .column-container > section > ul {
   font-size: 0.8333333333rem;
   list-style-type: none;
+  margin-left: 0 !important;
 }
 
 .appendix > .column-container > section > ul > li {
@@ -1578,6 +1587,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=problem] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=exercise-question] img {
   max-width: 100%;
 }
@@ -1591,6 +1605,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=exercise-question] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 
@@ -3291,6 +3310,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eoc[data-type=composite-chapter] > div > div > div > section > a > h3 {
+  font-family: Mulish, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.os-eoc[data-type=composite-chapter] > div > section > a > h3 {
   font-family: Mulish, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;

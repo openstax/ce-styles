@@ -100,6 +100,10 @@ p.has-noteref {
   page-break-inside: avoid;
 }
 
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
+  page-break-inside: avoid;
+}
+
 div.preface,
 div[data-type=chapter],
 div.appendix,
@@ -276,6 +280,10 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: 0.8333333333rem;
 }
 
 .os-eoc.os-summary-container {

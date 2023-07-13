@@ -101,6 +101,10 @@ p.has-noteref {
   page-break-inside: avoid;
 }
 
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
+  page-break-inside: avoid;
+}
+
 div.preface,
 div[data-type=chapter],
 div.appendix,
@@ -277,6 +281,10 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: 0.8333333333rem;
 }
 
 .os-eoc.os-chapter-review-container {
@@ -1657,6 +1665,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=problem] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=solution] img {
   max-width: 100%;
 }
@@ -1670,6 +1683,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=solution] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=solution] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 
@@ -1689,6 +1707,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=exercise-question] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=question-solution] img {
   max-width: 100%;
 }
@@ -1702,6 +1725,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=question-solution] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=question-solution] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 
@@ -2716,6 +2744,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eoc[data-type=composite-chapter] > div > div > div > section > a > h3 {
+  font-family: Mulish, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.os-eoc[data-type=composite-chapter] > div > section > a > h3 {
   font-family: Mulish, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;

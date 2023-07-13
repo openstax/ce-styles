@@ -101,6 +101,10 @@ p.has-noteref {
   page-break-inside: avoid;
 }
 
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
+  page-break-inside: avoid;
+}
+
 div.preface,
 div[data-type=chapter],
 div.appendix,
@@ -277,6 +281,10 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: 0.8333333333rem;
 }
 
 .os-eoc.os-glossary-container {
@@ -1428,6 +1436,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+[data-type=problem] > div b + img {
+  vertical-align: top;
+  padding-top: 0.7rem;
+}
+
 [data-type=exercise-question] img {
   max-width: 100%;
 }
@@ -1441,6 +1454,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=exercise-question] > div > ol > li > [data-type=media]:first-child img {
   vertical-align: top;
   display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div b + img {
+  vertical-align: top;
   padding-top: 0.7rem;
 }
 

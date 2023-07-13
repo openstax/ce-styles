@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [v.131.0]
+
+* Style EOC Composite Chapter in `nursing-internal`
+* Style `preview-carbonylchemistry` section in `organic-chemistry`
+* Restyle `smallcaps`
+* Style `smallcaps` elements
+* Remove components from devcontainer
+* Fix regression of alignment of bolded lettering and images
+* Fix Injected Exercises bolded lettering to align with the top of the paragraph
+* Remove margin in `AppendixGlossary` from `carnival`
+* Fix page breaking on injected exercises
+* Undo injected exercise removing page breaking in between, limit it to just
+* Fix table overflow
+
 ## [v.130.0] - 2023-06-15
 
 * Fix font in tables with caption on top
@@ -16,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Delete `ChapterOutlineMarginShape` and depreciated variables associated with it
 * Style `ExercisesMultipartQuestion` and `ExercisesQuestionWithProblemPrefix` on `webview`
 * Reduce paddings in notes from `carnival`
+* Fix typos in README.md
 
 ## [v.129.0] - 2023-06-02
 
