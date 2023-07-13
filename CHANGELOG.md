@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change `nursing-internal` Learning Objectives from numbers to bullets
+
+## [v.131.0]
+
 * Style EOC Composite Chapter in `nursing-internal`
 * Style `preview-carbonylchemistry` section in `organic-chemistry`
 * Restyle `smallcaps`
