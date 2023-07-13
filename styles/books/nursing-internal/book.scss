@@ -113,7 +113,6 @@ $ChapterIntroType: fullWidth;
         group-border-color: (_ref: 'colorMap:::unfoldingCaseStudyColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::unfoldingCaseStudyColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
     ),
     RNStoriesNote:(
         _selectors: (".rn-stories"),
@@ -270,6 +269,9 @@ $ChapterIntroType: fullWidth;
 @include use("NotesLists", "carnival:::NotesListsShape");
 
 // Notes
+
+@include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
+@include use('UnfoldingCasestudyNote', 'carnival:::BoxedNoteShape');
 @include use('LinkToLearningNote', 'carnival:::IconNoteShape');
 @include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
 @include use('RNStoriesNote', 'carnival:::IconNoteShape');
