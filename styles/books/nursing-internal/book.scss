@@ -183,13 +183,6 @@ $ChapterIntroType: fullWidth;
     ),
 ));
 
-// Modules
-@include add_settings((
-  TwoColumnsModules: (
-    _selectors: ('.os-glossary-container', '.os-summary-container'),
-  ),
-));
-
 @include add_settings((
   EocExercisesModules: (
     _selectors: (
@@ -274,7 +267,6 @@ $ChapterIntroType: fullWidth;
 @include use('PsychosocialConsiderationsNote', 'carnival:::BoxedNoteShape');
 
 // EOC
-@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
