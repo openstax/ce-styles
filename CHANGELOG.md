@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove two-column styling from `nursing-internal`
 * Change `unfolding casestudy to boxed note` in `nursing-internal`
 * Feature Design Changes to `iconned notes` in `nursing-internal`
 * Change `nursing-internal` Learning Objectives from numbers to bullets
-
 
 ## [v.131.0]
 
