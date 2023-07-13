@@ -91,8 +91,21 @@ nav, [data-type="document-title"], [data-type="title"],
 
 @include add_settings((
   EocCompositePageTitles: (
-    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]:not(.os-preview-carbonylchemistry-container)'),
     'H2Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+  PreviewCarbonylChemistryTitles: (
+    _selectors: ('.os-preview-carbonylchemistry-container'),
+    'H2BumpedUp:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H2BumpedUp:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'H3BumpedUp:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H3BumpedUp:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'H4BumpedUp:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H4BumpedUp:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'H5BumpedUp:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H5BumpedUp:::font-family': (_ref: 'typography:::titleOption2Font'),
+    'H6Title:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'H6Title:::font-family': (_ref: 'typography:::titleOption2Font'),
   ),
   ChemistryMattersTitles:(
         _selectors: (".os-chemistry-matters-container"),
@@ -288,6 +301,7 @@ nav, [data-type="document-title"], [data-type="title"],
 @include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('PreviewCarbonylChemistryTitles', 'carnival:::EocCompositePageBumpedUpTitlesShape');
 @include use('ChemistryMattersTitles', 'carnival:::EocCompositePageTitlesWithIconShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');

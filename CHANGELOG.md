@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style headers in `preview-carbonylchemistry` section from `organic-chemistry`
 * Style EOC Composite Chapter in `nursing-internal`
 * Style `preview-carbonylchemistry` section in `organic-chemistry`
 * Restyle `smallcaps`
