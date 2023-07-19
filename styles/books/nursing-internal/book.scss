@@ -90,6 +90,11 @@ $ChapterIntroType: fullWidth;
     _selectors: ('.os-table:not(.os-unstyled-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
   ),
+  ColumnHeaderTable: (
+    _selectors: ('.os-table:not(.os-unstyled-container)'),
+    'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::biologyTableColor"),
+    'FirstTableRow:::border-top-color': (_ref: "colorMap:::biologyTableColor"),
+  ),
 ));
 
 //Centered Text
@@ -253,6 +258,7 @@ $ChapterIntroType: fullWidth;
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
