@@ -1942,6 +1942,46 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
+.os-table.column-header-container {
+  margin-bottom: 0.7rem;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-table.column-header-container > table {
+  border-collapse: collapse;
+}
+
+.os-table.column-header-container > table > tbody > tr > td:not(:only-of-type) {
+  font-family: IBM Plex Sans, sans-serif;
+  border-left: 0.025rem solid black;
+  border-bottom: 0.025rem solid black;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+}
+
+.os-table.column-header-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+  border-left: none;
+  border-right: 0.1rem solid black;
+  font-family: Mulish, sans-serif;
+  font-weight: 700;
+}
+
+.os-table.column-header-container > table > tbody > tr:first-of-type {
+  border-top-color: #0074BC;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+}
+
+.os-table.column-header-container > table > tbody > tr:last-of-type > td {
+  border-bottom-color: #0074BC;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+}
+
 [data-type=page] > ol {
   margin-left: 24px;
 }
