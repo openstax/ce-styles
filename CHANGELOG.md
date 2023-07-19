@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove duplicate line items in `nursing-internal`
 * Style headers in `preview-carbonylchemistry` section from `organic-chemistry`
 * Remove two-column styling from `nursing-internal`
 * Change `unfolding casestudy to boxed note` in `nursing-internal`
