@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Move `cardboard` splash images left by .1in
 * Add column header tables in `nursing-internal`
 * Remove duplicate line items in `nursing-internal`
 * Style headers in `preview-carbonylchemistry` section from `organic-chemistry`
