@@ -8,17 +8,18 @@ void main(List<String> arguments) {
     throw Exception('Input argument not given.');
   }
 
-  var inputFile = arguments[0];
-  var outputFile = arguments[1];
-
+  var inputFilePath = arguments[0];
+  var outputFilePath = arguments[1];
   var stylesPath = "${Directory.current.path}/styles/";
+  var styleName = inputFilePath.split('/')[3];
+
   if (File(stylesPath).existsSync()) {
     throw Exception('Cannot find styles root directory.');
   }
 
   sass.Callable toDataUri = new sass.Callable.function('toDataUri', r'$type, $path', (arguments) {
-    var pathString = arguments[1].toString().replaceAll('"', '');
     var typeString = arguments[0].toString().replaceAll('"', '');
+    var pathString = arguments[1].toString().replaceAll('"', '');
     var fileData = File("${stylesPath}${pathString}").readAsBytesSync();
     var encoded = base64Encode(fileData);
     var dataUri = "data:image/${typeString};base64,${encoded}";
@@ -27,7 +28,7 @@ void main(List<String> arguments) {
 
   var startTime = DateTime.now();
   var result = sass.compileToResult(
-    inputFile,
+    inputFilePath,
     loadPaths: {stylesPath},
     sourceMap: true,
     functions: [toDataUri]
@@ -35,9 +36,17 @@ void main(List<String> arguments) {
   var endTime = DateTime.now();
   print("compile time is: ${endTime.difference(startTime)}");
 
-  if ((result.css.length > 0) & (outputFile.length > 0)) {
-    new File(outputFile).writeAsStringSync(result.css);
-    new File("${outputFile}.map").writeAsStringSync(json.encode(result.sourceMap.toJson()));
+  if ((result.css.length > 0) & (outputFilePath.length > 0)) {
+    var outputFile = new File(outputFilePath);
+    outputFile.writeAsStringSync(result.css);
+    // Replace all absolute mapping paths with relative
+    var map_json = result.sourceMap.toJson();
+    map_json['sources'] = result.sourceMap.urls.map(
+      (path) => path.replaceFirst("file:///code/styles", "../build/..")
+    ).toList();
+    // Write map file & append map path to css
+    new File("${outputFilePath}.map").writeAsStringSync(json.encode(map_json));
+    outputFile.writeAsStringSync("\n/*# sourceMappingURL=${styleName}-pdf.css.map */\n", mode: FileMode.append);
   } else {
     throw Exception("Empty output");
   }
