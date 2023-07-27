@@ -118,6 +118,19 @@ $H2: (
   )
 );
 
+$H2--BumpedUp: (
+  _name:"H2BumpedUp",
+  _subselector: ' > h2',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: line-height(3),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
+);
+
 // Chapter Intro Text Header
 $H2--ChapterIntro: (
     _name: "H2ChapterIntro",
@@ -207,6 +220,19 @@ $H3: (
     margin-bottom: v-spacing(1),
     font-weight: 600,
     column-span: enum('ValueSet:::OPTIONAL'), // eoc
+  )
+);
+
+$H3--BumpedUp: (
+  _name: "H3BumpedUp",
+  _subselector: ' > h3',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
   )
 );
 
@@ -337,6 +363,18 @@ $H4: (
   )
 );
 
+$H4--BumpedUp: (
+  _name: "H4BumpedUp",
+  _subselector: ' > h4',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: 600,
+    font-size: font-scale(1),
+    line-height: line-height(1),
+  )
+);
+
 $H4--Link:(
   _name: "H4LinkTitle",
   _subselector: " > a > h4",
@@ -354,6 +392,32 @@ $H4--Link:(
 $H5: (
   _name: "H5Title",
   _subselector: ' > h5',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    font-size: font-scale(0),
+    line-height: line-height(0),
+  )
+);
+
+$H5--BumpedUp: (
+  _name: "H5BumpedUp",
+  _subselector: ' > h5',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    font-size: font-scale(1),
+    line-height: line-height(1),
+  )
+);
+
+// H6 titles
+
+$H6: (
+  _name: "H6Title",
+  _subselector: ' > h6',
   _properties: (
     font-family: enum('ValueSet:::REQUIRED'),
     color: enum('ValueSet:::REQUIRED'),

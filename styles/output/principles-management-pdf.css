@@ -149,7 +149,7 @@ div.handbook {
   box-sizing: border-box;
 }
 
-[data-type=composite-chapter] p, [data-type=composite-chapter] section, [data-type=composite-chapter] table, [data-type=composite-chapter] ul, [data-type=composite-chapter] ol, [data-type=composite-chapter] li, [data-type=composite-chapter] dl, [data-type=composite-chapter] h1, [data-type=composite-chapter] h2, [data-type=composite-chapter] h3, [data-type=composite-chapter] h4, [data-type=composite-chapter] h5,
+[data-type=composite-chapter] p, [data-type=composite-chapter] section, [data-type=composite-chapter] table, [data-type=composite-chapter] ul, [data-type=composite-chapter] ol, [data-type=composite-chapter] li, [data-type=composite-chapter] dl, [data-type=composite-chapter] h1, [data-type=composite-chapter] h2, [data-type=composite-chapter] h3, [data-type=composite-chapter] h4, [data-type=composite-chapter] h5, [data-type=composite-chapter] h6,
 [data-type=page] p,
 [data-type=page] section,
 [data-type=page] table,
@@ -162,6 +162,7 @@ div.handbook {
 [data-type=page] h3,
 [data-type=page] h4,
 [data-type=page] h5,
+[data-type=page] h6,
 [data-type=composite-page] p,
 [data-type=composite-page] section,
 [data-type=composite-page] table,
@@ -173,7 +174,8 @@ div.handbook {
 [data-type=composite-page] h2,
 [data-type=composite-page] h3,
 [data-type=composite-page] h4,
-[data-type=composite-page] h5 {
+[data-type=composite-page] h5,
+[data-type=composite-page] h6 {
   margin: 0;
   padding: 0;
 }
@@ -255,7 +257,7 @@ ul[data-bullet-style=none] {
   font-style: italic;
 }
 
-h3, h4, h5 {
+h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
@@ -1126,7 +1128,7 @@ a[data-type=cite] {
 .os-figure.has-splash > figure.splash {
   position: relative;
   width: 8.75in;
-  transform: translate3d(-1in, 0, 0);
+  transform: translate3d(-0.95in, 0, 0);
   margin-left: -1.2rem;
   margin-bottom: 0;
 }

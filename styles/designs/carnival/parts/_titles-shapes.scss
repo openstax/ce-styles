@@ -111,6 +111,31 @@
   ))
 );
 
+@include create_shape('carnival:::EocCompositePageBumpedUpTitlesShape',(
+  _components:(
+    map-merge($Page--Composite__Container,(
+      _components:(
+        $H2--BumpedUp,
+        map-merge($SectionWrapper--SecondLevel,(
+          _components:(
+            $H4--BumpedUp,
+          ),
+        )),
+        map-merge($SectionWrapper--ThirdLevel,(
+          _components:(
+            $H5--BumpedUp,
+          ),
+        )),
+        map-merge($SectionWrapper--FourthLevel,(
+          _components:(
+            $H6,
+          ),
+        )),
+      ),
+    )),
+  ))
+);
+
 @include create_shape('carnival:::EocCompositePageTitlesWithIconShape',(
   _groups: (
     group-border-color: enum('ValueSet:::REQUIRED'),
