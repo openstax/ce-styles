@@ -6,9 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.132.0] - 2023-07-27
 
+* Move `cardboard` splash images left by .1in
+* Add column header tables in `nursing-internal`
+* Remove duplicate line items in `nursing-internal`
+* Style headers in `preview-carbonylchemistry` section from `organic-chemistry`
+* Remove two-column styling from `nursing-internal`
+* Change `unfolding casestudy to boxed note` in `nursing-internal`
+* Feature Design Changes to `iconned notes` in `nursing-internal`
+* Change `nursing-internal` Learning Objectives from numbers to bullets
 
-## [v.131.0]
+## [v1.131.0] - 2023-07-13
 
 * Style EOC Composite Chapter in `nursing-internal`
 * Style `preview-carbonylchemistry` section in `organic-chemistry`
@@ -22,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Undo injected exercise removing page breaking in between, limit it to just
 * Fix table overflow
 
-## [v.130.0] - 2023-06-15
+## [v1.130.0] - 2023-06-15
 
 * Fix font in tables with caption on top
 * Style additional EOC sections in `hs-college-success`
@@ -34,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Reduce paddings in notes from `carnival`
 * Fix typos in README.md
 
-## [v.129.0] - 2023-06-02
+## [v1.129.0] - 2023-06-02
 
 * Fix caption in `mechanism-figures`
 * Decrease paddings in unstyled tables from `carnival`

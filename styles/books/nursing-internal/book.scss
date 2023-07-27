@@ -77,10 +77,10 @@ $ChapterIntroType: fullWidth;
 
 // Learning Objectives
 @include add_settings((
-  LearningObjectivesNumbered: (
+  LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
-    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
   ),
 ));
 
@@ -89,6 +89,11 @@ $ChapterIntroType: fullWidth;
   BasicTable: (
     _selectors: ('.os-table:not(.os-unstyled-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+  ),
+  ColumnHeaderTable: (
+    _selectors: ('.os-table.os-column-header-container'),
+    'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::nursingTableColor"),
+    'FirstTableRow:::border-top-color': (_ref: "colorMap:::nursingTableColor"),
   ),
 ));
 
@@ -103,16 +108,16 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
     LinkToLearningNote:(
         _selectors: (".link-to-learning"),
+        group-border-color: (_ref: 'colorMap:::linkToLearningColor'),
         'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-        'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearningbig.svg")) no-repeat top left,
     ),
     UnfoldingCasestudyNote:(
         _selectors: (".unfolding-casestudy"),
         group-border-color: (_ref: 'colorMap:::unfoldingCaseStudyColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::unfoldingCaseStudyColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
     ),
     RNStoriesNote:(
         _selectors: (".rn-stories"),
@@ -135,12 +140,19 @@ $ChapterIntroType: fullWidth;
         'Title:::color': (_ref: 'colorMap:::culturalContextColor'),
         'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-lifestageculture.svg")) no-repeat top left,
     ),
+    LifeStageContextNote:(
+      _selectors: (".lifestage-context"),
+      group-border-color: (_ref: 'colorMap:::culturalContextColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'Title:::color': (_ref: 'colorMap:::culturalContextColor'),
+      'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-lifestageculture.svg")) no-repeat top left,
+    ),
     PatientConversationsNote:(
         _selectors: (".patient-conversations"),
         group-border-color: (_ref: 'colorMap:::patientConversationsColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::patientConversationsColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-debate.svg")) no-repeat top left,
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-conversation.svg")) no-repeat top left,
     ),
     PharmaConnectionsNote:(
         _selectors: (".pharma-connections"),
@@ -154,7 +166,7 @@ $ChapterIntroType: fullWidth;
         group-border-color: (_ref: 'colorMap:::legalEthicalColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::legalEthicalColor'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-homestaticimbalance.svg")) no-repeat top left,
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-homestaticimbalancebrown.svg")) no-repeat top left,
     ),
     MultiDisciplinaryNote:(
         _selectors: (".multi-disciplinary"),
@@ -174,20 +186,15 @@ $ChapterIntroType: fullWidth;
         group-border-color: (_ref: 'colorMap:::electronicHrColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::electronicHrColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-healthrecord.svg")) no-repeat top left,
     ),
     PsychosocialConsiderationsNote:(
         _selectors: (".psychosocial-considerations"),
         group-border-color: (_ref: 'colorMap:::psychosocialConsiderationsColor'),
         'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
         'Title:::color': (_ref: 'colorMap:::psychosocialConsiderationsColor'),
+        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-brain.svg")) no-repeat top left,
     ),
-));
-
-// Modules
-@include add_settings((
-  TwoColumnsModules: (
-    _selectors: ('.os-glossary-container', '.os-summary-container'),
-  ),
 ));
 
 @include add_settings((
@@ -217,7 +224,7 @@ $ChapterIntroType: fullWidth;
 
 // Book Specific Styles
 @include use('UnitToc', 'carnival:::UnitToc');
-@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('ParaIndented', 'carnival:::ParaIndentedShape');
 @include use('ParaCentered', 'carnival:::ParaCenteredShape');
 
@@ -251,6 +258,7 @@ $ChapterIntroType: fullWidth;
 @include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
@@ -260,21 +268,22 @@ $ChapterIntroType: fullWidth;
 @include use("NotesLists", "carnival:::NotesListsShape");
 
 // Notes
-@include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
-@include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
+
+@include use('UnfoldingCasestudyNote', 'carnival:::BoxedNoteShape');
+@include use('LinkToLearningNote', 'carnival:::IconNoteShape');
 @include use('RNStoriesNote', 'carnival:::IconNoteShape');
 @include use('ClinicalSafetyNote', 'carnival:::IconNoteShape');
 @include use('CulturalContextNote', 'carnival:::IconNoteShape');
+@include use('LifeStageContextNote', 'carnival:::IconNoteShape');
 @include use('PatientConversationsNote', 'carnival:::IconNoteShape');
 @include use('PharmaConnectionsNote', 'carnival:::IconNoteShape');
 @include use('LegalEthicalNote', 'carnival:::IconNoteShape');
 @include use('MultiDisciplinaryNote', 'carnival:::IconNoteShape');
 @include use('ClinicalJudgmentNote', 'carnival:::BoxedNoteShape');
-@include use('ElectronicHrNote', 'carnival:::BoxedNoteShape');
-@include use('PsychosocialConsiderationsNote', 'carnival:::BoxedNoteShape');
+@include use('ElectronicHrNote', 'carnival:::IconNoteShape');
+@include use('PsychosocialConsiderationsNote', 'carnival:::IconNoteShape');
 
 // EOC
-@include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
