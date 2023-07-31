@@ -32,7 +32,7 @@ COPY \
 RUN dart pub get
 
 RUN apt-get update
-RUN apt-get install shellcheck
+RUN apt-get install shellcheck wget
 
 # Install node
 # https://stackoverflow.com/questions/36399848/install-node-in-dockerfile/57546198#57546198
