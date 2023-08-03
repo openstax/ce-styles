@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style smallcaps elements on webview
+
 ## [v1.132.0] - 2023-07-27
 
 * Download fonts locally by adding to [./script/download-fonts](./script/download-fonts) and then running it
