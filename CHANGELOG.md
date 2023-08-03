@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.132.0] - 2023-07-27
 
+* Regenerate CSS files so the fonts work, especially `ap-physics`
 * Download fonts locally by adding to [./script/download-fonts](./script/download-fonts) and then running it
 * Move `cardboard` splash images left by .1in
 * Add column header tables in `nursing-internal`
