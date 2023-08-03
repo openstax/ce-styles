@@ -42,8 +42,6 @@ $Exercise__ExerciseQuestion: (
   _properties: (
     padding: '0.5em 1em',
     display: table,
-    table-layout: fixed,
-    width: 100%,
   ),
 );
 
@@ -51,6 +49,7 @@ $Exercise__ProblemSolution__Number: (
   _name: "ProblemSolutionNumber",
   _subselector: ' > .os-number',
   _properties: (
+    display: table-cell,
     font-weight: 700,
     text-decoration: none,
   )
@@ -60,7 +59,7 @@ $Exercise__ProblemSolution__Divider:(
   _name: "ProblemSolutionDivider",
   _subselector: " > .os-divider",
   _properties:(
-    margin-right: 0,
+    margin-right: 0.5em,
   )
 );
 
@@ -68,7 +67,7 @@ $Exercise__Problem__Container: (
     _name: "ProblemContainer",
     _subselector: " > .os-problem-container",
     _properties:(
-      display: inline,
+      display: table-cell,
     )
 );
 
@@ -87,6 +86,16 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _properties:(
         display: table,
         width: 100%,
+    )
+);
+
+$Exercise__Question__Stem: (
+    _name: "ExerciseQuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: table,
+        width: 100%,
+        table-layout: fixed,
     )
 );
 ///
@@ -297,6 +306,8 @@ $InjectedExercise__ProblemSolution__Letter: (
   )
 );
 
+// ToDo: add to name --FromMultipartQuestion
+// There is separate component for regular Injected Exercises
 $InjectedExercise__Question__Stem: (
     _name: "QuestionStem",
     _subselector: " > [data-type='question-stem']",

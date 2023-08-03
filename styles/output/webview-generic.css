@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url("./PHILZZZ/IBM+Plex+Sans:ital@0;1.css");
+@import url("./PHILZZZ/IBM+Plex+Mono.css");
 :root {
   --content-text-scale: 1;
 }
@@ -1562,21 +1562,26 @@ a:hover {
 [data-type=injected-exercise] [data-type=exercise-question] {
   padding: 0.5em 1em;
   display: table;
-  table-layout: fixed;
-  width: 100%;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 0;
+  margin-right: 0.5em;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: inline;
+  display: table-cell;
+}
+
+[data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .appendix [data-type=exercise] .os-problem-container p {
@@ -1674,7 +1679,7 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
-  margin-right: 0;
+  margin-right: 0.5em;
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
