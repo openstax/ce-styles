@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+
+# Mostly from https://gist.github.com/garbetjie/296b6188d5b03c1b24b1 with minor changes
+
+wget="`which wget`"
+grep="`which grep`"
+url=""
+prefix=""
+destination="`pwd`/downloaded_fonts"
+destination_fontname="fonts"
+
+
+# parse options. first non-parameter argument is assumed to be the URL,
+# and processing stops after that.
+while [ $# -gt 0 ]
+do
+	case "$1" in
+		-prefix|--prefix|-p)
+			[ "$2" != "/" ] && prefix="${2%/}" || prefix="$2"
+			shift 2;;
+
+		-destination|--destination|-o)
+			[ "$2" != "/" ] && destination="${2%/}" || destination="$2"
+			shift 2;;
+
+		-name|--name|-n)
+			[ "$2" != "/" ] && destination_fontname="${2%/}" || destination_fontname="$2"
+			shift 2;;
+
+		*)
+			url="$1"
+			break;;
+	esac
+done
+
+
+# simple validation
+[ "$wget" = "" ] && { echo "'wget' is required."; exit 1; }
+[ "$grep" = "" ] && { echo "'grep' is required."; exit 1; }
+[ "$url" = "" ] && { echo "Usage: $0 [-prefix=css prefix] [-destination=destination dir] [url]"; exit 1; }
+
+# create destination directory
+if [ ! -d "$destination" ]
+then
+	mkdir -p "$destination" || {
+		echo "Cannot create destination directory ${destination}"
+		exit 1
+	}
+fi
+
+
+# download css file
+echo -n "downloading css file to ${destination}/${destination_fontname}.css... "
+wget_output=$($wget "$url" -O "${destination}/${destination_fontname}.css" 2>&1)
+if [ $? -ne 0 ]
+then
+	echo "fail"
+	echo "--"
+	echo "$wget_output"
+	exit 2
+else
+	echo "done"
+fi
+
+
+# parse css for src: tags
+urls=$(grep "src: " "${destination}/${destination_fontname}.css" | grep -P -o "url\(\K([^)]+)")
+for url in $urls
+do
+	echo $url | grep -P "^http" &> /dev/null
+	[ $? -ne 0 ] && continue
+
+	echo -n "fetching ${url}... "
+	basename="`basename $url`"
+	wget_output=$($wget "$url" -O "${destination}/${basename}" 2>&1)
+
+	if [ $? -ne 0 ]
+	then
+		echo "fail"
+		echo "$wget_output"
+		echo
+	else
+		echo "done"
+		sed -i "s|url(${url})|url(${prefix}${basename})|g" "${destination}/${destination_fontname}.css"
+	fi
+done
+
+
+# we're done!
+echo ""
+echo "fonts available at '$destination'."
