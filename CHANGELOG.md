@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Update `carnival` captions to `line-height: 1.2`
 * Style smallcaps elements on webview
 
 ## [v1.132.0] - 2023-07-27
