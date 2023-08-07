@@ -2232,3 +2232,24 @@ section.further-reading p {
   font-weight: bold;
   text-decoration: none;
 }
+
+.os-eob [data-type=question-solution] {
+  display: table;
+}
+
+.os-eob [data-type=question-solution] > .os-prefix {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5em;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.os-eob [data-type=question-solution] > .os-prefix > .os-label {
+  text-transform: uppercase;
+}
+
+.os-eob [data-type=question-solution] > .os-prefix > .os-number {
+  align-self: flex-end;
+}

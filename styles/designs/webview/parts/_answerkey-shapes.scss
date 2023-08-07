@@ -1,4 +1,5 @@
 @import 'answerkey-components';
+@import 'exercise-components';
 
 @include create_shape('webview:::AnswerKeyShape', (
     _components: (
@@ -12,5 +13,20 @@
                 $AnswerKey__Solution__Number,
             ),
         )),
+    )
+));
+
+@include create_shape('webview:::AnswerKeySolutionWithProblemPrefixShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+            map-merge($Exercise__ProblemSolution__Prefix,(
+              _components:(
+                  $Exercise__ProblemSolution__Prefix__Label,
+                  $Exercise__ProblemSolution__Prefix__Number,
+              ),
+            )),
+          )
+      )),
     )
 ));
