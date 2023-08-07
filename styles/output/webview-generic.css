@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url("./PHILZZZ/IBM+Plex+Sans:ital@0;1.css");
+@import url("./PHILZZZ/IBM+Plex+Mono.css");
 :root {
   --content-text-scale: 1;
 }
@@ -69,6 +69,10 @@ u[data-effect=double-underline] {
 
 [data-type=media][data-display=inline] {
   display: inline-flex;
+}
+
+.smallcaps {
+  font-size: calc(1.3rem * var(--content-text-scale));
 }
 
 h1 {
