@@ -344,6 +344,10 @@
         _selectors: ('.os-eob [data-type="question-solution"]'),
         'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
+    AnswerKeySolutionMultipart: (
+        _selectors: ('.os-eob [data-type="question-solution"]'),
+        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
 ));
 
 @include add_settings((
@@ -447,3 +451,4 @@
 @include use('Index', 'webview:::IndexShape');
 @include use('AnswerKey', 'webview:::AnswerKeyShape');
 @include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
+@include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');

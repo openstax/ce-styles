@@ -150,6 +150,25 @@ $Exercise__Solution__Toggle__Marker: (
   ),
 );
 
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      width: 100%,
+    )
+);
+
 $Exercise--ProblemsExercises__Problem--Before1: (
   _name: "ProblemsExercisesProblemBefore1",
   _subselector: (' [data-type="problem"]::before'),
@@ -323,4 +342,13 @@ $InjectedExercise__Question__Stem--WithFirstElement: (
       display: table-cell,
       vertical-align: bottom,
     )
+);
+
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: inline-table,
+    margin-right: 0.5em,
+  )
 );

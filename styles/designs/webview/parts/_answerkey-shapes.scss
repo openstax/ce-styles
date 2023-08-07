@@ -30,3 +30,27 @@
       )),
     )
 ));
+
+@include create_shape('webview:::AnswerKeySolutionMultipartShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                    map-merge($InjectedExercise__Solution__Part,(
+                        _components:(
+                            $InjectedExercise__ProblemSolution__Letter,
+                            $Exercise__ProblemSolution__Divider,
+                            $Exercise__Solution__Container,
+                            $Exercise__Solution__Container--WithFirstElement,
+                        ),
+                    )),
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement,
+          )
+      )),
+    )
+));
