@@ -9,7 +9,7 @@ $Caption__Container--Figure: (
         margin-right: auto,
         margin-bottom: v-spacing(1),
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
     )
 );
 
@@ -22,6 +22,7 @@ $Caption__Title__Container:(
         background-color: enum('ValueSet:::REQUIRED'),
         padding: v-spacing(1),
         display: table-caption,
+        line-height: 1.2,
     )
 );
 
@@ -37,6 +38,7 @@ $Caption__Text__Container:(
         border-left-color: enum('ValueSet:::REQUIRED'),
         padding: v-spacing(1),
         display: table-caption,
+        line-height: 1.2,
     )
 );
 
@@ -67,7 +69,7 @@ $Caption__Container--ChapterIntro: (
         padding-top: v-spacing(1),
         padding-bottom: v-spacing(1),
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
     )
 );
 
@@ -98,7 +100,7 @@ $Caption__Container--Table: (
         caption-side: bottom,
         prince-caption-page: all,
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
     )
 );
 
@@ -109,7 +111,7 @@ $Caption__Container--Table--OnTop: (
         display: table-caption,
         prince-caption-page: all,
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
     )
 );
 
