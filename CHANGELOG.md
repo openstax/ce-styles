@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style Answer Key with prefixes on webview
+* Update `carnival` captions to `line-height: 1.2`
 * Style images from exercises on webview
-* Fix regression for exercises on webview
 * Fix regression for exercises on webview
 * Regenerate CSS files so the fonts work, especially `ap-physics`
 * Style smallcaps elements on webview
