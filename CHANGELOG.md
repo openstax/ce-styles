@@ -6,9 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.133.0] - 2023-08-10
+
+* Style Answer Key with prefixes on webview
+* Update `carnival` captions to `line-height: 1.2`
+* Style images from exercises on webview
+* Fix regression for exercises on webview
+* Regenerate CSS files so the fonts work, especially `ap-physics`
+* Style smallcaps elements on webview
+
 ## [v1.132.0] - 2023-07-27
 
-* Regenerate CSS files so the fonts work, especially `ap-physics`
 * Download fonts locally by adding to [./script/download-fonts](./script/download-fonts) and then running it
 * Move `cardboard` splash images left by .1in
 * Add column header tables in `nursing-internal`

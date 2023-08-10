@@ -42,8 +42,6 @@ $Exercise__ExerciseQuestion: (
   _properties: (
     padding: '0.5em 1em',
     display: table,
-    table-layout: fixed,
-    width: 100%,
   ),
 );
 
@@ -51,6 +49,7 @@ $Exercise__ProblemSolution__Number: (
   _name: "ProblemSolutionNumber",
   _subselector: ' > .os-number',
   _properties: (
+    display: table-cell,
     font-weight: 700,
     text-decoration: none,
   )
@@ -60,7 +59,7 @@ $Exercise__ProblemSolution__Divider:(
   _name: "ProblemSolutionDivider",
   _subselector: " > .os-divider",
   _properties:(
-    margin-right: 0,
+    margin-right: 0.5em,
   )
 );
 
@@ -68,7 +67,7 @@ $Exercise__Problem__Container: (
     _name: "ProblemContainer",
     _subselector: " > .os-problem-container",
     _properties:(
-      display: inline,
+      display: table-cell,
     )
 );
 
@@ -87,6 +86,16 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _properties:(
         display: table,
         width: 100%,
+    )
+);
+
+$Exercise__Question__Stem: (
+    _name: "ExerciseQuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: 'table !important',
+        width: 100%,
+        table-layout: fixed,
     )
 );
 ///
@@ -139,6 +148,25 @@ $Exercise__Solution__Toggle__Marker: (
   _properties: (
     display: none,
   ),
+);
+
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: auto,
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      width: auto,
+    )
 );
 
 $Exercise--ProblemsExercises__Problem--Before1: (
@@ -297,6 +325,8 @@ $InjectedExercise__ProblemSolution__Letter: (
   )
 );
 
+// ToDo: add to name --FromMultipartQuestion
+// There is separate component for regular Injected Exercises
 $InjectedExercise__Question__Stem: (
     _name: "QuestionStem",
     _subselector: " > [data-type='question-stem']",
@@ -312,4 +342,13 @@ $InjectedExercise__Question__Stem--WithFirstElement: (
       display: table-cell,
       vertical-align: bottom,
     )
+);
+
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: inline-table,
+    margin-right: 0.5em,
+  )
 );
