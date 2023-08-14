@@ -1,5 +1,6 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/IBM-Plex-Mono.css");
+
 :root {
   --content-text-scale: 1;
 }
@@ -250,6 +251,7 @@ figure.scaled-down-30 ~ .os-caption-container {
 .os-figure.has-mechanism-figure .os-caption-title-container {
   color: #424242;
   background-color: #C3E2C3;
+  padding: 1rem;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
 }
@@ -278,7 +280,7 @@ figure.scaled-down-30 ~ .os-caption-container {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #C3E2C3;
-  padding-bottom: 1rem;
+  padding: 1rem;
   color: #424242;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
