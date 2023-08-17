@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Allow breaking page within exercises
 * Fix alignment in `multipart-questions` from `webview`
 
 ## [v1.133.0] - 2023-08-10

@@ -100,19 +100,6 @@ p.has-noteref {
   }
 }
 
-//An exercise should avoid breaking across pages
-.os-eoc {
-  > section > [data-type="exercise"] {
-    page-break-inside: avoid;
-  }
-}
-
-.os-eos {
-  > section.section-exercises > section > [data-type="exercise"] {
-  page-break-inside: avoid;
-  }
-}
-
 .os-eos {
   > section [data-type="injected-exercise"] > [data-type="exercise-question"] > .os-prefix{
     page-break-inside: avoid;
