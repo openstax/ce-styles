@@ -1,6 +1,5 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/IBM-Plex-Mono.css");
-
 :root {
   --content-text-scale: 1;
 }
@@ -74,6 +73,10 @@ u[data-effect=double-underline] {
 
 .smallcaps {
   font-size: calc(1.3rem * var(--content-text-scale));
+}
+
+.os-caption span.smallcaps {
+  font-size: calc(1rem * var(--content-text-scale));
 }
 
 h1 {
