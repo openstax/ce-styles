@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `PagesWithBands` in `nutrition`
 * Allow breaking page within exercises
 * Style `mechanism-figure` caption on `webview`
 * Fix `smallcaps in captions` in `webview`
