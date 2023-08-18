@@ -1,6 +1,5 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/IBM-Plex-Mono.css");
-
 :root {
   --content-text-scale: 1;
 }
@@ -896,12 +895,14 @@ a:hover {
   font-weight: bold;
 }
 
-[data-type=example] [data-type=problem] {
-  padding: 0.5em 1em;
+[data-type=example] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
-[data-type=example] .problem {
-  padding: 0.5em 1em;
+[data-type=example] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=example] [data-type=solution] {
@@ -1064,12 +1065,14 @@ a:hover {
   font-weight: bold;
 }
 
-.example [data-type=problem] {
-  padding: 0.5em 1em;
+.example > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.example .problem {
-  padding: 0.5em 1em;
+.example > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .example [data-type=solution] {
@@ -1232,12 +1235,14 @@ a:hover {
   font-weight: bold;
 }
 
-[data-type=exercise] [data-type=problem] {
-  padding: 0.5em 1em;
+[data-type=exercise] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
-[data-type=exercise] .problem {
-  padding: 0.5em 1em;
+[data-type=exercise] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=exercise] [data-type=solution] {
@@ -1400,12 +1405,14 @@ a:hover {
   font-weight: bold;
 }
 
-.exercise [data-type=problem] {
-  padding: 0.5em 1em;
+.exercise > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.exercise .problem {
-  padding: 0.5em 1em;
+.exercise > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .exercise [data-type=solution] {

@@ -8,8 +8,12 @@
         map-merge($Exercise__Container, (
             _components: (
                 $Exercise__Title,
-                $Exercise__Problem1,
-                $Exercise__Problem2,
+                map-merge($Exercise__Problem1, (
+                  $Exercise__Problem__Number
+                )),
+                map-merge($Exercise__Problem2, (
+                  $Exercise__Problem__Number
+                )),
                 map-merge($Exercise__Solution1, (
                     _components: (
                         $Button--InExerciseSolution,
