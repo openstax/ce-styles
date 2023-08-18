@@ -895,12 +895,20 @@ a:hover {
   font-weight: bold;
 }
 
-[data-type=example] > .os-number {
+[data-type=example] [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+[data-type=example] [data-type=problem] > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=example] > .os-number {
+[data-type=example] .problem {
+  padding: 0.5em 1em;
+}
+
+[data-type=example] .problem > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
@@ -1065,12 +1073,20 @@ a:hover {
   font-weight: bold;
 }
 
-.example > .os-number {
+.example [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+.example [data-type=problem] > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
 
-.example > .os-number {
+.example .problem {
+  padding: 0.5em 1em;
+}
+
+.example .problem > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
@@ -1235,12 +1251,20 @@ a:hover {
   font-weight: bold;
 }
 
-[data-type=exercise] > .os-number {
+[data-type=exercise] [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+[data-type=exercise] [data-type=problem] > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=exercise] > .os-number {
+[data-type=exercise] .problem {
+  padding: 0.5em 1em;
+}
+
+[data-type=exercise] .problem > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
@@ -1405,12 +1429,20 @@ a:hover {
   font-weight: bold;
 }
 
-.exercise > .os-number {
+.exercise [data-type=problem] {
+  padding: 0.5em 1em;
+}
+
+.exercise [data-type=problem] > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
 
-.exercise > .os-number {
+.exercise .problem {
+  padding: 0.5em 1em;
+}
+
+.exercise .problem > .os-number {
   font-weight: 700;
   text-decoration: none;
 }
