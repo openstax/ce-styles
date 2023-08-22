@@ -93,14 +93,6 @@ p.has-noteref {
   page-break-after: avoid;
 }
 
-.os-eoc > section > [data-type=exercise] {
-  page-break-inside: avoid;
-}
-
-.os-eos > section.section-exercises > section > [data-type=exercise] {
-  page-break-inside: avoid;
-}
-
 .os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
   page-break-inside: avoid;
 }
@@ -1302,7 +1294,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-right: auto;
   margin-bottom: 0.7rem;
   font-size: 0.8333333333rem;
-  line-height: 1rem;
+  line-height: 1.2;
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-title-label {
@@ -1368,7 +1360,7 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   font-size: 0.8333333333rem;
-  line-height: 1rem;
+  line-height: 1.2;
 }
 
 .os-figure.has-splash .os-caption-container::before {
@@ -1570,7 +1562,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   caption-side: bottom;
   prince-caption-page: all;
   font-size: 0.8333333333rem;
-  line-height: 1rem;
+  line-height: 1.2;
 }
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title-label {
@@ -1645,7 +1637,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   caption-side: bottom;
   prince-caption-page: all;
   font-size: 0.8333333333rem;
-  line-height: 1rem;
+  line-height: 1.2;
 }
 
 .os-table.top-titled .os-caption-container > .os-title-label {
