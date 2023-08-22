@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Bold os-numbers in webview
 * Fix `PagesWithBands` in `nutrition`
 * Allow breaking page within exercises
 * Style `mechanism-figure` caption on `webview`
