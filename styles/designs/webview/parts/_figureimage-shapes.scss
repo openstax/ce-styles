@@ -37,10 +37,15 @@
                     _components: (
                         $Caption__Title--Figure,
                         $Caption__TitleLabel--Figure,
-                        $Caption__Number--Figure
+                        $Caption__Number--Figure,
+                        $Caption--MechanismFigure--ScaledDown,
                     ),
                 )),
-                $Caption__Text__Container--MechanismFigure,
+                map-merge($Caption__Text__Container--MechanismFigure, (
+                    _components: (
+                        $Caption--MechanismFigure--ScaledDown,
+                    ),
+                )),
             ),
         )),
         $Image,

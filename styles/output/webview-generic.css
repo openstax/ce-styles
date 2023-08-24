@@ -1,6 +1,5 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/IBM-Plex-Mono.css");
-
 :root {
   --content-text-scale: 1;
 }
@@ -74,6 +73,10 @@ u[data-effect=double-underline] {
 
 .smallcaps {
   font-size: calc(1.3rem * var(--content-text-scale));
+}
+
+.os-caption span.smallcaps {
+  font-size: calc(1rem * var(--content-text-scale));
 }
 
 h1 {
@@ -250,6 +253,8 @@ figure.scaled-down-30 ~ .os-caption-container {
 
 .os-figure.has-mechanism-figure .os-caption-title-container {
   color: #424242;
+  background-color: #C3E2C3;
+  padding: 1rem;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
 }
@@ -266,11 +271,27 @@ figure.scaled-down-30 ~ .os-caption-container {
   font-weight: bold;
 }
 
+.os-figure.has-mechanism-figure .os-caption-title-container.scaled-down {
+  width: 60%;
+  margin: auto;
+}
+
 .os-figure.has-mechanism-figure .os-caption-text-container {
-  padding-bottom: 1rem;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #C3E2C3;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #C3E2C3;
+  padding: 1rem;
   color: #424242;
   font-size: calc(1.2rem * var(--content-text-scale));
   line-height: calc(1.7rem * var(--content-text-scale));
+}
+
+.os-figure.has-mechanism-figure .os-caption-text-container.scaled-down {
+  width: 60%;
+  margin: auto;
 }
 
 img {
@@ -900,8 +921,18 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+[data-type=example] [data-type=problem] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
+}
+
 [data-type=example] .problem {
   padding: 0.5em 1em;
+}
+
+[data-type=example] .problem > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=example] [data-type=solution] {
@@ -1068,8 +1099,18 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+.example [data-type=problem] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .example .problem {
   padding: 0.5em 1em;
+}
+
+.example .problem > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .example [data-type=solution] {
@@ -1236,8 +1277,18 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+[data-type=exercise] [data-type=problem] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
+}
+
 [data-type=exercise] .problem {
   padding: 0.5em 1em;
+}
+
+[data-type=exercise] .problem > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 [data-type=exercise] [data-type=solution] {
@@ -1404,8 +1455,18 @@ a:hover {
   padding: 0.5em 1em;
 }
 
+.exercise [data-type=problem] > .os-number {
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .exercise .problem {
   padding: 0.5em 1em;
+}
+
+.exercise .problem > .os-number {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .exercise [data-type=solution] {
@@ -1688,7 +1749,8 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
-  margin-right: 0.5em;
+  display: table-cell;
+  width: 0.5em;
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {

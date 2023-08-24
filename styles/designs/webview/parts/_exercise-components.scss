@@ -35,6 +35,15 @@ $Exercise__Problem2: (
   ),
 );
 
+$Exercise__Problem__Number: (
+  _name: "ProblemNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    font-weight: 700,
+    text-decoration: none,
+  )
+);
+
 /// Approach from PDFs
 $Exercise__ExerciseQuestion: (
   _name: "Problem1",
@@ -60,6 +69,15 @@ $Exercise__ProblemSolution__Divider:(
   _subselector: " > .os-divider",
   _properties:(
     margin-right: 0.5em,
+  )
+);
+
+$Exercise__ProblemSolution__Divider--FromMultipartQuestion:(
+  _name: "ProblemSolutionDividerFromMultipartQuestion",
+  _subselector: " > .os-divider",
+  _properties:(
+    display: table-cell,
+    width: 0.5em,
   )
 );
 
