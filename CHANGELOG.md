@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `mechanism-figure` caption on `webview`
 * Fix `smallcaps in captions` in `webview`
 * Fix alignment in `multipart-questions` from `webview`
-* Temporarily revert the local fonts because the web is not able to load them yet
+* Temporarily revert the local fonts because the web is not able to load them
 
 ## [v1.133.0] - 2023-08-10
 
