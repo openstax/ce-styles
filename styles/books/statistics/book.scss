@@ -209,3 +209,8 @@ $bandColor: #093D4C;
 @include use('AnswerKeyOneColumnEocSolution', 'corn:::AnswerKeySolutionShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+
+// Page break specific for book
+[data-type="note"].lab .os-note-body {
+  page-break-after: avoid;
+}
