@@ -208,6 +208,18 @@ $H2--WithIcon__Icon: (
   )
 );
 
+$H2--Link:(
+  _name: "H2LinkTitle",
+  _subselector: " > a > h2",
+  _properties:(
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
+);
+
 // H3 titles
 $H3: (
   _name: "H3Title",

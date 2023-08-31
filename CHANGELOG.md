@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix page break for `lab` note from `statistics`
+* Support `Blue Text` in `Nutrition` in `webview`
+* Style `H2LinkTitle` in `EobTitlesShape` from `carnival`
 
 ## [v1.134.0] - 2023-08-24
 
