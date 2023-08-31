@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Changed team name in README to CE Design Systems
+* Update README to remove Zenhub board and add Github project
 * Fix page break for `lab` note from `statistics`
 * Support `Blue Text` in `Nutrition` in `webview`
 * Style `H2LinkTitle` in `EobTitlesShape` from `carnival`
