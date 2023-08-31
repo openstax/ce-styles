@@ -46,7 +46,7 @@ Workarounds:
 - Comment out the line `RUN dart pub get` in the Dockerfile, build the image, and run `dart pub get` within the container to get the dependencies manually
 
 # Important Links
- - [Content Engineering Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
+ - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
  - [How to Release CE Styles](https://openstax.atlassian.net/l/c/TjrhH68R)
- - [CE Design Systems Project Board](https://github.com/orgs/openstax/projects/40/)
+ - [CE Styles ZenHub Board](https://app.zenhub.com/workspaces/ce-styles-5cdc84baee941c07853fbbf2/board?repos=49744755,11369724,137909279,63083783)
  - [Cookbook Repo](https://github.com/openstax/cookbook)
