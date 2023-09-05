@@ -918,21 +918,22 @@ a:hover {
 }
 
 [data-type=example] [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 [data-type=example] [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=example] .problem {
-  padding: 0.5em 1em;
+[data-type=example] [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-[data-type=example] .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+[data-type=example] [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 [data-type=example] [data-type=solution] {
@@ -1096,21 +1097,22 @@ a:hover {
 }
 
 .example [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 .example [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-.example .problem {
-  padding: 0.5em 1em;
+.example [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-.example .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+.example [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 .example [data-type=solution] {
@@ -1274,21 +1276,22 @@ a:hover {
 }
 
 [data-type=exercise] [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=exercise] .problem {
-  padding: 0.5em 1em;
+[data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-[data-type=exercise] .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+[data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 [data-type=exercise] [data-type=solution] {
@@ -1452,21 +1455,22 @@ a:hover {
 }
 
 .exercise [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 .exercise [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-.exercise .problem {
-  padding: 0.5em 1em;
+.exercise [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-.exercise .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+.exercise [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 .exercise [data-type=solution] {
