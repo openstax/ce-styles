@@ -337,6 +337,10 @@
         _selectors: ('*:not(.os-term) > .purple-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::PurpleTextColor'),
     ),
+    BlueColoredText: (
+        _selectors: ('.blue-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::BlueTextColor'),
+    ),
 ));
 
 @include add_settings((
@@ -444,6 +448,7 @@
 @include use('GrayColoredText', 'webview:::ColoredText');
 @include use('YellowColoredText', 'webview:::ColoredText');
 @include use('PurpleColoredText', 'webview:::ColoredText');
+@include use('BlueColoredText', 'webview:::ColoredText');
 
 // EOC
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');
