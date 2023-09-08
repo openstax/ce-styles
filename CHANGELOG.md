@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* add liquidprompt to docker
+
 ## [v1.135.0] - 2023-09-08
 
 * Change `Review Questions` to one column in `anatomy`
