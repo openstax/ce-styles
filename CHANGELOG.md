@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.135.0] - 2023-09-08
+
 * Change `Review Questions` to one column in `anatomy`
 * Changed team name in README to CE Design Systems
 * Update README to remove Zenhub board and add Github project
