@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `shaded table` on `webview`
 * Style webview exercises with approach from PDF
 * add liquidprompt to docker
 
