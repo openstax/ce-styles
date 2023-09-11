@@ -19,29 +19,13 @@ $Exercise__Title: (
   ),
 );
 
-$Exercise__Problem1: (
-  _name: "Problem1",
+$Exercise__Problem: (
+  _name: "ExerciseProblem",
   _subselector: ' [data-type="problem"]',
   _properties: (
+    display: table,
     padding: '0.5em 1em',
   ),
-);
-
-$Exercise__Problem2: (
-  _name: "Problem2",
-  _subselector: " .problem",
-  _properties: (
-    padding: '0.5em 1em',
-  ),
-);
-
-$Exercise__Problem__Number: (
-  _name: "ProblemNumber",
-  _subselector: ' > .os-number',
-  _properties: (
-    font-weight: 700,
-    text-decoration: none,
-  )
 );
 
 /// Approach from PDFs
