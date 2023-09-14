@@ -2107,16 +2107,16 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-right: 8px;
 }
 
-.learning-questions [data-type=exercise] [data-type=problem] .os-problem-container {
+.learning-questions [data-type=exercise] [data-type=problem] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.learning-questions [data-type=exercise] [data-type=problem] .os-problem-container > p {
+.learning-questions [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.learning-questions [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+.learning-questions [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -2150,24 +2150,24 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-right: 8px;
 }
 
-.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
   display: inline;
 }
 
-.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
   display: inline;
 }
 
-.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.learning-questions [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
