@@ -16,7 +16,7 @@
                                         $Exercise__ProblemSolution__Para,
                                     )
                                 )),
-                                $Exercise__Problem__Container--WithImageTableOnTop,
+                                $Exercise__Problem__Container--WithFirstElement,
                             )
                         )),
                     )
@@ -35,12 +35,29 @@
                                         $Exercise__ProblemSolution__Para,
                                     )
                                 )),
-                                $Exercise__Problem__Container--WithImageTableOnTop
+                                $Exercise__Problem__Container--WithFirstElement,
                             )
                         ))
                     )
                 )),
             )
+        )),
+    )
+));
+
+@include create_shape('cardboard:::ExercisesMultipartQuestionShape',(
+    _components:(
+        map-merge($ExerciseMultipartQuestion__Container,(
+            _components:(
+                map-merge($Exercise__Problem__Container--FromMultipartQuestion,(
+                    _components:(
+                        $InjectedExercise__ProblemSolution__Letter,
+                        $Exercise__ProblemSolution__Divider,
+                        $InjectedExercise__Question__Stem,
+                        $InjectedExercise__Question__Stem--WithFirstElement,
+                    ),
+                )),
+            ),
         )),
     )
 ));

@@ -225,6 +225,10 @@ $bandColor: #24739E;
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
   ),
+  MultipartQuestionExercises: (
+    _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+    'ProblemSolutionLetter:::color': (_ref: "colorMap:::fontBodyColor"),
+  ),
 ));
 
 @include add_settings((
@@ -303,6 +307,7 @@ TextHeavyWithTitleTable: (
 
 //Exercises
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
+@include use('MultipartQuestionExercises','cardboard:::ExercisesMultipartQuestionShape');
 
 //Lists
 @include use('PageLists', 'cardboard:::PageListsShape');
