@@ -1,0 +1,19 @@
+@import './customPara-components';
+
+// Annotation with Icon
+
+@include create_shape('webview:::ParaAnnotationWithIconShape', (
+  _components: (
+    map-merge($Para--Annotation--WithIcon,(
+      _components: (
+        $Para--Annotation__IconContainer,
+      ),
+    ))
+  ),
+));
+
+@include create_shape('webview:::ParaAnnotationIconShape', (
+  _components: (
+    $Para--Annotation__Icon,
+  )
+));

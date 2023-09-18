@@ -1,0 +1,30 @@
+// Annotation with Icon
+
+$Para--Annotation--WithIcon: (
+  _name: "ParaAnnotationWithIcon",
+  _subselector: '',
+  _properties:(
+  )
+);
+
+$Para--Annotation__IconContainer: (
+  _name: "ParaAnnotationIconContainer",
+  _subselector: ' > .os-icons',
+  _properties:(
+    display: flex,
+    float: left,
+  )
+);
+
+$Para--Annotation__Icon: (
+  _name: "ParaAnnotationIcon",
+  _subselector: '',
+  _properties:(
+    height: 2rem,
+    width: 2rem,
+    background: enum('ValueSet:::REQUIRED'),
+    content: "''",
+    background-repeat: no-repeat,
+    margin: '0.15rem 1rem 0.15rem 0',
+  )
+);
