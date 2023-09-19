@@ -345,6 +345,40 @@
 ));
 
 @include add_settings((
+  ParaAnnotationWithIcon: (
+    _selectors: ('p.annotation'),
+  ),
+  CultureAnnotationIcon:(
+    _selectors: ("span.culture-icon"),
+    'ParaAnnotationIcon:::background': url("https://raw.githubusercontent.com/openstax/rex-web/main/public/static/icons/cosmos-culture.svg") no-repeat top left
+  ),
+  LinguisticAnnotationIcon: (
+    _selectors: ("span.linguistic-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-linguistic.svg")) no-repeat top left
+  ),
+  DreamingAnnotationIcon: (
+    _selectors: ("span.dreaming-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-dreaming.svg")) no-repeat top left
+  ),
+  VisualAnnotationIcon: (
+    _selectors: ("span.visual-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-visual.svg")) no-repeat top left
+  ),
+  SpeechAnnotationIcon: (
+    _selectors: ("span.speech-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-speech.svg")) no-repeat top left
+  ),
+  AuditoryAnnotationIcon: (
+    _selectors: ("span.auditory-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-auditory.svg")) no-repeat top left
+  ),
+  KinestheticAnnotationIcon: (
+    _selectors: ("span.kinesthetic-icon"),
+    'ParaAnnotationIcon:::background': url(toDataUri("svg+xml", "designs/webview/resources/cosmos-kinesthetic.svg")) no-repeat top left
+  ),
+));
+
+@include add_settings((
     AnswerKey: (
         _selectors: ('.os-eob.os-solutions-container'),
     ),
@@ -450,6 +484,16 @@
 @include use('YellowColoredText', 'webview:::ColoredText');
 @include use('PurpleColoredText', 'webview:::ColoredText');
 @include use('BlueColoredText', 'webview:::ColoredText');
+
+// Custom paragraphs
+@include use('ParaAnnotationWithIcon', 'webview:::ParaAnnotationWithIconShape');
+@include use('CultureAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('LinguisticAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('DreamingAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('VisualAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('SpeechAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('AuditoryAnnotationIcon', 'webview:::ParaAnnotationIconShape');
+@include use('KinestheticAnnotationIcon', 'webview:::ParaAnnotationIconShape');
 
 // EOC
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');
