@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.135.0] - 2023-09-22
+## [v1.136.0] - 2023-09-22
 
 * Style `horizontal rule for vertically-tight tables` in `nursing-external`
 * Style `multipart questions` in `bca`
