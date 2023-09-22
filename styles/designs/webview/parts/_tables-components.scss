@@ -37,6 +37,8 @@ $Table--WithImages: (
   )
 );
 
+$Table--AlternateShading: empty_wrapper(TableAlternateShading, '.alternate-shading');
+
 $Caption: (
   _name: "Caption",
   _subselector: ' caption',
@@ -83,6 +85,14 @@ $Table__Head: empty_wrapper(TableHead, ' thead');
 $Table__Body: empty_wrapper(TableBody, ' tbody');
 $Table__Foot: empty_wrapper(TableFoot, ' tfoot');
 $Table__Row: empty_wrapper(TableRow, ' > tr');
+
+$Table__Row--AlternateShading: (
+    _name: "TableRowAlternateShading",
+    _subselector: " tr:nth-child(even)",
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
+    )
+);
 
 $Table__Head__Cell: (
   _name: "TableHeadCell",

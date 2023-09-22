@@ -122,6 +122,8 @@ $ChapterIntroType: fullWidth;
   BasicTable: (
     _selectors: ('.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'Table:::border-top': solid 0.25px,
+    'Table:::border-top-color':  (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
@@ -208,7 +210,7 @@ $ChapterIntroType: fullWidth;
     _selectors: (".safety-alert"),
     'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alertbig.svg")) no-repeat center center,
     'IconBoxedTitle:::background-color': (_ref: 'colorMap:::alertColor'),
-    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::alertTitleColor"),
     'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
     'IconBoxedBody:::background-color': (_ref: 'colorMap:::alertBlurredColor'),
     'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),

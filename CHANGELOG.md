@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.136.0] - 2023-09-22
+
+* Style `horizontal rule for vertically-tight tables` in `nursing-external`
+* Style `multipart questions` in `bca`
+* Style `safetey-alert title color` in `nursing-internal`
+* Style `shaded table` on `webview`
+* Style webview exercises with approach from PDF
+* add liquidprompt to docker
+
 ## [v1.135.0] - 2023-09-08
 
 * Change `Review Questions` to one column in `anatomy`

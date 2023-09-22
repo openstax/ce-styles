@@ -16,6 +16,14 @@ $InjectedExercise__Container: (
     )
 );
 
+$ExerciseMultipartQuestion__Container: (
+    _name: "ExerciseMultipartQuestionContainer",
+    _subselector: '',
+    _properties: (
+        display: enum('ValueSet:::OPTIONAL'), // used in inline exercises
+    )
+);
+
 // Problem components
 $Exercise__Problem__Wrapper: (
     _name: "ProblemWrapper",
@@ -34,8 +42,33 @@ $InjectedExercise__Question__Wrapper: (
     )
 );
 
-$Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
-$Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
+$Exercise__Problem__Container: (
+    _name: "ProblemContainer",
+    _subselector: " > .os-problem-container",
+    _properties:(
+      display: table-cell,
+      width: 100%
+    )
+);
+
+$Exercise__Problem__Container--WithFirstElement: (
+    _name: "ProblemContainerWithFirstElement",
+    _subselector: " > .os-problem-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromMultipartQuestion: (
+    _name: "ProblemContainerFromMultipartQuestion",
+    _subselector: " > .os-problem-container",
+    _properties:(
+        display: table,
+    )
+);
 
 $InjectedExercise__Context: (
   _name: "InjectedexerciseContext",
@@ -51,6 +84,35 @@ $InjectedExercise__Divider: (
   _properties: (
     display: inline,
   )
+);
+
+$InjectedExercise__ProblemSolution__Letter: (
+  _name: "ProblemSolutionLetter",
+  _subselector: ' > .problem-letter',
+  _properties: (
+    display: table-cell,
+    text-decoration: none,
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+  )
+);
+
+$InjectedExercise__Question__Stem: (
+    _name: "QuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: table-cell,
+    )
+);
+
+$InjectedExercise__Question__Stem--WithFirstElement: (
+    _name: "QuestionStemWithFirstElement",
+    _subselector: " > [data-type='question-stem'].has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+    )
 );
 
 // Solution components
