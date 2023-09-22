@@ -2100,6 +2100,34 @@ a[role=doc-noteref] {
   padding-bottom: 0.16rem;
 }
 
+.os-table [data-columns="2"][data-ratio="1,1"] col[data-width="1*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="3*"] {
+  width: 75%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="2*"] {
+  width: 40%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="3*"] {
+  width: 60%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="2*"] {
+  width: 50%;
+}
+
 [data-type=page] > ol {
   margin-left: 24px;
 }
