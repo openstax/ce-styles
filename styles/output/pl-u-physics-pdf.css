@@ -264,6 +264,11 @@ pre {
   white-space: pre-wrap;
 }
 
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
