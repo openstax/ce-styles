@@ -264,6 +264,11 @@ pre {
   white-space: pre-wrap;
 }
 
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
@@ -3779,12 +3784,6 @@ a[role=doc-noteref] {
 }
 
 .os-chapter-summary-container {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-review-questions-container {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;

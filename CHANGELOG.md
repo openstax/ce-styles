@@ -6,7 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
 * Style `inline media` in `webview`
+* Fix translation in folio `cosmos`
+* Style `code` with `data-display="block"`
+* Style `review questions` in `nursing-external`
+
+## [v1.136.0] - 2023-09-22
+
 * Style `horizontal rule for vertically-tight tables` in `nursing-external`
 * Style `multipart questions` in `bca`
 * Style `safetey-alert title color` in `nursing-internal`
