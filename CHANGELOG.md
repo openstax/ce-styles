@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+* Style `inline media` in `webview`
 * Fix translation in folio `cosmos`
 * Style `code` with `data-display="block"`
 * Style `review questions` in `nursing-external`
