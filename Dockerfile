@@ -49,7 +49,7 @@ RUN git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt && \
 # because devcontainer was working without it. Leaving this just in case there are some problems in the future.
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
-ENV NODE_VERSION=14.16.1
+ENV NODE_VERSION=20.8.0
 RUN . "$NVM_DIR/nvm.sh" && nvm install $NODE_VERSION && \
     . "$NVM_DIR/nvm.sh" && nvm use v$NODE_VERSION && \
     . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION
