@@ -365,6 +365,15 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  BoxedFeatureNote:(
+    _selectors: (".boxed-feature"),
+    group-border-color: (_ref: 'colorMap:::boxedFeatureColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::boxedFeatureColor'),
+  ),
+));
+
 // Target labels
 @include add_settings((
   FigureTargetLabel: (
@@ -456,6 +465,7 @@ $ChapterIntroType: fullWidth;
 @include use('SingleCasestudyNote', 'carnival:::IconNoteShape');
 @include use('CaseReflectionNote', 'carnival:::IconNoteShape');
 @include use('MediaFeatureNote', 'carnival:::IconBoxedNoteShape');
+@include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
 
 
 //EOC
