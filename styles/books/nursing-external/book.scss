@@ -103,7 +103,6 @@ $ChapterIntroType: fullWidth;
       '.os-glossary-container',
       '.os-section-summary-container',
       '.os-chapter-summary-container',
-      '.os-review-questions-container',
       '.os-suggested-reading-container'
     ),
   ),
@@ -124,8 +123,6 @@ $ChapterIntroType: fullWidth;
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
     'Table:::border-top': solid 0.25px,
     'Table:::border-top-color':  (_ref: 'colorMap:::fontBodyColor'),
-    'FirstTableData:::border-left': solid 0.25px,
-
   ),
 ));
 
@@ -430,6 +427,7 @@ $ChapterIntroType: fullWidth;
 @include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
 @include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
 @include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
 
 
 //Lists
