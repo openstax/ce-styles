@@ -350,12 +350,3 @@ $Table--TopSpacing:(
         margin-top: 1rem,
     )
 );
-
-//nursing external - Added target rowspan (https://github.com/openstax/cnx-recipes/issues/5251)
-$Table__RowSpan:(
-    _name: "TableRowSpan",
-    _subselector: "td[rowspan]:not(:only-of-type)",
-    _properties: (
-      border-left: enum('ValueSet:::OPTIONAL'),
-    )
-);
