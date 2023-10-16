@@ -3504,6 +3504,37 @@ a[role=doc-noteref] {
   padding-bottom: 0.7rem;
 }
 
+.boxed-feature {
+  border: solid;
+  border-color: #00819A;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.boxed-feature > .os-title {
+  color: #00819A;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+.boxed-feature > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+}
+
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
