@@ -229,7 +229,7 @@ $Table__Data--BottomBorder: (
 // Altered as part of the fix for cnx-recipes#1827.
 $Table__Data--First: (
     _name: "FirstTableData",
-    _subselector: " > td:first-of-type:not(:only-of-type)",
+    _subselector: " > td:not(:only-of-type):not(:last-child)",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),

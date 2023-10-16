@@ -1856,7 +1856,7 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
@@ -2617,7 +2617,7 @@ a[role=doc-noteref] {
   padding-left: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table.os-top-titled-container > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
