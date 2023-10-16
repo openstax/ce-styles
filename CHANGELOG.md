@@ -6,8 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-* Style `code` with `data-display="block"`
 * Style `left-border in BasicTableShape` in `nursing-external`
+* Add style for `boxed-feature` note for `nursing-external`
+* Create files for `columns` to set proportional width
+
+## [v1.137.0] - 2023-10-06
+
+* Update `node` version
+* Style `inline media` in `webview`
+* Fix translation in folio `cosmos`
+* Style `code` with `data-display="block"`
+* Style `review questions` in `nursing-external`
 
 ## [v1.136.0] - 2023-09-22
 

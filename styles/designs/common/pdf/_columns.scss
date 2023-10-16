@@ -1,0 +1,7 @@
+@use "sass:math";
+
+@function column-width($columns, $ratioSum, $ratio) {
+    $width: (math.div(100%, $ratioSum)) * $ratio;
+
+    @return $width
+}
