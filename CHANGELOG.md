@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `pl-marketing`
 * Create files for `columns` to set proportional width
 
 ## [v1.137.0] - 2023-10-06
