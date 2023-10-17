@@ -685,10 +685,6 @@ nav#toc {
   page: table-of-contents;
 }
 
-div[data-type=unit] {
-  page: unit;
-}
-
 div[data-type=page].preface {
   page: preface;
   counter-reset: page 1;
@@ -835,45 +831,6 @@ div[data-type=composite-page].os-eob {
     content: "     " counter(page);
   }
 }
-@page unit:left {
-  @top-left {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: #000000;
-    font-weight: 700;
-    content: "";
-  }
-  @top-left-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: #000000;
-    font-weight: 700;
-    content: counter(page) "     ";
-  }
-  @bottom-left {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: #000000;
-    font-weight: 700;
-    content: string(access-for-free-msg);
-  }
-}
-@page unit:right {
-  @top-right {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: #000000;
-    font-weight: 700;
-    content: "";
-  }
-  @top-right-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: #000000;
-    font-weight: 700;
-    content: "     " counter(page);
-  }
-}
 @page eoc:left {
   @top-left {
     font-size: 0.8333333333rem;
@@ -887,7 +844,6 @@ div[data-type=composite-page].os-eob {
     font-family: "Noto Sans";
     color: #000000;
     font-weight: 700;
-    content: "Access for free at openstax.org.";
     content: string(access-for-free-msg);
   }
 }
@@ -913,7 +869,6 @@ div[data-type=composite-page].os-eob {
     font-family: "Noto Sans";
     color: #000000;
     font-weight: 700;
-    content: "Access for free at openstax.org.";
     content: string(access-for-free-msg);
   }
 }
@@ -939,7 +894,6 @@ div[data-type=composite-page].os-eob {
     font-family: "Noto Sans";
     color: #000000;
     font-weight: 700;
-    content: "Access for free at openstax.org.";
     content: string(access-for-free-msg);
   }
 }
