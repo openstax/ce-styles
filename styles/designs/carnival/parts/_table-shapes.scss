@@ -31,7 +31,7 @@
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
                                         $Table__Data,
-                                        $Table__Data--First,
+                                        $Table__Data--NotLastChild,
                                         // Added as part of the fix for cnx-recipes#1827
                                         $Table__Data--BottomBorder,
                                     )
@@ -91,8 +91,7 @@
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
                                         $Table__Data,
-                                        $Table__Data--First,
-                                        $Table__Data--NotLast,
+                                        $Table__Data--NotLastChild,
                                         // Added as part of the fix for cnx-recipes#1827
                                         $Table__Data--BottomBorder,
                                     )
@@ -119,7 +118,7 @@
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Data,
-                                        $Table__Data--First,
+                                        $Table__Data--NotLastChild,
                                     )
                                 )),
                                 $Table__Row--First,
@@ -154,7 +153,7 @@
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Data,
-                                        $Table__Data--First,
+                                        $Table__Data--NotLastChild,
                                     ),
                                 )),
                                 $Table__Row--Last,
