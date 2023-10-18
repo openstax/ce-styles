@@ -13,7 +13,7 @@
       string-set: module-number string(chapter-number);
       
       .os-text {
-        string-set: module-title "Introduction";
+        string-set: module-title content();
       }
     }
     [data-type="page"]:not(.introduction) > h2[data-type="document-title"] {
@@ -194,7 +194,7 @@
     @include folio($prefaceContent, $prefaceContent, $accessContent, preface );
     @include folioWithBand($eocContent, $eocContent, $accessContent, eoc);
     @include folioWithBand($appendixContent, $appendixContent, $accessContent, appendix);
-    @include folioWithBand($eobContent, $eobContent, $accessContent eob);
+    @include folioWithBand($eobContent, $eobContent, $accessContent, eob);
     
     //Page margins
     @page {

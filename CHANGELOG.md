@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `left-border in BasicTableShape` in `nursing-external`
+* Style `pl-marketing`
 * Add style for `boxed-feature` note for `nursing-external`
 * Create files for `columns` to set proportional width
 
