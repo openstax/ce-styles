@@ -228,12 +228,11 @@ $Table__Data--BottomBorder: (
 
 // Altered as part of the fix for cnx-recipes#1827.
 $Table__Data--NotLastChild: (
-    _name: "FirstTableData",
+    _name: "TableDataNotLastChild",
     _subselector: " > td:not(:only-of-type):not(:last-child)",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
-        border-color: enum('ValueSet:::OPTIONAL'),
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
     )
