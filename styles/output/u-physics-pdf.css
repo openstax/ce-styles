@@ -2360,7 +2360,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
 }
@@ -2451,7 +2451,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table.top-titled > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table.top-titled > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
 }

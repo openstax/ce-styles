@@ -227,22 +227,14 @@ $Table__Data--BottomBorder: (
 );
 
 // Altered as part of the fix for cnx-recipes#1827.
-$Table__Data--First: (
-    _name: "FirstTableData",
-    _subselector: " > td:first-of-type:not(:only-of-type)",
+$Table__Data--NotLastChild: (
+    _name: "TableDataNotLastChild",
+    _subselector: " > td:not(:only-of-type):not(:last-child)",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
-    )
-);
-
-$Table__Data--NotLast: (
-    _name: "NotLastTableData",
-    _subselector: " > td:not(:only-of-type):not(:last-of-type)",
-    _properties: (
-        border-right: '0.025rem solid black',
     )
 );
 
