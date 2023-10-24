@@ -250,7 +250,7 @@ $bandColor: #9028A3;
 @include use('BookRoot', "common:::BookRoot");
 @include use('UnitOpener', 'common:::UnitOpenerShape');
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
-@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteNotReference', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
@@ -313,6 +313,7 @@ $bandColor: #9028A3;
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('ReferencesWithAside', 'cardboard:::ReferencesWithAsideShape');
 
 // EOB
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');
