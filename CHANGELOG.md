@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Create new shape `ReferencesWithAsideShape` in `cardboard`
+
+## [v1.138.0] - 2023-10-20
+
+* Style `pre.inline-code` with `display: inline` in common styles and webview
 * Style `left-border in BasicTableShape` in `nursing-external`
 * Style `pl-marketing`
 * Add style for `boxed-feature` note for `nursing-external`
