@@ -8,6 +8,15 @@
             font-size: font-scale(-1),
         ),
     ),
+    FootnoteNotReference: (
+        _selectors: ('aside[role="doc-footnote"]:not(.reference)'),
+        Container: (
+            color: (_ref: 'colorMap:::footnoteColor'),
+            line-height: 1rem,
+            font-family: (_ref: 'typography:::baseFont'),
+            font-size: font-scale(-1),
+        ),
+    ),
     FootnoteCall: (
         _selectors: ('a[role="doc-noteref"]'),
         DefaultFootnoteCall: (

@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create new shape `ReferencesWithAsideShape` in `cardboard`
 * Style `left-border in BasicTableShape` in `nursing-external`
 * Style `pl-marketing`
 * Add style for `boxed-feature` note for `nursing-external`

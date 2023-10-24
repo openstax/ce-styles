@@ -42,6 +42,21 @@
     ),
 ));
 
+@include create_shape('cardboard:::ReferencesWithAsideShape',(
+    _components:(
+        map-merge($References__Container,(
+            _components:(
+                map-merge($References__Aside, (
+                    _components: (
+                        $References__Aside__Link,
+                        $References__Aside__Content,
+                    ),
+                ))
+            ),
+        ))
+    ),
+));
+
 // References Link placed within modules
 @include create_shape('cardboard:::ReferencesCiteLinkShape', (
   _components: (

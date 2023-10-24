@@ -958,7 +958,7 @@ div[data-type=composite-page].os-eob {
   display: none;
 }
 
-aside[role=doc-footnote] {
+aside[role=doc-footnote]:not(.reference) {
   float: footnote;
   -prince-float-reference: page;
   color: #757474;
@@ -969,15 +969,15 @@ aside[role=doc-footnote] {
   font-weight: normal;
 }
 
-aside[role=doc-footnote]::footnote-call {
+aside[role=doc-footnote]:not(.reference)::footnote-call {
   content: none;
 }
 
-aside[role=doc-footnote]::footnote-marker {
+aside[role=doc-footnote]:not(.reference)::footnote-marker {
   content: none;
 }
 
-aside[role=doc-footnote] [data-type=footnote-number] {
+aside[role=doc-footnote]:not(.reference) [data-type=footnote-number] {
   display: inline-block;
   margin-right: 8px;
 }
@@ -3987,6 +3987,22 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc[data-type=composite-page] {
   margin-bottom: 0.7rem;
+}
+
+.os-eoc.os-references-container > aside.reference {
+  display: table;
+  font-size: 0.8333333333rem;
+  padding: 0 0 0 1.4rem;
+}
+
+.os-eoc.os-references-container > aside.reference > a[data-type=footnote-number] {
+  display: table-cell;
+  text-decoration: none;
+  padding-right: 8px;
+}
+
+.os-eoc.os-references-container > aside.reference > span {
+  display: table-cell;
 }
 
 .os-eob[data-type=composite-chapter] > [data-type=composite-page] {
