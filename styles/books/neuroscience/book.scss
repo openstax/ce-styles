@@ -1,0 +1,76 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #0074BC;
+
+$ChapterIntroType: side;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/folio';
+
+@include add_settings((
+  UnitToc:(
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::biologyHeaderColor'),
+    'TocUnitLink:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::biologyHeaderColor")
+  ),
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::biologyChapterOutlineColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::biologyChapterOutlineColor"),
+    'ChapterObjectiveLink:::font-weight': bold,
+  ),
+));
+
+
+@include use('BookRoot', "common:::BookRoot");
+
+// Book specific styles
+@include use('UnitToc', 'carnival:::UnitToc');
+
+
+// Equations
+
+
+// Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+
+//Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
+
+
+//EOC
+
+
+// EoC Exercises
+
+
+// Tables
+
+
+//Notes
+
+
+//Titles
+
+
+//Lists
+
+
+// EOB
+
