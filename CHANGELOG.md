@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Initial styles setup for `neuroscience`
 * Create new shape `ReferencesWithAsideShape` in `cardboard`
 * Change webview link & link-hover colors
 
