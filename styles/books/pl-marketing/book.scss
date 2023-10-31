@@ -229,18 +229,21 @@ $bandColor: #9028A3;
 @include add_settings((
     IndexName: (
         _selectors: (".os-index-name-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
     ),
     IndexTerm: (
         _selectors: (".os-index-term-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
     ),
     IndexForeign: (
         _selectors: (".os-index-foreign-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
