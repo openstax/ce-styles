@@ -203,9 +203,9 @@ $bandColor: #9028A3;
 ));
 
 @include add_settings((
-  LearningObjectivesNumberedWithLOIcon: (
+  NumberedLearningObjectives: (
     _selectors: ('[data-type="page"] .learning-objectives'),
-    'ObjectivesLOIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lo.svg")) no-repeat center center,
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::titleColor'),
   )
 ));
 
@@ -252,7 +252,7 @@ $bandColor: #9028A3;
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 @include use('FootnoteNotReference', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
+@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('TocUnitWithDots', 'cardboard:::UnitWithDotsToc');
 @include use('Equation', 'cardboard:::EquationShape');
