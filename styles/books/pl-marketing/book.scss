@@ -203,9 +203,9 @@ $bandColor: #9028A3;
 ));
 
 @include add_settings((
-  LearningObjectivesNumberedWithLOIcon: (
+  NumberedLearningObjectives: (
     _selectors: ('[data-type="page"] .learning-objectives'),
-    'ObjectivesLOIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lo.svg")) no-repeat center center,
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::titleColor'),
   )
 ));
 
@@ -229,18 +229,21 @@ $bandColor: #9028A3;
 @include add_settings((
     IndexName: (
         _selectors: (".os-index-name-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
     ),
     IndexTerm: (
         _selectors: (".os-index-term-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
     ),
     IndexForeign: (
         _selectors: (".os-index-foreign-container"),
+        'IndexContainer:::margin-bottom': v-spacing(2),
         'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
         'IndexGroupLabel:::color': (_ref: 'colorMap:::indexGroupLabelColor'),
         'IndexPageNumber:::content': target-counter(attr(href, url), page),
@@ -252,9 +255,9 @@ $bandColor: #9028A3;
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 @include use('FootnoteNotReference', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('LearningObjectivesNumberedWithLOIcon', 'cardboard:::LearningObjectivesNumberedWithLOIconShape');
+@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
-@include use('TocUnit', 'cardboard:::UnitToc');
+@include use('TocUnitWithDots', 'cardboard:::UnitWithDotsToc');
 @include use('Equation', 'cardboard:::EquationShape');
 
 // Chapter Intro

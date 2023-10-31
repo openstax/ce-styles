@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Initial styles setup for `neuroscience`
+* Add margin to index in `pl-marketing`
+* Fix alignment of references number
+* Apply `NumberedLearningObjectives` to `pl-marketing`
+* Create new `TOC` shape for `pl-marketing`
 * Create new shape `ReferencesWithAsideShape` in `cardboard`
 * Change webview link & link-hover colors
 
