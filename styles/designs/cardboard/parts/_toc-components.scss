@@ -279,3 +279,91 @@ $Toc__List--TopLevel__Item--Unit: (
     padding-left: h-spacing(0),
   )
 );
+
+// Unit with dots
+
+$Toc__Link--TopLevel--Preface: (
+  _name: 'TopLevelPrefaceLink',
+  _subselector: '.os-toc-preface > a',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    text-decoration: none,
+    font-weight: normal,
+    padding-left: h-spacing(4),
+    display: inline-block,
+    position: relative,
+    margin-left: h-spacing(1),
+  ),
+);
+
+$Toc__Link--TopLevel__Page--Dots--Preface: (
+  _name: 'TopLevelLinkPageDotsPreface',
+  _subselector: '::after',
+  _properties: (
+    content: "leader('.') target-counter(attr(href), page)",
+    color: enum('ValueSet:::REQUIRED'),
+    display: inline,
+    margin-left: 0,
+  ),
+);
+
+$Toc__Link--TopLevel__Page--Dots: (
+  _name: 'TopLevelLinkPageDots',
+  _subselector: '::after',
+  _properties: (
+    content: "leader('.') target-counter(attr(href), page)",
+    color: enum('ValueSet:::REQUIRED'),
+    display: inline,
+    margin-left: 0,
+  ),
+);
+
+$Toc__List--MiddleLevel--WithoutBorder: (
+  _name: 'MiddleLevelListWithoutBorder',
+  _subselector: ' > ol',
+  _properties: (
+    list-style: none,
+    margin-top: v-spacing(1),
+    margin-bottom: v-spacing(1),
+    margin-left: h-spacing(5),
+    padding-left: h-spacing(1),
+  )
+);
+
+$Toc__Link--MiddleLevel__Page--Dots: (
+  _name: 'MiddleLevelLinkPageDots',
+  _subselector: '::after',
+  _properties: (
+    content: "leader('.') target-counter(attr(href), page)",
+    display: inline,
+    margin-left: h-spacing(1),
+    color: enum('ValueSet:::REQUIRED'),
+  ),
+);
+
+$Toc__Link--MiddleLevel__Number--Blue: (
+  _name: 'MiddleLevelNumberBlue',
+  _subselector: ' > .os-number',
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$Toc__List--MiddleLevel__Item--Wrapper: empty_wrapper(MiddleLevelListItemWrapper, ' > li');
+
+$Toc__ListItem--UnitPage--Dots: (
+  _name: 'UnitpageListItemDots',
+  _subselector: ' > li.os-toc-unit-page',
+  _properties: (
+    display: block,
+    padding-top: v-spacing(1),
+    margin-bottom: v-spacing(1),
+    margin-left: h-spacing(5),
+    padding-left: h-spacing(1),
+    padding-right: h-spacing(5),
+  )
+);

@@ -1088,9 +1088,29 @@ nav#toc > ol > li:not(.os-toc-unit) {
   padding-left: 0px;
 }
 
+nav#toc > ol > li:not(.os-toc-unit).os-toc-preface > a {
+  font-family: Noto Sans, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 32px;
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+}
+
+nav#toc > ol > li:not(.os-toc-unit).os-toc-preface > a::after {
+  content: leader('.') target-counter(attr(href), page);
+  color: #0DC0DC;
+  display: inline;
+  margin-left: 0;
+}
+
 nav#toc > ol > li:not(.os-toc-unit) > a {
   font-family: Noto Sans, StixGeneral;
-  color: #24739E;
+  color: #344456;
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
@@ -1102,30 +1122,10 @@ nav#toc > ol > li:not(.os-toc-unit) > a {
 }
 
 nav#toc > ol > li:not(.os-toc-unit) > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
-  margin-left: 8px;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
-  font-size: 1rem;
-  line-height: 1rem;
-  border-style: solid;
-  border-width: 0.07rem;
-  border-color: #0DC0DC;
-  padding-top: 0.5rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 2.1rem;
-  height: 2.1rem;
-  text-align: center;
-  vertical-align: middle;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number > .os-part-text {
-  display: none;
+  content: leader('.') target-counter(attr(href), page);
+  color: #344456;
+  display: inline;
+  margin-left: 0;
 }
 
 nav#toc > ol > li.os-toc-unit > a:first-of-type::before {
@@ -1173,7 +1173,7 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a {
   font-family: Noto Sans, StixGeneral;
-  color: #24739E;
+  color: #344456;
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
@@ -1185,9 +1185,10 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
-  margin-left: 8px;
+  content: leader('.') target-counter(attr(href), page);
+  color: #344456;
+  display: inline;
+  margin-left: 0;
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number {
@@ -1213,21 +1214,10 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol {
   list-style: none;
-  border-left-style: solid;
-  border-left-width: 0.25rem;
-  border-left-color: #F2F2F2;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 40px;
   padding-left: 8px;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li.os-toc-composite-chapter > ol {
-  display: none;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li {
-  display: block;
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a {
@@ -1239,12 +1229,14 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a > .os-number {
   font-weight: bold;
+  color: #0DC0DC;
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
+  content: leader('.') target-counter(attr(href), page);
+  display: inline;
   margin-left: 8px;
+  color: #0DC0DC;
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page {
@@ -1253,6 +1245,7 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page {
   margin-bottom: 0.7rem;
   margin-left: 40px;
   padding-left: 8px;
+  padding-right: 40px;
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a {
@@ -1267,9 +1260,10 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a > .os-numbe
 }
 
 nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
+  content: leader('.') target-counter(attr(href), page);
+  display: inline;
   margin-left: 8px;
+  color: #0DC0DC;
 }
 
 nav#toc > ol > li.os-toc-composite-chapter > ol {

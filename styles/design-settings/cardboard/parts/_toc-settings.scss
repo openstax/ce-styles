@@ -66,4 +66,53 @@
             color: (_ref: 'colorMap:::tocTitleColor'),
         )
     )
-)); 
+));
+
+@include add_settings((
+    TocUnitWithDots: (
+        _selectors: ('nav#toc'),
+        ContentsTitle: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::tocTitleColor'),
+        ),
+        ContentsTitleIcon: (
+            background: url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-toc2.svg")) no-repeat top left,
+        ),
+        TopLevelPrefaceLink: (
+            font-family: (_ref: 'typography:::baseFont'),
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+        TopLevelLink: (
+            font-family: (_ref: 'typography:::baseFont'),
+            color: (_ref: 'colorMap:::tocTitleColor'),
+        ),
+        TopLevelLinkPageDots: (
+            color: (_ref: 'colorMap:::tocTitleColor'),
+        ),
+        TopLevelLinkPageDotsPreface: (
+            color: (_ref: 'colorMap:::tocNumberBorderColor'),
+        ),
+        UnitIcon: (
+            background: url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-unit.svg")) no-repeat top left,
+        ),
+        UnitTitle: (
+            font-family: (_ref: 'typography:::titleFont'),
+            color: (_ref: 'colorMap:::tocTitleColor'),
+        ),
+        Number: (
+            border-color: (_ref: 'colorMap:::tocNumberBorderColor'),
+        ),
+        ChapterOddItem: (
+            background-color: (_ref: 'colorMap:::tocBackgroundColor'),
+        ),
+        MiddleLevelLink: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+        MiddleLevelLinkPageDots: (
+            color: (_ref: 'colorMap:::tocNumberBorderColor'),
+        ),
+        MiddleLevelNumberBlue: (
+            color: (_ref: 'colorMap:::tocNumberBorderColor'),
+        ),
+    )
+));
