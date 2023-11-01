@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add support for developing in GitPod
+* Add margin to index in `pl-marketing`
+* Fix alignment of references number
+* Apply `NumberedLearningObjectives` to `pl-marketing`
+* Create new `TOC` shape for `pl-marketing`
+* Create new shape `ReferencesWithAsideShape` in `cardboard`
+* Change webview link & link-hover colors
+
+## [v1.138.0] - 2023-10-20
+
+* Style `pre.inline-code` with `display: inline` in common styles and webview
+* Style `left-border in BasicTableShape` in `nursing-external`
+* Style `pl-marketing`
+* Add style for `boxed-feature` note for `nursing-external`
+* Create files for `columns` to set proportional width
+
+## [v1.137.0] - 2023-10-06
+
+* Update `node` version
+* Style `inline media` in `webview`
+* Fix translation in folio `cosmos`
+* Style `code` with `data-display="block"`
+* Style `review questions` in `nursing-external`
+
+## [v1.136.0] - 2023-09-22
+
+* Style `horizontal rule for vertically-tight tables` in `nursing-external`
+* Style `multipart questions` in `bca`
+* Style `safetey-alert title color` in `nursing-internal`
+* Style `shaded table` on `webview`
+* Style webview exercises with approach from PDF
+* add liquidprompt to docker
 
 ## [v1.135.0] - 2023-09-08
 

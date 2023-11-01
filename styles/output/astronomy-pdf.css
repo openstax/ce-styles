@@ -263,6 +263,15 @@ pre {
   white-space: pre-wrap;
 }
 
+pre.inline-code {
+  display: inline;
+}
+
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
@@ -3343,16 +3352,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container {
+.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container > p {
+.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+.os-eoc.os-exercises-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
@@ -3386,24 +3395,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
 
-.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > div[data-type=exercise-context] {
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
   display: inline;
 }
 
-.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > span.os-divider {
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
   display: inline;
 }
 
-.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
 
-.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;

@@ -63,6 +63,11 @@ pre {
   text-align: left;
 }
 
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 u[data-effect=double-underline] {
   text-decoration-style: double;
 }
@@ -492,13 +497,13 @@ ul.critical-thinking {
 }
 
 a {
-  color: #027EB5;
+  color: #026aa1;
   cursor: pointer;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #0064A0;
+  color: #005481;
 }
 
 [data-type=note] {
@@ -592,7 +597,7 @@ a:hover {
 }
 
 [data-type=note] > section span[data-type=media] {
-  display: block;
+  display: inline-flex;
   margin: 1rem 0;
 }
 
@@ -695,7 +700,7 @@ a:hover {
 }
 
 .note > section span[data-type=media] {
-  display: block;
+  display: inline-flex;
   margin: 1rem 0;
 }
 
@@ -798,7 +803,7 @@ a:hover {
 }
 
 [data-type=example] > section span[data-type=media] {
-  display: block;
+  display: inline-flex;
   margin: 1rem 0;
 }
 
@@ -901,7 +906,7 @@ a:hover {
 }
 
 .example > section span[data-type=media] {
-  display: block;
+  display: inline-flex;
   margin: 1rem 0;
 }
 
@@ -918,21 +923,22 @@ a:hover {
 }
 
 [data-type=example] [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 [data-type=example] [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=example] .problem {
-  padding: 0.5em 1em;
+[data-type=example] [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-[data-type=example] .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+[data-type=example] [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 [data-type=example] [data-type=solution] {
@@ -1096,21 +1102,22 @@ a:hover {
 }
 
 .example [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 .example [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-.example .problem {
-  padding: 0.5em 1em;
+.example [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-.example .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+.example [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 .example [data-type=solution] {
@@ -1274,21 +1281,22 @@ a:hover {
 }
 
 [data-type=exercise] [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-[data-type=exercise] .problem {
-  padding: 0.5em 1em;
+[data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-[data-type=exercise] .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+[data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 [data-type=exercise] [data-type=solution] {
@@ -1452,21 +1460,22 @@ a:hover {
 }
 
 .exercise [data-type=problem] {
+  display: table;
   padding: 0.5em 1em;
 }
 
 .exercise [data-type=problem] > .os-number {
+  display: table-cell;
   font-weight: 700;
   text-decoration: none;
 }
 
-.exercise .problem {
-  padding: 0.5em 1em;
+.exercise [data-type=problem] > .os-divider {
+  margin-right: 0.5em;
 }
 
-.exercise .problem > .os-number {
-  font-weight: 700;
-  text-decoration: none;
+.exercise [data-type=problem] > .os-problem-container {
+  display: table-cell;
 }
 
 .exercise [data-type=solution] {
@@ -1922,6 +1931,10 @@ a:hover {
   padding: 1rem;
 }
 
+.os-table table.alternate-shading tr:nth-child(even) {
+  background-color: #ededed;
+}
+
 .os-table .os-caption-container {
   padding: 8px;
   border-top-width: 0.1rem;
@@ -1973,6 +1986,10 @@ pre[data-type=code].centered-code {
   text-align: center;
   background: none;
   margin: 0;
+}
+
+pre[data-type=code].inline-code {
+  display: inline;
 }
 
 .primary-function, .secondary-function {

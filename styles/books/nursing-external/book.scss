@@ -103,7 +103,6 @@ $ChapterIntroType: fullWidth;
       '.os-glossary-container',
       '.os-section-summary-container',
       '.os-chapter-summary-container',
-      '.os-review-questions-container',
       '.os-suggested-reading-container'
     ),
   ),
@@ -122,6 +121,8 @@ $ChapterIntroType: fullWidth;
   BasicTable: (
     _selectors: ('.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)'),
     'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'Table:::border-top': solid 0.25px,
+    'Table:::border-top-color':  (_ref: 'colorMap:::fontBodyColor'),
   ),
 ));
 
@@ -208,7 +209,7 @@ $ChapterIntroType: fullWidth;
     _selectors: (".safety-alert"),
     'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alertbig.svg")) no-repeat center center,
     'IconBoxedTitle:::background-color': (_ref: 'colorMap:::alertColor'),
-    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::alertTitleColor"),
     'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
     'IconBoxedBody:::background-color': (_ref: 'colorMap:::alertBlurredColor'),
     'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
@@ -364,6 +365,15 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  BoxedFeatureNote:(
+    _selectors: (".boxed-feature"),
+    group-border-color: (_ref: 'colorMap:::boxedFeatureColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::boxedFeatureColor'),
+  ),
+));
+
 // Target labels
 @include add_settings((
   FigureTargetLabel: (
@@ -426,6 +436,7 @@ $ChapterIntroType: fullWidth;
 @include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
 @include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
 @include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
 
 
 //Lists
@@ -454,6 +465,7 @@ $ChapterIntroType: fullWidth;
 @include use('SingleCasestudyNote', 'carnival:::IconNoteShape');
 @include use('CaseReflectionNote', 'carnival:::IconNoteShape');
 @include use('MediaFeatureNote', 'carnival:::IconBoxedNoteShape');
+@include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
 
 
 //EOC

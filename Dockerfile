@@ -34,13 +34,22 @@ RUN dart pub get
 RUN apt-get update
 RUN apt-get install shellcheck wget
 
+# Install a quick colorized prompt and turn on ls coloring
+RUN git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt && \
+    echo '[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt' >>~/.bashrc && \
+    mkdir -p ~/.config && \
+    echo 'export LP_HOSTNAME_ALWAYS=1' >>~/.config/liquidpromptrc && \
+    echo 'export LP_USER_ALWAYS=-1' >>~/.config/liquidpromptrc && \
+    sed -i "/color=auto/"' s/# //' ~/.bashrc && \
+    sed -i "/alias ls/,/lA/"' s/# //' ~/.bashrc
+
 # Install node
 # https://stackoverflow.com/questions/36399848/install-node-in-dockerfile/57546198#57546198
 # Info: within https://github.com/openstax/ce-styles/pull/272 curl installation was removed from Dockerfile
 # because devcontainer was working without it. Leaving this just in case there are some problems in the future.
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
-ENV NODE_VERSION=14.16.1
+ENV NODE_VERSION=20.8.0
 RUN . "$NVM_DIR/nvm.sh" && nvm install $NODE_VERSION && \
     . "$NVM_DIR/nvm.sh" && nvm use v$NODE_VERSION && \
     . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION

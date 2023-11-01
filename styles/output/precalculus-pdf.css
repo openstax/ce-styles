@@ -273,6 +273,15 @@ pre {
   white-space: pre-wrap;
 }
 
+pre.inline-code {
+  display: inline;
+}
+
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }

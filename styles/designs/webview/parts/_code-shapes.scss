@@ -12,6 +12,12 @@
     )
 ));
 
+@include create_shape('webview:::CodeInlinePreShape', (
+  _components: (
+      $Code--InlinePre,
+    )
+));
+
 @include create_shape('webview:::CodeBlockShape', (
   _components: (
       $CodeBlock,

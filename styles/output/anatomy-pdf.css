@@ -264,6 +264,15 @@ pre {
   white-space: pre-wrap;
 }
 
+pre.inline-code {
+  display: inline;
+}
+
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 [data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
@@ -1744,7 +1753,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr > td:first-of-type:not(:only-of-type) {
+.os-table.os-top-titled-container > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
 }

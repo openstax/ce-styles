@@ -164,6 +164,7 @@
         'TableData:::border-color': (_ref: 'colorMap:::TableBorder'),
         'TableMultipleBody:::border-color': (_ref: 'colorMap:::TableBorder'),
         'TableNestedTable:::background-color': (_ref: 'colorMap:::bodyBackground'),
+        'TableRowAlternateShading:::background-color': (_ref: 'colorMap:::NoteBackground'),
     ),
 ));
 
@@ -198,6 +199,9 @@
     CenteredCodeBlock: (
         _selectors: ('pre[data-type="code"].centered-code'),
         'CodeBlockCentered:::color': (_ref: 'colorMap:::baseColor'),
+    ),
+    InlinePre: (
+      _selectors: ('pre[data-type="code"].inline-code'),
     ),
 ));
 
@@ -414,6 +418,7 @@
 @include use('BlueCode', 'webview:::CodeWithColorShape');
 @include use('CodeBlock', 'webview:::CodeBlockShape');
 @include use('CenteredCodeBlock', 'webview:::CodeBlockCenteredShape');
+@include use('InlinePre', 'webview:::CodeInlinePreShape');
 // Functions
 @include use('Function', 'webview:::FunctionShape');
 @include use('PrimaryFunction', 'webview:::FunctionPrimaryShape');
