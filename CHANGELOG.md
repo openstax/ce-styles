@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix GitPod support
 * Add `display: table` to equations in `webview`
 * Initial styles setup for `neuroscience`
 * Add support for developing in GitPod
