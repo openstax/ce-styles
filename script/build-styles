@@ -13,6 +13,8 @@ for style in $(ls $styles_root); do STYLE_NAMES+=("${style}"); done
 
 if [ ! "${arg1}" == "" ]; then
   STYLE_NAMES=("${arg1}")
+else
+  echo "Note: You can specify the recipe name as an argument"
 fi
 
 output_dir="./styles/output"

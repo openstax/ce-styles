@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add `display: table` to equations in `webview`
+* Initial styles setup for `neuroscience`
+* Add support for developing in GitPod
 * Add margin to index in `pl-marketing`
 * Fix alignment of references number
 * Apply `NumberedLearningObjectives` to `pl-marketing`
