@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove folio from introduction page in `cardboard`
 * Initial styles setup for `neuroscience`
 * Add support for developing in GitPod
 * Add margin to index in `pl-marketing`
