@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Adds `meet-author` note in `neuroscience`
 
 ## [v1.139.0] - 2023-11-03
 
