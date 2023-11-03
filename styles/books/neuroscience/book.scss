@@ -30,9 +30,20 @@ $ChapterIntroType: side;
 ));
 
 
+// TOC
+@include add_settings((
+    TOC: (
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    ),
+));
 
 // Book specific styles
 
+// TOC
+@include use('TOC', 'carnival:::NoUnitToc');
 
 
 // Equations
