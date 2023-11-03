@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `appendix` and `index` in `neuroscience`
 * Fix `./script/run`
 * Style tables in `data-science`
 * Style lo and lists in `data-science`

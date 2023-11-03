@@ -165,6 +165,14 @@ $ChapterIntroType: side;
 // TOC
 @include use('TOC', 'carnival:::NoUnitToc');
 
+// EOB
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
 
 // Equations
 
@@ -214,4 +222,5 @@ $ChapterIntroType: side;
 @include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 
 // EOB
-
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
+@include use('Index', 'carnival:::IndexShape');
