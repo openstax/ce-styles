@@ -45,6 +45,19 @@ Workarounds:
 - Use a VPN or work from a different location (aka different IP address)
 - Comment out the line `RUN dart pub get` in the Dockerfile, build the image, and run `dart pub get` within the container to get the dependencies manually
 
+# Troubleshooting styles
+
+You can add the following mixing to the bottom of the `book.scss` file to print out additional debugging information:
+
+```scss
+// This one is probably the most useful. It shows all the settings, what they are set to, and if they have been overridden
+@include debug_settings();
+
+@include debug_settings_manifest();
+@include debug_shapes();
+@include debug_enums();
+```
+
 # Important Links
  - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
  - [How to Release CE Styles](https://openstax.atlassian.net/l/c/TjrhH68R)

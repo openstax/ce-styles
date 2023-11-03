@@ -68,7 +68,7 @@ $FRAMEWORK_SPACE_PLACE: ();
     @include error(error_message($unwrapped_shape));
   } @else {
     $FRAMEWORK_SPACE_PLACE: map-merge(
-      $FRAMEWORK_SPACE_PLACE, 
+      $FRAMEWORK_SPACE_PLACE,
       ($name: map-merge(
         $unwrapped_shape,
         (_parent: enum('Object:::NONE'))
@@ -94,7 +94,7 @@ $FRAMEWORK_SPACE_PLACE: ();
       $unwrapped,
       (_components: $shape_components)
     );
-  }  
+  }
 }
 
 @function get_nested_components($components, $subselector_prefix: '') {
@@ -111,7 +111,7 @@ $FRAMEWORK_SPACE_PLACE: ();
     $component_name: map-deep-get($component, _name);
     $component_subselector: map-deep-get($component, _subselector);
     $component_properties: map-deep-get($component, _properties);
-    
+
     @if is_error($component_name) {
       @return $component_name;
     }
@@ -127,7 +127,7 @@ $FRAMEWORK_SPACE_PLACE: ();
     }
 
     $computed_subselector: #{$subselector_prefix}#{$component_subselector};
-    
+
     $copied_component: map-merge($copied_component, (_name: $component_name));
     $copied_component: map-merge($copied_component, (_subselector: $computed_subselector));
     $copied_component: map-merge($copied_component, (_properties: $component_properties));
@@ -159,7 +159,7 @@ $FRAMEWORK_SPACE_PLACE: ();
   @return map-deep-get($FRAMEWORK_SPACE_PLACE, $name);
 }
 
-/// 
+///
 /// @group publicapi
 @mixin create_subshape($name, $parent, $changes) {
   @if not shape-exists($parent) {
@@ -279,7 +279,7 @@ $FRAMEWORK_SPACE_PLACE: ();
   $context_selectors: settings("#{$name}:::_selectors");
   @if is_error($context_selectors) {
     @include error(error_message($context_selectors));
-  } @else { 
+  } @else {
     @each $selector in settings("#{$name}:::_selectors") {
       $shape: get_root($subshape_name);
       @each $component in map-deep-get($shape, _components) {
@@ -315,7 +315,7 @@ $FRAMEWORK_SPACE_PLACE: ();
                   }
                 } @else {
                   $old_value_set: map-deep-get($spent_keys, $key);
-                  @if $value_set != enum('ValueSet:::OPTIONAL') and 
+                  @if $value_set != enum('ValueSet:::OPTIONAL') and
                     ($value_set != enum('ValueSet:::REQUIRED') or $old_value_set == enum('ValueSet:::OPTIONAL')) {
                       @include error("Shape `#{$ancestor_name}` is not a proper shape due to `#{$key}`.");
                   }
