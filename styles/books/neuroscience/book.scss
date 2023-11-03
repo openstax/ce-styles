@@ -140,7 +140,7 @@ $ChapterIntroType: side;
   ),
 ));
 
-// Eoc
+// EOC
 @include add_settings((
   TwoColumnsModules: (
     _selectors: ('.os-section-summary-container', '.os-key-terms-container'),
@@ -151,6 +151,15 @@ $ChapterIntroType: side;
   EocExercisesModules: (
     _selectors: ('.os-multiple-choice-container', '.os-fillin-blank-container'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+// EOB
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
   ),
 ));
 
@@ -165,21 +174,12 @@ $ChapterIntroType: side;
 // TOC
 @include use('TOC', 'carnival:::NoUnitToc');
 
-// EOB
-@include add_settings((
-  AppendixGlossary: (
-    _selectors: (".appendix > .column-container"),
-    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
-    'AppendixGlossaryContainer:::column-count': 2,
-  ),
-));
 
 // Equations
 
 
 
 //Figures
-
 @include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('Figure','carnival:::FigureShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
