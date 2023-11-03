@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `debug_settings()` mixin for exporting style data for use in another framework
 
 ## [v1.139.0] - 2023-11-03
 

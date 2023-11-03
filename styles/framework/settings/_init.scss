@@ -1,3 +1,4 @@
+@use "sass:meta";
 $FRAMEWORK_SETTINGS_MANIFEST_GLOBAL: ();
 $FRAMEWORK_USED_SETTINGS: ();
 
@@ -21,9 +22,9 @@ $FRAMEWORK_USED_SETTINGS: ();
     @debug "=== Clump Start ===";
     @each $key, $value in flatten_keep_references($settings) {
       @if map-get($already_defined, $key) {
-        @debug "~~#{$key} : #{$value}~~ (overridden above)";
+        @debug "~~#{$key} : #{meta.inspect($value)}~~ (overridden above)";
       } @else {
-        @debug "#{$key} : #{$value}";
+        @debug "#{$key} : #{meta.inspect($value)}";
       }
       $already_defined: map-merge($already_defined, ($key: true));
     }
