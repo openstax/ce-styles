@@ -730,30 +730,16 @@ div[data-type=composite-page].os-eob {
 }
 @page chapter:nth(1):right {
   @top-right-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: white;
-    background: transparent;
-    z-index: 1;
-    content: "     " counter(page);
+    content: none;
   }
   @top-middle {
-    background: transparent;
-    z-index: 1;
-    content: " ";
+    content: none;
   }
   @top-right {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: white;
-    background: transparent;
-    z-index: 1;
-    content: string(module-number) " • " string(module-title) "     ";
+    content: none;
   }
   @top-left-corner {
-    background: transparent;
-    z-index: 1;
-    content: " ";
+    content: none;
   }
 }
 [data-pdf-folio-preface-message][data-pdf-folio-access-message] {
