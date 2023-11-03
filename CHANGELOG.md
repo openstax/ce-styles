@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Increase width of exercises numbers in `webview` & right-align
 * Remove folio from introduction page in `cardboard`
 * Style `TOC` in `neuroscience`
 * Add `display: table` to equations in `webview`
