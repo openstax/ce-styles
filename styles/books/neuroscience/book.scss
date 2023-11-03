@@ -17,6 +17,19 @@ $ChapterIntroType: side;
 
 @include use('BookRoot', "common:::BookRoot");
 
+
+// Chapter Intro
+
+
+//Figures
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+  ),
+));
+
+
 // TOC
 @include add_settings((
     TOC: (
@@ -38,10 +51,8 @@ $ChapterIntroType: side;
 
 // Chapter Intro
 
-
 //Figures
-
-
+@include use('FigureSplash','carnival:::FigureSplashShape');
 
 //EOC
 
