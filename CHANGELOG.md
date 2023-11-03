@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v1.139.0] - 2023-11-05
+
 * Remove folio from introduction page in `cardboard`
 * Style `TOC` in `neuroscience`
 * Add `display: table` to equations in `webview`
