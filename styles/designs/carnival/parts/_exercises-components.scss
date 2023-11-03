@@ -79,6 +79,22 @@ $InjectedExercise__ProblemSolution__Letter: (
   )
 );
 
+$InjectedExercise__Context: (
+  _name: "InjectedexerciseContext",
+  _subselector: ' > div[data-type="exercise-context"]',
+  _properties: (
+    display: inline,
+  )
+);
+
+$InjectedExercise__Divider: (
+  _name: "InjectedexerciseDivider",
+  _subselector: ' > span.os-divider',
+  _properties: (
+    display: inline,
+  )
+);
+
 $Exercise__Problem__Container: (
     _name: "ProblemContainer",
     _subselector: " > .os-problem-container",
