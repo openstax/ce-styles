@@ -3,11 +3,13 @@
 @import '../../design-settings/webview/design';
 
 
-//Settings
+// For Rex, everything should be scoped to [data-dynamic-style="true"]
+$scope-selector: '[data-dynamic-style="true"]';
+
 //Titles
 @include add_settings((
     PageTitles: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'H1Title:::color': (_ref: 'colorMap:::headingTitleColor'),
         'H2Title:::color': (_ref: 'colorMap:::headingTitleColor'),
         'H3Title:::color': (_ref: 'colorMap:::headingTitleColor'),
@@ -20,20 +22,20 @@
 
 @include add_settings((
     EocPageTitles: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
     ),
 ));
 
 @include add_settings((
     EobPageTitles: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
     ),
 ));
 
 //Figures
 @include add_settings((
     FigureImage: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'CaptionContainerFigure:::color': (_ref: 'colorMap:::baseColor'),
         'CaptionTitleContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
         'CaptionTitleContainerMechanismFigure:::background-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
@@ -46,14 +48,14 @@
 //Terms
 @include add_settings((
     Terms: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
     ),
 ));
 
 //Lists
 @include add_settings((
     Lists: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'UnorderedList:::color': (_ref: 'colorMap:::baseColor'),
         'OrderedList:::color': (_ref: 'colorMap:::baseColor'),
         'NotesQuestionSectionList:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
@@ -62,20 +64,20 @@
 
 @include add_settings((
     StepwiseLists: (
-        _selectors: ('.stepwise', '.os-stepwise'),
+        _selectors: ('#{$scope-selector} .stepwise', '#{$scope-selector} .os-stepwise'),
     ),
 ));
 
 @include add_settings((
     ListStructure: (
-        _selectors: ('.list', '[data-type="list"]'),
+        _selectors: ('#{$scope-selector} .list', '#{$scope-selector} [data-type="list"]'),
     ),
 ));
 
 //Learning objectives
 @include add_settings((
     LearningObjectives: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'LearningObjectivesContainer:::background-color': (_ref: 'colorMap:::LearningObjectivesBackground'),
         'LearningObjectivesContainer:::border-color': (_ref: 'colorMap:::LearningObjectivesBorder'),
         'LearningObjectivesTitle:::color': (_ref: 'colorMap:::LearningObjectivesText'),
@@ -86,7 +88,7 @@
 
 @include add_settings((
     AbstractClass: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'AbstractClassContainer:::background-color': (_ref: 'colorMap:::LearningObjectivesBackground'),
         'UnorderedListInAbstractClassAfter:::color': (_ref: 'colorMap:::baseColor'),
     ),
@@ -95,7 +97,7 @@
 //Links
 @include add_settings((
     Link: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
         'Link:::color': (_ref: 'colorMap:::Link'),
         'LinkHover:::color': (_ref: 'colorMap:::LinkHover'),
     ),
@@ -104,7 +106,10 @@
 //Notes
 @include add_settings((
     Note: (
-        _selectors: ('[data-type="note"]', '.note', '[data-type="example"]', '.example'),
+        _selectors: ('#{$scope-selector} [data-type="note"]',
+                     '#{$scope-selector} .note',
+                     '#{$scope-selector} [data-type="example"]',
+                     '#{$scope-selector} .example'),
         'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
         'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
         'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
@@ -125,7 +130,10 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
+        _selectors: ('#{$scope-selector} [data-type="example"]',
+                     '#{$scope-selector} .example',
+                     '#{$scope-selector} [data-type="exercise"]',
+                     '#{$scope-selector} .exercise'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
@@ -138,26 +146,26 @@
 
 @include add_settings((
     InjectedExercise: (
-        _selectors: ('[data-type="injected-exercise"]'),
+        _selectors: ('#{$scope-selector} [data-type="injected-exercise"]'),
     ),
 ));
 
 @include add_settings((
     ExerciseInAppendix: (
-        _selectors: ('.appendix [data-type="exercise"]'),
+        _selectors: ('#{$scope-selector} .appendix [data-type="exercise"]'),
     ),
 ));
 
 @include add_settings((
     ExerciseInlined: (
-        _selectors: ('.os-number ~'),
+        _selectors: ('#{$scope-selector} .os-number ~'),
     ),
 ));
 
 //Table
 @include add_settings((
     Table: (
-        _selectors: (' .os-table'),
+        _selectors: ('#{$scope-selector} .os-table'),
         'CaptionTitleBefore:::color': (_ref: 'colorMap:::TableCaptionLabel'),
         'CaptionContainerTable:::border-top-color': (_ref: 'colorMap:::CaptionInTable'),
         'TableHeadCell:::border-color': (_ref: 'colorMap:::TableBorder'),
@@ -171,7 +179,7 @@
 //Blockquote
 @include add_settings((
     Blockquote: (
-        _selectors: ('blockquote'),
+        _selectors: ('#{$scope-selector} blockquote'),
         'Blockquote:::border-left-color': (_ref: 'colorMap:::BlockquoteBorder'),
     ),
 ));
@@ -179,71 +187,72 @@
 //Code
 @include add_settings((
     Code: (
-        _selectors: ('[data-type="code"]'),
+        _selectors: ('#{$scope-selector} [data-type="code"]'),
         'Code:::font-family': (_ref: 'typography:::fontOption2'),
     ),
     BlueCode: (
-        _selectors: ('[data-type="code"].blue-code'),
+        _selectors: ('#{$scope-selector} [data-type="code"].blue-code'),
         'CodeWithColor:::color': (_ref: 'colorMap:::BlueCode'),
     ),
     RedCode: (
-        _selectors: ('[data-type="code"].red-code'),
+        _selectors: ('#{$scope-selector} [data-type="code"].red-code'),
         'CodeWithColor:::color': (_ref: 'colorMap:::RedCode'),
     ),
 ));
 
 @include add_settings((
     CodeBlock: (
-        _selectors: ('pre[data-type="code"]'),
+        _selectors: ('#{$scope-selector} pre[data-type="code"]'),
     ),
     CenteredCodeBlock: (
-        _selectors: ('pre[data-type="code"].centered-code'),
+        _selectors: ('#{$scope-selector} pre[data-type="code"].centered-code'),
         'CodeBlockCentered:::color': (_ref: 'colorMap:::baseColor'),
     ),
     InlinePre: (
-      _selectors: ('pre[data-type="code"].inline-code'),
+      _selectors: ('#{$scope-selector} pre[data-type="code"].inline-code'),
     ),
 ));
 
 //Functions
 @include add_settings((
     Function: (
-        _selectors: ('.primary-function, .secondary-function'),
+        _selectors: ('#{$scope-selector} .primary-function',
+                     '#{$scope-selector} .secondary-function'),
         'Function:::font-family': (_ref: 'typography:::fontOption2'),
     ),
     PrimaryFunction: (
-        _selectors: ('.primary-function'),
+        _selectors: ('#{$scope-selector} .primary-function'),
     ),
 ));
 
 //Keyterm
 @include add_settings((
     KeyTerm: (
-        _selectors: ('.os-glossary-container'),
+        _selectors: ('#{$scope-selector} .os-glossary-container'),
     ),
 ));
 
 //Chapter intro
 @include add_settings((
     ChapterIntro: (
-        _selectors: (".introduction"),
+        _selectors: ("#{$scope-selector} .introduction"),
     ),
 ));
 
 //References
 @include add_settings((
     References: (
-        _selectors: (".os-eob", ".os-eoc"),
+        _selectors: ("#{$scope-selector} .os-eob", "#{$scope-selector} .os-eoc"),
     ),
     ReferencesCiteLink: (
-        _selectors: ('a[data-type="cite"]'),
+        _selectors: ('#{$scope-selector} a[data-type="cite"]'),
     ),
 ));
 
 //Coreq skills
 @include add_settings((
     CoreqSkills: (
-        _selectors: ('.coreq-skills'),
+        _selectors: ('#{$scope-selector} .coreq-skills'),
         'CoreqSkillsContainer:::border-color': (_ref: 'colorMap:::CoreqSkillsBorder'),
         'CoreqSkillsTitle:::color': (_ref: 'colorMap:::baseColor'),
         'CoreqSkillsTitle:::background-color': (_ref: 'colorMap:::CoreqSkillsTitleBackround'),
@@ -254,14 +263,15 @@
 //Footnote
 @include add_settings((
     Footnote: (
-        _selectors: (''),
+        _selectors: ('#{$scope-selector}'),
     ),
 ));
 
 //Equation
 @include add_settings((
     Equation: (
-        _selectors: ('.equation', '[data-type="equation"]'),
+        _selectors: ('#{$scope-selector} .equation',
+                     '#{$scope-selector} [data-type="equation"]'),
         'EquationNumber:::border-color': (_ref: 'colorMap:::EquationNumberBorder'),
     ),
 ));
@@ -269,17 +279,17 @@
 //Annotations
 @include add_settings((
     AnnotationText: (
-        _selectors: ('p.annotation-text'),
+        _selectors: ('#{$scope-selector} p.annotation-text'),
         'Annotation:::font-family': (_ref: 'typography:::fontOption1'),
         'Annotation:::color': (_ref: 'colorMap:::AnnotationText'),
     ),
     PublicDomainText: (
-        _selectors: ('p.public-domain'),
+        _selectors: ('#{$scope-selector} p.public-domain'),
         'AnnotationWithBorder:::font-family': (_ref: 'typography:::fontOption1'),
         'AnnotationWithBorder:::border-left-color': (_ref: 'colorMap:::PublicDomainBorder'),
     ),
     StudentSampleText: (
-        _selectors: ('p.student-sample'),
+        _selectors: ('#{$scope-selector} p.student-sample'),
         'AnnotationWithBorder:::font-family': (_ref: 'typography:::fontOption1'),
         'AnnotationWithBorder:::border-left-color': (_ref: 'colorMap:::StudentSampleBorder'),
     ),
@@ -287,25 +297,25 @@
 
 @include add_settings((
   NonScreenElements: (
-      _selectors: ("[data-type='switch'] > :not([data-media~='screen'])"),
+      _selectors: ("#{$scope-selector} [data-type='switch'] > :not([data-media~='screen'])"),
   )
 ));
 
 @include add_settings((
   Index: (
-      _selectors: (".os-index-container"),
+      _selectors: ("#{$scope-selector} .os-index-container"),
   )
 ));
 
 @include add_settings((
   WorksCited: (
-      _selectors: ("section.works-cited"),
+      _selectors: ("#{$scope-selector} section.works-cited"),
   ),
   SectionWorksCited: (
-      _selectors: ("section.section-workscited"),
+      _selectors: ("#{$scope-selector} section.section-workscited"),
   ),
   FurtherReading: (
-      _selectors: ("section.further-reading"),
+      _selectors: ("#{$scope-selector} section.further-reading"),
   )
 ));
 
@@ -314,49 +324,49 @@
 
 @include add_settings((
     RedColoredText: (
-        _selectors: ('*:not(.os-term) > .red-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .red-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::RedTextColor'),
     ),
     CyanColoredText: (
-        _selectors: ('*:not(.os-term) > .cyan-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .cyan-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::CyanTextColor'),
     ),
     MagentaColoredText: (
-        _selectors: ('*:not(.os-term) > .magenta-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .magenta-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::MagentaTextColor'),
     ),
     GreenColoredText: (
-        _selectors: ('*:not(.os-term) > .green-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .green-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::GreenTextColor'),
     ),
     GrayColoredText: (
-        _selectors: ('*:not(.os-term) > .gray-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .gray-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::GrayTextColor'),
     ),
     YellowColoredText: (
-        _selectors: ('*:not(.os-term) > .yellow-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .yellow-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::YellowTextColor'),
     ),
     PurpleColoredText: (
-        _selectors: ('*:not(.os-term) > .purple-text'),
+        _selectors: ('#{$scope-selector} *:not(.os-term) > .purple-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::PurpleTextColor'),
     ),
     BlueColoredText: (
-        _selectors: ('.blue-text'),
+        _selectors: ('#{$scope-selector} .blue-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::BlueTextColor'),
     ),
 ));
 
 @include add_settings((
     AnswerKey: (
-        _selectors: ('.os-eob.os-solutions-container'),
+        _selectors: ('#{$scope-selector} .os-eob.os-solutions-container'),
     ),
     AnswerKeySolutionWithProblemPrefix: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
+        _selectors: ('#{$scope-selector} .os-eob [data-type="question-solution"]'),
         'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
     AnswerKeySolutionMultipart: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
+        _selectors: ('#{$scope-selector} .os-eob [data-type="question-solution"]'),
         'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
 ));
@@ -364,19 +374,21 @@
 @include add_settings((
     FolioParagraphs: (
         _selectors: (
-            '.folio-chapter', '.folio-module', '.folio-eoc-left', '.folio-eoc-right',
-            '.folio-appendix-left', '.folio-appendix-right', '.folio-eob-left', '.folio-eob-right'
+            '#{$scope-selector} .folio-chapter', '#{$scope-selector} .folio-module',
+            '#{$scope-selector} .folio-eoc-left', '#{$scope-selector} .folio-eoc-right',
+            '#{$scope-selector} .folio-appendix-left', '#{$scope-selector} .folio-appendix-right',
+            '#{$scope-selector} .folio-eob-left', '#{$scope-selector} .folio-eob-right'
         ),
     )
 ));
 
 @include add_settings((
     QuestionWithProblemPrefix: (
-        _selectors: ('[data-type="exercise-question"]'),
+        _selectors: ('#{$scope-selector} [data-type="exercise-question"]'),
         'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
     MultipartQuestionExercises: (
-        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+        _selectors: ('#{$scope-selector} [data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
         'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
 ));

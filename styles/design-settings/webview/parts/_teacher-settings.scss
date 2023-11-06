@@ -1,5 +1,8 @@
+// For Rex, everything should be scoped to [data-dynamic-style="true"]
+$scope-selector: '[data-dynamic-style="true"]';
+
 @include add_settings((
   TeacherMaterial: (
-    _selectors: ('.os-teacher')
+    _selectors: ('#{$scope-selector} .os-teacher')
   )
 ));

@@ -1,21 +1,26 @@
-:root {
+// For Rex, everything should be scoped to [data-dynamic-style="true"]
+@function scope($wrap) {
+  $scope-selector: "[data-dynamic-style=\"true\"]";
+  @return unquote("#{$scope-selector} #{$wrap}");
+}
+
+#{scope("")} {
   --content-text-scale: 1;
 }
 
-[data-type="page"],
-[data-type="composite-page"] {
+#{scope("[data-type="page"], [data-type="composite-page"]")} {
   font-size: scaled_size(1.6rem);
   line-height: scaled_size(2.3rem);
 }
 
 // Inputs
-input, button, select, textarea {
+#{scope("input")}, #{scope("button")}, #{scope("select")}, #{scope("textarea")} {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-span[data-media~="screenreader"] {
+#{scope("span[data-media~="screenreader"]")} {
   border: 0;
   clip: rect(0 0 0 0);
   height: auto;
@@ -28,31 +33,39 @@ span[data-media~="screenreader"] {
   opacity: 0;
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+#{scope("button")},
+#{scope("html input[type="button"]")},
+#{scope("input[type="reset"]")},
+#{scope("input[type="submit"]")} {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-button {
+#{scope("button")} {
   overflow: visible;
 }
 
-button, input, optgroup, select, textarea {
+#{scope("button")},
+#{scope("input")},
+#{scope("optgroup")},
+#{scope("select")},
+#{scope("textarea")} {
   color: inherit;
   font: inherit;
   margin: 0;
 }
 
 // Superscript and subscript
-sup {
+#{scope("sup")} {
   top: -.5em;
 }
 
-sub {
+#{scope("sub")} {
   bottom: -.25em;
 }
 
-sub, sup {
+#{scope("sub")},
+#{scope("sup")} {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -60,31 +73,31 @@ sub, sup {
 }
 
 // Preformatted
-pre {
+#{scope("pre")} {
   text-align: left;
 }
 
-code[data-display="block"] {
+#{scope("code[data-display="block"]")} {
   display: block;
   white-space: pre-wrap;
 }
 
 // Double underline
-u[data-effect="double-underline"] {
+#{scope("u[data-effect="double-underline"]")} {
   text-decoration-style: double;
 }
 
 // Inline media
-[data-type="media"][data-display="inline"] {
+#{scope("[data-type="media"][data-display="inline"]")} {
   display: inline-flex;
 }
 
 // Smallcaps
-.smallcaps {
+#{scope(".smallcaps")} {
   font-size: scaled_size(1.3rem);
 }
 
 //Smallcaps in caption
-.os-caption span.smallcaps{
+#{scope(".os-caption span.smallcaps")} {
   font-size: scaled_size(1rem);
 }
