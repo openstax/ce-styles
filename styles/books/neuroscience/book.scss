@@ -53,6 +53,18 @@ $ChapterIntroType: side;
   ),
 ));
 
+// Chapter Intro
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::neuroscienceIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
+    'ChapterOutlineContainer:::font-weight': normal,
+    'ChapterOutlineContainer:::font-size': font-scale(-1),
+  ),
+));
+
 // TOC
 @include add_settings((
     TOC: (
@@ -128,14 +140,15 @@ $ChapterIntroType: side;
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
 
+//Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+
 // TOC
 @include use('TOC', 'carnival:::NoUnitToc');
 
 
 // Equations
 
-
-// Chapter Intro
 
 
 //Figures
