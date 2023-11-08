@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.139.1] - 2023-11-08
+
 * Add `height: auto` to webview `img`s
 * Increase width of exercises numbers in `webview` & right-align
 * Add folio to Answer Key in `carnival`
