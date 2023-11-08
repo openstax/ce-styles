@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Adds `meet-author` note in `neuroscience`
 * Add component for four propotional columns in `columns-shapes`
 * Style `splash image` in `neuroscience`
+* Style `chapter outline` in `neuroscience`
 
 ## [v1.139.1] - 2023-11-08
 
