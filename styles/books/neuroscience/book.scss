@@ -17,8 +17,33 @@ $ChapterIntroType: side;
 
 @include use('BookRoot', "common:::BookRoot");
 
+// TOC
+@include add_settings((
+    TOC: (
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    ),
+));
+
+
+// Target labels
+@include add_settings((
+  FigureTargetLabel: (
+    _selectors: ('a.figure-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::figureNumberColor"),
+  ),
+  TableTargetLabel: (
+    _selectors: ('a.table-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::neuroscienceTableColor"),
+  ),
+));
+
 // Book specific styles
 
+// TOC
+@include use('TOC', 'carnival:::NoUnitToc');
 
 
 // Equations
@@ -28,7 +53,12 @@ $ChapterIntroType: side;
 
 
 //Figures
-
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
 
 
 //EOC
@@ -38,6 +68,7 @@ $ChapterIntroType: side;
 
 
 // Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
 
 
 //Notes
