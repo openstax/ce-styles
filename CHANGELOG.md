@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `splash image` in `neuroscience`
 * Add folio to Answer Key in `carnival`
 * Align exercise context divider in `carnival`
 
