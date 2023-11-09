@@ -38,6 +38,25 @@ $ChapterIntroType: side;
 ));
 
 
+
+//Figures
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+
+// Target labels
+@include add_settings((
+  FigureTargetLabel: (
+    _selectors: ('a.figure-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::figureNumberColor"),
+  ),
+  TableTargetLabel: (
+    _selectors: ('a.table-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::neuroscienceTableColor"),
+  ),
+));
+
 // Book specific styles
 
 // TOC
@@ -52,6 +71,14 @@ $ChapterIntroType: side;
 
 //Figures
 
+@include use('FigureSplash','carnival:::FigureSplashShape');
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+
 
 
 //EOC
@@ -61,6 +88,7 @@ $ChapterIntroType: side;
 
 
 // Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
 
 
 //Notes

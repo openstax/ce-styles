@@ -689,6 +689,10 @@ div[data-type=composite-page].os-eob > h1[data-type=document-title] .os-text {
   string-set: eob-title content();
 }
 
+div[data-type=composite-chapter].os-eob > h1[data-type=document-title] .os-text {
+  string-set: eob-title content();
+}
+
 nav#toc {
   page: table-of-contents;
 }
@@ -1596,6 +1600,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=chapter] > .os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
+}
+
+[data-type=chapter] > .os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+[data-type=chapter] > .os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
+  display: inline;
 }
 
 [data-type=chapter] > .os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
