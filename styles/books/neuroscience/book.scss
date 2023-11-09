@@ -27,6 +27,16 @@ $ChapterIntroType: side;
     ),
 ));
 
+// Note
+@include add_settings((
+  MeetTheAuthorNote:(
+    _selectors: (".meet-author"),
+    group-border-color: (_ref: 'colorMap:::meetTheAuthorColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::meetTheAuthorColor'),
+  ),
+));
+
 
 
 //Figures
@@ -82,7 +92,7 @@ $ChapterIntroType: side;
 
 
 //Notes
-
+@include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
 
 //Titles
 
