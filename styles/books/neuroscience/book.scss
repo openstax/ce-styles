@@ -28,6 +28,13 @@ $ChapterIntroType: side;
 ));
 
 
+
+//Figures
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+
 // Target labels
 @include add_settings((
   FigureTargetLabel: (
@@ -53,12 +60,15 @@ $ChapterIntroType: side;
 
 
 //Figures
+
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('Figure','carnival:::FigureShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
 @include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
 @include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+
 
 
 //EOC
