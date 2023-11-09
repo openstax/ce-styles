@@ -37,6 +37,16 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  AcrossSpeciesNote:(
+    _selectors: (".across-species"),
+    group-border-color: (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-biodiversity.svg")) no-repeat top left,
+  ),
+));
+
 
 
 //Figures
@@ -44,6 +54,8 @@ $ChapterIntroType: side;
   FigureSplash: (
     _selectors: (".os-figure.has-splash"),
     'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+  ),
+));
 
 // Target labels
 @include add_settings((
@@ -93,6 +105,7 @@ $ChapterIntroType: side;
 
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 
 //Titles
 
