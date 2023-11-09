@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `developmental-perspective` note in `neuroscience`
 * Style `chapter outline` in `neuroscience`
 * Style `developmental-perspective` note in `neuroscience`
 
