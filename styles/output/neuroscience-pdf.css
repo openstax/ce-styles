@@ -1170,6 +1170,47 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   line-height: 1.5rem;
 }
 
+.os-figure.has-splash {
+  margin-bottom: 1.4rem;
+}
+
+.os-figure.has-splash > figure.splash {
+  position: relative;
+  margin: 0;
+}
+
+.os-figure.has-splash > figure.splash::before {
+  content: '';
+  background-color: #0074BC;
+  position: absolute;
+  height: 100%;
+  width: 8.65in;
+  margin-left: -1.15in;
+  z-index: -3;
+  box-sizing: border-box;
+  padding: inherit;
+  top: 0;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  line-height: 0;
+  height: 100%;
+  display: flex;
+  width: 7.65in;
+  justify-content: flex-end;
+  z-index: -2;
+  position: relative;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] > img {
+  width: 8.15in;
+}
+
+.os-figure.has-splash .os-caption-container {
+  position: relative;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
   display: table;
   margin-left: auto;
@@ -1332,9 +1373,39 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: table-caption;
   caption-side: bottom;
   prince-caption-page: all;
+
   font-size: 0.8333333333rem;
   line-height: 1.2;
 }
+
+
+.os-figure.has-splash .os-caption-container::before {
+  content: '';
+  background-color: #EEEAE0;
+  position: absolute;
+  height: 100%;
+  width: 8.8in;
+  margin-left: -1.15in;
+  z-index: -1;
+  box-sizing: border-box;
+  padding: inherit;
+  top: 0;
+}
+
+.os-figure.has-splash .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+  text-transform: uppercase;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title {
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title-label {
   font-family: Mulish, sans-serif;
@@ -1350,9 +1421,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title {
+
   font-family: Mulish, sans-serif;
   font-weight: bold;
 }
+
+.os-figure.has-splash .os-caption-container > .os-caption {
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
