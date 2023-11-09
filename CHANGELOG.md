@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix GitPod support
+* Style `splash image` in `neuroscience`
+* 
+## [v1.139.1] - 2023-11-08
+
+* Add `height: auto` to webview `img`s
+* Increase width of exercises numbers in `webview` & right-align
+* Add folio to Answer Key in `carnival`
+* Align exercise context divider in `carnival`
+* Style `table` and `figure` caption in `Neuroscience`
+
+## [v1.139.0] - 2023-11-03
+
+* Remove folio from introduction page in `cardboard`
 * Style `TOC` in `neuroscience`
 * Add `display: table` to equations in `webview`
 * Initial styles setup for `neuroscience`
