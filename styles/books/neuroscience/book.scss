@@ -14,8 +14,16 @@ $ChapterIntroType: side;
 @import '../../designs/carnival/pdf/folio';
 
 
+@include add_settings((
+  LearningObjectivesNumbered: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+));
 
 @include use('BookRoot', "common:::BookRoot");
+@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
 
 // TOC
 @include add_settings((
