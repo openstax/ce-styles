@@ -1195,36 +1195,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   line-height: 1.5rem;
 }
 
-.meet-author {
-  border: solid;
-  border-color: #007A49;
-  box-decoration-break: slice;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  position: relative;
-}
-
-.meet-author > .os-title {
-  color: #007A49;
-  font-family: Mulish, sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  box-decoration-break: slice;
-  text-transform: uppercase;
-}
-
-.meet-author > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
-  
 .os-figure.has-splash {
   margin-bottom: 1.4rem;
 }
@@ -1265,6 +1235,44 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   position: relative;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
+  font-size: 0.8333333333rem;
+  line-height: 1.2;
+}
+
+.os-figure.has-splash .os-caption-container::before {
+  content: '';
+  background-color: #EEEAE0;
+  position: absolute;
+  height: 100%;
+  width: 8.8in;
+  margin-left: -1.15in;
+  z-index: -1;
+  box-sizing: border-box;
+  padding: inherit;
+  top: 0;
+}
+
+.os-figure.has-splash .os-caption-container > .os-number {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title-label {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+  color: #C31427;
+  text-transform: uppercase;
+}
+
+.os-figure.has-splash .os-caption-container > .os-title {
+  font-family: Mulish, sans-serif;
+  font-weight: bold;
+}
+
+.os-figure.has-splash .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif;
+}
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
   display: table;
@@ -1428,39 +1436,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: table-caption;
   caption-side: bottom;
   prince-caption-page: all;
-
   font-size: 0.8333333333rem;
   line-height: 1.2;
 }
-
-
-.os-figure.has-splash .os-caption-container::before {
-  content: '';
-  background-color: #EEEAE0;
-  position: absolute;
-  height: 100%;
-  width: 8.8in;
-  margin-left: -1.15in;
-  z-index: -1;
-  box-sizing: border-box;
-  padding: inherit;
-  top: 0;
-}
-
-.os-figure.has-splash .os-caption-container > .os-number {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-}
-
-.os-figure.has-splash .os-caption-container > .os-title-label {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-  text-transform: uppercase;
-}
-
-.os-figure.has-splash .os-caption-container > .os-title {
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title-label {
   font-family: Mulish, sans-serif;
@@ -1476,14 +1454,272 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-title {
-
   font-family: Mulish, sans-serif;
   font-weight: bold;
 }
 
-.os-figure.has-splash .os-caption-container > .os-caption {
-
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
+}
 
+.meet-author {
+  border: solid;
+  border-color: #007A49;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.meet-author > .os-title {
+  color: #007A49;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+.meet-author > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+}
+
+[data-type=chapter] > h1 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=chapter] > h1 > .os-text {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 2.48832rem;
+  line-height: 3rem;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+}
+
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {
+  float: left;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 .5rem 0 0;
+  font-weight: 700;
+}
+
+[data-type=page].introduction .intro-text > section > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page].introduction .intro-text > section > section > h4 {
+  font-family: Mulish, sans-serif;
+  color: #0074BC;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h5 {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page]:not(.introduction).preface > h1 {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  column-span: all;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding-bottom: 2.1rem;
+  border-bottom-color: #000000;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  margin-bottom: 2.1rem;
+}
+
+[data-type=page]:not(.introduction) > h2[data-type=document-title] {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page]:not(.introduction) > section > h2 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page]:not(.introduction) > section > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page]:not(.introduction) > section > section > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page]:not(.introduction) > section > section > h4 {
+  font-family: Mulish, sans-serif;
+  color: #0074BC;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page]:not(.introduction) > section > section > section > h5 {
+  font-family: IBM Plex Sans, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page]:not(.introduction).appendix > h1 {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+
+[data-type=page]:not(.introduction).appendix > h1 > .os-text {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  padding-top: 2.1rem;
+  margin-top: 2.1rem;
+  font-weight: 600;
+  text-transform: none;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 0.1rem;
+  display: block;
+}
+
+[data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=chapter] > .os-eoc[data-type=composite-page] > h2 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  column-span: all;
+}
+
+[data-type=chapter] > .os-eoc[data-type=composite-page] > section > a > h3 {
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=chapter] > .os-eoc[data-type=composite-page] [data-type=list] > h3[data-type=title] {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.os-eob > h1 {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  column-span: all;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding-bottom: 2.1rem;
+  border-bottom-color: #000000;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  margin-bottom: 2.1rem;
+}
+
+.os-eob > section > h2 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.os-eob > div > h2 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.os-eob > div > a > h2 {
+  font-family: Mulish, sans-serif;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.os-eob > div > div > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
 }

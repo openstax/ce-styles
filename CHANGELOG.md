@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style headers in `neuroscience`
 * Style `lo` in `neuroscience`
 * Adds `meet-author` note in `neuroscience`
 * Add component for four propotional columns in `columns-shapes`
