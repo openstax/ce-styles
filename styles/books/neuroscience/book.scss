@@ -35,6 +35,23 @@ $ChapterIntroType: side;
     ),
 ));
 
+// Note
+@include add_settings((
+  MeetTheAuthorNote:(
+    _selectors: (".meet-author"),
+    group-border-color: (_ref: 'colorMap:::meetTheAuthorColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::meetTheAuthorColor'),
+  ),
+));
+
+
+
+//Figures
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
 
 // Target labels
 @include add_settings((
@@ -61,12 +78,15 @@ $ChapterIntroType: side;
 
 
 //Figures
+
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('Figure','carnival:::FigureShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
 @include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
 @include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+
 
 
 //EOC
@@ -80,7 +100,7 @@ $ChapterIntroType: side;
 
 
 //Notes
-
+@include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
 
 //Titles
 
