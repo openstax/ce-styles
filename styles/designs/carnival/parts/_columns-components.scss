@@ -57,3 +57,23 @@ $Columns--ThreeColumnsFourRatioTwo: (
         width: column-width(3,4,2),
     )
 );
+
+// Four columns
+
+$Columns--FourColumnsFourRatioOne: (
+    _name: "FourColumnsFourRatioOne",
+    _subselector: " [data-columns='4'][data-ratio='1,1,1,1'] col[data-width='1*']",
+    _properties: (
+        width: column-width(4,4,1),
+    )
+);
+
+// Five columns
+
+$Columns--FiveColumnsFiveRatioOne: (
+    _name: "FiveColumnsFiveRatioOne",
+    _subselector: " [data-columns='5'][data-ratio='1,1,1,1,1'] col[data-width='1*']",
+    _properties: (
+        width: column-width(5,5,1),
+    )
+);

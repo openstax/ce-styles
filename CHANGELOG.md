@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `lists` and `terms` in `neuroscience`
-* 
+* Style headers in `neuroscience`
+* Style `lo` in `neuroscience`
+* Adds `meet-author` note in `neuroscience`
+* Add component for four propotional columns in `columns-shapes`
+* Style `splash image` in `neuroscience`
+
 ## [v1.139.1] - 2023-11-08
 
 * Add `height: auto` to webview `img`s
