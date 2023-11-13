@@ -14,8 +14,44 @@ $ChapterIntroType: side;
 @import '../../designs/carnival/pdf/folio';
 
 
+//Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+  ),
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  PageTitles: (
+    _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  EocCompositePageTitles: (
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  EobTitles: (
+    _selectors: ('.os-eob'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+));
 
-@include use('BookRoot', "common:::BookRoot");
+// LO
+@include add_settings((
+  LearningObjectivesNumbered: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+));
 
 // TOC
 @include add_settings((
@@ -37,6 +73,7 @@ $ChapterIntroType: side;
   ),
 ));
 
+
 @include add_settings((
   AcrossSpeciesNote:(
     _selectors: (".across-species"),
@@ -46,8 +83,6 @@ $ChapterIntroType: side;
     'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-biodiversity.svg")) no-repeat top left,
   ),
 ));
-
-
 
 //Figures
 @include add_settings((
@@ -70,6 +105,8 @@ $ChapterIntroType: side;
 ));
 
 // Book specific styles
+@include use('BookRoot', "common:::BookRoot");
+@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
 
 // TOC
 @include use('TOC', 'carnival:::NoUnitToc');
@@ -108,10 +145,21 @@ $ChapterIntroType: side;
 @include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 
 //Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EobTitles', 'carnival:::EobTitlesShape');
 
 
 //Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 
 // EOB
 
