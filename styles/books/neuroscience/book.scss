@@ -73,6 +73,17 @@ $ChapterIntroType: side;
   ),
 ));
 
+
+@include add_settings((
+  AcrossSpeciesNote:(
+    _selectors: (".across-species"),
+    group-border-color: (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-biodiversity.svg")) no-repeat top left,
+  ),
+));
+
 //Figures
 @include add_settings((
   FigureSplash: (
@@ -131,6 +142,7 @@ $ChapterIntroType: side;
 
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
