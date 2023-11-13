@@ -141,7 +141,13 @@ $ChapterIntroType: side;
 
 
 //Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
 
 // EOB
 
