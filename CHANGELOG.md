@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
+* Style EOC sections in `neuroscience`
 * Style `across species` note in `neuroscience`
 * Style `lists` and `terms` in `neuroscience`
 * Style headers in `neuroscience`
