@@ -84,6 +84,16 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  InTheLabNote:(
+    _selectors: (".across-species"),
+    group-border-color: (_ref: 'colorMap:::inTheLabNoteColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::inTheLabNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientific.svg")) no-repeat top left,
+  ),
+));
+
 //Figures
 @include add_settings((
   FigureSplash: (
@@ -143,6 +153,7 @@ $ChapterIntroType: side;
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
 @include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
+@include use('InTheLabNote', 'carnival:::IconNoteShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
