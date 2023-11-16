@@ -1,5 +1,5 @@
 $PagesWithBands: (
-  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eoc, firstSelector: '.os-eoc.os-section-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
@@ -110,6 +110,20 @@ $ChapterIntroType: side;
   ),
 ));
 
+// Eoc
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-section-summary-container', '.os-key-terms-container'),
+  ),
+));
+
+@include add_settings((
+  EocExercisesModules: (
+    _selectors: ('.os-multiple-choice-container', '.os-fillin-blank-container'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
 // Book specific styles
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
@@ -134,14 +148,6 @@ $ChapterIntroType: side;
 @include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
 @include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
 
-
-
-//EOC
-
-
-// EoC Exercises
-
-
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
 
@@ -164,9 +170,14 @@ $ChapterIntroType: side;
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("NotesLists", "carnival:::NotesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 
 // EOB
 

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `boxed-feature` note in `neuroscience`
+* Change `suggested-reading` to one column in `nursing-external`
+* Style EOC sections in `neuroscience`
 * Apply `FullWidthTable` to `nursing-external`
 * Style `across species` note in `neuroscience`
 * Style `lists` and `terms` in `neuroscience`
