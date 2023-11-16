@@ -71,6 +71,12 @@ $ChapterIntroType: side;
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Title:::color': (_ref: 'colorMap:::meetTheAuthorColor'),
   ),
+  BoxedFeatureNote:(
+    _selectors: (".boxed-feature"),
+    group-border-color: (_ref: 'colorMap:::boxedFeatureNeuroscienceColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::boxedFeatureNeuroscienceColor'),
+  ),
 ));
 
 
@@ -148,6 +154,7 @@ $ChapterIntroType: side;
 
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
 @include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 
 //Titles

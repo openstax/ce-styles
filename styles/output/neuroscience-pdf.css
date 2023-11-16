@@ -1493,6 +1493,37 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+.boxed-feature {
+  border: solid;
+  border-color: #0074BC;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.boxed-feature > .os-title {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+.boxed-feature > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+}
+
 .across-species > .os-title {
   font-family: Mulish, sans-serif;
   font-weight: 900;
