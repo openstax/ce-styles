@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Create basic files and style TOC in `lifespan-development`
 * Fix EOC bands in `nursing-internal` 
 * Style `boxed-feature` note in `neuroscience`
 * Change `suggested-reading` to one column in `nursing-external`
