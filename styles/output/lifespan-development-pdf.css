@@ -1376,3 +1376,159 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   margin-bottom: 0.7rem;
   font-weight: 600;
 }
+
+.os-figure:not(.has-splash) > figure {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-figure:not(.has-splash) > .os-caption-container {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.7rem;
+}
+
+.os-figure:not(.has-splash) > .os-caption-container > .os-title-label {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #8B1504;
+  text-transform: uppercase;
+}
+
+.os-figure:not(.has-splash) > .os-caption-container > .os-number {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #8B1504;
+}
+
+.os-figure:not(.has-splash) > .os-caption-container > .os-title {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.os-figure:not(.has-splash) > .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.os-figure.has-splash {
+  background-color: #000000;
+  width: 8.8in;
+  position: relative;
+  z-index: -1;
+  box-sizing: border-box;
+  top: 0;
+  margin-bottom: 1.4rem;
+  padding-top: 3.5rem;
+  transform: translate3d(-1in, 0, 0);
+  margin-left: -1.2rem;
+  margin-top: -0.1rem;
+}
+
+.os-figure.has-splash > figure.splash {
+  margin-bottom: 0;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  display: flex;
+  width: 6.5in;
+  line-height: 0;
+  justify-content: center;
+}
+
+.os-figure.has-splash > .os-caption-container {
+  display: table;
+  width: 6.5in;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-number {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #DCB83D;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title-label {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #DCB83D;
+  text-transform: uppercase;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-caption {
+  font-family: IBM Plex Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+h4.os-subtitle + .os-figure:not(.has-splash) > figure {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-problem-container > p + .os-figure > figure {
+  margin-top: 1rem;
+}
+
+[data-type=solution] > h4[data-type=solution-title] + .has-first-element > .first-element > img {
+  margin-top: 1rem;
+}
+
+.os-eoc .os-problem-container > p + [data-type=media] > img {
+  margin-top: 1rem;
+}
+
+[data-type=problem] img {
+  max-width: 100%;
+}
+
+[data-type=problem] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=problem] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] img {
+  max-width: 100%;
+}
+
+[data-type=exercise-question] > div > ol > li > .os-figure:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
+
+[data-type=exercise-question] > div > ol > li > [data-type=media]:first-child img {
+  vertical-align: top;
+  display: inline;
+  padding-top: 0.7rem;
+}
