@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style figures in `lifespan-development`
 * Style headers in `lifespan-development`
 * Create basic files and style TOC in `lifespan-development`
 
