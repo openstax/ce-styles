@@ -413,3 +413,9 @@
         _selectors: ('.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p'),
     ),
 ));
+
+@include add_settings((
+    VerticallyTightTable: (
+        _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
+    )
+));

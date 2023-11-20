@@ -2360,6 +2360,20 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   text-align: center;
 }
 
+.os-table.os-top-titled-container > table > tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
 .os-table.os-top-titled-container > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2708,6 +2722,20 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > thead > tr:not(:first-child):not(.header-row) > th:not(:only-child)[data-align=center] {
   text-align: center;
+}
+
+.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr > td > ul:not([data-labeled-item=true]) {

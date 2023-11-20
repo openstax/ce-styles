@@ -34,5 +34,10 @@ $bandColor: #DCB83D;
 @include use('FigureFromExercisesProblem','cosmos:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cosmos:::FigureFromExercisesShape');
 
+//Tables
+@include use('DefaultTable', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
+@include use('VerticallyTightTable', 'cosmos:::VerticallyTightTableShape');
+
 // Chapter Intro
 @include use('ChapterOutline', 'cosmos:::ChapterOutlineShape');

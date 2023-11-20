@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `tables` in `lifespan-development`
 * Style `lo` in `lifespan-development`
 * Style `chapter-outline` in `lifespan-development`
 * Style figures in `lifespan-development`
