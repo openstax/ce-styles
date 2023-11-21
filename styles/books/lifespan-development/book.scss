@@ -11,6 +11,18 @@ $bandColor: #DCB83D;
 @import '../../design-settings/cosmos/_settings.scss';
 @import '../../designs/cosmos/pdf/folio';
 
+// EOC exercises
+@include add_settings((
+  ExercisesModule: (
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-check-understanding-container',
+                 '.os-eoc.os-reflection-questions-container', '.os-eoc.os-media-questions-container',
+                 '.os-eoc.os-thought-provokers-container', '.os-eoc.os-case-study-container'),
+    'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemNumber:::width': 2%,
+    'ProblemNumber:::text-align': right,
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -39,5 +51,18 @@ $bandColor: #DCB83D;
 @include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 @include use('VerticallyTightTable', 'cosmos:::VerticallyTightTableShape');
 
+// Lists
+@include use('PageLists', 'cosmos:::PageListsShape');
+@include use('CompositePageLists', 'cosmos:::CompositePageListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesSolutionLists', 'cosmos:::ExercisesListsShape');
+@include use('NotesLists', 'cosmos:::NotesListsShape');
+
 // Chapter Intro
 @include use('ChapterOutline', 'cosmos:::ChapterOutlineShape');
+
+// Eoc
+@include use('KeyTerms', 'cosmos:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
+@include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
