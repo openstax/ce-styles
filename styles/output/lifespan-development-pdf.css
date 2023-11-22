@@ -2873,3 +2873,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
   width: 100%;
 }
+
+.os-index-container {
+  column-count: 3;
+  column-gap: 32px;
+}
+
+.os-index-container > .group-by {
+  margin-bottom: 1.4rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 8px;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term-section-link {
+  content: target-counter(attr(href, url), page);
+}
