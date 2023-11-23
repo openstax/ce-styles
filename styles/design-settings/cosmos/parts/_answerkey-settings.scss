@@ -23,3 +23,12 @@
         )
     ),
 ));
+
+@include add_settings((
+    AnswerKeyInjectedSolutionInline: (
+        _selectors: ('.os-eob [data-type="question-solution"]'),
+        ExerciseSolutionInlineNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor')
+        )
+    ),
+));
