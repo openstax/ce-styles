@@ -2897,3 +2897,36 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-index-container > .group-by > .os-index-item > .os-term-section-link {
   content: target-counter(attr(href, url), page);
 }
+
+.appendix > .column-container {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.appendix > .column-container > section {
+  margin-bottom: 0.7rem;
+}
+
+.appendix > .column-container > section > h3 {
+  color: #C31427;
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.appendix > .column-container > section > ul {
+  font-size: 0.8333333333rem;
+  list-style-type: none;
+}
+
+.appendix > .column-container > section > ul > li {
+  text-indent: -5px;
+  padding-left: 5px;
+  break-inside: avoid;
+}
+
+.appendix > .column-container > section > ul > li > strong {
+  padding-right: 3px;
+}

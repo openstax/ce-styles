@@ -11,6 +11,13 @@ $bandColor: #DCB83D;
 @import '../../design-settings/cosmos/_settings.scss';
 @import '../../designs/cosmos/pdf/folio';
 
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+  ),
+));
+
 // EOC exercises
 @include add_settings((
   ExercisesModule: (
@@ -69,3 +76,4 @@ $bandColor: #DCB83D;
 
 // Eob
 @include use('Index', 'cosmos:::IndexShape');
+@include use('AppendixGlossary', 'cosmos:::AppendixGlossaryShape');

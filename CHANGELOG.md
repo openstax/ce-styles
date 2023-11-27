@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `appendix glossary` in `lifespan-development`
 * Style `index` in `lifespan-development`
 * Style `eoc` sections in `lifespan-development`
 * Style `tables` in `lifespan-development`
