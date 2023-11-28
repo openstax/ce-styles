@@ -42,6 +42,7 @@
                         )),
                         map-merge($Table__Body, (
                             _components: (
+                                $Table__Row--HeaderRowClass,
                                 map-merge($Table__Row, (
                                     _components: (
                                         map-merge($Table__Data, (
@@ -126,6 +127,29 @@
         _components: (
           $NarrowTable__Data,
       )
+    )),
+  )
+));
+
+@include create_shape('cosmos:::VerticallyTightTableShape',  (
+  _components: (
+    map-merge($Table__Head, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                  $Table__Head__Cell--VerticallyTight
+                )
+            )),
+        )
+    )),
+    map-merge($Table__Body, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                    $Table__Data--VerticallyTight,
+                )
+            )),
+        )
     )),
   )
 ));

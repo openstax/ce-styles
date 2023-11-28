@@ -2141,6 +2141,18 @@ a[role=doc-noteref] {
   width: 50%;
 }
 
+.os-table [data-columns="4"][data-ratio="1,1,1,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
+  width: 20%;
+}
+
+.os-table.os-full-width-container {
+  width: 100%;
+}
+
 [data-type=page] > ol {
   margin-left: 24px;
 }
@@ -3875,12 +3887,6 @@ a[role=doc-noteref] {
 }
 
 .os-chapter-summary-container {
-  column-count: 2;
-  column-gap: 2.4rem;
-  column-width: auto;
-}
-
-.os-suggested-reading-container {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;

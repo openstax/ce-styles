@@ -7,8 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix GitPod support
+* Style `answer key` in `lifespan-development`
+* Style `notes` in `lifespan-development`
+* Style `appendix glossary` in `lifespan-development`
+* Style `index` in `lifespan-development`
+* Style `eoc` sections in `lifespan-development`
+* Style `tables` in `lifespan-development`
+* Style `lo` in `lifespan-development`
+* Style `chapter-outline` in `lifespan-development`
+* Style figures in `lifespan-development`
+* Style headers in `lifespan-development`
+* Create basic files and style TOC in `lifespan-development`
+
+## [v1.140.0] - 2023-11-17
+
+* Fix EOC bands in `nursing-internal` 
+* Style `boxed-feature` note in `neuroscience`
+* Change `suggested-reading` to one column in `nursing-external`
+* Style EOC sections in `neuroscience`
+* Apply `FullWidthTable` to `nursing-external`
+* Style `across species` note in `neuroscience`
+* Style `lists` and `terms` in `neuroscience`
+* Style headers in `neuroscience`
+* Style `lo` in `neuroscience`
+* Adds `meet-author` note in `neuroscience`
+* Add component for four propotional columns in `columns-shapes`
 * Style `splash image` in `neuroscience`
-* 
+
 ## [v1.139.1] - 2023-11-08
 
 * Add `height: auto` to webview `img`s

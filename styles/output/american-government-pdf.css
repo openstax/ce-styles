@@ -2444,6 +2444,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
+.os-table.os-top-titled-container > table > tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
 .os-table.os-top-titled-container > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }

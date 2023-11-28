@@ -128,6 +128,15 @@ $Table__Head__Cell--Centered: (
     )
 );
 
+$Table__Head__Cell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
+);
+
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
 
 $Table__Row: empty_wrapper(TableRow, ' > tr');
@@ -137,6 +146,24 @@ $Table__Row--FirstChild: empty_wrapper(TableRowFirstChild, ' > tr:first-child');
 
 $Table__Row--NotLastChild: empty_wrapper(TableRowNotLastChild, ' > tr:not(:last-child):not(.header-row)');
 $Table__Row--LastChild: empty_wrapper(TableRowLastChild, ' > tr:last-child');
+
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
+    )
+);
 
 $Table__Data: empty_wrapper(TableData, ' > td');
 
@@ -350,6 +377,15 @@ $Table__Data--Centered: (
     _subselector: " > td[data-align="center"]",
     _properties: (
         text-align: center,
+    )
+);
+
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",     // not classes for css precedence
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
     )
 );
 

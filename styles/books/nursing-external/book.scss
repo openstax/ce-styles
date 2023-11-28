@@ -102,8 +102,7 @@ $ChapterIntroType: fullWidth;
     _selectors: (
       '.os-glossary-container',
       '.os-section-summary-container',
-      '.os-chapter-summary-container',
-      '.os-suggested-reading-container'
+      '.os-chapter-summary-container'
     ),
   ),
 ));
@@ -437,6 +436,7 @@ $ChapterIntroType: fullWidth;
 @include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
 @include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
 @include use('ColumnsFromTable', 'carnival:::ColumnsShape');
+@include use('FullWidthTable', 'carnival:::FullWidthTableShape');
 
 
 //Lists
