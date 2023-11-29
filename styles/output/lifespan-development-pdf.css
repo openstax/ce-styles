@@ -298,7 +298,7 @@ a {
   page: eoc;
 }
 
-.os-eob[data-type=composite-page] {
+.os-eob[data-type=composite-chapter] {
   page: eob;
   prince-page-group: start;
 }
@@ -3124,6 +3124,33 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-index-container > .group-by > .os-index-item > .os-term-section-link {
   content: target-counter(attr(href, url), page);
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] {
+  margin-bottom: 1.4rem;
+}
+
+.os-eob[data-type=composite-chapter] > [data-type=composite-page] > .os-solution-area {
+  margin-bottom: 0.7rem;
+}
+
+.os-eob [data-type=question-solution] {
+  display: inline;
+}
+
+.os-eob [data-type=question-solution] > .os-number {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container {
+  display: inline;
+  margin-right: 8px;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container > p {
+  display: inline;
 }
 
 .appendix > .column-container {
