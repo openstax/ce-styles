@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style third level lists in `carnival`
 * Fix GitPod support
 * Style `answer key` in `lifespan-development`
 * Style `notes` in `lifespan-development`
