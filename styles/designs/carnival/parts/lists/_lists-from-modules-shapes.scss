@@ -36,17 +36,20 @@
                 map-merge($SectionWrapper--SecondLevel,(
                     _components: (
                         map-merge($OrderedList--FirstLevel, (
-                        _components: (
-                            $OrderedList--SecondLevel,
-                            $UnorderedList--SecondLevel,
-                        )
-                      )),
-                      map-merge($UnorderedList--FirstLevel, (
-                        _components: (
-                            $UnorderedList--SecondLevel,
-                            $OrderedList--SecondLevel,
-                        )
-                      )),
+                            _components: (
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                                $UnorderedList--ThirdLevel,
+                                $OrderedList--ThirdLevel,
+                            )
+                        )),
+                        $UnorderedList--ThirdLevel__Marker,
                     )
                 )),
                 map-merge($SectionWrapper--ThirdLevel,(
