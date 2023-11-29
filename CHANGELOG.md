@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `appendix references` in `lifespan-development`
+* Fix GitPod support
 * Style `answer key` in `lifespan-development`
 * Style `notes` in `lifespan-development`
 * Style `appendix glossary` in `lifespan-development`
