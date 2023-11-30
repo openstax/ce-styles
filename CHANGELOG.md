@@ -38,8 +38,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `splash image` in `neuroscience`
 
 
-* Style `chapter outline` in `neuroscience`
-
 ## [v1.139.1] - 2023-11-08
 
 * Add `height: auto` to webview `img`s
