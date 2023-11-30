@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `chapter outline` in `neuroscience`
 * Style `appendix references` in `lifespan-development`
 * Style third level lists in `carnival`
 * Fix GitPod support
@@ -23,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.140.0] - 2023-11-17
 
-* Fix EOC bands in `nursing-internal` 
+* Fix EOC bands in `nursing-internal`
 * Style `boxed-feature` note in `neuroscience`
 * Change `suggested-reading` to one column in `nursing-external`
 * Style EOC sections in `neuroscience`
@@ -35,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Adds `meet-author` note in `neuroscience`
 * Add component for four propotional columns in `columns-shapes`
 * Style `splash image` in `neuroscience`
-* Style `chapter outline` in `neuroscience`
+
 
 * Style `chapter outline` in `neuroscience`
 
