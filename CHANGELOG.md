@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Change `suggested-reading` to one column in `nursing-external`
 * Style EOC sections in `neuroscience`
 * Apply `FullWidthTable` to `nursing-external`
+* Style `in the lab` note in `neuroscience`
 * Style `across species` note in `neuroscience`
 * Style `lists` and `terms` in `neuroscience`
 * Style headers in `neuroscience`
