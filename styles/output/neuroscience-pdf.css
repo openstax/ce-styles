@@ -957,6 +957,43 @@ div[data-type=composite-page].os-eob {
   margin-right: 8px;
 }
 
+.os-chapter-outline {
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: normal;
+  font-size: 0.8333333333rem;
+  line-height: 1.5rem;
+  width: 6.5in;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom-color: #0074BC;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  box-decoration-break: slice;
+}
+
+.os-chapter-outline > h3.os-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-family: Mulish, sans-serif;
+  color: #0074BC;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+  display: inline-block;
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  text-decoration: none;
+}
+
 nav#toc > .os-toc-title {
   font-size: 4.29981696rem;
   line-height: 3rem;
