@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `chapter outline` in `neuroscience`
+* Style `developmental-perspective` note in `neuroscience`
 
 ## [v1.141.0] - 2023-12-01
 
