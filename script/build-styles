@@ -25,15 +25,20 @@ fi
 
 for i in "${!STYLE_NAMES[@]}"; do
   style_name="${STYLE_NAMES[i]}"
-  if [[ $style_name == "generic" ]]; then continue; fi # skip generic
-  sass_file="${styles_root}/${style_name}/book.scss"
-  css_file="${output_dir}/${style_name}-pdf.css"
+  if [[ $style_name == "generic" || $style_name == "web" || $style_name == "webview-generic" ]]; then
+    sass_file="${styles_root}/generic/webview.scss"
+    css_file="${output_dir}/webview-generic.css"
+  else
+    sass_file="${styles_root}/${style_name}/book.scss"
+    css_file="${output_dir}/${style_name}-pdf.css"
+  fi
+
 
   echo "Generating ${css_file} $((i + 1))/${#STYLE_NAMES[@]}"
-    dart styles/build/build.dart "${sass_file}" "${css_file}" || {
-      echo "Generating ${css_file} failed"
-      break
-    }
+  dart styles/build/build.dart "${sass_file}" "${css_file}" || {
+    echo "Generating ${css_file} failed"
+    break
+  }
 
   #disable web styles for the time being
   #do_progress "Building webpackable _web-styles.json" \

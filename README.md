@@ -29,7 +29,8 @@ If you're in the repo's docker container (either using VScode or something else)
 `./script/build-styles`
 
 To build a single style:
-`./script/build-styles <style-name>` (works for everything except webview)
+`./script/build-styles <style-name>`
+- to build webview, provide `generic`, `web`, or `webview-generic` to `<style-name>`
 or `dart styles/build/build.dart <input-file> <output-file>`
 
 Outside the container, just prepend with ./script/run:
