@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix problem with tables from `nursing-external`
+* Create basic files and style `TOC` in `data-science`
 * Style `chapter outline` in `neuroscience`
 
 ## [v1.141.0] - 2023-12-01
