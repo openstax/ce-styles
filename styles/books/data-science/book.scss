@@ -44,6 +44,7 @@ $bandColor: #24739E;
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('UnitTitle', 'common:::Hidden');
+@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
@@ -63,3 +64,9 @@ $bandColor: #24739E;
 @include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+//Lists
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+@include use('PageLists', 'cardboard:::PageListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
