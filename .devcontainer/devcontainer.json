@@ -5,7 +5,7 @@
       "dockerfile": "../Dockerfile",
       "context": "..",
     },
-    "onCreateCommand": "if [ ! -d node_modules ]; then yarn install; fi",
+    "onCreateCommand": "bash ./.devcontainer/onCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=default",
     "workspaceFolder": "/code",
     "settings": {
