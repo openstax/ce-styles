@@ -69,5 +69,3 @@ ENV SKIP_MY_POSTINSTALL=true
 
 # Install code
 COPY . ./
-
-RUN dart pub get
