@@ -1310,44 +1310,6 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 .os-figure.has-splash .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
 }
-  font-size: 0.8333333333rem;
-  line-height: 1.2;
-}
-
-.os-figure.has-splash .os-caption-container::before {
-  content: '';
-  background-color: #EEEAE0;
-  position: absolute;
-  height: 100%;
-  width: 8.8in;
-  margin-left: -1.15in;
-  z-index: -1;
-  box-sizing: border-box;
-  padding: inherit;
-  top: 0;
-}
-
-.os-figure.has-splash .os-caption-container > .os-number {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-}
-
-.os-figure.has-splash .os-caption-container > .os-title-label {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-  color: #C31427;
-  text-transform: uppercase;
-}
-
-.os-figure.has-splash .os-caption-container > .os-title {
-  font-family: Mulish, sans-serif;
-  font-weight: bold;
-}
-
-.os-figure.has-splash .os-caption-container > .os-caption {
-  font-family: IBM Plex Sans, sans-serif;
-}
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
   display: table;
@@ -1566,6 +1528,37 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .meet-author > .os-note-body > .os-subtitle, h4[data-type=title] {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+}
+
+.developmental-perspective {
+  border: solid;
+  border-color: #651C72;
+  box-decoration-break: slice;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.developmental-perspective > .os-title {
+  color: #651C72;
+  font-family: Mulish, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  box-decoration-break: slice;
+  text-transform: uppercase;
+}
+
+.developmental-perspective > .os-note-body > .os-subtitle, h4[data-type=title] {
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: IBM Plex Sans, sans-serif;
@@ -1791,20 +1784,21 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
 }
 
-.developmental-perspective {
-  border: solid;
-  border-color: #651C72;
-  box-decoration-break: slice;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 0.7rem;
-  padding-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  position: relative;
+[data-type=page]:not(.introduction).preface > h1 {
+  color: #000000;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  column-span: all;
+  font-size: 2.985984rem;
+  line-height: 3rem;
+  padding-bottom: 2.1rem;
+  border-bottom-color: #000000;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  margin-bottom: 2.1rem;
 }
 
-.developmental-perspective > .os-title {
-  color: #651C72;
 [data-type=page]:not(.introduction) > h2[data-type=document-title] {
   color: #0074BC;
   font-family: Mulish, sans-serif;
@@ -1852,20 +1846,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=page]:not(.introduction) > section > section > section > h5 {
   font-family: IBM Plex Sans, sans-serif;
   color: #000000;
-  font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  box-decoration-break: slice;
-  text-transform: uppercase;
+  font-weight: bold;
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.developmental-perspective > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1rem;
-  line-height: 1.5rem;
 [data-type=page]:not(.introduction).appendix > h1 {
   color: #000000;
   font-family: IBM Plex Sans, sans-serif;
@@ -1925,7 +1910,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: bold;
 }
-  font-weight: bold;
+
 .os-eob > h1 {
   color: #000000;
   font-family: IBM Plex Sans, sans-serif;
