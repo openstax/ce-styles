@@ -65,6 +65,11 @@ $bandColor: #24739E;
 @include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
 
+// Tables
+@include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
+@include use('DefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
 //Lists
 @include use('NotesLists', 'cardboard:::NotesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
