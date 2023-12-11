@@ -75,7 +75,7 @@ $ChapterIntroType: side;
     ),
 ));
 
-// Note
+// Notes
 @include add_settings((
   MeetTheAuthorNote:(
     _selectors: (".meet-author"),
@@ -91,6 +91,14 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  DevelopmentalPerspectiveNote:(
+    _selectors: (".developmental-perspective"),
+    group-border-color: (_ref: 'colorMap:::developmentalPerspectiveColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::developmentalPerspectiveColor'),
+  ),
+));
 
 @include add_settings((
   AcrossSpeciesNote:(
@@ -178,6 +186,7 @@ $ChapterIntroType: side;
 
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('DevelopmentalPerspectiveNote', 'carnival:::BoxedNoteShape');
 @include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
 @include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 @include use('InTheLabNote', 'carnival:::IconNoteShape');

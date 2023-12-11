@@ -29,8 +29,6 @@ COPY \
     pubspec.* \
     ./
 
-RUN dart pub get
-
 RUN apt-get update
 RUN apt-get install shellcheck wget
 
