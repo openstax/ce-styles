@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `code` in `data-science`
 * Fix `./script/run`
 * Move `dart pub get` to `onCreateCommand` in devcontainer
 * Restore `pubspec.lock` & change order of `dart pub get` in Dockerfile
