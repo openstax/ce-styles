@@ -11,7 +11,67 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/_folio';
 
+//Titles
+@include add_settings((
+  ChapterTitles: (
+  _selectors: ('[data-type="chapter"]'),
+    'H1ChapterIntroNumbered:::color': (_ref: 'colorMap:::chapterTitleColor'),
+    'H1ChapterIntroNumbered:::margin-left': -1.2rem,
+    'H1ChapterIntroTitleNumber:::color': (_ref: 'colorMap:::chapterTitleNumberColor'),
+    'H1ChapterIntroIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-introskyline.svg")) no-repeat top left,
+    'H1ChapterIntroIcon:::bottom': 0.1rem,
+    'H1ChapterIntroIcon:::left': 0rem,
+  ),
+));
+
+// Introduction
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+  )
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('UnitTitle', 'common:::Hidden');
+@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+
+// Titles
+@include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+
+// Chapter Intro
+@include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
+//Figures
+@include use('Figure','cardboard:::FigureShape');
+@include use('FigureSplash','cardboard:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'cardboard:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'cardboard:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'cardboard:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+// Tables
+@include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
+@include use('DefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+//Lists
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+@include use('PageLists', 'cardboard:::PageListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
