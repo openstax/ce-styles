@@ -1,0 +1,8 @@
+## Used in ./script/run
+## Assumes styles-base has been tagged & uses this repo's Dockerfile
+
+FROM styles-base
+WORKDIR /code
+COPY . ./
+
+RUN dart pub get

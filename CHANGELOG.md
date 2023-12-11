@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `./script/run`
 * Style tables in `data-science`
 * Style lo and lists in `data-science`
 * Style headers, intro and figures in `data-science`

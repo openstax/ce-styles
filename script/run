@@ -11,8 +11,9 @@ do
   shift
 done
 
-docker build -t ce-styles-image .
-docker run -d -t --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container ce-styles-image /bin/bash
+docker build -f Dockerfile -t styles-base .
+docker build -f Dockerfile.run -t styles-full .
+docker run -d -t --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container styles-full /bin/bash
 echo "Executing $@..."
 docker exec "${env_vars[@]}" styles_temp_container "$@"
 docker stop styles_temp_container > /dev/null    # mutes "styles_temp_container" output
