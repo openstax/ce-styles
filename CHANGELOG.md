@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style lo and lists in `data-science`
 * Style headers, intro and figures in `data-science`
 * Style `developmental-perspective` note in `neuroscience`
 * Move `dart pub get` to `onCreateCommand` in devcontainer
