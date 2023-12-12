@@ -55,6 +55,15 @@ $bandColor: #24739E;
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
     ),
+
+    ExploringFurtherNote: (
+      _selectors: ('.exploring-further'),
+      "Title:::color": (_ref: 'colorMap:::noteOption3HeaderColor'),
+      'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+      'Title:::font-family': (_ref: "typography:::titleFont"),
+      'Body:::font-family': (_ref: "typography:::baseFont"),
+      'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+  ),
 ));
 
 
@@ -85,6 +94,7 @@ $bandColor: #24739E;
 
 //Notes
 @include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
+@include use('ExploringFurtherNote', 'cardboard:::BoxedNoteShape');
 
 // Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
