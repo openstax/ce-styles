@@ -67,6 +67,13 @@ $bandColor: #24739E;
         "Subtitle:::font-family": ( _ref: "typography:::titleFont" ),
         "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont"),
   ),
+
+  DownloadFileNote: (
+    _selectors: ".download-file",
+    "IconCondensedBody:::font-family": (_ref: "typography:::baseFont"),
+    "IconCondensedBody:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "IconCondensedIcon:::background": url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-link-blue.svg")) no-repeat top left,
+  )
 ));
 
 
@@ -98,6 +105,7 @@ $bandColor: #24739E;
 //Notes
 @include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
 @include use('ExploringFurtherNote', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('DownloadFileNote', 'cardboard:::IconCondensedShape');
 
 // Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');

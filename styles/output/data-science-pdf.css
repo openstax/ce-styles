@@ -1792,6 +1792,32 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+.download-file {
+  margin-bottom: 1.4rem;
+  box-decoration-break: slice;
+  display: table;
+  width: 100%;
+}
+
+.download-file > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  color: #344456;
+  font-weight: normal;
+  font-style: italic;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.download-file::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjkuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA5IDkuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOSA5LjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMzQ0NDU2O30KPC9zdHlsZT4KPGc+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjAsMCAwLDkuNCA3LjksOS40IDcuOSw1LjggNy4xLDYuNSA3LjEsOC43IDAuNyw4LjcgMC43LDAuNyA3LjEsMC43IDcuMSwxLjQgNy45LDIuMSA3LjksMCAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjYuNiwyLjYgNy42LDMuNiA0LjIsMy42IDQuMiw0LjMgNy42LDQuMyA2LjYsNS4zIDcuMSw1LjggOSw0IDcuMSwyLjEgCSIvPgo8L2c+Cjwvc3ZnPgo=") no-repeat top left;
+  height: 3rem;
+  width: 3rem;
+  background-size: contain;
+  display: table-cell;
+  content: '';
+  padding-right: 8px;
+}
+
 .os-table.os-unstyled-container {
   margin-bottom: 1.4rem;
 }
