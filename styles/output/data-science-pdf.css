@@ -1818,6 +1818,56 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
+.boxed-feature {
+  margin-bottom: 1.4rem;
+}
+
+.boxed-feature > .os-title {
+  color: #FFFFFF;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #24739E;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding: 0.7rem;
+}
+
+.boxed-feature > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #D3E3EB;
+  padding: 0.7rem;
+}
+
+.boxed-feature > .os-note-body > .os-subtitle {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
+  margin-left: 8px;
+  padding-left: 16px;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .os-table.os-unstyled-container {
   margin-bottom: 1.4rem;
 }

@@ -73,7 +73,19 @@ $bandColor: #24739E;
     "IconCondensedBody:::font-family": (_ref: "typography:::baseFont"),
     "IconCondensedBody:::color": (_ref: "colorMap:::noteSubtitleColor"),
     "IconCondensedIcon:::background": url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-link-blue.svg")) no-repeat top left,
-  )
+  ),
+
+  BoxedFeatureNote: (
+    _selectors: (".boxed-feature"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
 ));
 
 
@@ -106,6 +118,7 @@ $bandColor: #24739E;
 @include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
 @include use('ExploringFurtherNote', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('DownloadFileNote', 'cardboard:::IconCondensedShape');
+@include use('BoxedFeatureNote', 'cardboard:::BoxedNoteWithSubtitleShape');
 
 // Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
