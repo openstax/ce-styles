@@ -40,6 +40,23 @@ $bandColor: #24739E;
   )
 ));
 
+//Notes
+@include add_settings((
+  PythonNote: (
+    _selectors: (".python-feature"),
+    'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption4HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption4HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
+    ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cardboard:::UnitToc');
@@ -65,6 +82,9 @@ $bandColor: #24739E;
 @include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+//Notes
+@include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
 
 // Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
