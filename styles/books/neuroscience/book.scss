@@ -75,7 +75,7 @@ $ChapterIntroType: side;
     ),
 ));
 
-// Note
+// Notes
 @include add_settings((
   MeetTheAuthorNote:(
     _selectors: (".meet-author"),
@@ -91,6 +91,14 @@ $ChapterIntroType: side;
   ),
 ));
 
+@include add_settings((
+  DevelopmentalPerspectiveNote:(
+    _selectors: (".developmental-perspective"),
+    group-border-color: (_ref: 'colorMap:::developmentalPerspectiveColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::developmentalPerspectiveColor'),
+  ),
+));
 
 @include add_settings((
   AcrossSpeciesNote:(
@@ -132,7 +140,7 @@ $ChapterIntroType: side;
   ),
 ));
 
-// Eoc
+// EOC
 @include add_settings((
   TwoColumnsModules: (
     _selectors: ('.os-section-summary-container', '.os-key-terms-container'),
@@ -143,6 +151,33 @@ $ChapterIntroType: side;
   EocExercisesModules: (
     _selectors: ('.os-multiple-choice-container', '.os-fillin-blank-container'),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+// Tables
+@include add_settings((
+  NoCellBordersTable: (
+    _selectors: ('.os-table.os-no-cellborder-container'),
+    'TableContainer:::display': table,
+    'TableContainer:::margin-left': auto,
+    'TableContainer:::margin-right': auto,
+    'Table:::border-collapse': collapse,
+    'Table:::margin-top': v-spacing(1),
+    'Table:::margin-bottom': 0,
+    'Table:::width': 100%,
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionTitleLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'NoBordersTableHeadCell:::font-weight': 700,
+    'TableData:::padding-top': 0.16rem,
+    'TableData:::padding-bottom': 0.16rem,
+    'TableData:::padding-right': table-h-spacing(1),
+    'TableData:::padding-left': table-h-spacing(1),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::neuroscienceTableColor'),
   ),
 ));
 
@@ -157,13 +192,20 @@ $ChapterIntroType: side;
 // TOC
 @include use('TOC', 'carnival:::NoUnitToc');
 
+// EOB
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
 
 // Equations
 
 
 
 //Figures
-
 @include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('Figure','carnival:::FigureShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
@@ -174,10 +216,15 @@ $ChapterIntroType: side;
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
-
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableFromNotes','carnival:::TableFromNotesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
 
 //Notes
 @include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('DevelopmentalPerspectiveNote', 'carnival:::BoxedNoteShape');
 @include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
 @include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
 @include use('InTheLabNote', 'carnival:::IconNoteShape');
@@ -205,4 +252,5 @@ $ChapterIntroType: side;
 @include use('EocExercisesModules','carnival:::ExercisesModuleShape');
 
 // EOB
-
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
+@include use('Index', 'carnival:::IndexShape');
