@@ -10,6 +10,14 @@ $UnorderedList--FirstLevel: (
     )
 );
 
+$UnorderedList--FirstLevel_FromStimulus: (
+    _name: "FirstLevelUnorderedListFromStimulus",
+    _subselector: ' > ul > li',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
 $OrderedList--FirstLevel: (
     _name: "FirstLevelOrderedList",
     _subselector: " > ol",
