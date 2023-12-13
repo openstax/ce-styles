@@ -2903,3 +2903,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
 }
+
+.os-index-container {
+  column-count: 3;
+  column-gap: 32px;
+}
+
+.os-index-container > .group-by {
+  font-family: Noto Sans, StixGeneral;
+  margin-bottom: 1.4rem;
+}
+
+.os-index-container > .group-by > .group-label {
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #344456;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term {
+  padding-right: 8px;
+}
+
+.os-index-container > .group-by > .os-index-item > .os-term-section-link {
+  content: target-counter(attr(href, url), page);
+}
