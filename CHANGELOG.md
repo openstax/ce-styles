@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `index` in `data-science`
+* Style `tables` in `neuroscience`
+* Style `appendix` and `index` in `neuroscience`
 * Fix `./script/run`
 * Style tables in `data-science`
 * Style lo and lists in `data-science`
@@ -17,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fix problem with tables from `nursing-external`
 * Create basic files and style `TOC` in `data-science`
 * Style `chapter outline` in `neuroscience`
+* Add `overflow: auto` to webview `figure`s
 
 ## [v1.141.0] - 2023-12-01
 
