@@ -121,3 +121,15 @@
         )),
     )
 ));
+
+// Style Lists from stimulus in pdf
+
+@include create_shape('carnival:::ListsFromStimulusShape',(
+    _components: (
+        map-merge($ListContainer,(
+          _components: (
+            $UnorderedList--FirstLevel_FromStimulus,
+          )),
+        )
+    )
+));
