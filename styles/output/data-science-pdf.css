@@ -957,6 +957,41 @@ div[data-type=composite-page].os-eob {
   prince-background-image-resolution: 200dpi;
 }
 
+aside[role=doc-footnote] {
+  float: footnote;
+  -prince-float-reference: page;
+  color: #757474;
+  line-height: 1rem;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 0.8333333333rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+aside[role=doc-footnote]::footnote-call {
+  content: none;
+}
+
+aside[role=doc-footnote]::footnote-marker {
+  content: none;
+}
+
+aside[role=doc-footnote] [data-type=footnote-number] {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+a[role=doc-noteref] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 83%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.7em;
+  text-decoration: none;
+  padding-right: 0.16rem;
+}
+
 nav#toc > .os-toc-title {
   font-size: 1.44rem;
   line-height: 1.5rem;
@@ -1257,6 +1292,13 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.5rem;
   padding-bottom: 0.7rem;
   font-weight: normal;
+}
+
+[data-type=equation].unnumbered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
 }
 
 .hljs-comment {
@@ -3122,6 +3164,62 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=solution] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
 .os-glossary-container {
   margin-bottom: 1.4rem;
 }
@@ -3261,4 +3359,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-index-container > .group-by > .os-index-item > .os-term-section-link {
   content: target-counter(attr(href, url), page);
+}
+
+.os-eob.os-references-container .os-chapter-area > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-eob.os-references-container .os-chapter-area > section > section > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
 }

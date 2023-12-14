@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Wrap up styles for `data-science`
 * Style `eoc` in `data-science`
 * Style `code` in `data-science`
 * Style `notes` in `data-science`
