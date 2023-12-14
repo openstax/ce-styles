@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `code` in `data-science`
+* Style `notes` in `data-science`
 * Style `index` in `data-science`
 * Style `tables` in `neuroscience`
 * Style `appendix` and `index` in `neuroscience`
