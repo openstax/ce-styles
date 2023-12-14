@@ -2427,7 +2427,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=exercise-stimulus] > ul > li {
+[data-type=exercise-stimulus] > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
