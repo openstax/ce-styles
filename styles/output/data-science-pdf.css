@@ -1212,6 +1212,85 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   color: #344456;
 }
 
+[data-type=example] {
+  margin-bottom: 1.4rem;
+}
+
+[data-type=example] > h3.os-title {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #1E9575;
+  padding: 0.7rem;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+[data-type=example] > .body {
+  padding: 0.7rem;
+  background-color: #F2F2F2;
+}
+
+[data-type=example] > .body > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body > ol {
+  margin-left: 24px;
+}
+
+[data-type=example] > .body h4[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+[data-type=example] > .body > [data-type=note] > h3[data-type=title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+.hljs-comment {
+  color: #18775D;
+}
+
+.hljs-keyword {
+  color: #9028A3;
+}
+
+.hljs-function {
+  color: #000000;
+}
+
+.hljs-title {
+  color: #5C5C5C;
+}
+
+.hljs-params {
+  color: #000000;
+}
+
+.hljs-string {
+  color: #CC0000;
+}
+
+.hljs-built_in {
+  color: #2E3092;
+}
+
+.hljs-number {
+  color: #A35200;
+}
+
 [data-type=chapter] {
   height: 100%;
   position: relative;
@@ -1840,6 +1919,171 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: top;
   display: inline;
   padding-top: 0.7rem;
+}
+
+.python-feature {
+  margin-bottom: 1.4rem;
+  box-decoration-break: slice;
+}
+
+.python-feature > .os-title {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #FFFFFF;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding: 0.7rem;
+  border-top-width: 0.33rem;
+  border-top-style: solid;
+  border-top-color: #D34D32;
+  border-right-width: 0.08rem;
+  border-right-style: solid;
+  border-right-color: #EAEAEA;
+  border-left-width: 0.08rem;
+  border-left-style: solid;
+  border-left-color: #EAEAEA;
+  box-decoration-break: slice;
+}
+
+.python-feature > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #FFFFFF;
+  padding: 0.7rem;
+  border-width: 0.08rem;
+  border-style: solid;
+  border-color: #EAEAEA;
+  box-decoration-break: slice;
+}
+
+.exploring-further {
+  margin-bottom: 1.4rem;
+}
+
+.exploring-further > .os-title {
+  color: #000000;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #D34D32;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding: 0.7rem;
+}
+
+.exploring-further > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #D6D9DD;
+  padding: 0.7rem;
+}
+
+.exploring-further > .os-note-body > .os-subtitle {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+
+.exploring-further > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.exploring-further > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
+  margin-left: 8px;
+  padding-left: 16px;
+}
+
+.exploring-further > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.download-file {
+  margin-bottom: 1.4rem;
+  box-decoration-break: slice;
+  display: table;
+  width: 100%;
+}
+
+.download-file > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  color: #344456;
+  font-weight: normal;
+  font-style: italic;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.download-file::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjkuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA5IDkuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOSA5LjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMzQ0NDU2O30KPC9zdHlsZT4KPGc+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjAsMCAwLDkuNCA3LjksOS40IDcuOSw1LjggNy4xLDYuNSA3LjEsOC43IDAuNyw4LjcgMC43LDAuNyA3LjEsMC43IDcuMSwxLjQgNy45LDIuMSA3LjksMCAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjYuNiwyLjYgNy42LDMuNiA0LjIsMy42IDQuMiw0LjMgNy42LDQuMyA2LjYsNS4zIDcuMSw1LjggOSw0IDcuMSwyLjEgCSIvPgo8L2c+Cjwvc3ZnPgo=") no-repeat top left;
+  height: 3rem;
+  width: 3rem;
+  background-size: contain;
+  display: table-cell;
+  content: '';
+  padding-right: 8px;
+}
+
+.boxed-feature {
+  margin-bottom: 1.4rem;
+}
+
+.boxed-feature > .os-title {
+  color: #FFFFFF;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #24739E;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  padding: 0.7rem;
+}
+
+.boxed-feature > .os-note-body {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #D3E3EB;
+  padding: 0.7rem;
+}
+
+.boxed-feature > .os-note-body > .os-subtitle {
+  color: #344456;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=problem] > .os-problem-container > ul:not([data-labeled-item=true]) {
+  margin-left: 8px;
+  padding-left: 16px;
+}
+
+.boxed-feature > .os-note-body > [data-type=exercise] > [data-type=solution] > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .os-table.os-unstyled-container {

@@ -11,6 +11,42 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/_folio';
 
+// Code snippet colors
+@include add_settings((
+    CodeComment: (
+        _selectors: ('.hljs-comment'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeCommentColor'),
+    ),
+    CodeKeyword: (
+        _selectors: ('.hljs-keyword'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeKeywordColor'),
+    ),
+    CodeFunction: (
+        _selectors: ('.hljs-function'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeFunctionColor'),
+    ),
+    CodeTitle: (
+        _selectors: ('.hljs-title'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeTitleColor'),
+    ),
+    CodeParams: (
+        _selectors: ('.hljs-params'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeParamsColor'),
+    ),
+    CodeString: (
+        _selectors: ('.hljs-string'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeStringColor'),
+    ),
+    CodeBuildIn: (
+        _selectors: ('.hljs-built_in'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeBuiltInColor'),
+    ),
+    CodeNumber: (
+        _selectors: ('.hljs-number'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeNumberColor'),
+    ),
+));
+
 //Titles
 @include add_settings((
   ChapterTitles: (
@@ -93,11 +129,70 @@ $bandColor: #24739E;
     ),
 ));
 
+//Notes
+@include add_settings((
+  PythonNote: (
+    _selectors: (".python-feature"),
+    'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption4HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption4HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
+    ),
+
+    ExploringFurtherNote: (
+      _selectors: ('.exploring-further'),
+        "Title:::color": (_ref: "colorMap:::noteOption3HeaderColor"),
+        "Title:::font-family": ( _ref: "typography:::titleFont" ),
+        "Title:::background-color": ( _ref: "colorMap:::noteOption3HeaderBackgroundColor" ),
+        "Body:::font-family": ( _ref: "typography:::baseFont" ),
+        "Body:::background-color": ( _ref: "colorMap:::noteOption3BodyBackgroundColor" ),
+        "Subtitle:::color": ( _ref: "colorMap:::noteSubtitleColor" ),
+        "Subtitle:::font-family": ( _ref: "typography:::titleFont" ),
+        "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont"),
+  ),
+
+  DownloadFileNote: (
+    _selectors: ".download-file",
+    "IconCondensedBody:::font-family": (_ref: "typography:::baseFont"),
+    "IconCondensedBody:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "IconCondensedIcon:::background": url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-link-blue.svg")) no-repeat top left,
+  ),
+
+  BoxedFeatureNote: (
+    _selectors: (".boxed-feature"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('UnitTitle', 'common:::Hidden');
 @include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+@include use('ExampleGreen', 'cardboard:::ExampleShape');
+
+// Code
+@include use('CodeComment', 'common:::ColoredText');
+@include use('CodeKeyword', 'common:::ColoredText');
+@include use('CodeFunction', 'common:::ColoredText');
+@include use('CodeTitle', 'common:::ColoredText');
+@include use('CodeParams', 'common:::ColoredText');
+@include use('CodeString', 'common:::ColoredText');
+@include use('CodeBuildIn', 'common:::ColoredText');
+@include use('CodeNumber', 'common:::ColoredText');
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
@@ -120,6 +215,12 @@ $bandColor: #24739E;
 @include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+//Notes
+@include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
+@include use('ExploringFurtherNote', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('DownloadFileNote', 'cardboard:::IconCondensedShape');
+@include use('BoxedFeatureNote', 'cardboard:::BoxedNoteWithSubtitleShape');
 
 // Tables
 @include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
