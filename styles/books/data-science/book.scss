@@ -177,12 +177,21 @@ $bandColor: #24739E;
   ),
 ));
 
+@include add_settings((
+  References: (
+    _selectors: ('.os-eob.os-references-container .os-chapter-area'),
+  ),
+));
+
 
 @include use('BookRoot', "common:::BookRoot");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('UnitTitle', 'common:::Hidden');
 @include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
 @include use('ExampleGreen', 'cardboard:::ExampleShape');
+@include use('Equation', 'cardboard:::EquationShape');
 
 // Code
 @include use('CodeComment', 'common:::ColoredText');
@@ -232,6 +241,7 @@ $bandColor: #24739E;
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
 @include use('PageLists', 'cardboard:::PageListsShape');
 @include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
 
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
@@ -239,3 +249,4 @@ $bandColor: #24739E;
 
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
+@include use('References', 'cardboard:::ModuleWithIndentationShape');
