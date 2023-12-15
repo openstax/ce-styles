@@ -1523,6 +1523,192 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-weight: bold;
 }
 
+.os-glossary-container > h2 {
+  display: flex;
+  align-items: center;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-glossary-container > h2::before {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMy43NiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyNDczOWU7fS5jbHMtMntmaWxsOiMzNDQ0NTY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5LZXkgVGVybXM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEsMjMuNzZIMFYwSDIxWk0uODYsMjIuODlIMjAuMTRWLjg2SC44NloiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMiIgY3g9IjEwLjUiIGN5PSI4LjU1IiByPSIwLjcyIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTMuMzQsOS4zM0EyLjg0LDIuODQsMCwxLDAsOS40MiwxMnY1LjMxaDIuMTdWMTYuN2guNTJ2LTFoLS41MlYxNS4zaC41MnYtLjcyaC0uNTJWMTJBMi44NSwyLjg1LDAsMCwwLDEzLjM0LDkuMzNabS0yLjUsNy4xOWgtLjY3VjEyLjE1bC4zMywwLC4zNCwwWm0uMDgtNS4xNGEyLjg2LDIuODYsMCwwLDEtLjQyLDAsMi44NSwyLjg1LDAsMCwxLS40MiwwLDIuMDksMi4wOSwwLDEsMSwuODQsMFoiLz48L2c+PC9nPjwvc3ZnPgo=") no-repeat top left;
+  background-size: contain;
+  height: 2.1rem;
+  width: 2.1rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+}
+
+.os-glossary-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-glossary-container > div > div > section > a > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-glossary-container > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-glossary-container > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-glossary-container > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-group-project-container > h2 {
+  display: flex;
+  align-items: center;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-group-project-container > h2::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOiMyODczOUU7fQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTQ1NTc7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Qye2ZpbGw6I0ZGRkZGRjtzdHJva2U6IzM5NDU1NztzdHJva2Utd2lkdGg6MC41O3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDN7ZmlsbDojMzk0NTU3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8ZGVmcz4KCQkJPHJlY3QgaWQ9IlNWR0lEXzFfIiB5PSIwIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuOCIvPgoJCTwvZGVmcz4KCQk8Y2xpcFBhdGggaWQ9IlNWR0lEXzJfIj4KCQkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTsiLz4KCQk8L2NsaXBQYXRoPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLjksMC45aDE5LjN2MjJIMC45VjAuOXogTTAsMjMuOGgyMVYwSDBWMjMuOHoiLz4KCTwvZz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01LjksMTAuOWMtMC43LDEtMC45LDIuNy0wLjksMi43bDMuNywwYzAsMC0wLjUtMi4yLTEtMi43TDUuOSwxMC45eiIvPgoJPGNpcmNsZSBjbGFzcz0ic3QyIiBjeD0iNi44IiBjeT0iOS41IiByPSIxLjciLz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMi44LDEwLjdjLTAuNywxLTAuOSwyLjctMC45LDIuN2wzLjcsMGMwLDAtMC41LTIuMi0xLTIuN0wxMi44LDEwLjd6Ii8+Cgk8Y2lyY2xlIGNsYXNzPSJzdDIiIGN4PSIxMy43IiBjeT0iOS4zIiByPSIxLjciLz4KPC9nPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05LjIsNy44Yy0wLjcsMS0wLjksMi43LTAuOSwyLjdsMy43LDBjMCwwLTAuNS0yLjItMS0yLjdMOS4yLDcuOHoiLz4KCTxjaXJjbGUgY2xhc3M9InN0MiIgY3g9IjEwLjEiIGN5PSI2LjQiIHI9IjEuNyIvPgo8L2c+CjxnPgoJPGNpcmNsZSBjbGFzcz0ic3QzIiBjeD0iMTAuMiIgY3k9IjExLjMiIHI9IjIuNyIvPgoJPHBhdGggY2xhc3M9InN0MyIgZD0iTTguOSwxMy41Yy0xLjEsMS41LTEuNCw0LjItMS40LDQuMmw1LjgsMGMwLDAtMC44LTMuNC0xLjYtNC4yTDguOSwxMy41eiIvPgo8L2c+Cjwvc3ZnPgo=") no-repeat top left;
+  background-size: contain;
+  height: 2.1rem;
+  width: 2.1rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+}
+
+.os-group-project-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-group-project-container > div > div > section > a > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-group-project-container > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-group-project-container > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-group-project-container > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container > h2 {
+  display: flex;
+  align-items: center;
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  margin-bottom: 0.7rem;
+}
+
+.os-chapter-problems-container > h2::before {
+  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzI4NzM5ZTt9LmNscy00e2ZpbGw6IzM5NDU1Nzt9LmNscy01e2ZpbGw6I2ZmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuNzYiLz48L2NsaXBQYXRoPjwvZGVmcz48dGl0bGU+c3VnZ2VzdGVkcmVzb3VyY2VzICgxKTwvdGl0bGU+PGcgY2xhc3M9ImNscy0yIj48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0uODYuODZIMjAuMTR2MjJILjg2Wk0wLDIzLjc2SDIxVjBIMFoiLz48L2c+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNMTMuMyw3LjgzVjYuMjJINS4xNlYxNkgxMy4zWk01LjkxLDdoNi42NHY4LjMxSDUuOTFaIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSI3LjkyIiB5PSI5LjIiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEwLjgiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEyLjQxIiB3aWR0aD0iMi41OSIgaGVpZ2h0PSIwLjY0Ii8+PGNpcmNsZSBjbGFzcz0iY2xzLTQiIGN4PSIxMi43NyIgY3k9IjE1LjY2IiByPSIzLjIiLz48cG9seWdvbiBjbGFzcz0iY2xzLTUiIHBvaW50cz0iMTIuNSAxNy4zNCAxMC45NyAxNi4xMSAxMS4zNiAxNS42MiAxMi40MSAxNi40NCAxNC4zMSAxNC4xOCAxNC44IDE0LjU5IDEyLjUgMTcuMzQiLz48L3N2Zz4=") no-repeat top left;
+  background-size: contain;
+  height: 2.1rem;
+  width: 2.1rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+}
+
+.os-chapter-problems-container > section > a > h3[data-type=document-title] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container > div > div > section > a > h4 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container > div > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
 .os-eob[data-type=composite-page] > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
@@ -2934,6 +3120,122 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 16px;
+}
+
+.os-glossary-container {
+  margin-bottom: 1.4rem;
+}
+
+.os-glossary-container > dl {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-glossary-container > dl > dt {
+  font-weight: bold;
+  padding-right: 8px;
+  display: inline;
+}
+
+.os-glossary-container > dl > dd {
+  display: inline;
+  margin-left: 0px;
+}
+
+.os-chapter-problems-container [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] {
+  display: table;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-text {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.os-chapter-problems-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] {
+  display: table;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-text {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  width: 2%;
+  text-align: right;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 8px;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
+  display: inline;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.os-chapter-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
 }
 
 .os-index-container {
