@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.142.0] - 2023-12-15
+
 * Wrap up styles for `data-science`
 * Style `eoc` in `data-science`
 * Style `lists from stimulus` in `nursing-external`
