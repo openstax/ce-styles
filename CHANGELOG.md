@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Initialize `information-systems`
+
 ## [v1.142.0] - 2023-12-15
 
 * Removed vestigal version.txt file
