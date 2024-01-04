@@ -32,6 +32,12 @@
     ),
 ));
 
+@include create-shape('common:::ItalicTextShape', (
+    _components: (
+      $ItalicText__Container,
+    ),
+));
+
 @include create_shape('common:::CalculatorButtonShape', (
   _components: (
       $Calculator__Button
