@@ -135,6 +135,15 @@ $bandColor: #24739E;
     ),
 ));
 
+//Style Line Numbers
+
+@include add_settings((
+  CodeSnippetLineNumbers:(
+    _selectors:('.line-numbering'),
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::monospaceFont"),
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
@@ -181,6 +190,8 @@ $bandColor: #24739E;
 @include use('CodeString', 'common:::ColoredText');
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
+@include use('CodeSnippetLineNumbers', 'common:::CodeSnippetLineNumbersShape');
+
 
 //Eob
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');
