@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `lo` in `information-systems`
 * Style `chapter intro` and `figures` in `information-systems`
 * Style `titles` in `information-systems`
 * Style `TOC` in `information-systems`
