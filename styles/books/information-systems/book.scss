@@ -11,5 +11,24 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/folio';
 
+@include add_settings((
+  ChapterTitles: (
+  _selectors: ('[data-type="chapter"]'),
+  'H1ChapterIntroNumbered:::color': (_ref: 'colorMap:::chapterTitleColor'),
+  'H1ChapterIntroTitleNumber:::color': (_ref: 'colorMap:::chapterTitleNumberColor'),
+  'H1ChapterIntroIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-introskyline.svg")) no-repeat top left,
+  'H1ChapterIntroIcon:::bottom': 0.1rem,
+  'H1ChapterIntroIcon:::left': 0rem,
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
+@include use('UnitTitle', 'common:::Hidden');
 @include use('TocUnit', 'cardboard:::UnitToc');
+
+//Titles
+@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
+@include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
+@include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
