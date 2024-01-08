@@ -22,6 +22,22 @@ $bandColor: #24739E;
   )
 ));
 
+// Introduction
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('UnitTitle', 'common:::Hidden');
 @include use('TocUnit', 'cardboard:::UnitToc');
@@ -32,3 +48,16 @@ $bandColor: #24739E;
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+
+// Chapter Intro
+@include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
+//Figures
+@include use('Figure','cardboard:::FigureShape');
+@include use('FigureSplash','cardboard:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'cardboard:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'cardboard:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'cardboard:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
