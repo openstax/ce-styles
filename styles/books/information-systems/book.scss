@@ -38,6 +38,13 @@ $bandColor: #24739E;
   )
 ));
 
+// Tables
+@include add_settings((
+TextHeavyWithTitleTable: (
+        _selectors: (".os-table.os-text-heavy-container"),
+    ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('UnitTitle', 'common:::Hidden');
 @include use('TocUnit', 'cardboard:::UnitToc');
@@ -62,3 +69,9 @@ $bandColor: #24739E;
 @include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+// Tables
+@include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
+@include use('DefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('TextHeavyWithTitleTable', 'cardboard:::TableWithoutBordersShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
