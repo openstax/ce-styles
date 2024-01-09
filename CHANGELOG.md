@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `TOC` in `information-systems`
 * Create `ItalicTextShape` in `common` files
 * Initialize `information-systems`
+* Fix css issue with `img` inside `figure`
 
 ## [v1.142.0] - 2023-12-15
 
