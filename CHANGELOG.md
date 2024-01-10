@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `lists` in `information-systems`
+* Style `footnotes` and `centered text` in `information-systems`
 * Style `tables` in `information-systems`
 * Style `lo` in `information-systems`
 * Style `chapter intro` and `figures` in `information-systems`
