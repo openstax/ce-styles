@@ -45,6 +45,67 @@ TextHeavyWithTitleTable: (
     ),
 ));
 
+// Notes
+@include add_settings((
+  // Option 2
+  FutureTech: (
+    _selectors: (".future-tech"),
+    "Title:::background-color": (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    "Title:::color": (_ref: "colorMap:::noteOption2HeaderColor"),
+    "Title:::font-family": (_ref: "typography:::titleFont"),
+    "Body:::font-family": (_ref: "typography:::baseFont"),
+    "Body:::background-color": (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+  ),
+    // Option 1
+    LinkToLearning: (   // no subtitle
+    _selectors: (".link-to-learning"),
+    "Title:::color": (_ref: "colorMap:::noteOption1HeaderColor"),
+    "Title:::background-color": (_ref: "colorMap:::noteOption1HeaderBackgroundColor"),
+    "Title:::font-family": (_ref: "typography:::titleFont"),
+    "Body:::font-family": (_ref: "typography:::baseFont"),
+    "Body:::background-color": (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
+  ),
+  // Option 6
+  ISCareers: (
+    _selectors: (".is-careers"),
+    "Title:::background-color": (_ref: "colorMap:::noteOption6HeaderBackgroundColor"),
+    "Title:::color": (_ref: "colorMap:::noteOption6HeaderColor"),
+    "Title:::font-family": (_ref: "typography:::titleFont"),
+    "Body:::font-family": (_ref: "typography:::baseFont"),
+    "Body:::background-color": (_ref: "colorMap:::noteOption6BodyBackgroundColor"),
+    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+  ),
+  // Option 3
+  ISEthics: (
+    _selectors: (".is-ethics"),
+    "Title:::background-color": (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    "Title:::color": (_ref: "colorMap:::noteOption3HeaderColor"),
+    "Title:::font-family": (_ref: "typography:::titleFont"),
+    "Body:::font-family": (_ref: "typography:::baseFont"),
+    "Body:::background-color": (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+  ),
+  // Option 7
+  GlobalConnect: (
+    _selectors: (".global-connect"),
+    "Title:::background-color": (_ref: "colorMap:::noteOption7HeaderBackgroundColor"),
+    "Title:::color": (_ref: "colorMap:::noteOption7HeaderColor"),
+    "Title:::font-family": (_ref: "typography:::titleFont"),
+    "Body:::font-family": (_ref: "typography:::baseFont"),
+    "Body:::background-color": (_ref: "colorMap:::noteOption7BodyBackgroundColor"),
+    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+  ),
+));
+
 @include add_settings((
   CenteredText: (
     _selectors: ('.centered-text')
@@ -84,6 +145,13 @@ TextHeavyWithTitleTable: (
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TextHeavyWithTitleTable', 'cardboard:::TableWithoutBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+// Notes
+@include use("FutureTech", "cardboard:::BoxedNoteWithSubtitleShape");
+@include use("LinkToLearning", "cardboard:::BoxedNoteShape");
+@include use("ISCareers", "cardboard:::BoxedNoteWithSubtitleShape");
+@include use("ISEthics", "cardboard:::BoxedNoteWithSubtitleShape");
+@include use("GlobalConnect", "cardboard:::BoxedNoteWithSubtitleShape");
 
 // Lists
 @include use('PageLists', 'cardboard:::PageListsShape');
