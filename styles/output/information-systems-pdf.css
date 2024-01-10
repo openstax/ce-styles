@@ -957,6 +957,47 @@ div[data-type=composite-page].os-eob {
   prince-background-image-resolution: 200dpi;
 }
 
+aside[role=doc-footnote] {
+  float: footnote;
+  -prince-float-reference: page;
+  color: #757474;
+  line-height: 1rem;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 0.8333333333rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+aside[role=doc-footnote]::footnote-call {
+  content: none;
+}
+
+aside[role=doc-footnote]::footnote-marker {
+  content: none;
+}
+
+aside[role=doc-footnote] [data-type=footnote-number] {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+a[role=doc-noteref] {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 83%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.7em;
+  text-decoration: none;
+  padding-right: 0.16rem;
+}
+
+.centered-text {
+  display: block;
+  font-weight: normal;
+  text-align: center;
+}
+
 [data-type=unit] > h1 {
   display: none;
 }
@@ -2753,4 +2794,484 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=problem] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=problem] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=exercise-question] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=exercise-question] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=solution] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=solution] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ol {
+  margin-left: 24px;
 }

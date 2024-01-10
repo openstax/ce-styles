@@ -46,7 +46,7 @@ TextHeavyWithTitleTable: (
 ));
 
 // Notes
-@include add_settings ((
+@include add_settings((
   // Option 2
   FutureTech: (
     _selectors: (".future-tech"),
@@ -106,7 +106,16 @@ TextHeavyWithTitleTable: (
   ),
 ));
 
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('CenteredText', 'common:::CenteredTextShape');
 @include use('UnitTitle', 'common:::Hidden');
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
@@ -143,3 +152,10 @@ TextHeavyWithTitleTable: (
 @include use("ISCareers", "cardboard:::BoxedNoteWithSubtitleShape");
 @include use("ISEthics", "cardboard:::BoxedNoteWithSubtitleShape");
 @include use("GlobalConnect", "cardboard:::BoxedNoteWithSubtitleShape");
+
+// Lists
+@include use('PageLists', 'cardboard:::PageListsShape');
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
+@include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
+@include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
