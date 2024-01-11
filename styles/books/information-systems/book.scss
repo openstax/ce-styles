@@ -45,71 +45,164 @@ TextHeavyWithTitleTable: (
     ),
 ));
 
+// EOC
+@include add_settings((
+    ExercisesModule: (
+        _selectors: (".os-review-questions-container", '.os-check-understanding-container', '.os-reflection-questions-container', '.os-media-questions-container'),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+        'ProblemSolutionNumber:::width': 2%,
+        'ProblemSolutionNumber:::text-align': right,
+        'ProblemSolutionText:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+));
+
+// EoC titles
+@include add_settings((
+    KeyTermsTitles: (
+        _selectors: (".os-glossary-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    SummaryTitles: (
+        _selectors: (".os-summary-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    ReviewTitles: (
+        _selectors: (".os-review-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-suggested.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    CheckUnderstandingTitles: (
+        _selectors: (".os-check-understanding-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-multiplechoice.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    ReflectionQuestionsTitles: (
+        _selectors: (".os-reflection-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    MediaQuestionsTitles: (
+        _selectors: (".os-media-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-media.svg")) no-repeat top left,
+        'H3Title:::font-family': (_ref: 'typography:::titleFont'),
+        'H3Title:::color': (_ref: "colorMap:::titleColor"),
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+));
+
 // Notes
 @include add_settings((
-  // Option 2
-  FutureTech: (
-    _selectors: (".future-tech"),
-    "Title:::background-color": (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
-    "Title:::color": (_ref: "colorMap:::noteOption2HeaderColor"),
-    "Title:::font-family": (_ref: "typography:::titleFont"),
-    "Body:::font-family": (_ref: "typography:::baseFont"),
-    "Body:::background-color": (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
-    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
-    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
-    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
-  ),
+    // Option 2
+    FutureTech: (
+        _selectors: (".future-tech"),
+        "Title:::background-color": (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+        "Title:::color": (_ref: "colorMap:::noteOption2HeaderColor"),
+        "Title:::font-family": (_ref: "typography:::titleFont"),
+        "Body:::font-family": (_ref: "typography:::baseFont"),
+        "Body:::background-color": (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+        "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+        "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+        "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+    ),
     // Option 1
-    LinkToLearning: (   // no subtitle
-    _selectors: (".link-to-learning"),
-    "Title:::color": (_ref: "colorMap:::noteOption1HeaderColor"),
-    "Title:::background-color": (_ref: "colorMap:::noteOption1HeaderBackgroundColor"),
-    "Title:::font-family": (_ref: "typography:::titleFont"),
-    "Body:::font-family": (_ref: "typography:::baseFont"),
-    "Body:::background-color": (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
-  ),
-  // Option 6
-  ISCareers: (
-    _selectors: (".is-careers"),
-    "Title:::background-color": (_ref: "colorMap:::noteOption6HeaderBackgroundColor"),
-    "Title:::color": (_ref: "colorMap:::noteOption6HeaderColor"),
-    "Title:::font-family": (_ref: "typography:::titleFont"),
-    "Body:::font-family": (_ref: "typography:::baseFont"),
-    "Body:::background-color": (_ref: "colorMap:::noteOption6BodyBackgroundColor"),
-    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
-    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
-    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
-  ),
-  // Option 3
-  ISEthics: (
-    _selectors: (".is-ethics"),
-    "Title:::background-color": (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
-    "Title:::color": (_ref: "colorMap:::noteOption3HeaderColor"),
-    "Title:::font-family": (_ref: "typography:::titleFont"),
-    "Body:::font-family": (_ref: "typography:::baseFont"),
-    "Body:::background-color": (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
-    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
-    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
-    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
-  ),
-  // Option 7
-  GlobalConnect: (
-    _selectors: (".global-connect"),
-    "Title:::background-color": (_ref: "colorMap:::noteOption7HeaderBackgroundColor"),
-    "Title:::color": (_ref: "colorMap:::noteOption7HeaderColor"),
-    "Title:::font-family": (_ref: "typography:::titleFont"),
-    "Body:::font-family": (_ref: "typography:::baseFont"),
-    "Body:::background-color": (_ref: "colorMap:::noteOption7BodyBackgroundColor"),
-    "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
-    "Subtitle:::font-family": (_ref: "typography:::titleFont"),
-    "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
-  ),
+    LinkToLearning: (// no subtitle
+        _selectors: (".link-to-learning"),
+        "Title:::color": (_ref: "colorMap:::noteOption1HeaderColor"),
+        "Title:::background-color": (_ref: "colorMap:::noteOption1HeaderBackgroundColor"),
+        "Title:::font-family": (_ref: "typography:::titleFont"),
+        "Body:::font-family": (_ref: "typography:::baseFont"),
+        "Body:::background-color": (_ref: "colorMap:::noteOption1BodyBackgroundColor"),
+    ),
+    // Option 6
+    ISCareers: (
+        _selectors: (".is-careers"),
+        "Title:::background-color": (_ref: "colorMap:::noteOption6HeaderBackgroundColor"),
+        "Title:::color": (_ref: "colorMap:::noteOption6HeaderColor"),
+        "Title:::font-family": (_ref: "typography:::titleFont"),
+        "Body:::font-family": (_ref: "typography:::baseFont"),
+        "Body:::background-color": (_ref: "colorMap:::noteOption6BodyBackgroundColor"),
+        "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+        "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+        "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+    ),
+    // Option 3
+    ISEthics: (
+      _selectors: (".is-ethics"),
+      "Title:::background-color": (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+      "Title:::color": (_ref: "colorMap:::noteOption3HeaderColor"),
+      "Title:::font-family": (_ref: "typography:::titleFont"),
+      "Body:::font-family": (_ref: "typography:::baseFont"),
+      "Body:::background-color": (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+      "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+      "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+      "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+    ),
+    // Option 7
+    GlobalConnect: (
+        _selectors: (".global-connect"),
+        "Title:::background-color": (_ref: "colorMap:::noteOption7HeaderBackgroundColor"),
+        "Title:::color": (_ref: "colorMap:::noteOption7HeaderColor"),
+        "Title:::font-family": (_ref: "typography:::titleFont"),
+        "Body:::font-family": (_ref: "typography:::baseFont"),
+        "Body:::background-color": (_ref: "colorMap:::noteOption7BodyBackgroundColor"),
+        "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
+        "Subtitle:::font-family": (_ref: "typography:::titleFont"),
+        "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
+    ),
 ));
 
 @include add_settings((
-  CenteredText: (
-    _selectors: ('.centered-text')
-  )
+    CenteredText: (
+      _selectors: ('.centered-text')
+    )
 ));
 
 @include use('BookRoot', "common:::BookRoot");
@@ -126,6 +219,12 @@ TextHeavyWithTitleTable: (
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+@include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CheckUnderstandingTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ReflectionQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('MediaQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
@@ -145,6 +244,10 @@ TextHeavyWithTitleTable: (
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TextHeavyWithTitleTable', 'cardboard:::TableWithoutBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+// Eoc
+@include use('KeyTerms', 'cardboard:::KeyTermsShape');
+@include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
 
 // Notes
 @include use("FutureTech", "cardboard:::BoxedNoteWithSubtitleShape");
