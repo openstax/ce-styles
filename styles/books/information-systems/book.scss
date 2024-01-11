@@ -45,6 +45,99 @@ TextHeavyWithTitleTable: (
     ),
 ));
 
+// EOC
+@include add_settings((
+    ExercisesModule: (
+        _selectors: (".os-review-questions-container", '.os-check-understanding-container', '.os-reflection-questions-container', '.os-media-questions-container'),
+        'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+        'ProblemSolutionNumber:::width': 2%,
+        'ProblemSolutionNumber:::text-align': right,
+        'ProblemSolutionText:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+));
+
+// EoC titles
+@include add_settings((
+    KeyTermsTitles: (
+        _selectors: (".os-glossary-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    SummaryTitles: (
+        _selectors: (".os-summary-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    ReviewTitles: (
+        _selectors: (".os-review-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-suggested.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    CheckUnderstandingTitles: (
+        _selectors: (".os-check-understanding-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-multiplechoice.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    ReflectionQuestionsTitles: (
+        _selectors: (".os-reflection-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    MediaQuestionsTitles: (
+        _selectors: (".os-media-questions-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-media.svg")) no-repeat top left,
+        'H3Title:::font-family': (_ref: 'typography:::titleFont'),
+        'H3Title:::color': (_ref: "colorMap:::titleColor"),
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+));
+
 @include add_settings((
   CenteredText: (
     _selectors: ('.centered-text')
@@ -65,6 +158,12 @@ TextHeavyWithTitleTable: (
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+@include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CheckUnderstandingTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ReflectionQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('MediaQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
@@ -84,3 +183,7 @@ TextHeavyWithTitleTable: (
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TextHeavyWithTitleTable', 'cardboard:::TableWithoutBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+// Eoc
+@include use('KeyTerms', 'cardboard:::KeyTermsShape');
+@include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
