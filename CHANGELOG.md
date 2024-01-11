@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `eoc` in `information-systems`
+* Style `notes` in `information-systems`
+* Style `lists` in `information-systems`
 * Style `footnotes` and `centered text` in `information-systems`
 * Style `tables` in `information-systems`
 * Style `lo` in `information-systems`
@@ -15,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Style `TOC` in `information-systems`
 * Create `ItalicTextShape` in `common` files
 * Initialize `information-systems`
+* Fix css issue with `img` inside `figure`
 
 ## [v1.142.0] - 2023-12-15
 
