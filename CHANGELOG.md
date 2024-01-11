@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Increase `carnival` `AnswerKeys` number spacing
 * Style `eoc` in `information-systems`
 * Style `notes` in `information-systems`
 * Style `lists` in `information-systems`
