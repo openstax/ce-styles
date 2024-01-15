@@ -262,3 +262,8 @@ TextHeavyWithTitleTable: (
 @include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 @include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+
+// EOB
+@include use('Index', 'cardboard:::IndexShape');
+@include use("AnswerKey", "cardboard:::AnswerKeyShape");
+@include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
