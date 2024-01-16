@@ -1882,6 +1882,10 @@ a[role=doc-noteref] {
   border-right: none;
 }
 
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table col:not(:last-child) {
+  border-right: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container):after {
   content: '';
   width: 100%;
