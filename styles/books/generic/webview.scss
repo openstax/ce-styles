@@ -215,35 +215,6 @@
     ),
 ));
 
-// //Code
-// @include add_settings((
-//     Code: (
-//         _selectors: ('[data-type="code"]'),
-//         'Code:::font-family': (_ref: 'typography:::fontOption2'),
-//     ),
-//     BlueCode: (
-//         _selectors: ('[data-type="code"].blue-code'),
-//         'CodeWithColor:::color': (_ref: 'colorMap:::BlueCode'),
-//     ),
-//     RedCode: (
-//         _selectors: ('[data-type="code"].red-code'),
-//         'CodeWithColor:::color': (_ref: 'colorMap:::RedCode'),
-//     ),
-// ));
-
-// @include add_settings((
-//     CodeBlock: (
-//         _selectors: ('pre[data-type="code"]'),
-//     ),
-//     CenteredCodeBlock: (
-//         _selectors: ('pre[data-type="code"].centered-code'),
-//         'CodeBlockCentered:::color': (_ref: 'colorMap:::baseColor'),
-//     ),
-//     InlinePre: (
-//       _selectors: ('pre[data-type="code"].inline-code'),
-//     ),
-// ));
-
 //Functions
 @include add_settings((
     Function: (
@@ -463,13 +434,6 @@
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
 
-// // Code
-// @include use('Code', 'webview:::CodeShape');
-// @include use('RedCode', 'webview:::CodeWithColorShape');
-// @include use('BlueCode', 'webview:::CodeWithColorShape');
-// @include use('CodeBlock', 'webview:::CodeBlockShape');
-// @include use('CenteredCodeBlock', 'webview:::CodeBlockCenteredShape');
-// @include use('InlinePre', 'webview:::CodeInlinePreShape');
 // Functions
 @include use('Function', 'webview:::FunctionShape');
 @include use('PrimaryFunction', 'webview:::FunctionPrimaryShape');
