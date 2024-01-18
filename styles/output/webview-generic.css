@@ -2014,7 +2014,7 @@ blockquote {
 
 .hljs-ln-numbers {
   font-size: font-scale(1);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: Courier Prime, monospace;
   border-right: solid 1pt #000000;
   padding-right: 10px;
   text-align: right;
@@ -2023,6 +2023,10 @@ blockquote {
 
 .hljs-ln-code {
   padding-left: 5px;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: solid 1pt #000000 !important;
 }
 
 .primary-function, .secondary-function {
