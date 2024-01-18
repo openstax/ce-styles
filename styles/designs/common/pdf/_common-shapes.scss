@@ -56,3 +56,9 @@
     $CodeSnippetLineNumbers,
   ),
 ));
+
+@include create_shape('common:::CodeSnippetLineNumbersCodeShape', (
+  _components: (
+    $CodeSnippetLineNumbersCode,
+  ),
+));
