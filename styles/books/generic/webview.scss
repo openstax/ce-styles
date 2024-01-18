@@ -215,6 +215,19 @@
     ),
 ));
 
+//Style Line Numbers
+@include add_settings((
+  CodeSnippetLineNumbers:(
+    _selectors:('.hljs-ln-numbers'),
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption2"),
+    'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
+  ),
+  CodeSnippetLineNumbersCode:(
+    _selectors:('.hljs-ln-code'),
+    'CodeSnippetLineNumbersCode:::padding-left': 5px
+  ),
+));
+
 //Functions
 @include add_settings((
     Function: (
@@ -433,6 +446,8 @@
 @include use('CodeString', 'common:::ColoredText');
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
+@include use('CodeSnippetLineNumbers', 'common:::CodeSnippetLineNumbersShape');
+@include use('CodeSnippetLineNumbersCode', 'common:::CodeSnippetLineNumbersCodeShape');
 
 // Functions
 @include use('Function', 'webview:::FunctionShape');
