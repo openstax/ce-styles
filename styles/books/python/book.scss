@@ -138,7 +138,7 @@ $bandColor: #24739E;
 //Style Line Numbers
 @include add_settings((
   CodeSnippetLineNumbers:(
-    _selectors:('.line-numbering'),
+    _selectors:('.hljs-ln-numbers'),
     'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::monospaceFont"),
     'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
   ),
