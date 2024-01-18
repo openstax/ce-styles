@@ -1976,32 +1976,40 @@ blockquote {
   border-left-color: #dcdcdc;
 }
 
-[data-type=code] {
-  font-family: "IBM Plex Mono", monospace;
+.hljs-comment {
+  color: #5C5C5C;
 }
 
-[data-type=code].red-code {
-  color: #b90000;
+.hljs-comment {
+  font-style: italic;
 }
 
-[data-type=code].blue-code {
-  color: #2e3092;
+.hljs-keyword {
+  color: #0000aa;
 }
 
-pre[data-type=code] {
-  display: block;
-  overflow: auto;
+.hljs-function {
+  color: #006900;
 }
 
-pre[data-type=code].centered-code {
-  color: #424242;
-  text-align: center;
-  background: none;
-  margin: 0;
+.hljs-title {
+  color: #5C5C5C;
 }
 
-pre[data-type=code].inline-code {
-  display: inline;
+.hljs-params {
+  color: #000;
+}
+
+.hljs-string {
+  color: #914700;
+}
+
+.hljs-built_in {
+  color: #006464;
+}
+
+.hljs-number {
+  color: #006767;
 }
 
 .primary-function, .secondary-function {
