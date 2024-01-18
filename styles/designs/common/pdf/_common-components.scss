@@ -84,7 +84,8 @@ $CodeSnippetLineNumbers: (
     _properties: (
       font-size: font-scale(1),
       font-family: enum('ValueSet:::REQUIRED'),
-      border-right: 1px solid #CCC,
+      border-right: enum('ValueSet:::REQUIRED'),
+      padding-right: 10px,
       text-align: right,
       vertical-align: top
     )
