@@ -219,17 +219,25 @@
 @include add_settings((
   CodeSnippetLineNumbers:(
     _selectors:('.hljs-ln-numbers'),
+<<<<<<< HEAD
     'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption3"),
+=======
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption2"),
+>>>>>>> eb442763b (style highligh.js line numbers in webview)
     'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
   ),
   CodeSnippetLineNumbersCode:(
     _selectors:('.hljs-ln-code'),
+<<<<<<< HEAD
     'CodeSnippetLineNumbersCode:::padding-left': 5px,
     'CodeSnippetLineNumbersCode:::border-top': none !important,
     'CodeSnippetLineNumbersCode:::border-right': none !important,
     'CodeSnippetLineNumbersCode:::border-bottom': none !important,
     'CodeSnippetLineNumbersCode:::border-left':solid 1pt #000000 !important,
     'CodeSnippetLineNumbersCode:::border-style':none !important,
+=======
+    'CodeSnippetLineNumbersCode:::padding-left': 5px
+>>>>>>> eb442763b (style highligh.js line numbers in webview)
   ),
 ));
 
