@@ -219,12 +219,16 @@
 @include add_settings((
   CodeSnippetLineNumbers:(
     _selectors:('.hljs-ln-numbers'),
-    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption2"),
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption3"),
     'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
   ),
   CodeSnippetLineNumbersCode:(
     _selectors:('.hljs-ln-code'),
-    'CodeSnippetLineNumbersCode:::padding-left': 5px
+    'CodeSnippetLineNumbersCode:::padding-left': 5px,
+    'CodeSnippetLineNumbersCode:::border-top': none !important,
+    'CodeSnippetLineNumbersCode:::border-right': none !important,
+    'CodeSnippetLineNumbersCode:::border-bottom': none !important,
+    'CodeSnippetLineNumbersCode:::border-left':solid 1pt #000000 !important,
   ),
 ));
 
