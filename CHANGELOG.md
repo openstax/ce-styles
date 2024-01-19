@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `splash image` in `corn`
 * Fix problem with table border in `carnival`
 * Style `eob` in `information-systems`
 
