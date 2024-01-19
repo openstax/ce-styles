@@ -1884,6 +1884,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right: none;
 }
 
+.os-table:not(.os-unstyled-container) > table col:not(:last-child) {
+  border-right: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container):after {
   content: '';
   width: 100%;
