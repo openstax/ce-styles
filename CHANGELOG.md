@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Increase bottom margin for pages in `nursing-internal`
 * Fix `splash image` in `corn`
 * Enable `highlight.js styles` in `webview`
 * Increase `carnival` `AnswerKeys` number spacing

@@ -215,6 +215,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModuleWithMarginBottom: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"]', '.os-eoc[data-type="composite-page"]'),
+    'ModuleContainerWithMarginBottom:::margin-bottom': v-spacing(2),
+  )
+));
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
