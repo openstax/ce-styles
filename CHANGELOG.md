@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Fix `splash image` in `corn`
 * Enable `highlight.js styles` in `webview`
+* Increase `carnival` `AnswerKeys` number spacing
 * Fix problem with table border in `carnival`
 * Style `eob` in `information-systems`
 
