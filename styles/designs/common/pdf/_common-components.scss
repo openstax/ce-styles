@@ -87,7 +87,11 @@ $CodeSnippetLineNumbers: (
       border-right: enum('ValueSet:::REQUIRED'),
       padding-right: 10px,
       text-align: right,
-      vertical-align: top
+      vertical-align: top,
+      border-top: enum('ValueSet:::OPTIONAL'),
+      border-bottom: enum('ValueSet:::OPTIONAL'),
+      border-left: enum('ValueSet:::OPTIONAL'),
+      border-style: enum('ValueSet:::OPTIONAL')
     )
 );
 
