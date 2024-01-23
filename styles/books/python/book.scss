@@ -135,6 +135,19 @@ $bandColor: #24739E;
     ),
 ));
 
+//Style Line Numbers
+@include add_settings((
+  CodeSnippetLineNumbers:(
+    _selectors:('.hljs-ln-numbers'),
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::monospaceFont"),
+    'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
+  ),
+  CodeSnippetLineNumbersCode:(
+    _selectors:('.hljs-ln-code'),
+    'CodeSnippetLineNumbersCode:::padding-left': 5px
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
@@ -181,6 +194,9 @@ $bandColor: #24739E;
 @include use('CodeString', 'common:::ColoredText');
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
+@include use('CodeSnippetLineNumbers', 'common:::CodeSnippetLineNumbersShape');
+@include use('CodeSnippetLineNumbersCode', 'common:::CodeSnippetLineNumbersCodeShape');
+
 
 //Eob
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');

@@ -57,3 +57,14 @@
   ),
 ));
 
+@include create_shape('common:::CodeSnippetLineNumbersShape', (
+  _components: (
+    $CodeSnippetLineNumbers,
+  ),
+));
+
+@include create_shape('common:::CodeSnippetLineNumbersCodeShape', (
+  _components: (
+    $CodeSnippetLineNumbersCode,
+  ),
+));
