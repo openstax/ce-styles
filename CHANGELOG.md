@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `highlight.js line numbers` in `python webview and pdf`
 * Fix `splash image` in `corn`
 * Enable `highlight.js styles` in `webview`
 * Increase `carnival` `AnswerKeys` number spacing
@@ -14,8 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.143.0] - 2024-01-12
 
-* Style `highlight.js line numbers` in `python webview and pdf`
-* Enable `highlight.js styles` in `webview`
 * Style `eoc` in `information-systems`
 * Style `notes` in `information-systems`
 * Style `lists` in `information-systems`
