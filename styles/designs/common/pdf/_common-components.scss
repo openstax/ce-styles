@@ -78,6 +78,7 @@ $VisuallyHidden: (
     )
 );
 
+//Styles specifically for code snippet tables
 $CodeSnippetLineNumbers: (
     _name: 'CodeSnippetLineNumbers',
     _subselector: '',
@@ -85,7 +86,10 @@ $CodeSnippetLineNumbers: (
       font-size: font-scale(1),
       font-family: enum('ValueSet:::REQUIRED'),
       border-right: enum('ValueSet:::REQUIRED'),
+      padding-top: enum('ValueSet:::OPTIONAL'),
       padding-right: 10px,
+      padding-bottom: enum('ValueSet:::OPTIONAL'),
+      padding-left: enum('ValueSet:::OPTIONAL'),
       text-align: right,
       vertical-align: top,
       border-top: enum('ValueSet:::OPTIONAL'),
@@ -99,12 +103,17 @@ $CodeSnippetLineNumbersCode: (
     _name: 'CodeSnippetLineNumbersCode',
     _subselector: '',
     _properties: (
-      padding-left: enum('ValueSet:::REQUIRED'),
+      font-size: font-scale(1),
+      font-family: enum('ValueSet:::REQUIRED'),
       border-top: enum('ValueSet:::OPTIONAL'),
       border-right: enum('ValueSet:::OPTIONAL'),
       border-bottom: enum('ValueSet:::OPTIONAL'),
       border-left: enum('ValueSet:::OPTIONAL'),
-      border-style: enum('ValueSet:::OPTIONAL')
+      border-style: enum('ValueSet:::OPTIONAL'),
+      padding-top: enum('ValueSet:::OPTIONAL'),
+      padding-right: enum('ValueSet:::OPTIONAL'),
+      padding-bottom: enum('ValueSet:::OPTIONAL'),
+      padding-left: 0.5rem !important
     )
 );
 
