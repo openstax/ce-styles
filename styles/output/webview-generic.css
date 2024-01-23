@@ -1857,7 +1857,7 @@ a:hover {
   text-align: right;
 }
 
-.os-table table tbody > tr > td {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers .hljs-ln-code) {
   border-width: 0.1rem;
   border-style: solid;
   border-color: #ddd;
@@ -1865,15 +1865,15 @@ a:hover {
   vertical-align: middle;
 }
 
-.os-table table tbody > tr > td[data-align=center] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-align=center] {
   text-align: center;
 }
 
-.os-table table tbody > tr > td[data-valign=top] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table table tbody > tr > td[data-align=right] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-align=right] {
   text-align: right;
 }
 
@@ -1883,7 +1883,7 @@ a:hover {
   border-color: #ddd;
 }
 
-.os-table table tfoot > tr > td {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers .hljs-ln-code) {
   border-width: 0.1rem;
   border-style: solid;
   border-color: #ddd;
@@ -1891,15 +1891,15 @@ a:hover {
   vertical-align: middle;
 }
 
-.os-table table tfoot > tr > td[data-align=center] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-align=center] {
   text-align: center;
 }
 
-.os-table table tfoot > tr > td[data-valign=top] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table table tfoot > tr > td[data-align=right] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers .hljs-ln-code)[data-align=right] {
   text-align: right;
 }
 
@@ -2016,28 +2016,15 @@ blockquote {
   font-size: font-scale(1);
   font-family: Courier Prime, monospace;
   border-right: 1pt solid #000000 !important;
-  padding-top: 0px !important;
   padding-right: 10px;
-  padding-bottom: 0px !important;
-  padding-left: 0px !important;
   text-align: right;
   vertical-align: top;
-  border-top: none !important;
-  border-bottom: none !important;
-  border-left: none !important;
 }
 
 .hljs-ln-code {
   font-size: font-scale(1);
   font-family: Courier Prime, monospace;
-  border-top: none !important;
-  border-right: none !important;
-  border-bottom: none !important;
   border-left: solid 1pt #000000 !important;
-  border-style: none !important;
-  padding-top: 0px !important;
-  padding-right: 0px !important;
-  padding-bottom: 0px !important;
   padding-left: 0.5rem;
 }
 

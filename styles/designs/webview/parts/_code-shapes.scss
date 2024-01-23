@@ -29,3 +29,15 @@
       $CodeBlock--Centered,
     )
 ));
+
+@include create_shape('webview:::CodeSnippetLineNumbersShape', (
+  _components: (
+    $CodeSnippetLineNumbers,
+  ),
+));
+
+@include create_shape('webview:::CodeSnippetLineNumbersCodeShape', (
+  _components: (
+    $CodeSnippetLineNumbersCode,
+  ),
+));

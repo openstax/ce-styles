@@ -110,7 +110,7 @@ $Table__Head__Cell: (
 
 $Table__Data: (
   _name: "TableData",
-  _subselector: ' > td',
+  _subselector: ' > td:not(.hljs-ln-numbers .hljs-ln-code)',
   _properties: (
     border-width: 0.1rem,
     border-style: solid,
@@ -141,7 +141,7 @@ $Table__Cell--RightAligned: (
     _subselector: "[data-align="right"]",
     _properties: (
       text-align: right,
-    )    
+    )
 );
 
 $Table__MultipleBody: (
