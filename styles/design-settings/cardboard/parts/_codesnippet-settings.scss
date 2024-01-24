@@ -1,0 +1,13 @@
+//Style Line Numbers
+@include add_settings((
+  CodeSnippetLineNumbers:(
+    _selectors:('.hljs-ln-numbers'),
+    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::monospaceFont"),
+    'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
+    'CodeSnippetLineNumbers:::border-color': (_ref: 'colorMap:::codePythonParamsColor'),
+  ),
+  CodeSnippetLineNumbersCode:(
+    _selectors:('.hljs-ln-code'),
+    'CodeSnippetLineNumbersCode:::font-family': (_ref:"typography:::monospaceFont")
+  ),
+));
