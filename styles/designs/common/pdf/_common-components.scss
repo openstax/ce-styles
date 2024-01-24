@@ -79,25 +79,26 @@ $VisuallyHidden: (
 );
 
 //Styles specifically for code snippet tables
-$CodeSnippetLineNumbers: (
+$CodeSnippet__LineNumbers: (
     _name: 'CodeSnippetLineNumbers',
     _subselector: '',
     _properties: (
       font-size: font-scale(1),
       font-family: enum('ValueSet:::REQUIRED'),
       border-right: enum('ValueSet:::REQUIRED'),
+      border-color: enum('ValueSet:::REQUIRED'),
       padding-right: 10px,
       text-align: right,
       vertical-align: top,
     )
 );
 
-$CodeSnippetLineNumbersCode: (
+$CodeSnippet__LineNumbers--Code: (
     _name: 'CodeSnippetLineNumbersCode',
     _subselector: '',
     _properties: (
       font-size: font-scale(1),
       font-family: enum('ValueSet:::REQUIRED'),
-      padding-left: 0.5rem !important
+      padding-left: 0.5rem
     )
 );

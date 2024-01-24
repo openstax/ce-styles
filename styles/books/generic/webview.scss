@@ -220,26 +220,13 @@
   CodeSnippetLineNumbers:(
     _selectors:('.hljs-ln-numbers'),
     'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption3"),
-    // 'CodeSnippetLineNumbers:::padding-top': 0px !important,
-    // 'CodeSnippetLineNumbers:::padding-bottom': 0px !important,
-    // 'CodeSnippetLineNumbers:::padding-left': 0px !important,
-    // 'CodeSnippetLineNumbers:::border-top': none !important,
-    'CodeSnippetLineNumbers:::border-right': 1pt solid #000000 !important,
-    // 'CodeSnippetLineNumbers:::border-bottom': none !important,
-    // 'CodeSnippetLineNumbers:::border-left': none !important,
+    'CodeSnippetLineNumbers:::border-right': 1pt solid,
+    'CodeSnippetLineNumbers:::border-color': (_ref: 'colorMap:::codePythonParamsColor'),
   ),
   CodeSnippetLineNumbersCode:(
     _selectors:('.hljs-ln-code'),
     'CodeSnippetLineNumbersCode:::font-family': (_ref:"typography:::fontOption3"),
-    'CodeSnippetLineNumbersCode:::padding-left': 5px,
-    // 'CodeSnippetLineNumbersCode:::border-top': none !important,
-    // 'CodeSnippetLineNumbersCode:::border-right': none !important,
-    // 'CodeSnippetLineNumbersCode:::border-bottom': none !important,
-    'CodeSnippetLineNumbersCode:::border-left':solid 1pt #000000 !important,
-    // 'CodeSnippetLineNumbersCode:::border-style':none !important,
-    // 'CodeSnippetLineNumbersCode:::padding-top': 0px !important,
-    // 'CodeSnippetLineNumbersCode:::padding-right': 0px !important,
-    // 'CodeSnippetLineNumbersCode:::padding-bottom': 0px !important,
+
   ),
 ));
 
