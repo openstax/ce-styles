@@ -60,11 +60,6 @@
 @include create_shape('common:::CodeSnippetLineNumbersShape', (
   _components: (
     $CodeSnippet__LineNumbers,
-  ),
-));
-
-@include create_shape('common:::CodeSnippetLineNumbersCodeShape', (
-  _components: (
     $CodeSnippet__LineNumbers--Code,
   ),
 ));

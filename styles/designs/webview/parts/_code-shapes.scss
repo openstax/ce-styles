@@ -33,11 +33,6 @@
 @include create_shape('webview:::CodeSnippetLineNumbersShape', (
   _components: (
     $CodeSnippet__LineNumbers,
-  ),
-));
-
-@include create_shape('webview:::CodeSnippetLineNumbersCodeShape', (
-  _components: (
     $CodeSnippet__LineNumbers--Code,
   ),
 ));
