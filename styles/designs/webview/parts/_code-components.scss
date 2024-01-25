@@ -52,7 +52,7 @@ $CodeSnippet__LineNumbers: (
       border-right: enum('ValueSet:::OPTIONAL'),
       border-color: enum('ValueSet:::OPTIONAL'),
       padding-right: 10px,
-      text-align: right,
+      text-align: enum('ValueSet:::OPTIONAL'),
       vertical-align: top
     )
 );
@@ -63,6 +63,7 @@ $CodeSnippet__LineNumbers--Code: (
     _properties: (
       font-size: 1.2rem,
       font-family: enum('ValueSet:::OPTIONAL'),
-      padding-left: 0.5rem
+      padding-left: 0.5rem,
+      text-align: enum('ValueSet:::OPTIONAL'),
     )
 );

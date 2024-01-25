@@ -2552,7 +2552,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .hljs-ln-numbers {
   font-size: 1.2rem;
   font-family: Courier Prime, monospace;
-  border-right: solid 1pt #000000;
+  border-right: 1pt solid;
   border-color: #000000;
   padding-right: 10px;
   text-align: right;
@@ -2567,7 +2567,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .hljs-ln-code {
   font-size: 1.2rem;
   padding-right: 10px;
-  text-align: right;
   vertical-align: top;
 }
 
@@ -2575,6 +2574,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   font-size: 1.2rem;
   font-family: Courier Prime, monospace;
   padding-left: 0.5rem;
+  text-align: left;
 }
 
 .os-eob[data-type=composite-chapter] > [data-type=composite-page] {

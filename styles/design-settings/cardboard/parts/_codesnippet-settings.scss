@@ -3,11 +3,14 @@
   CodeSnippetLineNumbers:(
     _selectors:('.hljs-ln-numbers'),
     'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::monospaceFont"),
-    'CodeSnippetLineNumbers:::border-right': solid 1pt #000000,
+    'CodeSnippetLineNumbers:::border-right': 1pt solid,
     'CodeSnippetLineNumbers:::border-color': (_ref: 'colorMap:::codePythonParamsColor'),
+    'CodeSnippetLineNumbers:::text-align': right,
   ),
   CodeSnippetLineNumbersCode:(
     _selectors:('.hljs-ln-code'),
-    'CodeSnippetLineNumbersCode:::font-family': (_ref:"typography:::monospaceFont")
+    'CodeSnippetLineNumbersCode:::font-family': (_ref:"typography:::monospaceFont"),
+    'CodeSnippetLineNumbersCode:::text-align': left,
+
   ),
 ));
