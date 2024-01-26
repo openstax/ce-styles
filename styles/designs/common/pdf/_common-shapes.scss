@@ -59,7 +59,10 @@
 
 @include create_shape('common:::CodeSnippetLineNumbersShape', (
   _components: (
-    $CodeSnippet__LineNumbers,
-    $CodeSnippet__LineNumbers--Code,
-  ),
-));
+        map-merge($CodeSnippet__Container, (
+            _components: (
+              $CodeSnippet__LineNumbers--Code,
+              $CodeSnippet__LineNumbers,
+        )),
+    )),
+  ));

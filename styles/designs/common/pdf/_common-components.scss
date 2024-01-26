@@ -79,27 +79,29 @@ $VisuallyHidden: (
 );
 
 //Styles specifically for code snippet tables
+$CodeSnippet__Container: empty_wrapper(CodeSnippet, '');
+
 $CodeSnippet__LineNumbers: (
     _name: 'CodeSnippetLineNumbers',
-    _subselector: '',
+    _subselector: ' .hljs-ln-numbers',
     _properties: (
-      font-size: font-scale(1),
-      font-family: enum('ValueSet:::OPTIONAL'),
-      border-right: enum('ValueSet:::OPTIONAL'),
-      border-color: enum('ValueSet:::OPTIONAL'),
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      border-right: enum('ValueSet:::REQUIRED'),
+      border-color: enum('ValueSet:::REQUIRED'),
       padding-right: 10px,
-      text-align: enum('ValueSet:::OPTIONAL'),
+      text-align: enum('ValueSet:::REQUIRED'),
       vertical-align: top
     )
 );
 
 $CodeSnippet__LineNumbers--Code: (
     _name: 'CodeSnippetLineNumbersCode',
-    _subselector: '',
+    _subselector: ' .hljs-ln-code',
     _properties: (
-      font-size: font-scale(1),
-      font-family: enum('ValueSet:::OPTIONAL'),
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
       padding-left: 0.5rem,
-      text-align: enum('ValueSet:::OPTIONAL'),
+      text-align: enum('ValueSet:::REQUIRED'),
     )
 );
