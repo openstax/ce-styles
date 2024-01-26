@@ -1,16 +1,15 @@
-//Style Line Numbers
 @include add_settings((
-  CodeSnippetLineNumbers:(
-    _selectors:('.hljs-ln-numbers'),
-    'CodeSnippetLineNumbers:::font-family': (_ref:"typography:::fontOption3"),
-    'CodeSnippetLineNumbers:::border-right': 1pt solid,
-    'CodeSnippetLineNumbers:::border-color': (_ref: 'colorMap:::codePythonParamsColor'),
-    'CodeSnippetLineNumbers:::text-align': right,
-  ),
-  CodeSnippetLineNumbersCode:(
-    _selectors:('.hljs-ln-code'),
-    'CodeSnippetLineNumbersCode:::font-family': (_ref:"typography:::fontOption3"),
-    'CodeSnippetLineNumbersCode:::text-align': left,
-
-  ),
+ CodeSnippet:(
+    _selectors: ('.hljs-ln'),
+      CodeSnippetLineNumbers: (
+        font-family: (_ref:"typography:::fontOption3"),
+        border-right: 1pt solid,
+        border-color: (_ref: 'colorMap:::codePythonParamsColor'),
+        text-align: right,
+      ),
+      CodeSnippetLineNumbersCode: (
+        font-family: (_ref:"typography:::fontOption3"),
+        text-align: left,
+      ),
+ )
 ));

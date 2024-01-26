@@ -2012,7 +2012,14 @@ blockquote {
   color: #006767;
 }
 
-.hljs-ln-numbers {
+.hljs-ln > .hljs-ln-line .hljs-ln-code {
+  font-size: 1.2rem;
+  font-family: Courier Prime, monospace;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+.hljs-ln > .hljs-ln-line .hljs-ln-numbers {
   font-size: 1.2rem;
   font-family: Courier Prime, monospace;
   border-right: 1pt solid;
@@ -2020,24 +2027,6 @@ blockquote {
   padding-right: 10px;
   text-align: right;
   vertical-align: top;
-}
-
-.hljs-ln-numbers {
-  font-size: 1.2rem;
-  padding-left: 0.5rem;
-}
-
-.hljs-ln-code {
-  font-size: 1.2rem;
-  padding-right: 10px;
-  vertical-align: top;
-}
-
-.hljs-ln-code {
-  font-size: 1.2rem;
-  font-family: Courier Prime, monospace;
-  padding-left: 0.5rem;
-  text-align: left;
 }
 
 .primary-function, .secondary-function {
