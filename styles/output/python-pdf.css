@@ -2145,6 +2145,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-right: 8px;
 }
 
+.learning-questions [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .learning-questions [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
