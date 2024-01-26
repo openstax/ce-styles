@@ -47,7 +47,7 @@ $CodeSnippet__Container: empty_wrapper(CodeSnippet, '');
 
 $CodeSnippet__LineNumbers: (
     _name: 'CodeSnippetLineNumbers',
-    _subselector: '> .hljs-ln-line .hljs-ln-numbers',
+    _subselector: ' .hljs-ln-numbers',
     _properties: (
       font-size: 1.2rem,
       font-family: enum('ValueSet:::REQUIRED'),
@@ -61,7 +61,7 @@ $CodeSnippet__LineNumbers: (
 
 $CodeSnippet__LineNumbers--Code: (
     _name: 'CodeSnippetLineNumbersCode',
-    _subselector: '> .hljs-ln-line .hljs-ln-code',
+    _subselector: ' .hljs-ln-code',
     _properties: (
       font-size: 1.2rem,
       font-family: enum('ValueSet:::REQUIRED'),
