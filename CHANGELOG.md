@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.144.0] - 2024-01-30
+
 * Style `highlight.js line numbers` in `python webview and pdf`
 * Change `pre > span` to `display: inline` from `inline-block` for common pdf styles
 * Remove margin around `pre` elements in mc distractors (for `python`)
