@@ -45,7 +45,7 @@ $OrderedList--SecondLevel: (
 
 $UnorderedList--ThirdLevel: (
     _name: "ThirdLevelUnorderedList",
-    _subselector: " > li > ul > li > ul",
+    _subselector: " > li > ul",
     _properties:(
         margin-left: h-spacing(2),
     )
@@ -53,7 +53,7 @@ $UnorderedList--ThirdLevel: (
 
 $OrderedList--ThirdLevel: (
     _name: "ThirdLevelOrderedList",
-    _subselector: " > li  > ol > li > ol",
+    _subselector: " > li > ol",
     _properties:(
         margin-left: h-spacing(2),
     )
@@ -61,7 +61,7 @@ $OrderedList--ThirdLevel: (
 
 $UnorderedList--ThirdLevel__Marker: (
     _name: "ThirdLevelUnorderedListMarker",
-    _subselector: " > ul ul ul > li::marker",
+    _subselector: " > li::marker",
     _properties:(
         font-size: 6px,
     )
