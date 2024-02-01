@@ -1,0 +1,15 @@
+@include add_settings((
+ CodeSnippet:(
+    _selectors: ('.hljs-ln'),
+      CodeSnippetLineNumbers: (
+        font-family: (_ref:"typography:::fontOption3"),
+        border-right: 1pt solid,
+        border-color: (_ref: 'colorMap:::codePythonParamsColor'),
+        text-align: right,
+      ),
+      CodeSnippetLineNumbersCode: (
+        font-family: (_ref:"typography:::fontOption3"),
+        text-align: left,
+      ),
+ )
+));

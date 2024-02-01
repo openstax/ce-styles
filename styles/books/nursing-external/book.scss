@@ -385,6 +385,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container"),
+  ),
+));
+
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");
@@ -471,7 +477,7 @@ $ChapterIntroType: fullWidth;
 //EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
 @include use('ExercisesModule', 'carnival:::ExercisesModuleShape');
-@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('ModuleWithIndentation', 'carnival:::ModuleWithIndentationShape');
 @include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
 
 // EOB
