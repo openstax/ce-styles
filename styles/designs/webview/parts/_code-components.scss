@@ -41,3 +41,31 @@ $CodeBlock--Centered: (
     margin: 0 auto,
   )
 );
+
+//Styles specifically for code snippet tables
+$CodeSnippet__Container: empty_wrapper(CodeSnippet, '');
+
+$CodeSnippet__LineNumbers: (
+    _name: 'CodeSnippetLineNumbers',
+    _subselector: ' .hljs-ln-numbers',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      border-right: enum('ValueSet:::REQUIRED'),
+      border-color: enum('ValueSet:::REQUIRED'),
+      padding-right: 10px,
+      text-align: enum('ValueSet:::REQUIRED'),
+      vertical-align: top
+    )
+);
+
+$CodeSnippet__LineNumbers--Code: (
+    _name: 'CodeSnippetLineNumbersCode',
+    _subselector: ' .hljs-ln-code',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      padding-left: 0.5rem,
+      text-align: enum('ValueSet:::REQUIRED'),
+    )
+);

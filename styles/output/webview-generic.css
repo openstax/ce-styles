@@ -1857,7 +1857,7 @@ a:hover {
   text-align: right;
 }
 
-.os-table table tbody > tr > td {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers, .hljs-ln-code) {
   border-width: 0.1rem;
   border-style: solid;
   border-color: #ddd;
@@ -1865,15 +1865,15 @@ a:hover {
   vertical-align: middle;
 }
 
-.os-table table tbody > tr > td[data-align=center] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-align=center] {
   text-align: center;
 }
 
-.os-table table tbody > tr > td[data-valign=top] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table table tbody > tr > td[data-align=right] {
+.os-table table tbody > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-align=right] {
   text-align: right;
 }
 
@@ -1883,7 +1883,7 @@ a:hover {
   border-color: #ddd;
 }
 
-.os-table table tfoot > tr > td {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers, .hljs-ln-code) {
   border-width: 0.1rem;
   border-style: solid;
   border-color: #ddd;
@@ -1891,15 +1891,15 @@ a:hover {
   vertical-align: middle;
 }
 
-.os-table table tfoot > tr > td[data-align=center] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-align=center] {
   text-align: center;
 }
 
-.os-table table tfoot > tr > td[data-valign=top] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-valign=top] {
   vertical-align: top;
 }
 
-.os-table table tfoot > tr > td[data-align=right] {
+.os-table table tfoot > tr > td:not(.hljs-ln-numbers, .hljs-ln-code)[data-align=right] {
   text-align: right;
 }
 
@@ -2010,6 +2010,23 @@ blockquote {
 
 .hljs-number {
   color: #006767;
+}
+
+.hljs-ln .hljs-ln-code {
+  font-size: 1.2rem;
+  font-family: Courier Prime, monospace;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+.hljs-ln .hljs-ln-numbers {
+  font-size: 1.2rem;
+  font-family: Courier Prime, monospace;
+  border-right: 1pt solid;
+  border-color: #000;
+  padding-right: 10px;
+  text-align: right;
+  vertical-align: top;
 }
 
 .primary-function, .secondary-function {

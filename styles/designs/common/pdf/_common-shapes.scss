@@ -57,3 +57,12 @@
   ),
 ));
 
+@include create_shape('common:::CodeSnippetLineNumbersShape', (
+  _components: (
+        map-merge($CodeSnippet__Container, (
+            _components: (
+              $CodeSnippet__LineNumbers--Code,
+              $CodeSnippet__LineNumbers,
+        )),
+    )),
+  ));
