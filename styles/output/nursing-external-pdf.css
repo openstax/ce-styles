@@ -2218,11 +2218,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > ol > li > ul > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > ol > li > ul > li > ul > li::marker {
+[data-type=page] > section > section > ol > li > ul > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ol > li > ul > li > ol {
@@ -2234,11 +2241,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > ol > li > ol > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > ol > li > ol > li > ul > li::marker {
+[data-type=page] > section > section > ol > li > ol > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ol > li > ol > li > ol {
@@ -2254,11 +2268,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::marker {
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
@@ -2270,11 +2291,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::marker {
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
@@ -2290,11 +2318,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > section > ol > li > ul > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > section > ol > li > ul > li > ul > li::marker {
+[data-type=page] > section > section > section > ol > li > ul > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ol > li > ul > li > ol {
@@ -2306,11 +2341,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > section > ol > li > ol > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > section > ol > li > ol > li > ul > li::marker {
+[data-type=page] > section > section > section > ol > li > ol > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ol > li > ol > li > ol {
@@ -2326,11 +2368,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::marker {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
@@ -2342,11 +2391,18 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
-  margin-left: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::marker {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
   font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
