@@ -2310,11 +2310,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > section > ol > li > ol {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ol > li > ul {
+[data-type=page] > section > section > ol > li > ol > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ol {
   margin-left: 16px;
 }
 
@@ -2326,31 +2364,45 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
-  margin-left: 16px;
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > section > ul ul ul > li::marker {
-  font-size: 6px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 16px;
 }
 
@@ -2362,7 +2414,95 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > section > ol > li > ul > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ol > li > ul > li > ol {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > section > section > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
   margin-left: 16px;
 }
 
@@ -2514,7 +2654,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=problem] > div > ol > li > ol > li > ol {
+[data-type=problem] > div > ol > li > ol {
   margin-left: 16px;
 }
 
@@ -2574,7 +2714,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
+[data-type=exercise-question] > div > ol > li > ol {
   margin-left: 16px;
 }
 
@@ -3036,7 +3176,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=solution] > div > ol > li > ol > li > ol {
+[data-type=solution] > div > ol > li > ol {
   margin-left: 16px;
 }
 

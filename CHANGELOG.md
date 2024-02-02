@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style third level lists in `carnival`
 * Style `suggested-reading` section from `nursing-external`
 
 ## [v1.144.0] - 2024-01-30
