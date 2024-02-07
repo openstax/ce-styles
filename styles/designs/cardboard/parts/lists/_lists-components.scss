@@ -150,6 +150,15 @@ $ListItem--Objectives--Flex: (
     )
 );
 
+$ListItem--Objectives--WithCustomBullet: (
+    _name: "ObjectivesWithCustomBulletListItem",
+    _subselector: ' > li',
+    _properties:(
+        position: relative,
+        max-width: 5.9in,
+    )
+);
+
 $ListItem--Objectives__CustomBulletIcon: (
     _name: "ObjectivesCustomBulletIcon",
     _subselector: '::before',
@@ -157,11 +166,12 @@ $ListItem--Objectives__CustomBulletIcon: (
         content: "''",
         display: inline-block,
         height: v-spacing(1),
+        width: h-spacing(2),
         background: enum('ValueSet:::REQUIRED'),
         background-size: contain,
-        padding-left: h-spacing(3),
-        position: relative,
-        top: 3px,
+        position: absolute,
+        left: 0,
+        transform: translate(-1.7rem, 0.4rem),
     )
 );
 
