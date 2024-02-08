@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `examples spacing` in `statistics webview`
 * Fix `chapter intro` caption in `cardboard`
 * Fix `learning objectives` in `astronomy`
 * Fix long chapter titles in `cardboard`
