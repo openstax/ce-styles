@@ -90,6 +90,13 @@ $bandColor: #DCB83D;
     ),
 ));
 
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="page"] section.learning-objectives'),
+    'H3ObjectivesTitle:::margin-bottom': 0,
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
