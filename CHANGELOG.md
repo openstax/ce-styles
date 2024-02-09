@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change styles for `eoc` sections from `lifespan-development`
 * Display `Preface` from `biology` and `ap-biology` in one column
 * Fix `examples spacing` in `statistics webview`
 * Fix `chapter intro` caption in `cardboard`
