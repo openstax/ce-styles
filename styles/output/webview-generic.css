@@ -337,20 +337,12 @@ span[data-type=media] img {
   width: 30%;
 }
 
-[data-type=term] {
+[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
 }
 
-[data-type=term].no-emphasis {
-  font-weight: normal;
-}
-
-.term {
+.term:not(.no-emphasis) {
   font-weight: bold;
-}
-
-.term.no-emphasis {
-  font-weight: normal;
 }
 
 ul {
