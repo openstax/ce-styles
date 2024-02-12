@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Remove margin from `lo` header in `lifespan-development`
+* Change styles for `eoc` sections from `lifespan-development`
+
+## [v1.145.0] - 2024-02-09
+
 * Display `Preface` from `biology` and `ap-biology` in one column
 * Fix `examples spacing` in `statistics webview`
 * Fix `chapter intro` caption in `cardboard`

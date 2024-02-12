@@ -22,8 +22,7 @@ $bandColor: #DCB83D;
 @include add_settings((
   ExercisesModule: (
     _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-check-understanding-container',
-                 '.os-eoc.os-reflection-questions-container', '.os-eoc.os-media-questions-container',
-                 '.os-eoc.os-thought-provokers-container', '.os-eoc.os-case-study-container'),
+                 '.os-eoc.os-personal-application-container', '.os-eoc.os-essay-questions-container'),
     'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemNumber:::width': 2%,
     'ProblemNumber:::text-align': right,
@@ -145,7 +144,6 @@ $bandColor: #DCB83D;
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
-@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
 
 // Eob
