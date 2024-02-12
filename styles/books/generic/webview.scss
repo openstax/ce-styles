@@ -481,3 +481,24 @@
 @include use('AnswerKey', 'webview:::AnswerKeyShape');
 @include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
 @include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
+
+// Icons
+$icons: (
+  "linguistic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg"),
+  "culture-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg"),
+  "visual-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg"),
+  "speech-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg"),
+  "auditory-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg"),
+  "kinesthetic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg"),
+  "dreaming-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")
+);
+
+@each $class, $svg in $icons {
+  @include add_settings((
+    Icon: (
+      _selectors: 'span.#{$class}',
+      'InlineIcon:::background-image': url($svg),
+    )
+  ));
+  @include use('Icon', 'webview:::InlineIconShape');
+}
