@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change a way of styling terms on `webview`
+* Remove styles for `what-heard` note from `lifespan-development`
 * Remove margin from `lo` header in `lifespan-development`
 * Change styles for `eoc` sections from `lifespan-development`
 
