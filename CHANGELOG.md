@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add icons to `webview` for `writing-guide`
 * Fix `line break` in `python webview`
 * Change a way of styling terms on `webview`
 * Remove styles for `what-heard` note from `lifespan-development`
