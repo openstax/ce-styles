@@ -342,20 +342,12 @@ span[data-type=media] img {
   width: 30%;
 }
 
-[data-type=term] {
+[data-type=term]:not(.no-emphasis) {
   font-weight: bold;
 }
 
-[data-type=term].no-emphasis {
-  font-weight: normal;
-}
-
-.term {
+.term:not(.no-emphasis) {
   font-weight: bold;
-}
-
-.term.no-emphasis {
-  font-weight: normal;
 }
 
 ul {
@@ -947,7 +939,7 @@ a:hover {
 }
 
 [data-type=example] [data-type=problem] > .os-problem-container {
-  display: table;
+  display: table-cell;
 }
 
 [data-type=example] [data-type=solution] {
@@ -1128,7 +1120,7 @@ a:hover {
 }
 
 .example [data-type=problem] > .os-problem-container {
-  display: table;
+  display: table-cell;
 }
 
 .example [data-type=solution] {
@@ -1309,7 +1301,7 @@ a:hover {
 }
 
 [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table;
+  display: table-cell;
 }
 
 [data-type=exercise] [data-type=solution] {
@@ -1490,7 +1482,7 @@ a:hover {
 }
 
 .exercise [data-type=problem] > .os-problem-container {
-  display: table;
+  display: table-cell;
 }
 
 .exercise [data-type=solution] {
@@ -1667,7 +1659,7 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table;
+  display: table-cell;
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {

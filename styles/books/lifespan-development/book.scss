@@ -38,21 +38,6 @@ $bandColor: #DCB83D;
         'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
         'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/carnival-linktolearning.svg")) no-repeat top left,
     ),
-    WhatHeard: (
-        _selectors: ('.what-heard'),
-        'Container:::box-decoration-break': slice,
-        'Title:::color': (_ref: 'colorMap:::fontBodyColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
-        'Title:::border-color': (_ref: 'colorMap:::iconnedNoteBorderColorGreen'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-debate.svg")) no-repeat bottom left,
-        'TitleIcon:::height': v-spacing(4),
-        'TitleIcon:::width': v-spacing(4),
-        'TitleIcon:::bottom': -0.7rem,
-        'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
-        'Body:::border-color': (_ref: 'colorMap:::iconnedNoteBorderColorGreen'),
-        'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
-        'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
-    ),
     ItDepends: (
       _selectors: ('.it-depends'),
       'Title:::color': (_ref: 'colorMap:::boxedNoteTitleColor'),
@@ -136,7 +121,6 @@ $bandColor: #DCB83D;
 
 // Notes
 @include use('LinkToLearning', 'cosmos:::CondensedIconNoteShape');
-@include use('WhatHeard', 'cosmos:::IconnedNoteWithSubtitleShape');
 @include use('ItDepends', 'cosmos:::BoxedNoteWithSubtitleShape');
 @include use('IntersectionsContexts', 'cosmos:::BoxedNoteWithSubtitleShape');
 @include use('LifeHacks', 'cosmos:::BoxedNoteWithSubtitleShape');
