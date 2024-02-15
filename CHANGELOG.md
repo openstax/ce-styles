@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove margin for `pre` tags in webview multiple choice exercises
 * Redo inline `pre` tags in titles for web a better way
 * Add icons to `webview` for `writing-guide`
 * Fix `line break` in `python webview`
