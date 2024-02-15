@@ -1719,6 +1719,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 25%;
 }
 
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+  width: 12.5%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+  width: 37.5%;
+}
+
 .os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
   width: 20%;
 }
@@ -2549,28 +2569,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-.os-table > table > tbody > tr > td > ul {
-  margin-left: 1.4rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ul {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ol {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 .os-table > table > tbody > tr > td > ol {
-  margin-left: 1.4rem;
+  margin-left: 24px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ul {
-  margin-left: 0.7rem;
+  margin-left: 16px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ol {
-  margin-left: 0.7rem;
+  margin-left: 16px;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) {

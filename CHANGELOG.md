@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change margin for lists from tables in `carnival`
 * Remove styles for `what-heard` note from `lifespan-development`
 * Remove margin from `lo` header in `lifespan-development`
 * Change styles for `eoc` sections from `lifespan-development`
