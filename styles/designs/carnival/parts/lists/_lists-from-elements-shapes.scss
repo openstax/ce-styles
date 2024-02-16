@@ -14,16 +14,16 @@
                                   _components: (
                                       map-merge($Table__Data--Wrapper, (
                                           _components: (
-                                              map-merge($UnorderedList--FirstLevel--Table,(
+                                              map-merge($UnorderedList--FirstLevel,(
                                                   _components: (
-                                                    $UnorderedList--SecondLevel--Table,
-                                                    $OrderedList--SecondLevel--Table,
+                                                    $UnorderedList--SecondLevel,
+                                                    $OrderedList--SecondLevel,
                                                   )
                                               )),
-                                              map-merge($OrderedList--FirstLevel--Table,(
+                                              map-merge($OrderedList--FirstLevel,(
                                                   _components: (
-                                                    $UnorderedList--SecondLevel--Table,
-                                                    $OrderedList--SecondLevel--Table,
+                                                    $UnorderedList--SecondLevel,
+                                                    $OrderedList--SecondLevel,
                                                   )
                                               )),
                                           )

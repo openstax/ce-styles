@@ -3255,28 +3255,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-.os-table > table > tbody > tr > td > ul {
-  margin-left: 1.4rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ul {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ol {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 16px;
 }
 
 .os-table > table > tbody > tr > td > ol {
-  margin-left: 1.4rem;
+  margin-left: 24px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ul {
-  margin-left: 0.7rem;
+  margin-left: 16px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ol {
-  margin-left: 0.7rem;
+  margin-left: 16px;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) {
