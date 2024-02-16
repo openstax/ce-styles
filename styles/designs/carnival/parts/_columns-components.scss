@@ -68,6 +68,46 @@ $Columns--FourColumnsFourRatioOne: (
     )
 );
 
+$Columns--FourColumnsSixRatioOne: (
+    _name: "FourColumnsSixRatioOne",
+    _subselector: " [data-columns='4'][data-ratio='1,1,3,1'] col[data-width='1*']",
+    _properties: (
+        width: column-width(4,6,1),
+    )
+);
+
+$Columns--FourColumnsSixRatioThree: (
+    _name: "FourColumnsSixRatioThree",
+    _subselector: " [data-columns='4'][data-ratio='1,1,3,1'] col[data-width='3*']",
+    _properties: (
+        width: column-width(4,6,3),
+    )
+);
+
+$Columns--FourColumnsEightRatioOne: (
+    _name: "FourColumnsEightRatioOne",
+    _subselector: " [data-columns='4'][data-ratio='1,2,3,2'] col[data-width='1*']",
+    _properties: (
+        width: column-width(4,8,1),
+    )
+);
+
+$Columns--FourColumnsEightRatioTwo: (
+    _name: "FourColumnsEightRatioTwo",
+    _subselector: " [data-columns='4'][data-ratio='1,2,3,2'] col[data-width='2*']",
+    _properties: (
+        width: column-width(4,8,2),
+    )
+);
+
+$Columns--FourColumnsEightRatioThree: (
+    _name: "FourColumnsEightRatioThree",
+    _subselector: " [data-columns='4'][data-ratio='1,2,3,2'] col[data-width='3*']",
+    _properties: (
+        width: column-width(4,8,3),
+    )
+);
+
 // Five columns
 
 $Columns--FiveColumnsFiveRatioOne: (
