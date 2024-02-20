@@ -74,38 +74,6 @@ $UnorderedList--ThirdLevel__Marker: (
     )
 );
 
-// Tables lists
-// Lists in table cells need to have margin set withs table spacing functions
-$UnorderedList--FirstLevel--Table: (
-    _name: "TableFirstLevelUnorderedList",
-    _subselector: " > ul",
-    _properties: (
-        margin-left: table-v-spacing(2),
-    )
-);
-$UnorderedList--SecondLevel--Table: (
-    _name: "TableSecondLevelUnorderedList",
-    _subselector: " > li > ul",
-    _properties: (
-        margin-left: table-v-spacing(1),
-    )
-);
-
-$OrderedList--FirstLevel--Table: (
-    _name: "TableFirstLevelOrderedList",
-    _subselector: " > ol",
-    _properties: (
-        margin-left: table-v-spacing(2),
-    )
-);
-$OrderedList--SecondLevel--Table: (
-    _name: "TableSecondLevelOrderedList",
-    _subselector: " > li > ol",
-    _properties: (
-        margin-left: table-v-spacing(1),
-    )
-);
-
 // Notes lists
 
 $UnorderedList--FromLastChild: (
