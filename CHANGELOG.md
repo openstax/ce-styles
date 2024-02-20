@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove margin for `pre` tags in webview multiple choice exercises
 * Create files for `columns` to set proportional width on `webview`
 * Style `vertically-tight` tables in `nursing-internal`
 * Change margin for lists from tables in `carnival`
