@@ -397,6 +397,12 @@
     )
 ));
 
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container"),
+  ),
+));
+
 // Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
@@ -480,10 +486,11 @@
 //Columns
 @include use('ColumnsFromTable', 'webview:::ColumnsShape');
 
-// EOC
-@include use('WorksCited', 'webview:::ModuleWithIndentationShape');
-@include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');
-@include use('FurtherReading', 'webview:::ModuleWithIndentationShape');
+// Modules
+@include use('WorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('SectionWorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('ModuleWithIndentation', 'webview:::ModuleWithIndentationShape');
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
