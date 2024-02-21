@@ -81,11 +81,18 @@ $bandColor: #DCB83D;
   ),
 ));
 
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
+@include use('CenteredText', 'common:::CenteredTextShape');
 
 // Titles
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
