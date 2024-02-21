@@ -1,0 +1,24 @@
+@import './columns-components';
+
+@include create_shape('webview:::ColumnsShape',(
+    _components: (
+        map-merge($Columns__Container, (
+            _components:(
+                $Columns--TwoColumnsTwoRatioOne,
+                $Columns--TwoColumnsFourRatioOne,
+                $Columns--TwoColumnsFourRatioThree,
+                $Columns--TwoColumnsFiveRatioTwo,
+                $Columns--TwoColumnsFiveRatioThree,
+                $Columns--ThreeColumnsFourRatioOne,
+                $Columns--ThreeColumnsFourRatioTwo,
+                $Columns--FourColumnsFourRatioOne,
+                $Columns--FourColumnsSixRatioOne,
+                $Columns--FourColumnsSixRatioThree,
+                $Columns--FourColumnsEightRatioOne,
+                $Columns--FourColumnsEightRatioTwo,
+                $Columns--FourColumnsEightRatioThree,
+                $Columns--FiveColumnsFiveRatioOne,
+            ),
+        )),
+    )
+));

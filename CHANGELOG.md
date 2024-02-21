@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add figure styles for `python` pdf
+* Style centered text in `lifespan-development`
+* Set page breaks for `TOC`
+* Change color of `it-depends` note from `lifespan-development`
+* Remove margin for `pre` tags in webview multiple choice exercises
+* Create files for `columns` to set proportional width on `webview`
+* Style `vertically-tight` tables in `nursing-internal`
 * Change margin for lists from tables in `carnival`
 * Redo inline `pre` tags in titles for web a better way
 * Add icons to `webview` for `writing-guide`
