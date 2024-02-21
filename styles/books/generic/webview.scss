@@ -391,6 +391,12 @@
     ),
 ));
 
+@include add_settings((
+    ColumnsFromTable: (
+        _selectors: (".os-table"),
+    )
+));
+
 // Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
@@ -470,6 +476,9 @@
 @include use('YellowColoredText', 'webview:::ColoredText');
 @include use('PurpleColoredText', 'webview:::ColoredText');
 @include use('BlueColoredText', 'webview:::ColoredText');
+
+//Columns
+@include use('ColumnsFromTable', 'webview:::ColumnsShape');
 
 // EOC
 @include use('WorksCited', 'webview:::ModuleWithIndentationShape');

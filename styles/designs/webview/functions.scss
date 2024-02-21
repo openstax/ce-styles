@@ -1,3 +1,11 @@
+@use "sass:math";
+
 @function scaled_size($default) {
   @return calc(#{$default} * var(--content-text-scale));
+}
+
+@function column-width($columns, $ratioSum, $ratio) {
+  $width: (math.div(100%, $ratioSum)) * $ratio;
+
+  @return $width
 }

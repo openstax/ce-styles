@@ -97,6 +97,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  VerticallyTightTable: (
+    _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
+  )
+));
+
 //Centered Text
 @include add_settings((
   CenteredText: (
@@ -259,6 +265,7 @@ $ChapterIntroType: fullWidth;
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
+@include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
