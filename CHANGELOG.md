@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style modules with indentation on `webview`
+* Add figure styles for `python` pdf
+* Style centered text in `lifespan-development`
+* Set page breaks for `TOC`
 * Change color of `it-depends` note from `lifespan-development`
 * Remove margin for `pre` tags in webview multiple choice exercises
 * Create files for `columns` to set proportional width on `webview`

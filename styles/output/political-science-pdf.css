@@ -4,11 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
