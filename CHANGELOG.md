@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `hljs-ln` table border
 * Style modules with indentation on `webview`
 * Add figure styles for `python` pdf
 * Style centered text in `lifespan-development`
