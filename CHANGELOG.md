@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove top margin for lists from tables on `webview`
 * Fix `hljs-ln` table border
 * Style modules with indentation on `webview`
 * Add figure styles for `python` pdf
