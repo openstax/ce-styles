@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove top margin for lists from tables on `webview`
+
 ## [v1.146.0] - 2024-02-23
 
 * Fix `hljs-ln` table border
