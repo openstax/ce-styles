@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Remove `three column in answer key` in `calculus`
 * Add `vertically-tight` tables to `cardboard`
 * Remove top margin for lists from tables on `webview`
 
