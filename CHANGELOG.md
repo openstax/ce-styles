@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `eoc` sections from `data-science`
+* Add `vertically-tight` tables to `cardboard`
 * Remove top margin for lists from tables on `webview`
 
 ## [v1.146.0] - 2024-02-23
