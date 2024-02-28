@@ -1232,19 +1232,20 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin: 0;
 }
 
-[data-type=page] .learning-objectives > ul {
-  list-style-type: none;
+[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
 }
 
-[data-type=page] .learning-objectives > ul > li {
-  display: flex;
+[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=page] .learning-objectives > ul > li > span.os-abstract-token {
-  font-weight: bold;
-  margin-right: 8px;
-  color: #344456;
+[data-type=page] .learning-objectives > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] .learning-objectives > ol > li {
+  max-width: 5.9in;
 }
 
 [data-type=example] {

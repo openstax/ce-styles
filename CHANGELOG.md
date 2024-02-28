@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `data-science` LOs to have bullets
 * Change margin for lists from tables in `carnival`
 * Redo inline `pre` tags in titles for web a better way
 * Add icons to `webview` for `writing-guide`
