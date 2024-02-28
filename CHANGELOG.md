@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `full-width` tables in `data-science`
 * Style `answer-key` from `data-science`
 * Style `eoc` sections from `data-science`
 * Add `vertically-tight` tables to `cardboard`
