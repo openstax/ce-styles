@@ -4,11 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -1156,6 +1165,12 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
 
 [data-type=page] section.learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
+}
+
+.centered-text {
+  display: block;
+  font-weight: normal;
+  text-align: center;
 }
 
 [data-type=page]:not(.introduction).preface > h1 {
@@ -2416,7 +2431,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-transform: uppercase;
   text-align: right;
   font-weight: normal;
-  background-color: #8B693A;
+  background-color: #38568A;
   padding: 0.7rem;
   position: relative;
   border-bottom: solid;
@@ -2428,7 +2443,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 0.7rem;
-  background-color: #FFF7E5;
+  background-color: #EFF3FA;
 }
 
 .it-depends > .os-note-body > h4.os-subtitle {

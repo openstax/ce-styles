@@ -84,13 +84,12 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     )
 );
 
-$Exercise__Problem__Container--FromMultipartQuestion: (
-    _name: "ProblemContainerFromMultipartQuestion",
-    _subselector: " > .os-problem-container",
-    _properties:(
-        display: table,
-        width: 100%,
-    )
+$Exercise__Problem__MCAnswer__Pre: (
+  _name: "PreInMCAnswer",
+  _subselector: " li[data-type='question-answer'] pre",
+  _properties: (
+    margin: 0,
+  )
 );
 
 $Exercise__Question__Stem: (

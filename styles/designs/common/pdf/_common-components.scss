@@ -79,7 +79,13 @@ $VisuallyHidden: (
 );
 
 //Styles specifically for code snippet tables
-$CodeSnippet__Container: empty_wrapper(CodeSnippet, '');
+$CodeSnippet__Container: (
+  _name: "CodeSnippetContainer",
+  _subselector: '',
+  _properties: (
+    border-collapse: collapse,
+  )
+);
 
 $CodeSnippet__LineNumbers: (
     _name: 'CodeSnippetLineNumbers',

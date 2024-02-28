@@ -946,6 +946,10 @@ a:hover {
   display: table-cell;
 }
 
+[data-type=example] [data-type=problem] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 [data-type=example] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1125,6 +1129,10 @@ a:hover {
 
 .example [data-type=problem] > .os-problem-container {
   display: table-cell;
+}
+
+.example [data-type=problem] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .example [data-type=solution] {
@@ -1308,6 +1316,10 @@ a:hover {
   display: table-cell;
 }
 
+[data-type=exercise] [data-type=problem] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 [data-type=exercise] [data-type=solution] {
   padding: 0.5em 1em;
   border-top-width: 0.1rem;
@@ -1487,6 +1499,10 @@ a:hover {
 
 .exercise [data-type=problem] > .os-problem-container {
   display: table-cell;
+}
+
+.exercise [data-type=problem] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .exercise [data-type=solution] {
@@ -1676,8 +1692,16 @@ a:hover {
   vertical-align: top;
 }
 
+[data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .appendix [data-type=exercise] .os-problem-container p {
   margin-top: 0;
+}
+
+.appendix [data-type=exercise] .os-problem-container li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-number ~ .os-problem-container {
@@ -1706,6 +1730,10 @@ a:hover {
 
 .os-number ~ .os-problem-container img {
   display: block;
+}
+
+.os-number ~ .os-problem-container li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-number ~ .os-solution-container {
@@ -1782,6 +1810,10 @@ a:hover {
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
   display: table-cell;
   vertical-align: bottom;
+}
+
+[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-table {
@@ -1906,6 +1938,7 @@ a:hover {
 
 .os-table table ol {
   padding-left: 1.5em;
+  margin-top: 0;
 }
 
 .os-table table ol[data-bullet-style=none] {
@@ -1920,6 +1953,7 @@ a:hover {
 
 .os-table table ul {
   padding-left: 1.5em;
+  margin-top: 0;
 }
 
 .os-table table ul[data-bullet-style=none] {
@@ -2300,6 +2334,62 @@ p.student-sample {
   color: #0074BC;
 }
 
+.os-table [data-columns="2"][data-ratio="1,1"] col[data-width="1*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="3*"] {
+  width: 75%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="2*"] {
+  width: 40%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="3*"] {
+  width: 60%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="2*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,1,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+  width: 12.5%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+  width: 37.5%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
+  width: 20%;
+}
+
 section.works-cited [data-type=title] {
   text-align: center;
 }
@@ -2323,6 +2413,21 @@ section.further-reading [data-type=title] {
 }
 
 section.further-reading p {
+  text-indent: -2.5rem;
+  padding-left: 2.5rem;
+}
+
+.os-suggested-reading-container p {
+  text-indent: -2.5rem;
+  padding-left: 2.5rem;
+}
+
+.os-references-container p {
+  text-indent: -2.5rem;
+  padding-left: 2.5rem;
+}
+
+.os-reference-container p {
   text-indent: -2.5rem;
   padding-left: 2.5rem;
 }
