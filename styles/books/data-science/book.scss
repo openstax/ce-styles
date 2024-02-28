@@ -1,6 +1,6 @@
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-glossary-container', generalSelector: '.os-eoc'),
-  (pageName: eob, firstSelector: '.os-eob[data-type="composite-page"]', generalSelector: '.os-eob'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
 
@@ -239,6 +239,7 @@ $bandColor: #24739E;
 @include use('CriticalThinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('QuantitativeProblemsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+@include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
@@ -279,3 +280,5 @@ $bandColor: #24739E;
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
 @include use('References', 'cardboard:::ModuleWithIndentationShape');
+@include use("AnswerKey", "cardboard:::AnswerKeyShape");
+@include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
