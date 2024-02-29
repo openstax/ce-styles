@@ -58,3 +58,16 @@ $Example__Subtitle--FromNote: (
         font-weight: enum('ValueSet:::REQUIRED'),
     )
 );
+
+$Example__SolutionTitle: (
+    _name: "ExampleSolutionTitle",
+    _subselector: ' h4[data-type="solution-title"]',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        padding-bottom: v-spacing(1),
+        font-weight: bold,
+    )
+);
