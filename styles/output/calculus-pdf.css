@@ -3669,11 +3669,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=solution] {
-  display: inline-table;
-  overflow-wrap: break-word;
-  margin-bottom: 1.4rem;
-  width: 29%;
-  padding-right: 0.7rem;
+  display: table;
+  margin-bottom: 0;
 }
 
 .os-eob [data-type=solution] > .os-number {
@@ -3681,6 +3678,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
 }
 
 .os-eob [data-type=solution] > .os-divider {
@@ -3716,11 +3715,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=question-solution] {
-  display: inline-table;
-  overflow-wrap: break-word;
-  margin-bottom: 1.4rem;
-  width: 29%;
-  padding-right: 0.7rem;
+  display: table;
+  margin-bottom: 0;
 }
 
 .os-eob [data-type=question-solution] > .os-number {
@@ -3728,6 +3724,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
 }
 
 .os-eob [data-type=question-solution] > .os-divider {
