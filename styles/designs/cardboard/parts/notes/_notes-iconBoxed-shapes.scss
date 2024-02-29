@@ -48,3 +48,18 @@
         )),
     )
 ));
+
+@include create_shape('cardboard:::IconBoxedNoteWithBordersShape', (
+    _components: (
+        map-merge($Notes--BoxedWithBorders__Container, (
+            _components: (
+                map-merge($Notes--BoxedWithBorders__Title, (
+                    _components: (
+                        $Notes--IconBoxed__Title__Icon,
+                    )
+                )),
+                $Notes--BoxedWithBorders__Body,
+            )
+        )),
+    )
+));
