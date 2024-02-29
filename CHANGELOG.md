@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Remove `three column in answer key` in `calculus`
+* Style `solution-title` from `example` in `cardboard`
+* Style `full-width` tables in `data-science`
+* Style `data-science` LOs to have bullets
+* Style `answer-key` from `data-science`
+* Style `eoc` sections from `data-science`
 * Add `vertically-tight` tables to `cardboard`
 * Remove top margin for lists from tables on `webview`
 

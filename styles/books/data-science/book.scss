@@ -1,6 +1,6 @@
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-glossary-container', generalSelector: '.os-eoc'),
-  (pageName: eob, firstSelector: '.os-eob[data-type="composite-page"]', generalSelector: '.os-eob'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
 
@@ -88,8 +88,34 @@ $bandColor: #24739E;
         'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
         'H5Title:::font-family': (_ref: 'typography:::baseFont'),
     ),
-    ChapterProblemsTitles: (
-        _selectors: (".os-chapter-problems-container"),
+    ChapterReviewTitles: (
+        _selectors: (".os-chapter-review-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-casestudy.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    CriticalThinkingTitles: (
+        _selectors: (".os-critical-thinking-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lightbulb.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
+    QuantitativeProblemsTitles: (
+        _selectors: (".os-quantitative-problems-container"),
         'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
         'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
         'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-suggested.svg")) no-repeat top left,
@@ -121,7 +147,7 @@ $bandColor: #24739E;
 
 @include add_settings((
     ExercisesModule: (
-        _selectors: (".os-chapter-problems-container"),
+        _selectors: (".os-chapter-review-container", ".os-critical-thinking-container", ".os-quantitative-problems-container"),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
         'ProblemSolutionNumber:::width': 2%,
         'ProblemSolutionNumber:::text-align': right,
@@ -189,7 +215,7 @@ $bandColor: #24739E;
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocUnit', 'cardboard:::UnitToc');
 @include use('UnitTitle', 'common:::Hidden');
-@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+@include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
 @include use('ExampleGreen', 'cardboard:::ExampleShape');
 @include use('Equation', 'cardboard:::EquationShape');
 
@@ -209,8 +235,11 @@ $bandColor: #24739E;
 @include use('PageTitles', 'cardboard:::PageTitlesShape');
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('GroupProjectTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('ChapterProblemsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ChapterReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CriticalThinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('QuantitativeProblemsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+@include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
@@ -236,6 +265,7 @@ $bandColor: #24739E;
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 @include use('VerticallyTightTable', 'cardboard:::VerticallyTightTableShape');
+@include use('FullWidthTable', 'cardboard:::FullWidthTableShape');
 
 //Lists
 @include use('NotesLists', 'cardboard:::NotesListsShape');
@@ -251,3 +281,5 @@ $bandColor: #24739E;
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
 @include use('References', 'cardboard:::ModuleWithIndentationShape');
+@include use("AnswerKey", "cardboard:::AnswerKeyShape");
+@include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
