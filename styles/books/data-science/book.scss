@@ -127,6 +127,19 @@ $bandColor: #24739E;
         'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
         'H5Title:::font-family': (_ref: 'typography:::baseFont'),
     ),
+    ReferencesTitles: (
+        _selectors: (".os-references-container"),
+        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-references.svg")) no-repeat top left,
+        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+    ),
 ));
 
 // Introduction
@@ -205,7 +218,7 @@ $bandColor: #24739E;
 
 @include add_settings((
   References: (
-    _selectors: ('.os-eob.os-references-container .os-chapter-area'),
+    _selectors: ('.os-eoc.os-references-container'),
   ),
 ));
 
@@ -238,6 +251,7 @@ $bandColor: #24739E;
 @include use('ChapterReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('CriticalThinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('QuantitativeProblemsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ReferencesTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 
@@ -277,9 +291,9 @@ $bandColor: #24739E;
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
+@include use('References', 'cardboard:::ModuleWithIndentationShape');
 
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
-@include use('References', 'cardboard:::ModuleWithIndentationShape');
 @include use("AnswerKey", "cardboard:::AnswerKeyShape");
 @include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
