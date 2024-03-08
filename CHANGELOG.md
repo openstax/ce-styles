@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix `alignment in exercises` in `nursing-internal`
+
+## [v1.147.0] - 2024-03-08
+
+* Add icon to Python Code notes in `data-science`
+* Increase margin for lists from `carnival`
 * Change styles for references from `data-science`
 * Remove `three column in answer key` in `calculus`
 * Style `solution-title` from `example` in `cardboard`

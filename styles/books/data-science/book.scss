@@ -182,7 +182,11 @@ $bandColor: #24739E;
     'Title:::font-family': (_ref: "typography:::titleFont"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
-    ),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-coding.svg")) no-repeat top left,
+    'TitleIcon:::height': 4rem,
+    'TitleIcon:::width': 9rem,
+    'TitleIcon:::bottom': 0,
+  ),
 
     ExploringFurtherNote: (
       _selectors: ('.exploring-further'),
@@ -269,7 +273,7 @@ $bandColor: #24739E;
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
 
 //Notes
-@include use('PythonNote', 'cardboard:::BoxedNoteWithBordersShape');
+@include use('PythonNote', 'cardboard:::IconBoxedNoteWithBordersShape');
 @include use('ExploringFurtherNote', 'cardboard:::BoxedNoteWithSubtitleShape');
 @include use('DownloadFileNote', 'cardboard:::IconCondensedShape');
 @include use('BoxedFeatureNote', 'cardboard:::BoxedNoteWithSubtitleShape');
