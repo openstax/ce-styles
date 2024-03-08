@@ -206,10 +206,11 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EocExercisesModules: (
     _selectors: (
-        '.os-review-questions-container', '.os-check-understanding-container', '.os-critical-thinking-container',
+        '.os-eoc.os-review-questions-container', '.os-check-understanding-container', '.os-critical-thinking-container',
         '.os-competency-based-container', '.os-reflection-questions-container', '.os-what-nurses-do-container'
     ),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+
   ),
 ));
 
