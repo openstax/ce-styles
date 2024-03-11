@@ -125,7 +125,7 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
+        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]:not(.has-problem-title)', '.exercise'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),

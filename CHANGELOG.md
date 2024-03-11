@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style exercise with problem title on `webview`
+
 ## [v1.147.0] - 2024-03-08
 
 * Add icon to Python Code notes in `data-science`
