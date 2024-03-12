@@ -1,6 +1,7 @@
 $Exercise__Container: empty_wrapper(ExerciseContainer, '');
 $Exercise--ProblemsExercises1: empty_wrapper(ProblemsExercises1, '.problems-exercises');
 $Exercise--ProblemsExercises2: empty_wrapper(ProblemsExercises2, '[data-type="problems-exercises"]');
+$Exercise--WithProblemTitle: empty_wrapper(ExerciseWithProblemTitle, '.has-problem-title');
 
 $ExerciseQuestion__Container: (
     _name: "ExerciseQuestionContainer",
@@ -81,6 +82,14 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _properties:(
         display: table,
         width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromExerciseWithProblemTitle: (
+    _name: "ProblemContainerFromFromExerciseWithProblemTitle",
+    _subselector: " .os-problem-container",
+    _properties:(
+        display: initial,
     )
 );
 

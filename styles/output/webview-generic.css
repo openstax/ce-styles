@@ -1080,6 +1080,10 @@ a:hover {
   content: "Solution";
 }
 
+[data-type=example].has-problem-title .os-problem-container {
+  display: initial;
+}
+
 [data-type=example].check-understanding [data-type=title]::before {
   margin-right: 0;
   content: "";
@@ -1263,6 +1267,10 @@ a:hover {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   content: "Solution";
+}
+
+.example.has-problem-title .os-problem-container {
+  display: initial;
 }
 
 .example.check-understanding [data-type=title]::before {
@@ -1450,6 +1458,10 @@ a:hover {
   content: "Solution";
 }
 
+[data-type=exercise].has-problem-title .os-problem-container {
+  display: initial;
+}
+
 [data-type=exercise].check-understanding [data-type=title]::before {
   margin-right: 0;
   content: "";
@@ -1633,6 +1645,10 @@ a:hover {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   content: "Solution";
+}
+
+.exercise.has-problem-title .os-problem-container {
+  display: initial;
 }
 
 .exercise.check-understanding [data-type=title]::before {

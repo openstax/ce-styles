@@ -54,6 +54,11 @@
                         $Exercise--ProblemsExercises__Solution--Before2,
                     ),
                 )),
+                map-merge($Exercise--WithProblemTitle, (
+                    _components: (
+                        $Exercise__Problem__Container--FromExerciseWithProblemTitle
+                    ),
+                )),
                 $CheckUnderstanding__Title--Before1,
                 $CheckUnderstanding__Title--Before2,
                 map-merge($ConceptualQuestions__Problem1, (
