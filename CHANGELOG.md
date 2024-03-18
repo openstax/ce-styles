@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Standardize notes titles in `carnival` and `cosmos`
 * Change note title color in `ap-biology`
 * Style exercise with problem title on `webview`
 
