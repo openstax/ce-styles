@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change note title color in `ap-biology`
 * Style exercise with problem title on `webview`
 
 ## [v1.147.0] - 2024-03-08
