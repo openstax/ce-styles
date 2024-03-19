@@ -6,6 +6,79 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change note title color in `ap-biology`
+* Style exercise with problem title on `webview`
+
+## [v1.147.0] - 2024-03-08
+
+* Add icon to Python Code notes in `data-science`
+* Increase margin for lists from `carnival`
+* Change styles for references from `data-science`
+* Remove `three column in answer key` in `calculus`
+* Style `solution-title` from `example` in `cardboard`
+* Style `full-width` tables in `data-science`
+* Style `data-science` LOs to have bullets
+* Style `answer-key` from `data-science`
+* Style `eoc` sections from `data-science`
+* Add `vertically-tight` tables to `cardboard`
+* Remove top margin for lists from tables on `webview`
+
+## [v1.146.0] - 2024-02-23
+
+* Fix `hljs-ln` table border
+* Style modules with indentation on `webview`
+* Add figure styles for `python` pdf
+* Style centered text in `lifespan-development`
+* Set page breaks for `TOC`
+* Change color of `it-depends` note from `lifespan-development`
+* Remove margin for `pre` tags in webview multiple choice exercises
+* Create files for `columns` to set proportional width on `webview`
+* Style `vertically-tight` tables in `nursing-internal`
+* Change margin for lists from tables in `carnival`
+* Redo inline `pre` tags in titles for web a better way
+* Add icons to `webview` for `writing-guide`
+* Fix `line break` in `python webview`
+* Change a way of styling terms on `webview`
+* Remove styles for `what-heard` note from `lifespan-development`
+* Remove margin from `lo` header in `lifespan-development`
+* Change styles for `eoc` sections from `lifespan-development`
+
+## [v1.145.0] - 2024-02-09
+
+* Display `Preface` from `biology` and `ap-biology` in one column
+* Fix `examples spacing` in `statistics webview`
+* Fix `chapter intro` caption in `cardboard`
+* Fix `learning objectives` in `astronomy`
+* Fix long chapter titles in `cardboard`
+* Style third level lists in `carnival`
+* Style `suggested-reading` section from `nursing-external`
+
+## [v1.144.0] - 2024-01-30
+
+* Style `highlight.js line numbers` in `python webview and pdf`
+* Change `pre > span` to `display: inline` from `inline-block` for common pdf styles
+* Remove margin around `pre` elements in mc distractors (for `python`)
+* Fix `splash image` in `corn`
+* Enable `highlight.js styles` in `webview`
+* Increase `carnival` `AnswerKeys` number spacing
+* Fix problem with table border in `carnival`
+* Style `eob` in `information-systems`
+
+## [v1.143.0] - 2024-01-12
+
+* Style `eoc` in `information-systems`
+* Style `notes` in `information-systems`
+* Style `lists` in `information-systems`
+* Style `footnotes` and `centered text` in `information-systems`
+* Style `tables` in `information-systems`
+* Style `lo` in `information-systems`
+* Style `chapter intro` and `figures` in `information-systems`
+* Style `titles` in `information-systems`
+* Style `TOC` in `information-systems`
+* Create `ItalicTextShape` in `common` files
+* Initialize `information-systems`
+* Fix css issue with `img` inside `figure`
+
 ## [v1.142.0] - 2023-12-15
 
 * Removed vestigal version.txt file

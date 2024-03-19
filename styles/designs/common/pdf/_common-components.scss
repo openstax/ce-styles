@@ -20,6 +20,14 @@ $ColoredText__Container: (
     )
 );
 
+$ItalicText__Container: (
+    _name: 'ItalicTextContainer',
+    _subselector: '',
+    _properties: (
+        font-style: italic,
+    )
+);
+
 $CenteredText: (
     _name: 'CenteredText',
     _subselector: '',
@@ -70,3 +78,36 @@ $VisuallyHidden: (
     )
 );
 
+//Styles specifically for code snippet tables
+$CodeSnippet__Container: (
+  _name: "CodeSnippetContainer",
+  _subselector: '',
+  _properties: (
+    border-collapse: collapse,
+  )
+);
+
+$CodeSnippet__LineNumbers: (
+    _name: 'CodeSnippetLineNumbers',
+    _subselector: ' .hljs-ln-numbers',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      border-right: enum('ValueSet:::REQUIRED'),
+      border-color: enum('ValueSet:::REQUIRED'),
+      padding-right: 10px,
+      text-align: enum('ValueSet:::REQUIRED'),
+      vertical-align: top
+    )
+);
+
+$CodeSnippet__LineNumbers--Code: (
+    _name: 'CodeSnippetLineNumbersCode',
+    _subselector: ' .hljs-ln-code',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      padding-left: 0.5rem,
+      text-align: enum('ValueSet:::REQUIRED'),
+    )
+);

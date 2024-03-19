@@ -4,11 +4,15 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/Dosis.css");
 @import url("./downloaded-fonts/Courier-Prime.css");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -256,7 +265,7 @@ h3, h4, h5, h6 {
 pre > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
 pre {
@@ -1436,6 +1445,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 .os-figure.has-splash > .os-caption-container {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
+  line-height: 1rem;
 }
 
 .os-figure.has-splash > .os-caption-container > .os-title-label {
@@ -2866,7 +2876,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.728rem;
-  line-height: 1.5rem;
+  line-height: 1.728rem;
   position: relative;
   top: 26rem;
   flex-direction: row;
@@ -2903,6 +2913,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   position: relative;
   margin-left: 4rem;
   top: -2.5rem;
+  width: 5.5in;
 }
 
 [data-type=chapter] > h1 > .os-number {
@@ -4489,6 +4500,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
+.knowledge-check [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .knowledge-check [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -4581,6 +4596,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-marketing-discussion-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-eoc.os-marketing-discussion-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-eoc.os-marketing-discussion-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
@@ -4677,6 +4696,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
+.os-eoc.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .os-eoc.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -4769,6 +4792,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eoc.os-company-case-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-eoc.os-company-case-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-eoc.os-company-case-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {

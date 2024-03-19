@@ -1,11 +1,15 @@
 @charset "UTF-8";
 @import url("./downloaded-fonts/Roboto-Slab.css");
 @import url("./downloaded-fonts/Noto-Sans.css");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -14,6 +18,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -266,7 +275,7 @@ h3, h4, h5, h6 {
 pre > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
 pre {
@@ -1218,7 +1227,7 @@ nav#toc > ol > li > ol > li > a::after {
 
 .os-figure.has-splash {
   margin-bottom: 1.4rem;
-  margin-top: -6.7rem;
+  margin-top: -8.2rem;
 }
 
 .os-figure.has-splash > figure.splash {
@@ -2049,6 +2058,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=chapter] > h1[data-type=document-title] {
   display: flex;
+  align-items: center;
   position: relative;
   top: 14rem;
   z-index: 2;
@@ -2057,6 +2067,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 2.0736rem;
   line-height: 2.0736rem;
   max-width: 5.9in;
+  height: 4.29981696rem;
 }
 
 [data-type=chapter] > h1[data-type=document-title] > .os-part-text {
@@ -3658,11 +3669,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=solution] {
-  display: inline-table;
-  overflow-wrap: break-word;
-  margin-bottom: 1.4rem;
-  width: 29%;
-  padding-right: 0.7rem;
+  display: table;
+  margin-bottom: 0;
 }
 
 .os-eob [data-type=solution] > .os-number {
@@ -3670,6 +3678,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
 }
 
 .os-eob [data-type=solution] > .os-divider {
@@ -3705,11 +3715,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-eob [data-type=question-solution] {
-  display: inline-table;
-  overflow-wrap: break-word;
-  margin-bottom: 1.4rem;
-  width: 29%;
-  padding-right: 0.7rem;
+  display: table;
+  margin-bottom: 0;
 }
 
 .os-eob [data-type=question-solution] > .os-number {
@@ -3717,6 +3724,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
 }
 
 .os-eob [data-type=question-solution] > .os-divider {

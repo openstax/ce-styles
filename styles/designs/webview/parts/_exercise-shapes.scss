@@ -13,6 +13,7 @@
                     $Exercise__ProblemSolution__Number,
                     $Exercise__ProblemSolution__Divider,
                     $Exercise__Problem__Container,
+                    $Exercise__Problem__MCAnswer__Pre,
                   )
                 )),
                 map-merge($Exercise__Solution1, (
@@ -53,6 +54,11 @@
                         $Exercise--ProblemsExercises__Solution--Before2,
                     ),
                 )),
+                map-merge($Exercise--WithProblemTitle, (
+                    _components: (
+                        $Exercise__Problem__Container--FromExerciseWithProblemTitle
+                    ),
+                )),
                 $CheckUnderstanding__Title--Before1,
                 $CheckUnderstanding__Title--Before2,
                 map-merge($ConceptualQuestions__Problem1, (
@@ -82,6 +88,7 @@
                             _components: (
                                 $Exercise__Question__Stem,
                                 $Image--AfterBold,
+                                $Exercise__Problem__MCAnswer__Pre,
                             )
                         )),
                     ),
@@ -116,6 +123,7 @@
                         $Exercise__ProblemSolution__Divider--FromMultipartQuestion,
                         $InjectedExercise__Question__Stem,
                         $InjectedExercise__Question__Stem--WithFirstElement,
+                        $Exercise__Problem__MCAnswer__Pre,
                     ),
                 )),
             ),
@@ -130,6 +138,7 @@
                 map-merge($Exercise__ProblemContainer, (
                     _components: (
                         $Exercise__ProblemContainer__Paragraph,
+                        $Exercise__Problem__MCAnswer__Pre,
                     ),
                 )),
             ),
@@ -148,6 +157,7 @@
                 $Exercise--Inlined__Child--Note,
                 $Exercise--Inlined__Child--Figure,
                 $Exercise--Inlined__Child--Img,
+                $Exercise__Problem__MCAnswer__Pre,
             ),
         )),
         map-merge($Exercise__SolutionContainer, (

@@ -6,7 +6,7 @@ $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
     _subselector: ' > ul:not([data-labeled-item="true"])',
     _properties:(
-        margin-left: h-spacing(3),
+        margin-left: h-spacing(4),
     )
 );
 
@@ -14,7 +14,7 @@ $OrderedList--FirstLevel: (
     _name: "FirstLevelOrderedList",
     _subselector: " > ol",
     _properties:(
-        margin-left: h-spacing(3),
+        margin-left: h-spacing(4),
     )
 );
 
@@ -22,7 +22,7 @@ $OrderedList--FirstLevel--MarginBottom: ( // only needed in Introduction page in
     _name: "FirstLevelOrderedListMarginBottom",
     _subselector: " > ol",
     _properties:(
-        margin-left: h-spacing(3),
+        margin-left: h-spacing(4),
         margin-bottom: v-spacing(1),
     )
 );
@@ -31,7 +31,7 @@ $UnorderedList--SecondLevel: (
     _name: "SecondLevelUnorderedList",
     _subselector: " > li > ul",
     _properties:(
-        margin-left: h-spacing(2),
+        margin-left: h-spacing(3),
     )
 );
 
@@ -39,63 +39,38 @@ $OrderedList--SecondLevel: (
     _name: "SecondLevelOrderedList",
     _subselector: " > li  > ol",
     _properties:(
-        margin-left: h-spacing(2),
+        margin-left: h-spacing(3),
     )
 );
 
 $UnorderedList--ThirdLevel: (
     _name: "ThirdLevelUnorderedList",
-    _subselector: " > li > ul > li > ul",
+    _subselector: " > li > ul",
     _properties:(
-        margin-left: h-spacing(2),
+        padding-left: h-spacing(3),
+        list-style-type: none,
+        position: relative,
     )
 );
 
 $OrderedList--ThirdLevel: (
     _name: "ThirdLevelOrderedList",
-    _subselector: " > li  > ol > li > ol",
+    _subselector: " > li > ol",
     _properties:(
-        margin-left: h-spacing(2),
+        margin-left: h-spacing(3),
     )
 );
 
 $UnorderedList--ThirdLevel__Marker: (
     _name: "ThirdLevelUnorderedListMarker",
-    _subselector: " > ul ul ul > li::marker",
+    _subselector: " > li::before",
     _properties:(
         font-size: 6px,
-    )
-);
-
-// Tables lists
-// Lists in table cells need to have margin set withs table spacing functions
-$UnorderedList--FirstLevel--Table: (
-    _name: "TableFirstLevelUnorderedList",
-    _subselector: " > ul",
-    _properties: (
-        margin-left: table-v-spacing(2),
-    )
-);
-$UnorderedList--SecondLevel--Table: (
-    _name: "TableSecondLevelUnorderedList",
-    _subselector: " > li > ul",
-    _properties: (
-        margin-left: table-v-spacing(1),
-    )
-);
-
-$OrderedList--FirstLevel--Table: (
-    _name: "TableFirstLevelOrderedList",
-    _subselector: " > ol",
-    _properties: (
-        margin-left: table-v-spacing(2),
-    )
-);
-$OrderedList--SecondLevel--Table: (
-    _name: "TableSecondLevelOrderedList",
-    _subselector: " > li > ol",
-    _properties: (
-        margin-left: table-v-spacing(1),
+        content: "'▪'", // double quotation marks needed, otherwise invalid value
+        display: inline-block,
+        position: absolute,
+        left: 0,
+        vertical-align: middle,
     )
 );
 

@@ -12,12 +12,6 @@
     )
 ));
 
-@include create_shape('webview:::CodeInlinePreShape', (
-  _components: (
-      $Code--InlinePre,
-    )
-));
-
 @include create_shape('webview:::CodeBlockShape', (
   _components: (
       $CodeBlock,
@@ -29,3 +23,13 @@
       $CodeBlock--Centered,
     )
 ));
+
+@include create_shape('webview:::CodeSnippetLineNumbersShape', (
+  _components: (
+        map-merge($CodeSnippet__Container, (
+            _components: (
+              $CodeSnippet__LineNumbers--Code,
+              $CodeSnippet__LineNumbers,
+        )),
+    )),
+  ));

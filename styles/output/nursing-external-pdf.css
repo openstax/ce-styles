@@ -5,11 +5,15 @@
 @import url("./downloaded-fonts/IBM-Plex-Serif.css");
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/Mulish.css");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -18,6 +22,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -257,7 +266,7 @@ h3, h4, h5, h6 {
 pre > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
 pre {
@@ -982,7 +991,7 @@ div[data-type=composite-page].os-eob {
 }
 
 [data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=chapter] > [data-type=page] > section.learning-objectives > ul:not([data-labeled-item=true]) > li {
@@ -1882,6 +1891,10 @@ a[role=doc-noteref] {
   border-right: none;
 }
 
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table col:not(:last-child) {
+  border-right: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container):after {
   content: '';
   width: 100%;
@@ -2149,6 +2162,26 @@ a[role=doc-noteref] {
   width: 25%;
 }
 
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+  width: 12.5%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+  width: 37.5%;
+}
+
 .os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
   width: 20%;
 }
@@ -2158,483 +2191,623 @@ a[role=doc-noteref] {
 }
 
 [data-type=page] > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > section > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > ol > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
+[data-type=page] > section > ol > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > ol {
+  margin-left: 32px;
+}
+
+[data-type=page] > section > section > ol > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ol {
   margin-left: 24px;
 }
 
 [data-type=page] > section > section > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
-[data-type=page] > section > section > ol > li > ul {
-  margin-left: 16px;
+[data-type=page] > section > section > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
-  margin-left: 16px;
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > section > ul ul ul > li::marker {
-  font-size: 6px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
 }
 
 [data-type=page] > section > section > section > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > section > section > section > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ol > li > ul > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ol > li > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > section > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > section > section > section > section > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > section > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > div > div > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > div > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > div > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > section > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > section > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > section > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=composite-page] > div > div > section > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=problem] > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=problem] > div > ol > li > ol {
   margin-left: 24px;
 }
 
 [data-type=problem] > div > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=problem] > div > ol > li > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > div > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=problem] > div > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=exercise-question] > div > ol > li > ol {
   margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=exercise-question] > div > ol > li > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > div > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
-.os-table > table > tbody > tr > td > ul {
-  margin-left: 1.4rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ul {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
 }
 
-.os-table > table > tbody > tr > td > ul > li > ol {
-  margin-left: 0.7rem;
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
 }
 
 .os-table > table > tbody > tr > td > ol {
-  margin-left: 1.4rem;
+  margin-left: 32px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ul {
-  margin-left: 0.7rem;
+  margin-left: 24px;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ol {
-  margin-left: 0.7rem;
+  margin-left: 24px;
 }
 
 [data-type=solution] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=solution] > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=solution] > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ol > li > ol {
   margin-left: 24px;
 }
 
 [data-type=solution] > div > ol > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=solution] > div > ol > li > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > div > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=solution] > div > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=solution] > div > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > ol {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=note] > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 [data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 16px;
-}
-
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
-  margin-left: 16px;
-}
-
-[data-type=note] > div > ol {
   margin-left: 24px;
 }
 
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol {
+  margin-left: 32px;
+}
+
 [data-type=note] > div > ol > li > ol {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > div > ol > li > ul {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 [data-type=note] > div > :last-child ul {
@@ -3602,6 +3775,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .os-eoc.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-divider {
@@ -3649,6 +3823,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .os-eoc.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
@@ -3698,6 +3873,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-divider {
@@ -3745,6 +3921,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
@@ -3794,6 +3971,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .single-casestudy [data-type=exercise] [data-type=problem] > .os-divider {
@@ -3841,6 +4019,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .single-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
@@ -3873,6 +4052,21 @@ a[role=doc-noteref] {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+.os-suggested-reading-container > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-suggested-reading-container > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.os-suggested-reading-container > div > section > p {
+  text-indent: -16px;
+  padding-left: 16px;
 }
 
 .os-references-container > p {
@@ -3927,6 +4121,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .os-eob [data-type=solution] > .os-divider {
@@ -3960,6 +4155,7 @@ a[role=doc-noteref] {
   font-weight: bold;
   width: 2%;
   text-align: right;
+  min-width: 24px;
 }
 
 .os-eob [data-type=question-solution] > .os-divider {

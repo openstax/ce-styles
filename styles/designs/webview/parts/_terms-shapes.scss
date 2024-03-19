@@ -2,15 +2,7 @@
 
 @include create_shape('webview:::TermsShape', (
     _components: (
-        map-merge($Term, (
-            _components: (
-                $Term--Unbolded,
-            ),
-        )),
-        map-merge($TermClass, (
-            _components: (
-                $Term--Unbolded,
-            ),
-        )),
+        $Term,
+        $TermClass,
     ),
 ))

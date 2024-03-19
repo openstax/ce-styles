@@ -199,6 +199,15 @@ $Table__Head__Cell--Centered: (
     )    
 );
 
+$Table__Head__Cell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
+);
+
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
 $Table__Row--NotFirstChild: empty_wrapper(TableRowNotFirstChild, ' > tr:not(:first-child):not(.gray-shading):not(.yellow-shading):not(.purple-shading)');
 $Table__Row--FirstChild: empty_wrapper(TableRowFirstChild, ' > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading)');
@@ -301,6 +310,15 @@ $Table__Data--Centered: (
     _properties: (
         text-align: center,
     )    
+);
+
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
 );
 
 // Used in text-heavy tables

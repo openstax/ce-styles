@@ -4,11 +4,15 @@
 @import url("./downloaded-fonts/Archivo.css");
 @import url("./downloaded-fonts/Archivo-Black.css");
 @import url("./downloaded-fonts/Courier-Prime.css");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -256,7 +265,7 @@ h3, h4, h5, h6 {
 pre > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
 pre {

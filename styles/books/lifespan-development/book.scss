@@ -22,8 +22,7 @@ $bandColor: #DCB83D;
 @include add_settings((
   ExercisesModule: (
     _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-check-understanding-container',
-                 '.os-eoc.os-reflection-questions-container', '.os-eoc.os-media-questions-container',
-                 '.os-eoc.os-thought-provokers-container', '.os-eoc.os-case-study-container'),
+                 '.os-eoc.os-personal-application-container', '.os-eoc.os-essay-questions-container'),
     'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemNumber:::width': 2%,
     'ProblemNumber:::text-align': right,
@@ -39,29 +38,14 @@ $bandColor: #DCB83D;
         'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
         'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/carnival-linktolearning.svg")) no-repeat top left,
     ),
-    WhatHeard: (
-        _selectors: ('.what-heard'),
-        'Container:::box-decoration-break': slice,
-        'Title:::color': (_ref: 'colorMap:::fontBodyColor'),
-        'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
-        'Title:::border-color': (_ref: 'colorMap:::iconnedNoteBorderColorGreen'),
-        'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/cosmos-debate.svg")) no-repeat bottom left,
-        'TitleIcon:::height': v-spacing(4),
-        'TitleIcon:::width': v-spacing(4),
-        'TitleIcon:::bottom': -0.7rem,
-        'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
-        'Body:::border-color': (_ref: 'colorMap:::iconnedNoteBorderColorGreen'),
-        'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
-        'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
-    ),
     ItDepends: (
       _selectors: ('.it-depends'),
       'Title:::color': (_ref: 'colorMap:::boxedNoteTitleColor'),
       'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
-      'Title:::background-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption4Color'),
+      'Title:::background-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption1Color'),
       'Title:::border-color': (_ref: 'colorMap:::boxedNoteTitleBorderColor'),
       'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
-      'Body:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption4Color'),
+      'Body:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption1Color'),
       'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
       'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
     ),
@@ -90,11 +74,25 @@ $bandColor: #DCB83D;
     ),
 ));
 
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="page"] section.learning-objectives'),
+    'H3ObjectivesTitle:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
 @include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
+@include use('CenteredText', 'common:::CenteredTextShape');
 
 // Titles
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
@@ -130,7 +128,6 @@ $bandColor: #DCB83D;
 
 // Notes
 @include use('LinkToLearning', 'cosmos:::CondensedIconNoteShape');
-@include use('WhatHeard', 'cosmos:::IconnedNoteWithSubtitleShape');
 @include use('ItDepends', 'cosmos:::BoxedNoteWithSubtitleShape');
 @include use('IntersectionsContexts', 'cosmos:::BoxedNoteWithSubtitleShape');
 @include use('LifeHacks', 'cosmos:::BoxedNoteWithSubtitleShape');
@@ -138,7 +135,6 @@ $bandColor: #DCB83D;
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
-@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
 
 // Eob

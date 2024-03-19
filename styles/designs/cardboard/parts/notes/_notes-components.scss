@@ -143,7 +143,7 @@ $Notes--BoxedWithBorders__Title: (
         padding: v-spacing(1),
         border-top-width: 0.33rem,
         border-top-style:solid,
-        border-top-color: enum('ValueSet:::REQUIRED'), 
+        border-top-color: enum('ValueSet:::REQUIRED'),
         border-right-width: 0.08rem,
         border-right-style: solid,
         border-right-color: enum('ValueSet:::REQUIRED'),
@@ -151,6 +151,7 @@ $Notes--BoxedWithBorders__Title: (
         border-left-style: solid,
         border-left-color: enum('ValueSet:::REQUIRED'),
         box-decoration-break: slice,
+        position: relative, // necessary for icons
     )
 );
 

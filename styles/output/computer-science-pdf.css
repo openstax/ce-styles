@@ -4,11 +4,15 @@
 @import url("./downloaded-fonts/IBM-Plex-Sans.css");
 @import url("./downloaded-fonts/Dosis.css");
 @import url("./downloaded-fonts/Courier-Prime.css");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -256,7 +265,7 @@ h3, h4, h5, h6 {
 pre > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
 pre {
@@ -1287,6 +1296,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-right: 8px;
 }
 
+.os-lab-assessments-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .os-lab-assessments-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -1381,6 +1394,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 
 .os-thought-provokers-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-thought-provokers-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-thought-provokers-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
@@ -1479,6 +1496,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-right: 8px;
 }
 
+.os-problem-set-b-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .os-problem-set-b-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -1573,6 +1594,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 
 .os-problem-set-a-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-problem-set-a-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-problem-set-a-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
@@ -1671,6 +1696,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-right: 8px;
 }
 
+.os-practice-exercises-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .os-practice-exercises-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -1767,6 +1796,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-right: 8px;
 }
 
+.os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
+}
+
 .os-conceptual-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
@@ -1861,6 +1894,10 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 
 .os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
+  margin: 0;
 }
 
 .os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
@@ -2042,6 +2079,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 .os-figure.has-splash > .os-caption-container {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
+  line-height: 1rem;
 }
 
 .os-figure.has-splash > .os-caption-container > .os-title-label {
@@ -3805,7 +3843,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
   font-size: 1.728rem;
-  line-height: 1.5rem;
+  line-height: 1.728rem;
   position: relative;
   top: 26rem;
   flex-direction: row;
@@ -3842,6 +3880,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   position: relative;
   margin-left: 4rem;
   top: -2.5rem;
+  width: 5.5in;
 }
 
 [data-type=chapter] > h1 > .os-number {

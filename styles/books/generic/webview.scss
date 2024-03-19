@@ -176,32 +176,42 @@
     ),
 ));
 
-//Code
-@include add_settings((
-    Code: (
-        _selectors: ('[data-type="code"]'),
-        'Code:::font-family': (_ref: 'typography:::fontOption2'),
-    ),
-    BlueCode: (
-        _selectors: ('[data-type="code"].blue-code'),
-        'CodeWithColor:::color': (_ref: 'colorMap:::BlueCode'),
-    ),
-    RedCode: (
-        _selectors: ('[data-type="code"].red-code'),
-        'CodeWithColor:::color': (_ref: 'colorMap:::RedCode'),
-    ),
-));
+
+
+// Code Colors
 
 @include add_settings((
-    CodeBlock: (
-        _selectors: ('pre[data-type="code"]'),
+    CodeComment: (
+        _selectors: ('.hljs-comment'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
     ),
-    CenteredCodeBlock: (
-        _selectors: ('pre[data-type="code"].centered-code'),
-        'CodeBlockCentered:::color': (_ref: 'colorMap:::baseColor'),
+    CodeKeyword: (
+        _selectors: ('.hljs-keyword'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonKeywordColor'),
     ),
-    InlinePre: (
-      _selectors: ('pre[data-type="code"].inline-code'),
+    CodeFunction: (
+        _selectors: ('.hljs-function'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonFunctionColor'),
+    ),
+    CodeTitle: (
+        _selectors: ('.hljs-title'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonTitleColor'),
+    ),
+    CodeParams: (
+        _selectors: ('.hljs-params'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonParamsColor'),
+    ),
+    CodeString: (
+        _selectors: ('.hljs-string'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonStringColor'),
+    ),
+    CodeBuildIn: (
+        _selectors: ('.hljs-built_in'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonBuiltInColor'),
+    ),
+    CodeNumber: (
+        _selectors: ('.hljs-number'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonNumberColor'),
     ),
 ));
 
@@ -381,6 +391,18 @@
     ),
 ));
 
+@include add_settings((
+    ColumnsFromTable: (
+        _selectors: (".os-table"),
+    )
+));
+
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container", ".os-reference-container"),
+  ),
+));
+
 // Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
@@ -412,13 +434,19 @@
 @include use('Table', 'webview:::TableShape');
 // Blockquote
 @include use('Blockquote', 'webview:::BlockquoteShape');
-// Code
-@include use('Code', 'webview:::CodeShape');
-@include use('RedCode', 'webview:::CodeWithColorShape');
-@include use('BlueCode', 'webview:::CodeWithColorShape');
-@include use('CodeBlock', 'webview:::CodeBlockShape');
-@include use('CenteredCodeBlock', 'webview:::CodeBlockCenteredShape');
-@include use('InlinePre', 'webview:::CodeInlinePreShape');
+
+// Code Snippets
+@include use('CodeComment', 'common:::ColoredText');
+@include use('CodeComment', 'common:::ItalicTextShape');
+@include use('CodeKeyword', 'common:::ColoredText');
+@include use('CodeFunction', 'common:::ColoredText');
+@include use('CodeTitle', 'common:::ColoredText');
+@include use('CodeParams', 'common:::ColoredText');
+@include use('CodeString', 'common:::ColoredText');
+@include use('CodeBuildIn', 'common:::ColoredText');
+@include use('CodeNumber', 'common:::ColoredText');
+@include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
+
 // Functions
 @include use('Function', 'webview:::FunctionShape');
 @include use('PrimaryFunction', 'webview:::FunctionPrimaryShape');
@@ -455,13 +483,38 @@
 @include use('PurpleColoredText', 'webview:::ColoredText');
 @include use('BlueColoredText', 'webview:::ColoredText');
 
-// EOC
-@include use('WorksCited', 'webview:::ModuleWithIndentationShape');
-@include use('SectionWorksCited', 'webview:::ModuleWithIndentationShape');
-@include use('FurtherReading', 'webview:::ModuleWithIndentationShape');
+//Columns
+@include use('ColumnsFromTable', 'webview:::ColumnsShape');
+
+// Modules
+@include use('WorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('SectionWorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('ModuleWithIndentation', 'webview:::ModuleWithIndentationShape');
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
 @include use('AnswerKey', 'webview:::AnswerKeyShape');
 @include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
 @include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
+
+// Icons
+$icons: (
+  "linguistic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg"),
+  "culture-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg"),
+  "visual-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg"),
+  "speech-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg"),
+  "auditory-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg"),
+  "kinesthetic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg"),
+  "dreaming-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")
+);
+
+@each $class, $svg in $icons {
+  @include add_settings((
+    Icon: (
+      _selectors: 'span.#{$class}',
+      'InlineIcon:::background-image': url($svg),
+    )
+  ));
+  @include use('Icon', 'webview:::InlineIconShape');
+}

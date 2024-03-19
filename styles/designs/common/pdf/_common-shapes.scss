@@ -32,6 +32,12 @@
     ),
 ));
 
+@include create-shape('common:::ItalicTextShape', (
+    _components: (
+      $ItalicText__Container,
+    ),
+));
+
 @include create_shape('common:::CalculatorButtonShape', (
   _components: (
       $Calculator__Button
@@ -51,3 +57,12 @@
   ),
 ));
 
+@include create_shape('common:::CodeSnippetLineNumbersShape', (
+  _components: (
+        map-merge($CodeSnippet__Container, (
+            _components: (
+              $CodeSnippet__LineNumbers--Code,
+              $CodeSnippet__LineNumbers,
+        )),
+    )),
+  ));

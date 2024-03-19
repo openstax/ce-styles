@@ -358,3 +358,11 @@ $Table__Strong: (
         word-break: break-word,
     )
 );
+
+$Table__Column--NotLastChild: (
+    _name: "TableColumnNotLastChild",
+    _subselector: " col:not(:last-child)",
+    _properties: (
+        border-right: enum('ValueSet:::REQUIRED'),
+    )
+);
