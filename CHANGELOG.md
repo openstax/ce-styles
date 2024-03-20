@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Fix `number spacing in exercises` in `microbiology`
+* Fix `alignment in exercises` in `nursing-internal`
 * Change note title color in `ap-biology`
 * Style exercise with problem title on `webview`
 
