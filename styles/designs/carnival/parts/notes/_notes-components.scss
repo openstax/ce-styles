@@ -244,7 +244,7 @@ $Note--Icon__Title__Div: (
   _name: "DivSubtitle",
   _subselector: " div:not([class]) > [data-type='title'], div[data-type='title']",
   _properties: (
-    font-family: enum('ValueSet:::OPTIONAL'),
+    font-family: "Mulish, sans-serif", //too many places where it's  optional to fix now, TODO: fix later
     font-size: font-scale(1),
     line-height: line-height(1),
     font-weight: 500,
