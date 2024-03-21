@@ -2487,11 +2487,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
+[data-type=page] > section > ol > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ol > li > ul > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > ol > li > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ol > li > ul {
+[data-type=page] > section > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ol > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -2503,7 +2541,45 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -2526,7 +2602,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2549,7 +2625,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2576,7 +2652,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2599,7 +2675,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2626,7 +2702,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2649,7 +2725,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2676,7 +2752,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -2699,7 +2775,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
@@ -3059,11 +3135,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -3071,11 +3185,49 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
+[data-type=note] > div > ol > li > ul {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=note] > div > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ol > li > ul > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=note] > div > ol > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ol > li > ul {
+[data-type=note] > div > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+}
+
+[data-type=note] > div > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ol > li > ol > li > ol {
   margin-left: 24px;
 }
 
