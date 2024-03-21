@@ -103,14 +103,50 @@
                     _components: (
                         map-merge($UnorderedList--FirstLevel, (
                             _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
+                                map-merge($UnorderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
                             )
                         )),
                         map-merge($OrderedList--FirstLevel, (
                             _components: (
-                                $OrderedList--SecondLevel,
-                                $UnorderedList--SecondLevel,
+                                map-merge($UnorderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
                             )
                         )),
                         $UnorderedList--FromLastChild,
