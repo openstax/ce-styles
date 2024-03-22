@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style lists from `question-solution` in `carnival`
 * Style more third level lists in `carnival`
 * Standardize notes titles in `carnival` and `cosmos`
 * Fix `number spacing in exercises` in `microbiology`
