@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `number spacing in exercises` in `biology` and `ap-biology`
+
 ## [v1.148.0] - 2024-03-22
 
 * Style lists from `question-solution` in `carnival`
