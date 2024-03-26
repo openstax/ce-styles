@@ -111,14 +111,20 @@ $ChapterIntroType: side;
   VisualExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-visual-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   CriticalThinking: (
     _selectors: ("[data-type = 'chapter'] > .os-critical-thinking-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
 ));
 
