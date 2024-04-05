@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.149.0]
+## [v1.149.0] - 2024-04-05
 
 * Fix `number spacing in exercises` in `biology` and `ap-biology`
 
