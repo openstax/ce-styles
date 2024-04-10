@@ -2955,6 +2955,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
+.os-table.os-vertically-tight-container > table.vertically-tight > thead > tr > th {
+  padding-top: 0.16rem !important;
+  padding-bottom: 0.16rem !important;
+}
+
+.os-table.os-vertically-tight-container > table.vertically-tight > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
+  padding-top: 0.16rem !important;
+  padding-bottom: 0.16rem !important;
+}
+
 .os-glossary-container {
   margin-bottom: 1.4rem;
 }
