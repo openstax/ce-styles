@@ -47,6 +47,14 @@ $bandColor: #24739E;
     ),
 ));
 
+// Code colored text
+@include add_settings((
+  GreenCodeColoredText: (
+    _selectors: (".green-code"),
+    "ColoredTextContainer:::color": (_ref: "colorMap:::codeGreenColor"),
+  )
+));
+
 //Titles
 @include add_settings((
   ChapterTitles: (
@@ -245,6 +253,9 @@ $bandColor: #24739E;
 @include use('CodeString', 'common:::ColoredText');
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
+
+// Code colored text
+@include use("GreenCodeColoredText", "common:::ColoredText");
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
