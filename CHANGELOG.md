@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 * Increase header row padding in `nursing-internal` pdf and webview
 * Style `vertically-tight` tables in `information-systems`
+* Increase header row padding in `nursing-internal` pdf and webview
 
 ## [v1.149.0] - 2024-04-05
 
