@@ -1906,6 +1906,20 @@ a:hover {
   text-align: right;
 }
 
+.os-table table tbody > tr.header-row > td {
+  border-top-color: black;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-weight: 700;
+  padding-left: table-h-spacing(1);
+  padding-right: table-h-spacing(1);
+}
+
 .os-table table tbody > tr > td:not(.hljs-ln-numbers, .hljs-ln-code) {
   border-width: 0.1rem;
   border-style: solid;
