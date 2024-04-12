@@ -215,6 +215,14 @@
     ),
 ));
 
+// Code colored text
+@include add_settings((
+  GreenCodeColoredText: (
+    _selectors: (".green-code"),
+    "ColoredTextContainer:::color": (_ref: "colorMap:::codeGreenColor"),
+  )
+));
+
 //Functions
 @include add_settings((
     Function: (
@@ -446,6 +454,9 @@
 @include use('CodeBuildIn', 'common:::ColoredText');
 @include use('CodeNumber', 'common:::ColoredText');
 @include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
+
+// Code Colored Text
+@include use('GreenCodeColoredText', 'webview:::ColoredText');
 
 // Functions
 @include use('Function', 'webview:::FunctionShape');
