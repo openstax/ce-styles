@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style exercises in `unfolding-casestudy` note in `nursing-internal`
 * Style `green-code` in `data-science` and on `webview`
 * Style `vertically-tight` tables in `information-systems`
 

@@ -3687,6 +3687,102 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
 }
 
+.unfolding-casestudy [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] {
+  display: table;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+  min-width: 24px;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+.unfolding-casestudy [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] {
+  margin-bottom: 0.7rem;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] {
+  display: table;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+  min-width: 24px;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 8px;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
+  display: inline;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
