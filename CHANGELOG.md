@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change styles for `eoc` in `information-systems`
 * Decrease `lo` title size in `cardboard`
 * Style `green-code` in `data-science` and on `webview`
 * Style `vertically-tight` tables in `information-systems`
