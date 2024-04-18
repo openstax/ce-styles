@@ -216,6 +216,14 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  UnfoldingCaseStudyExercise: (
+    _selectors: ( '.unfolding-casestudy' ),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::text-align': right,
+    ),
+));
+
+@include add_settings((
   AppendixGlossary: (
     _selectors: (".appendix > .column-container"),
     'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::nursingHeaderColor"),
@@ -293,6 +301,9 @@ $ChapterIntroType: fullWidth;
 @include use('ClinicalJudgmentNote', 'carnival:::BoxedNoteShape');
 @include use('ElectronicHrNote', 'carnival:::IconNoteShape');
 @include use('PsychosocialConsiderationsNote', 'carnival:::IconNoteShape');
+
+// Exercise in Note
+@include use('UnfoldingCaseStudyExercise','carnival:::ExercisesModuleShape');
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
