@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style exercises in `unfolding-casestudy` note in `nursing-internal`
+* Change `future-tech` note color in `information-systems`
+* Change styles for `eoc` in `information-systems`
 * Style `green-code` in `data-science` and on `webview`
 * Style `vertically-tight` tables in `information-systems`
+* Fix `number spacing in exercises` in `neuroscience`
 
 ## [v1.149.0] - 2024-04-05
 

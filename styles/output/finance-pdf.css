@@ -1142,32 +1142,32 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 8px;
 }
 
-[data-type=page] .learning-objectives > h3[data-type=title] {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > h3[data-type=title] {
   color: #24739E;
   font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-[data-type=page] .learning-objectives > p:first-of-type {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > p:first-of-type {
   margin: 0;
 }
 
-[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) > li {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=page] .learning-objectives > ol {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol {
   margin-left: 24px;
 }
 
-[data-type=page] .learning-objectives > ol > li {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol > li {
   max-width: 5.9in;
 }
 
