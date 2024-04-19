@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `table columns` in `nursing-internal`
+* Increase header row padding in `nursing-internal` pdf and webview
+* Style exercises in `unfolding-casestudy` note in `nursing-internal`
 * Change `future-tech` note color in `information-systems`
 * Change styles for `eoc` in `information-systems`
 * Style `green-code` in `data-science` and on `webview`
