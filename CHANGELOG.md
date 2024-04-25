@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Move `additive manufacturing` out of archived styles
+
 ## [v1.150.0] - 2024-04-19
 
 * Style `table columns` in `nursing-internal`
