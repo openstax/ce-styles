@@ -1,6 +1,3 @@
-// ARCHIVED ON SPRINT myopic.mint
-// NO LONGER IN PRODUCTION
-
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
@@ -18,13 +15,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'ChapterSplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
-    'ChapterSplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
@@ -45,29 +35,14 @@ $bandColor: #093D4C;
   ),
 ));
 
-@include add_settings((
-    ExercisesProblemLists: (
-        _selectors: ('[data-type="problem"]'),
-    ),
-    InjectedQuestionLists: (
-        _selectors: ('[data-type="exercise-question"]'),
-    ),
-    ExercisesSolutionLists: (
-      _selectors: ('[data-type="solution"]'),
-    ),
-));
-
-
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
-@include use('ChapterObjectives', 'corn:::ChapterObjectivesShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Example', 'corn:::ExampleShape');
 @include use('Index', 'corn:::IndexShape');
 
 //Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
 
 //Figures
@@ -104,9 +79,6 @@ $bandColor: #093D4C;
 
 //Lists
 @include use('PageLists', 'corn:::PageListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 
@@ -115,6 +87,5 @@ $bandColor: #093D4C;
 @include use('ReviewQuestions', 'corn:::ExercisesModuleShape'); // one column
 @include use('CaseQuestions', 'corn:::ExercisesModuleShape'); // one column
 @include use('DiscussionQuestions', 'corn:::ExercisesModuleShape'); // one column
-@include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
