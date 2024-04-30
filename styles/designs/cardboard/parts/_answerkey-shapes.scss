@@ -31,3 +31,28 @@
       )),
     )
 ));
+
+@include create_shape('cardboard:::AnswerKeySolutionMultipartShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              map-merge($Exercise__Solution__Container, (
+                  _components: (
+                    $Exercise__ProblemSolution__Para,
+                    map-merge($InjectedExercise__Solution__Part,(
+                        _components:(
+                            $InjectedExercise__ProblemSolution__Letter,
+                            $Exercise__ProblemSolution__Divider,
+                            $Exercise__Solution__Container,
+                            $Exercise__Solution__Container--WithFirstElement,
+                        ),
+                    )),
+                  )
+              )),
+              $Exercise__Solution__Container--WithFirstElement,
+          )
+      )),
+    )
+));
