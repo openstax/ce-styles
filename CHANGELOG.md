@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.151.0] - 2024-05-03
+
 * Bake `multipart-question` in `data-science`
 * Fix exercise number alignment in `data-science`
 * Fix wrapping of `code` element
