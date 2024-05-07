@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change styles for python `code` in `data-science`
+
 ## [v1.151.0] - 2024-05-03
 
 * Bake `multipart-question` in `data-science`

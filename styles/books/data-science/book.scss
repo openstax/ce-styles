@@ -15,7 +15,7 @@ $bandColor: #24739E;
 @include add_settings((
     CodeComment: (
         _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeCommentColor'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
     ),
     CodeKeyword: (
         _selectors: ('.hljs-keyword'),
@@ -250,6 +250,7 @@ $bandColor: #24739E;
 
 // Code
 @include use('CodeComment', 'common:::ColoredText');
+@include use('CodeComment', 'common:::ItalicTextShape');
 @include use('CodeKeyword', 'common:::ColoredText');
 @include use('CodeFunction', 'common:::ColoredText');
 @include use('CodeTitle', 'common:::ColoredText');
