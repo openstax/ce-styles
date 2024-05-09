@@ -9,7 +9,11 @@
         $UnorderedList--NotesQuestionSection,
         map-merge($CircledList,(
             _components: (
-                $CircledList__Item
+                map-merge($CircledList__Item,(
+                    _components: (
+                        $CircledList__Token,
+                    )
+                )),
             )
         )),
         map-merge($Appendix__Wrapper, (

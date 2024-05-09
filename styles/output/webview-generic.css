@@ -380,13 +380,16 @@ ul.critical-thinking {
 
 .circled {
   list-style-type: none;
-  display: inline;
-  padding-right: 0.5rem;
 }
 
 .circled > li {
+  position: relative;
+  left: -2rem;
+}
+
+.circled > li > .token {
   padding-right: 0.5rem;
-  display: inline-block;
+  vertical-align: baseline;
 }
 
 .appendix [data-type=list] {

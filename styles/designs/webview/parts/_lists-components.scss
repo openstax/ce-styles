@@ -130,8 +130,6 @@ $CircledList: (
     _subselector: ".circled",
     _properties:(
         list-style-type: none,
-        display: inline,
-        padding-right: .5rem,
     )
 );
 
@@ -139,8 +137,17 @@ $CircledList__Item: (
     _name: "CircledListItem",
     _subselector: " > li",
     _properties:(
+        position: relative,
+        left: -2rem,
+    )
+);
+
+$CircledList__Token: (
+    _name: "CircledListToken",
+    _subselector: " > .token",
+    _properties:(
         padding-right: .5rem,
-        display: inline-block,
+        vertical-align: baseline
     )
 );
 
