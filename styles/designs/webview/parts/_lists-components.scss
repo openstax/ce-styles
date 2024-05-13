@@ -125,6 +125,32 @@ $StepwiseList__NestedList--Ordered: (
     )
 );
 
+$CircledList: (
+    _name: "CircledList",
+    _subselector: ".circled",
+    _properties:(
+        list-style-type: none,
+    )
+);
+
+$CircledList__Item: (
+    _name: "CircledListItem",
+    _subselector: " > li",
+    _properties:(
+        position: relative,
+        left: -2rem,
+    )
+);
+
+$CircledList__Token: (
+    _name: "CircledListToken",
+    _subselector: " > .token",
+    _properties:(
+        padding-right: .5rem,
+        vertical-align: 'baseline !important'
+    )
+);
+
 $OrderedList--InTable: (
   _name: "OrderedListInTable",
   _subselector: ' ol',
