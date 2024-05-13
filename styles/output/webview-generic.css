@@ -378,6 +378,25 @@ ul.critical-thinking {
   border-top-color: #dcdcdc;
 }
 
+.circled {
+  list-style-type: none;
+}
+
+.circled > li {
+  position: relative;
+  left: -2rem;
+}
+
+.circled > li > .token {
+  padding-right: 0.5rem;
+  vertical-align: baseline !important;
+}
+
+p > .token {
+  padding-right: 0.5rem;
+  vertical-align: baseline !important;
+}
+
 .appendix [data-type=list] {
   margin-top: 1rem;
 }
