@@ -1,0 +1,28 @@
+@import './columns-components';
+
+@include create_shape('cardboard:::ColumnsShape',(
+    _components: (
+        map-merge($Columns__Container, (
+            _components:(
+                $Columns--TwoColumnsTwoRatioOne,
+                $Columns--TwoColumnsFourRatioOne,
+                $Columns--TwoColumnsFourRatioThree,
+                $Columns--TwoColumnsFiveRatioTwo,
+                $Columns--TwoColumnsFiveRatioThree,
+                $Columns--ThreeColumnsThreeRatioOne,
+                $Columns--ThreeColumnsFourRatioOne,
+                $Columns--ThreeColumnsFourRatioTwo,
+                $Columns--ThreeColumnsSixRatioOne,
+                $Columns--ThreeColumnsSixRatioTwo,
+                $Columns--ThreeColumnsSixRatioThree,
+                $Columns--FourColumnsFourRatioOne,
+                $Columns--FourColumnsSixRatioOne,
+                $Columns--FourColumnsSixRatioThree,
+                $Columns--FourColumnsEightRatioOne,
+                $Columns--FourColumnsEightRatioTwo,
+                $Columns--FourColumnsEightRatioThree,
+                $Columns--FiveColumnsFiveRatioOne,
+            ),
+        )),
+    )
+));
