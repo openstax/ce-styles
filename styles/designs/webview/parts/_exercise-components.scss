@@ -66,9 +66,11 @@ $Exercise__ProblemSolution__Divider--FromMultipartQuestion:(
   )
 );
 
-$Exercise__Problem__Container: (
+$Exercise__Problem__Container: empty_wrapper(ExerciseProblemContainer, '> .os-problem-container');
+
+$Exercise__Problem__Container--Numbered: (
     _name: "NumberedProblemContainer",
-    _subselector: " > .os-problem-container",
+    _subselector: " > .os-number ~ .os-problem-container",
     _properties:(
       display: table-cell,
     )
