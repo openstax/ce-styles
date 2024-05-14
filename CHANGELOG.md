@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix footnote styling on `webview`
 * Add styles for table columns to `cardboard`
 * Style `circled list` on `webview`
 * Change styles for `python-feature` in `data-science`
