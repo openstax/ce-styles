@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add border to tables headers in `cardboard`
 * Fix footnote styling on `webview`
 * Add styles for table columns to `cardboard`
 * Style `circled list` on `webview`
