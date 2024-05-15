@@ -24,6 +24,15 @@ $Footnote__Content--Before: (
   ),
 );
 
+$Footnote__List: (
+  _name: "FootnoteList",
+  _subselector: ' ul',
+  _properties: (
+    list-style: none,
+    line-height: 2.5rem,
+  )
+);
+
 $Footnote--Class: (
   _name: "FootnoteClass",
   _subselector: ' .footnote',
