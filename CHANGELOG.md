@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix font for code colored text in `data-science`
 * Add border to tables headers in `cardboard`
 * Fix footnote styling on `webview`
 * Add styles for table columns to `cardboard`
