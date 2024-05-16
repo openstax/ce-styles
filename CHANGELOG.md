@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix styles for unnumbered exercises on `webview`
+* Remove redundant `webview` exercise styling/styles that point to nowhere
 * Add border to tables headers in `cardboard`
 * Fix footnote styling on `webview`
 * Add styles for table columns to `cardboard`
