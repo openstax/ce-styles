@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `equations` on `webview`
 * Fix font for code colored text in `data-science`
 
 ## [v1.152.0] - 2024-05-17

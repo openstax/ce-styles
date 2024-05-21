@@ -4,7 +4,9 @@ $Equation__Container: (
   _properties: (
     overflow: 'auto !important',
     width: 100%,
-    display: table,
+    display: flex,
+    align-items: center,
+    justify-content: center,
   ),
 );
 
@@ -12,7 +14,6 @@ $Equation__Number__Container: (
   _name: "EquationNumberContainer",
   _subselector: ' .os-equation-number',
   _properties: (
-    display: table-cell,
     width: 5%,
     vertical-align: middle,
   ),
