@@ -6,7 +6,7 @@ $Equation__Container: (
     width: 100%,
     display: flex,
     align-items: center,
-    justify-content: center,
+    justify-content: space-between,
   ),
 );
 
@@ -16,6 +16,17 @@ $Equation__Number__Container: (
   _properties: (
     width: 5%,
     vertical-align: middle,
+    margin-left: 1em,
+  ),
+);
+
+$Equation__MathJax: (
+  _name: "EquationMathJax",
+  _subselector: ' > .MathJax_Display',
+  _properties: (
+    min-width: 'auto !important',
+    min-height: 'auto !important',
+    width: 'auto !important',
   ),
 );
 

@@ -1616,7 +1616,7 @@ a[data-type=cite] {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .equation [data-type=title] {
@@ -1628,6 +1628,7 @@ a[data-type=cite] {
 .equation .os-equation-number {
   width: 5%;
   vertical-align: middle;
+  margin-left: 1em;
 }
 
 .equation .os-equation-number .os-number {
@@ -1639,12 +1640,18 @@ a[data-type=cite] {
   vertical-align: middle;
 }
 
+.equation > .MathJax_Display {
+  min-width: auto !important;
+  min-height: auto !important;
+  width: auto !important;
+}
+
 [data-type=equation] {
   overflow: auto !important;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 [data-type=equation] [data-type=title] {
@@ -1656,6 +1663,7 @@ a[data-type=cite] {
 [data-type=equation] .os-equation-number {
   width: 5%;
   vertical-align: middle;
+  margin-left: 1em;
 }
 
 [data-type=equation] .os-equation-number .os-number {
@@ -1665,6 +1673,12 @@ a[data-type=cite] {
   border-width: 1px;
   text-align: center;
   vertical-align: middle;
+}
+
+[data-type=equation] > .MathJax_Display {
+  min-width: auto !important;
+  min-height: auto !important;
+  width: auto !important;
 }
 
 p.annotation-text {
