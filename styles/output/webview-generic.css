@@ -1611,25 +1611,32 @@ a[data-type=cite] {
   line-height: 2.5rem;
 }
 
-.equation {
+[data-type=equation].unnumbered {
   overflow: auto !important;
   width: 100%;
-  display: table;
 }
 
-.equation [data-type=title] {
+[data-type=equation]:not(.unnumbered) {
+  overflow: auto !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[data-type=equation]:not(.unnumbered) [data-type=title] {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.equation .os-equation-number {
-  display: table-cell;
+[data-type=equation]:not(.unnumbered) .os-equation-number {
   width: 5%;
   vertical-align: middle;
+  margin-left: 1em;
 }
 
-.equation .os-equation-number .os-number {
+[data-type=equation]:not(.unnumbered) .os-equation-number .os-number {
   padding: 5px;
   border-color: #000;
   border-style: solid;
@@ -1638,31 +1645,10 @@ a[data-type=cite] {
   vertical-align: middle;
 }
 
-[data-type=equation] {
-  overflow: auto !important;
-  width: 100%;
-  display: table;
-}
-
-[data-type=equation] [data-type=title] {
-  display: block;
-  font-weight: bold;
-  text-align: center;
-}
-
-[data-type=equation] .os-equation-number {
-  display: table-cell;
-  width: 5%;
-  vertical-align: middle;
-}
-
-[data-type=equation] .os-equation-number .os-number {
-  padding: 5px;
-  border-color: #000;
-  border-style: solid;
-  border-width: 1px;
-  text-align: center;
-  vertical-align: middle;
+[data-type=equation]:not(.unnumbered) > .MathJax_Display {
+  min-width: auto !important;
+  min-height: auto !important;
+  width: auto !important;
 }
 
 p.annotation-text {
