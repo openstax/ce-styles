@@ -32,6 +32,7 @@ $UnorderedList--SecondLevel: (
     _subselector: " > li > ul",
     _properties:(
         margin-left: h-spacing(3),
+        margin-bottom: 0,
     )
 );
 
@@ -40,6 +41,7 @@ $OrderedList--SecondLevel: (
     _subselector: " > li  > ol",
     _properties:(
         margin-left: h-spacing(3),
+        margin-bottom: 0,
     )
 );
 
@@ -50,6 +52,7 @@ $UnorderedList--ThirdLevel: (
         padding-left: h-spacing(3),
         list-style-type: none,
         position: relative,
+        margin-bottom: 0,
     )
 );
 
@@ -58,6 +61,7 @@ $OrderedList--ThirdLevel: (
     _subselector: " > li > ol",
     _properties:(
         margin-left: h-spacing(3),
+        margin-bottom: 0,
     )
 );
 
