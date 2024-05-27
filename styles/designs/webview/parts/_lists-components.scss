@@ -8,6 +8,15 @@ $UnorderedList: (
   )
 );
 
+$UnorderedList--Nested: (
+  _name: 'UnorderedListNested', 
+  _subselector: ' ul',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
+  )
+);
+
 $OrderedList: (
   _name: 'OrderedList', 
   _subselector: ' ol',
@@ -15,6 +24,15 @@ $OrderedList: (
     margin-top: 1rem,
     margin-bottom: 1rem,
     color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$OrderedList--Nested: (
+  _name: 'OrderedListNested', 
+  _subselector: ' ol',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
   )
 );
 
