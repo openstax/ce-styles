@@ -1022,39 +1022,6 @@ a:hover {
   display: none;
 }
 
-[data-type=exercise] .solution {
-  padding: 0.5em 1em;
-  border-top-width: 0.1rem;
-  border-top-color: #dcdcdc;
-  border-top-style: solid;
-}
-
-[data-type=exercise] .solution .btn-link {
-  color: #21366b;
-  font-weight: 400;
-  border-radius: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
-}
-
-[data-type=exercise] .solution > .ui-toggle {
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  list-style: none;
-  cursor: pointer;
-}
-
-[data-type=exercise] .solution > .ui-toggle::before {
-  content: "[Show/Hide Solution]";
-}
-
-[data-type=exercise] .solution > summary.ui-toggle::-webkit-details-marker {
-  display: none;
-}
-
 [data-type=exercise].has-problem-title .os-problem-container {
   display: initial;
 }
