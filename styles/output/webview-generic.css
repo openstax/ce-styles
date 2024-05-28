@@ -548,7 +548,7 @@ a:hover {
   color: #005481;
 }
 
-[data-type=note] {
+[data-type=note]:not(.reference) {
   margin: 3rem 0;
   border-style: solid;
   border-width: 0.2rem;
@@ -556,7 +556,7 @@ a:hover {
   background-color: #ededed;
 }
 
-[data-type=note] > [data-type=title] {
+[data-type=note]:not(.reference) > [data-type=title] {
   display: block;
   margin: 0 1.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -570,7 +570,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-[data-type=note] > header > [data-type=title] {
+[data-type=note]:not(.reference) > header > [data-type=title] {
   display: block;
   margin: 0 1.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -584,7 +584,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-[data-type=note] > .title {
+[data-type=note]:not(.reference) > .title {
   display: block;
   margin: 0 1.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -598,7 +598,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-[data-type=note] > header > .title {
+[data-type=note]:not(.reference) > header > .title {
   display: block;
   margin: 0 1.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -612,7 +612,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-[data-type=note] > header > .os-title {
+[data-type=note]:not(.reference) > header > .os-title {
   display: block;
   margin: 0 1.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -626,11 +626,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-[data-type=note] [data-type=exercise]:first-of-type {
+[data-type=note]:not(.reference) [data-type=exercise]:first-of-type {
   margin-top: 1rem;
 }
 
-[data-type=note] > section {
+[data-type=note]:not(.reference) > section {
   padding: 0rem 3rem 1.5rem;
   border-top: none;
   background-color: #ededed;
@@ -638,16 +638,16 @@ a:hover {
   overflow-x: auto !important;
 }
 
-[data-type=note] > section span[data-type=media] {
+[data-type=note]:not(.reference) > section span[data-type=media] {
   display: inline-flex;
   margin: 1rem 0;
 }
 
-[data-type=note] > section > *:not(section):not(header):first-child {
+[data-type=note]:not(.reference) > section > *:not(section):not(header):first-child {
   margin-top: 1rem;
 }
 
-[data-type=note] > section > header {
+[data-type=note]:not(.reference) > section > header {
   margin-top: 3rem;
 }
 
