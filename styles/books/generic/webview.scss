@@ -104,7 +104,7 @@
 //Notes
 @include add_settings((
     Note: (
-        _selectors: ('[data-type="note"]', '.note', '[data-type="example"]', '.example'),
+        _selectors: ('[data-type="note"]:not(.reference)', '.note', '[data-type="example"]', '.example'),
         'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
         'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
         'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
@@ -252,6 +252,7 @@
 @include add_settings((
     References: (
         _selectors: (".os-eob", ".os-eoc"),
+        'ChapterAreaReference:::color': (_ref: 'colorMap:::baseColor'),
     ),
     ReferencesCiteLink: (
         _selectors: ('a[data-type="cite"]'),
