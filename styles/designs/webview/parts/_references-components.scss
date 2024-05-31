@@ -1,8 +1,15 @@
 $Reference__Container: empty_wrapper(ReferenceContainer, '.os-reference-container');
 $Reference__ChapterArea: empty_wrapper(ReferenceChapterArea, ' .os-chapter-area');
-$ChapterArea__Reference: empty_wrapper(ChapterAreaReference, ' > .reference');
 $References__Container: empty_wrapper(ReferencesContainer, '.os-references-container');
 $References: empty_wrapper(ReferencesSection, ' .references');
+
+$ChapterArea__Reference: (
+  _name: "ChapterAreaReference",
+  _subselector: ' > .reference',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
 
 $Reference__Number: (
   _name: "ReferenceNumber",

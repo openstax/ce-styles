@@ -3,8 +3,18 @@
 
 @include create_shape('webview:::ListsShape', (
     _components: (
-        $UnorderedList,
-        $OrderedList,
+        map-merge($UnorderedList, (
+            _components: (
+                $UnorderedList--Nested,
+                $OrderedList--Nested,
+            ),
+        )),
+        map-merge($OrderedList, (
+            _components: (
+                $UnorderedList--Nested,
+                $OrderedList--Nested,
+            ),
+        )),
         $UnorderedList--NumberedLearningObjectives,
         $UnorderedList--NotesQuestionSection,
         map-merge($CircledList,(
