@@ -60,7 +60,7 @@ $Columns--ThreeColumnsFourRatioTwo: (
 
 
 $Columns--ThreeColumnsFiveRatioOne: (
-    _name: "FourColumnsFourRatioOne",
+    _name: "ThreeColumnsFiveRatioOne",
     _subselector: " [data-columns='3'][data-ratio='1,2,2'] col[data-width='1*']",
     _properties: (
         width: column-width(3,5,1),
@@ -68,24 +68,23 @@ $Columns--ThreeColumnsFiveRatioOne: (
 );
 
 $Columns--ThreeColumnsFiveRatioTwo: (
-    _name: "FourColumnsFourRatioOne",
+    _name: "ThreeColumnsFiveRatioTwo",
     _subselector: " [data-columns='3'][data-ratio='1,2,2'] col[data-width='2*']",
     _properties: (
         width: column-width(3,5,2),
     )
 );
 
-$Columns--ThreeColumnsFiveRatioThree: (
-    _name: "FourColumnsFourRatioOne",
-    _subselector: " [data-columns='3'][data-ratio='1,2,2'] col[data-width='3*']",
+$Columns--ThreeColumnsSeventeenRatioOne: (
+    _name: "ThreeColumnsSeventeenRatioOne",
+    _subselector: " [data-columns='3'][data-ratio='1,8,8'] col[data-width='1*']",
     _properties: (
-        width: column-width(3,5,3),
+        width: column-width(3,17,1),
     )
 );
 
-
-$Columns--ThreeColumnsSeventeenRatioOne: (
-    _name: "ThreeColumnsSixRatioThree",
+$Columns--ThreeColumnsSeventeenRatioEight: (
+    _name: "ThreeColumnsSeventeenRatioEight",
     _subselector: " [data-columns='3'][data-ratio='1,8,8'] col[data-width='1*']",
     _properties: (
         width: column-width(3,17,1),
@@ -103,7 +102,7 @@ $Columns--FourColumnsFourRatioOne: (
 );
 
 $Columns--FourColumnsFiveRatioOne: (
-    _name: "FourColumnsFourRatioOne",
+    _name: "FourColumnsFiveRatioOne",
     _subselector: " [data-columns='4'][data-ratio='1,2,1,1'] col[data-width='1*']",
     _properties: (
         width: column-width(4,5,1),
@@ -111,20 +110,13 @@ $Columns--FourColumnsFiveRatioOne: (
 );
 
 $Columns--FourColumnsFiveRatioTwo: (
-    _name: "FourColumnsFourRatioOne",
+    _name: "FourColumnsFiveRatioTwo",
     _subselector: " [data-columns='4'][data-ratio='1,2,1,1'] col[data-width='2*']",
     _properties: (
         width: column-width(4,5,2),
     )
 );
 
-$Columns--FourColumnsFiveRatioThree: (
-    _name: "FourColumnsFourRatioOne",
-    _subselector: " [data-columns='4'][data-ratio='1,2,1,1'] col[data-width='3*']",
-    _properties: (
-        width: column-width(4,5,3),
-    )
-);
 
 $Columns--FourColumnsSixRatioOne: (
     _name: "FourColumnsSixRatioOne",
