@@ -104,7 +104,7 @@
 //Notes
 @include add_settings((
     Note: (
-        _selectors: ('[data-type="note"]', '.note', '[data-type="example"]', '.example'),
+        _selectors: ('[data-type="note"]:not(.reference)', '.note', '[data-type="example"]', '.example'),
         'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
         'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
         'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
@@ -125,7 +125,7 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
+        _selectors: ('[data-type="exercise"]'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
@@ -252,6 +252,7 @@
 @include add_settings((
     References: (
         _selectors: (".os-eob", ".os-eoc"),
+        'ChapterAreaReference:::color': (_ref: 'colorMap:::baseColor'),
     ),
     ReferencesCiteLink: (
         _selectors: ('a[data-type="cite"]'),
@@ -278,8 +279,11 @@
 
 //Equation
 @include add_settings((
-    Equation: (
-        _selectors: ('.equation', '[data-type="equation"]'),
+    EquationUnnumbered: (
+        _selectors: ('[data-type="equation"].unnumbered'),
+    ),
+    EquationNumbered: (
+        _selectors: ('[data-type="equation"]:not(.unnumbered)'),
         'EquationNumber:::border-color': (_ref: 'colorMap:::EquationNumberBorder'),
     ),
 ));
@@ -473,7 +477,8 @@
 // Footnote
 @include use('Footnote', 'webview:::FootnoteShape');
 // Equation
-@include use('Equation', 'webview:::EquationShape');
+@include use('EquationUnnumbered', 'webview:::EquationUnnumberedShape');
+@include use('EquationNumbered', 'webview:::EquationNumberedShape');
 // Annotations
 @include use('AnnotationText', 'webview:::AnnotationShape');
 @include use('PublicDomainText', 'webview:::AnnotationWithBorderShape');
