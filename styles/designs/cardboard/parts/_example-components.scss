@@ -71,3 +71,16 @@ $Example__SolutionTitle: (
         font-weight: bold,
     )
 );
+
+$Example__ProblemTitle: (
+    _name: "ExampleProblemTitle",
+    _subselector: ' h4[data-type="problem-title"]',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        padding-bottom: v-spacing(1),
+        font-weight: bold,
+    )
+);
