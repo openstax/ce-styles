@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add colwidth proportional values in `nursing-internal`
 * Change styles for `eob references` from `webview`
 * Remove margins from nested lists in `carnival` and on `webview` 
 * Fix `equations` on `webview`
