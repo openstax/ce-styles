@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add to carnival lists shape to style nested lists in `exercise questions`
+
 ## [v1.153.0] - 2024-06-03
 
 * Add colwidth proportional values in `nursing-internal`
