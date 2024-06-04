@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Add styles for problem title to cardboard `example` elements
+* Add margins to `iframes` on `webview`
 
 ## [v1.153.0] - 2024-06-03
 

@@ -61,6 +61,14 @@ $Media--InNote: (
   ),
 );
 
+$Media--WithIframe: (
+  _name: "MediaWithIframe",
+  _subselector: ' div[data-type="media"].os-embed',
+  _properties: (
+    margin: '3rem 0',
+  ),
+);
+
 $Image--AfterBold: (
     _name: "ImageAfterBold",
     _subselector: " b + img",
