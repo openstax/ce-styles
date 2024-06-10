@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `LO references` on `webview`
 * Add styles for problem title to cardboard `example` elements
 * Add margins to `iframes` on `webview`
 
