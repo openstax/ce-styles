@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Add to carnival lists shape to style nested lists in `exercise questions`
 * Change `caption` color in `cardboard`
 * Style `LO references` on `webview`
+* Add new colwidth proportional values to `nursing-internal`
 * Add styles for problem title to cardboard `example` elements
 * Add margins to `iframes` on `webview`
 
