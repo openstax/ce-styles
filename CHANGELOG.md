@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Add new colwidth proportional values to `nursing-internal`
 * Add styles for problem title to cardboard `example` elements
 * Add margins to `iframes` on `webview`
 
