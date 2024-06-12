@@ -1,3 +1,5 @@
+@use 'lib/cardboard/cardboard';
+
 $PagesWithBands: (
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
 );
@@ -98,43 +100,6 @@ $bandColor: #24739E;
   ),
 ));
 
-// Code Colors
-
-@include add_settings((
-    CodeComment: (
-        _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
-    ),
-    CodeKeyword: (
-        _selectors: ('.hljs-keyword'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonKeywordColor'),
-    ),
-    CodeFunction: (
-        _selectors: ('.hljs-function'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonFunctionColor'),
-    ),
-    CodeTitle: (
-        _selectors: ('.hljs-title'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonTitleColor'),
-    ),
-    CodeParams: (
-        _selectors: ('.hljs-params'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonParamsColor'),
-    ),
-    CodeString: (
-        _selectors: ('.hljs-string'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonStringColor'),
-    ),
-    CodeBuildIn: (
-        _selectors: ('.hljs-built_in'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonBuiltInColor'),
-    ),
-    CodeNumber: (
-        _selectors: ('.hljs-number'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonNumberColor'),
-    ),
-));
-
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'cardboard:::NoUnitToc');
 @include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
@@ -173,17 +138,8 @@ $bandColor: #24739E;
 @include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 
 // Code Snippets
-@include use('CodeComment', 'common:::ColoredText');
-@include use('CodeComment', 'common:::ItalicTextShape');
-@include use('CodeKeyword', 'common:::ColoredText');
-@include use('CodeFunction', 'common:::ColoredText');
-@include use('CodeTitle', 'common:::ColoredText');
-@include use('CodeParams', 'common:::ColoredText');
-@include use('CodeString', 'common:::ColoredText');
-@include use('CodeBuildIn', 'common:::ColoredText');
-@include use('CodeNumber', 'common:::ColoredText');
+@include cardboard.hljs-colors();
 @include use('CodeSnippet', 'common:::CodeSnippetLineNumbersShape');
-
 
 //Eob
 @include use('AnswerKey', 'cardboard:::AnswerKeyShape');

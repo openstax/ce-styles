@@ -1,0 +1,59 @@
+@use 'lib/cardboard/theme' as cardboard;
+@use 'sass:map';
+
+// Styles for code snippets
+@mixin hljs-colors() {
+  .hljs-comment {
+    color: cardboard.$Gray5;
+    font-style: italic;
+  }
+  .hljs-keyword {
+    color: cardboard.$B9;
+  }
+  .hljs-function {
+    color: cardboard.$G4;
+  }
+  .hljs-title {
+    color: cardboard.$Gray5;
+  }
+  .hljs-params {
+    color: cardboard.$black;
+  }
+  .hljs-string {
+    color: cardboard.$BR2;
+  }
+  .hljs-built_in {
+    color: cardboard.$G5;
+  }
+  .hljs-number {
+    color: cardboard.$G6;
+  }
+}
+
+@mixin tagged-code-colors() {
+  .green-code {
+    color: cardboard.$G3;
+  }
+  .purple-code {
+    color: cardboard.$P3;
+  }
+  .gray-code {
+    color: cardboard.$Gray5;
+  }
+  .red-code {
+    color: cardboard.$R1;
+  }
+  .blue-code {
+    color: cardboard.$B8;
+  }
+  .brown-code {
+    color: cardboard.$BR1;
+  }
+}
+
+@mixin green-code() {
+  .green-code {
+    color: cardboard.$G4;
+    font-family: cardboard.$monospace;
+  }
+}

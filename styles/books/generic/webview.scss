@@ -1,3 +1,4 @@
+@use 'lib/webview/webview';
 @import 'framework/framework';
 @import '../../design-settings/webview/settings';
 @import '../../design-settings/webview/design';
@@ -176,53 +177,6 @@
     ),
 ));
 
-
-
-// Code Colors
-
-@include add_settings((
-    CodeComment: (
-        _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
-    ),
-    CodeKeyword: (
-        _selectors: ('.hljs-keyword'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonKeywordColor'),
-    ),
-    CodeFunction: (
-        _selectors: ('.hljs-function'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonFunctionColor'),
-    ),
-    CodeTitle: (
-        _selectors: ('.hljs-title'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonTitleColor'),
-    ),
-    CodeParams: (
-        _selectors: ('.hljs-params'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonParamsColor'),
-    ),
-    CodeString: (
-        _selectors: ('.hljs-string'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonStringColor'),
-    ),
-    CodeBuildIn: (
-        _selectors: ('.hljs-built_in'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonBuiltInColor'),
-    ),
-    CodeNumber: (
-        _selectors: ('.hljs-number'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonNumberColor'),
-    ),
-));
-
-// Code colored text
-@include add_settings((
-  GreenCodeColoredText: (
-    _selectors: (".green-code"),
-    "ColoredTextContainer:::color": (_ref: "colorMap:::codeGreenColor"),
-  )
-));
-
 //Functions
 @include add_settings((
     Function: (
@@ -330,9 +284,6 @@
       _selectors: ("section.further-reading"),
   )
 ));
-
-
-
 
 @include add_settings((
     RedColoredText: (
@@ -448,19 +399,9 @@
 @include use('Blockquote', 'webview:::BlockquoteShape');
 
 // Code Snippets
-@include use('CodeComment', 'common:::ColoredText');
-@include use('CodeComment', 'common:::ItalicTextShape');
-@include use('CodeKeyword', 'common:::ColoredText');
-@include use('CodeFunction', 'common:::ColoredText');
-@include use('CodeTitle', 'common:::ColoredText');
-@include use('CodeParams', 'common:::ColoredText');
-@include use('CodeString', 'common:::ColoredText');
-@include use('CodeBuildIn', 'common:::ColoredText');
-@include use('CodeNumber', 'common:::ColoredText');
+@include webview.hljs-colors();
+@include webview.green-code();
 @include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
-
-// Code Colored Text
-@include use('GreenCodeColoredText', 'webview:::ColoredText');
 
 // Functions
 @include use('Function', 'webview:::FunctionShape');
