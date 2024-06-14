@@ -936,6 +936,15 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   font-weight: bold;
 }
 
+[data-type=example] > .body h4[data-type=problem-title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: bold;
+}
+
 .os-chapter-outline {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
@@ -1039,7 +1048,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-figure.has-splash > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-figure:not(.has-splash) > figure {
@@ -1080,7 +1089,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-figure:not(.has-splash) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
@@ -1923,7 +1932,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-eoc .os-problem-container > p + .os-table {

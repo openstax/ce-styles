@@ -320,6 +320,10 @@ span[data-type=media] img {
   display: block;
 }
 
+div[data-type=media].os-embed {
+  margin: 3rem 0;
+}
+
 *:not(figure) > [data-type=media].scaled-down {
   display: block;
   text-align: center;
@@ -979,6 +983,11 @@ a:hover {
 
 [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 0.5em;
+}
+
+[data-type=exercise] [data-type=problem] a.lo-reference {
+  margin-right: 0.5em;
+  font-weight: bold;
 }
 
 [data-type=exercise] [data-type=problem] > .os-number ~ .os-problem-container {
