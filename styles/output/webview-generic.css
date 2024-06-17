@@ -1788,6 +1788,14 @@ p.student-sample {
   width: 50%;
 }
 
+.os-table [data-columns="2"][data-ratio="1,2"] col[data-width="1*"] {
+  width: 33.3333333333%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,2"] col[data-width="2*"] {
+  width: 66.6666666667%;
+}
+
 .os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
   width: 25%;
 }
@@ -1820,6 +1828,14 @@ p.student-sample {
   width: 50%;
 }
 
+.os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="1*"] {
+  width: 14.2857142857%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="3*"] {
+  width: 42.8571428571%;
+}
+
 .os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="1*"] {
   width: 5.8823529412%;
 }
@@ -1844,8 +1860,24 @@ p.student-sample {
   width: 16.6666666667%;
 }
 
+.os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="2*"] {
+  width: 33.3333333333%;
+}
+
 .os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
   width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="1*"] {
+  width: 14.2857142857%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="2*"] {
+  width: 28.5714285714%;
 }
 
 .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
@@ -1862,6 +1894,14 @@ p.student-sample {
 
 .os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
   width: 20%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="1*"] {
+  width: 11.1111111111%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
+  width: 22.2222222222%;
 }
 
 section.works-cited [data-type=title] {
