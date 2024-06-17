@@ -90,6 +90,22 @@ $Columns--ThreeColumnsFiveRatioTwo: (
     )
 );
 
+$Columns--ThreeColumnsSevenRatioOne: (
+    _name: "ThreeColumnsSevenRatioOne",
+    _subselector: " [data-columns='3'][data-ratio='1,3,3'] col[data-width='1*']",
+    _properties: (
+        width: column-width(3,7,1),
+    )
+);
+
+$Columns--ThreeColumnsSevenRatioThree: (
+    _name: "ThreeColumnsSevenRatioThree",
+    _subselector: " [data-columns='3'][data-ratio='1,3,3'] col[data-width='3*']",
+    _properties: (
+        width: column-width(3,7,3),
+    )
+);
+
 $Columns--ThreeColumnsSeventeenRatioOne: (
     _name: "ThreeColumnsSeventeenRatioOne",
     _subselector: " [data-columns='3'][data-ratio='1,8,8'] col[data-width='1*']",
