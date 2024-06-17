@@ -49,18 +49,8 @@
                     _components: (
                       map-merge($UnorderedList--FirstLevel, (
                         _components: (
-                          $OrderedList--SecondLevel,
-                          $UnorderedList--SecondLevel,
-                          map-merge($ListElementContainer, (
-                            _components: (
-                              map_merge($DivWrapper--FirstLevel, (
-                                _components: (
-                                  $UnorderedList--FirstLevel,
-                                  $OrderedList--FirstLevel,
-                                )
-                              )),
-                            )
-                          )),
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
                         )
                       )),
                       map-merge($OrderedList--FirstLevel, (
@@ -68,16 +58,6 @@
                           $OrderedList--SecondLevel,
                           $OrderedList--ThirdLevel,
                           $UnorderedList--SecondLevel,
-                          map-merge($ListElementContainer, (
-                            _components: (
-                              map_merge($DivWrapper--FirstLevel, (
-                                _components: (
-                                  $UnorderedList--FirstLevel,
-                                  $OrderedList--FirstLevel,
-                                )
-                              )),
-                            )
-                          )),
                         )
                       )),
                     )
