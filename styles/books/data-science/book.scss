@@ -1,3 +1,5 @@
+@use 'lib/cardboard/cardboard';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -11,50 +13,6 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/_folio';
 
-// Code snippet colors
-@include add_settings((
-    CodeComment: (
-        _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
-    ),
-    CodeKeyword: (
-        _selectors: ('.hljs-keyword'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeKeywordColor'),
-    ),
-    CodeFunction: (
-        _selectors: ('.hljs-function'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeFunctionColor'),
-    ),
-    CodeTitle: (
-        _selectors: ('.hljs-title'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeTitleColor'),
-    ),
-    CodeParams: (
-        _selectors: ('.hljs-params'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeParamsColor'),
-    ),
-    CodeString: (
-        _selectors: ('.hljs-string'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeStringColor'),
-    ),
-    CodeBuildIn: (
-        _selectors: ('.hljs-built_in'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeBuiltInColor'),
-    ),
-    CodeNumber: (
-        _selectors: ('.hljs-number'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeNumberColor'),
-    ),
-));
-
-// Code colored text
-@include add_settings((
-  GreenCodeColoredText: (
-    _selectors: (".green-code"),
-    "CodeColoredTextContainer:::color": (_ref: "colorMap:::codeGreenColor"),
-    "CodeColoredTextContainer:::font-family": (_ref: "typography:::monospaceFont"),
-  )
-));
 
 //Titles
 @include add_settings((
@@ -250,18 +208,8 @@ $bandColor: #24739E;
 @include use('Equation', 'cardboard:::EquationShape');
 
 // Code
-@include use('CodeComment', 'common:::ColoredText');
-@include use('CodeComment', 'common:::ItalicTextShape');
-@include use('CodeKeyword', 'common:::ColoredText');
-@include use('CodeFunction', 'common:::ColoredText');
-@include use('CodeTitle', 'common:::ColoredText');
-@include use('CodeParams', 'common:::ColoredText');
-@include use('CodeString', 'common:::ColoredText');
-@include use('CodeBuildIn', 'common:::ColoredText');
-@include use('CodeNumber', 'common:::ColoredText');
-
-// Code colored text
-@include use("GreenCodeColoredText", "common:::CodeColoredText");
+@include cardboard.hljs-colors();
+@include cardboard.green-code();
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');

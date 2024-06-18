@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Refactor code colors in `cardboard` and `webview`
 * Style `no bullet lists` on `webview`
 
 ## [v.154.0]
