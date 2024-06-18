@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `no bullet lists` on `webview`
+
 ## [v.154.0]
 
 * Add to carnival lists shape to style nested lists in `exercise questions`

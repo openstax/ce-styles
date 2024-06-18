@@ -17,6 +17,14 @@ $UnorderedList--Nested: (
   )
 );
 
+$UnorderedList--NoBullet: (
+  _name: 'UnorderedListNoBullet', 
+  _subselector: ' ul[data-bullet-style="none"]',
+  _properties: (
+    list-style-type: none,
+  )
+);
+
 $OrderedList: (
   _name: 'OrderedList', 
   _subselector: ' ol',
