@@ -54,3 +54,16 @@
       )),
     )
 ));
+
+@include create_shape('webview:::AnswerKeySolutionShape', (
+      _components: (
+        map-merge($AnswerKeySolution__Container, (
+          _components: (
+              $Exercise__ProblemSolution__Number,
+              $Exercise__ProblemSolution__Divider,
+              $Exercise__Solution__Container,
+              $Exercise__Solution__Container--WithFirstElement,
+          )
+      )),
+    )
+));

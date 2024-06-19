@@ -324,6 +324,9 @@
     AnswerKey: (
         _selectors: ('.os-eob.os-solutions-container'),
     ),
+    AnswerKeyEocSolution: (
+        _selectors: ('.os-eoc [data-type="solution"]'),
+    ),
     AnswerKeySolutionWithProblemPrefix: (
         _selectors: ('.os-eob [data-type="question-solution"]'),
         'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
@@ -452,6 +455,7 @@
 // EOB
 @include use('Index', 'webview:::IndexShape');
 @include use('AnswerKey', 'webview:::AnswerKeyShape');
+@include use('AnswerKeyEocSolution', 'webview:::AnswerKeySolutionShape');
 @include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
 @include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
 
