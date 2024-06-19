@@ -32,7 +32,7 @@ h3, h4, h5, h6 {
 
 // for code snippets - stops text overflow
 // https://stackoverflow.com/questions/29294273/uneven-horizontally-scrolling-div-with-white-space-normal
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
