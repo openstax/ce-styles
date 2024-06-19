@@ -1942,6 +1942,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0;
 }
 
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
+}
+
 [data-type=problem] > div > ol {
   margin-left: 32px;
 }
@@ -1959,6 +1967,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 [data-type=problem] > div > ol > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
+}
+
+[data-type=problem] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=problem] > div > ol > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
@@ -2011,6 +2027,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
   margin-bottom: 0;
 }
 
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
+}
+
 [data-type=exercise-question] > div > ol {
   margin-left: 32px;
 }
@@ -2028,6 +2052,14 @@ nav#toc > ol > .os-toc-composite-chapter > a::after {
 [data-type=exercise-question] > div > ol > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
+}
+
+[data-type=exercise-question] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=exercise-question] > div > ol > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
