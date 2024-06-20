@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `eoc references` in `lifespan-development`
 * Style `eoc solutions` on `webview`
 * Fix alignment of `inline code` elements
 * Refactor code colors in `cardboard` and `webview`
