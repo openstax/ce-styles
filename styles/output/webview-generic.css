@@ -968,32 +968,34 @@ a:hover {
   margin-top: 3rem;
 }
 
-[data-type=exercise] div[data-type=title] {
-  font-weight: bold;
-}
-[data-type=exercise] [data-type=problem] {
+[data-type=exercise] [data-type=problem],
+[data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
   padding: 0.5em 1em;
 }
-[data-type=exercise] [data-type=problem] > .os-number {
+[data-type=exercise] [data-type=problem] > .os-number,
+[data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   font-weight: 700;
   text-decoration: none;
   text-align: right;
   width: 30px;
 }
-[data-type=exercise] [data-type=problem] > .os-number ~ .os-problem-container {
+[data-type=exercise] [data-type=problem] > .os-number ~ .os-problem-container,
+[data-type=injected-exercise] [data-type=exercise-question] > .os-number ~ .os-problem-container {
   display: table-cell;
 }
-[data-type=exercise] [data-type=problem] > .os-divider {
+[data-type=exercise] [data-type=problem] > .os-divider,
+[data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 0.5em;
+}
+
+[data-type=exercise] div[data-type=title] {
+  font-weight: bold;
 }
 [data-type=exercise] [data-type=problem] a.lo-reference {
   margin-right: 0.5em;
   font-weight: bold;
-}
-[data-type=exercise] [data-type=problem] li[data-type=question-answer] pre {
-  margin: 0;
 }
 [data-type=exercise] [data-type=solution] {
   padding: 0.5em 1em;
@@ -1037,37 +1039,12 @@ a:hover {
   margin: 0;
 }
 
-[data-type=injected-exercise] [data-type=exercise-question] {
-  padding: 0.5em 1em;
-  display: table;
-}
-
-[data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: right;
-  width: 30px;
-}
-
-[data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 0.5em;
-}
-
-[data-type=injected-exercise] [data-type=exercise-question] > .os-number ~ .os-problem-container {
-  display: table-cell;
-}
-
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
   display: table !important;
-  width: 100%;
-  table-layout: fixed;
 }
-
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container b + img {
   vertical-align: top;
 }
-
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container li[data-type=question-answer] pre {
   margin: 0;
 }

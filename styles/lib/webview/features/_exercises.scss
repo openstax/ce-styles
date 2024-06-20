@@ -1,32 +1,37 @@
 @use 'lib/webview/theme' as webview;
 
+@mixin content-injected-shared() {
+  // shared content & injected exercise styles
+  [data-type=exercise] [data-type=problem],
+  [data-type=injected-exercise] [data-type=exercise-question] {
+    display: table;
+    padding: 0.5em 1em;
+    > .os-number {
+      display: table-cell;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: right;
+      width: 30px;
+      ~ .os-problem-container {
+        display: table-cell;
+      }
+    }
+    > .os-divider {
+      margin-right: 0.5em;
+    }
+  }
+}
+
 @mixin content-exercises() {
+  // just content exercises
   [data-type=exercise] {
     div[data-type=title] {
       font-weight: bold;
     }
     [data-type=problem] {
-      display: table;
-      padding: 0.5em 1em;
-      > .os-number {
-        display: table-cell;
-        font-weight: 700;
-        text-decoration: none;
-        text-align: right;
-        width: 30px;
-        ~ .os-problem-container {
-          display: table-cell;
-        }
-      }
-      > .os-divider {
-        margin-right: 0.5em;
-      }
       a.lo-reference {
         margin-right: 0.5em;
         font-weight: bold;
-      }
-      li[data-type=question-answer] pre {
-        margin: 0;
       }
     }
     [data-type=solution] {
@@ -69,6 +74,21 @@
       p {
         margin: 0;
       }
+    }
+  }
+}
+
+@mixin injected-exercises() {
+  // just injected exercises
+  [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+    > [data-type=question-stem] {
+      display: table !important;
+    }
+    b + img {
+      vertical-align: top;
+    }
+    li[data-type=question-answer] pre {
+      margin: 0;
     }
   }
 }
