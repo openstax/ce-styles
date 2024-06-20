@@ -390,7 +390,7 @@
 // Notes
 @include use('Note', 'webview:::NoteShape');
 // Exercises
-@include use('Exercise', 'webview:::ExerciseShape');
+@include webview.content-exercises();
 @include use('InjectedExercise', 'webview:::InjectedExerciseShape');
 @include use('ExerciseInAppendix', 'webview:::ExerciseInAppendixShape');
 @include use('ExerciseInlined', 'webview:::ExerciseInlined');

@@ -1,0 +1,74 @@
+@use 'lib/webview/theme' as webview;
+
+@mixin content-exercises() {
+  [data-type=exercise] {
+    div[data-type=title] {
+      font-weight: bold;
+    }
+    [data-type=problem] {
+      display: table;
+      padding: 0.5em 1em;
+      > .os-number {
+        display: table-cell;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: right;
+        width: 30px;
+        ~ .os-problem-container {
+          display: table-cell;
+        }
+      }
+      > .os-divider {
+        margin-right: 0.5em;
+      }
+      a.lo-reference {
+        margin-right: 0.5em;
+        font-weight: bold;
+      }
+      li[data-type=question-answer] pre {
+        margin: 0;
+      }
+    }
+    [data-type=solution] {
+      padding: 0.5em 1em;
+      border-top-width: 0.1rem;
+      border-top-color: webview.$grayLight;
+      border-top-style: solid;
+      .btn-link {
+        color: webview.$darkBlue;
+        font-weight: 400;
+        border-radius: 0;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: transparent;
+      }
+      > .ui-toggle {
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        list-style: none;
+        cursor: pointer;
+      }
+      > .ui-toggle::before {
+        content: "[Show/Hide Solution]";
+      }
+      > summary.ui-toggle::-webkit-details-marker {
+        display: none;
+      }
+    }
+    &.has-problem-title .os-problem-container {
+      display: initial;
+    }
+    &.check-understanding [data-type=title]::before {
+      margin-right: 0;
+      content: "";
+    }
+    &.conceptual-questions [data-type=problem] {
+      border-top: none;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
