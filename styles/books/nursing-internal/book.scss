@@ -272,12 +272,12 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
-@include use('BasicTable', 'carnival:::BasicTableShape');
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 @include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
 @include use('ColumnsFromTable', 'carnival:::ColumnsShape');
+@include use('BasicTable', 'carnival:::BasicTableShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
