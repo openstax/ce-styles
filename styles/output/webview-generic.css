@@ -1982,6 +1982,33 @@ section.further-reading p {
   text-decoration: none;
 }
 
+.os-eoc [data-type=solution] {
+  display: table;
+}
+
+.os-eoc [data-type=solution] > .os-number {
+  display: table-cell;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: right;
+  width: 30px;
+}
+
+.os-eoc [data-type=solution] > .os-divider {
+  margin-right: 0.5em;
+}
+
+.os-eoc [data-type=solution] > .os-solution-container {
+  display: table-cell;
+  width: auto;
+}
+
+.os-eoc [data-type=solution] > .os-solution-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: auto;
+}
+
 .os-eob [data-type=question-solution] {
   display: table;
 }
