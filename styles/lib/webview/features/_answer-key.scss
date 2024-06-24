@@ -18,6 +18,9 @@
       }
       > .os-solution-container {
         display: table-cell;
+        img {
+          margin-top: 0;
+        }
       }
     }
     [data-type=question-solution] {
@@ -45,6 +48,9 @@
       > .os-solution-container {
         display: table-cell;
         width: auto;
+        img {
+          margin-top: 0;
+        }
         &.has-first-element {
           @include -has-first-element();
         }
