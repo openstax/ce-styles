@@ -321,23 +321,6 @@
 ));
 
 @include add_settings((
-    AnswerKey: (
-        _selectors: ('.os-eob.os-solutions-container'),
-    ),
-    AnswerKeyEocSolution: (
-        _selectors: ('.os-eoc [data-type="solution"]'),
-    ),
-    AnswerKeySolutionWithProblemPrefix: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
-        'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
-    ),
-    AnswerKeySolutionMultipart: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
-        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
-    ),
-));
-
-@include add_settings((
     FolioParagraphs: (
         _selectors: (
             '.folio-chapter', '.folio-module', '.folio-eoc-left', '.folio-eoc-right',
@@ -454,10 +437,8 @@
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
-@include use('AnswerKey', 'webview:::AnswerKeyShape');
-@include use('AnswerKeyEocSolution', 'webview:::AnswerKeySolutionShape');
-@include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
-@include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
+@include webview.eob-answer-key();
+@include webview.eoc-answer-key();
 
 // Icons
 $icons: (
