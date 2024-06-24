@@ -8,7 +8,7 @@
         font-size: calc(1.8rem * var(--content-text-scale))
       }
     }
-    [data-type=solution] {
+    [data-type=solution], [data-type=question-solution] {
       display: table;
       > .os-number {
         @include -number();
@@ -23,8 +23,8 @@
         }
       }
     }
+    // Injected solutions
     [data-type=question-solution] {
-      display: table;
       > .os-prefix {
         display: flex;
         flex-direction: column;
@@ -39,18 +39,8 @@
           align-self: flex-end;
         }
       }
-      > .os-number {
-        @include -number();
-      }
-      > .os-divider {
-        margin-right: 0.5em;
-      }
       > .os-solution-container {
-        display: table-cell;
         width: auto;
-        img {
-          margin-top: 0;
-        }
         &.has-first-element {
           @include -has-first-element();
         }
