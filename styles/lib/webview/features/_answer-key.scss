@@ -7,9 +7,17 @@
         font-weight: bold;
         font-size: calc(1.8rem * var(--content-text-scale))
       }
-      .os-number {
-        font-weight: bold;
-        text-decoration: none;
+    }
+    [data-type=solution] {
+      display: table;
+      > .os-number {
+        @include -number();
+      }
+      > .os-divider {
+        margin-right: 0.5em;
+      }
+      > .os-solution-container {
+        display: table-cell;
       }
     }
     [data-type=question-solution] {

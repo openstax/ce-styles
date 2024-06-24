@@ -1978,9 +1978,21 @@ section.further-reading p {
   font-weight: bold;
   font-size: calc(1.8rem * var(--content-text-scale));
 }
-.os-eob.os-solutions-container .os-number {
-  font-weight: bold;
+.os-eob [data-type=solution] {
+  display: table;
+}
+.os-eob [data-type=solution] > .os-number {
+  display: table-cell;
+  font-weight: 700;
   text-decoration: none;
+  text-align: right;
+  width: 30px;
+}
+.os-eob [data-type=solution] > .os-divider {
+  margin-right: 0.5em;
+}
+.os-eob [data-type=solution] > .os-solution-container {
+  display: table-cell;
 }
 .os-eob [data-type=question-solution] {
   display: table;
