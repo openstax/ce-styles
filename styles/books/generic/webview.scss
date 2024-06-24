@@ -454,10 +454,8 @@
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
-@include use('AnswerKey', 'webview:::AnswerKeyShape');
-@include use('AnswerKeyEocSolution', 'webview:::AnswerKeySolutionShape');
-@include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
-@include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
+@include webview.eob-answer-key();
+@include webview.eoc-answer-key();
 
 // Icons
 $icons: (
