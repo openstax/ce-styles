@@ -1,0 +1,22 @@
+@use 'lib/carnival/theme' as carnival;
+
+@mixin basic-table() {
+  .os-table:not(.os-unstyled-container) {
+    margin-bottom: 0.7rem;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    > table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 0;
+      > thead > tr > th {
+        border-bottom: 0.1rem solid carnival.$black;
+        border-top: 0.1rem solid carnival.$black;
+        font-family: carnival.$titleOption1Font;
+        font-weight: 700;
+        padding: 0.7rem;
+      }
+    }
+  }
+}

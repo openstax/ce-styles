@@ -253,7 +253,8 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
-@include use('BasicTable', 'carnival:::BasicTableShape');
+// @include use('BasicTable', 'carnival:::BasicTableShape');
+@include carnival.basic-table();
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
