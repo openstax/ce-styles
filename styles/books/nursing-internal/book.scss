@@ -1,3 +1,5 @@
+@use 'lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -271,7 +273,8 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
-@include use('BasicTable', 'carnival:::BasicTableShape');
+// @include use('BasicTable', 'carnival:::BasicTableShape');
+@include carnival.basic-table();
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
