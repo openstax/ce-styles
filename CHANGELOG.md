@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `exercises` from `notes` in `nursing-internal`
+* Refactor `exercises` in `carnival`
 * Fix answer key number alignment in `webview`
 * Refactor `answer key` in `webview`
 * Style `eoc references` in `lifespan-development`

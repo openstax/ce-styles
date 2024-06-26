@@ -1,0 +1,74 @@
+@use 'lib/carnival/theme' as carnival;
+
+@mixin exercises($element, $number-width: 0) {
+    #{$element} {
+        [data-type=exercise] {
+            margin-bottom: 0.7rem;
+            [data-type=problem] {
+                @include -problem-or-question($number-width: $number-width);
+            }
+            [data-type=solution] > .solution-title {
+                font-weight: bold;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+            }
+        }
+        [data-type=injected-exercise] {
+            margin-bottom: 0.7rem;
+            [data-type=exercise-question] {
+                @include -problem-or-question($number-width: $number-width);
+                > .os-problem-container {
+                    > div[data-type=exercise-context] {
+                        display: inline;
+                    }
+                    > span.os-divider {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Private mixins
+@mixin -number($width: 0) {
+    display: table-cell;
+    text-decoration: none;
+    color: carnival.$black;
+    font-weight: bold;
+    @if $width != 0 {
+        width: $width;
+    }
+    text-align: right;
+    min-width: 24px;
+}
+
+@mixin -has-first-element() {
+    display: table-cell;
+    vertical-align: bottom;
+    padding-top: 0.7rem;
+    width: 100%;
+}
+
+@mixin -problem-or-question($number-width: 0) {
+    display: table;
+    > .os-number {
+        @include -number($width: $number-width);
+    }
+    > .os-divider {
+        margin-right: 8px;
+    }
+    > .os-problem-container {
+        display: table-cell;
+        width: 100%;
+        > p {
+            margin-bottom: 0;
+            > span[data-type=title] {
+                font-weight: bold;
+            }
+        }
+        &.has-first-element {
+            @include -has-first-element();
+        }
+    }
+}
