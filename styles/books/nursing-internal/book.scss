@@ -1,3 +1,5 @@
+@use 'lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -204,26 +206,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  EocExercisesModules: (
-    _selectors: (
-        '.os-review-questions-container', '.os-check-understanding-container', '.os-critical-thinking-container',
-        '.os-competency-based-container', '.os-reflection-questions-container', '.os-what-nurses-do-container'
-    ),
-    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'ProblemSolutionNumber:::width': 2%,
-    'ProblemSolutionNumber:::text-align': right,
-  ),
-));
-
-@include add_settings((
-  UnfoldingCaseStudyExercise: (
-    _selectors: ( '.unfolding-casestudy' ),
-    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-    'ProblemSolutionNumber:::text-align': right,
-    ),
-));
-
-@include add_settings((
   AppendixGlossary: (
     _selectors: (".appendix > .column-container"),
     'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::nursingHeaderColor"),
@@ -304,11 +286,15 @@ $ChapterIntroType: fullWidth;
 @include use('PsychosocialConsiderationsNote', 'carnival:::IconNoteShape');
 
 // Exercise in Note
-@include use('UnfoldingCaseStudyExercise','carnival:::ExercisesModuleShape');
+@include carnival.exercises('.unfolding-casestudy, .electronic-hr');
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocExercisesModules','carnival:::ExercisesModuleShape');
+@include carnival.exercises(
+  '.os-review-questions-container, .os-check-understanding-container, .os-critical-thinking-container,'
+  '.os-competency-based-container, .os-reflection-questions-container, .os-what-nurses-do-container',
+  $number-width: 2%
+);
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // EOB
