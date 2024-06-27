@@ -286,17 +286,15 @@ $ChapterIntroType: fullWidth;
 @include use('PsychosocialConsiderationsNote', 'carnival:::IconNoteShape');
 
 // Exercise in Note
-@include carnival.exercises('.unfolding-casestudy');
-@include carnival.exercises('.electronic-hr');
+@include carnival.exercises('.unfolding-casestudy, .electronic-hr');
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include carnival.exercises('.os-review-questions-container', $number-width: 2%);
-@include carnival.exercises('.os-check-understanding-container', $number-width: 2%);
-@include carnival.exercises('.os-critical-thinking-container', $number-width: 2%);
-@include carnival.exercises('.os-competency-based-container', $number-width: 2%);
-@include carnival.exercises('.os-reflection-questions-container', $number-width: 2%);
-@include carnival.exercises('.os-what-nurses-do-container', $number-width: 2%);
+@include carnival.exercises(
+  '.os-review-questions-container, .os-check-understanding-container, .os-critical-thinking-container,'
+  '.os-competency-based-container, .os-reflection-questions-container, .os-what-nurses-do-container',
+  $number-width: 2%
+);
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // EOB

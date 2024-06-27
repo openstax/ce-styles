@@ -1,6 +1,6 @@
 @use 'lib/carnival/theme' as carnival;
 
-@mixin exercises($element, $number-width: 0) {
+@mixin exercises($element, $number-width: null) {
     #{$element} {
         [data-type=exercise] {
             margin-bottom: 0.7rem;
@@ -31,14 +31,12 @@
 }
 
 // Private mixins
-@mixin -number($width: 0) {
+@mixin -number($width: null) {
     display: table-cell;
     text-decoration: none;
     color: carnival.$black;
     font-weight: bold;
-    @if $width != 0 {
-        width: $width;
-    }
+    width: $width;
     text-align: right;
     min-width: 24px;
 }
@@ -50,7 +48,7 @@
     width: 100%;
 }
 
-@mixin -problem-or-question($number-width: 0) {
+@mixin -problem-or-question($number-width: null) {
     display: table;
     > .os-number {
         @include -number($width: $number-width);
