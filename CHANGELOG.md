@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0] - 2024-06-28
+
 * Fix `table` border in `carnival`
 * Style `exercises` from `notes` in `nursing-internal`
 * Refactor `exercises` in `carnival`
@@ -18,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Refactor code colors in `cardboard` and `webview`
 * Style `no bullet lists` on `webview`
 
-## [v.154.0]
+## [v1.154.0] - 2024-06-17
 
 * Add to carnival lists shape to style nested lists in `exercise questions`
 * Change `caption` color in `cardboard`
