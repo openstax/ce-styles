@@ -246,6 +246,14 @@ $Table__Data--NotLastChild: (
     )
 );
 
+$Table__Data--NotFirstChildWithRowspan: (
+    _name: "TableDataNotFirstChildWithRowspan",
+    _subselector: ' > td[rowspan="2"]:not(:only-of-type):not(:first-child)',
+    _properties: (
+        border-left: '0.025rem solid black',
+    )
+);
+
 $Table__Row--First: (
     _name: "FirstTableRow",
     _subselector: " > tr:first-of-type",

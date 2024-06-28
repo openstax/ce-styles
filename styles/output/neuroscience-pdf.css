@@ -1457,6 +1457,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   word-break: break-word;
 }
 
+.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
+  border-left: 0.025rem solid black;
+}
+
 .os-table:not(.os-unstyled-container):not(.os-no-cellborder-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.025rem solid black;
