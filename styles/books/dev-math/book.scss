@@ -16,20 +16,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
-    'SplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
-));
-
-@include add_settings((
   BePrepared: (
     _selectors: (".be-prepared"),
     'Container:::display': table,
@@ -154,15 +140,15 @@ $bandColor: #093D4C;
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Toc', 'corn:::NoUnitToc');
-@include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesShape');
+@include use('LearningObjectivesAbstract', 'corn:::LearningObjectivesWithCustomBulletIconShape');
 @include use('Example', 'corn:::ExampleShape');
 @include use('Index', 'corn:::IndexShape');
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
+@include use('AnswerKeyThreeColumnsSolution', 'corn:::AnswerKeySolutionShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 
 //Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
 
 //Exercises
@@ -170,6 +156,7 @@ $bandColor: #093D4C;
 
 //Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
@@ -189,21 +176,20 @@ $bandColor: #093D4C;
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('CompositeChapterTitles', 'corn:::CompositeChapterTitlesShape');
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
 @include use('EobCompositePageTitles', 'corn:::CompositePageTitlesShape');
 
 //Lists
 @include use('PageLists', 'corn:::PageListsShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
+@include use('CircledListsFromModules', 'corn:::CircledListsFromModulesShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
-@include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
+@include use('CircledListsFromOneColumnExercises', 'corn:::CircledListsFromOneColumnExercisesShape');
+@include use('CircledListsFromMultiColumnsExercises', 'corn:::CircledListsFromMultiColumnsExercisesShape');
 
 //Tables
 @include use('BasicTable', 'corn:::BasicTableShape');
@@ -211,6 +197,8 @@ $bandColor: #093D4C;
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
+@include use('TableFromAnswerKey', 'corn:::TableFromAnswerKeyShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 
 //Notes
 @include use('BePrepared', 'corn:::IconCondensedNoteShape');

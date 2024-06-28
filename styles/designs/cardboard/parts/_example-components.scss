@@ -14,12 +14,12 @@ $Example__Title: (
         color: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(1),
         line-height: line-height(1),
-        font-weight: bold,
+        font-weight: enum('ValueSet:::REQUIRED'),
         text-transform: uppercase,
         background-color: enum('ValueSet:::REQUIRED'),
-        padding: v-spacing(2),
+        padding: enum('ValueSet:::REQUIRED'),
         border-radius: '0.25rem 0.25rem 0rem 0rem',
-        letter-spacing: 0.25rem, //3px
+        letter-spacing: enum('ValueSet:::OPTIONAL'), // used in Blue version
     )
 );
 
@@ -40,7 +40,8 @@ $Example__Subtitle: (
         color: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(1),
         line-height: line-height(1),
-        font-weight: bold,
+        padding-bottom: v-spacing(1),
+        font-weight: enum('ValueSet:::REQUIRED'),
     )
 );
 
@@ -53,6 +54,33 @@ $Example__Subtitle--FromNote: (
         color: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(1),
         line-height: line-height(1),
+        padding-bottom: v-spacing(1),
+        font-weight: enum('ValueSet:::REQUIRED'),
+    )
+);
+
+$Example__SolutionTitle: (
+    _name: "ExampleSolutionTitle",
+    _subselector: ' h4[data-type="solution-title"]',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        padding-bottom: v-spacing(1),
+        font-weight: bold,
+    )
+);
+
+$Example__ProblemTitle: (
+    _name: "ExampleProblemTitle",
+    _subselector: ' h4[data-type="problem-title"]',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        padding-bottom: v-spacing(1),
         font-weight: bold,
     )
 );

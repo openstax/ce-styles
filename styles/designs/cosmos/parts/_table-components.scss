@@ -3,6 +3,7 @@ $Table__Container: (
     _subselector: "",
     _properties: (
         margin-bottom: table-v-spacing(2),
+        margin-top: table-v-spacing(2),
         display: table,
         margin-left: auto,
         margin-right: auto,
@@ -25,15 +26,15 @@ $Table__TopCaption: (  //used in Polish Psychology
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         text-align: center,
-        font-weight: bold, 
+        font-weight: bold,
         font-family: enum('ValueSet:::REQUIRED'),
         padding: 0.5rem,
-    )   
+    )
 );
 
 // After discusion we decided to use proportions in col attributes. In this case, data-width is set to 1* for each column.
 // It means all columns should be the same size. There is also a decision that we are using percentages. It might be useful
-// in the future for the web. But, lets keep in mind that we can meet some problems. More informations you can find here: 
+// in the future for the web. But, lets keep in mind that we can meet some problems. More informations you can find here:
 // https://github.com/openstax/cnx-recipes/issues/2776
 
 $Table__Column: (
@@ -60,7 +61,7 @@ $Table__Head__FirstRow__Cell: (
         padding-left: 0.5rem,
         background-color: enum('ValueSet:::OPTIONAL'),
         border-style: solid,
-        border-color: enum('ValueSet:::REQUIRED'), 
+        border-color: enum('ValueSet:::REQUIRED'),
         border-width: 0.02rem, //.25px converted to rem
         border-left-style: none,
         border-left-color: transparent,
@@ -85,13 +86,13 @@ $Table__Head__Cell: (
         background-color: enum('ValueSet:::OPTIONAL'),
         border-width: 0.02rem, //.25px converted to rem
         border-style: solid,
-        border-color: enum('ValueSet:::REQUIRED'), 
+        border-color: enum('ValueSet:::REQUIRED'),
         border-left-style: none,
         border-left-color: transparent,
         border-left-width: 0rem,
         border-right-style: none,
         border-right-color: transparent,
-        border-right-width: 0rem, 
+        border-right-width: 0rem,
     )
 );
 
@@ -100,7 +101,7 @@ $Table__Head__Cell--TopAligned: (
     _subselector: "[data-valign="top"]",
     _properties: (
        vertical-align: top,
-    )    
+    )
 );
 
 $Table__Head__Cell--LeftAligned: (
@@ -108,7 +109,7 @@ $Table__Head__Cell--LeftAligned: (
     _subselector: "[data-align="left"]",
     _properties: (
         text-align: left,
-    )    
+    )
 );
 
 $Table__Head__Cell--RightAligned: (
@@ -116,7 +117,7 @@ $Table__Head__Cell--RightAligned: (
     _subselector: "[data-align="right"]",
     _properties: (
         text-align: right,
-    )    
+    )
 );
 
 $Table__Head__Cell--Centered: (
@@ -124,7 +125,16 @@ $Table__Head__Cell--Centered: (
     _subselector: "[data-align="center"]",
     _properties: (
         text-align: center,
-    )    
+    )
+);
+
+$Table__Head__Cell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
 );
 
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
@@ -136,6 +146,24 @@ $Table__Row--FirstChild: empty_wrapper(TableRowFirstChild, ' > tr:first-child');
 
 $Table__Row--NotLastChild: empty_wrapper(TableRowNotLastChild, ' > tr:not(:last-child):not(.header-row)');
 $Table__Row--LastChild: empty_wrapper(TableRowLastChild, ' > tr:last-child');
+
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
+    )
+);
 
 $Table__Data: empty_wrapper(TableData, ' > td');
 
@@ -169,7 +197,7 @@ $Table__Data--MiddleChild: (
         padding-bottom: 0.5rem,
         padding-left: 0.5rem,
         padding-right: 0.5rem,
-        border-style: enum('ValueSet:::REQUIRED'), 
+        border-style: enum('ValueSet:::REQUIRED'),
         border-color: enum('ValueSet:::REQUIRED'),
         border-width: .02rem, // .25px in rem
     )
@@ -187,9 +215,9 @@ $Table__Data--LastChild: (
         padding-left: 0.5rem,
         padding-right: 0.5rem,
         border-width: .02rem, // .25px in rem
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
-        border-right-style: none, 
+        border-right-style: none,
         border-right-color: transparent,
     ),
 );
@@ -206,9 +234,9 @@ $Table__Data--OnlyChild: (
         padding-left: 0.5rem,
         padding-right: 0.5rem,
         border-width: .02rem, // .25px in rem
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
-        border-right-style: none, 
+        border-right-style: none,
         border-right-color: transparent,
         border-left-style: none,
         border-left-color: transparent,
@@ -217,7 +245,7 @@ $Table__Data--OnlyChild: (
 
 //For the last row
 
-$Table__Data--LastRowFirstChild: (     
+$Table__Data--LastRowFirstChild: (
     _name: "TableDataLastRowFirstChild",
     _subselector: " > td:first-child",
     _properties: (
@@ -229,7 +257,7 @@ $Table__Data--LastRowFirstChild: (
         padding-left: 0.5rem,
         padding-right: 0.5rem,
         border-width: .02rem, // .25px in rem
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
         border-left-style: none,
         border-left-color: transparent,
@@ -247,7 +275,7 @@ $Table__Data--LastRowMiddleChild: (
         padding-bottom: 0.5rem,
         padding-left: 0.5rem,
         padding-right: 0.5rem,
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
         border-width: .02rem, // .25px in rem
     )
@@ -265,9 +293,9 @@ $Table__Data--LastRowLastNotOnlyChild: (
         padding-left: 0.5rem,
         padding-right: 0.5rem,
         border-width: .02rem, // .25px in rem
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
-        border-right-style: none, 
+        border-right-style: none,
         border-right-color: transparent,
     ),
 );
@@ -284,10 +312,10 @@ $Table__Data--LastRowLastOnlyChild: (
         padding-left: 0.5rem,
         padding-right: 0.5rem,
         border-width: .02rem, // .25px in rem
-        border-style: solid, 
+        border-style: solid,
         border-color: enum('ValueSet:::REQUIRED'),
         border-right-style: none,
-        border-left-style: none, 
+        border-left-style: none,
         border-right-color: transparent,
         border-left-color: transparent,
     ),
@@ -309,7 +337,7 @@ $Table__Data--MiddleHeaderCell: (
         padding-left: 0.5rem,
         background-color: enum('ValueSet:::OPTIONAL'),
         border-style: solid,
-        border-color: enum('ValueSet:::OPTIONAL'), 
+        border-color: enum('ValueSet:::OPTIONAL'),
         border-width: 0.02rem, //.25px converted to rem
         border-left-style: none,
         border-left-color: transparent,
@@ -325,7 +353,7 @@ $Table__Data--TopAligned: (
     _subselector: "[data-valign="top"]",
     _properties: (
        vertical-align: top,
-    )    
+    )
 );
 
 $Table__Data--LeftAligned: (
@@ -333,7 +361,7 @@ $Table__Data--LeftAligned: (
     _subselector: " > td[data-align="left"]",
     _properties: (
         text-align: left,
-    )    
+    )
 );
 
 $Table__Data--RightAligned: (
@@ -341,7 +369,7 @@ $Table__Data--RightAligned: (
     _subselector: " > td[data-align="right"]",
     _properties: (
         text-align: right,
-    )    
+    )
 );
 
 $Table__Data--Centered: (
@@ -349,7 +377,16 @@ $Table__Data--Centered: (
     _subselector: " > td[data-align="center"]",
     _properties: (
         text-align: center,
-    )    
+    )
+);
+
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",     // not classes for css precedence
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
 );
 
 $Table__BottomBorder: (
@@ -365,7 +402,7 @@ $Table__BottomBorder: (
         position: relative,
         top: -0.1rem,
         margin-bottom: v-spacing(1),
-    )    
+    )
 );
 
 $Table--TopSpacing:(
@@ -374,4 +411,22 @@ $Table--TopSpacing:(
     _properties: (
         margin-top: 1rem,
     )
+);
+
+// Narrow Table
+
+$NarrowTable__Container: (
+    _name: 'NarrowTableContainer',
+    _subselector: '',
+    _properties: (
+        width: 50%,
+    )
+);
+
+$NarrowTable__Data: (
+  _name: 'NarrowTableData',
+  _subselector: ' td',
+  _properties: (
+      text-align: center,
+  )
 );

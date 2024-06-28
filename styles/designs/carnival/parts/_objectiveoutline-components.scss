@@ -1,0 +1,48 @@
+$Objectives__Container: empty_wrapper(Container, '');
+
+$Objectives__Paragraph: (
+  _name: "Paragraph",
+  _subselector: ' > p',
+  _properties: (
+    margin-bottom: 0,
+    font-family: enum('ValueSet:::OPTIONAL'), // needed for chapter objectives in anatomy
+  )
+);
+
+$Objectives__NoteBody: empty_wrapper(NoteBody, ' .os-note-body');
+
+// Chapter Outline
+
+$ChapterOutline__Container: (
+    _name: "ChapterOutlineContainer",
+    _subselector: '',
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: (enum('ValueSet:::OPTIONAL'), 500),
+        font-size: (enum('ValueSet:::OPTIONAL'), font-scale(0)),
+        line-height: line-height(0),
+        width: 6.5in, // Width of the page minus margins
+        margin: "0 0 1.5rem 0",
+        padding-bottom: 0.5rem,
+        border-bottom-color: enum('ValueSet:::REQUIRED'),
+        border-bottom-width: 0.2rem ,
+        border-bottom-style: solid,
+        box-decoration-break: slice,
+    )
+);
+
+$ChapterObjective__Container: empty_wrapper(OutlineObjective, ' > div.os-chapter-objective');
+
+$ChapterObjective__Link: (
+    _name: "ChapterObjectiveLink",
+    _subselector: ' > a.os-chapter-objective',
+    _properties: (
+        display: inline-block,
+        color: enum('ValueSet:::REQUIRED'),
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-weight: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        margin-bottom: 0rem,
+        text-decoration: none,
+    )
+);

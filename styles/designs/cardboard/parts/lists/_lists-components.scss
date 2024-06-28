@@ -1,0 +1,210 @@
+// Containers
+$ListContainer: empty_wrapper(Container, '');
+
+// Basic Lists
+$UnorderedList--FirstLevel: (
+    _name: "FirstLevelUnorderedList",
+    _subselector: ' > ul:not([data-labeled-item="true"])',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$OrderedList--FirstLevel: (
+    _name: "FirstLevelOrderedList",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$UnorderedList--SecondLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+$OrderedList--SecondLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$UnorderedList--ThirdLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul > li > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+$OrderedList--ThirdLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol > li > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+// Stepwise lists
+
+$StepwiseList__Container: (
+    _name: "StepwiseListContainer",
+    _subselector: "",
+    _properties: (
+        list-style: none,
+        padding-left: h-spacing(0),
+        margin-left: h-spacing(0),
+    )
+);
+
+$StepwiseList__Item: (
+    _name: "StepwiseListItem",
+    _subselector: "> li ",
+    _properties: (
+        padding-left: h-spacing(0),
+        margin-left: h-spacing(0),
+        display: flex,
+        flex-direction: row,
+    )
+);
+
+$StepwiseList__Token: (
+    _name: "StepwiseListToken",
+    _subselector: " > .os-stepwise-token",
+    _properties: (
+        font-weight: bold,
+        flex-shrink: 0,
+        margin-right: h-spacing(1),
+    )
+);
+
+$StepwiseList__Content: empty_wrapper(StepwiseListContent, ' > .os-stepwise-content');
+
+// Appendix
+
+$UnorderedList--AppendixGlossary: (
+  _name: "AppendixGlossaryUnorderedList",
+  _subselector: " > ul",
+  _properties: (
+    font-size: font-scale(-1),
+    list-style-type: none,
+  ),
+);
+
+$UnorderedList__Item--AppendixGlossary: (
+  _name: "AppendixGlossaryUnorderedListItem",
+  _subselector: " > li",
+  _properties: (
+    text-indent: -5px, // creates a hanging indent
+    padding-left: 5px,
+  )
+);
+
+// Lists of type A
+// Used in section Collaborative Group Activities from Astronomy
+$OrderedList--TypeA: (
+    _name: "TypeAOrderedListList",
+    _subselector: ' > ol[type="A"]',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$OrderedList--TypeA__Item: (
+    _name: "TypeAOrderedListItem",
+    _subselector: ' > li',
+    _properties:(
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$OrderedList--TypeA__Marker: (
+    _name: "TypeAOrderedListMarker",
+    _subselector: '::marker',
+    _properties:(
+        font-weight: bold,
+    )
+);
+
+// Objectives
+
+$ListItem--Objectives: (
+    _name: "ObjectivesListItem",
+    _subselector: ' > li',
+    _properties:(
+        max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties:(
+        display: flex,
+        max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives--WithCustomBullet: (
+    _name: "ObjectivesWithCustomBulletListItem",
+    _subselector: ' > li',
+    _properties:(
+        position: relative,
+        max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__CustomBulletIcon: (
+    _name: "ObjectivesCustomBulletIcon",
+    _subselector: '::before',
+    _properties: (
+        content: "''",
+        display: inline-block,
+        height: v-spacing(1),
+        width: h-spacing(2),
+        background: enum('ValueSet:::REQUIRED'),
+        background-size: contain,
+        position: absolute,
+        left: 0,
+        transform: translate(-1.7rem, 0.4rem),
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    margin-right: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$ListItem--Objectives__LOIcon: (
+    _name: "ObjectivesLOIcon",
+    _subselector: '::before',
+    _properties: (
+        content: "''",
+        display: inline-block,
+        height: font-scale(0),
+        width: font-scale(1),
+        background: enum('ValueSet:::REQUIRED'),
+        background-size: contain,
+        padding-right:  h-spacing(1),
+        position: relative,
+        top: 3px,
+    )
+);
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: ' > ul',
+    _properties:(
+        list-style-type: none,
+    )
+);

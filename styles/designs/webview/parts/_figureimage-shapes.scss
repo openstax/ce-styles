@@ -31,8 +31,26 @@
                 ))
             ),
         )),
+        map-merge($FigureClass--Mechanism, (
+            _components: (
+                map-merge($Caption__Title__Container--MechanismFigure, (
+                    _components: (
+                        $Caption__Title--Figure,
+                        $Caption__TitleLabel--Figure,
+                        $Caption__Number--Figure,
+                        $Caption--MechanismFigure--ScaledDown,
+                    ),
+                )),
+                map-merge($Caption__Text__Container--MechanismFigure, (
+                    _components: (
+                        $Caption--MechanismFigure--ScaledDown,
+                    ),
+                )),
+            ),
+        )),
         $Image,
         $Image--InMedia,
+        $Media--WithIframe,
         map-merge($NotFigure__Container, (
             _components: (
                 map-merge($Media--ScaledDown, (
@@ -45,7 +63,10 @@
                         $Image--ScaledDown30,
                     ),
                 )),
+                $Image__ScaledDownClass,
+                $Image__ScaledDown30Class,
             ),
         ))
     ),
 ));
+

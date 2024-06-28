@@ -1,6 +1,5 @@
 @import '_table-components';
 @import '_caption-components';
-@import 'lists-components';
 @import 'titles-components';
 
 @include create_shape('carnival:::BasicTableShape',  (
@@ -24,19 +23,81 @@
                         )),
                         map-merge($Table__Body, (
                             _components: (
+                              $Table__Row--HeaderRowClass,
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Data--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
-                                        map-merge($Table__Data, ( // Needs to be cleaned up after lists cleaning
+                                        map-merge($Table__Data, (
                                             _components: (
-                                                $Table__UnorderedList--MarginLeft,
-                                                $List--Unstyled,
+                                                $Table__Strong,
                                             )
                                         )),
-                                        $Table__Data--First,
+                                        $Table__Data--NotFirstChildWithRowspan,
+                                        $Table__Data--NotLastChild,
+                                        // Added as part of the fix for cnx-recipes#1827
+                                        $Table__Data--BottomBorder,
+                                    )
+                                )),
+                                $Table__Row--Last--MergedCells__Data,
+                            )
+                        )),
+                        $Table__Column--NotLastChild,
+                    )
+                )),
+                $Table__BottomBorder--AfterTable,
+                map-merge($Caption__Container--Table, (
+                    _components: (
+                        $Caption__TitleLabel,
+                        $Caption__Number,
+                        $Caption__Title,
+                        $Caption__Text
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::BasicTableWithCaptionOnTopShape',  (
+    _components: (
+        map-merge($Table__Container, (
+            _components: (
+                map-merge($Caption__Container--Table--OnTop, (
+                    _components: (
+                        $Caption__TitleLabel,
+                        $Caption__Number,
+                        $Caption__Title,
+                        $Caption__Text
+                    )
+                )),
+                map-merge($Table, (
+                    _components: (
+                        map-merge($Table__Head, (
+                            _components: (
+                                map-merge($Table__Row, (
+                                    _components: (
+                                        $Table__Head__Cell,
+                                        $Table__HeadCell--TopAligned,
+                                        $Table__HeadCell--LeftAligned,
+                                        $Table__HeadCell--RightAligned,
+                                        $Table__HeadCell--Centered,
+                                    )
+                                )),
+                            )
+                        )),
+                        map-merge($Table__Body, (
+                            _components: (
+                                map-merge($Table__Row, (
+                                    _components: (
+                                        $Table__Data--TopAligned,
+                                        $Table__Data--LeftAligned,
+                                        $Table__Data--RightAligned,
+                                        $Table__Data--Centered,
+                                        $Table__Data,
+                                        $Table__Data--NotLastChild,
                                         // Added as part of the fix for cnx-recipes#1827
                                         $Table__Data--BottomBorder,
                                     )
@@ -46,13 +107,7 @@
                         )),
                     )
                 )),
-                map-merge($Caption__Container--Table, (
-                    _components: (
-                        $Table__BottomBorder,
-                        $Caption__TitleLabel,
-                        $Caption__Number,
-                    )
-                )),
+                $Table__BottomBorder--AfterTable,
             )
         )),
     )
@@ -69,7 +124,7 @@
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Data,
-                                        $Table__Data--First,
+                                        $Table__Data--NotLastChild,
                                     )
                                 )),
                                 $Table__Row--First,
@@ -104,7 +159,7 @@
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Data,
-                                        $Table__Data--First,
+                                        $Table__Data--NotLastChild,
                                     ),
                                 )),
                                 $Table__Row--Last,
@@ -117,6 +172,8 @@
                         // TODO as part of carnival refactor: add a Table Bottom Border component here
                         $Caption__TitleLabel,
                         $Caption__Number,
+                        $Caption__Title,
+                        $Caption__Text
                     )
                 )),
             )
@@ -134,6 +191,10 @@
                             _components: (
                                 map-merge($Table__Row, (
                                     _components: (
+                                        $Table__HeadCell--TopAligned,
+                                        $Table__HeadCell--LeftAligned,
+                                        $Table__HeadCell--RightAligned,
+                                        $Table__HeadCell--Centered,
                                         $Table__Head__Cell,
                                     )
                                 )),
@@ -143,6 +204,10 @@
                             _components: (
                                 map-merge($Table__Row, (
                                     _components: (
+                                        $Table__Data--TopAligned,
+                                        $Table__Data--LeftAligned,
+                                        $Table__Data--RightAligned,
+                                        $Table__Data--Centered,
                                         $Table__Data--Unstyled,
                                     )
                                 )),
@@ -185,6 +250,72 @@
     )
 ));
 
+@include create_shape('carnival:::TableFromNotesShape',(
+    _components: (
+        map-merge($Notes__Container,(
+            _components:(
+                $Table__Container--FromNote,
+            ),
+        )),
+    )
+));
+
+// for .no-cellborders
+// no cell borders, colored last row, use very similar
+// middle has a rov class="header-row"
+
+@include create_shape('carnival:::NoCellBordersTableShape',  (
+  _components: (
+    map-merge($Table__Container, (
+      _components: (
+          map-merge($Caption__Container--Table--OnTop, (
+              _components: (
+                  $Caption__TitleLabel,
+                  $Caption__Number,
+                  $Caption__Title,
+                  $Caption__Text
+              )
+          )),
+          map-merge($Table, (
+              _components: (
+                map-merge($Table__Head, (
+                    _components: (
+                      $Table__Row--HeaderRowClass,
+                        map-merge($Table__Row, (
+                            _components: (
+                                $Table__Head__Cell--NoCellBorder,
+                                $Table__HeadCell--TopAligned,
+                                $Table__HeadCell--LeftAligned,
+                                $Table__HeadCell--RightAligned,
+                                $Table__HeadCell--Centered,
+                            )
+                        )),
+                    )
+                )),
+                map-merge($Table__Body, (
+                    _components: (
+                      $Table__Row--HeaderRowClass,
+                        map-merge($Table__Row, (
+                            _components: (
+                                $Table__Data,
+                                $Table__Data--TopAligned,
+                                $Table__Data--LeftAligned,
+                                $Table__Data--RightAligned,
+                                $Table__Data--Centered,
+                                $Table__Data--BottomBorder,
+                            )
+                        )),
+                        $Table__Row--Last--MergedCells__Data,
+                    )
+                )),
+              )
+            )),
+            $Table__BottomBorder--AfterTable,
+      )
+    ))
+  )
+));
+
 @include create_shape('carnival:::TableTopSpacingShape', (
     _components: (
         map-merge($TopSpacing__Container,(
@@ -195,3 +326,44 @@
     )
 ));
 
+@include create_shape('carnival:::VerticallyTightTableShape',  (
+  _components: (
+    map-merge($Table__Head, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                  $Table__HeadCell--VerticallyTight
+                )
+            )),
+        )
+    )),
+    map-merge($Table__Body, (
+        _components: (
+            map-merge($Table__Row, (
+                _components: (
+                    $Table__Data--VerticallyTight,
+                )
+            )),
+        )
+    )),
+  )
+));
+
+/* .alternate-shading is a new class for tables and cookbook will need to be updated to reflect this.
+    This shape should be modified after cookbook change*/
+
+@include create_shape('carnival:::AlternateShadingTableShape', (
+    _components: (
+      map-merge($Table__Body, (
+        _components:(
+          $Table__Row--AlternateShading,
+        )
+      )),
+    )
+));
+
+@include create_shape('carnival:::FullWidthTableShape', (
+    _components: (
+        $Table__Container--FullWidth,
+    )
+));

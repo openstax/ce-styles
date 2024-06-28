@@ -1,17 +1,26 @@
-//-------------------------------------------------------------------------------------------
-//ToDo: delete this component when ChapterModuleTitlesShape be removed
-$Module__Container: empty_wrapper(Module, ' > [data-type="page"]:not(.introduction)');
-
-//-------------------------------------------------------------------------------------------
-
 //Empty Containers
 $Page__Container: empty_wrapper(PageContainer, '');
 $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
+$SectionExercises__Container: empty_wrapper(SectionExerciesContainer, ' > .os-eos.os-section-exercises-container');
 $Eob__Container: empty_wrapper(EobContainer, '');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$ListContainer: empty_wrapper(ListContainer, '');
+
+$Page--Composite__Container--WithIcon: (
+  _name:"CompositePageContainerWithIcon",
+  _subselector: '',
+  _properties: (
+    margin-bottom: v-spacing(1),
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-bottom-width: 0.2rem,
+    border-bottom-style: solid,
+    box-decoration-break: slice,
+  )
+);
 
 // H1 headers
 $H1: (
@@ -23,13 +32,13 @@ $H1: (
     font-weight: bold,
     text-transform: uppercase,
     column-span: all,
-    font-size: font-scale(5),
-    line-height: line-height(5),
-    padding-bottom: v-spacing(1),
+    font-size: font-scale(6),
+    line-height: line-height(6),
+    padding-bottom: v-spacing(3),
     border-bottom-color: enum('ValueSet:::REQUIRED'),
     border-bottom-width: 0.1rem,
     border-bottom-style: solid,
-    margin-bottom: v-spacing(2),
+    margin-bottom: v-spacing(3),
   )
 );
 
@@ -67,8 +76,8 @@ $H1--Appendix: (
   _properties: (
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(5),
-    line-height: line-height(5),
+    font-size: font-scale(6),
+    line-height: line-height(6),
     font-weight: bold,
     text-transform: uppercase,
     margin-bottom: v-spacing(2),
@@ -83,8 +92,8 @@ $H1--Appendix__Text: (
     font-family: enum('ValueSet:::REQUIRED'),
     font-size: font-scale(3),
     line-height: line-height(3),
-    padding-top: v-spacing(1),
-    margin-top: v-spacing(1),
+    padding-top: v-spacing(3),
+    margin-top: v-spacing(3),
     font-weight: 600,
     text-transform: none,
     border-top-color: enum('ValueSet:::REQUIRED'),
@@ -109,9 +118,22 @@ $H2: (
   )
 );
 
+$H2--BumpedUp: (
+  _name:"H2BumpedUp",
+  _subselector: ' > h2',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: line-height(3),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
+);
+
 // Chapter Intro Text Header
-$H2TextHeader--ChapterIntro: (
-    _name: "H2IntroTextHeader",
+$H2--ChapterIntro: (
+    _name: "H2ChapterIntro",
     _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         float: left,
@@ -121,6 +143,81 @@ $H2TextHeader--ChapterIntro: (
         margin: "0 .5rem 0 0",
         font-weight: 700,
     )
+);
+
+$H2--Module: (
+  _name:"H2ModuleTitle",
+  _subselector: ' > h2[data-type="document-title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
+);
+
+$H2--WithIcon: (
+  _name:"H2TitleWithIcon",
+  _subselector: ' > h2',
+  _properties: (
+    display: flex,
+    flex-direction: column,
+  )
+);
+
+$H2--WithIcon__Text: (
+  _name: "H2TitleWithIconText",
+  _subselector: " > .os-text",
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 900,
+    letter-spacing: 0.05rem,
+    text-transform: uppercase,
+    font-size: font-scale(5),
+    line-height: line-height(5),
+    border-bottom-color: (enum('ValueSet:::GROUPED'), group-border-color),
+    border-bottom-width: 0.2rem,
+    border-bottom-style: solid,
+    margin-bottom: v-spacing(1),
+  )
+);
+
+$H2--WithIcon__Divider: (
+  _name: "H2TitleWithIconDivider",
+  _subselector: " > .os-divider",
+  _properties: (
+    display: none,
+  )
+);
+
+$H2--WithIcon__Icon: (
+  _name: "H2TitleWithIconIcon",
+  _subselector: "::before",
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: contain,
+    height: v-spacing(6),
+    width: v-spacing(6),
+    display: inline-block,
+    padding-right: 0.4rem,
+    position: relative,
+    bottom: -1rem,
+    content: "''",
+  )
+);
+
+$H2--Link:(
+  _name: "H2LinkTitle",
+  _subselector: " > a > h2",
+  _properties:(
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
+  )
 );
 
 // H3 titles
@@ -135,6 +232,19 @@ $H3: (
     margin-bottom: v-spacing(1),
     font-weight: 600,
     column-span: enum('ValueSet:::OPTIONAL'), // eoc
+  )
+);
+
+$H3--BumpedUp: (
+  _name: "H3BumpedUp",
+  _subselector: ' > h3',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(2),
+    line-height: line-height(2),
+    margin-bottom: v-spacing(1),
+    font-weight: 600,
   )
 );
 
@@ -213,12 +323,29 @@ $H3--Objectives: (
   _properties: (
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: enum('ValueSet:::REQUIRED'),
+    font-size: enum('ValueSet:::REQUIRED'), // different for learning and chapter objectives
     line-height: enum('ValueSet:::REQUIRED'),
     text-transform: uppercase,
     font-weight: bold,
     margin-bottom: 0, // Needed for Learning Objectives title in College Physics (doesn't change the styling anywhere else)
   )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-size: font-scale(0),
+        line-height: font-scale(0), // value has to be the same as font size
+        font-weight: bold,
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        position:relative,
+        display: flex,
+        flex-direction: row,
+        text-transform: uppercase,
+    )
 );
 
 $H3--AppendixGlossary: (
@@ -248,6 +375,18 @@ $H4: (
   )
 );
 
+$H4--BumpedUp: (
+  _name: "H4BumpedUp",
+  _subselector: ' > h4',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: 600,
+    font-size: font-scale(1),
+    line-height: line-height(1),
+  )
+);
+
 $H4--Link:(
   _name: "H4LinkTitle",
   _subselector: " > a > h4",
@@ -274,13 +413,29 @@ $H5: (
   )
 );
 
-// Custom titles
-
-$Title--InParagraph: (
-  _name:"TitleInParagraph",
-  _subselector:' span[data-type="title"]',
+$H5--BumpedUp: (
+  _name: "H5BumpedUp",
+  _subselector: ' > h5',
   _properties: (
-    margin-right: h-spacing(1),
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    font-size: font-scale(1),
+    line-height: line-height(1),
+  )
+);
+
+// H6 titles
+
+$H6: (
+  _name: "H6Title",
+  _subselector: ' > h6',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    font-size: font-scale(0),
+    line-height: line-height(0),
   )
 );
 
@@ -296,7 +451,7 @@ $Table__Title: (
 );
 
 //Solution title used only in HS Physics in module exercises
-$Exercises__Solution__Title:(
+$Title--Solution:(
   _name: "SolutionTitle",
   _subselector: " > .solution-title",
   _properties:(
@@ -305,4 +460,21 @@ $Exercises__Solution__Title:(
     font-size: font-scale(1),
     line-height: line-height(1),
   )
+);
+
+$Title--Problem:(
+  _name: "ProblemTitle",
+  _subselector: ' > span[data-type="title"]',
+  _properties:(
+    font-weight: bold,
+  )
+);
+
+//Titled lists
+$Title--FromList: (
+    _name: "TitleFromList",
+    _subselector: ' > [data-type="list"] > [data-type="title"]',
+    _properties:(
+        font-weight: bold,
+    )
 );

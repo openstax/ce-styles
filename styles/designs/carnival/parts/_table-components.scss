@@ -9,6 +9,25 @@ $Table__Container: (
     )
 );
 
+$Table__Container--FullWidth: (
+    _name: "FullWidthTableContainer",
+    _subselector: "",
+    _properties: (
+        width: 100%,
+    )
+);
+
+// Used in notes
+$Notes__Container: empty_wrapper(NotesContainer, '');
+
+$Table__Container--FromNote: (
+    _name: "TableContainerFromNote",
+    _subselector: ' .os-table',
+    _properties: (
+        width: 75%,
+    )
+);
+
 // Used in exercises
 $Exercises__Container: empty_wrapper(ExercisesContainer, '');
 $Table__Container__Wrapper: empty_wrapper(TableContainer, ' .os-table');
@@ -18,6 +37,8 @@ $Table: (
     _subselector: " > table",
     _properties: (
         border-collapse: enum('ValueSet:::OPTIONAL'),
+        border-top: enum('ValueSet:::OPTIONAL'),
+        border-top-color: enum('ValueSet:::OPTIONAL'),
         width: enum('ValueSet:::OPTIONAL'),
         max-width: enum('ValueSet:::OPTIONAL'), //used in exercises
         table-layout: enum('ValueSet:::OPTIONAL'), //used in exercises
@@ -69,6 +90,26 @@ $Table__Head__Cell: (
     )
 );
 
+$Table__Head__Cell--NoCellBorder: (
+    _name: "NoBordersTableHeadCell",
+    _subselector: " > th",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        font-family: enum('ValueSet:::OPTIONAL'),
+        font-weight: enum('ValueSet:::OPTIONAL'),
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem,
+        padding-right: table-h-spacing(1),
+        padding-left: table-h-spacing(1),
+
+    )
+);
+
 $Table__HeadCell--TopAligned: (
     _name: "TopAlignedTableHeadCell",
     _subselector: "> th[data-valign="top"]",
@@ -101,6 +142,15 @@ $Table__HeadCell--Centered: (
     )
 );
 
+$Table__HeadCell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
+    )
+);
+
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
 
 $Table__Row: empty_wrapper(TableRow, ' > tr');
@@ -113,8 +163,8 @@ $Table__Data: (
         border-left: enum('ValueSet:::OPTIONAL'),
         border-bottom: enum('ValueSet:::OPTIONAL'),
         text-align: enum('ValueSet:::OPTIONAL'), //used in exercises
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
+        padding-bottom: enum('ValueSet:::REQUIRED'), //different value in vertically-tight tables
         padding-right: enum('ValueSet:::REQUIRED'), //different value in exercises
         padding-left: enum('ValueSet:::REQUIRED'), //different value in exercises
     )
@@ -124,8 +174,8 @@ $Table__Data--Unstyled: (
     _name: "TableUnstyledData",
     _subselector: " > td",
     _properties: (
-        padding-top: table-v-spacing(1),
-        padding-bottom: table-v-spacing(1),
+        padding-top: 0,
+        padding-bottom: 0,
         padding-right: table-h-spacing(1),
         padding-left: table-h-spacing(1),
     )
@@ -164,25 +214,43 @@ $Table__Data--Centered: (
     )
 );
 
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",     // not classes for css precedence
+    _properties: (
+        padding-top: 0.16rem,
+        padding-bottom: 0.16rem
+    )
+);
+
 // Added as part of the fix for cnx-recipes#1827.
 $Table__Data--BottomBorder: (
     _name: "TableBottomBorderData",
     _subselector: " > td",
     _properties: (
+        font-family: enum('ValueSet:::OPTIONAL'),
         border-bottom: enum('ValueSet:::OPTIONAL'),
         padding: table-v-spacing(1),
     )
 );
 
 // Altered as part of the fix for cnx-recipes#1827.
-$Table__Data--First: (
-    _name: "FirstTableData",
-    _subselector: " > td:first-of-type:not(:only-of-type)",
+$Table__Data--NotLastChild: (
+    _name: "TableDataNotLastChild",
+    _subselector: " > td:not(:only-of-type):not(:last-child)",
     _properties: (
         border-left: none,
         border-right: enum('ValueSet:::REQUIRED'),
         font-family: enum('ValueSet:::OPTIONAL'),
         font-weight: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
+$Table__Data--NotFirstChildWithRowspan: (
+    _name: "TableDataNotFirstChildWithRowspan",
+    _subselector: ' > td[rowspan="2"]:not(:only-of-type):not(:first-child)',
+    _properties: (
+        border-left: '0.025rem solid black',
     )
 );
 
@@ -222,6 +290,24 @@ $Table__Row--Last--MergedCells__Data: (
     )
 );
 
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding-top: 0.7rem,
+        padding-bottom: 0.7rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
+    )
+);
+
 // Better way to do a bottom border on a table: make it part of the caption
 $Table__BottomBorder: (
     _name: "TableBottomBorder",
@@ -235,7 +321,29 @@ $Table__BottomBorder: (
         display: block,
         position: relative,
         top: -0.1rem,
-        margin-bottom: v-spacing(1),
+    )
+);
+
+$Table__BottomBorder--AfterTable: (
+    _name: "TableBottomBorderAfterTable",
+    _subselector: ":after",
+    _properties: (
+        content: "''",
+        width: 100%,
+        border-top-color: enum('ValueSet:::REQUIRED'),
+        border-top-width: .12rem,
+        border-top-style: solid,
+        display: block,
+        position: relative,
+        top: -0.1rem,
+    )
+);
+
+$Table__Row--AlternateShading: ( //nursing external (even rows)
+    _name: "AlternateShadingTableRow",
+    _subselector: "> tr:nth-child(even)",
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
     )
 );
 
@@ -248,5 +356,21 @@ $Table--TopSpacing:(
     _subselector: " + .os-table",
     _properties: (
         margin-top: 1rem,
+    )
+);
+
+$Table__Strong: (
+    _name: "TableStrong",
+    _subselector: " > strong",
+    _properties: (
+        word-break: break-word,
+    )
+);
+
+$Table__Column--NotLastChild: (
+    _name: "TableColumnNotLastChild",
+    _subselector: " col:not(:last-child)",
+    _properties: (
+        border-right: enum('ValueSet:::REQUIRED'),
     )
 );

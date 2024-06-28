@@ -7,6 +7,15 @@ $Figure__Container: empty_wrapper(FigureContainer, '');
 
 $Figure__Container--FirstInOrderedList: empty_wrapper(FigureContainerFirstInOrderedList, ' > ol:not(.circled):not(.os-stepwise) > li > .os-figure:first-child');
 
+$Figure__Container--Splash: (
+    _name: "FigureContainerSplash",
+    _subselector: '',
+    _properties: (
+        margin-bottom: v-spacing(2),
+        margin-top: -8.2rem,
+    ),
+);
+
 $Figure:(
     _name: "Figure",
     _subselector: "> figure",
@@ -25,6 +34,17 @@ $Figure--TopSpacing:(
     )
 );
 
+$Figure--Splash: (
+    _name: "FigureSplash",
+    _subselector: ' > figure.splash',
+    _properties: (
+        position: relative,
+        margin: 0,
+    ),
+);
+
+$Figure--Splash__Bg: fullWidthBg("FigureSplash", enum('ValueSet:::REQUIRED'));
+
 //Image
 
 $Image: (
@@ -32,6 +52,15 @@ $Image: (
     _subselector: " img",
     _properties:(
         max-width: 100%,
+    )
+);
+
+$Image--Splash: (
+    _name: "ImageSplash",
+    _subselector: ' > img',
+    _properties: (
+        width: half-fullBleedsSize(6.81, in),
+        position: relative,
     )
 );
 
@@ -69,3 +98,32 @@ $Image--TopSpacing:(
 $Media--FirstInCircledList: empty_wrapper(MediaFirstInCircledList, ' > .circled > li > [data-type="media"]:nth-child(2)'); // first child in circled list is a token
 
 $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol:not(.circled):not(.os-stepwise) > li > [data-type="media"]:first-child');
+
+$Media--Splash: (
+    _name: "MediaSplash",
+    _subselector: ' > span[data-type="media"]',
+    _properties: (
+        line-height: 0,
+        height: 100%,
+        display: flex,
+        width: half-fullBleedsSize(7.5, in),
+        justify-content: flex-end
+    ),
+);
+
+$Media--Splash__Overlay: (
+    _name: "MediaSplashOverlay",
+    _subselector: "::before",
+    _properties: (
+        content: "''",
+        background-color: enum('ValueSet:::REQUIRED'),
+        opacity: 0.3,
+        position: absolute,
+        width: half-fullBleedsSize(6.81, in), //same as the splash img width
+        height: 100%,
+        top: 0,
+        left: 6rem,
+        z-index: 1,
+        box-sizing: border-box,
+    )
+);

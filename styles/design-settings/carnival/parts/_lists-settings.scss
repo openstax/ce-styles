@@ -23,7 +23,19 @@
 ));
 
 @include add_settings((
-    ExerciseCompositePageLists: (
-        _selectors: ('.os-eoc[data-type="composite-page"]'),
+    ExercisesSolutionLists: (
+        _selectors: ('[data-type="solution"]', '[data-type="question-solution"]'),
     ),
 ));
+
+@include add_settings((
+    NotesLists: (
+        _selectors: ('[data-type="note"]'),
+    ),
+));
+
+@include add_settings((
+    ListsFromStimulus: (
+      _selectors: ('[data-type="exercise-stimulus"]'),
+    )
+))

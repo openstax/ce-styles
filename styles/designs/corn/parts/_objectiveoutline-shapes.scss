@@ -1,0 +1,94 @@
+@import 'objectiveoutline-components';
+@import 'titles-components';
+@import 'lists/lists-components';
+
+@include create_shape('corn:::LearningObjectivesWithCustomBulletIconShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            $ListItem--Objectives--WithCustomBulletIcon,
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+@include create_shape('corn:::LearningObjectivesCoreqShape', ( // used only in college-algebra coreq
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H4--LearningObjectives--Coreq,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            $ListItem--Objectives--WithCustomBulletIcon,
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+//Used in Calculus
+@include create_shape('corn:::LearningObjectivesNumberedShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            map-merge($ListItem--Objectives--Flex, (
+              _components: (
+                $ListItem--Objectives__NumberToken,
+              )
+            )),
+          )
+        )),
+      )
+    )),
+  )
+));
+
+// Used in Statistics. Appears in Introduction Page. There is no Learning Objectives or Chapter Outline in this book.
+@include create_shape('corn:::ObjectivesNoteWithCustomBulletIconShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($Objectives__NoteBody, (
+          _components: (
+            $Objectives__Paragraph,
+            map-merge($UnorderedList--UnstyledFromObjectives, (
+              _components: (
+                $ListItem--Objectives--WithCustomBulletIcon,
+              ),
+            ))
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+@include create_shape('corn:::ChapterOutlineShape', (
+    _components: (
+        map-merge($ChapterOutline__Container, (
+            _components: (
+                $H3--ChapterOutline,
+                map-merge($ChapterObjective__Container, (
+                    _components: (
+                        map-merge($ChapterObjective__Link,(
+                            _components: (
+                                $ChapterObjective__Text,
+                            ),
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));

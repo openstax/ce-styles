@@ -9,6 +9,14 @@ $Table__Container: (
     )
 );
 
+$Table__Container--FullWidth: (
+    _name: "FullWidthTableContainer",
+    _subselector: "",
+    _properties: (
+        width: 100%,
+    )
+);
+
 $Table: (
     _name: "Table",
     _subselector: " > table",
@@ -75,9 +83,9 @@ $Table__Head__FirstRow__Cell--FirstChild: (
     _name: "FirstTableHeadCellFirstRow",
     _subselector: " > th:first-child:not(:only-child)",
     _properties: (
-        border-left-style: none,
-        border-left-color: transparent,
-        border-left-width: 0rem,
+        border-left-style: solid,
+        border-left-color: enum('ValueSet:::REQUIRED'),
+        border-left-width: 0.08rem,
         border-right-style: solid,
         border-right-color: enum('ValueSet:::REQUIRED'), 
         border-right-width: 0.08rem, //1px converted to rem
@@ -88,9 +96,9 @@ $Table__Head__FirstRow__Cell--LastChild: (
     _name: "LastTableHeadCellFirstRow",
     _subselector: " > th:last-child:not(:only-child)",
     _properties: (
-        border-right-style: none,
-        border-right-color: transparent,
-        border-right-width: 0rem,
+        border-right-style: solid,
+        border-right-color: enum('ValueSet:::REQUIRED'),
+        border-right-width: 0.08rem,
         border-left-style: solid,
         border-left-color: enum('ValueSet:::REQUIRED'), 
         border-left-width: 0.08rem, //1px converted to rem
@@ -189,6 +197,15 @@ $Table__Head__Cell--Centered: (
     _properties: (
         text-align: center,
     )    
+);
+
+$Table__Head__Cell--VerticallyTight: (
+    _name: "VerticallyTightHeadCell",
+    _subselector: "> th",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
 );
 
 $Table__Body: empty_wrapper(TableBody, ' > tbody');
@@ -293,6 +310,15 @@ $Table__Data--Centered: (
     _properties: (
         text-align: center,
     )    
+);
+
+$Table__Data--VerticallyTight: (
+    _name: "VerticallyTightTableData",
+    _subselector: "> td:not(.regular-spacing):not(.pseudo-class-for-precedence)",
+    _properties: (
+        padding-top: '0.16rem !important',
+        padding-bottom: '0.16rem !important'
+    )
 );
 
 // Used in text-heavy tables

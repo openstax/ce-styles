@@ -20,6 +20,49 @@
     )
 ));
 
+@include create_shape('carnival:::FigureSplashShape', (
+    _components: (
+      map-merge($Figure__Container--Splash, (
+        _components: (
+            map-merge($Figure--Splash, (
+                _components: (
+                    $Figure--Splash__Bg,
+                    map-merge($Media--Splash, (
+                        _components: (
+                          $Image--Splash,
+                        )
+                    )),
+                )
+            )),
+            map-merge($Caption__Container--ChapterIntro, (
+                _components: (
+                    $Caption__Container--ChapterIntro__Bg,
+                    $Caption__Number,
+                    $Caption__TitleLabel,
+                    $Caption__Title,
+                    $Caption__Text,
+                )
+            )),
+        )
+      )),
+    )
+));
+
+@include create_shape('carnival:::FigureDedicationShape',(
+    _components: (
+        map-merge($Figure__Container,(
+            _components:(
+                $Figure,
+                map-merge($Caption__Container--Figure, (
+                    _components: (
+                        $Caption__Text--Dedication,
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
 @include create_shape('carnival:::FigureFromExercisesShape',(
     _components: (
         map-merge($Exercises__Container,(
@@ -37,6 +80,7 @@
                               $Image--FirstInList,
                           )
                       )),
+                      $Image--AfterBold,
                     )
                 )),
             ),
@@ -63,3 +107,34 @@
         )),
     )
 ));
+
+@include create_shape('carnival:::MechanismFigureShape',(
+    _components: (
+        map-merge($Figure__Container--Mechanism,(
+            _components:(
+                map-merge($Caption__Title__Container, (
+                    _components: (
+                        $Caption__TitleLabel,
+                        $Caption__Number,
+                        $Caption__Title,
+                    )
+                )),
+                map-merge($Caption__Text__Container, (
+                    _components: (
+                        $Caption__Text,
+                    )
+                )),
+                map-merge($Figure--Mechanism, (
+                    _components: (
+                        map-merge($Media--Mechanism, (
+                            _components: (
+                                $Image--Mechanism,
+                            )
+                        )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+

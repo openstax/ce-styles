@@ -12,15 +12,19 @@
                             $Exercise__ProblemSolution__Divider,
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
+                                    map-merge($Exercise__ProblemSolution__Paragraph,(
+                                        _components:(
+                                            $Title--Problem,
+                                        ),
+                                    )),
                                 ),
                             )),
-                            $Exercise__Problem__Container--WithImageTableOnTop,
+                            $Exercise__Problem__Container--WithFirstElement,
                         ),
                     )),
-                    map-merge($Exercise__Solution__Wrapper,(
+                    map-merge($Exercise__Solution,(
                       _components:(
-                          $Exercises__Solution__Title // present only in hs physics in module exercises
+                        $Title--Solution, // present only in hs physics in module exercises
                       ),
                     )),
                   )
@@ -33,10 +37,16 @@
                             $Exercise__ProblemSolution__Divider,
                             map-merge($Exercise__Problem__Container,(
                                 _components:(
-                                    $Exercise__ProblemSolution__Paragraph,
+                                    $InjectedExercise__Context,
+                                    $InjectedExercise__Divider,
+                                    map-merge($Exercise__ProblemSolution__Paragraph,(
+                                        _components:(
+                                            $Title--Problem,
+                                        ),
+                                    )),
                                 ),
                             )),
-                            $Exercise__Problem__Container--WithImageTableOnTop,
+                            $Exercise__Problem__Container--WithFirstElement,
                         ),
                     )),
                   )
@@ -45,3 +55,36 @@
         )),
     ))
 );
+
+@include create_shape('carnival:::ExercisesMultipartQuestionShape',(
+    _components:(
+        map-merge($ExerciseMultipartQuestion__Container,(
+            _components:(
+                map-merge($Exercise__Problem__Container--FromMultipartQuestion,(
+                    _components:(
+                        $InjectedExercise__ProblemSolution__Letter,
+                        $Exercise__ProblemSolution__Divider,
+                        $InjectedExercise__Question__Stem,
+                        $InjectedExercise__Question__Stem--WithFirstElement,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('carnival:::ExercisesQuestionWithProblemPrefixShape',(
+    _components:(
+        map-merge($ExerciseQuestion__Container,(
+            _components:(
+                map-merge($Exercise__ProblemSolution__Prefix,(
+                    _components:(
+                        $Exercise__ProblemSolution__Prefix__Label,
+                        $Exercise__ProblemSolution__Prefix__Number,
+                    ),
+                )),
+                $Exercise__Problem__Container--Prefix,
+            ),
+        )),
+    )
+));

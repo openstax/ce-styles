@@ -1,0 +1,297 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: 'os-eoc.os-summary-container', generalSelector: '.os-eoc'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-page"]', generalSelector: '.os-eob'),
+);
+
+$bandColor: #24739E;
+
+@import 'framework/framework';
+@import '../../design-settings/cardboard/design.scss';
+@import '../../designs/cardboard/pdf/folio';
+@import '../../design-settings/cardboard//settings.scss';
+
+//Settings
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+  ),
+));
+
+//Titles
+@include add_settings((
+  ChapterTitles: (
+  _selectors: ('[data-type="chapter"]'),
+    'H1ChapterIntroNumbered:::color': (_ref: 'colorMap:::chapterTitleColor'),
+    'H1ChapterIntroNumbered:::margin-left': -1.2rem,
+    'H1ChapterIntroTitleNumber:::color': (_ref: 'colorMap:::chapterTitleNumberColor'),
+    'H1ChapterIntroIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-introcampus.svg")) no-repeat top left,
+    'H1ChapterIntroIcon:::bottom': -0.6rem,
+    'H1ChapterIntroIcon:::left': 1.3rem,
+  ),
+));
+
+//Notes
+@include add_settings((
+  Activity: (
+    _selectors: (".activity"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-activity.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':0,
+    'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption3HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
+  Application: (
+    _selectors: (".application"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-check.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption5HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption5BodyBackgroundColor"),
+  ),
+  WhatStudentsSay: (
+    _selectors: (".what-students-say"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-groupbubble.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom': 0rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption3HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+  ),
+  GetConnected: (
+    _selectors: (".get-connected"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-globe.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+  ),
+  Analysis: (
+    _selectors: (".analysis-question"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-road.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
+  StudentProfile: (
+    _selectors: (".student-profile"),
+    'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption4HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption4HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
+  ),
+  TheRealDeal: (
+    _selectors: (".real-deal"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-groupbubble.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption3HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+  ),
+  StudentStory: (
+    _selectors: (".student-story"),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-conversation.svg")) no-repeat top right,
+    'TitleIcon:::margin-right': v-spacing(1),
+    'TitleIcon:::height': 5rem,
+    'TitleIcon:::width': 11rem,
+    'TitleIcon:::bottom':.2rem,
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+  ),
+));
+
+// EoC titles
+@include add_settings((
+  FamilyFriendsTitles: (
+    _selectors: (".os-family-friends-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-managegroup.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  SummaryTitles: (
+    _selectors: (".os-summary-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  CheckingInTitles: (
+    _selectors: (".os-checking-in-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-multiplechoice.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  CareerConnectionTitles: (
+    _selectors: (".os-career-connection-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-casestudy.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  RethinkingTitles: (
+    _selectors: (".os-rethinking-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lightbulb.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+  WhereGoTitles: (
+    _selectors: (".os-where-go-container"),
+    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
+    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
+    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-mountainup.svg")) no-repeat top left,
+    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
+    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
+    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
+    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
+  ),
+));
+
+
+
+@include use('BookRoot', "common:::BookRoot");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('Toc', 'cardboard:::NoUnitToc');
+
+// Chapter Intro
+@include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
+//Figures
+@include use('Figure','cardboard:::FigureShape');
+@include use('FigureSplash','cardboard:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'cardboard:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'cardboard:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'cardboard:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'cardboard:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','cardboard:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
+
+//Titles
+@include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('FamilyFriendsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CheckingInTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('CareerConnectionTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('RethinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('WhereGoTitles', 'cardboard:::EocCompositePageTitlesShape');
+
+//Notes
+@include use('Activity', 'cardboard:::IconBoxedNoteWithSubtitleShape');
+@include use('GetConnected', 'cardboard:::IconBoxedNoteShape');
+@include use('Application', 'cardboard:::IconBoxedNoteShape');
+@include use('Analysis', 'cardboard:::IconBoxedNoteWithSubtitleShape');
+@include use('WhatStudentsSay', 'cardboard:::IconBoxedNoteShape');
+@include use('StudentProfile', 'cardboard:::BoxedNoteWithBordersShape');
+@include use('TheRealDeal', 'cardboard:::IconBoxedNoteShape');
+@include use('StudentStory', 'cardboard:::IconBoxedNoteShape');
+
+//Tables
+@include use('UnstyledTable', 'cardboard:::UnstyledTableShape');
+@include use('DefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('FakeTitleTable', 'cardboard:::TableWithBordersShape');
+@include use('TimelineTable', 'cardboard:::TimelineTableShape');
+@include use('FullWidthTable', 'cardboard:::FullWidthTableShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+//Lists
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+
+// Eoc
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+
+// eob
+@include use('Index', 'cardboard:::IndexShape');
+@include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+@include use('PageLists', 'cardboard:::PageListsShape');
+

@@ -3,58 +3,6 @@
         //There is a .os-solutions-container and a .os-solution-container
         //This should be cleaned up so that we are using one not both in the recipe
         _selectors: ('[data-type="composite-chapter"].os-eob.os-solutions-container'),
-        ProblemSolutionNumber: (
-            color: (_ref: 'colorMap:::fontBodyColor'),
-        ),
-        ProblemSolutionDivider: (
-            display: table-cell,
-        ),
-        SolutionContainer: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionContainerWithImageTableOnTop: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionContainerWithInlineListOnTop: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionWrapper: (
-            display: inline-table,
-            overflow-wrap: break-word,
-            width: 29%,
-            padding-right: v-spacing(1),
-        ),
-        EocTableContainer: (
-            margin-left: 0,
-            margin-right: 0,
-        ),
-        Table: (
-            table-layout: fixed,
-            max-width: 100%,
-        ),
-        TableHeadCell: (
-            padding-top: 0.4rem,
-            padding-bottom: 0.4rem,
-            padding-right:  0.4rem,
-            padding-left:  0.4rem,
-            font-family: (_ref: "typography:::baseFont"),
-            font-weight: bold,
-            color: (_ref: "colorMap:::tableHeaderColor"),
-            background-color: (_ref: "colorMap:::tableColor"),
-        ),
-        TableData: (
-            padding-top: 0.4rem,
-            padding-bottom: 0.4rem,
-            padding-right: 0.4rem,
-            padding-left: 0.4rem,
-            font-family: (_ref: "typography:::baseFont"),
-            border-width: 0.09rem,
-            border-style: solid,
-            border-color: (_ref: "colorMap:::basicTableCellBorderColor"),
-            color: (_ref: "colorMap:::tableColor"),
-            vertical-align: top,
-            text-align: center
-        ),
     ),
 ));
 
@@ -63,64 +11,35 @@
         //There is a .os-solutions-container and a .os-solution-container
         //This should be cleaned up so that we are using one not both in the recipe
         _selectors: ('[data-type="composite-chapter"].os-eob.os-solution-container'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeyThreeColumnsSolution: (
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          display: inline-table,
+          overflow-wrap: break-word,
+          margin-bottom: v-spacing(2),
+          width: 29%,
+          padding-right: v-spacing(1),
+        ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
         ),
         ProblemSolutionDivider: (
             display: table-cell,
         ),
-        SolutionContainer: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionContainerWithImageTableOnTop: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionContainerWithInlineListOnTop: (
-            padding-left: v-spacing(1),
-        ),
-        SolutionWrapper: (
-            display: inline-table,
-            overflow-wrap: break-word,
-            width: 29%,
-            padding-right: v-spacing(1),
-        ),
-        EocTableContainer: (
-            margin-left: 0,
-            margin-right: 0,
-        ),
-        Table: (
-            table-layout: fixed,
-            max-width: 100%,
-        ),
-        TableHeadCell: (
-            padding-top: 0.4rem,
-            padding-bottom: 0.4rem,
-            padding-right:  0.4rem,
-            padding-left:  0.4rem,
-            font-family: (_ref: "typography:::baseFont"),
-            font-weight: bold,
-            color: (_ref: "colorMap:::tableHeaderColor"),
-            background-color: (_ref: "colorMap:::tableColor"),
-        ),
-        TableData: (
-            padding-top: 0.4rem,
-            padding-bottom: 0.4rem,
-            padding-right: 0.4rem,
-            padding-left: 0.4rem,
-            font-family: (_ref: "typography:::baseFont"),
-            border-width: 0.09rem,
-            border-style: solid,
-            border-color: (_ref: "colorMap:::basicTableCellBorderColor"),
-            color: (_ref: "colorMap:::tableColor"),
-            vertical-align: top,
-            text-align: center
-        ),
     ),
 ));
 
 @include add_settings((
-    AnswerKeyEoc: ( // Used in Statistics, Additive Manufactoring (retired),
-        _selectors: ('[data-type="composite-page"].os-eoc.os-solutions-container'),
+    AnswerKeyOneColumnEocSolution: ( // Used in Statistics, Additive Manufactoring (retired),
+        _selectors: ('.os-eoc [data-type="solution"]', '.os-eoc [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          display: table,
+          margin-bottom: v-spacing(2),
+        ),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
@@ -129,12 +48,23 @@
         ProblemSolutionDivider: (
             display: table-cell,
         ),
-        SolutionContainer: (
-            padding-left: v-spacing(1),
-            vertical-align: bottom,
+    ),
+));
+
+@include add_settings((
+    AnswerKeyOneColumnEobSolution: ( // Used in Contemporary Math
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
+        AnswerKeySolutionContainer: (
+          display: table,
+          margin-bottom: 0,
         ),
-        SolutionContainerWithImageTableOnTop: (
-            padding-left: v-spacing(1),
+        ProblemSolutionNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+            width: 2%,
+            text-align: right,
+        ),
+        ProblemSolutionDivider: (
+            display: table-cell,
         ),
     ),
 ));

@@ -16,6 +16,14 @@ $InjectedExercise__Container: (
     )
 );
 
+$ExerciseMultipartQuestion__Container: (
+    _name: "ExerciseMultipartQuestionContainer",
+    _subselector: '',
+    _properties: (
+        display: enum('ValueSet:::OPTIONAL'), // used in inline exercises
+    )
+);
+
 // Problem components
 $Exercise__Problem__Wrapper: (
     _name: "ProblemWrapper",
@@ -34,27 +42,132 @@ $InjectedExercise__Question__Wrapper: (
     )
 );
 
-$Exercise__Problem__Container: exerciseChildContainer((child: problem, name: "ProblemContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
-$Exercise__Problem__Container--WithImageTableOnTop: exerciseChildContainer((child: problem, name: "ProblemContainerWithImageTableOnTop", hasImageTableOnTop: true));
+$Exercise__Problem__Container: (
+    _name: "ProblemContainer",
+    _subselector: " > .os-problem-container",
+    _properties:(
+      display: table-cell,
+      width: 100%
+    )
+);
+
+$Exercise__Problem__Container--WithFirstElement: (
+    _name: "ProblemContainerWithFirstElement",
+    _subselector: " > .os-problem-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromMultipartQuestion: (
+    _name: "ProblemContainerFromMultipartQuestion",
+    _subselector: " > .os-problem-container",
+    _properties:(
+        display: table,
+    )
+);
+
+$InjectedExercise__Context: (
+  _name: "InjectedexerciseContext",
+  _subselector: ' > div[data-type="exercise-context"]',
+  _properties: (
+    display: inline,
+  )
+);
+
+$InjectedExercise__Divider: (
+  _name: "InjectedexerciseDivider",
+  _subselector: ' > span.os-divider',
+  _properties: (
+    display: inline,
+  )
+);
+
+$InjectedExercise__ProblemSolution__Letter: (
+  _name: "ProblemSolutionLetter",
+  _subselector: ' > .problem-letter',
+  _properties: (
+    display: table-cell,
+    text-decoration: none,
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+  )
+);
+
+$InjectedExercise__Question__Stem: (
+    _name: "QuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: table-cell,
+    )
+);
+
+$InjectedExercise__Question__Stem--WithFirstElement: (
+    _name: "QuestionStemWithFirstElement",
+    _subselector: " > [data-type='question-stem'].has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+    )
+);
+
+$InjectedExercise__Question__Answers--WithPre: (
+  _name: "QuestionAnswersWithPre",
+  _subselector: " li[data-type=question-answer] pre",
+  _properties: (
+    margin: 0,
+  )
+);
 
 // Solution components
-$Exercise__Solution__Wrapper: (
-  _name: "SolutionWrapper",
-  _subselector: ' [data-type="solution"]',
+$Exercise__Solution: (
+  _name: "ExerciseSolution",
+  _subselector: ' [data-type="solution"]', // has to be non direct child
   _properties: (
     display: table,
   )
 );
 
-$InjectedExercise__Solution__Wrapper: (
-  _name: "InjectedSolutionWrapper",
-  _subselector: ' [data-type="question-solution"]',
+$InjectedExercise__Solution: (
+  _name: "InjectedSolution",
+  _subselector: ' [data-type="question-solution"]', // has to be non direct child
   _properties: (
     display: table,
   )
 );
 
-$Exercise__Solution__Container: exerciseChildContainer((child: solution, name: "SolutionContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: inline-table,
+    margin-right: h-spacing(1),
+  )
+);
+
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+    )
+);
 
 // General problem and solution components
 $Exercise__ProblemSolution__Text: (

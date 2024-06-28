@@ -8,6 +8,24 @@ $Figure__Container: empty_wrapper(FigureContainer, '');
 
 $Figure__Container--FirstInOrderedList: empty_wrapper(FigureContainerFirstInOrderedList, ' > ol > li > .os-figure:first-child');
 
+$Figure__Container--Splash: (
+    _name: "FigureContainerSplash",
+    _subselector: '',
+    _properties: (
+        margin-bottom: v-spacing(2),
+    ),
+);
+
+$Figure__Container--Mechanism:(
+    _name: "MechanismFigureContainer",
+    _subselector: "",
+    _properties: (
+        display: table,
+        margin-right: auto,
+        margin-left: auto,
+    )
+);
+
 $Figure:(
     _name: "Figure",
     _subselector: "> figure",
@@ -18,11 +36,50 @@ $Figure:(
      )
 );
 
+$Figure--Splash: (
+    _name: "FigureSplash",
+    _subselector: ' > figure.splash',
+    _properties: (
+        position: relative,
+        margin: 0,
+    ),
+);
+
+$Figure--Splash__Bg: (
+        _name: "FigureSplashBg",
+        _subselector: '::before',
+        _properties: (
+            content: "''",
+            background-color: enum('ValueSet:::REQUIRED'),
+            position: absolute,
+            height: 100%,
+            width: half-fullBleedsSize(8.5, in),
+            margin-left: fullBleedsMargin(-1, in),
+            z-index: -3,
+            box-sizing: border-box,
+            padding: inherit,
+            top: 0,
+        ),
+);
+
 $Figure--TopSpacing:(
     _name: "FigureTopSpacing",
     _subselector: " > figure",
     _properties: (
         margin-top: 1rem,
+    )
+);
+
+$Figure--Mechanism:(
+    _name: "MechanismFigure",
+    _subselector: " > figure.mechanism-figure",
+    _properties: (
+        margin-right: 0,
+        margin-left: 0,
+        margin-top: 0,
+        position: relative,
+        z-index: -2,
+        top: -3px,
     )
 );
 
@@ -33,6 +90,23 @@ $Image: (
     _subselector: " img",
     _properties:(
         max-width: 100%,
+    )
+);
+
+$Image--Splash: (
+    _name: "ImageSplash",
+    _subselector: ' > img',
+    _properties: (
+        width: half-fullBleedsSize(8, in),
+    )
+);
+
+$Image--Mechanism: (
+    _name: "MechanismImage",
+    _subselector: " > img",
+    _properties:(
+        max-width: 100%,
+        margin-bottom: v-spacing(1),
     )
 );
 
@@ -54,6 +128,39 @@ $Image--TopSpacing:(
     )
 );
 
+$Image--AfterBold: (
+    _name: "ImageAfterBold",
+    _subselector: " b + img",
+    _properties:(
+        vertical-align: top,
+        padding-top: v-spacing(1),
+    )
+);
+
 //Media
 
 $Media--FirstInOrderedList: empty_wrapper(MediaFirstInOrderedList, ' > ol > li > [data-type="media"]:first-child');
+
+$Media--Splash: (
+    _name: "MediaSplash",
+    _subselector: ' > span[data-type="media"]',
+    _properties: (
+        line-height: 0,
+        height: 100%,
+        display: flex,
+        width: half-fullBleedsSize(7.5, in),
+        justify-content: flex-end,
+        z-index: -2,
+        position: relative,
+    ),
+);
+
+$Media--Mechanism: empty_wrapper(MechanismMedia, ' > span[data-type="media"]');
+
+$Media--FromPara:(
+    _name: "MediaFromPara",
+    _subselector: ' > p > span[data-type="media"]',
+    _properties: (
+        vertical-align: top,
+    )
+);

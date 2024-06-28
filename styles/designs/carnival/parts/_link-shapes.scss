@@ -1,0 +1,13 @@
+@import 'link-components';
+
+@include create_shape('carnival:::TargetLabelLinkShape', (
+    _components: (
+        $Link--TargetLabel
+    )
+));
+
+@include create_shape('carnival:::LinkExistingCaseShape', (
+    _components: (
+        $Link--NonUppercase
+    )
+));

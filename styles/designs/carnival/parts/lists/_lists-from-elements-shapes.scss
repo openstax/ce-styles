@@ -1,0 +1,191 @@
+@import 'lists-components';
+@import '../wrappers-components';
+@import '../table-components';
+
+@include create_shape('carnival:::TableListShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($Table--Wrapper, (
+                  _components: (
+                      map-merge($Table__Body,(
+                          _components: (
+                              map-merge($Table__Row,(
+                                  _components: (
+                                      map-merge($Table__Data--Wrapper, (
+                                          _components: (
+                                              map-merge($UnorderedList--FirstLevel,(
+                                                  _components: (
+                                                    $UnorderedList--SecondLevel,
+                                                    $OrderedList--SecondLevel,
+                                                  )
+                                              )),
+                                              map-merge($OrderedList--FirstLevel,(
+                                                  _components: (
+                                                    $UnorderedList--SecondLevel,
+                                                    $OrderedList--SecondLevel,
+                                                  )
+                                              )),
+                                          )
+                                      )),
+                                  )
+                              )),
+                          )
+                      )),
+                  )
+              )),
+            )
+        )),
+    )
+));
+
+@include create_shape('carnival:::ExercisesListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                $UnorderedList--FirstLevel, // in unnumbered exercises
+                $OrderedList--FirstLevel,
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                      map-merge($UnorderedList--FirstLevel, (
+                        _components: (
+                          $OrderedList--SecondLevel,
+                          $UnorderedList--SecondLevel,
+                          map-merge($ListElementContainer, (
+                            _components: (
+                              map_merge($DivWrapper--FirstLevel, (
+                                _components: (
+                                  $UnorderedList--FirstLevel,
+                                  $OrderedList--FirstLevel,
+                                )
+                              )),
+                            )
+                          )),
+                        )
+                      )),
+                      map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                          $OrderedList--SecondLevel,
+                          $OrderedList--ThirdLevel,
+                          $UnorderedList--SecondLevel,
+                          map-merge($ListElementContainer, (
+                            _components: (
+                              map_merge($DivWrapper--FirstLevel, (
+                                _components: (
+                                  $UnorderedList--FirstLevel,
+                                  $OrderedList--FirstLevel,
+                                )
+                              )),
+                            )
+                          )),
+                        )
+                      )),
+                    )
+                )),
+                map-merge($DivWrapper--SecondLevel, (
+                  _components: (
+                    map-merge($UnorderedList--FirstLevel, (
+                        _components: (
+                            $OrderedList--SecondLevel,
+                            $UnorderedList--SecondLevel,
+                        )
+                    )),
+                    map-merge($OrderedList--FirstLevel, (
+                        _components: (
+                          $OrderedList--SecondLevel,
+                          $UnorderedList--SecondLevel,
+                        )
+                    )),
+                  )
+                )),
+              )
+        )),
+    )
+));
+
+@include create_shape('carnival:::NotesListsShape',(
+    _components: (
+        map-merge($ListContainer,(
+            _components: (
+                map-merge($UnorderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($OrderedList--FirstLevel, (
+                    _components: (
+                        $OrderedList--SecondLevel,
+                        $UnorderedList--SecondLevel,
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components: (
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                map-merge($UnorderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                map-merge($UnorderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                                map-merge($OrderedList--SecondLevel, (
+                                    _components: (
+                                        map-merge($UnorderedList--ThirdLevel, (
+                                            _components: (
+                                                $UnorderedList--ThirdLevel__Marker,
+                                            )
+                                        )),
+                                        $OrderedList--ThirdLevel,
+                                    )
+                                )),
+                            )
+                        )),
+                        $UnorderedList--FromLastChild,
+                        $OrderedList--FromLastChild,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
+// Style Lists from stimulus in pdf
+
+@include create_shape('carnival:::ListsFromStimulusShape',(
+    _components: (
+        map-merge($ListContainer,(
+          _components: (
+            $UnorderedList--FirstLevel,
+          )),
+        )
+    )
+));

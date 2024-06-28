@@ -1,5 +1,6 @@
 @import 'example-components';
-@import 'lists-components';
+@import 'lists/lists-components';
+@import 'figureimage-components';
 
 @include create_shape('carnival:::ExampleShape', (
     _components: (
@@ -15,12 +16,23 @@
                 )),
                 map-merge($Example__Body, (
                     _components: (
-                        $UnorderedList--FirstLevel,
-                        $OrderedList--FirstLevel,
+                        map-merge($UnorderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
+                        map-merge($OrderedList--FirstLevel, (
+                            _components: (
+                                $UnorderedList--SecondLevel,
+                                $OrderedList--SecondLevel,
+                            )
+                        )),
                         $Example__Subtitle,
                         $Example__Subtitle--FromFirstPara,
                         $Example__Subtitle--FromPara,
                         $Example__Subtitle--FromNote,
+                        $Media--FromPara
                     )
                 )),
             )

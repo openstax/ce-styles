@@ -1,10 +1,30 @@
 @include add_settings((
     AnswerKey: (
         _selectors: ('.os-eob[data-type="composite-chapter"]'),
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolution: (
+        _selectors: ('.os-eob [data-type="solution"]', '.os-eob [data-type="question-solution"]'),
         ProblemSolutionNumber: (
             color: (_ref: 'colorMap:::fontBodyColor'),
             width: 2%,
             text-align: right,
         )
+    ),
+));
+
+@include add_settings((
+    AnswerKeySolutionMultipart: (
+        _selectors: ('.os-eob [data-type="question-solution"]'),
+        ProblemSolutionNumber: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+            width: 2%,
+            text-align: right,
+        ),
+        ProblemSolutionLetter: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
     ),
 ));

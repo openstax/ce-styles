@@ -14,14 +14,15 @@ $ChapterIntroType: fullWidth;
 @import '../../designs/carnival/pdf/folio';
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::microbioIntroColor"),
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::microbioIntroColor"),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::microbioIntroColor"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::microbioIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::microbioIntroColor"),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -29,7 +30,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::microbioHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::microbioHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::microbioHeaderColor'),
   ),
 ));
 
@@ -63,13 +64,13 @@ $ChapterIntroType: fullWidth;
   ),
   LinkToLearningNote:(
     _selectors: (".link-to-learning"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::linkToLearningColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-linktolearning.svg")) no-repeat top left,
   ),
   CheckYourUnderstandingNote:(
     _selectors: (".check-your-understanding"),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::checkYourUnderstanding'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-check.svg")) no-repeat top left,
   ),
@@ -93,26 +94,38 @@ $ChapterIntroType: fullWidth;
   MultipleChoiceCompChapPage:(
     _selectors: (".os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   CriticalThinkingCompChapPage:(
     _selectors: (".os-critical-thinking-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   ShortAnswerCompChapPage:(
     _selectors: (".os-short-answer-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   FillInTheBlankCompChapPage:(
     _selectors: (".os-fill-in-the-blank-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   MatchingCompChapPage:(
     _selectors: (".os-matching-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
   TrueFalseCompChapPage:(
     _selectors: (".os-true-false-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
   ),
 ));
 
@@ -132,8 +145,17 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::microbioHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::microbioHeaderColor'),
+  ),
+));
+
+@include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::microbioHeaderColor'),
     'H2Title:::color': (_ref: 'colorMap:::microbioHeaderColor'),
     'H3Title:::color': (_ref: 'colorMap:::microbioHeaderColor'),
     'H4Title:::color': (_ref: 'colorMap:::microbioHeaderColor'),
@@ -180,14 +202,13 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include use('BookRoot', "common:::BookRoot");
-@include use('Preface','carnival:::Preface'); //remove when clean up work for lists be done
 @include use('TOC', 'carnival:::NoUnitToc');
-@include use('ChapterModuleTitles', 'carnival:::ChapterModuleTitlesShape'); //remove when clean up work for lists be done
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('Index', 'carnival:::IndexShape');
-@include use('AnswerKeyInline', 'carnival:::AnswerKeyInlineShape');
-@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('AnswerKey', 'carnival:::AnswerKeyShape');
+@include use('AnswerKeySolutionInline', 'carnival:::AnswerKeySolutionInlineShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
 @include use('Equation', 'carnival:::EquationShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
@@ -195,11 +216,11 @@ $ChapterIntroType: fullWidth;
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Chapter Intro
-@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 // Figures
 @include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
@@ -235,10 +256,12 @@ $ChapterIntroType: fullWidth;
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 // Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EocCompositeChapterTitles', 'carnival:::EocCompositeChapterTitlesShape');

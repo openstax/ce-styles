@@ -1,6 +1,6 @@
 @include add_settings((
     BasicTable: (
-        _selectors: (".os-table:not(.os-unstyled-container)"),
+        _selectors: (".os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)"),
         TableContainer: (
             display: table,
             margin-left: auto,
@@ -14,6 +14,8 @@
         TableData: (
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
@@ -27,7 +29,10 @@
         // Will need to be refactored to make a clean split between
         // tables and borders as part of a clean-up sprint.
         //border-right: 0.025rem solid black,
-        FirstTableData: (
+        TableDataNotLastChild: (
+            border-right: 0.025rem solid black,
+        ),
+        TableColumnNotLastChild: (
             border-right: 0.025rem solid black,
         ),
         TableHeadCell: (
@@ -36,8 +41,8 @@
             border-bottom: 0.1rem solid black,
             border-top: 0.1rem solid black,
         ),
-        TableBottomBorder: (
-            border-bottom-color: (_ref:"colorMap:::figureNumberColor"),
+        TableBottomBorderAfterTable: (
+            border-top-color: (_ref:"colorMap:::figureNumberColor"),
         ),
         CaptionTitleLabel:(
             font-family: (_ref:'typography:::titleOption1Font'),
@@ -46,6 +51,73 @@
         CaptionNumber:(
             font-family: (_ref:'typography:::titleOption1Font'),
             color: (_ref:'colorMap:::figureNumberColor'),
+        ),
+        CaptionTitle: (
+            font-family: (_ref:'typography:::titleOption1Font'),
+        ),
+        CaptionText:(
+            font-family:(_ref:'typography:::sansFont'),
+        ),
+    )
+));
+
+@include add_settings((
+    BasicTableWithCaptionOnTop: (
+        _selectors: (".os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)"),
+        TableContainer: (
+            display: table,
+            margin-left: auto,
+            margin-right: auto,
+        ),
+        Table: (
+            border-collapse: collapse,
+            margin-bottom: 0,
+            width: 100%,
+        ),
+        TableData: (
+            font-family: (_ref: "typography:::baseFont"),
+            border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
+            padding-right: table-h-spacing(1),
+            padding-left: table-h-spacing(1),
+        ),
+        // Added as part of the fix for cnx-recipes#1827.
+        // Will need to be refactored to make a clean split between
+        // tables and borders as part of a clean-up sprint.
+        TableBottomBorderData: (
+            font-family: (_ref: "typography:::baseFont"),
+            border-bottom: 0.025rem solid black,
+        ),
+        // Altered as part of the fix for cnx-recipes#1827.
+        // Will need to be refactored to make a clean split between
+        // tables and borders as part of a clean-up sprint.
+        //border-right: 0.025rem solid black,
+        TableDataNotLastChild: (
+            border-right: 0.025rem solid black,
+        ),
+        TableHeadCell: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            font-weight: 700,
+            border-bottom: 0.1rem solid black,
+            border-top: 0.1rem solid black,
+        ),
+        TableBottomBorderAfterTable: (
+            // border-bottom-color: book specific
+        ),
+        CaptionTitleLabel:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:'colorMap:::figureNumberColor'),
+        ),
+        CaptionNumber:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:'colorMap:::figureNumberColor'),
+        ),
+        CaptionTitle: (
+            font-family: (_ref:'typography:::titleOption1Font'),
+        ),
+        CaptionText:(
+            font-family:(_ref:'typography:::sansFont'),
         ),
     )
 ));
@@ -65,13 +137,15 @@
             border-bottom: 0.025rem solid black,
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
         LastTableRowData: (
             border-bottom-color: (_ref:"colorMap:::chapterOutlineColor"),
         ),
-        FirstTableData: (
+        TableDataNotLastChild: (
             border-right: 0.1rem solid black,
             font-family: (_ref: "typography:::titleOption1Font"),
             font-weight: 700,
@@ -110,13 +184,15 @@
             border-bottom: 0.025rem solid black,
             font-family: (_ref: "typography:::baseFont"),
             border-left: 0.025rem solid black,
+            padding-top: table-v-spacing(1),
+            padding-bottom: table-v-spacing(1),
             padding-right: table-h-spacing(1),
             padding-left: table-h-spacing(1),
         ),
         LastTableRow: (
             border-bottom: .1rem solid black,
         ),
-        FirstTableData: (
+        TableDataNotLastChild: (
             border-right: 0.025rem solid black,
         ),
         CaptionTitleLabel:(
@@ -127,7 +203,22 @@
             font-family: (_ref:'typography:::titleOption1Font'),
             color: (_ref:'colorMap:::figureNumberColor'),
         ),
+        CaptionTitle: (
+            font-family: (_ref:'typography:::titleOption1Font'),
+        ),
+        CaptionText:(
+            font-family:(_ref:'typography:::sansFont'),
+        ),
     )
+));
+
+@include add_settings((
+  AlternateShadingTable: (
+        _selectors: ('.alternate-shading'),
+        AlternateShadingTableRow: (
+          //book specific
+        ),
+  )
 ));
 
 @include add_settings((
@@ -140,13 +231,23 @@
 @include add_settings((
     TableFromEoCExercises:( // Only needed for EoC Multicolumn Exercises
       _selectors: ('.os-eoc [data-type="problem"]', '.os-eoc [data-type="exercise-question"]'),
-      'Table:::max-width': 100%,
-      'Table:::table-layout': fixed,
-      'TableData:::text-align': center,
-      'TableData:::padding-right': $columnTablePadding,
-      'TableData:::padding-left': $columnTablePadding,
+      Table: (
+        max-width: 100%,
+        table-layout: fixed,
+      ),
+      TableData: (
+        text-align: center,
+        padding-top: table-v-spacing(1),
+        padding-bottom: table-v-spacing(1),
+        padding-right: $columnTablePadding,
+        padding-left: $columnTablePadding,
+      )
+    ),
+    TableFromNotes: (
+        _selectors: ('[data-type="note"]'),
     ),
 ));
+
 
 @include add_settings((
     TableAfterExercisePara: (
@@ -154,5 +255,8 @@
     ),
     TableAfterContentExercisePara: ( // used only in hs-physics
         _selectors: ('[data-type="page"] :not(.os-note-body) .os-problem-container > p'),
+    ),
+    FullWidthTable: (
+        _selectors: (".os-table.os-full-width-container"),
     ),
 ));

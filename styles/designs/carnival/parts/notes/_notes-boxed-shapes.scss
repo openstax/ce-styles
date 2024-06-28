@@ -1,5 +1,4 @@
 @import 'notes-components';
-@import '../lists-components'; 
 
 //boxed notes
 @include create_shape('carnival:::BoxedNoteShape', (
@@ -17,9 +16,7 @@
         $Note--Boxed__Title,
         map-merge($Note__Body, (
           _components: (
-            $Note__Subtitle,
-            $Note__UnorderedList--MarginLeftBottom,
-            $Note__OrderedList--MarginLeftBottom,
+            $Note--Boxed__Subtitle,
           ),
         ))
       ),

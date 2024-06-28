@@ -3,12 +3,33 @@
 
 @include create_shape('webview:::ListsShape', (
     _components: (
-        $UnorderedList,
-        $OrderedList,
-        $UnorderedList--NumberedLearningObjectives,
-        map-merge($Preface__Wrapper, (
+        map-merge($UnorderedList, (
             _components: (
-                $UnorderedList--Unstyled,
+                $UnorderedList--Nested,
+                $OrderedList--Nested,
+            ),
+        )),
+        map-merge($OrderedList, (
+            _components: (
+                $UnorderedList--Nested,
+                $OrderedList--Nested,
+            ),
+        )),
+        $UnorderedList--NoBullet,
+        $UnorderedList--NumberedLearningObjectives,
+        $UnorderedList--NotesQuestionSection,
+        map-merge($CircledList,(
+            _components: (
+                map-merge($CircledList__Item,(
+                    _components: (
+                        $CircledList__Token,
+                    )
+                )),
+            )
+        )),
+        map-merge($Paragraph__Wrapper, (
+            _components: (
+                $CircledList__Token,
             ),
         )),
         map-merge($Appendix__Wrapper, (

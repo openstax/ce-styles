@@ -6,6 +6,8 @@ $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
 $Page--Composite__EOC: empty_wrapper(EocCompositePage, ' > .os-eoc[data-type="composite-page"]');
 $Eob__Container: empty_wrapper(EobContainer, '');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$Unit__Container: empty_wrapper(UnitContainer, '');
 
 $Chapter__Container: (
   _name: "ChapterWrapper",
@@ -85,6 +87,56 @@ $H1--Eob: ( //Index, References, Answer Key
   )
 );
 
+// Unit Opener h1 components
+
+$H1--UnitOpener: (
+  _name: "H1UnitOpener",
+  _subselector: ' > h1[data-type="document-title"]',
+  _properties: (
+    position: absolute,
+    top: 2.2in,
+    margin-top: 0,
+    margin-left: fullBleedsMargin(-1, in),
+    width: 6.5in,
+    font-size: font-scale(6),
+    line-height: line-height(6),
+    padding: 5rem,
+    z-index: 1,
+ )
+);
+
+$H1--UnitOpener__PartText: (
+  _name: "H1UnitOpenerPartText",
+  _subselector: ' > .os-part-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 400,
+  )
+);
+
+$H1--UnitOpener__Number: (
+  _name: "H1UnitOpenerNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 400,
+  )
+);
+
+$H1--UnitOpener__Text: (
+  _name: "H1UnitOpenerText",
+  _subselector: ' > .os-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 400,
+    display: block,
+    margin-top: v-spacing(2),
+  )
+);
+
 // H2 headers
 $H2: (
     _name:"H2Title",
@@ -125,9 +177,9 @@ $H2__Divider--FromInlineBlock: (
 
 // Chapter Intro Text Header
 
-$H2TextHeader--ChapterIntro--Inline: (
-    _name: "H2IntroTextHeaderInline",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+$H2--ChapterIntro--Inline: (
+    _name: "H2ChapterIntroInline",
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
@@ -139,15 +191,23 @@ $H2TextHeader--ChapterIntro--Inline: (
     )
 );
 
-$H2TextHeader--ChapterIntro--Block: ( // Only present in Economics 
-    _name: "H2IntroTextHeaderBlock",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+$H2--ChapterIntro--Block: ( // Only present in Economics
+    _name: "H2ChapterIntroBlock",
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(3),
         font-weight: 600,
         color: enum('ValueSet:::REQUIRED'),
-        margin-bottom: v-spacing(1),            
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$H2--UnitOpener: (
+    _name: "H2UnitOpener",
+    _subselector: ' > h2[data-type="document-title"]',
+    _properties: (
+      margin-top: 2in,
     )
 );
 
@@ -177,7 +237,7 @@ $H3--Link:(
   )
 );
 
-//Section WorksCited 
+//Section WorksCited
 $H3--SectionWorksCited: (
   _name: "H3SectionWorksCited",
   _subselector: " > h3",
@@ -189,7 +249,7 @@ $H3--SectionWorksCited: (
     margin-bottom: v-spacing(1),
     font-weight: 600,
     display: table,
-    margin-left: auto, 
+    margin-left: auto,
     margin-right: auto,
   )
 );
@@ -204,6 +264,32 @@ $H3--Handbook: (
         line-height: line-height(2),
         margin-bottom: v-spacing(1),
         font-weight: 600,
+    )
+);
+
+$H3--Objectives: (
+  _name: "H3ObjectivesTitle",
+  _subselector: ' > h3[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(0),
+    line-height: line-height(0),
+    font-weight: 700,
+    text-transform: uppercase,
+    margin-bottom: enum('ValueSet:::OPTIONAL'), // property used in chapter objectives economics
+  )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-weight: 700,
+        text-transform: uppercase,
     )
 );
 
@@ -295,7 +381,7 @@ $H1--ChapterIntro--Numbered: (
   _subselector: ' > h1',
   _properties: (
     display: flex,
-    font-family: enum('ValueSet:::REQUIRED'), 
+    font-family: enum('ValueSet:::REQUIRED'),
     position: relative,
     font-weight: normal,
     flex-direction: row,
@@ -376,10 +462,10 @@ $Table__Title: (
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         text-align: center,
-        font-weight: bold, 
+        font-weight: bold,
         font-family: enum('ValueSet:::REQUIRED'),
         padding: table-v-spacing(1) table-h-spacing(1),
-    )   
+    )
 );
 
 

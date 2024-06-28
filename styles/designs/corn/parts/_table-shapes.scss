@@ -1,6 +1,6 @@
 @import '_table-components';
 @import '_caption-components';
-@import '_lists-components';
+@import 'lists/lists-components';
 @import 'wrappers-components';
 
 @include create_shape('corn:::BasicTableShape',  (
@@ -210,11 +210,72 @@
                     _components: (
                       map-merge($Table__Container--Exercises, (
                           _components:(
-                            $Table,
+                            $Table--Exercises,
                           ),
                       )),
                     )
                 )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('corn:::TableFromExercisesListsShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+                map-merge($DivWrapper--FirstLevel, (
+                    _components: (
+                      map-merge($Table__Container--FirstInOrderedList, (
+                          _components: (
+                              $Table--FirstInList,
+                          )
+                      )),
+                      map-merge($Table__Container--FirstInCircledList, (
+                          _components: (
+                              $Table--FirstInList,
+                          )
+                      )),
+                    )
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('corn:::TableFromAnswerKeyShape',(
+    _components: (
+        map-merge($Exercises__Container,(
+            _components:(
+              map-merge($Table__Container--Exercises,(
+                _components:(
+                    map-merge($Table--Exercises, (
+                        _components:(
+                          map-merge($Table__Head, (
+                            _components: (
+                              map-merge($Table__Head__Row, (
+                                _components: (
+                                  $Table__Head__Cell--AnswerKey
+                                )
+                              )),
+                            )
+                          )),
+                          map-merge($Table__Body, (
+                            _components: (
+                              map-merge($Table__Row, (
+                                _components: (
+                                  $Table__Data--AnswerKey,
+                                  $Table__Data--LeftAligned,
+                                  $Table__Data--RightAligned,
+                                  $Table__Data--Centered,
+                                )
+                              )),
+                            )
+                          )),
+                        )
+                    )),
+                ),
+              )),
             ),
         )),
     )
@@ -240,5 +301,14 @@
                 $Caption__Container--Table
             ),
         )),
+    )
+));
+
+// To do: decide if it should be removed
+// Selector 'li > table' is wrong. It means that table wasn't baked properly.
+// It should be wrapped into .os-table.
+@include create_shape('corn:::ListTableShape',(
+    _components: (
+        $ListTable
     )
 ));

@@ -52,9 +52,11 @@
             padding-right: table-h-spacing(1),
         ),
         FirstTableHeadCellFirstRow: (
+            border-left-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-right-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         LastTableHeadCellFirstRow: (
+            border-right-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-left-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         TableHeadCellFirstRowOnlyChild: (
@@ -152,9 +154,11 @@
             padding-left: table-h-spacing(1),
         ),
         FirstTableHeadCellFirstRow: (
+            border-left-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-right-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         LastTableHeadCellFirstRow: (
+            border-right-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-left-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         PurpleShadedBackgroundRow: (
@@ -297,9 +301,11 @@
             padding-left: 0.16rem,
         ),
         FirstTableHeadCellFirstRow: (
+            border-left-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-right-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         LastTableHeadCellFirstRow: (
+            border-right-color: (_ref: "colorMap:::tableFirstHeaderBgColor"),
             border-left-color: (_ref: "colorMap:::tableCellBorderColor"),
         ),
         PurpleShadedBackgroundRow: (
@@ -540,10 +546,19 @@
             color: (_ref: "colorMap:::captionTextColor"),
         ),
     ),
+    FullWidthTable: (
+        _selectors: (".os-table.os-full-width-container"),
+    ),
 ));
 
 @include add_settings((
     TableAfterExercisePara: (
         _selectors: ('.os-eoc .os-problem-container > p', '.os-eob .os-solution-container > p'),
     ),
+));
+
+@include add_settings((
+    VerticallyTightTable: (
+        _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
+    )
 ));

@@ -43,9 +43,9 @@ $Exercise__Problem__Container--WithInlineListOnTop: exerciseChildContainer((chil
 $Exercise__Problem--FromExample: empty_wrapper(ExerciseProblemFromExample, ' > [data-type="problem"]'); // ToDo: remove "Wrapper" from component with properties and use here for empty wrapper
 
 // Solution components
-$Exercise__Solution__Wrapper: (
-  _name: "SolutionWrapper",
-  _subselector: ' [data-type="solution"]',
+$Exercise__Solution: (
+  _name: "ExerciseSolution",
+  _subselector: ' [data-type="solution"]', // has to be non direct child
   _properties: (
     display: enum('ValueSet:::OPTIONAL'), //used in three column exercises
     overflow-wrap: enum('ValueSet:::OPTIONAL'), //used in three column exercises
@@ -55,9 +55,38 @@ $Exercise__Solution__Wrapper: (
   )
 );
 
-$Exercise__Solution__Container: exerciseChildContainer((child: solution, name: "SolutionContainer", hasImageTableOnTop: false, hasInlineListOnTop: false));
-$Exercise__Solution__Container--WithImageTableOnTop: exerciseChildContainer((child: solution, name: "SolutionContainerWithImageTableOnTop", hasImageTableOnTop: true, hasInlineListOnTop: false));
-$Exercise__Solution__Container--WithInlineListOnTop: exerciseChildContainer((child: solution, name: "SolutionContainerWithInlineListOnTop", hasImageTableOnTop: false, hasInlineListOnTop: true));
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+      padding-left: v-spacing(1),
+    )
+);
+
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      padding-top: v-spacing(1),
+      width: 100%,
+      padding-left: v-spacing(1),
+    )
+);
+
+$Exercise__Solution__Container--WithInlineListOnTop: (
+    _name: "ExerciseSolutionContainerWithInlineListOnTop",
+    _subselector: " > .os-solution-container.has-first-inline-list-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      width: 100%,
+      padding-left: v-spacing(1),
+    )
+);
 
 $Exercise__Solution--FromExample: empty_wrapper(ExerciseSolutionFromExample, ' > [data-type="solution"]'); // ToDo: remove "Wrapper" from component with properties and use here for empty wrapper
 
@@ -125,9 +154,9 @@ $InjectedExercise__Question__Wrapper: (
     )
 );
 
-$InjectedExercise__Solution__Wrapper: (
-  _name: "InjectedSolutionWrapper",
-  _subselector: ' [data-type="question-solution"]',
+$InjectedExercise__Solution: (
+  _name: "InjectedSolution",
+  _subselector: ' [data-type="question-solution"]', // has to be non direct child
   _properties: (
     margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
   )

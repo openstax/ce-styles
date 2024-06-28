@@ -1,0 +1,146 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #DCB83D;
+
+@import 'framework/framework';
+@import '../../design-settings/cosmos/_design.scss';
+@import '../../design-settings/cosmos/_settings.scss';
+@import '../../designs/cosmos/pdf/folio';
+
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
+  ),
+));
+
+// EOC exercises
+@include add_settings((
+  ExercisesModule: (
+    _selectors: ('.os-eoc.os-review-questions-container', '.os-eoc.os-check-understanding-container',
+                 '.os-eoc.os-personal-application-container', '.os-eoc.os-essay-questions-container'),
+    'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemNumber:::width': 2%,
+    'ProblemNumber:::text-align': right,
+  ),
+));
+
+// Notes
+@include add_settings((
+    LinkToLearning:(
+        _selectors: (".link-to-learning"),
+        'Container:::box-decoration-break': slice,
+        'Body:::border-bottom-color': (_ref: 'colorMap:::linkToLearningBottomBorderColor'),
+        'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
+        'Icon:::background': url(toDataUri("svg+xml", "designs/cosmos/resources/carnival-linktolearning.svg")) no-repeat top left,
+    ),
+    ItDepends: (
+      _selectors: ('.it-depends'),
+      'Title:::color': (_ref: 'colorMap:::boxedNoteTitleColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
+      'Title:::background-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption1Color'),
+      'Title:::border-color': (_ref: 'colorMap:::boxedNoteTitleBorderColor'),
+      'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
+      'Body:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption1Color'),
+      'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    ),
+    IntersectionsContexts: (
+      _selectors: ('.intersections-contexts'),
+      'Title:::color': (_ref: 'colorMap:::boxedNoteTitleColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
+      'Title:::background-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption3Color'),
+      'Title:::border-color': (_ref: 'colorMap:::boxedNoteTitleBorderColor'),
+      'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
+      'Body:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption3Color'),
+      'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    ),
+    LifeHacks: (
+      _selectors: ('.life-hacks'),
+      'Title:::color': (_ref: 'colorMap:::boxedNoteTitleColor'),
+      'Title:::font-family': (_ref: 'typography:::titleOption3Font'),
+      'Title:::background-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption5Color'),
+      'Title:::border-color': (_ref: 'colorMap:::boxedNoteTitleBorderColor'),
+      'Body:::font-family': (_ref: 'typography:::titleOption2Font'),
+      'Body:::background-color': (_ref: 'colorMap:::boxedNoteBodyBackgroundOption5Color'),
+      'Subtitle:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'Subtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'QuestionSection:::border-color': (_ref: 'colorMap:::boxedNoteTitleBackgroundOption5Color'),
+    ),
+));
+
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="page"] section.learning-objectives'),
+    'H3ObjectivesTitle:::margin-bottom': 0,
+  ),
+));
+
+@include add_settings((
+  CenteredText: (
+    _selectors: ('.centered-text')
+  )
+));
+
+@include use('BookRoot', "common:::BookRoot");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
+@include use('LearningObjectivesSection', 'cosmos:::LearningObjectivesShape');
+@include use('CenteredText', 'common:::CenteredTextShape');
+
+// Titles
+@include use('PageTitles', 'cosmos:::PageTitlesShape');
+@include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesInline', 'cosmos:::ChapterIntroTitlesInlineShape');
+@include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
+@include use('EobTitles', 'cosmos:::EobTitlesShape');
+
+// Figure
+@include use('Figure', 'cosmos:::FigureShape');
+@include use('FigureSplash', 'cosmos:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'cosmos:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'cosmos:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'cosmos:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'cosmos:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','cosmos:::FigureFromExercisesShape');
+@include use('FigureFromInjectedQuestion','cosmos:::FigureFromExercisesShape');
+
+//Tables
+@include use('DefaultTable', 'cosmos:::BasicTableShape');
+@include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
+@include use('VerticallyTightTable', 'cosmos:::VerticallyTightTableShape');
+
+// Lists
+@include use('PageLists', 'cosmos:::PageListsShape');
+@include use('CompositePageLists', 'cosmos:::CompositePageListsShape');
+@include use('ExercisesProblemQuestionLists', 'cosmos:::ExercisesListsShape');
+@include use('ExercisesSolutionLists', 'cosmos:::ExercisesListsShape');
+@include use('NotesLists', 'cosmos:::NotesListsShape');
+
+// Chapter Intro
+@include use('ChapterOutline', 'cosmos:::ChapterOutlineShape');
+
+// Notes
+@include use('LinkToLearning', 'cosmos:::CondensedIconNoteShape');
+@include use('ItDepends', 'cosmos:::BoxedNoteWithSubtitleShape');
+@include use('IntersectionsContexts', 'cosmos:::BoxedNoteWithSubtitleShape');
+@include use('LifeHacks', 'cosmos:::BoxedNoteWithSubtitleShape');
+
+// Eoc
+@include use('KeyTerms', 'cosmos:::KeyTermsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
+@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
+
+// Eob
+@include use('Index', 'cosmos:::IndexShape');
+@include use('AnswerKey', 'cosmos:::AnswerKeyShape');
+@include use('AnswerKeyInjectedSolutionInline', 'cosmos:::AnswerKeySolutionInlineShape');
+@include use('AppendixGlossary', 'cosmos:::AppendixGlossaryShape');
+@include use('AppendixReferences', 'cosmos:::ModuleWithIndentationShape');

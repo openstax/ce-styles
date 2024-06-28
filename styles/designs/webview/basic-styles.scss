@@ -15,6 +15,19 @@ input, button, select, textarea {
   line-height: inherit;
 }
 
+span[data-media~="screenreader"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -51,7 +64,36 @@ pre {
   text-align: left;
 }
 
+code[data-display="block"] {
+  display: block;
+  white-space: pre-wrap;
+}
+
 // Double underline
 u[data-effect="double-underline"] {
   text-decoration-style: double;
+}
+
+// Inline media
+[data-type="media"][data-display="inline"] {
+  display: inline-flex;
+}
+
+// Smallcaps
+.smallcaps {
+  font-size: scaled_size(1.3rem);
+}
+
+//Smallcaps in caption
+.os-caption span.smallcaps{
+  font-size: scaled_size(1rem);
+}
+
+span.os-icons {
+  display: flex;
+  float: left;
+}
+
+pre.inline-code {
+  display: inline;
 }

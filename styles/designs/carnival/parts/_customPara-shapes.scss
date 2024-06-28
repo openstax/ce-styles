@@ -1,0 +1,13 @@
+@import './customPara-components';
+
+@include create-shape('carnival:::ParaIndentedShape', (
+    _components: (
+        $Para--Indented,
+    ),
+));
+
+@include create-shape('carnival:::ParaCenteredShape', (
+    _components: (
+        $Para--Centered,
+    ),
+));

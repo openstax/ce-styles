@@ -5,6 +5,7 @@ $bookRoot:(
     font-family: enum('ValueSet:::REQUIRED'), ///default font family for book
     font-size: enum('ValueSet:::REQUIRED'), //base font size
     line-height: enum('ValueSet:::REQUIRED'), //base line height
+    text-align: enum('ValueSet:::OPTIONAL'), // To justify organic chemistry text
     color: enum('ValueSet:::REQUIRED'),
     prince-image-resolution: enum('ValueSet:::REQUIRED'),
     prince-background-image-resolution: enum('ValueSet:::REQUIRED')
@@ -15,62 +16,16 @@ $ColoredText__Container: (
     _name: 'ColoredTextContainer',
     _subselector: '',
     _properties: (
-        font-weight: normal,
         color: enum('ValueSet:::REQUIRED'),
     )
 );
 
-$Annotation__Text: (
-  _name: 'AnnotationText',
-  _subselector: '.annotation-text',
-  _properties: (
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-style: italic,
-    font-size: font-scale(0),
-    color: enum('ValueSet:::REQUIRED'),
-  )
-);
-
-$PublicDomain__Text: (
-  _name: 'PublicDomainText',
-  _subselector: '.public-domain',
-  _properties: (
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(0),
-    color: enum('ValueSet:::OPTIONAL'),
-  )
-);
-
-$AnnotationText--WithLeftBorder: (
-  _name: 'AnnotationTextWithLeftBorder',
-  _subselector: '',
-  _properties: (
-    display: inline-block,
-    margin-left: h-spacing(2),
-    padding-left: h-spacing(1),
-    font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(0),
-    color: enum('ValueSet:::OPTIONAL'),
-    border-left-style: solid,
-    border-width: .1rem,
-    border-color: enum('ValueSet:::REQUIRED'),
-  )
-);
-
-$NarrowTable__Container: (
-    _name: 'NarrowTableContainer',
+$ItalicText__Container: (
+    _name: 'ItalicTextContainer',
     _subselector: '',
     _properties: (
-        width: 50%,
+        font-style: italic,
     )
-);
-
-$NarrowTable__Data: (
-  _name: 'NarrowTableData',
-  _subselector: ' td',
-  _properties: (
-      text-align: center,
-  )
 );
 
 $CenteredText: (
@@ -81,6 +36,28 @@ $CenteredText: (
         font-weight: normal,
         text-align: center,
     )
+);
+
+$Calculator__Button: (
+    _name: "CalculatorButton",
+    _subselector: "",
+    _properties: (
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        background-color: enum('ValueSet:::OPTIONAL'), // Not used in secondary
+        font-size: font-scale(0),
+        font-weight: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
+$PunctuationEmphasis: (
+  _name: "PunctuationEmphasis",
+  _subselector: '',
+  _properties: (
+    font-size: font-scale(1),
+    font-weight: 700,
+    background-color: enum('ValueSet:::REQUIRED'),
+  )
 );
 
 // differs from Hidden by hiding elements visually but not from screenreaders
@@ -101,3 +78,36 @@ $VisuallyHidden: (
     )
 );
 
+//Styles specifically for code snippet tables
+$CodeSnippet__Container: (
+  _name: "CodeSnippetContainer",
+  _subselector: '',
+  _properties: (
+    border-collapse: collapse,
+  )
+);
+
+$CodeSnippet__LineNumbers: (
+    _name: 'CodeSnippetLineNumbers',
+    _subselector: ' .hljs-ln-numbers',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      border-right: enum('ValueSet:::REQUIRED'),
+      border-color: enum('ValueSet:::REQUIRED'),
+      padding-right: 10px,
+      text-align: enum('ValueSet:::REQUIRED'),
+      vertical-align: top
+    )
+);
+
+$CodeSnippet__LineNumbers--Code: (
+    _name: 'CodeSnippetLineNumbersCode',
+    _subselector: ' .hljs-ln-code',
+    _properties: (
+      font-size: 1.2rem,
+      font-family: enum('ValueSet:::REQUIRED'),
+      padding-left: 0.5rem,
+      text-align: enum('ValueSet:::REQUIRED'),
+    )
+);

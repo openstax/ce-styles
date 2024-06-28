@@ -1,11 +1,12 @@
 @import 'module-components';
 @import 'wrappers-components';
-@import 'lists-components';
+@import 'lists/lists-components';
 
 @include create_shape('cardboard:::ModuleWithIndentationShape',(
     _components:(
         map-merge($Module__Container,(
             _components:(
+                $ModuleWithIndentation__Para,
                 map-merge($SectionWrapper--FirstLevel,(
                     _components:(
                         $ModuleWithIndentation__Para,

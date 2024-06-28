@@ -22,30 +22,12 @@
                 color: (_ref: 'colorMap:::moduleTitleColor'),
             ),
             H1Numbered: (
-                display: table,
-                position: relative,
                 color: (_ref: 'colorMap:::appendixTitleColor'),
                 font-family: (_ref: 'typography:::titleFont'),
-                font-size: font-scale(4),
-                line-height: font-scale(4), //must be the same as font size
-                margin-bottom: v-spacing(3),
             ),
             TitleNumber: (
                 color: black,
                 border-color: (_ref: 'colorMap:::appendixTitleColor'),
-                border-width: 0.3rem,
-                border-style: solid,
-                font-weight: normal,
-                width: v-spacing(5),
-                height: v-spacing(5),
-                display: table-cell,
-                text-align: center,
-                vertical-align: middle,
-            ),
-            TitleText: (
-                font-weight: bold,
-                display: table-cell,
-                padding-left: h-spacing(6),
             ),
         ),
 ));
@@ -54,33 +36,43 @@
     ChapterTitles:(
         _selectors: ('[data-type="chapter"]'),
         H1Numbered: (
-            position: relative,
-            top: 14rem,
-            z-index: 2,
+            color: white,
             font-family: (_ref: 'typography:::titleFont'),
             font-size: font-scale(2),
-            line-height: line-height(2),
-            color: white,
+            line-height: 2.1rem, // must be equal to font-size
         ),
         TitleText: (
-            font-weight: bold,
             filter: drop-shadow(0.18rem 0.18rem 0.36rem #000),
-            position: relative,
-            margin-left: 8rem,
-            prince-filter-resolution: 300dpi,
         ),
         TitleNumber: (
-            font-weight: bold,
             border-color: white,
-            border-width: 0.07rem,
-            text-transform: uppercase,
-            width: v-spacing(3),
-            height: v-spacing(3),
-            display: flex,
-            justify-content: center,
-            align-items: center,
         ),
     ),
+));
+
+@include add_settings((
+    ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+            H2ChapterIntro: (
+                font-family: (_ref: 'typography:::baseFont'),
+                color: (_ref: "colorMap:::introContentHeaderColor"),
+            ),
+            H2ChapterIntroIcon: (
+                background: url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
+            ),
+            H3Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+            H4Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+            H5Title: (
+                font-family: (_ref: 'typography:::titleFont'),
+                color: (_ref: 'colorMap:::moduleTitleColor'),
+            ),
+        ),
 ));
 
 @include add_settings((

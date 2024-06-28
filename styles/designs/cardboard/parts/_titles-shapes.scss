@@ -1,6 +1,6 @@
 @import 'titles-components';
 @import 'wrappers-components';
-@import 'lists-components';
+@import 'lists/lists-components';
 //Preface, Appendix, regular module
 
 @include create_shape('cardboard:::PageTitlesShape', (
@@ -60,6 +60,29 @@
     )
 ));
 
+// Unit Opener
+
+@include create_shape('cardboard:::UnitOpenerTitlesShape', (
+    _components: (
+        map-merge($Unit__Container, (
+            _components: (
+                map-merge($H1--UnitOpener, (
+                    _components: (
+                        $H1--UnitOpener__PartText,
+                        $H1--UnitOpener__Number,
+                        $H1--UnitOpener__Text,
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components:(
+                        $H2--UnitOpener,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 // Chapter Titles Shape
 
 @include create_shape('cardboard:::ChapterTitlesShape', (
@@ -74,6 +97,36 @@
                     $H1--ChapterIntro--Numbered__Number,
                     )
               )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cardboard:::ChapterIntroTitlesShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                map-merge($H2--ChapterIntro, (
+                    _components: (
+                        $H2--ChapterIntro__Icon,
+                        $H2--ChapterIntro__Text,
+                    )
+                )),
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
             )
         )),
     )

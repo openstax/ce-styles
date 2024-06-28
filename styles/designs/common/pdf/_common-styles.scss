@@ -1,13 +1,13 @@
-a[href^="http"]::after{
+a[href^="http"]::after {
   content: " (" attr(href) ")";
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item="true"] {
   list-style-type: none;
 }
 
-ul[data-labeled-item="true"] {
+ul[data-bullet-style='none'] {
   list-style-type: none;
 }
 
@@ -26,21 +26,35 @@ ul[data-labeled-item="true"] {
   font-style: italic;
 }
 
-h3, h4, h5 {
+h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
 // for code snippets - stops text overflow
 // https://stackoverflow.com/questions/29294273/uneven-horizontally-scrolling-div-with-white-space-normal
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
-// iframes should be hidden library wide
-// https://github.com/openstax/cnx-recipes/issues/3874
-iframe {
+pre {
+  white-space: pre-line;
+}
+
+pre.inline-code {
+  display: inline;
+}
+
+code[data-display="block"] {
+  display: block;
+  white-space: pre-wrap;
+}
+
+// Hide a switch element's children that are not marked for the print platform
+// This replaces hiding iframes, since all iframes will be marked up with data-media
+// https://github.com/openstax/cnx-recipes/issues/4765
+[data-type="switch"] > :not([data-media~="print"]) {
   display: none;
 }
 
@@ -52,4 +66,8 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: font-scale(-1);
 }

@@ -1,8 +1,15 @@
 $Reference__Container: empty_wrapper(ReferenceContainer, '.os-reference-container');
 $Reference__ChapterArea: empty_wrapper(ReferenceChapterArea, ' .os-chapter-area');
-$ChapterArea__Reference: empty_wrapper(ChapterAreaReference, ' > .reference');
 $References__Container: empty_wrapper(ReferencesContainer, '.os-references-container');
 $References: empty_wrapper(ReferencesSection, ' .references');
+
+$ChapterArea__Reference: (
+  _name: "ChapterAreaReference",
+  _subselector: ' > .reference',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
 
 $Reference__Number: (
   _name: "ReferenceNumber",
@@ -18,6 +25,7 @@ $References__Link--InNote: (
   _subselector: ' .os-note-body > a',
   _properties: (
     margin-top: 10px,
+    text-decoration: none,
   )
 );
 
@@ -27,4 +35,12 @@ $ChapterArea__Paragraph--InSolution: (
   _properties: (
     display: inline,
   )
-)
+);
+
+$References__CiteLink: (
+    _name: "ReferencesCiteLink",
+    _subselector: " ",
+    _properties: (
+        text-decoration: none,
+    )
+);

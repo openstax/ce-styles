@@ -1,0 +1,234 @@
+// Containers
+$ListContainer: empty_wrapper(Container, '');
+
+$SectionWrapper--FirstLevel: empty_wrapper(FirstLevel, ' > section');
+$SectionWrapper--SecondLevel: empty_wrapper(SecondLevel, ' > section > section');
+$SectionWrapper--ThirdLevel: empty_wrapper(ThirdLevel, ' > section > section > section');
+
+$DivWrapper--FirstLevel: empty_wrapper(FirstLevel, ' > div');
+$DivWrapper--SecondLevel: empty_wrapper(SecondLevel, ' > div > div');
+$DivWrapper--ThirdLevel: empty_wrapper(ThirdLevel, ' > div > div > div');
+$DivWrapper--FourthLevel: empty_wrapper(ThirdLevel, ' > div > div > div > div');
+
+$ParaWrapper--FirstLevel: empty_wrapper(FirstLevel, ' > p');
+
+$SectionWrapper--FirstLevelNoBottomMargin: (
+    _name: "FirstLevel",
+    _subselector: ' > section',
+    _properties:(
+        margin-bottom: 0,
+    )
+);
+
+// Basic Lists
+$UnorderedList--FirstLevel: (
+    _name: "FirstLevelUnorderedList",
+    _subselector: ' > ul:not(.circled):not(.os-stepwise):not([data-labeled-item="true"])',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$OrderedList--FirstLevel: (
+    _name: "FirstLevelOrderedList",
+    _subselector: " > ol:not(.circled):not(.os-stepwise)",
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$UnorderedList--SecondLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul:not(.circled):not(.os-stepwise)",
+    _properties:(
+        margin-left: h-spacing(2),
+    )
+);
+
+$OrderedList--SecondLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol:not(.circled):not(.os-stepwise)",
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$ListItem__Wrapper: empty_wrapper(ListItem, ' > li');
+
+$UnorderedList--KeyTerms: (
+    _name: "KeyTermsUnorderedList",
+    _subselector: " > ul",
+    _properties:(
+        margin-left: h-spacing(2),
+        text-indent: 0,
+    )
+);
+
+$OrderedList--KeyTerms: (
+    _name: "KeyTermsOrderedList",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(2),
+        text-indent: 0,
+    )
+);
+
+$UnorderedList--Labeled: empty_wrapper(LabeledList, ' > ul[data-labeled-item="true"]');
+
+// Objectives
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: " > ul",
+    _properties:(
+        margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
+        list-style-type: none,
+    )
+);
+
+$ListItem--Objectives--WithCustomBulletIcon: (
+  _name: 'ObjectivesListItemWithCustomBulletIcon',
+  _subselector: ' > li',
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: 0.5rem,
+    padding-left: h-spacing(2),
+    display: block,
+    max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties: (
+      display: flex,
+      max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+    margin-right: h-spacing(1),
+  )
+);
+
+// Circled lists components used in One Column Layout
+$CircledList__Token: (
+    _name: "CircledListToken",
+    _subselector: " > .token",
+    _properties:(
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(3),
+        margin-right: h-spacing(1),
+        line-height: line-height(3),
+        vertical-align: middle,
+    )
+);
+
+$CircledList: (
+    _name: "OrderedCircledList",
+    _subselector: " > .circled",
+    _properties:(
+        list-style-type: none,
+        display: inline,
+        padding-right: .5rem,
+    )
+);
+
+$CircledList__Item: (
+    _name: "CircledListItem",
+    _subselector: " > li",
+    _properties:(
+        padding-right: column-v-spacing(1),
+        display: inline-block,
+    )
+);
+
+// Circled lists components used in 3 column layout
+$CircledList__Token--MultiColumn: (
+    _name: "CircledListTokenMultiColumn",
+    _subselector: " > .token",
+    _properties:(
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(3),
+        line-height: line-height(3),
+        vertical-align: middle,
+        margin-right: 0.4rem,
+    )
+);
+
+$CircledList--MultiColumn: (
+    _name: "OrderedCircledListMultiColumn",
+    _subselector: " > .circled",
+    _properties:(
+        list-style-type: none,
+    )
+);
+
+$CircledList__Item--MultiColumn: (
+    _name: "CircledListItemMultiColumn",
+    _subselector: " > li",
+    _properties:(
+        float: left,
+        padding-right: 0.7rem,
+    )
+);
+
+// Unstyled lists
+$UnorderedList--UnstyledInNote: ( //used in Media Note
+    _name: "UnstyledUnorderedList",
+    _subselector: " > ul:not(.circled):not(.os-stepwise)",
+    _properties:(
+        list-style-type: none,
+    )
+);
+
+//Styled list item elements of EOS instructions
+$ListItem--EOSIntructions: (
+    _name: "InstructionsListItem",
+    _subselector: " > li",
+    _properties:(
+        color: enum('ValueSet:::REQUIRED'),
+        font-family: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(0),
+        line-height: line-height(0),
+        font-style: italic,
+        margin-top: v-spacing(1),
+        width: 100%,
+    )
+);
+
+// Stepwise lists
+
+$StepwiseList__Container: (
+    _name: "StepwiseListContainer",
+    _subselector: "",
+    _properties: (
+        list-style-type: none,
+    )
+);
+
+$StepwiseList__Item: (
+    _name: "StepwiseListItem",
+    _subselector: " > li",
+    _properties:(
+        display: flex,
+        flex-direction: row,
+    )
+);
+
+$StepwiseList__Token: (
+    _name: "StepwiseListToken",
+    _subselector: " > .os-stepwise-token",
+    _properties:(
+        flex-shrink: 0,
+        margin-right: h-spacing(1),
+    )
+);
+
+$StepwiseList__Content: empty_wrapper(StepwiseListContent, ' > .os-stepwise-content');

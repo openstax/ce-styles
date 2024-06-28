@@ -4,6 +4,8 @@ $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
 $Chapter--Composite__Container: empty_wrapper(CompositeChapterContainer, '');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$Unit__Container: empty_wrapper(UnitContainer, '');
 
 $Chapter__Container: (
   _name: "ChapterWrapper",
@@ -22,11 +24,10 @@ $H1: (
   _properties: (
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(3),
-    line-height: line-height(3),
+    font-size: font-scale(4),
+    line-height: line-height(4),
     margin-bottom: v-spacing(1),
     column-span: enum('ValueSet:::OPTIONAL'), //used in Index
-    font-weight: normal,
   )
 );
 
@@ -36,11 +37,10 @@ $H1--Numbered: (
   _properties: (
     display: table,
     color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'), 
-    font-size: font-scale(3),
-    line-height: font-scale(3),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(4),
+    line-height: font-scale(4),
     margin-bottom: v-spacing(1),
-    font-weight: normal,
   )
 );
 
@@ -50,6 +50,7 @@ $H1--Numbered__Text: (
   _properties: (
     display: table-cell,
     padding-left: h-spacing(2),
+    vertical-align: middle,
   )
 );
 
@@ -73,6 +74,7 @@ $H1--Numbered__Number: (
     height: v-spacing(4),
     display:  table-cell,
     text-align: center,
+    vertical-align: middle,
   )
 );
 
@@ -83,12 +85,11 @@ $H1--ChapterIntro--Numbered: (
   _properties: (
     display: flex,
     color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'), 
-    font-size: font-scale(2),
-    line-height: line-height(2),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: font-scale(3),
     position: relative,
     top: 26rem,
-    font-weight: normal,
     flex-direction: row,
     justify-content: flex-start,
     z-index: 2,
@@ -107,6 +108,7 @@ $H1--ChapterIntro--Numbered__Text: (
     position: relative,
     margin-left: 4rem,
     top: -2.5rem,
+    width: 5.5in
   )
 );
 
@@ -151,6 +153,56 @@ $H1--ChapterIntro--Numbered__Icon: (
   )
 );
 
+// Unit Opener h1 components
+
+$H1--UnitOpener: (
+  _name: "H1UnitOpener",
+  _subselector: ' > h1[data-type="document-title"]',
+  _properties: (
+    position: absolute,
+    top: 2.2in,
+    margin-top: 0,
+    margin-left: fullBleedsMargin(-1, in),
+    width: 6.5in,
+    font-size: font-scale(6),
+    line-height: line-height(6),
+    padding: 5rem,
+    z-index: 1,
+ )
+);
+
+$H1--UnitOpener__PartText: (
+  _name: "H1UnitOpenerPartText",
+  _subselector: ' > .os-part-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 700,
+  )
+);
+
+$H1--UnitOpener__Number: (
+  _name: "H1UnitOpenerNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 700,
+  )
+);
+
+$H1--UnitOpener__Text: (
+  _name: "H1UnitOpenerText",
+  _subselector: ' > .os-text',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 400,
+    display: block,
+    margin-top: v-spacing(2),
+  )
+);
+
 // H2 headers
 $H2: (
     _name:"H2Title",
@@ -158,8 +210,8 @@ $H2: (
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         font-family: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(2),
-        line-height: line-height(2),
+        font-size: font-scale(3),
+        line-height: line-height(3),
         margin-bottom: v-spacing(1),
         font-weight: bold,
     )
@@ -171,11 +223,10 @@ $H2--Numbered: (
   _properties: (
     display: table,
     color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'), 
-    font-size: font-scale(2),
-    line-height: font-scale(2),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: font-scale(3),
     margin-bottom: v-spacing(1),
-    font-weight: normal,
   )
 );
 
@@ -191,6 +242,7 @@ $H2--Numbered__Number: (
     height: v-spacing(4),
     display: table-cell,
     text-align: center,
+    vertical-align: middle,
   )
 );
 
@@ -200,6 +252,7 @@ $H2--Numbered__Text: (
   _properties: (
     display: table-cell,
     padding-left: h-spacing(1),
+    vertical-align: middle,
   )
 );
 
@@ -210,11 +263,10 @@ $H2--WithIcon: (
     display: flex,
     align-items: center,
     color: enum('ValueSet:::REQUIRED'),
-    font-family: enum('ValueSet:::REQUIRED'), 
-    font-size: font-scale(2),
-    line-height: font-scale(2),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(3),
+    line-height: font-scale(3),
     margin-bottom: v-spacing(1),
-    font-weight: normal,
   )
 );
 
@@ -233,9 +285,9 @@ $H2--WithIcon__Icon: (
 );
 
 // Chapter Intro Text Header
-$H2TextHeader--ChapterIntro: (
-    _name: "H2IntroTextHeader",
-    _subselector: ' > h2[data-type="document-title"]:first-of-type', 
+$H2--ChapterIntro: (
+    _name: "H2ChapterIntro",
+    _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
         font-size: font-scale(3),
         margin-bottom: v-spacing(1),
@@ -243,8 +295,8 @@ $H2TextHeader--ChapterIntro: (
     )
 );
 
-$H2TextHeader__Icon--ChapterIntro: (
-  _name: "H2IntroTextHeaderIcon",
+$H2--ChapterIntro__Icon: (
+  _name: "H2ChapterIntroIcon",
   _subselector: "::before",
   _properties: (
     background: enum('ValueSet:::REQUIRED'),
@@ -256,15 +308,29 @@ $H2TextHeader__Icon--ChapterIntro: (
   )
 );
 
-$H2TextHeader__Text--ChapterIntro: (
-    _name: "H2IntroTextHeaderText",
-    _subselector: ' > .os-text', 
+$H2--ChapterIntro__Text: (
+    _name: "H2ChapterIntroText",
+    _subselector: ' > .os-text',
     _properties: (
         display: inline-block,
         margin-left: v-spacing(1),
     )
 );
 
+$H2--UnitOpener: (
+    _name: "H2UnitOpener",
+    _subselector: ' > h2[data-type="document-title"]',
+    _properties: (
+      margin-top: 2in,
+      display: table,
+      color: enum('ValueSet:::REQUIRED'),
+      font-family: enum('ValueSet:::REQUIRED'),
+      font-size: font-scale(3),
+      line-height: font-scale(3),
+      margin-bottom: v-spacing(1),
+      font-weight: bold,
+    )
+);
 
 // H3 headers
 $H3: (
@@ -273,8 +339,8 @@ $H3: (
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         font-family: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(1),
-        line-height: line-height(1),
+        font-size: font-scale(2),
+        line-height: line-height(2),
         margin-bottom: v-spacing(1),
         font-weight: bold,
     )
@@ -285,8 +351,8 @@ $H3--Link:(
   _subselector: " > a > h3[data-type="document-title"]",
   _properties:(
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(1),
-    line-height: line-height(1),
+    font-size: font-scale(2),
+    line-height: line-height(2),
     margin-bottom: v-spacing(1),
     font-weight: bold,
   )
@@ -298,11 +364,36 @@ $H3--AppendixGlossary: (
   _properties: (
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: font-scale(1),
-    line-height: line-height(1),
+    font-size: font-scale(2),
+    line-height: line-height(2),
     margin-bottom: v-spacing(1),
     font-weight: bold,
   )
+);
+
+$H3--Objectives: (
+  _name: "H3ObjectivesTitle",
+  _subselector: ' > h3[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+    margin-bottom: 0,
+  )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-size: font-scale(3),
+        line-height: font-scale(3),
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+    )
 );
 
 //Tables titles
@@ -313,8 +404,8 @@ $Table__Title: (
         color: enum('ValueSet:::REQUIRED'),
         padding: enum('ValueSet:::REQUIRED'),
         text-align: center,
-        font-weight: bold, 
-    )   
+        font-weight: bold,
+    )
 );
 // H4 headers
 $H4--Link: (
@@ -322,8 +413,8 @@ $H4--Link: (
     _subselector: ' > a > h4',
     _properties: (
         font-family: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(0),
-        line-height: line-height(0),
+        font-size: font-scale(1),
+        line-height: line-height(1),
         margin-bottom: v-spacing(1),
         font-weight: bold,
     )
@@ -335,8 +426,8 @@ $H4: (
     _properties: (
         color: enum('ValueSet:::REQUIRED'),
         font-family: enum('ValueSet:::REQUIRED'),
-        font-size: font-scale(0),
-        line-height: line-height(0),
+        font-size: font-scale(1),
+        line-height: line-height(1),
         margin-bottom: v-spacing(1),
         font-weight: bold,
     )

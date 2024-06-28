@@ -9,7 +9,53 @@ $Caption__Container--Figure: (
         margin-right: auto,
         margin-bottom: v-spacing(1),
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
+    )
+);
+
+// Mechanism Figures
+
+$Caption__Title__Container:(
+    _name: "CaptionTitleContainer",
+    _subselector: " > .os-caption-title-container",
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
+        padding: v-spacing(1),
+        display: table-caption,
+        line-height: 1.2,
+    )
+);
+
+$Caption__Text__Container:(
+    _name: "CaptionTextContainer",
+    _subselector: " > .os-caption-text-container",
+    _properties: (
+        border-right-width: 2px,
+        border-right-style: solid,
+        border-right-color: enum('ValueSet:::REQUIRED'),
+        border-left-width: 2px,
+        border-left-style: solid,
+        border-left-color: enum('ValueSet:::REQUIRED'),
+        padding: v-spacing(1),
+        display: table-caption,
+        line-height: 1.2,
+    )
+);
+
+// Dedication
+
+$Caption__Text--Dedication:(
+    _name: "CaptionDedicationText",
+    _subselector: " > .os-caption",
+    _properties:(
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(2),
+        font-weight: bold,
+        margin-top: v-spacing(1),
+        display: flex,
+        flex-direction: column,
+        align-items: center,
     )
 );
 
@@ -23,8 +69,25 @@ $Caption__Container--ChapterIntro: (
         padding-top: v-spacing(1),
         padding-bottom: v-spacing(1),
         font-size: font-scale(-1),
-        line-height: 1rem,
+        line-height: 1.2,
     )
+);
+
+$Caption__Container--ChapterIntro__Bg: (
+        _name: "CaptionContainerChapterIntroBg",
+        _subselector: '::before',
+        _properties: (
+            content: "''",
+            background-color: enum('ValueSet:::REQUIRED'),
+            position: absolute,
+            height: 100%,
+            width: fullBleedsSize(8.5, in),
+            margin-left: fullBleedsMargin(-1, in),
+            z-index: -1,
+            box-sizing: border-box,
+            padding: inherit,
+            top: 0,
+        ),
 );
 
 // Tables
@@ -36,10 +99,23 @@ $Caption__Container--Table: (
         display: table-caption,
         caption-side: bottom,
         prince-caption-page: all,
+        font-size: font-scale(-1),
+        line-height: 1.2,
     )
 );
 
-// Components used in both Figures and Chapter Intro shapes
+$Caption__Container--Table--OnTop: (
+    _name: "CaptionContainerTableOnTop",
+    _subselector: ' .os-caption-container',
+    _properties: (
+        display: table-caption,
+        prince-caption-page: all,
+        font-size: font-scale(-1),
+        line-height: 1.2,
+    )
+);
+
+// Common components
 
 $Caption__Text:(
     _name: "CaptionText",
@@ -57,8 +133,6 @@ $Caption__Title: (
         font-weight: bold,
     )
 );
-
-// Common components
 
 $Caption__TitleLabel: (
     _name: "CaptionTitleLabel",

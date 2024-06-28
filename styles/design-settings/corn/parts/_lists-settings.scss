@@ -1,16 +1,15 @@
 @include add_settings((
     PageLists: (
         _selectors: ('[data-type="page"]'),
-        CircledListToken: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-        InstructionsListItem: (
-            color: (_ref: 'colorMap:::instructionsListItemColor'),
-            font-family: (_ref: 'typography:::baseFont'),
-        ),
     ),
     CompositePageLists: (
         _selectors: ('.os-eoc[data-type="composite-page"]'),
+    ),
+));
+
+@include add_settings((
+    CircledListsFromModules: (
+        _selectors: ('[data-type="page"]', '.os-eoc[data-type="composite-page"]'),
         CircledListToken: (
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
@@ -19,26 +18,11 @@
 
 // Used for circled lists in Try It Notes and Examples in all of the corn theme books, in Statistics books, where the exercises and solutions are in one column and in College Algebra Coreq for Coreq Skills exercises which are in one column as well
 @include add_settings((
-    ExercisesProblemLists: (
-        _selectors: ('[data-type="page"] > :not(.os-eos) [data-type="problem"]'),
-        CircledListToken: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-    ),
-    ExercisesSolutionLists: (
-        _selectors: ('[data-type="page"] [data-type="solution"]'),
-        CircledListToken: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-    ),
-    InjectedQuestionLists: (
-        _selectors: ('[data-type="page"] > section:not(.os-eos) [data-type="exercise-question"]'),
-        CircledListToken: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-    ),
-    InjectedSolutionLists: (
-        _selectors: ('[data-type="page"] [data-type="question-solution"]'),
+    CircledListsFromOneColumnExercises: (
+        _selectors: ('[data-type="page"] > :not(.os-eos) [data-type="problem"]',
+                     '[data-type="page"] [data-type="solution"]',
+                     '[data-type="page"] > section:not(.os-eos) [data-type="exercise-question"]',
+                     '[data-type="page"] [data-type="question-solution"]'),
         CircledListToken: (
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
@@ -47,35 +31,27 @@
 
 //Section Exercises, EoC exercises, AnswerKey solutions lists for parts with 3 column layout
 @include add_settings((
-    SectionExercisesProblemLists: (
-        _selectors: ('.os-eos.os-section-exercises-container [data-type="problem"]'),
+    CircledListsFromMultiColumnsExercises: (
+        _selectors: ('.os-eos.os-section-exercises-container [data-type="problem"]',
+                     '.os-eos.os-section-exercises-container [data-type="exercise-question"]',
+                     '.os-eoc.os-exercises-container [data-type="problem"]',
+                     '.os-eoc.os-exercises-container [data-type="exercise-question"]',
+                     '.os-eob.os-solution-container [data-type="solution"]'),
         CircledListTokenMultiColumn: (
             color: (_ref: 'colorMap:::circledListTokenColor'),
         ),
     ),
-    SectionInjectedExercisesQuestionLists: (
-        _selectors: ('.os-eos.os-section-exercises-container [data-type="exercise-question"]'),
-        CircledListTokenMultiColumn: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
+));
+
+@include add_settings((
+    ListsFromExercises: (
+      _selectors: ('[data-type="problem"]', '[data-type="exercise-question"]', '[data-type="solution"]', '[data-type="question-solution"]'),
     ),
-    EOCExercisesProblemLists: (
-        _selectors: ('.os-eoc.os-exercises-container [data-type="problem"]'),
-        CircledListTokenMultiColumn: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-    ),
-    EOCInjectedExercisesQuestionLists: (
-        _selectors: ('.os-eoc.os-exercises-container [data-type="exercise-question"]'),
-        CircledListTokenMultiColumn: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
-    ),
-    AnswerKeyExercisesSolutionLists: (
-        _selectors: ('.os-eob.os-solution-container [data-type="solution"]'),
-        CircledListTokenMultiColumn: (
-            color: (_ref: 'colorMap:::circledListTokenColor'),
-        ),
+));
+
+@include add_settings((
+    ListsFromStimulus: (
+        _selectors: ('[data-type="exercise-stimulus"]'),
     ),
 ));
 
@@ -86,7 +62,17 @@
 ));
 
 @include add_settings((
-    ListTable: (
-        _selectors: "li > table"
+    StepwiseLists: (
+        _selectors: ('.os-stepwise'),
+    )
+));
+
+@include add_settings((
+    EosLists: (
+        _selectors: ('.os-eos'),
+        InstructionsListItem: (
+            color: (_ref: 'colorMap:::instructionsListItemColor'),
+            font-family: (_ref: 'typography:::baseFont'),
+        ),
     )
 ));

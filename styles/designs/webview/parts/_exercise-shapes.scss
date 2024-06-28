@@ -8,8 +8,15 @@
         map-merge($Exercise__Container, (
             _components: (
                 $Exercise__Title,
-                $Exercise__Problem1,
-                $Exercise__Problem2,
+                map-merge($Exercise__Problem, (
+                  _components: (
+                    $Exercise__ProblemSolution__Number,
+                    $Exercise__ProblemSolution__Divider,
+                    $Exercise__Problem__LOReference,
+                    $Exercise__Problem__Container--Numbered,
+                    $Exercise__Problem__MCAnswer__Pre,
+                  )
+                )),
                 map-merge($Exercise__Solution1, (
                     _components: (
                         $Button--InExerciseSolution,
@@ -32,20 +39,9 @@
                         $Exercise__Solution__Toggle__Marker,
                     ),
                 )),
-                map-merge($Exercise--ProblemsExercises1, (
+                map-merge($Exercise--WithProblemTitle, (
                     _components: (
-                        $Exercise--ProblemsExercises__Problem--Before1,
-                        $Exercise--ProblemsExercises__Problem--Before2,
-                        $Exercise--ProblemsExercises__Solution--Before1,
-                        $Exercise--ProblemsExercises__Solution--Before2,
-                    ),
-                )),
-                map-merge($Exercise--ProblemsExercises2, (
-                    _components: (
-                        $Exercise--ProblemsExercises__Problem--Before1,
-                        $Exercise--ProblemsExercises__Problem--Before2,
-                        $Exercise--ProblemsExercises__Solution--Before1,
-                        $Exercise--ProblemsExercises__Solution--Before2,
+                        $Exercise__Problem__Container--FromExerciseWithProblemTitle
                     ),
                 )),
                 $CheckUnderstanding__Title--Before1,
@@ -65,6 +61,62 @@
     ),
 ));
 
+@include create_shape('webview:::InjectedExerciseShape', (
+    _components: (
+        map-merge($Exercise__Container, (
+            _components: (
+                map-merge($Exercise__ExerciseQuestion, (
+                    _components: (
+                        $Exercise__ProblemSolution__Number,
+                        $Exercise__ProblemSolution__Divider,
+                        $Exercise__Problem__Container--Numbered,
+                        map-merge($Exercise__Problem__Container, (
+                            _components: (
+                                $Exercise__Question__Stem,
+                                $Image--AfterBold,
+                                $Exercise__Problem__MCAnswer__Pre,
+                            )
+                        )),
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('webview:::ExercisesQuestionWithProblemPrefixShape',(
+    _components:(
+        map-merge($ExerciseQuestion__Container,(
+            _components:(
+                map-merge($Exercise__ProblemSolution__Prefix,(
+                    _components:(
+                        $Exercise__ProblemSolution__Prefix__Label,
+                        $Exercise__ProblemSolution__Prefix__Number,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
+@include create_shape('webview:::ExercisesMultipartQuestionShape',(
+    _components:(
+        map-merge($Exercise__Container,(
+            _components:(
+                map-merge($Exercise__Problem__Container--FromMultipartQuestion,(
+                    _components:(
+                        $InjectedExercise__ProblemSolution__Letter,
+                        $Exercise__ProblemSolution__Divider--FromMultipartQuestion,
+                        $InjectedExercise__Question__Stem,
+                        $InjectedExercise__Question__Stem--WithFirstElement,
+                        $Exercise__Problem__MCAnswer__Pre,
+                    ),
+                )),
+            ),
+        )),
+    )
+));
+
 @include create_shape('webview:::ExerciseInAppendixShape', (
     _components: (
         map-merge($Exercise__Container, (
@@ -72,6 +124,7 @@
                 map-merge($Exercise__ProblemContainer, (
                     _components: (
                         $Exercise__ProblemContainer__Paragraph,
+                        $Exercise__Problem__MCAnswer__Pre,
                     ),
                 )),
             ),
@@ -89,6 +142,8 @@
                 $Exercise--Inlined__Child--UnOrderedList,
                 $Exercise--Inlined__Child--Note,
                 $Exercise--Inlined__Child--Figure,
+                $Exercise--Inlined__Child--Img,
+                $Exercise__Problem__MCAnswer__Pre,
             ),
         )),
         map-merge($Exercise__SolutionContainer, (
@@ -99,6 +154,7 @@
                 $Exercise--Inlined__Child--UnOrderedList,
                 $Exercise--Inlined__Child--Note,
                 $Exercise--Inlined__Child--Figure,
+                $Exercise--Inlined__Child--Img,
             ),
         )),
     ),

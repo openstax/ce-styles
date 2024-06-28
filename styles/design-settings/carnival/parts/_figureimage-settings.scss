@@ -1,6 +1,6 @@
 @include add_settings((
     Figure:(
-        _selectors: (".os-figure:not(.has-splash)"),
+        _selectors: (".os-figure:not(.has-splash):not(.has-mechanism-figure)"),
         CaptionTitleLabel:(
             font-family: (_ref:'typography:::titleOption1Font'),
             color: (_ref:"colorMap:::figureNumberColor"),
@@ -45,5 +45,65 @@
     ),
     ImageAfterEobPara: ( // Use if para margin is removed
       _selectors: ('.os-eob .os-solution-container > p + [data-type="media"]'),
+    ),
+    MechanismFigure: (
+      _selectors: ('.os-figure.has-mechanism-figure'),
+        CaptionTitleContainer:(
+          background-color: (_ref:"colorMap:::mechanismFigureBorderColor"),
+        ),
+        CaptionTitleLabel:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionNumber:(
+            font-family: (_ref:'typography:::titleOption1Font'),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitle: (
+            font-family: (_ref:'typography:::titleOption1Font'),
+        ),
+        CaptionTextContainer:(
+          border-left-color: (_ref:"colorMap:::mechanismFigureBorderColor"),
+          border-right-color: (_ref:"colorMap:::mechanismFigureBorderColor"),
+        ),
+        CaptionText:(
+          font-family:(_ref:'typography:::sansFont'),
+        ),
+    )
+));
+
+@include add_settings((
+    FigureSplash: (
+        _selectors: (".os-figure.has-splash"),
+        FigureSplashBg: (
+            // background color is book specific set in the book.scss file
+        ),
+        CaptionContainerChapterIntroBg: (
+            background-color: (_ref: "colorMap:::chapterSplashCaptionColor"),
+        ),
+        CaptionNumber: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitleLabel: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref:"colorMap:::figureNumberColor"),
+        ),
+        CaptionTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+        ),
+        CaptionText: (
+            font-family:(_ref:'typography:::sansFont'),
+        ),
+    ),
+));
+
+@include add_settings((
+    FigureDedication: (
+        _selectors: (".dedication-page .os-figure"),
+        CaptionDedicationText: (
+            font-family:(_ref:'typography:::sansFont'),
+            color: (_ref: 'colorMap:::organicChemistryDedicationColor'),
+        ),
     ),
 ));

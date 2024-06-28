@@ -1,0 +1,165 @@
+// Containers
+$ListContainer: empty_wrapper(Container, '');
+$ListElementContainer: empty_wrapper(LiContainer, ' > li');
+
+// Basic Lists
+$UnorderedList--FirstLevel: (
+    _name: "FirstLevelUnorderedList",
+    _subselector: ' > ul:not([data-labeled-item="true"])',
+    _properties:(
+        margin-left: h-spacing(4),
+    )
+);
+
+$OrderedList--FirstLevel: (
+    _name: "FirstLevelOrderedList",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(4),
+    )
+);
+
+$OrderedList--FirstLevel--MarginBottom: ( // only needed in Introduction page in pl-u-physics
+    _name: "FirstLevelOrderedListMarginBottom",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(4),
+        margin-bottom: v-spacing(1),
+    )
+);
+
+$UnorderedList--SecondLevel: (
+    _name: "SecondLevelUnorderedList",
+    _subselector: " > li > ul",
+    _properties:(
+        margin-left: h-spacing(3),
+        margin-bottom: 0,
+    )
+);
+
+$OrderedList--SecondLevel: (
+    _name: "SecondLevelOrderedList",
+    _subselector: " > li  > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+        margin-bottom: 0,
+    )
+);
+
+$UnorderedList--ThirdLevel: (
+    _name: "ThirdLevelUnorderedList",
+    _subselector: " > li > ul",
+    _properties:(
+        padding-left: h-spacing(3),
+        list-style-type: none,
+        position: relative,
+        margin-bottom: 0,
+    )
+);
+
+$OrderedList--ThirdLevel: (
+    _name: "ThirdLevelOrderedList",
+    _subselector: " > li > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+        margin-bottom: 0,
+    )
+);
+
+$UnorderedList--ThirdLevel__Marker: (
+    _name: "ThirdLevelUnorderedListMarker",
+    _subselector: " > li::before",
+    _properties:(
+        font-size: 6px,
+        content: "'▪'", // double quotation marks needed, otherwise invalid value
+        display: inline-block,
+        position: absolute,
+        left: h-spacing(1),
+        vertical-align: middle,
+    )
+);
+
+// Notes lists
+
+$UnorderedList--FromLastChild: (
+    _name: "UnorderedListFromLastChild",
+    _subselector: " > :last-child ul",
+    _properties: (
+        margin-bottom: 0,
+    )
+);
+
+$OrderedList--FromLastChild: (
+    _name: "OrderedListFromLastChild",
+    _subselector: " > :last-child ol",
+    _properties: (
+        margin-bottom: 0,
+    )
+);
+
+// Appendix
+$UnorderedList--AppendixGlossary: (
+  _name: "AppendixGlossaryUnorderedList",
+  _subselector: " > ul",
+  _properties: (
+    font-size: font-scale(-1),
+    list-style-type: none,
+    margin-left: '0 !important',
+  ),
+);
+
+$UnorderedList__Item--AppendixGlossary: (
+  _name: "AppendixGlossaryUnorderedListItem",
+  _subselector: " > li",
+  _properties: (
+    text-indent: -5px, // creates a hanging indent
+    padding-left: 5px,
+  )
+);
+
+// Objectives
+
+$ListItem--Objectives: (
+  _name: 'ObjectivesListItem',
+  _subselector: ' > li',
+  _properties: (
+    font-family: enum('ValueSet:::OPTIONAL'), // needed for chapter objectives in anatomy
+    max-width: 5.9in,
+  )
+);
+
+$ListItem--Objectives__Dot: (
+  _name: 'ObjectivesListDot',
+  _subselector: '::marker',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$UnorderedList--UnstyledFromObjectives: (
+    _name: "UnstyledListFromObjectives",
+    _subselector: " > ul",
+    _properties:(
+        margin-left: enum('ValueSet:::OPTIONAL'), // used in ChapterObjectivesShape
+        list-style-type: none,
+    )
+);
+
+$ListItem--Objectives--Flex: (
+    _name: "ObjectivesFlexListItem",
+    _subselector: ' > li',
+    _properties: (
+      display: flex,
+      max-width: 5.9in,
+    )
+);
+
+$ListItem--Objectives__NumberToken: (
+  _name: "ObjectivesNumberToken",
+  _subselector: ' > span.os-abstract-token',
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+    margin-right: h-spacing(1),
+  )
+);

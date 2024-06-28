@@ -8,6 +8,23 @@ $UnorderedList: (
   )
 );
 
+$UnorderedList--Nested: (
+  _name: 'UnorderedListNested', 
+  _subselector: ' ul',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
+  )
+);
+
+$UnorderedList--NoBullet: (
+  _name: 'UnorderedListNoBullet', 
+  _subselector: ' ul[data-bullet-style="none"]',
+  _properties: (
+    list-style-type: none,
+  )
+);
+
 $OrderedList: (
   _name: 'OrderedList', 
   _subselector: ' ol',
@@ -18,12 +35,32 @@ $OrderedList: (
   )
 );
 
+$OrderedList--Nested: (
+  _name: 'OrderedListNested', 
+  _subselector: ' ol',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
+  )
+);
+
 $UnorderedList--NumberedLearningObjectives: (
   _name: 'NumberedLearningObjectivesList', 
   _subselector: ' .os-abstract',
   _properties: (
     list-style-type: none,
     padding-left: 2rem,
+  )
+);
+
+$UnorderedList--NotesQuestionSection: (
+  _name: "NotesQuestionSectionList",
+  _subselector: ' ul.critical-thinking',
+  _properties: (
+    padding-top: 1rem,
+    border-top-style: solid ,
+    border-top-width: 0.2rem,
+    border-top-color: enum('ValueSet:::REQUIRED'),
   )
 );
 
@@ -86,13 +123,7 @@ $StepwiseList__Container: (
     )
 );
 
-$StepwiseList__Item: (
-    _name: "StepwiseListItem",
-    _subselector: ' > li',
-    _properties: (
-      display: flex,
-    )
-);
+$StepwiseList__Item: empty_wrapper(StepwiseListItem, ' > li');
 
 $StepwiseList__CustomBullet: (
     _name: "StepwiseListCustomBullet",
@@ -120,11 +151,38 @@ $StepwiseList__NestedList--Ordered: (
     )
 );
 
+$CircledList: (
+    _name: "CircledList",
+    _subselector: ".circled",
+    _properties:(
+        list-style-type: none,
+    )
+);
+
+$CircledList__Item: (
+    _name: "CircledListItem",
+    _subselector: " > li",
+    _properties:(
+        position: relative,
+        left: -2rem,
+    )
+);
+
+$CircledList__Token: (
+    _name: "CircledListToken",
+    _subselector: " > .token",
+    _properties:(
+        padding-right: .5rem,
+        vertical-align: 'baseline !important'
+    )
+);
+
 $OrderedList--InTable: (
   _name: "OrderedListInTable",
   _subselector: ' ol',
   _properties: (
     padding-left: 1.5em,
+    margin-top: 0,
   )
 );
 
@@ -133,6 +191,7 @@ $UnorderedList--InTable: (
   _subselector: ' ul',
   _properties: (
     padding-left: 1.5em,
+    margin-top: 0,
   )
 );
 
@@ -142,6 +201,7 @@ $NoneStyleList: (
   _properties: (
     margin: 0,
     padding: 0,
+    list-style-type: none,
   )
 );
 

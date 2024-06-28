@@ -1,0 +1,258 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc.os-section-summary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #0074BC;
+
+$ChapterIntroType: side;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/folio';
+
+
+//Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+  ),
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  PageTitles: (
+    _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  EocCompositePageTitles: (
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+  EobTitles: (
+    _selectors: ('.os-eob'),
+    'H2Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+));
+
+// LO
+@include add_settings((
+  LearningObjectivesNumbered: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+  ),
+));
+
+// Chapter Intro
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::neuroscienceIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
+    'ChapterOutlineContainer:::font-weight': normal,
+    'ChapterOutlineContainer:::font-size': font-scale(-1),
+  ),
+));
+
+// TOC
+@include add_settings((
+    TOC: (
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::neuroscienceHeaderColor'),
+    ),
+));
+
+// Notes
+@include add_settings((
+  MeetTheAuthorNote:(
+    _selectors: (".meet-author"),
+    group-border-color: (_ref: 'colorMap:::meetTheAuthorColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::meetTheAuthorColor'),
+  ),
+  BoxedFeatureNote:(
+    _selectors: (".boxed-feature"),
+    group-border-color: (_ref: 'colorMap:::boxedFeatureNeuroscienceColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::boxedFeatureNeuroscienceColor'),
+  ),
+));
+
+@include add_settings((
+  DevelopmentalPerspectiveNote:(
+    _selectors: (".developmental-perspective"),
+    group-border-color: (_ref: 'colorMap:::developmentalPerspectiveColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::developmentalPerspectiveColor'),
+  ),
+));
+
+@include add_settings((
+  AcrossSpeciesNote:(
+    _selectors: (".across-species"),
+    group-border-color: (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::acrossSpeciesNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-biodiversity.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  InTheLabNote:(
+    _selectors: (".inthe-lab"),
+    group-border-color: (_ref: 'colorMap:::inTheLabNoteColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::inTheLabNoteColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientific.svg")) no-repeat top left,
+  ),
+));
+
+//Figures
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::neuroscienceIntroColor"),
+  ),
+));
+
+// Target labels
+@include add_settings((
+  FigureTargetLabel: (
+    _selectors: ('a.figure-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::figureNumberColor"),
+    ),
+  TableTargetLabel: (
+    _selectors: ('a.table-target-label'),
+    'TargetLabelLink:::color': (_ref:"colorMap:::neuroscienceTableColor"),
+  ),
+));
+
+// EOC
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: ('.os-section-summary-container', '.os-key-terms-container'),
+  ),
+));
+
+@include add_settings((
+  EocExercisesModules: (
+    _selectors: ('.os-multiple-choice-container', '.os-fillin-blank-container'),
+    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+  ),
+));
+
+// Tables
+@include add_settings((
+  NoCellBordersTable: (
+    _selectors: ('.os-table.os-no-cellborder-container'),
+    'TableContainer:::display': table,
+    'TableContainer:::margin-left': auto,
+    'TableContainer:::margin-right': auto,
+    'Table:::border-collapse': collapse,
+    'Table:::margin-top': v-spacing(1),
+    'Table:::margin-bottom': 0,
+    'Table:::width': 100%,
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionTitleLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::neuroscienceTableColor'),
+    'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'NoBordersTableHeadCell:::font-weight': 700,
+    'TableData:::padding-top': 0.16rem,
+    'TableData:::padding-bottom': 0.16rem,
+    'TableData:::padding-right': table-h-spacing(1),
+    'TableData:::padding-left': table-h-spacing(1),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::neuroscienceTableColor'),
+  ),
+));
+
+// Book specific styles
+@include use('BookRoot', "common:::BookRoot");
+@include use('LearningObjectivesNumbered', 'carnival:::LearningObjectivesNumberedShape');
+
+//Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+
+
+// TOC
+@include use('TOC', 'carnival:::NoUnitToc');
+
+// EOB
+@include add_settings((
+  AppendixGlossary: (
+    _selectors: (".appendix > .column-container"),
+    'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::neuroscienceHeaderColor"),
+    'AppendixGlossaryContainer:::column-count': 2,
+  ),
+));
+
+// Equations
+
+
+
+//Figures
+@include use('FigureSplash','carnival:::FigureSplashShape');
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableFromNotes','carnival:::TableFromNotesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
+
+//Notes
+@include use('MeetTheAuthorNote', 'carnival:::BoxedNoteShape');
+@include use('DevelopmentalPerspectiveNote', 'carnival:::BoxedNoteShape');
+@include use('BoxedFeatureNote', 'carnival:::BoxedNoteShape');
+@include use('AcrossSpeciesNote', 'carnival:::IconNoteShape');
+@include use('InTheLabNote', 'carnival:::IconNoteShape');
+
+//Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('EobTitles', 'carnival:::EobTitlesShape');
+
+
+//Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('EocExercisesModules','carnival:::ExercisesModuleShape');
+
+// EOB
+@include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
+@include use('Index', 'carnival:::IndexShape');

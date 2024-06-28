@@ -13,14 +13,15 @@ $ChapterIntroType: fullWidth;
 
 //Settings
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: 'colorMap:::anthopologyAccentColor'),
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: 'colorMap:::anthopologyAccentColor'),
   ),
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: 'colorMap:::anthopologyAccentColor'),
-    'ChapterOutlineTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'H3ChapterOutlineTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'ChapterObjectiveLink:::font-weight': bold,
   ),
 ));
 
@@ -28,7 +29,7 @@ $ChapterIntroType: fullWidth;
   LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
-    'ListDot:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
   ),
 ));
 
@@ -41,8 +42,17 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+    'H4Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
+  ),
+));
+
+@include add_settings((
   PageTitles: (
     _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H2Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H3Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
     'H4Title:::color': (_ref: 'colorMap:::anthopologyAccentColor'),
@@ -97,13 +107,13 @@ $ChapterIntroType: fullWidth;
   MediaVideo: (
     _selectors: ('.media-video'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaVideoColor'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-media.svg")) no-repeat top left,
   ),
   MediaPodcast: (
     _selectors: ('.media-podcast'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Body:::border-bottom-color': (_ref: 'colorMap:::mediaPodcastColor'),
+    'Container:::border-bottom-color': (_ref: 'colorMap:::mediaPodcastColor'),
     'Icon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-podcast.svg")) no-repeat top left,
   ),
 ));
@@ -134,17 +144,17 @@ $ChapterIntroType: fullWidth;
 
 // Book specific styles
 @include use('TOC', 'carnival:::NoUnitToc');
-@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Chapter Intro
-@include use('ChapterIntro', 'carnival:::ChapterIntroShape');
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'carnival:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'carnival:::EobTitlesShape');
@@ -153,7 +163,8 @@ $ChapterIntroType: fullWidth;
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
-@include use('ExerciseCompositePageLists', 'carnival:::ExerciseCompositePageListsShape');
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("NotesLists", "carnival:::NotesListsShape");
 
 //Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
@@ -162,6 +173,7 @@ $ChapterIntroType: fullWidth;
 
 // Figure
 @include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');

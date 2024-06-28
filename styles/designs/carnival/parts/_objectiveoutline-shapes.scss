@@ -1,0 +1,83 @@
+@import 'objectiveoutline-components';
+@import 'titles-components';
+@import 'lists/lists-components';
+
+@include create_shape('carnival:::LearningObjectivesColoredDotShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        map-merge($UnorderedList--FirstLevel, (
+          _components: (
+            map-merge($ListItem--Objectives, (
+              _components: (
+                $ListItem--Objectives__Dot,
+              ),
+            ))
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+@include create_shape('carnival:::LearningObjectivesNumberedShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            map-merge($ListItem--Objectives--Flex, (
+              _components: (
+                $ListItem--Objectives__NumberToken,
+              )
+            )),
+          )
+        )),
+      )
+    )),
+  )
+));
+
+@include create_shape('carnival:::ObjectivesNoteColoredDotShape', ( // used for Learning Objectives in hs-physics and for Chapter Objectives in Chapter Intro in anatomy
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($Objectives__NoteBody, (
+          _components: (
+            $Objectives__Paragraph,
+            map-merge($UnorderedList--FirstLevel, (
+              _components: (
+                map-merge($ListItem--Objectives, (
+                  _components: (
+                    $ListItem--Objectives__Dot,
+                  ),
+                ))
+              ),
+            ))
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+// Chapter Outline
+
+@include create_shape('carnival:::ChapterOutlineShape', (
+    _components: (
+        map-merge($ChapterOutline__Container, (
+            _components: (
+                $H3--ChapterOutline,
+                map-merge($ChapterObjective__Container, (
+                    _components: (
+                        $ChapterObjective__Link,
+                    )
+                )),
+            )
+        )),
+    )
+));

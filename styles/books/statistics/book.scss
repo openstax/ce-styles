@@ -18,18 +18,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
-    'SplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-    'H3IntroSectionHeader:::font-family': (_ref: 'typography:::titleFont'),
-    'H3IntroSectionHeader:::color': (_ref: "colorMap:::moduleTitleColor"),
-  ),
-));
-
-@include add_settings((
   CollaborativeExercise: (
     _selectors: (".collab"),
     'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
@@ -154,14 +142,14 @@ $bandColor: #093D4C;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
-@include use('ChapterObjectives', 'corn:::ChapterObjectivesShape');
+@include use('ChapterObjectivesNote', 'corn:::ObjectivesNoteWithCustomBulletIconShape');
 
 //Exercises
 @include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
 
 // Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
@@ -181,10 +169,12 @@ $bandColor: #093D4C;
 @include use('TopTitledTable', 'corn:::TopTitledTableShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
 @include use('TableFromTwoColumnsModule', 'corn:::TableFromTwoColumnsModuleShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 
 // Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'corn:::CompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'corn:::CompositePageTitlesShape');
@@ -200,12 +190,13 @@ $bandColor: #093D4C;
 
 // Equations
 @include use('Equation', 'corn:::EquationShape');
+@include use('NumberedEquation', 'corn:::NumberedEquationShape');
 
 // Lists
 @include use('PageLists', 'corn:::PageListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
 
@@ -215,6 +206,11 @@ $bandColor: #093D4C;
 @include use('BringingItTogetherPractice', 'corn:::ExercisesModuleShape'); // one column
 @include use('Homework', 'corn:::ExercisesModuleShape'); // one column
 @include use('BringingItTogetherHomework', 'corn:::ExercisesModuleShape'); // one column
-@include use('AnswerKeyEoc', 'corn:::AnswerKeyEocShape');
+@include use('AnswerKeyOneColumnEocSolution', 'corn:::AnswerKeySolutionShape');
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+
+// Page break specific for book
+[data-type="note"].lab .os-note-body {
+  page-break-after: avoid;
+}

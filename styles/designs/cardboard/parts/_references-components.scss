@@ -55,3 +55,33 @@ $References__CiteLink: (
         text-decoration: none,
     )
 );
+
+$References__Aside: (
+    _name: "ReferencesAside",
+    _subselector: ' > aside.reference',
+    _properties:(
+        display: table,
+        font-size: font-scale(-1),
+        padding: '0 0 0 1.4rem',
+    ),
+);
+
+$References__Aside__Link: (
+    _name: "ReferencesAsideLink",
+    _subselector: ' > a[data-type="footnote-number"]',
+    _properties:(
+        display: table-cell,
+        text-decoration: none,
+        padding-right: h-spacing(1),
+        position: relative,
+        left: -2px,
+    ),
+);
+
+$References__Aside__Content: (
+    _name: "ReferencesAsideContent",
+    _subselector: ' > span',
+    _properties:(
+        display: table-cell,
+    ),
+);

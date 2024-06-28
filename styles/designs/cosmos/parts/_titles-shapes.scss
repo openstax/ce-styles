@@ -94,6 +94,29 @@
     )
 ));
 
+// Unit Opener
+
+@include create_shape('cosmos:::UnitOpenerTitlesShape', (
+    _components: (
+        map-merge($Unit__Container, (
+            _components: (
+                map-merge($H1--UnitOpener, (
+                    _components: (
+                        $H1--UnitOpener__PartText,
+                        $H1--UnitOpener__Number,
+                        $H1--UnitOpener__Text,
+                    )
+                )),
+                map-merge($DivWrapper--FirstLevel,(
+                    _components:(
+                        $H2--UnitOpener,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
 // Chapter Titles Shape
 @include create_shape('cosmos:::ChapterTitlesShape', (
     _components: (
@@ -107,6 +130,56 @@
                     $H1--ChapterIntro--Numbered__Bg,
                     )
               )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cosmos:::ChapterIntroTitlesInlineShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                $H2--ChapterIntro--Inline,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cosmos:::ChapterIntroTitlesBlockShape', (
+    _components: (
+        map-merge($ChapterIntro__Container, (
+            _components: (
+                $H2--ChapterIntro--Block,
+                map-merge($SectionWrapper--FirstLevel,(
+                    _components:(
+                        $H3,
+                    ),
+                )),
+                map-merge($SectionWrapper--SecondLevel,(
+                    _components:(
+                        $H4,
+                    ),
+                )),
+                map-merge($SectionWrapper--ThirdLevel,(
+                    _components:(
+                        $H5,
+                    ),
+                )),
             )
         )),
     )

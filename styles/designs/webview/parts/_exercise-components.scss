@@ -1,6 +1,13 @@
 $Exercise__Container: empty_wrapper(ExerciseContainer, '');
-$Exercise--ProblemsExercises1: empty_wrapper(ProblemsExercises1, '.problems-exercises');
-$Exercise--ProblemsExercises2: empty_wrapper(ProblemsExercises2, '[data-type="problems-exercises"]');
+$Exercise--WithProblemTitle: empty_wrapper(ExerciseWithProblemTitle, '.has-problem-title');
+
+$ExerciseQuestion__Container: (
+    _name: "ExerciseQuestionContainer",
+    _subselector: '',
+    _properties:(
+        display: table,
+    )
+);
 
 
 $Exercise__Title: (
@@ -11,21 +18,109 @@ $Exercise__Title: (
   ),
 );
 
-$Exercise__Problem1: (
-  _name: "Problem1",
+$Exercise__Problem: (
+  _name: "ExerciseProblem",
   _subselector: ' [data-type="problem"]',
   _properties: (
+    display: table,
     padding: '0.5em 1em',
   ),
 );
 
-$Exercise__Problem2: (
-  _name: "Problem2",
-  _subselector: " .problem",
+/// Approach from PDFs
+$Exercise__ExerciseQuestion: (
+  _name: "Problem1",
+  _subselector: ' [data-type="exercise-question"]',
   _properties: (
     padding: '0.5em 1em',
+    display: table,
   ),
 );
+
+$Exercise__ProblemSolution__Number: (
+  _name: "ProblemSolutionNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    display: table-cell,
+    font-weight: 700,
+    text-decoration: none,
+    text-align: right,
+    width: 30px,
+  )
+);
+
+$Exercise__ProblemSolution__Divider:(
+  _name: "ProblemSolutionDivider",
+  _subselector: " > .os-divider",
+  _properties:(
+    margin-right: 0.5em,
+  )
+);
+
+$Exercise__Problem__LOReference:(
+  _name: "ProblemLOReference",
+  _subselector: " a.lo-reference",
+  _properties:(
+    margin-right: 0.5em,
+    font-weight: bold,
+  )
+);
+
+$Exercise__ProblemSolution__Divider--FromMultipartQuestion:(
+  _name: "ProblemSolutionDividerFromMultipartQuestion",
+  _subselector: " > .os-divider",
+  _properties:(
+    display: table-cell,
+    width: 0.5em,
+  )
+);
+
+$Exercise__Problem__Container: empty_wrapper(ExerciseProblemContainer, '> .os-problem-container');
+
+$Exercise__Problem__Container--Numbered: (
+    _name: "NumberedProblemContainer",
+    _subselector: " > .os-number ~ .os-problem-container",
+    _properties:(
+      display: table-cell,
+      width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromMultipartQuestion: (
+    _name: "ProblemContainerFromMultipartQuestion",
+    _subselector: " > .os-problem-container",
+    _properties:(
+        display: table,
+        width: 100%,
+    )
+);
+
+$Exercise__Problem__Container--FromExerciseWithProblemTitle: (
+    _name: "ProblemContainerFromFromExerciseWithProblemTitle",
+    _subselector: " .os-problem-container",
+    _properties:(
+        display: initial,
+    )
+);
+
+$Exercise__Problem__MCAnswer__Pre: (
+  _name: "PreInMCAnswer",
+  _subselector: " li[data-type='question-answer'] pre",
+  _properties: (
+    margin: 0,
+  )
+);
+
+$Exercise__Question__Stem: (
+    _name: "ExerciseQuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: 'table !important',
+        width: 100%,
+        table-layout: fixed,
+    )
+);
+///
 
 $Exercise__Solution1: (
   _name: "Solution1",
@@ -77,52 +172,23 @@ $Exercise__Solution__Toggle__Marker: (
   ),
 );
 
-$Exercise--ProblemsExercises__Problem--Before1: (
-  _name: "ProblemsExercisesProblemBefore1",
-  _subselector: (' [data-type="problem"]::before'),
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-weight: bold,
-    letter-spacing: 0.1rem,
-    text-transform: uppercase,
-    content: '"Problem"',
-  ),
+$Exercise__Solution__Container: (
+    _name: "ExerciseSolutionContainer",
+    _subselector: " > .os-solution-container",
+    _properties:(
+      display: table-cell,
+      width: auto,
+    )
 );
 
-$Exercise--ProblemsExercises__Problem--Before2: (
-  _name: "ProblemsExercisesProblemBefore2",
-  _subselector: (' .problem::before'),
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-weight: bold,
-    letter-spacing: 0.1rem,
-    text-transform: uppercase,
-    content: '"Problem"',
-  ),
-);
-
-$Exercise--ProblemsExercises__Solution--Before1: (
-  _name: "ProblemsExercisesSolutionBefore1",
-  _subselector: (' [data-type="solution"]::before'),
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-weight: bold,
-    letter-spacing: 0.1rem,
-    text-transform: uppercase,
-    content: '"Solution"',
-  ),
-);
-
-$Exercise--ProblemsExercises__Solution--Before2: (
-  _name: "ProblemsExercisesSolutionBefore2",
-  _subselector: (' .solution::before'),
-  _properties: (
-    color: enum('ValueSet:::REQUIRED'),
-    font-weight: bold,
-    letter-spacing: 0.1rem,
-    text-transform: uppercase,
-    content: '"Solution"',
-  ),
+$Exercise__Solution__Container--WithFirstElement: (
+    _name: "ExerciseSolutionContainerWithFirstElement",
+    _subselector: " > .os-solution-container.has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+      width: auto,
+    )
 );
 
 $Exercise__ProblemContainer: empty_wrapper(ExerciseProblemContainer, ' .os-problem-container');
@@ -156,7 +222,7 @@ $Exercise--Inlined__Child--OrderedList: (
   _name: "ExerciseInlinedChildOrderedList",
   _subselector: (' > ol'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
 
@@ -164,7 +230,7 @@ $Exercise--Inlined__Child--UnOrderedList: (
   _name: "ExerciseInlinedChildUnOrderedList",
   _subselector: (' > ul'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
 
@@ -172,10 +238,9 @@ $Exercise--Inlined__Child--Note: (
   _name: "ExerciseInlinedChildNote",
   _subselector: (' > [data-type="note"]'),
   _properties: (
-    display: inline,
+    margin-top: 0,
   ),
 );
-
 
 $Exercise--Inlined__Child--Figure: (
   _name: "ExerciseInlinedChildFigure",
@@ -183,4 +248,81 @@ $Exercise--Inlined__Child--Figure: (
   _properties: (
     margin: '3rem 0',
   ),
+);
+
+$Exercise--Inlined__Child--Img: (
+  _name: "ExerciseInlinedChildImg",
+  _subselector: (' img'),
+  _properties: (
+    display: block,
+  ),
+);
+
+$Exercise__ProblemSolution__Prefix:(
+  _name: "ProblemSolutionPrefix",
+  _subselector: " > .os-prefix",
+  _properties:(
+    display: flex,
+    flex-direction: column,
+    margin-right: 0.5em,
+    text-decoration: none,
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+  )
+);
+
+$Exercise__ProblemSolution__Prefix__Label:(
+  _name: "ProblemSolutionPrefixLabel",
+  _subselector: " > .os-label",
+  _properties:(
+    text-transform: uppercase,
+  )
+);
+
+$Exercise__ProblemSolution__Prefix__Number: (
+  _name: "ProblemSolutionPrefixNumber",
+  _subselector: ' > .os-number',
+  _properties: (
+    align-self: flex-end,
+  )
+);
+
+$InjectedExercise__ProblemSolution__Letter: (
+  _name: "ProblemSolutionLetter",
+  _subselector: ' > .problem-letter',
+  _properties: (
+    display: table-cell,
+    text-decoration: none,
+    color: enum('ValueSet:::REQUIRED'),
+    font-weight: bold,
+    width: 16px,
+  )
+);
+
+// ToDo: add to name --FromMultipartQuestion
+// There is separate component for regular Injected Exercises
+$InjectedExercise__Question__Stem: (
+    _name: "QuestionStem",
+    _subselector: " > [data-type='question-stem']",
+    _properties:(
+        display: table-cell,
+    )
+);
+
+$InjectedExercise__Question__Stem--WithFirstElement: (
+    _name: "QuestionStemWithFirstElement",
+    _subselector: " > [data-type='question-stem'].has-first-element",
+    _properties:(
+      display: table-cell,
+      vertical-align: bottom,
+    )
+);
+
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: inline-table,
+    margin-right: 0.5em,
+  )
 );

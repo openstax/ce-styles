@@ -46,6 +46,12 @@
       string-set: eob-title content();
     }
   }
+
+  div[data-type="composite-chapter"].os-eob > h1[data-type="document-title"] {
+    .os-text {
+      string-set: eob-title content();
+    }
+  }
   
   //Page definitions
   nav#toc {

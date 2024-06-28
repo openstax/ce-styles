@@ -16,20 +16,6 @@ $bandColor: #093D4C;
 //Settings
 
 @include add_settings((
-  ChapterIntro: (
-    _selectors: (".introduction"),
-    'SplashFigureBg:::background-color': (_ref: "colorMap:::splashFigureBgColor"),
-    'H2IntroTextHeaderIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-introduction.svg")) no-repeat top left,
-    'H2IntroTextHeader:::color': (_ref: "colorMap:::introContentHeaderColor"),
-    'SplashMediaOverlay:::background-color': (_ref: "colorMap:::splashImageOverlayColor"),
-  ),
-  ChapterOutline: (
-    _selectors: (".os-chapter-outline"),
-    'ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
-  ),
-));
-
-@include add_settings((
   Checkpoint: (
     _selectors: (".checkpoint"),
     'Container:::display': table,
@@ -116,6 +102,18 @@ $bandColor: #093D4C;
   AnswerKeyExercisesSolutionLists: (
     _selectors: ('.os-eob.os-solutions-container [data-type="solution"]'),
   ),
+  KeyEquations:(
+      _selectors: (".os-key-equations-container"),
+        'TableData:::font-family': (_ref: "typography:::baseFont"),
+        'TableData:::padding-top': table-v-spacing(1),
+        'TableData:::padding-bottom': table-v-spacing(1),
+        'TableData:::padding-left': table-h-spacing(1),
+        'TableData:::padding-right': table-h-spacing(1),
+        'TableData:::border-bottom-width': 0.09rem,
+        'TableData:::border-bottom-style': solid,
+        'TableData:::border-bottom-color': (_ref: "colorMap:::keyEquationsBorderColor"),
+        'TableData:::color': (_ref: "colorMap:::tableColor"),
+  ),
 ));
 
 @include add_settings((
@@ -131,11 +129,11 @@ $bandColor: #093D4C;
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
 // Chapter Intro
-@include use('ChapterIntro', 'corn:::ChapterIntroShape');
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
 
 //Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
@@ -152,18 +150,14 @@ $bandColor: #093D4C;
 //Lists
 @include use('PageLists', 'corn:::PageListsShape');
 @include use('CompositePageLists', 'corn:::CompositePageListsShape');
+@include use('StepwiseLists', 'corn:::StepwiseListsShape');
+@include use('EosLists', 'corn:::EosListsShape');
 @include use('NotesLists', 'corn:::NotesListsShape');
-@include use('SectionExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('SectionInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCExercisesProblemLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('EOCInjectedExercisesQuestionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('AnswerKeyExercisesSolutionLists', 'corn:::ExercisesInMultiColumnListsShape');
-@include use('ExercisesProblemLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('InjectedQuestionLists', 'corn:::ExercisesInOneColumnListsShape');
-@include use('ExercisesSolutionLists', 'corn:::ExercisesInOneColumnListsShape');
+@include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 
 //Titles
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('CompositeChapterTitles', 'corn:::CompositeChapterTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
@@ -187,7 +181,9 @@ $bandColor: #093D4C;
 @include use('UnnumberedUnstyledTable', 'corn:::UnnumberedUnstyledTableShape');
 @include use('DataTable', 'corn:::BasicTableShape');
 @include use('TableFromMultiColumnExercises', 'corn:::TableFromExercisesShape');
+@include use('TableFromExercisesLists', 'corn:::TableFromExercisesListsShape');
 @include use('TableAfterExercisePara', 'corn:::TableTopSpacingShape');
+@include use('TableFromAnswerKey', 'corn:::TableFromAnswerKeyShape');
 
 //EoC
 @include use('KeyTerms','corn:::KeyTermsShape');
@@ -199,11 +195,15 @@ $bandColor: #093D4C;
 //Section Exercises
 @include use('ThreeColumnsModuleExercises', 'corn:::ExercisesModuleShape');
 
+//Key Equations spacing
+@include use('KeyEquations','corn:::ModuleWithUnstyledTableShape');
+
 // EoC Exercises
 @include use('ReviewExercises', 'corn:::ExercisesModuleShape');
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
+@include use('AnswerKeyOneColumnEobSolution', 'corn:::AnswerKeySolutionShape');
 @include use('Index', 'corn:::IndexShape');
 
 

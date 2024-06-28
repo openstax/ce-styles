@@ -12,6 +12,44 @@ $Caption__Container--Figure: (
   )
 );
 
+$Caption__Title__Container--MechanismFigure: (
+  _name: "CaptionTitleContainerMechanismFigure",
+  _subselector: ' .os-caption-title-container',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    background-color: enum('ValueSet:::REQUIRED'),
+    padding: 1rem,
+    font-size: scaled_size(1.2rem),
+    line-height: scaled_size(1.7rem),
+  )
+);
+
+$Caption__Text__Container--MechanismFigure: (
+  _name: "CaptionTextContainerMechanismFigure",
+  _subselector: ' .os-caption-text-container',
+  _properties: (
+    border-right-width: 2px,
+    border-right-style: solid,
+    border-right-color: enum('ValueSet:::REQUIRED'),
+    border-left-width: 2px,
+    border-left-style: solid,
+    border-left-color: enum('ValueSet:::REQUIRED'),
+    padding: 1rem,
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: scaled_size(1.2rem),
+    line-height: scaled_size(1.7rem),
+  )
+);
+
+$Caption--MechanismFigure--ScaledDown:(
+  _name: "CaptionMechanismFigureScaledDown",
+  _subselector: '.scaled-down',
+  _properties: (
+    width: 60%,
+    margin: auto,
+  )
+);
+
 $Caption__Title--Figure: (
   _name: "CaptionTitleFigure",
   _subselector: " > .os-title",

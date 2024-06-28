@@ -1,0 +1,147 @@
+@use 'lib/cardboard/cardboard';
+
+$PagesWithBands: (
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+);
+
+$bandColor: #24739E;
+
+@import 'framework/framework';
+@import '../../design-settings/cardboard/_design.scss';
+@import '../../design-settings/cardboard/_settings.scss';
+@import '../../designs/cardboard/pdf/folio';
+
+// Settings
+
+@include add_settings ((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    "MediaSplashBar:::background-color": (_ref: "colorMap:::chapterTitleBgColor"),
+    "MediaSplashBar:::border-top-color": (_ref: "colorMap:::chapterTitleBorderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterTitles: (
+  _selectors: ('[data-type="chapter"]'),
+  'H1ChapterIntroNumbered:::color': (_ref: 'colorMap:::chapterTitleColor'),
+  'H1ChapterIntroTitleNumber:::color': (_ref: 'colorMap:::chapterTitleNumberColor'),
+  'H1ChapterIntroIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-introskyline.svg")) no-repeat top left,
+  'H1ChapterIntroIcon:::bottom': 0.1rem,
+  'H1ChapterIntroIcon:::left': 0rem,
+  )
+));
+
+@include add_settings((
+  ConceptsInPracticeExercises: (
+    _selectors: ('.learning-questions'),
+    'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+    ),
+));
+
+@include add_settings((
+  Checkpoint: (
+    _selectors: (".guided-slides"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption5HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'SolutionTitleLabel:::font-weight': bold,
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption5BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+  TryIt: (
+    _selectors: (".practice-program"),
+    'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption4HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption4HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
+  ConceptsInPractice: (
+    _selectors: (".learning-questions"),
+    'Title:::background-color': (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption2HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+  NoClassNote:(
+    _selectors:('[data-type="note"]:not([class])'),
+    'Title:::background-color': (_ref: "colorMap:::noteOption3HeaderBackgroundColor"),
+    'Title:::color': (_ref: "colorMap:::noteOption3HeaderColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::noteOption3BodyBackgroundColor"),
+    'Subtitle:::color': (_ref: "colorMap:::noteSubtitleColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+    'ProblemSolutionTitle:::font-family': (_ref: "typography:::baseFont"),
+  ),
+));
+
+@include use('BookRoot', "common:::BookRoot");
+@include use('Toc', 'cardboard:::NoUnitToc');
+@include use('LearningObjectives', 'cardboard:::LearningObjectivesShape');
+@include use('ExampleGreen', 'cardboard:::ExampleShape');
+
+// Chapter Intro
+@include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
+
+// Figures
+@include use('FigureSplash','cardboard:::FigureSplashShape');
+@include use('Figure','cardboard:::FigureShape');
+
+//Titles
+@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
+@include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
+@include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
+
+//Tables
+@include use('DefaultTable', 'cardboard:::TableWithBordersShape');
+@include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+
+//Notes
+@include use('Checkpoint', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('TryIt', 'cardboard:::BoxedNoteWithBordersSubtitleShape');
+@include use('ConceptsInPractice', 'cardboard:::BoxedNoteWithSubtitleShape');
+@include use('NoClassNote', 'cardboard:::BoxedNoteWithSubtitleShape');
+
+//Exercises
+@include use('ConceptsInPracticeExercises', 'cardboard:::ExercisesModuleShape');
+
+//Lists
+@include use('PageLists', 'cardboard:::PageListsShape');
+@include use('NotesLists', 'cardboard:::NotesListsShape');
+@include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
+
+// Code Snippets
+@include cardboard.hljs-colors();
+@include use('CodeSnippet', 'common:::CodeSnippetLineNumbersShape');
+
+//Eob
+@include use('AnswerKey', 'cardboard:::AnswerKeyShape');
+@include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
+@include use('Index', 'cardboard:::IndexShape');

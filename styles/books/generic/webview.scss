@@ -1,3 +1,4 @@
+@use 'lib/webview/webview';
 @import 'framework/framework';
 @import '../../design-settings/webview/settings';
 @import '../../design-settings/webview/design';
@@ -35,6 +36,11 @@
     FigureImage: (
         _selectors: (''),
         'CaptionContainerFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTitleContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTitleContainerMechanismFigure:::background-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
+        'CaptionTextContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTextContainerMechanismFigure:::border-right-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
+        'CaptionTextContainerMechanismFigure:::border-left-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
     ),
 ));
 
@@ -51,6 +57,7 @@
         _selectors: (''),
         'UnorderedList:::color': (_ref: 'colorMap:::baseColor'),
         'OrderedList:::color': (_ref: 'colorMap:::baseColor'),
+        'NotesQuestionSectionList:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
     ),
 ));
 
@@ -98,7 +105,7 @@
 //Notes
 @include add_settings((
     Note: (
-        _selectors: ('[data-type="note"]', '.note', '[data-type="example"]', '.example'),
+        _selectors: ('[data-type="note"]:not(.reference)', '.note', '[data-type="example"]', '.example'),
         'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
         'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
         'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
@@ -119,7 +126,7 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
+        _selectors: ('[data-type="exercise"]'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
@@ -131,6 +138,12 @@
 ));
 
 @include add_settings((
+    InjectedExercise: (
+        _selectors: ('[data-type="injected-exercise"]'),
+    ),
+));
+
+@include add_settings((
     ExerciseInAppendix: (
         _selectors: ('.appendix [data-type="exercise"]'),
     ),
@@ -138,7 +151,7 @@
 
 @include add_settings((
     ExerciseInlined: (
-        _selectors: ('.os-eoc', '.os-eob', '.section-exercises'),
+        _selectors: ('.os-number ~'),
     ),
 ));
 
@@ -152,6 +165,7 @@
         'TableData:::border-color': (_ref: 'colorMap:::TableBorder'),
         'TableMultipleBody:::border-color': (_ref: 'colorMap:::TableBorder'),
         'TableNestedTable:::background-color': (_ref: 'colorMap:::bodyBackground'),
+        'TableRowAlternateShading:::background-color': (_ref: 'colorMap:::NoteBackground'),
     ),
 ));
 
@@ -160,32 +174,6 @@
     Blockquote: (
         _selectors: ('blockquote'),
         'Blockquote:::border-left-color': (_ref: 'colorMap:::BlockquoteBorder'),
-    ),
-));
-
-//Code
-@include add_settings((
-    Code: (
-        _selectors: ('[data-type="code"]'),
-        'Code:::font-family': (_ref: 'typography:::fontOption2'),
-    ),
-    BlueCode: (
-        _selectors: ('[data-type="code"].blue-code'),
-        'CodeWithColor:::color': (_ref: 'colorMap:::BlueCode'),
-    ),
-    RedCode: (
-        _selectors: ('[data-type="code"].red-code'),
-        'CodeWithColor:::color': (_ref: 'colorMap:::RedCode'),
-    ),
-));
-
-@include add_settings((
-    CodeBlock: (
-        _selectors: ('pre[data-type="code"]'),
-    ),
-    CenteredCodeBlock: (
-        _selectors: ('pre[data-type="code"].centered-code'),
-        'CodeBlockCentered:::color': (_ref: 'colorMap:::baseColor'),
     ),
 ));
 
@@ -217,7 +205,11 @@
 //References
 @include add_settings((
     References: (
-        _selectors: (".eob", ".eoc"),
+        _selectors: (".os-eob", ".os-eoc"),
+        'ChapterAreaReference:::color': (_ref: 'colorMap:::baseColor'),
+    ),
+    ReferencesCiteLink: (
+        _selectors: ('a[data-type="cite"]'),
     ),
 ));
 
@@ -241,8 +233,11 @@
 
 //Equation
 @include add_settings((
-    Equation: (
-        _selectors: ('.equation', '[data-type="equation"]'),
+    EquationUnnumbered: (
+        _selectors: ('[data-type="equation"].unnumbered'),
+    ),
+    EquationNumbered: (
+        _selectors: ('[data-type="equation"]:not(.unnumbered)'),
         'EquationNumber:::border-color': (_ref: 'colorMap:::EquationNumberBorder'),
     ),
 ));
@@ -266,57 +261,202 @@
     ),
 ));
 
-//Titles
+@include add_settings((
+  NonScreenElements: (
+      _selectors: ("[data-type='switch'] > :not([data-media~='screen'])"),
+  )
+));
+
+@include add_settings((
+  Index: (
+      _selectors: (".os-index-container"),
+  )
+));
+
+@include add_settings((
+  WorksCited: (
+      _selectors: ("section.works-cited"),
+  ),
+  SectionWorksCited: (
+      _selectors: ("section.section-workscited"),
+  ),
+  FurtherReading: (
+      _selectors: ("section.further-reading"),
+  )
+));
+
+@include add_settings((
+    RedColoredText: (
+        _selectors: ('*:not(.os-term) > .red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::RedTextColor'),
+    ),
+    CyanColoredText: (
+        _selectors: ('*:not(.os-term) > .cyan-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::CyanTextColor'),
+    ),
+    MagentaColoredText: (
+        _selectors: ('*:not(.os-term) > .magenta-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::MagentaTextColor'),
+    ),
+    GreenColoredText: (
+        _selectors: ('*:not(.os-term) > .green-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::GreenTextColor'),
+    ),
+    GrayColoredText: (
+        _selectors: ('*:not(.os-term) > .gray-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::GrayTextColor'),
+    ),
+    YellowColoredText: (
+        _selectors: ('*:not(.os-term) > .yellow-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::YellowTextColor'),
+    ),
+    PurpleColoredText: (
+        _selectors: ('*:not(.os-term) > .purple-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::PurpleTextColor'),
+    ),
+    BlueColoredText: (
+        _selectors: ('.blue-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::BlueTextColor'),
+    ),
+));
+
+@include add_settings((
+    FolioParagraphs: (
+        _selectors: (
+            '.folio-chapter', '.folio-module', '.folio-eoc-left', '.folio-eoc-right',
+            '.folio-appendix-left', '.folio-appendix-right', '.folio-eob-left', '.folio-eob-right'
+        ),
+    )
+));
+
+@include add_settings((
+    QuestionWithProblemPrefix: (
+        _selectors: ('[data-type="exercise-question"]'),
+        'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+    MultipartQuestionExercises: (
+        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+));
+
+@include add_settings((
+    ColumnsFromTable: (
+        _selectors: (".os-table"),
+    )
+));
+
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container", ".os-reference-container"),
+  ),
+));
+
+// Titles
 @include use('PageTitles', 'webview:::PageTitlesShape');
 @include use('EocPageTitles', 'webview:::EocPageTitlesShape');
 @include use('EobPageTitles', 'webview:::EobPageTitlesShape');
-// //Figures
+// Figures
 @include use('FigureImage', 'webview:::FigureImageShape');
-//Terms
+
+// Terms
 @include use('Terms', 'webview:::TermsShape');
-//Lists
+// Lists
 @include use('Lists', 'webview:::ListsShape');
 @include use('StepwiseLists', 'webview:::StepwiseListsShape');
 @include use('ListStructure', 'webview:::ListStructureShape');
-//Learning objectives
+// Learning objectives
 @include use('LearningObjectives', 'webview:::LearningObjectivesShape');
 @include use('AbstractClass', 'webview:::AbstractClassShape');
-//Links
+// Links
 @include use('Link', 'webview:::LinkShape');
-//Notes
+// Notes
 @include use('Note', 'webview:::NoteShape');
-//Exercises
+// Exercises
 @include use('Exercise', 'webview:::ExerciseShape');
+@include use('InjectedExercise', 'webview:::InjectedExerciseShape');
 @include use('ExerciseInAppendix', 'webview:::ExerciseInAppendixShape');
 @include use('ExerciseInlined', 'webview:::ExerciseInlined');
-//Tables
+@include use('QuestionWithProblemPrefix','webview:::ExercisesQuestionWithProblemPrefixShape');
+@include use('MultipartQuestionExercises','webview:::ExercisesMultipartQuestionShape');
+// Tables
 @include use('Table', 'webview:::TableShape');
-//Blockquote
+// Blockquote
 @include use('Blockquote', 'webview:::BlockquoteShape');
-//Code
-@include use('Code', 'webview:::CodeShape');
-@include use('RedCode', 'webview:::CodeWithColorShape');
-@include use('BlueCode', 'webview:::CodeWithColorShape');
-@include use('CodeBlock', 'webview:::CodeBlockShape');
-@include use('CenteredCodeBlock', 'webview:::CodeBlockCenteredShape');
-//Functions
+
+// Code Snippets
+@include webview.hljs-colors();
+@include webview.green-code();
+@include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
+
+// Functions
 @include use('Function', 'webview:::FunctionShape');
 @include use('PrimaryFunction', 'webview:::FunctionPrimaryShape');
-//Keyterm
+// Keyterm
 @include use('KeyTerm', 'webview:::KeyTermShape');
-//Chapter intro
+// Chapter intro
 @include use('ChapterIntro', 'webview:::ChapterIntroShape');
-//References
+// References
 @include use('References', 'webview:::ReferencesShape');
-//Corq skills
+@include use('ReferencesCiteLink', 'webview:::ReferencesCiteLinkShape');
+// Corq skills
 @include use('CoreqSkills', 'webview:::CoreqSkillsShape');
-//Footnote
+// Footnote
 @include use('Footnote', 'webview:::FootnoteShape');
-//Equation
-@include use('Equation', 'webview:::EquationShape');
-//Annotations
+// Equation
+@include use('EquationUnnumbered', 'webview:::EquationUnnumberedShape');
+@include use('EquationNumbered', 'webview:::EquationNumberedShape');
+// Annotations
 @include use('AnnotationText', 'webview:::AnnotationShape');
 @include use('PublicDomainText', 'webview:::AnnotationWithBorderShape');
 @include use('StudentSampleText', 'webview:::AnnotationWithBorderShape');
-//Hide teacher material
+// Hide teacher material
 @include use('TeacherMaterial', 'common:::Hidden');
+// Hide Iframe links
+@include use('NonScreenElements', 'common:::Hidden');
+@include use('FolioParagraphs', 'common:::Hidden');
+
+// Colored Text
+@include use('RedColoredText', 'webview:::ColoredText');
+@include use('CyanColoredText', 'webview:::ColoredText');
+@include use('MagentaColoredText', 'webview:::ColoredText');
+@include use('GreenColoredText', 'webview:::ColoredText');
+@include use('GrayColoredText', 'webview:::ColoredText');
+@include use('YellowColoredText', 'webview:::ColoredText');
+@include use('PurpleColoredText', 'webview:::ColoredText');
+@include use('BlueColoredText', 'webview:::ColoredText');
+
+//Columns
+@include use('ColumnsFromTable', 'webview:::ColumnsShape');
+
+// Modules
+@include use('WorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('SectionWorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('ModuleWithIndentation', 'webview:::ModuleWithIndentationShape');
+
+// EOB
+@include use('Index', 'webview:::IndexShape');
+@include webview.eob-answer-key();
+@include webview.eoc-answer-key();
+
+// Icons
+$icons: (
+  "linguistic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg"),
+  "culture-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg"),
+  "visual-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg"),
+  "speech-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg"),
+  "auditory-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg"),
+  "kinesthetic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg"),
+  "dreaming-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")
+);
+
+@each $class, $svg in $icons {
+  @include add_settings((
+    Icon: (
+      _selectors: 'span.#{$class}',
+      'InlineIcon:::background-image': url($svg),
+    )
+  ));
+  @include use('Icon', 'webview:::InlineIconShape');
+}

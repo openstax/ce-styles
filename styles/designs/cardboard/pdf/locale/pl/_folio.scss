@@ -13,7 +13,7 @@
       string-set: module-number string(chapter-number);
       
       .os-text {
-        string-set: module-title "Introduction";
+        string-set: module-title content();
       }
     }
     [data-type="page"]:not(.introduction) > h2[data-type="document-title"] {
@@ -91,36 +91,20 @@
     }
   }
   
-  //Numbered Pages
-  
   //Chapter Intro
   
   @page chapter:nth(1):right {
     @top-right-corner {
-      font-size: font-scale(-1);
-      font-family: "Noto Sans";
-      color: white;
-      background: transparent;
-      z-index: 1;
-      content: "\00a0\00a0\00a0\00a0\00a0" counter(page);
+      content: none;
     }
     @top-middle {
-      background: transparent;
-      z-index: 1;
-      content: " ";
+      content: none;
     }
     @top-right {
-        font-size: font-scale(-1);
-        font-family: "Noto Sans";
-        color: white;
-        background: transparent;
-        z-index: 1;
-        content: string(module-number) " • " string(module-title) "\00a0\00a0\00a0\00a0\00a0";
+      content: none;
     }
     @top-left-corner {
-      background: transparent;
-      z-index: 1;
-      content: " ";
+      content: none;
     }
   } 
   
@@ -194,7 +178,7 @@
     @include folio($prefaceContent, $prefaceContent, $accessContent, preface );
     @include folioWithBand($eocContent, $eocContent, $accessContent, eoc);
     @include folioWithBand($appendixContent, $appendixContent, $accessContent, appendix);
-    @include folioWithBand($eobContent, $eobContent, $accessContent eob);
+    @include folioWithBand($eobContent, $eobContent, $accessContent, eob);
     
     //Page margins
     @page {

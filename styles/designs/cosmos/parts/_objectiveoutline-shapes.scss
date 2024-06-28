@@ -1,0 +1,90 @@
+@import 'objectiveoutline-components';
+@import 'lists/lists-components';
+@import 'titles-components';
+
+@include create_shape('cosmos:::LearningObjectivesShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        $UnorderedList--FirstLevel,
+      ),
+    ))
+  ),
+));
+
+@include create_shape('cosmos:::LearningObjectivesColoredDotShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        map-merge($UnorderedList--FirstLevel, (
+          _components: (
+            map-merge($ListItem--Objectives, (
+              _components: (
+                $ListItem--Objectives__Dot,
+              ),
+            ))
+          ),
+        ))
+      ),
+    ))
+  ),
+));
+
+@include create_shape('cosmos:::LearningObjectivesNumberedShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        $Objectives__Paragraph,
+        map-merge($UnorderedList--UnstyledFromObjectives, (
+          _components: (
+            map-merge($ListItem--Objectives--Flex, (
+              _components: (
+                $ListItem--Objectives__NumberToken,
+              )
+            )),
+          )
+        )),
+      )
+    )),
+  )
+));
+
+@include create_shape('cosmos:::ObjectivesNoteShape', (
+  _components: (
+    map-merge($Objectives__Container, (
+      _components: (
+        $H3--Objectives,
+        map-merge($Objectives__NoteBody, (
+          _components: (
+            $Objectives__Paragraph,
+            $UnorderedList--FirstLevel,
+          )
+        )),
+      )
+    )),
+  )
+));
+
+@include create_shape('cosmos:::ChapterOutlineShape', (
+    _components: (
+        map-merge($ChapterOutline__Container, (
+            _components: (
+                $H3--ChapterOutline,
+                map-merge($ChapterObjective__Container, (
+                    _components: (
+                        map-merge($ChapterObjective__Link,(
+                            _components: (
+                                $ChapterObjective__Text,
+                            ),
+                        )),
+                    )
+                )),
+            )
+        )),
+    )
+));

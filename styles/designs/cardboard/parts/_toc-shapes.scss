@@ -77,11 +77,7 @@
                         map-merge($Toc__Unit, (
                             _components: (
                                 $Toc__Unit__Icon,
-                                map-merge($Toc__Unit__Link,(
-                                    _components: (
-                                        $Toc__Link--TopLevel__Page--Unit,
-                                    )
-                                )),
+                                $Toc__Unit__Link,
                                 map-merge($Toc__List--TopLevel--Unit, (
                                     _components: (
                                         $Toc__Chapter--OddItem,
@@ -110,6 +106,98 @@
                                                                 )),
                                                             )
                                                         )),
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                        map-merge($Toc__ListItem--UnitPage, (
+                                            _components: (
+                                                map-merge($Toc__Link--MiddleLevel, (
+                                                    _components: (
+                                                        $Toc__Link--MiddleLevel__Number--UnitPage,
+                                                        $Toc__Link--MiddleLevel__Page
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                    )
+                                )),
+                            )
+                        )),
+                        $Toc__Chapter--Composite__List, //Answer Key
+                    )
+                )),
+            )
+        )),
+    )
+));
+
+@include create_shape('cardboard:::UnitWithDotsToc', (
+    _components: (
+        map-merge($Toc__Container, (
+            _components: (
+                map-merge($Toc__Title--Contents, (
+                    _components: (
+                        $Toc__Title--Contents__Icon,
+                    )
+                )),
+                map-merge($Toc__List--TopLevel, (
+                    _components: (
+                        map-merge($Toc__List--TopLevel__Item--Unit, (
+                            _components: (
+                                map-merge($Toc__Link--TopLevel--Preface, (
+                                    _components: (
+                                        $Toc__Link--TopLevel__Page--Dots--Preface,
+                                    )
+                                )),
+                                map-merge($Toc__Link--TopLevel, (
+                                    _components: (
+                                        $Toc__Link--TopLevel__Page--Dots,
+                                    )
+                                )),
+                            )
+                        )),
+                        map-merge($Toc__Unit, (
+                            _components: (
+                                $Toc__Unit__Icon,
+                                $Toc__Unit__Link,
+                                map-merge($Toc__List--TopLevel--Unit, (
+                                    _components: (
+                                        $Toc__Chapter--OddItem,
+                                        map-merge($Toc__List--TopLevel__Item, (
+                                            _components: (
+                                                map-merge($Toc__Link--TopLevel, (
+                                                    _components: (
+                                                        $Toc__Link--TopLevel__Page--Dots,
+                                                        map-merge($Toc__Number, (
+                                                            _components: (
+                                                                $Toc__PartText,
+                                                            )
+                                                        )),
+                                                    )
+                                                )),
+                                                map-merge($Toc__List--MiddleLevel--WithoutBorder, (
+                                                    _components: (
+                                                        map-merge($Toc__List--MiddleLevel__Item--Wrapper, (
+                                                            _components: (
+                                                                map-merge($Toc__Link--MiddleLevel, (
+                                                                    _components: (
+                                                                        $Toc__Link--MiddleLevel__Number--Blue,
+                                                                        $Toc__Link--MiddleLevel__Page--Dots,
+                                                                    )
+                                                                )),
+                                                            )
+                                                        )),
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                        map-merge($Toc__ListItem--UnitPage--Dots, (
+                                            _components: (
+                                                map-merge($Toc__Link--MiddleLevel, (
+                                                    _components: (
+                                                        $Toc__Link--MiddleLevel__Number--UnitPage,
+                                                        $Toc__Link--MiddleLevel__Page--Dots,
                                                     )
                                                 )),
                                             )

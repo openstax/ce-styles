@@ -4,11 +4,15 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:wght@200;400;500,700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-nav#toc > ol > .os-toc-unit > a > .os-text,
-nav#toc > ol > .os-toc-unit > a,
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
+}
+
+nav#toc > ol > .os-toc-unit > a > .os-text,
+nav#toc > ol > .os-toc-unit > a {
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 nav#toc {
@@ -17,6 +21,11 @@ nav#toc {
 
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > ol.os-chapter,
 nav#toc > ol > .os-toc-chapter > ol.os-chapter {
+  page-break-before: avoid;
+}
+
+nav#toc ol.os-chapter > li:last-child,
+nav#toc > ol > li:last-child {
   page-break-before: avoid;
 }
 
@@ -92,11 +101,7 @@ p.has-noteref {
   page-break-after: avoid;
 }
 
-.os-eoc > section > [data-type=exercise] {
-  page-break-inside: avoid;
-}
-
-.os-eos > section.section-exercises > section > [data-type=exercise] {
+.os-eos > section [data-type=injected-exercise] > [data-type=exercise-question] > .os-prefix {
   page-break-inside: avoid;
 }
 
@@ -114,6 +119,14 @@ div.handbook {
 
 .os-caption-container {
   page-break-before: avoid;
+}
+
+.os-caption-title-container {
+  page-break-after: avoid;
+}
+
+.os-caption-text-container {
+  page-break-after: avoid;
 }
 
 [data-type=equation] {
@@ -137,7 +150,7 @@ div.handbook {
   box-sizing: border-box;
 }
 
-[data-type=composite-chapter] p, [data-type=composite-chapter] section, [data-type=composite-chapter] table, [data-type=composite-chapter] ul, [data-type=composite-chapter] ol, [data-type=composite-chapter] li, [data-type=composite-chapter] dl, [data-type=composite-chapter] h1, [data-type=composite-chapter] h2, [data-type=composite-chapter] h3, [data-type=composite-chapter] h4, [data-type=composite-chapter] h5,
+[data-type=composite-chapter] p, [data-type=composite-chapter] section, [data-type=composite-chapter] table, [data-type=composite-chapter] ul, [data-type=composite-chapter] ol, [data-type=composite-chapter] li, [data-type=composite-chapter] dl, [data-type=composite-chapter] h1, [data-type=composite-chapter] h2, [data-type=composite-chapter] h3, [data-type=composite-chapter] h4, [data-type=composite-chapter] h5, [data-type=composite-chapter] h6,
 [data-type=page] p,
 [data-type=page] section,
 [data-type=page] table,
@@ -150,6 +163,7 @@ div.handbook {
 [data-type=page] h3,
 [data-type=page] h4,
 [data-type=page] h5,
+[data-type=page] h6,
 [data-type=composite-page] p,
 [data-type=composite-page] section,
 [data-type=composite-page] table,
@@ -161,7 +175,8 @@ div.handbook {
 [data-type=composite-page] h2,
 [data-type=composite-page] h3,
 [data-type=composite-page] h4,
-[data-type=composite-page] h5 {
+[data-type=composite-page] h5,
+[data-type=composite-page] h6 {
   margin: 0;
   padding: 0;
 }
@@ -196,7 +211,7 @@ math {
 }
 
 sub, sup {
-  font-size: 75%;
+  font-size: 83%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -223,11 +238,11 @@ a[href^=http]::after {
   overflow-wrap: break-word;
 }
 
-ol.os-stepwise {
+ul[data-labeled-item=true] {
   list-style-type: none;
 }
 
-ul[data-labeled-item=true] {
+ul[data-bullet-style=none] {
   list-style-type: none;
 }
 
@@ -243,17 +258,30 @@ ul[data-labeled-item=true] {
   font-style: italic;
 }
 
-h3, h4, h5 {
+h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
-  display: inline-block;
+  display: inline;
 }
 
-iframe {
+pre {
+  white-space: pre-line;
+}
+
+pre.inline-code {
+  display: inline;
+}
+
+code[data-display=block] {
+  display: block;
+  white-space: pre-wrap;
+}
+
+[data-type=switch] > :not([data-media~=print]) {
   display: none;
 }
 
@@ -264,6 +292,10 @@ blockquote {
 
 a {
   color: #027EB5;
+}
+
+.smallcaps {
+  font-size: 0.8333333333rem;
 }
 
 .os-eoc .os-glossary-container {
@@ -665,6 +697,10 @@ nav#toc {
   page: table-of-contents;
 }
 
+div[data-type=unit] {
+  page: unit;
+}
+
 div[data-type=page].preface {
   page: preface;
   counter-reset: page 1;
@@ -703,30 +739,16 @@ div[data-type=composite-page].os-eob {
 }
 @page chapter:nth(1):right {
   @top-right-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: white;
-    background: transparent;
-    z-index: 1;
-    content: "     " counter(page);
+    content: none;
   }
   @top-middle {
-    background: transparent;
-    z-index: 1;
-    content: " ";
+    content: none;
   }
   @top-right {
-    font-size: 0.8333333333rem;
-    font-family: "Noto Sans";
-    color: white;
-    background: transparent;
-    z-index: 1;
-    content: string(module-number) " • " string(module-title) "     ";
+    content: none;
   }
   @top-left-corner {
-    background: transparent;
-    z-index: 1;
-    content: " ";
+    content: none;
   }
 }
 [data-pdf-folio-preface-message][data-pdf-folio-access-message] {
@@ -802,6 +824,45 @@ div[data-type=composite-page].os-eob {
     color: #000000;
     font-weight: 700;
     content: string(preface-msg);
+  }
+  @top-right-corner {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "     " counter(page);
+  }
+}
+@page unit:left {
+  @top-left {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "";
+  }
+  @top-left-corner {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: counter(page) "     ";
+  }
+  @bottom-left {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: string(access-for-free-msg);
+  }
+}
+@page unit:right {
+  @top-right {
+    font-size: 0.8333333333rem;
+    font-family: "Noto Sans";
+    color: #000000;
+    font-weight: 700;
+    content: "";
   }
   @top-right-corner {
     font-size: 0.8333333333rem;
@@ -931,7 +992,7 @@ aside[role=doc-footnote] [data-type=footnote-number] {
 
 a[role=doc-noteref] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 75%;
+  font-size: 83%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -975,7 +1036,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) {
   display: block;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -983,7 +1044,7 @@ nav#toc > ol > li:not(.os-toc-unit) {
   padding-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a {
   font-family: Noto Sans, StixGeneral;
   color: #24739E;
   font-size: 1.2rem;
@@ -996,13 +1057,13 @@ nav#toc > ol > li:not(.os-toc-unit) > a {
   margin-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number {
   font-size: 1rem;
   line-height: 1rem;
   border-style: solid;
@@ -1019,11 +1080,11 @@ nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
   vertical-align: middle;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number > .os-part-text {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number > .os-part-text {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol {
   list-style: none;
   border-left-style: solid;
   border-left-width: 0.25rem;
@@ -1034,26 +1095,26 @@ nav#toc > ol > li:not(.os-toc-unit) > ol {
   padding-left: 8px;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li.os-toc-composite-chapter > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li.os-toc-composite-chapter > ol {
   display: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li {
   display: block;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a {
   color: #000000;
   font-size: 1rem;
   line-height: 1.5rem;
   text-decoration: none;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a > .os-number {
   font-weight: bold;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) > ol > li > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
@@ -1092,101 +1153,6 @@ a[data-type=cite] {
   text-decoration: none;
 }
 
-.introduction > .os-figure.has-splash {
-  margin-bottom: 2rem;
-  margin-top: -1.15in;
-}
-
-.introduction > .os-figure.has-splash > figure.splash {
-  position: relative;
-  width: 8.75in;
-  transform: translate3d(-1in, 0, 0);
-  margin-left: -1.2rem;
-  padding-bottom: 0;
-  margin-bottom: 1.25rem;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] {
-  display: flex;
-  width: 8.75in;
-  border-left: none;
-  height: 4.3in;
-  position: relative;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media]::after {
-  width: 100%;
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 5.83rem;
-  background-color: #24739E;
-  border-top-width: 0.25rem;
-  border-top-style: solid;
-  border-top-color: #344456;
-  z-index: 1;
-}
-
-.introduction > .os-figure.has-splash > figure.splash > span[data-type=media] > img {
-  width: 8.75in;
-  height: 3.58in;
-  display: inline;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container {
-  margin-bottom: 0.7rem;
-  line-height: 1rem;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title-label {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-number {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-title {
-  font-family: Noto Sans, StixGeneral;
-  font-weight: bold;
-  font-size: 0.8333333333rem;
-  color: #000000;
-}
-
-.introduction > .os-figure.has-splash > .os-caption-container > .os-caption {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 0.8333333333rem;
-  color: #757474;
-}
-
-.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type {
-  font-size: 1.728rem;
-  margin-bottom: 0.7rem;
-  color: #344456;
-}
-
-.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type::before {
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuNzYiPjxkZWZzPgogIDxzdHlsZT4uY2xzLTEsLmNscy00e2ZpbGw6bm9uZTt9LmNscy0ye2NsaXAtcGF0aDp1cmwoI2NsaXAtcGF0aCk7fS5jbHMtM3tmaWxsOiMyODczOWU7fS5jbHMtNHtzdHJva2U6IzBkYzBkYztzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utd2lkdGg6MC43NXB4O30uY2xzLTV7ZmlsbDojMzY0NTU4O308L3N0eWxlPgoKICA8Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuNzYiLz48L2NsaXBQYXRoPjwvZGVmcz48dGl0bGU+Q0ggaW50cm88L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9IkNIX2ludHJvIiBkYXRhLW5hbWU9IkNIIGludHJvIj48ZyBjbGFzcz0iY2xzLTIiPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNC4zNyIgeT0iMTUuNjMiIHdpZHRoPSI0LjExIiBoZWlnaHQ9IjEuNjYiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05LjkzLDE0Ljg4bDQuOC03LjY0LDEuMTQuNzEtNC44LDcuNjRabTYuNy03LjEtMi4wOC0xLjNMOS4xNywxNS4wNWwyLjA4LDEuM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48cG9seWdvbiBjbGFzcz0iY2xzLTMiIHBvaW50cz0iMTEuMjQgMTYuMzUgOS4xNyAxNS4wNSA5LjIxIDE3LjI5IDExLjI0IDE2LjM1Ii8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNLjg2Ljg2SDIwLjE0djIySC44NlpNMCwyMy43NkgyMVYwSDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIi8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==") no-repeat top left;
-  background-size: contain;
-  height: 2.8rem;
-  width: 2.8rem;
-  display: inline-block;
-  content: '';
-}
-
-.introduction > .intro-body > .intro-text > h2[data-type=document-title]:first-of-type > .os-text {
-  display: inline-block;
-  margin-left: 0.7rem;
-}
-
 .os-chapter-outline {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
@@ -1194,13 +1160,12 @@ a[data-type=cite] {
   margin-bottom: 1.5rem;
 }
 
-.os-chapter-outline > .os-title {
+.os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-size: 1.728rem;
   line-height: 1.728rem;
   font-family: Roboto Condensed, StixGeneral;
   color: #344456;
-  font-weight: normal;
 }
 
 .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
@@ -1257,7 +1222,82 @@ a[data-type=cite] {
 .os-figure:not(.has-splash) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
+}
+
+.os-figure.has-splash {
+  margin-bottom: 1.4rem;
+  margin-top: -1.15in;
+}
+
+.os-figure.has-splash > figure.splash {
+  position: relative;
+  width: 8.75in;
+  transform: translate3d(-0.95in, 0, 0);
+  margin-left: -1.2rem;
+  margin-bottom: 0;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] {
+  display: flex;
+  width: 8.75in;
+  border-left: none;
+  height: 4.3in;
+  position: relative;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media]::after {
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 5.83rem;
+  background-color: #24739E;
+  border-top-width: 0.25rem;
+  border-top-style: solid;
+  border-top-color: #344456;
+  z-index: 1;
+}
+
+.os-figure.has-splash > figure.splash > span[data-type=media] > img {
+  width: 8.75in;
+  height: 3.58in;
+  display: inline;
+}
+
+.os-figure.has-splash > .os-caption-container {
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  line-height: 1rem;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title-label {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-number {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-title {
+  font-family: Noto Sans, StixGeneral;
+  font-weight: bold;
+  font-size: 0.8333333333rem;
+  color: #000000;
+}
+
+.os-figure.has-splash > .os-caption-container > .os-caption {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 0.8333333333rem;
+  color: #5C5C5C;
 }
 
 h4.os-subtitle + .os-figure:not(.has-splash) > figure {
@@ -1342,10 +1382,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   background-color: #0DC0DC;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
 }
 
@@ -1366,11 +1406,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:first-child:not(:only-child) {
-  border-left-style: none;
-  border-left-color: transparent;
-  border-left-width: 0rem;
+  border-left-style: solid;
+  border-left-color: #0DC0DC;
+  border-left-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
 }
 
@@ -1391,11 +1431,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:last-child:not(:only-child) {
-  border-right-style: none;
-  border-right-color: transparent;
-  border-right-width: 0rem;
+  border-right-style: solid;
+  border-right-color: #0DC0DC;
+  border-right-width: 0.08rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
 }
 
@@ -1453,10 +1493,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   background-color: #24739E;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
 }
 
@@ -1481,7 +1521,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-left-color: transparent;
   border-left-width: 0rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
 }
 
@@ -1506,7 +1546,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right-color: transparent;
   border-right-width: 0rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
 }
 
@@ -1562,7 +1602,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-style: solid;
-  border-color: #F2F2F2;
+  border-color: #757474;
   border-width: 0.08rem;
 }
 
@@ -1599,16 +1639,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-bottom-style: solid;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #757474;
   border-bottom-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
   border-top-style: solid;
-  border-top-color: #F2F2F2;
+  border-top-color: #757474;
   border-top-width: 0.08rem;
 }
 
@@ -1647,10 +1687,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   background-color: #24739E;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
   border-bottom-style: solid;
   border-bottom-color: #24739E;
@@ -1676,7 +1716,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-left-color: transparent;
   border-left-width: 0rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
 }
 
@@ -1685,7 +1725,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right-color: transparent;
   border-right-width: 0rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
 }
 
@@ -1702,16 +1742,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-bottom-style: solid;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #757474;
   border-bottom-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
   border-top-style: solid;
-  border-top-color: #F2F2F2;
+  border-top-color: #757474;
   border-top-width: 0.08rem;
 }
 
@@ -1752,16 +1792,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-bottom-style: solid;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #757474;
   border-bottom-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
   border-top-style: solid;
-  border-top-color: #F2F2F2;
+  border-top-color: #757474;
   border-top-width: 0.08rem;
 }
 
@@ -1802,16 +1842,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-bottom-style: solid;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #757474;
   border-bottom-width: 0.08rem;
   border-right-style: solid;
-  border-right-color: #F2F2F2;
+  border-right-color: #757474;
   border-right-width: 0.08rem;
   border-left-style: solid;
-  border-left-color: #F2F2F2;
+  border-left-color: #757474;
   border-left-width: 0.08rem;
   border-top-style: solid;
-  border-top-color: #F2F2F2;
+  border-top-color: #757474;
   border-top-width: 0.08rem;
 }
 
@@ -1871,7 +1911,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-table.os-timeline-table-container {
@@ -2034,7 +2074,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table.os-timeline-table-container > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-eoc .os-problem-container > p + .os-table {
@@ -2055,11 +2095,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   display: flex;
   color: #FFFFFF;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   position: relative;
   top: 26rem;
-  font-weight: normal;
   flex-direction: row;
   justify-content: flex-start;
   z-index: 2;
@@ -2094,6 +2133,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   position: relative;
   margin-left: 4rem;
   top: -2.5rem;
+  width: 5.5in;
 }
 
 [data-type=chapter] > h1 > .os-number {
@@ -2113,35 +2153,80 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.6rem;
 }
 
-[data-type=page]:not(.introduction).preface > h1 {
-  color: #24739E;
-  font-family: Roboto Condensed, StixGeneral;
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {
   font-size: 1.728rem;
-  line-height: 1.5rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
+  color: #344456;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 {
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type::before {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuNzYiPjxkZWZzPgogIDxzdHlsZT4uY2xzLTEsLmNscy00e2ZpbGw6bm9uZTt9LmNscy0ye2NsaXAtcGF0aDp1cmwoI2NsaXAtcGF0aCk7fS5jbHMtM3tmaWxsOiMyODczOWU7fS5jbHMtNHtzdHJva2U6IzBkYzBkYztzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utd2lkdGg6MC43NXB4O30uY2xzLTV7ZmlsbDojMzY0NTU4O308L3N0eWxlPgoKICA8Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuNzYiLz48L2NsaXBQYXRoPjwvZGVmcz48dGl0bGU+Q0ggaW50cm88L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGcgaWQ9IkNIX2ludHJvIiBkYXRhLW5hbWU9IkNIIGludHJvIj48ZyBjbGFzcz0iY2xzLTIiPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNC4zNyIgeT0iMTUuNjMiIHdpZHRoPSI0LjExIiBoZWlnaHQ9IjEuNjYiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05LjkzLDE0Ljg4bDQuOC03LjY0LDEuMTQuNzEtNC44LDcuNjRabTYuNy03LjEtMi4wOC0xLjNMOS4xNywxNS4wNWwyLjA4LDEuM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48cG9seWdvbiBjbGFzcz0iY2xzLTMiIHBvaW50cz0iMTEuMjQgMTYuMzUgOS4xNyAxNS4wNSA5LjIxIDE3LjI5IDExLjI0IDE2LjM1Ii8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNLjg2Ljg2SDIwLjE0djIySC44NlpNMCwyMy43NkgyMVYwSDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIi8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==") no-repeat top left;
+  background-size: contain;
+  height: 2.8rem;
+  width: 2.8rem;
+  display: inline-block;
+  content: '';
+}
+
+[data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type > .os-text {
+  display: inline-block;
+  margin-left: 0.7rem;
+}
+
+[data-type=page].introduction .intro-text > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page].introduction .intro-text > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h5 {
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
+  color: #24739E;
+  font-family: Roboto Condensed, StixGeneral;
+  font-size: 2.0736rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
-  line-height: 1.728rem;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-part-text {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
   display: none;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-text {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
+  vertical-align: middle;
 }
 
-[data-type=page]:not(.introduction).appendix > h1 > .os-number {
+[data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
   border-style: solid;
   border-width: 0.2rem;
   border-color: #344456;
@@ -2150,24 +2235,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
-[data-type=page]:not(.introduction) > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
-[data-type=page]:not(.introduction) > h2 > .os-text {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
+  vertical-align: middle;
 }
 
-[data-type=page]:not(.introduction) > h2 > .os-number {
+[data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
   border-style: solid;
   border-width: 0.2rem;
   border-color: #0DC0DC;
@@ -2176,9 +2262,19 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   height: 2.8rem;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
 }
 
-[data-type=page]:not(.introduction) > section > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
@@ -2187,7 +2283,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -2196,7 +2301,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -2205,25 +2310,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
-[data-type=page]:not(.introduction) > section > section > h4 {
-  color: #24739E;
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-[data-type=page]:not(.introduction) > section > section > section > h4 {
-  color: #24739E;
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-[data-type=page]:not(.introduction) > section > section > section > h5 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h5 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2236,10 +2323,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-glossary-container > h2::before {
@@ -2254,7 +2340,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-glossary-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2262,7 +2348,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-glossary-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2271,7 +2357,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2280,7 +2366,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-glossary-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2297,17 +2383,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-eob[data-type=composite-page] > h1 {
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.728rem;
+  font-size: 2.0736rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   column-span: all;
-  font-weight: normal;
 }
 
 .os-eob[data-type=composite-page] > div > h2 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2318,10 +2403,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-section-summary-container > h2::before {
@@ -2336,7 +2420,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-section-summary-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2344,7 +2428,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-section-summary-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2353,7 +2437,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-section-summary-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2362,7 +2446,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-section-summary-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2381,10 +2465,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-prep-workplace-container > h2::before {
@@ -2399,7 +2482,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-prep-workplace-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2407,7 +2490,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-prep-workplace-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2416,7 +2499,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-prep-workplace-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2425,7 +2508,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-prep-workplace-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2444,10 +2527,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-ethics-activity-container > h2::before {
@@ -2462,7 +2544,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-ethics-activity-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2470,7 +2552,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-ethics-activity-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2479,7 +2561,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-ethics-activity-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2488,7 +2570,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-ethics-activity-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2507,10 +2589,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-working-net-container > h2::before {
@@ -2525,7 +2606,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-working-net-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2533,7 +2614,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-working-net-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2542,7 +2623,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-working-net-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2551,7 +2632,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-working-net-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2570,10 +2651,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-critical-thinking-container > h2::before {
@@ -2588,7 +2668,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-critical-thinking-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2596,7 +2676,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-critical-thinking-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2605,7 +2685,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-critical-thinking-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2614,7 +2694,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-critical-thinking-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2633,10 +2713,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   color: #24739E;
   font-family: Roboto Condensed, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.44rem;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
   margin-bottom: 0.7rem;
-  font-weight: normal;
 }
 
 .os-hot-links-container > h2::before {
@@ -2651,7 +2730,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-hot-links-container > section > a > h3[data-type=document-title] {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2659,7 +2738,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-hot-links-container > div > div > section > a > h4 {
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2668,7 +2747,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-hot-links-container > div > h3 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
+  font-size: 1.44rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2677,7 +2756,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-hot-links-container > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -2695,6 +2774,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=composite-page] > section > ol {
   margin-left: 24px;
 }
@@ -2707,11 +2794,59 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
 [data-type=composite-page] > section > section > div > ol {
   margin-left: 24px;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > div > div > section > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -2722,7 +2857,35 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+[data-type=note] > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=note] > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=note] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=note] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -2738,6 +2901,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=note] > div > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=note] > div > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -2750,12 +2917,36 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > ol {
   margin-left: 24px;
 }
 
+[data-type=page] > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
@@ -2766,15 +2957,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > div > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-[data-type=page] > div > div > ol {
+[data-type=page] > section > div > ol {
   margin-left: 24px;
 }
 
@@ -2786,6 +2977,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > section > ol {
   margin-left: 24px;
 }
@@ -2794,11 +2997,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul[data-bullet-style=none] {
-  list-style-type: none;
+[data-type=page] > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > ol > li > ul > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > ol > li > ol > li > ol {
+  margin-left: 24px;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
 }
 
@@ -2806,7 +3025,67 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=page] > div > div > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=page] > div > div > section > ol {
   margin-left: 24px;
 }
 
@@ -2835,6 +3114,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-left-style: solid;
   border-left-color: #EAEAEA;
   box-decoration-break: slice;
+  position: relative;
 }
 
 .exploring-business-careers > .os-note-body {

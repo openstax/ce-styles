@@ -10,4 +10,25 @@
             font-family: (_ref: "typography:::sansFont"),
         ),
     ),
+    MultipartQuestionExercises: (
+        _selectors: ('[data-type="injected-exercise"].exercise-block [data-type="alphabetical-question-multipart"]'),
+        ProblemSolutionLetter: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+    ),
+    InlineMultipartQuestionExercises: (
+        _selectors: ('[data-type="injected-exercise"]:not(.exercise-block) [data-type="alphabetical-question-multipart"]'),
+        ExerciseMultipartQuestionContainer: (
+            display: inline-table,
+        ),
+        ProblemSolutionLetter: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+    ),
+    QuestionWithProblemPrefix: (
+        _selectors: ('[data-type="exercise-question"]'),
+        ProblemSolutionPrefix: (
+            color: (_ref: 'colorMap:::fontBodyColor'),
+        ),
+    ),
 ));

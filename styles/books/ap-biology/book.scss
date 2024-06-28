@@ -12,7 +12,7 @@
   LearningObjectivesSection: (
     _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
     'H3ObjectivesTitle:::color': (_ref: 'colorMap:::biologyHeaderColor'),
-    'ListDot:::color': (_ref: 'colorMap:::biologyHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::biologyHeaderColor'),
   ),
 ));
 
@@ -20,14 +20,20 @@
   Review: (
     _selectors: ("[data-type = 'chapter'] > .os-review-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
 ),
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
 ),
   SciencePractice: (
     _selectors: ("[data-type = 'chapter'] > .os-science-practice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
 ),
 
 ));
@@ -43,7 +49,7 @@
     _selectors:(".ap-everyday"),
     group-border-color: (_ref: 'colorMap:::apEverydayConnectionColor'),
     'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
-    'Title:::color': (_ref: 'colorMap:::everydayConnectionColor'),
+    'Title:::color': (_ref: 'colorMap:::apEverydayConnectionColor'),
   ),
   ScientificMethodNote:(
     _selectors: (".experiment"),
@@ -66,7 +72,7 @@
   ),
 ));
 
-@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 

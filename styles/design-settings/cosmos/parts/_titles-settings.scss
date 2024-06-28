@@ -96,6 +96,27 @@
     ),
 ));
 
+@include add_settings((
+    UnitOpenerTitles:(
+        _selectors: ('[data-type="unit"]'),
+        H1UnitOpenerPartText: (
+            color: (_ref: 'colorMap:::unitTitleColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+        H1UnitOpenerNumber: (
+            color: (_ref: 'colorMap:::unitTitleColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+        H1UnitOpenerText: (
+            color: (_ref: 'colorMap:::unitTitleTextColor'),
+            font-family: (_ref: 'typography:::titleOption3Font'),
+        ),
+    ),
+    UnitOpenerPageTitle: ( // Settings for hide unit opener page title prefix
+        _selectors: ('.unit-opener > h2 > .os-part-text, .unit-opener > h2 > .os-number')
+    ),
+));
+
 // Chapter Intro titles
 @include add_settings((
     ChapterTitles:(
@@ -108,11 +129,11 @@
         ),
         H1ChapterIntroTitleNumber: (
             color: (_ref: 'colorMap:::chapterTitleNumberColor'),
-        ), 
-        H1ChapterIntroNumberedBg: (
-            background-color: (_ref: 'colorMap:::chapterTitleNumberBgColor'), 
         ),
-    ),    
+        H1ChapterIntroNumberedBg: (
+            background-color: (_ref: 'colorMap:::chapterTitleNumberBgColor'),
+        ),
+    ),
 ));
 
 @include add_settings((
@@ -126,11 +147,74 @@
         ),
         H1ChapterIntroTitleNumber: (
             color: (_ref: 'colorMap:::titleColorAlt'), // changed
-        ), 
-        H1ChapterIntroNumberedBg: (
-            background-color: (_ref: 'colorMap:::chapterTitleNumberBgColor'), 
         ),
-    ),    
+        H1ChapterIntroNumberedBg: (
+            background-color: (_ref: 'colorMap:::chapterTitleNumberBgColor'),
+        ),
+    ),
+));
+
+@include add_settings((
+    ChapterIntroTitlesInline: (
+        _selectors: ('[data-type="page"].introduction .intro-text'),
+        H2ChapterIntroInline: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: "colorMap:::introContentHeaderColor"),
+        ),
+        H3Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColor'),
+        ),
+        H4Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColor'),
+        ),
+        H5Title: (
+            font-family: (_ref: 'typography:::titleOption2Font'),
+        ),
+    ),
+));
+
+@include add_settings((
+    ChapterIntroTitlesInlineBlue: (
+        _selectors: ('[data-type="page"].introduction .intro-text'),
+        H2ChapterIntroInline: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: "colorMap:::introContentHeaderColor"),
+        ),
+        H3Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColorAlt'), // changed
+        ),
+        H4Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColorAlt'), // changed
+        ),
+        H5Title: (
+            font-family: (_ref: 'typography:::titleOption2Font'),
+        ),
+    ),
+));
+
+@include add_settings((
+    ChapterIntroTitlesBlock: (
+        _selectors: ('[data-type="page"].introduction .intro-text'),
+        H2ChapterIntroBlock: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: "colorMap:::introContentHeaderColorEconomics"),
+        ),
+        H3Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColor'),
+        ),
+        H4Title: (
+            font-family: (_ref: 'typography:::titleOption1Font'),
+            color: (_ref: 'colorMap:::titleColor'),
+        ),
+        H5Title: (
+            font-family: (_ref: 'typography:::titleOption2Font'),
+        ),
+    ),
 ));
 
 // EoC titles
@@ -165,7 +249,7 @@
         _selectors: ('.os-eoc[data-type="composite-chapter"]'),
         H2Title: (
             font-family: (_ref: 'typography:::titleOption2Font'),
-            color: (_ref: 'colorMap:::titleColorAlt'), 
+            color: (_ref: 'colorMap:::titleColorAlt'),
         ),
         H3Title: (
             font-family: (_ref: 'typography:::titleOption1Font'),

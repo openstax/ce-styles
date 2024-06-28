@@ -2,7 +2,7 @@ $Table__Container: (
   _name: "TableContainer",
   _subselector: '',
   _properties: (
-    overflow-x: auto,
+    overflow: 'auto !important',
     margin: '20px 0',
   )
 );
@@ -36,6 +36,8 @@ $Table--WithImages: (
     table-layout: fixed,
   )
 );
+
+$Table--AlternateShading: empty_wrapper(TableAlternateShading, '.alternate-shading');
 
 $Caption: (
   _name: "Caption",
@@ -84,6 +86,14 @@ $Table__Body: empty_wrapper(TableBody, ' tbody');
 $Table__Foot: empty_wrapper(TableFoot, ' tfoot');
 $Table__Row: empty_wrapper(TableRow, ' > tr');
 
+$Table__Row--AlternateShading: (
+    _name: "TableRowAlternateShading",
+    _subselector: " tr:nth-child(even)",
+    _properties: (
+        background-color: enum('ValueSet:::REQUIRED'),
+    )
+);
+
 $Table__Head__Cell: (
   _name: "TableHeadCell",
   _subselector: ' > th',
@@ -98,9 +108,27 @@ $Table__Head__Cell: (
   )
 );
 
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding-top: 0.7rem,
+        padding-bottom: 0.7rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
+    )
+);
+
 $Table__Data: (
   _name: "TableData",
-  _subselector: ' > td',
+  _subselector: ' > td:not(.hljs-ln-numbers, .hljs-ln-code)',
   _properties: (
     border-width: 0.1rem,
     border-style: solid,
@@ -131,7 +159,7 @@ $Table__Cell--RightAligned: (
     _subselector: "[data-align="right"]",
     _properties: (
       text-align: right,
-    )    
+    )
 );
 
 $Table__MultipleBody: (

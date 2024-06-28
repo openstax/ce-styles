@@ -100,17 +100,17 @@ $bandColor: #DCB83D;
 @include use('LearningObjectivesAbstract', 'cosmos:::LearningObjectivesShape');
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('NarrowTable', 'common:::NarrowTableShape');
+@include use('NarrowTable', 'cosmos:::NarrowTableShape');
 @include use('TocNoUnit', 'cosmos:::TocNoUnitShape');
 @include use('Equation', 'cosmos:::EquationShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc exercises
 
 // Chapter Intro
-@include use('ChapterIntroWithBlockIntroHeader', 'cosmos:::ChapterIntroWithBlockIntroHeaderShape');
-@include use('ChapterObjectives', 'cosmos:::ChapterObjectivesShape');
+@include use('ChapterObjectivesNote', 'cosmos:::ObjectivesNoteShape');
 
 // Figures
 @include use('Figure','cosmos:::FigureShape');
+@include use('FigureSplash', 'cosmos:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEocPara', 'cosmos:::FigureTopSpacingShape');
 @include use('FigureAfterEobPara', 'cosmos:::FigureTopSpacingShape');
@@ -131,6 +131,7 @@ $bandColor: #DCB83D;
 // Titles
 @include use('PageTitles', 'cosmos:::PageTitlesShape');
 @include use('ChapterTitles', 'cosmos:::ChapterTitlesShape');
+@include use('ChapterIntroTitlesBlock', 'cosmos:::ChapterIntroTitlesBlockShape');
 @include use('IntroductionPageTitles', 'cosmos:::IntroductionPageTitlesShape');
 @include use('EocCompositePageTitles', 'cosmos:::EocCompositePageTitlesShape');
 @include use('EobTitles', 'cosmos:::EobTitlesShape');
@@ -156,3 +157,4 @@ $bandColor: #DCB83D;
 @include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 @include use('Index', 'cosmos:::IndexShape');
 @include use('AnswerKey', 'cosmos:::AnswerKeyShape');
+@include use('AnswerKeySolution', 'cosmos:::AnswerKeySolutionShape');

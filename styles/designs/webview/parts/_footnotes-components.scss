@@ -10,6 +10,7 @@ $Footnote: (
   _name: "Footnote",
   _subselector: ' [data-type="footnote-ref"]',
   _properties: (
+    font-size: scaled_size(1.4rem),
     padding-left: 27px,
     text-indent: -27px,
   ),
@@ -21,6 +22,15 @@ $Footnote__Content--Before: (
   _properties: (
     content: '" "',
   ),
+);
+
+$Footnote__List: (
+  _name: "FootnoteList",
+  _subselector: ' ul',
+  _properties: (
+    list-style: none,
+    line-height: 2.5rem,
+  )
 );
 
 $Footnote--Class: (

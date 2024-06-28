@@ -7,6 +7,7 @@ $Page--Composite__Container: empty_wrapper(CompositePageContainer, '');
 $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterWrapper, '');
+$ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
 
 //h1 titles without numbers (pages like preface)
 $H1: (
@@ -23,34 +24,61 @@ $H1: (
 );
 
 // Used in Chapter, Appendices
-$H1--Numbered: (
+$H1--Numbered--Chapter: (
   _name: "H1Numbered",
   _subselector: ' > h1[data-type="document-title"]',
   _properties: (
-    display: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    position: enum('ValueSet:::REQUIRED'), //different for Chapter and Appendix
-    top: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    z-index:enum('ValueSet:::OPTIONAL'), //used in Chapters
+    display: flex,
+    align-items: center,
+    position: relative,
+    top: 14rem,
+    z-index: 2,
     color: enum('ValueSet:::REQUIRED'),
     font-family: enum('ValueSet:::REQUIRED'),
-    font-size: enum('ValueSet:::REQUIRED'),
-    line-height: enum('ValueSet:::REQUIRED'),
-    margin-bottom: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    font-size: font-scale(4),
+    line-height: font-scale(4), // must be equal to font-size
+    max-width: 5.9in,
+    height: font-scale(8)
   )
 );
 
-$H1--Numbered__Text: (
+$H1--Numbered--Appendix: (
+  _name: "H1Numbered",
+  _subselector: ' > h1[data-type="document-title"]',
+  _properties: (
+    display: table,
+    position: relative,
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(4),
+    line-height: font-scale(4), //must be the same as font size
+    margin-bottom: v-spacing(3),
+  )
+);
+
+$H1--Numbered__Text--Chapter: (
   _name: "TitleText",
   _subselector: '> .os-text',
   _properties: (
-    display: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    display: flex,
     font-weight: bold,
     text-transform: uppercase,
-    position: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    margin-left: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    padding-left: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    filter: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    prince-filter-resolution: enum('ValueSet:::OPTIONAL') //used only in Chapter Titles for drop-shadow filter
+    margin-left: 8rem,
+    filter: enum('ValueSet:::REQUIRED'),
+    prince-filter-resolution: 300dpi,
+    justify-content: center,
+    align-items: center,
+  )
+);
+
+$H1--Numbered__Text--Appendix: (
+  _name: "TitleText",
+  _subselector: '> .os-text',
+  _properties: (
+    display: table-cell,
+    font-weight: bold,
+    text-transform: uppercase,
+    padding-left: h-spacing(6),
   )
 );
 
@@ -62,28 +90,43 @@ $H1--Numbered__PartText: (
   )
 );
 
-$H1--Numbered__Number: (
+$H1--Numbered__Number--Appendix: (
   _name: "TitleNumber",
   _subselector: '> .os-number',
   _properties: (
-    color: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    color: enum('ValueSet:::REQUIRED'),
+    border-width: 0.3rem,
     border-style: solid,
-    border-width: enum('ValueSet:::REQUIRED'),
     border-color: enum('ValueSet:::REQUIRED'),
-    font-weight: enum('ValueSet:::REQUIRED'),
-    text-transform: enum('ValueSet:::OPTIONAL'), //used in Chapters
+    font-weight: normal,
     padding: 0.5rem,
     position: absolute,
     left: 0,
     top: 50%,
     transform: translate(0, -50%),
-    width:  enum('ValueSet:::REQUIRED'),
-    height:  enum('ValueSet:::REQUIRED'),
-    display: enum('ValueSet:::REQUIRED'),
-    justify-content: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    align-items: enum('ValueSet:::OPTIONAL'), //used in Chapters
-    text-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
-    vertical-align: enum('ValueSet:::OPTIONAL'), //used in Appendices
+    width: v-spacing(5),
+    height: v-spacing(5),
+    display: table-cell,
+    text-align: center,
+    vertical-align: middle,
+  )
+);
+
+$H1--Numbered__Number--Chapter: (
+  _name: "TitleNumber",
+  _subselector: '> .os-number',
+  _properties: (
+    border-style: solid,
+    border-width: 0.07rem,
+    border-color: enum('ValueSet:::REQUIRED'),
+    text-transform: uppercase,
+    padding: 0.5rem,
+    left: 0,
+    width: v-spacing(4),
+    height: v-spacing(4),
+    display: flex,
+    justify-content: center,
+    align-items: center,
   )
 );
 
@@ -101,18 +144,18 @@ $H2: (
 );
 
 // Chapter Intro Text Header
-$H2TextHeader--ChapterIntro: (
-    _name: "H2IntroTextHeader",
+$H2--ChapterIntro: (
+    _name: "H2ChapterIntro",
     _subselector: ' > h2[data-type="document-title"]:first-of-type',
     _properties: (
-        font-size: enum('ValueSet:::OPTIONAL'),
+        font-size: font-scale(3),
         margin-bottom: v-spacing(1),
         color: enum('ValueSet:::REQUIRED'),
     )
 );
 
-$H2TextHeader__Icon--ChapterIntro: (
-  _name: "H2IntroTextHeaderIcon",
+$H2--ChapterIntro__Icon: (
+  _name: "H2ChapterIntroIcon",
   _subselector: "::before",
   _properties: (
     background: enum('ValueSet:::REQUIRED'),
@@ -124,8 +167,8 @@ $H2TextHeader__Icon--ChapterIntro: (
   )
 );
 
-$H2TextHeader__Text--ChapterIntro: (
-    _name: "H2IntroTextHeaderText",
+$H2--ChapterIntro__Text: (
+    _name: "H2ChapterIntroText",
     _subselector: ' > .os-text',
     _properties: (
         display: inline-block,
@@ -193,15 +236,27 @@ $H3--Link:(
     )
 );
 
-$H3SectionTextHeader--ChapterIntro: ( // Title used only in HS Statistics
-    _name: "H3IntroSectionHeader",
-    _subselector: ' > section > h3[data-type="title"]',
+$H3--Objectives: (
+  _name: "H3ObjectivesTitle",
+  _subselector: ' > h3[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+  )
+);
+
+$H3--ChapterOutline: (
+    _name: "H3ChapterOutlineTitle",
+    _subselector: ' > h3.os-title',
     _properties: (
-        color: enum('ValueSet:::OPTIONAL'), // set to OPTIONAL to not create separate Chapter Intro for this component
-        font-family: enum('ValueSet:::OPTIONAL'), // set to OPTIONAL to not create separate Chapter Intro for this component
-        font-size: font-scale(2),
-        line-height: line-height(2),
-        margin-bottom: v-spacing(1),
+        margin: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: font-scale(1),
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
     )
 );
 
@@ -228,6 +283,18 @@ $H4--SectionExercises: (
         margin-bottom: v-spacing(2),
         margin-top: v-spacing(1),
         )
+);
+
+$H4--LearningObjectives--Coreq: (
+  _name: "H4LearningObjectivesCoreqTitle",
+  _subselector: ' > h4[data-type="title"]',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+  )
 );
 
 $H5: (
