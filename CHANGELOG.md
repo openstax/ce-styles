@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix `table` border in `carnival`
 * Style `exercises` from `notes` in `nursing-internal`
 * Refactor `exercises` in `carnival`
 * Fix answer key number alignment in `webview`
