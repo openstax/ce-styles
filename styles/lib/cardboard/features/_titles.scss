@@ -1,0 +1,115 @@
+@use 'lib/cardboard/theme' as cardboard;
+
+@mixin page-titles() {
+  [data-type=page]:not(.introduction):not(.unit-opener) {
+    &.preface > h1 {
+      color: cardboard.$B4;
+      font-family: cardboard.$roboto;
+      font-size: 2.0736rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+    &.appendix > h1 {
+      display: table;
+      color: cardboard.$B4;
+      font-family: cardboard.$roboto;
+      font-size: 2.0736rem;
+      line-height: 2.0736rem;
+      margin-bottom: 0.7rem;
+      > .os-part-text {
+        display: none;
+      }
+      > .os-text {
+        display: table-cell;
+        padding-left: 16px;
+        vertical-align: middle;
+      }
+      > .os-number {
+        border-style: solid;
+        border-width: 0.2rem;
+        border-color: cardboard.$B2;
+        padding: 0.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+    > h2 {
+      display: table;
+      color: cardboard.$B4;
+      font-family: cardboard.$roboto;
+      font-size: 1.728rem;
+      line-height: 1.728rem;
+      margin-bottom: 0.7rem;
+      > .os-text {
+        display: table-cell;
+        padding-left: 8px;
+        vertical-align: middle;
+      }
+      > .os-number {
+        border-style: solid;
+        border-width: 0.2rem;
+        border-color: cardboard.$B3;
+        padding: 0.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+    > section {
+      > h2 {
+        @include -header-in-body(
+          $font-size: 1.728rem,
+          $color: cardboard.$B4
+        );
+      }
+      > h3 {
+        @include -header-in-body(
+          $font-size: 1.44rem,
+          $color: cardboard.$B4
+        );
+      }
+      > section {
+        > h3 {
+          @include -header-in-body(
+            $font-size: 1.44rem,
+            $color: cardboard.$B4
+          );
+        }
+        > h4 {
+          @include -header-in-body(
+            $font-size: 1.2rem,
+            $color: cardboard.$B4
+          );
+        }
+        > section {
+          > h4 {
+            @include -header-in-body(
+              $font-size: 1.2rem,
+              $color: cardboard.$B4
+            );
+          }
+          > h5 {
+            @include -header-in-body(
+              $font-size: 1rem,
+              $color: cardboard.$black
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin -header-in-body($font-size, $color) {
+  color: $color;
+  font-size: $font-size;
+  font-family: cardboard.$noto;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}

@@ -1,0 +1,29 @@
+@use 'lib/cardboard/theme' as cardboard;
+
+@mixin learning-objectives--numbered() {
+  [data-type=page] .learning-objectives {
+    > h3[data-type=title] {
+      color: cardboard.$B4; // todo
+      font-family: cardboard.$noto; // todo
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    > p:first-of-type {
+      margin: 0;
+    }
+    > ul {
+      list-style-type: none;
+      > li {
+        display: flex;
+        max-width: 5.9in;
+        > span.os-abstract-token {
+          font-weight: bold;
+          margin-right: 8px;
+          color: cardboard.$B2; // todo
+        }
+      }
+    }
+  }
+}
