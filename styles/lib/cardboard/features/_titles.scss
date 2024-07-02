@@ -60,7 +60,7 @@
         vertical-align: middle;
       }
     }
-    > section {
+    > section:not(.learning-objectives) {
       > h2 {
         @include -header-in-body(
           $font-size: 1.728rem,
