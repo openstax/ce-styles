@@ -1,18 +1,23 @@
 @use 'lib/cardboard/theme' as cardboard;
 
-@mixin page-titles() {
+@mixin page-titles(
+  $large-header-font:       cardboard.$roboto,
+  $header-color:            cardboard.$B4,
+  $appendix-number-border:  cardboard.$B2,
+  $h2-number-border:        cardboard.$B3
+) {
   [data-type=page]:not(.introduction):not(.unit-opener) {
     &.preface > h1 {
-      color: cardboard.$B4;
-      font-family: cardboard.$roboto;
+      color: $header_color;
+      font-family: $large-header-font;
       font-size: 2.0736rem;
       line-height: 1.5rem;
       margin-bottom: 0.7rem;
     }
     &.appendix > h1 {
       display: table;
-      color: cardboard.$B4;
-      font-family: cardboard.$roboto;
+      color: $header_color;
+      font-family: $large-header-font;
       font-size: 2.0736rem;
       line-height: 2.0736rem;
       margin-bottom: 0.7rem;
@@ -25,21 +30,15 @@
         vertical-align: middle;
       }
       > .os-number {
-        border-style: solid;
-        border-width: 0.2rem;
-        border-color: cardboard.$B2;
-        padding: 0.5rem;
-        width: 2.8rem;
-        height: 2.8rem;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        @include -big-header-number(
+          $border-color: $appendix-number-border
+        );
       }
     }
     > h2 {
       display: table;
-      color: cardboard.$B4;
-      font-family: cardboard.$roboto;
+      color: $header_color;
+      font-family: $large-header-font;
       font-size: 1.728rem;
       line-height: 1.728rem;
       margin-bottom: 0.7rem;
@@ -49,48 +48,42 @@
         vertical-align: middle;
       }
       > .os-number {
-        border-style: solid;
-        border-width: 0.2rem;
-        border-color: cardboard.$B3;
-        padding: 0.5rem;
-        width: 2.8rem;
-        height: 2.8rem;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        @include -big-header-number(
+          $border-color: $h2-number-border
+        );
       }
     }
     > section:not(.learning-objectives) {
       > h2 {
         @include -header-in-body(
           $font-size: 1.728rem,
-          $color: cardboard.$B4
+          $color: $header_color
         );
       }
       > h3 {
         @include -header-in-body(
           $font-size: 1.44rem,
-          $color: cardboard.$B4
+          $color: $header_color
         );
       }
       > section {
         > h3 {
           @include -header-in-body(
             $font-size: 1.44rem,
-            $color: cardboard.$B4
+            $color: $header_color
           );
         }
         > h4 {
           @include -header-in-body(
             $font-size: 1.2rem,
-            $color: cardboard.$B4
+            $color: $header_color
           );
         }
         > section {
           > h4 {
             @include -header-in-body(
               $font-size: 1.2rem,
-              $color: cardboard.$B4
+              $color: $header_color
             );
           }
           > h5 {
@@ -112,4 +105,16 @@
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
+}
+
+@mixin -big-header-number($border-color) {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 0.2rem;
+  padding: 0.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }

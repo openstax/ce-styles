@@ -1199,7 +1199,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
@@ -1208,21 +1207,18 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 2.0736rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
   display: none;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
+  border-color: #344456;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: #344456;
   padding: 0.5rem;
   width: 2.8rem;
   height: 2.8rem;
@@ -1230,7 +1226,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   text-align: center;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
@@ -1239,17 +1234,15 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
+  border-color: #0DC0DC;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: #0DC0DC;
   padding: 0.5rem;
   width: 2.8rem;
   height: 2.8rem;
@@ -1257,55 +1250,50 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   text-align: center;
   vertical-align: middle;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h2 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.728rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h5 {
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;

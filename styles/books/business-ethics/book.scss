@@ -1,3 +1,5 @@
+@use 'lib/cardboard/cardboard';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-section-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -192,7 +194,7 @@ $bandColor: #24739E;
 @include use('EthicsAcross', 'cardboard:::BoxedNoteWithSubtitleShape');
 
 //Titles
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
