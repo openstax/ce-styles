@@ -1,10 +1,10 @@
 @use 'lib/cardboard/theme' as cardboard;
 
-@mixin learning-objectives--numbered() {
+@mixin learning-objectives--numbered($token-color: cardboard.$B2) {
   [data-type=page] .learning-objectives {
     > h3[data-type=title] {
-      color: cardboard.$B4; // todo
-      font-family: cardboard.$noto; // todo
+      color: cardboard.$B4;
+      font-family: cardboard.$noto;
       font-size: 1.2rem;
       line-height: 1.5rem;
       font-weight: bold;
@@ -21,7 +21,7 @@
         > span.os-abstract-token {
           font-weight: bold;
           margin-right: 8px;
-          color: cardboard.$B2; // todo
+          color: $token-color;
         }
       }
     }

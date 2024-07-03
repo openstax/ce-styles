@@ -1,3 +1,6 @@
+@use 'lib/cardboard/cardboard';
+@use 'lib/cardboard/theme' as colors_and_fonts;
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-chapter-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -203,13 +206,6 @@ $bandColor: #9028A3;
 ));
 
 @include add_settings((
-  NumberedLearningObjectives: (
-    _selectors: ('[data-type="page"] .learning-objectives'),
-    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::titleColor'),
-  )
-));
-
-@include add_settings((
   ModuleWithoutTitleLinks: (
     _selectors: ('.knowledge-check', '.os-eoc.os-marketing-discussion-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-company-case-container'),
   ),
@@ -255,7 +251,7 @@ $bandColor: #9028A3;
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 @include use('FootnoteNotReference', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+@include cardboard.learning-objectives--numbered($token-color: colors_and_fonts.$B4);
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('TocUnitWithDots', 'cardboard:::UnitWithDotsToc');
 @include use('Equation', 'cardboard:::EquationShape');

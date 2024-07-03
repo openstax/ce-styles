@@ -44,26 +44,6 @@
   ),
 ));
 
-@include create_shape('cardboard:::LearningObjectivesNumberedShape', (
-  _components: (
-    map-merge($Objectives__Container, (
-      _components: (
-        $H3--Objectives,
-        $Objectives__Paragraph,
-        map-merge($UnorderedList--UnstyledFromObjectives, (
-          _components: (
-            map-merge($ListItem--Objectives--Flex, (
-              _components: (
-                $ListItem--Objectives__NumberToken,
-              )
-            ))
-          )
-        ))
-      ),
-    ))
-  ),
-));
-
 // Used in Marketing
 @include create_shape('cardboard:::LearningObjectivesNumberedWithLOIconShape', (
   _components: (
