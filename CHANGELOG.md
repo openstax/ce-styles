@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Change TOC to no units for `information-systems`
+
 ## [v2.0.0] - 2024-06-28
 
 * Fix `table` border in `carnival`
