@@ -206,9 +206,20 @@ $bandColor: #24739E;
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include cardboard.page-titles();
-@include cardboard.eoc-composite-page-titles(
+@include cardboard.eoc-composite-chapter-titles(
   $root: '.os-chapter-review-container',
-  $svg: toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")
+  $svg: toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg"),
+  $composite-page-icons-map: (
+    '.os-glossary-container':             toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms.svg"),
+    '.os-section-summary-container':      toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg"),
+    '.os-review-questions-container':     toDataUri("svg+xml", "designs/cardboard/resources/cardboard-suggested.svg"),
+    '.os-conceptual-questions-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg"),
+    '.os-practice-exercises-container':   toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg"),
+    '.os-problem-set-a-container':        toDataUri("svg+xml", "designs/cardboard/resources/cardboard-exercisea.svg"),
+    '.os-problem-set-b-container':        toDataUri("svg+xml", "designs/cardboard/resources/cardboard-exerciseb.svg"),
+    '.os-thought-provokers-container':    toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lightbulb.svg"),
+    '.os-labs-assessments-container':     toDataUri("svg+xml", "designs/cardboard/resources/cardboard-programaming.svg")
+  )
 );
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
 
