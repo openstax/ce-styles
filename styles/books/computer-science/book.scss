@@ -206,7 +206,10 @@ $bandColor: #24739E;
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include cardboard.page-titles();
-@include use('ChapterReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include cardboard.eoc-composite-page-titles(
+  $root: '.os-chapter-review-container',
+  $svg: toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")
+);
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
 
 // Eoc
