@@ -88,16 +88,12 @@ $ChapterIntroType: fullWidth;
 
 // Tables
 @include add_settings((
-  BasicTable: (
-    _selectors: ('.os-table:not(.os-unstyled-container)'),
-    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
-  ),
   ColumnHeaderTable: (
     _selectors: ('.os-table.os-column-header-container'),
     'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::nursingTableColor"),
     'FirstTableRow:::border-top-color': (_ref: "colorMap:::nursingTableColor"),
   ),
-));
+ ));
 
 @include add_settings((
   VerticallyTightTable: (
@@ -253,7 +249,6 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
-// @include use('BasicTable', 'carnival:::BasicTableShape');
 @include carnival.basic-table();
 @include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');

@@ -17,6 +17,93 @@
         font-weight: 700;
         padding: 0.7rem;
       }
+        > th[data-valign=top] {
+          vertical-align: top;
+        }
+        > th[data-align=left] {
+          text-align: left;
+        }
+        > th[data-align=right] {
+          text-align: right;
+        }
+        > th[data-align=center] {
+          text-align: center;
+        }
+      > tbody > tr > td[data-valign=top] {
+          vertical-align: top;
+        }
+        > td[data-align=left] {
+          text-align: left;
+        }
+        > td[data-align=right] {
+          text-align: right;
+        }
+        > td[data-align=center] {
+          text-align: center;
+        }
+        > td:not(:only-of-type) {
+          font-family: IBM Plex Sans, sans-serif; //TODO
+          border-left: 0.025rem solid black; //TODO
+          padding-top: 0.7rem;
+          padding-bottom: 0.7rem;
+          padding-right: 0.7rem;
+          padding-left: 0.7rem;
+        }
+        > td:not(:only-of-type) > strong {
+          word-break: break-word;
+        }
+        > td:not(:only-of-type):not(:last-child) {
+          border-left: none;
+          border-right: 0.025rem solid black; //TODO
+        }
+        > td {
+          border-bottom: 0.025rem solid black;
+          padding: 0.7rem;
+        }
+        > tr:last-of-type
+          > td:only-of-type {
+            border-right: none;
+          }
+    }
+    > table col:not(:last-child) {
+      border-right: 0.025rem solid black;
     }
   }
+  .os-table:not(.os-unstyled-container):after {
+    content: '';
+    width: 100%;
+    border-top-color: #0074BC;
+    border-top-width: 0.12rem;
+    border-top-style: solid;
+    display: block;
+    position: relative;
+    top: -0.1rem;
+  }
+
+  .os-table:not(.os-unstyled-container) .os-caption-container {
+    display: table-caption;
+    caption-side: bottom;
+    prince-caption-page: all;
+    font-size: 0.8333333333rem;
+    line-height: 1.2;
+    > .os-title-label {
+      font-family: Mulish, sans-serif;
+      font-weight: bold;
+      color: #C31427;
+      text-transform: uppercase;
+    }
+    > .os-number {
+      font-family: Mulish, sans-serif;
+      font-weight: bold;
+      color: #C31427;
+    }
+    > .os-title {
+      font-family: Mulish, sans-serif;
+      font-weight: bold;
+    }
+    > .os-caption {
+      font-family: IBM Plex Sans, sans-serif;
+    }
+  }
+
 }
