@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Refactor `numbered learning objectives` in cardboard
 * Refactor `page titles` in cardboard
 * Fix selector conflict between learning objectives and page titles for `computer-science`
+* Fix typo in `labs-assessments` selector for `computer-science`
+* Remove extra `composite-page` styles from `computer-science`
+* Refactor `composite-page` and `composite-chapter` titles
+* Style icons for `composite-page` titles that are children of a `composite-chapter` for cs
 
 ## [v2.0.0] - 2024-06-28
 
