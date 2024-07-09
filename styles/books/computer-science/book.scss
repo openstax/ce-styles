@@ -118,23 +118,6 @@ $bandColor: #24739E;
     ),
 ));
 
-// EoC titles
-@include add_settings((
-    ChapterReviewTitles: (
-        _selectors: (".os-chapter-review-container"),
-        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
-        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-        'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-        'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-    ),
-));
-
 @include add_settings((
     ExercisesModule: (
         _selectors: (".os-labs-assessments-container", ".os-thought-provokers-container", ".os-problem-set-b-container", ".os-problem-set-a-container", ".os-practice-exercises-container", ".os-conceptual-questions-container", ".os-review-questions-container"),
