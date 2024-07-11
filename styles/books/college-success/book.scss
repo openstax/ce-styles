@@ -1,3 +1,5 @@
+@use 'lib/cardboard/cardboard';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: 'os-eoc.os-summary-container', generalSelector: '.os-eoc'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
@@ -203,7 +205,7 @@ $bandColor: #24739E;
 //Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('CareerConnectionTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('RethinkingTitles', 'cardboard:::EocCompositePageTitlesShape');

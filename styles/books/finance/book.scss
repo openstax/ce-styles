@@ -264,7 +264,7 @@ $bandColor: #24739E;
 @include use('FigureFromInjectedQuestion','cardboard:::FigureFromExercisesShape');
 
 // Titles
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
