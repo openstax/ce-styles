@@ -214,7 +214,7 @@ $bandColor: #24739E;
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('GroupProjectTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('ChapterReviewTitles', 'cardboard:::EocCompositePageTitlesShape');

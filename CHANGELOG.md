@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Change TOC to no units for `information-systems`
+* Refactor `numbered learning objectives` in cardboard
+* Refactor `page titles` in cardboard
+* Fix selector conflict between learning objectives and page titles for `computer-science`
 
 ## [v2.0.0] - 2024-06-28
 

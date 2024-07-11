@@ -288,7 +288,7 @@ $bandColor: #24739E;
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
 
-//Figures
+// Figures
 @include use('Figure','cardboard:::FigureShape');
 @include use('FigureSplash','cardboard:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'cardboard:::FigureTopSpacingShape');
@@ -305,8 +305,10 @@ $bandColor: #24739E;
 @include use('TimelineTable', 'cardboard:::TimelineTableShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 
-// Misc
-@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+// Learning objectives
+@include cardboard.learning-objectives--numbered();
+
+// Code
 @include cardboard.hljs-colors();
 @include cardboard.tagged-code-colors();
 
@@ -321,7 +323,7 @@ $bandColor: #24739E;
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('ReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
@@ -343,7 +345,7 @@ $bandColor: #24739E;
 @include use('AppendixGlossary', 'cardboard:::AppendixGlossaryShape');
 @include use('Index', 'cardboard:::IndexShape');
 
-//Lists
+// Lists
 @include use('NotesLists', 'cardboard:::NotesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
 @include use('PageLists', 'cardboard:::PageListsShape');
