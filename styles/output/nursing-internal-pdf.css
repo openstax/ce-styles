@@ -2030,7 +2030,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   max-width: 100%;
   table-layout: fixed;
 }
-
 .os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
@@ -2043,7 +2042,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   max-width: 100%;
   table-layout: fixed;
 }
-
 .os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
@@ -2066,11 +2064,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: auto;
   margin-right: auto;
 }
-
 .os-table.os-column-header-container > table {
   border-collapse: collapse;
 }
-
 .os-table.os-column-header-container > table > tbody > tr > td:not(:only-of-type) {
   font-family: IBM Plex Sans, sans-serif;
   border-left: 0.025rem solid black;
@@ -2080,32 +2076,29 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
-
-.os-table.os-column-header-container > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
+.os-table.os-column-header-container > table > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.1rem solid black;
   font-family: Mulish, sans-serif;
   font-weight: 700;
 }
-
-.os-table.os-column-header-container > table > tbody > tr:first-of-type {
+.os-table.os-column-header-container > table > tr:first-of-type {
   border-top-color: #0074BC;
   border-top-width: 0.1rem;
   border-top-style: solid;
 }
-
-.os-table.os-column-header-container > table > tbody > tr:last-of-type > td {
+.os-table.os-column-header-container > table > tr:last-of-type > td {
   border-bottom-color: #0074BC;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
 }
 
-.os-table.os-vertically-tight-container > table.vertically-tight > thead > tr > th {
+.os-table.os-vertically-tight-container > table.vertically-tight > tr > th {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
 }
 
-.os-table.os-vertically-tight-container > table.vertically-tight > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
+> tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
 }

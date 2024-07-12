@@ -107,3 +107,227 @@
   }
 
 }
+
+@mixin column-header-table(){
+  .os-table.os-column-header-container {
+    margin-bottom: 0.7rem;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    > table {
+      border-collapse: collapse;
+      > tbody
+        > tr
+          > td:not(:only-of-type) {
+            font-family: IBM Plex Sans, sans-serif;
+            border-left: 0.025rem solid black;
+            border-bottom: 0.025rem solid black;
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+            padding-right: 0.7rem;
+            padding-left: 0.7rem;
+          }
+          > td:not(:only-of-type):not(:last-child) {
+            border-left: none;
+            border-right: 0.1rem solid black;
+            font-family: Mulish, sans-serif;
+            font-weight: 700;
+          }
+        > tr:first-of-type {
+          border-top-color: #0074BC;
+          border-top-width: 0.1rem;
+          border-top-style: solid;
+        }
+        > tr:last-of-type > td {
+          border-bottom-color: #0074BC;
+          border-bottom-width: 0.1rem;
+          border-bottom-style: solid;
+        }
+    }
+  }
+}
+
+@mixin vertically-tight-table(){
+  .os-table.os-vertically-tight-container > table.vertically-tight
+    > tr > th {
+      padding-top: 0.16rem;
+      padding-bottom: 0.16rem;
+    }
+    > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
+      padding-top: 0.16rem;
+      padding-bottom: 0.16rem;
+    }
+}
+
+@mixin table-from-exercise(){
+  .os-eoc [data-type=problem] > div .os-table > table {
+    max-width: 100%;
+    table-layout: fixed;
+    > tbody > tr > td:not(:only-of-type) {
+      text-align: center;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
+  .os-eoc [data-type=exercise-question] > div .os-table > table {
+    max-width: 100%;
+    table-layout: fixed;
+    > tbody > tr > td:not(:only-of-type) {
+      text-align: center;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
+}
+
+@mixin table-top-spacing(){
+  .os-eoc .os-problem-container > p + .os-table {
+    margin-top: 1rem;
+  }
+
+  .os-eob .os-solution-container > p + .os-table {
+    margin-top: 1rem;
+  }
+}
+
+@mixin table-column(){
+  .os-table [data-columns="2"][data-ratio="1,1"] col[data-width="1*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,2"] col[data-width="1*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,2"] col[data-width="2*"] {
+    width: 66.6666666667%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,3"] col[data-width="3*"] {
+    width: 75%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="2,3"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="2,3"] col[data-width="3*"] {
+    width: 60%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,1,1"] col[data-width="1*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="2*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="2*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="3*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="1*"] {
+    width: 14.2857142857%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="3*"] {
+    width: 42.8571428571%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="1*"] {
+    width: 5.8823529412%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="8*"] {
+    width: 47.0588235294%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,1,1"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="2*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="1*"] {
+    width: 14.2857142857%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="2*"] {
+    width: 28.5714285714%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+    width: 12.5%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+    width: 37.5%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="1*"] {
+    width: 11.1111111111%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
+    width: 22.2222222222%;
+  }
+}

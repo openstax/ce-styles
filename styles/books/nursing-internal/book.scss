@@ -86,21 +86,6 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
-// Tables
-@include add_settings((
-  ColumnHeaderTable: (
-    _selectors: ('.os-table.os-column-header-container'),
-    'LastTableRowData:::border-bottom-color': (_ref: "colorMap:::nursingTableColor"),
-    'FirstTableRow:::border-top-color': (_ref: "colorMap:::nursingTableColor"),
-  ),
- ));
-
-@include add_settings((
-  VerticallyTightTable: (
-    _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
-  )
-));
-
 //Centered Text
 @include add_settings((
   CenteredText: (
@@ -250,11 +235,11 @@ $ChapterIntroType: fullWidth;
 
 // Tables
 @include carnival.basic-table();
-@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
-@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
-@include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
-@include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
-@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
+@include carnival.table-from-exercise();
+@include carnival.table-top-spacing();
+@include carnival.column-header-table();
+@include carnival.vertically-tight-table();
+@include carnival.table-column();
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
