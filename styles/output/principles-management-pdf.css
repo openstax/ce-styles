@@ -2130,7 +2130,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h3, [data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h3 {
   color: #24739E;
   font-size: 1.44rem;
   font-family: Noto Sans, StixGeneral;
@@ -2138,23 +2138,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h3 {
-  color: #24739E;
-  font-size: 1.44rem;
-  font-family: Noto Sans, StixGeneral;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h4 {
-  color: #24739E;
-  font-size: 1.2rem;
-  font-family: Noto Sans, StixGeneral;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h4 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h4, [data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
