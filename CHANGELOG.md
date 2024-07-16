@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Refactor and remove `EocCompositePageTitlesShape` in `cardboard`
+
 ## [v2.1.0] - 2024-07-16
 
 * Change TOC to no units for `information-systems`
