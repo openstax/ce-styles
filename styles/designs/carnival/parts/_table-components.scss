@@ -246,6 +246,14 @@ $Table__Data--NotLastChild: (
     )
 );
 
+$Table__Data--NotFirstChildWithRowspan: (
+    _name: "TableDataNotFirstChildWithRowspan",
+    _subselector: ' > td[rowspan="2"]:not(:only-of-type):not(:first-child)',
+    _properties: (
+        border-left: '0.025rem solid black',
+    )
+);
+
 $Table__Row--First: (
     _name: "FirstTableRow",
     _subselector: " > tr:first-of-type",
@@ -292,8 +300,8 @@ $Table__Row--HeaderRowClass: (
         border-bottom-color: black,
         border-bottom-width: 0.1rem,
         border-bottom-style: solid,
-        padding-top: 0.16rem,
-        padding-bottom: 0.16rem,
+        padding-top: 0.7rem,
+        padding-bottom: 0.7rem,
         font-weight: 700,
         padding-left: table-h-spacing(1),
         padding-right: table-h-spacing(1),

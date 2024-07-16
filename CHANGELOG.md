@@ -6,6 +6,77 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0] - 2024-06-28
+
+* Fix `table` border in `carnival`
+* Style `exercises` from `notes` in `nursing-internal`
+* Refactor `exercises` in `carnival`
+* Fix answer key number alignment in `webview`
+* Refactor `answer key` in `webview`
+* Style `eoc references` in `lifespan-development`
+* Fix `tables` from `exercises` on `webview`
+* Style `eoc solutions` on `webview`
+* Fix alignment of `inline code` elements
+* Refactor code colors in `cardboard` and `webview`
+* Style `no bullet lists` on `webview`
+
+## [v1.154.0] - 2024-06-17
+
+* Add to carnival lists shape to style nested lists in `exercise questions`
+* Change `caption` color in `cardboard`
+* Style `LO references` on `webview`
+* Add new colwidth proportional values to `nursing-internal`
+* Add styles for problem title to cardboard `example` elements
+* Add margins to `iframes` on `webview`
+
+## [v1.153.0] - 2024-06-03
+
+* Add colwidth proportional values in `nursing-internal`
+* Change styles for `eob references` from `webview`
+* Remove margins from nested lists in `carnival` and on `webview`
+* Fix `equations` on `webview`
+* Fix font for code colored text in `data-science`
+
+## [v1.152.0] - 2024-05-17
+
+* Fix styles for unnumbered exercises on `webview`
+* Remove redundant `webview` exercise styling/styles that point to nowhere
+* Add border to tables headers in `cardboard`
+* Fix footnote styling on `webview`
+* Add styles for table columns to `cardboard`
+* Style `circled list` on `webview`
+* Change styles for `python-feature` in `data-science`
+* Change styles for python `code` in `data-science`
+
+## [v1.151.0] - 2024-05-03
+
+* Bake `multipart-question` in `data-science`
+* Fix exercise number alignment in `data-science`
+* Fix wrapping of `code` element
+* Move `additive manufacturing` out of archived styles
+
+## [v1.150.0] - 2024-04-19
+
+* Style `table columns` in `nursing-internal`
+* Increase header row padding in `nursing-internal` pdf and webview
+* Style exercises in `unfolding-casestudy` note in `nursing-internal`
+* Change `future-tech` note color in `information-systems`
+* Change styles for `eoc` in `information-systems`
+* Style `green-code` in `data-science` and on `webview`
+* Style `vertically-tight` tables in `information-systems`
+* Fix `number spacing in exercises` in `neuroscience`
+
+## [v1.149.0] - 2024-04-05
+
+* Fix `number spacing in exercises` in `biology` and `ap-biology`
+
+## [v1.148.0] - 2024-03-22
+
+* Style lists from `question-solution` in `carnival`
+* Style more third level lists in `carnival`
+* Standardize notes titles in `carnival` and `cosmos`
+* Fix `number spacing in exercises` in `microbiology`
+* Fix `alignment in exercises` in `nursing-internal`
 * Change note title color in `ap-biology`
 * Style exercise with problem title on `webview`
 

@@ -1,3 +1,5 @@
+@use 'lib/cardboard/cardboard';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -11,41 +13,6 @@ $bandColor: #24739E;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/_folio';
 
-// Code snippet colors
-@include add_settings((
-    CodeComment: (
-        _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeCommentColor'),
-    ),
-    CodeKeyword: (
-        _selectors: ('.hljs-keyword'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeKeywordColor'),
-    ),
-    CodeFunction: (
-        _selectors: ('.hljs-function'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeFunctionColor'),
-    ),
-    CodeTitle: (
-        _selectors: ('.hljs-title'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeTitleColor'),
-    ),
-    CodeParams: (
-        _selectors: ('.hljs-params'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeParamsColor'),
-    ),
-    CodeString: (
-        _selectors: ('.hljs-string'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeStringColor'),
-    ),
-    CodeBuildIn: (
-        _selectors: ('.hljs-built_in'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeBuiltInColor'),
-    ),
-    CodeNumber: (
-        _selectors: ('.hljs-number'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codeNumberColor'),
-    ),
-));
 
 //Titles
 @include add_settings((
@@ -162,9 +129,13 @@ $bandColor: #24739E;
     ExercisesModule: (
         _selectors: (".os-chapter-review-container", ".os-critical-thinking-container", ".os-quantitative-problems-container"),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-        'ProblemSolutionNumber:::width': 2%,
+        'ProblemSolutionNumber:::width': 2.2%,
         'ProblemSolutionNumber:::text-align': right,
         'ProblemSolutionText:::color': (_ref: 'colorMap:::fontBodyColor'),
+    ),
+    MultipartQuestionExercises: (
+      _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+      'ProblemSolutionLetter:::color': (_ref: "colorMap:::fontBodyColor"),
     ),
 ));
 
@@ -173,7 +144,7 @@ $bandColor: #24739E;
   PythonNote: (
     _selectors: (".python-feature"),
     'Body:::border-color': (_ref: "colorMap:::noteOption4BorderColor"),
-    'Title:::border-top-color': (_ref: "colorMap:::noteOption4TitleTopBorderColor"),
+    'Title:::border-top-color': (_ref: "colorMap:::noteOption4BlueTitleTopBorderColor"),
     'Title:::border-bottom-color': (_ref: "colorMap:::noteOption4BorderColor"),
     'Title:::border-right-color': (_ref: "colorMap:::noteOption4BorderColor"),
     'Title:::border-left-color': (_ref: "colorMap:::noteOption4BorderColor"),
@@ -182,10 +153,10 @@ $bandColor: #24739E;
     'Title:::font-family': (_ref: "typography:::titleFont"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::noteOption4BodyBackgroundColor"),
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-coding.svg")) no-repeat top left,
-    'TitleIcon:::height': 4rem,
-    'TitleIcon:::width': 9rem,
-    'TitleIcon:::bottom': 0,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-pythonlogo.svg")) no-repeat top left,
+    'TitleIcon:::height': 2.5rem,
+    'TitleIcon:::width': 3rem,
+    'TitleIcon:::bottom': 0.2rem,
   ),
 
     ExploringFurtherNote: (
@@ -237,14 +208,8 @@ $bandColor: #24739E;
 @include use('Equation', 'cardboard:::EquationShape');
 
 // Code
-@include use('CodeComment', 'common:::ColoredText');
-@include use('CodeKeyword', 'common:::ColoredText');
-@include use('CodeFunction', 'common:::ColoredText');
-@include use('CodeTitle', 'common:::ColoredText');
-@include use('CodeParams', 'common:::ColoredText');
-@include use('CodeString', 'common:::ColoredText');
-@include use('CodeBuildIn', 'common:::ColoredText');
-@include use('CodeNumber', 'common:::ColoredText');
+@include cardboard.hljs-colors();
+@include cardboard.green-code();
 
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
@@ -284,6 +249,7 @@ $bandColor: #24739E;
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
 @include use('VerticallyTightTable', 'cardboard:::VerticallyTightTableShape');
 @include use('FullWidthTable', 'cardboard:::FullWidthTableShape');
+@include use('ColumnsFromTable', 'cardboard:::ColumnsShape');
 
 //Lists
 @include use('NotesLists', 'cardboard:::NotesListsShape');
@@ -295,9 +261,11 @@ $bandColor: #24739E;
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');
 @include use('ExercisesModule', 'cardboard:::ExercisesModuleShape');
+@include use('MultipartQuestionExercises','cardboard:::ExercisesMultipartQuestionShape');
 @include use('References', 'cardboard:::ModuleWithIndentationShape');
 
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
 @include use("AnswerKey", "cardboard:::AnswerKeyShape");
 @include use("AnswerKeySolution", "cardboard:::AnswerKeySolutionShape");
+@include use('AnswerKeySolutionMultipart', 'cardboard:::AnswerKeySolutionMultipartShape');

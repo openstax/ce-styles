@@ -272,14 +272,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {

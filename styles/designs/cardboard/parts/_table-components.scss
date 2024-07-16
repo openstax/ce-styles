@@ -83,9 +83,9 @@ $Table__Head__FirstRow__Cell--FirstChild: (
     _name: "FirstTableHeadCellFirstRow",
     _subselector: " > th:first-child:not(:only-child)",
     _properties: (
-        border-left-style: none,
-        border-left-color: transparent,
-        border-left-width: 0rem,
+        border-left-style: solid,
+        border-left-color: enum('ValueSet:::REQUIRED'),
+        border-left-width: 0.08rem,
         border-right-style: solid,
         border-right-color: enum('ValueSet:::REQUIRED'), 
         border-right-width: 0.08rem, //1px converted to rem
@@ -96,9 +96,9 @@ $Table__Head__FirstRow__Cell--LastChild: (
     _name: "LastTableHeadCellFirstRow",
     _subselector: " > th:last-child:not(:only-child)",
     _properties: (
-        border-right-style: none,
-        border-right-color: transparent,
-        border-right-width: 0rem,
+        border-right-style: solid,
+        border-right-color: enum('ValueSet:::REQUIRED'),
+        border-right-width: 0.08rem,
         border-left-style: solid,
         border-left-color: enum('ValueSet:::REQUIRED'), 
         border-left-width: 0.08rem, //1px converted to rem

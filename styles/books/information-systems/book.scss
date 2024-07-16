@@ -48,7 +48,7 @@ TextHeavyWithTitleTable: (
 // EOC
 @include add_settings((
     ExercisesModule: (
-        _selectors: (".os-review-questions-container", '.os-check-understanding-container', '.os-reflection-questions-container', '.os-media-questions-container'),
+        _selectors: (".os-review-questions-container", '.os-check-understanding-container', '.os-application-questions-container'),
         'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
         'ProblemSolutionNumber:::width': 2%,
         'ProblemSolutionNumber:::text-align': right,
@@ -110,11 +110,11 @@ TextHeavyWithTitleTable: (
         'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
         'H5Title:::font-family': (_ref: 'typography:::baseFont'),
     ),
-    ReflectionQuestionsTitles: (
-        _selectors: (".os-reflection-questions-container"),
+    ApplicationQuestionsTitles: (
+        _selectors: (".os-application-questions-container"),
         'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
         'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg")) no-repeat top left,
+        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-suggested.svg")) no-repeat top left,
         'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
         'H3Title:::font-family': (_ref: 'typography:::baseFont'),
         'H3Title:::color': (_ref: 'colorMap:::titleColor'),
@@ -122,20 +122,7 @@ TextHeavyWithTitleTable: (
         'H4Title:::color': (_ref: 'colorMap:::titleColor'),
         'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
         'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-    ),
-    MediaQuestionsTitles: (
-        _selectors: (".os-media-questions-container"),
-        'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-        'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-        'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-media.svg")) no-repeat top left,
-        'H3Title:::font-family': (_ref: 'typography:::titleFont'),
-        'H3Title:::color': (_ref: "colorMap:::titleColor"),
-        'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-        'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-        'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-        'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-        'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-    ),
+    )
 ));
 
 // Notes
@@ -143,11 +130,11 @@ TextHeavyWithTitleTable: (
     // Option 2
     FutureTech: (
         _selectors: (".future-tech"),
-        "Title:::background-color": (_ref: "colorMap:::noteOption2HeaderBackgroundColor"),
-        "Title:::color": (_ref: "colorMap:::noteOption2HeaderColor"),
+        "Title:::background-color": (_ref: "colorMap:::noteOption5HeaderBackgroundColor"),
+        "Title:::color": (_ref: "colorMap:::noteOption5HeaderColor"),
         "Title:::font-family": (_ref: "typography:::titleFont"),
         "Body:::font-family": (_ref: "typography:::baseFont"),
-        "Body:::background-color": (_ref: "colorMap:::noteOption2BodyBackgroundColor"),
+        "Body:::background-color": (_ref: "colorMap:::noteOption5BodyBackgroundColor"),
         "Subtitle:::color": (_ref: "colorMap:::noteSubtitleColor"),
         "Subtitle:::font-family": (_ref: "typography:::titleFont"),
         "ProblemSolutionTitle:::font-family": (_ref: "typography:::baseFont")
@@ -223,8 +210,7 @@ TextHeavyWithTitleTable: (
 @include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('ReviewTitles', 'cardboard:::EocCompositePageTitlesShape');
 @include use('CheckUnderstandingTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('ReflectionQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('MediaQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include use('ApplicationQuestionsTitles', 'cardboard:::EocCompositePageTitlesShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'cardboard:::ChapterOutlineShape');
@@ -244,6 +230,7 @@ TextHeavyWithTitleTable: (
 @include use('DefaultTable', 'cardboard:::TableWithBordersShape');
 @include use('TextHeavyWithTitleTable', 'cardboard:::TableWithoutBordersShape');
 @include use('TableAfterExercisePara', 'cardboard:::TableTopSpacingShape');
+@include use('VerticallyTightTable', 'cardboard:::VerticallyTightTableShape');
 
 // Eoc
 @include use('KeyTerms', 'cardboard:::KeyTermsShape');

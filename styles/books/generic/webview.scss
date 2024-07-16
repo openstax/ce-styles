@@ -1,3 +1,4 @@
+@use 'lib/webview/webview';
 @import 'framework/framework';
 @import '../../design-settings/webview/settings';
 @import '../../design-settings/webview/design';
@@ -104,7 +105,7 @@
 //Notes
 @include add_settings((
     Note: (
-        _selectors: ('[data-type="note"]', '.note', '[data-type="example"]', '.example'),
+        _selectors: ('[data-type="note"]:not(.reference)', '.note', '[data-type="example"]', '.example'),
         'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
         'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
         'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
@@ -125,7 +126,7 @@
 //Exercises
 @include add_settings((
     Exercise: (
-        _selectors: ('[data-type="example"]', '.example', '[data-type="exercise"]', '.exercise'),
+        _selectors: ('[data-type="exercise"]'),
         'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
         'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
@@ -176,45 +177,6 @@
     ),
 ));
 
-
-
-// Code Colors
-
-@include add_settings((
-    CodeComment: (
-        _selectors: ('.hljs-comment'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonCommentColor'),
-    ),
-    CodeKeyword: (
-        _selectors: ('.hljs-keyword'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonKeywordColor'),
-    ),
-    CodeFunction: (
-        _selectors: ('.hljs-function'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonFunctionColor'),
-    ),
-    CodeTitle: (
-        _selectors: ('.hljs-title'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonTitleColor'),
-    ),
-    CodeParams: (
-        _selectors: ('.hljs-params'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonParamsColor'),
-    ),
-    CodeString: (
-        _selectors: ('.hljs-string'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonStringColor'),
-    ),
-    CodeBuildIn: (
-        _selectors: ('.hljs-built_in'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonBuiltInColor'),
-    ),
-    CodeNumber: (
-        _selectors: ('.hljs-number'),
-        'ColoredTextContainer:::color': (_ref: 'colorMap:::codePythonNumberColor'),
-    ),
-));
-
 //Functions
 @include add_settings((
     Function: (
@@ -244,6 +206,7 @@
 @include add_settings((
     References: (
         _selectors: (".os-eob", ".os-eoc"),
+        'ChapterAreaReference:::color': (_ref: 'colorMap:::baseColor'),
     ),
     ReferencesCiteLink: (
         _selectors: ('a[data-type="cite"]'),
@@ -270,8 +233,11 @@
 
 //Equation
 @include add_settings((
-    Equation: (
-        _selectors: ('.equation', '[data-type="equation"]'),
+    EquationUnnumbered: (
+        _selectors: ('[data-type="equation"].unnumbered'),
+    ),
+    EquationNumbered: (
+        _selectors: ('[data-type="equation"]:not(.unnumbered)'),
         'EquationNumber:::border-color': (_ref: 'colorMap:::EquationNumberBorder'),
     ),
 ));
@@ -319,9 +285,6 @@
   )
 ));
 
-
-
-
 @include add_settings((
     RedColoredText: (
         _selectors: ('*:not(.os-term) > .red-text'),
@@ -354,20 +317,6 @@
     BlueColoredText: (
         _selectors: ('.blue-text'),
         'ColoredTextContainer:::color': (_ref: 'colorMap:::BlueTextColor'),
-    ),
-));
-
-@include add_settings((
-    AnswerKey: (
-        _selectors: ('.os-eob.os-solutions-container'),
-    ),
-    AnswerKeySolutionWithProblemPrefix: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
-        'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
-    ),
-    AnswerKeySolutionMultipart: (
-        _selectors: ('.os-eob [data-type="question-solution"]'),
-        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
     ),
 ));
 
@@ -436,15 +385,8 @@
 @include use('Blockquote', 'webview:::BlockquoteShape');
 
 // Code Snippets
-@include use('CodeComment', 'common:::ColoredText');
-@include use('CodeComment', 'common:::ItalicTextShape');
-@include use('CodeKeyword', 'common:::ColoredText');
-@include use('CodeFunction', 'common:::ColoredText');
-@include use('CodeTitle', 'common:::ColoredText');
-@include use('CodeParams', 'common:::ColoredText');
-@include use('CodeString', 'common:::ColoredText');
-@include use('CodeBuildIn', 'common:::ColoredText');
-@include use('CodeNumber', 'common:::ColoredText');
+@include webview.hljs-colors();
+@include webview.green-code();
 @include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
 
 // Functions
@@ -462,7 +404,8 @@
 // Footnote
 @include use('Footnote', 'webview:::FootnoteShape');
 // Equation
-@include use('Equation', 'webview:::EquationShape');
+@include use('EquationUnnumbered', 'webview:::EquationUnnumberedShape');
+@include use('EquationNumbered', 'webview:::EquationNumberedShape');
 // Annotations
 @include use('AnnotationText', 'webview:::AnnotationShape');
 @include use('PublicDomainText', 'webview:::AnnotationWithBorderShape');
@@ -494,9 +437,8 @@
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
-@include use('AnswerKey', 'webview:::AnswerKeyShape');
-@include use('AnswerKeySolutionWithProblemPrefix', 'webview:::AnswerKeySolutionWithProblemPrefixShape');
-@include use('AnswerKeySolutionMultipart', 'webview:::AnswerKeySolutionMultipartShape');
+@include webview.eob-answer-key();
+@include webview.eoc-answer-key();
 
 // Icons
 $icons: (

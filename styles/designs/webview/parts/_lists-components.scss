@@ -8,6 +8,23 @@ $UnorderedList: (
   )
 );
 
+$UnorderedList--Nested: (
+  _name: 'UnorderedListNested', 
+  _subselector: ' ul',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
+  )
+);
+
+$UnorderedList--NoBullet: (
+  _name: 'UnorderedListNoBullet', 
+  _subselector: ' ul[data-bullet-style="none"]',
+  _properties: (
+    list-style-type: none,
+  )
+);
+
 $OrderedList: (
   _name: 'OrderedList', 
   _subselector: ' ol',
@@ -15,6 +32,15 @@ $OrderedList: (
     margin-top: 1rem,
     margin-bottom: 1rem,
     color: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$OrderedList--Nested: (
+  _name: 'OrderedListNested', 
+  _subselector: ' ol',
+  _properties: (
+    margin-top: 0,
+    margin-bottom: 0,
   )
 );
 
@@ -122,6 +148,32 @@ $StepwiseList__NestedList--Ordered: (
     _subselector: " > ol",
     _properties: (
       padding-left: 1rem,
+    )
+);
+
+$CircledList: (
+    _name: "CircledList",
+    _subselector: ".circled",
+    _properties:(
+        list-style-type: none,
+    )
+);
+
+$CircledList__Item: (
+    _name: "CircledListItem",
+    _subselector: " > li",
+    _properties:(
+        position: relative,
+        left: -2rem,
+    )
+);
+
+$CircledList__Token: (
+    _name: "CircledListToken",
+    _subselector: " > .token",
+    _properties:(
+        padding-right: .5rem,
+        vertical-align: 'baseline !important'
     )
 );
 

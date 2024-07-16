@@ -262,14 +262,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {
@@ -2897,6 +2897,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
+}
+
+.os-references-container p {
+  text-indent: -16px;
+  padding-left: 16px;
 }
 
 .os-index-container {

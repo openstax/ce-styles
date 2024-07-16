@@ -140,6 +140,15 @@ $InjectedExercise__Solution: (
   )
 );
 
+$InjectedExercise__Solution__Part: (
+  _name: "InjectedSolutionPart",
+  _subselector: ' > [data-type="solution-part"]',
+  _properties: (
+    display: inline-table,
+    margin-right: h-spacing(1),
+  )
+);
+
 $Exercise__Solution__Container: (
     _name: "ExerciseSolutionContainer",
     _subselector: " > .os-solution-container",

@@ -1,8 +1,14 @@
 @import './equation-components';
 
-@include create_shape('webview:::EquationShape', (
+@include create_shape('webview:::EquationUnnumberedShape', (
     _components: (
-        map-merge($Equation__Container, (
+        $Equation__Container--Unnumbered,
+    ),
+));
+
+@include create_shape('webview:::EquationNumberedShape', (
+    _components: (
+        map-merge($Equation__Container--Numbered, (
             _components: (
                 $Equation__Title,
                 map-merge($Equation__Number__Container, (
@@ -10,6 +16,7 @@
                         $Equation__Number,
                     ),
                 )),
+                $Equation__MathJax,
             ),
         )),
     ),

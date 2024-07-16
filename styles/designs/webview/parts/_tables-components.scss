@@ -108,6 +108,24 @@ $Table__Head__Cell: (
   )
 );
 
+$Table__Row--HeaderRowClass: (
+    _name: "HeaderRow",
+    _subselector: " > tr.header-row > td",
+    _properties: (
+        border-top-color: black,
+        border-top-width: 0.1rem,
+        border-top-style: solid,
+        border-bottom-color: black,
+        border-bottom-width: 0.1rem,
+        border-bottom-style: solid,
+        padding-top: 0.7rem,
+        padding-bottom: 0.7rem,
+        font-weight: 700,
+        padding-left: table-h-spacing(1),
+        padding-right: table-h-spacing(1),
+    )
+);
+
 $Table__Data: (
   _name: "TableData",
   _subselector: ' > td:not(.hljs-ln-numbers, .hljs-ln-code)',

@@ -263,14 +263,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {
@@ -1843,8 +1843,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: black;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
-  padding-top: 0.16rem;
-  padding-bottom: 0.16rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
   font-weight: 700;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -1877,6 +1877,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > strong {
   word-break: break-word;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
+  border-left: 0.025rem solid black;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
@@ -2022,16 +2026,154 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.16rem;
 }
 
+.os-table [data-columns="2"][data-ratio="1,1"] col[data-width="1*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,2"] col[data-width="1*"] {
+  width: 33.3333333333%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,2"] col[data-width="2*"] {
+  width: 66.6666666667%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="2"][data-ratio="1,3"] col[data-width="3*"] {
+  width: 75%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="2*"] {
+  width: 40%;
+}
+
+.os-table [data-columns="2"][data-ratio="2,3"] col[data-width="3*"] {
+  width: 60%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,1,1"] col[data-width="1*"] {
+  width: 33.3333333333%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="2*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="1*"] {
+  width: 20%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="2*"] {
+  width: 40%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="2*"] {
+  width: 33.3333333333%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="3*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="1*"] {
+  width: 14.2857142857%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="3*"] {
+  width: 42.8571428571%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="1*"] {
+  width: 5.8823529412%;
+}
+
+.os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="8*"] {
+  width: 47.0588235294%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,1,1"] col[data-width="1*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="1*"] {
+  width: 20%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="2*"] {
+  width: 40%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+  width: 50%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="1*"] {
+  width: 16.6666666667%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="2*"] {
+  width: 33.3333333333%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="1*"] {
+  width: 14.2857142857%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="2*"] {
+  width: 28.5714285714%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+  width: 12.5%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+  width: 25%;
+}
+
+.os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+  width: 37.5%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
+  width: 20%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="1*"] {
+  width: 11.1111111111%;
+}
+
+.os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
+  width: 22.2222222222%;
+}
+
 [data-type=page] > ol {
   margin-left: 32px;
 }
 
 [data-type=page] > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) {
@@ -2040,22 +2182,68 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > ol {
   margin-left: 32px;
 }
 
-[data-type=page] > section > ol > li > ol {
-  margin-left: 24px;
-}
-
 [data-type=page] > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ol > li > ul > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ol > li > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
@@ -2064,10 +2252,54 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol {
@@ -2076,12 +2308,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol > li > ul > li > ul > li::before {
@@ -2089,22 +2323,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > ol > li > ul > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ol > li > ol > li > ul > li::before {
@@ -2112,12 +2349,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > ol > li > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) {
@@ -2126,12 +2364,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
@@ -2139,22 +2379,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
@@ -2162,12 +2405,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol {
@@ -2176,12 +2420,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol > li > ul > li > ul > li::before {
@@ -2189,22 +2435,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ol > li > ul > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ol > li > ol > li > ul > li::before {
@@ -2212,12 +2461,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ol > li > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
@@ -2226,12 +2476,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
@@ -2239,22 +2491,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
@@ -2262,12 +2517,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: '▪';
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 8px;
   vertical-align: middle;
 }
 
 [data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
@@ -2276,10 +2532,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > section > ol {
@@ -2288,10 +2546,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > section > section > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > section > section > section > section > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > div > div > ol {
@@ -2300,10 +2560,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > div > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) {
@@ -2312,10 +2574,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
@@ -2324,10 +2588,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > section > ol {
@@ -2336,10 +2602,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > section > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > ol {
@@ -2348,10 +2616,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
@@ -2360,10 +2630,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
@@ -2372,10 +2644,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > div > section > ol {
@@ -2384,10 +2658,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-page] > div > div > section > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=composite-page] > div > div > section > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 .os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
@@ -2396,10 +2672,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 .os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 .os-table > table > tbody > tr > td > ol {
@@ -2408,10 +2686,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table > table > tbody > tr > td > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 .os-table > table > tbody > tr > td > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > ul:not([data-labeled-item=true]) {
@@ -2428,10 +2708,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > ol {
@@ -2440,14 +2730,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=problem] > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=problem] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=problem] > div > ol > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
@@ -2456,10 +2757,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > div > ol {
@@ -2468,10 +2771,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=problem] > div > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=problem] > div > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > ul:not([data-labeled-item=true]) {
@@ -2488,10 +2793,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > ol {
@@ -2500,14 +2815,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=exercise-question] > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=exercise-question] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=exercise-question] > div > ol > li > div > ol {
+  margin-left: 32px;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
@@ -2516,10 +2842,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > div > ol {
@@ -2528,10 +2856,182 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=exercise-question] > div > div > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=exercise-question] > div > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=solution] > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > ol > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > ol > li > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=solution] > div > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=solution] > div > div > ol > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > ol {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > ol > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > ol > li > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > div > ol {
+  margin-left: 32px;
+}
+
+[data-type=question-solution] > div > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=question-solution] > div > div > ol > li > ul {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) {
@@ -2540,10 +3040,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > ol {
@@ -2552,34 +3054,124 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note] > ol > li > ol {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > div > ul:not([data-labeled-item=true]) {
   margin-left: 32px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
-  margin-left: 24px;
-}
-
 [data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > div > ol {
   margin-left: 32px;
 }
 
-[data-type=note] > div > ol > li > ol {
-  margin-left: 24px;
-}
-
 [data-type=note] > div > ol > li > ul {
   margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ol > li > ul > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ol > li > ul > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ol > li > ul > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ol > li > ol > li > ul {
+  padding-left: 24px;
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+[data-type=note] > div > ol > li > ol > li > ul > li::before {
+  font-size: 6px;
+  content: '▪';
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  vertical-align: middle;
+}
+
+[data-type=note] > div > ol > li > ol > li > ol {
+  margin-left: 24px;
+  margin-bottom: 0;
 }
 
 [data-type=note] > div > :last-child ul {
@@ -2619,10 +3211,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .unfolding-casestudy > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
 }
 
 .link-to-learning > .os-title {
@@ -2683,8 +3275,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .link-to-learning > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .link-to-learning > .os-note-body > :last-child {
@@ -2750,8 +3344,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .rn-stories > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .rn-stories > .os-note-body > :last-child {
@@ -2817,8 +3413,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .clinical-safety > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .clinical-safety > .os-note-body > :last-child {
@@ -2884,8 +3482,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .cultural-context > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .cultural-context > .os-note-body > :last-child {
@@ -2951,8 +3551,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .lifestage-context > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .lifestage-context > .os-note-body > :last-child {
@@ -3018,8 +3620,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .patient-conversations > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .patient-conversations > .os-note-body > :last-child {
@@ -3085,8 +3689,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .pharma-connections > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .pharma-connections > .os-note-body > :last-child {
@@ -3152,8 +3758,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .legal-ethical > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .legal-ethical > .os-note-body > :last-child {
@@ -3219,8 +3827,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .multi-disciplinary > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .multi-disciplinary > .os-note-body > :last-child {
@@ -3253,10 +3863,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .clinical-judgment > .os-note-body > .os-subtitle, h4[data-type=title] {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
-  font-family: IBM Plex Sans, sans-serif;
-  font-weight: bold;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
 }
 
 .electronic-hr > .os-title {
@@ -3317,8 +3927,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .electronic-hr > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .electronic-hr > .os-note-body > :last-child {
@@ -3384,13 +3996,93 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .psychosocial-considerations > .os-note-body div:not([class]) > [data-type=title], div[data-type=title] {
-  font-size: 1rem;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .psychosocial-considerations > .os-note-body > :last-child {
   margin-bottom: 0;
   padding-bottom: 0.7rem;
+}
+
+.unfolding-casestudy [data-type=exercise], .electronic-hr [data-type=exercise] {
+  margin-bottom: 0.7rem;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem], .electronic-hr [data-type=exercise] [data-type=problem] {
+  display: table;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-number, .electronic-hr [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+  min-width: 24px;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-divider, .electronic-hr [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container, .electronic-hr [data-type=exercise] [data-type=problem] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container > p, .electronic-hr [data-type=exercise] [data-type=problem] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .electronic-hr [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .electronic-hr [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+.unfolding-casestudy [data-type=exercise] [data-type=solution] > .solution-title, .electronic-hr [data-type=exercise] [data-type=solution] > .solution-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.unfolding-casestudy [data-type=injected-exercise], .electronic-hr [data-type=injected-exercise] {
+  margin-bottom: 0.7rem;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question], .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] {
+  display: table;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+  min-width: 24px;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 8px;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
+  margin-bottom: 0;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+  font-weight: bold;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
+  display: inline;
+}
+.unfolding-casestudy [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .electronic-hr [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
+  display: inline;
 }
 
 .os-glossary-container > dl {
@@ -3409,568 +4101,84 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 0px;
 }
 
-.os-review-questions-container [data-type=exercise] {
+.os-review-questions-container [data-type=exercise], .os-check-understanding-container [data-type=exercise], .os-critical-thinking-container [data-type=exercise], .os-competency-based-container [data-type=exercise], .os-reflection-questions-container [data-type=exercise], .os-what-nurses-do-container [data-type=exercise] {
   margin-bottom: 0.7rem;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] {
+.os-review-questions-container [data-type=exercise] [data-type=problem], .os-check-understanding-container [data-type=exercise] [data-type=problem], .os-critical-thinking-container [data-type=exercise] [data-type=problem], .os-competency-based-container [data-type=exercise] [data-type=problem], .os-reflection-questions-container [data-type=exercise] [data-type=problem], .os-what-nurses-do-container [data-type=exercise] [data-type=problem] {
   display: table;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-number {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-number, .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-number, .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-number, .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-number, .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-number, .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
   min-width: 24px;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-divider {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-divider, .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-divider, .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-divider, .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-divider, .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-divider, .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-divider {
   margin-right: 8px;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container, .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container, .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container, .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container, .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container, .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p, .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container > p, .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container > p, .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container > p, .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p, .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
   margin-bottom: 0;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title], .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
   font-weight: bold;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
+.os-review-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element, .os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
-
-.os-review-questions-container [data-type=exercise] [data-type=solution] > .solution-title {
+.os-review-questions-container [data-type=exercise] [data-type=solution] > .solution-title, .os-check-understanding-container [data-type=exercise] [data-type=solution] > .solution-title, .os-critical-thinking-container [data-type=exercise] [data-type=solution] > .solution-title, .os-competency-based-container [data-type=exercise] [data-type=solution] > .solution-title, .os-reflection-questions-container [data-type=exercise] [data-type=solution] > .solution-title, .os-what-nurses-do-container [data-type=exercise] [data-type=solution] > .solution-title {
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
-
-.os-review-questions-container [data-type=injected-exercise] {
+.os-review-questions-container [data-type=injected-exercise], .os-check-understanding-container [data-type=injected-exercise], .os-critical-thinking-container [data-type=injected-exercise], .os-competency-based-container [data-type=injected-exercise], .os-reflection-questions-container [data-type=injected-exercise], .os-what-nurses-do-container [data-type=injected-exercise] {
   margin-bottom: 0.7rem;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question], .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question], .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question], .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question], .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question], .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] {
   display: table;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  width: 2%;
+  text-align: right;
   min-width: 24px;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
   display: table-cell;
   width: 100%;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
-  display: inline;
-}
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
-  display: inline;
-}
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
   margin-bottom: 0;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title], .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
   font-weight: bold;
 }
-
-.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
   padding-top: 0.7rem;
   width: 100%;
 }
-
-.os-check-understanding-container [data-type=exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-check-understanding-container [data-type=exercise] [data-type=solution] > .solution-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context], .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
   display: inline;
 }
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
+.os-review-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider, .os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
   display: inline;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-check-understanding-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-critical-thinking-container [data-type=exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-critical-thinking-container [data-type=exercise] [data-type=solution] > .solution-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
-  display: inline;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
-  display: inline;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-competency-based-container [data-type=exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-competency-based-container [data-type=exercise] [data-type=solution] > .solution-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.os-competency-based-container [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
-  display: inline;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
-  display: inline;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-competency-based-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-reflection-questions-container [data-type=exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-reflection-questions-container [data-type=exercise] [data-type=solution] > .solution-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
-  display: inline;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
-  display: inline;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-reflection-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-what-nurses-do-container [data-type=exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] {
-  display: table;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=problem] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-what-nurses-do-container [data-type=exercise] [data-type=solution] > .solution-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  min-width: 24px;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > div[data-type=exercise-context] {
-  display: inline;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > span.os-divider {
-  display: inline;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p {
-  margin-bottom: 0;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > p > span[data-type=title] {
-  font-weight: bold;
-}
-
-.os-what-nurses-do-container [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
 }
 
 .os-references-container > p {

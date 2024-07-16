@@ -262,14 +262,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {
@@ -1227,7 +1227,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 [data-type=page] .learning-objectives > h3[data-type=title] {
   color: #24739E;
   font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
@@ -1397,7 +1397,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 .os-figure:not(.has-splash) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-figure.has-splash {
@@ -1472,7 +1472,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
 .os-figure.has-splash > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 h4.os-subtitle + .os-figure:not(.has-splash) > figure {
@@ -1621,9 +1621,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:first-child:not(:only-child) {
-  border-left-style: none;
-  border-left-color: transparent;
-  border-left-width: 0rem;
+  border-left-style: solid;
+  border-left-color: #0DC0DC;
+  border-left-width: 0.08rem;
   border-right-style: solid;
   border-right-color: #757474;
   border-right-width: 0.08rem;
@@ -1646,9 +1646,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:last-child:not(:only-child) {
-  border-right-style: none;
-  border-right-color: transparent;
-  border-right-width: 0rem;
+  border-right-style: solid;
+  border-right-color: #0DC0DC;
+  border-right-width: 0.08rem;
   border-left-style: solid;
   border-left-color: #757474;
   border-left-width: 0.08rem;
@@ -2126,7 +2126,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-table.os-data-table-container {
@@ -2187,9 +2187,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table.os-data-table-container > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:first-child:not(:only-child) {
-  border-left-style: none;
-  border-left-color: transparent;
-  border-left-width: 0rem;
+  border-left-style: solid;
+  border-left-color: #0DC0DC;
+  border-left-width: 0.08rem;
   border-right-style: solid;
   border-right-color: #757474;
   border-right-width: 0.08rem;
@@ -2212,9 +2212,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 .os-table.os-data-table-container > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:last-child:not(:only-child) {
-  border-right-style: none;
-  border-right-color: transparent;
-  border-right-width: 0rem;
+  border-right-style: solid;
+  border-right-color: #0DC0DC;
+  border-right-width: 0.08rem;
   border-left-style: solid;
   border-left-color: #757474;
   border-left-width: 0.08rem;
@@ -2692,7 +2692,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table.os-data-table-container > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-eoc .os-problem-container > p + .os-table {

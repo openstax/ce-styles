@@ -262,14 +262,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {
@@ -851,32 +851,32 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-left: 8px;
 }
 
-[data-type=page] .learning-objectives > h3[data-type=title] {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > h3[data-type=title] {
   color: #24739E;
   font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1.44rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-[data-type=page] .learning-objectives > p:first-of-type {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > p:first-of-type {
   margin: 0;
 }
 
-[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
 
-[data-type=page] .learning-objectives > ul:not([data-labeled-item=true]) > li {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
 
-[data-type=page] .learning-objectives > ol {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol {
   margin-left: 24px;
 }
 
-[data-type=page] .learning-objectives > ol > li {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol > li {
   max-width: 5.9in;
 }
 
@@ -928,6 +928,15 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 [data-type=example] > .body h4[data-type=solution-title] {
+  font-family: Roboto Condensed, StixGeneral;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=example] > .body h4[data-type=problem-title] {
   font-family: Roboto Condensed, StixGeneral;
   color: #000000;
   font-size: 1rem;
@@ -1039,7 +1048,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-figure.has-splash > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-figure:not(.has-splash) > figure {
@@ -1080,7 +1089,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-figure:not(.has-splash) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener).preface > h1 {
@@ -1418,9 +1427,9 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:first-child:not(:only-child) {
-  border-left-style: none;
-  border-left-color: transparent;
-  border-left-width: 0rem;
+  border-left-style: solid;
+  border-left-color: #0DC0DC;
+  border-left-width: 0.08rem;
   border-right-style: solid;
   border-right-color: #757474;
   border-right-width: 0.08rem;
@@ -1443,9 +1452,9 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:last-child:not(:only-child) {
-  border-right-style: none;
-  border-right-color: transparent;
-  border-right-width: 0rem;
+  border-right-style: solid;
+  border-right-color: #0DC0DC;
+  border-right-width: 0.08rem;
   border-left-style: solid;
   border-left-color: #757474;
   border-left-width: 0.08rem;
@@ -1923,7 +1932,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
-  color: #757474;
+  color: #5C5C5C;
 }
 
 .os-eoc .os-problem-container > p + .os-table {
@@ -2581,9 +2590,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 .hljs-comment {
   color: #5C5C5C;
-}
-
-.hljs-comment {
   font-style: italic;
 }
 

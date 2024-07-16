@@ -262,14 +262,14 @@ h3, h4, h5, h6 {
   bookmark-level: none;
 }
 
-pre > span {
+pre:not(.inline-code) > span {
   white-space: normal;
   vertical-align: top;
   display: inline;
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 pre.inline-code {
@@ -1604,7 +1604,7 @@ span.kinesthetic-icon {
 
 [data-type=page].narrative-trailblazer > h2[data-type=document-title] > .os-number {
   font-size: 1.44rem;
-  font-family: Archivo, sans-serif, StixGeneral;
+  font-family: Archivo Black, sans-serif, StixGeneral;
   color: #000000;
   padding-right: 8px;
   padding-top: 8px;
@@ -1616,7 +1616,7 @@ span.kinesthetic-icon {
 [data-type=page].narrative-trailblazer > h2[data-type=document-title] > .os-text {
   font-size: 1.44rem;
   color: #000000;
-  font-family: Archivo, sans-serif, StixGeneral;
+  font-family: Archivo Black, sans-serif, StixGeneral;
   font-weight: 700;
   padding-right: 8px;
   padding-top: 8px;

@@ -1,3 +1,5 @@
+@use 'lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -204,16 +206,6 @@ $ChapterIntroType: fullWidth;
 ));
 
 @include add_settings((
-  EocExercisesModules: (
-    _selectors: (
-        '.os-review-questions-container', '.os-check-understanding-container', '.os-critical-thinking-container',
-        '.os-competency-based-container', '.os-reflection-questions-container', '.os-what-nurses-do-container'
-    ),
-    'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
-  ),
-));
-
-@include add_settings((
   AppendixGlossary: (
     _selectors: (".appendix > .column-container"),
     'H3AppendixGlossaryTitle:::color': (_ref: "colorMap:::nursingHeaderColor"),
@@ -266,12 +258,14 @@ $ChapterIntroType: fullWidth;
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 @include use('ColumnHeaderTable', 'carnival:::ColumnHeaderTableShape');
 @include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
 
 // Lists
 @include use('PageLists', 'carnival:::PageListsShape');
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use('TableLists', 'carnival:::TableListShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
 @include use("NotesLists", "carnival:::NotesListsShape");
 @include use("ListsFromStimulus", "carnival:::ListsFromStimulusShape");
 
@@ -291,9 +285,16 @@ $ChapterIntroType: fullWidth;
 @include use('ElectronicHrNote', 'carnival:::IconNoteShape');
 @include use('PsychosocialConsiderationsNote', 'carnival:::IconNoteShape');
 
+// Exercise in Note
+@include carnival.exercises('.unfolding-casestudy, .electronic-hr');
+
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
-@include use('EocExercisesModules','carnival:::ExercisesModuleShape');
+@include carnival.exercises(
+  '.os-review-questions-container, .os-check-understanding-container, .os-critical-thinking-container,'
+  '.os-competency-based-container, .os-reflection-questions-container, .os-what-nurses-do-container',
+  $number-width: 2%
+);
 @include use('ReferencesWithIndentation', 'carnival:::ModuleWithIndentationShape');
 
 // EOB
