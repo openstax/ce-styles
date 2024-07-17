@@ -2,8 +2,8 @@ import * as sass from 'sass-embedded';
 import * as fs from 'fs';
 import { toDataUri } from './functions.js';
 
-// compiles a single style with given input & output paths
-const compileAStyle = (path, outputPath) => {
+// synchronous: compiles a single style with given input & output paths
+const compileAStyleSync = (path, outputPath) => {
   // compile with metrics
   let start = performance.now();
   const result = sass.compile(
@@ -25,6 +25,30 @@ const compileAStyle = (path, outputPath) => {
 
   // write
   fs.writeFileSync(outputPath, result.css, (err) => { if (err) throw err; });
+}
+
+// asynchronous: compiles a single style with given input & output paths
+// using this instead of the above function gives about 2x performance
+const compileAStyleAsync = (path, outputPath) => {
+  const resultPromise = sass.compileAsync(
+    path,
+    {
+      loadPaths: [ '', 'styles/'],
+      sourceMap: true,
+      functions: {
+        'toDataUri($type, $path)': function(args) {
+          return new sass.SassString(
+            toDataUri(args[0].textInternal, args[1].textInternal)
+          );
+        }
+      }
+    }
+  );
+  // write
+  resultPromise.then((result) => {
+    console.log(`finished compiling ${path}`);
+    fs.writeFileSync(outputPath, result.css, (err) => { if (err) throw err; });
+  })
 }
 
 // given a book keyword, gets input & output paths
@@ -73,8 +97,10 @@ const main = (args) => {
   console.log(`Compiling styles for ${total} books...`);
   args.forEach((book, index) => {
     let { bookPath, outPath } = getPaths(book);
-    console.log(`${index+1}/${total} ${bookPath} -> ${outPath}`);
-    compileAStyle(bookPath, outPath);
+    console.log(book);
+    compileAStyleAsync(bookPath, outPath);
+    // console.log(`${index+1}/${total} ${bookPath} -> ${outPath}`);
+    // compileAStyleSync(bookPath, outPath);
   })
 }
 
