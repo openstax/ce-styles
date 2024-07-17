@@ -78,49 +78,6 @@
 
 //Composite pages
 
-@include create_shape('cardboard:::EocCompositePageTitlesShape', ( // settings for this shape are defined in book.scss file, because each module use different icon
-    _components: (
-        map-merge($Page--Composite__Container, (
-            _components: (
-                map-merge($H2--WithIcon,(
-                    _components:(
-                        $H2--WithIcon__Icon,
-                    ),
-                )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $H3--Link,
-                    ),
-                )),
-                map-merge($DivWrapper--SecondLevel,(
-                    _components:(
-                        map-merge($SectionWrapper--FirstLevel,(
-                            _components:(
-                                $H4--Link,
-                            ),
-                        )),
-                    ),
-                )),
-                map-merge($DivWrapper--FirstLevel,(
-                    _components:(
-                        $H3,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $H4,
-                    ),
-                )),
-                map-merge($SectionWrapper--ThirdLevel,(
-                    _components:(
-                        $H5,
-                    ),
-                )),
-            )
-        )),
-    )
-));
-
 @include create_shape('cardboard:::EobCompositePageTitlesShape', ( // Index, References
     _components: (
         map-merge($Page--Composite__Container, (

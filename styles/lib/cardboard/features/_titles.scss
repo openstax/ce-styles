@@ -1,11 +1,12 @@
-@use 'lib/cardboard/theme' as cardboard;
+@use 'lib/cardboard/colors';
+@use 'lib/cardboard/fonts';
 
 // Page titles
 @mixin page-titles(
-  $large-header-font:       cardboard.$roboto,
-  $header-color:            cardboard.$B4,
-  $appendix-number-border:  cardboard.$B2,
-  $h2-number-border:        cardboard.$B3
+  $large-header-font:       fonts.$roboto,
+  $header-color:            colors.$B4,
+  $appendix-number-border:  colors.$B2,
+  $h2-number-border:        colors.$B3
 ) {
   [data-type=page]:not(.introduction):not(.unit-opener) {
     &.preface > h1 {
@@ -77,7 +78,7 @@
         > section > h5 {
           @include -header-in-body(
             $font-size: 1rem,
-            $color: cardboard.$black
+            $color: colors.$black
           );
         }
       }
@@ -88,7 +89,7 @@
 @mixin -header-in-body($font-size, $color) {
   color: $color;
   font-size: $font-size;
-  font-family: cardboard.$noto;
+  font-family: fonts.$noto;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -107,13 +108,18 @@
 }
 
 // Eoc titles
-@mixin eoc-composite-page-titles($root, $svg) {
+@mixin eoc-composite-page-titles(
+  $root, $svg,
+  $h2-color: colors.$B4,
+  $h2-font: fonts.$roboto,
+  $h4-color: colors.$B4
+) {
   #{$root} {
     > h2 {
       display: flex;
       align-items: center;
-      color: cardboard.$B4;
-      font-family: cardboard.$roboto;
+      color: $h2-color;
+      font-family: $h2-font;
       font-size: 1.728rem;
       line-height: 1.728rem;
       margin-bottom: 0.7rem;
@@ -130,7 +136,7 @@
     > div {
       > h3 {
         @include -header-in-body(
-          $color: cardboard.$B4,
+          $color: colors.$B4,
           $font-size: 1.44rem
         )
       }
@@ -150,13 +156,13 @@
       }
       > section > h4 {
         @include -header-in-body(
-          $color: cardboard.$B4,
+          $color: $h4-color,
           $font-size: 1.2rem
         )
       }
       > section > section > h5 {
         @include -header-in-body(
-          $color: cardboard.$black,
+          $color: colors.$black,
           $font-size: 1rem
         )
       }
