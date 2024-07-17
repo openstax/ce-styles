@@ -1,9 +1,6 @@
-let start = performance.now();
-const sass = require('sass-embedded');
-const fs = require('fs');
-let finish = performance.now();
-
-console.log(`Loaded imports in ${ Math.round(finish - start) / 1000}s.`);
+import * as sass from 'sass-embedded';
+import * as fs from 'fs';
+import { toDataUri } from './functions.js';
 
 // compiles a single style with given input & output paths
 const compileAStyle = (path, outputPath) => {
@@ -16,8 +13,9 @@ const compileAStyle = (path, outputPath) => {
       sourceMap: true,
       functions: {
         'toDataUri($type, $path)': function(args) {
-          // TODO
-          return new sass.SassString('hello');
+          return new sass.SassString(
+            toDataUri(args[0].textInternal, args[1].textInternal)
+          );
         }
       }
     }
@@ -26,7 +24,7 @@ const compileAStyle = (path, outputPath) => {
   console.log(`compile time is ${ Math.round(finish - start) / 1000} seconds`);
 
   // write
-  fs.writeFile(outputPath, result.css, (err) => { if (err) throw err; });
+  fs.writeFileSync(outputPath, result.css, (err) => { if (err) throw err; });
 }
 
 // given a book keyword, gets input & output paths
@@ -49,7 +47,7 @@ const getPaths = (book) => {
 // searches book files for instances of theme keyword.
 // if at least one example is found, book is added to array & returned.
 const booksByTheme = (theme) => {
-  booksInTheme = []
+  let booksInTheme = []
   fs.readdirSync("styles/books/").forEach((book) => {
     let { bookPath, _ } = getPaths(book);
     let themePos = fs.readFileSync(bookPath, 'utf8').search(`${theme}:::`);
