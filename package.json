@@ -10,6 +10,10 @@
   },
   "scripts": {
     "download-fonts": "./script/download-fonts",
-    "lint": "stylelint './styles/**/*.scss'"
+    "lint": "stylelint './styles/**/*.scss'",
+    "compile": "node ./styles/build/build.js"
+  },
+  "dependencies": {
+    "sass-embedded": "^1.77.8"
   }
 }
