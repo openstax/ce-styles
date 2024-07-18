@@ -97,7 +97,7 @@ const main = (args) => {
   console.log(`Compiling styles for ${total} books...`);
   args.forEach((book, index) => {
     let { bookPath, outPath } = getPaths(book);
-    console.log(book);
+    // console.log(book);
     compileAStyleAsync(bookPath, outPath);
     // console.log(`${index+1}/${total} ${bookPath} -> ${outPath}`);
     // compileAStyleSync(bookPath, outPath);
