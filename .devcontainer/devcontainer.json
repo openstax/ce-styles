@@ -5,10 +5,9 @@
       "dockerfile": "../Dockerfile",
       "context": ".."
     },
-    "onCreateCommand": "bash ./.devcontainer/onCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=default",
     "workspaceFolder": "/code",
-    "customizations": { "vscode": { 
+    "customizations": { "vscode": {
       "settings": {
         "files.trimTrailingWhitespace": true,
         "files.insertFinalNewline": true,
@@ -19,7 +18,7 @@
         "editor.rulers": [100],
       },
       "extensions": [
-        "stylelint.vscode-stylelint", 
+        "stylelint.vscode-stylelint",
         "eamodio.gitlens"
       ]
     }}

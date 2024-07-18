@@ -26,8 +26,9 @@ WORKDIR /code
 COPY \
     package.json \
     yarn.lock \
-    pubspec.* \
     ./
+
+RUN yarn install
 
 RUN apt-get update
 RUN apt-get install shellcheck
@@ -41,7 +42,6 @@ RUN git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt && \
     echo 'export LP_USER_ALWAYS=-1' >>~/.config/liquidpromptrc && \
     sed -i "/color=auto/"' s/# //' ~/.bashrc && \
     sed -i "/alias ls/,/lA/"' s/# //' ~/.bashrc
-
 
 # Post-install builds the styles/output/_web-styles.json
 # which is not needed for being in a docker container.
