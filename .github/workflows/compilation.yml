@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 22
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Compile styles
         run: node ./styles/build/build.js
       - name: Check that compiled styles match output folder
