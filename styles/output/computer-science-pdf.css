@@ -3498,28 +3498,33 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
-[data-type=page] .learning-objectives > h3[data-type=title] {
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > h3[data-type=title] {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
+  font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
 }
-[data-type=page] .learning-objectives > p:first-of-type {
+
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > p:first-of-type {
   margin: 0;
 }
-[data-type=page] .learning-objectives > ul {
-  list-style-type: none;
+
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
 }
-[data-type=page] .learning-objectives > ul > li {
-  display: flex;
+
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ul:not([data-labeled-item=true]) > li {
   max-width: 5.9in;
 }
-[data-type=page] .learning-objectives > ul > li > span.os-abstract-token {
-  font-weight: bold;
-  margin-right: 8px;
-  color: #344456;
+
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol {
+  margin-left: 24px;
+}
+
+[data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > ol > li {
+  max-width: 5.9in;
 }
 
 .hljs-comment {

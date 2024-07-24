@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Unnumbered `Learning Objectives` in `computer-science`
 * Style `answer-key` in `neuroscience`
 * Add check for whether output compiled to CI
 * Rewrite `build.dart` to `build.js` and remove dart
