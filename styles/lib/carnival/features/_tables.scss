@@ -1,7 +1,7 @@
 @use 'lib/carnival/colors';
 @use 'lib/carnival/fonts';
 
-@mixin basic-table($border-after-table: $black) {
+@mixin basic-table($border-after-table: colors.$black) {
     .os-table:not(.os-unstyled-container) {
       margin-bottom: 0.7rem;
       display: table;
