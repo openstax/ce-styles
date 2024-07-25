@@ -1,4 +1,5 @@
 @use 'lib/carnival/carnival';
+@use 'lib/carnival/colors';
 
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-summary-container', generalSelector: '.os-eoc'),
@@ -234,10 +235,10 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedSolution','carnival:::FigureFromExercisesShape');
 
 // Tables
-@include carnival.basic-table();
+@include carnival.basic-table(colors.$B2);
 @include carnival.table-from-exercise();
 @include carnival.table-top-spacing();
-@include carnival.column-header-table();
+@include carnival.column-header-table(colors.$B2);
 @include carnival.vertically-tight-table();
 @include carnival.table-column();
 

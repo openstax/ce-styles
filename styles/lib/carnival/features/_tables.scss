@@ -1,114 +1,148 @@
-@use 'lib/carnival/theme' as carnival;
+@use 'lib/carnival/colors';
+@use 'lib/carnival/fonts';
 
-@mixin basic-table() {
-  .os-table:not(.os-unstyled-container) {
-    margin-bottom: 0.7rem;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    > table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-bottom: 0;
-      > thead > tr > th {
-        border-bottom: 0.1rem solid carnival.$black;
-        border-top: 0.1rem solid carnival.$black;
-        font-family: carnival.$titleOption1Font;
-        font-weight: 700;
+@mixin basic-table($border-after-table: $black) {
+    .os-table:not(.os-unstyled-container) {
+      margin-bottom: 0.7rem;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      > table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 0;
+        > thead > tr {
+          > th {
+            border-bottom: 0.1rem solid colors.$black;
+            border-top: 0.1rem solid colors.$black;
+            font-family: fonts.$mulish;
+            font-weight: 700;
+            padding: 0.7rem;
+          }
+          > th[data-valign=top] {
+            vertical-align: top;
+          }
+          > th[data-align=left] {
+            text-align: left;
+          }
+          > th[data-align=right] {
+            text-align: right;
+          }
+          > th[data-align=center] {
+            text-align: center;
+          }
+        }
+      }
+    }
+    // .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-valign=top] {
+    //   vertical-align: top;
+    // }
+
+    // .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=left] {
+    //   text-align: left;
+    // }
+
+    // .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=right] {
+    //   text-align: right;
+    // }
+
+    // .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=center] {
+    //   text-align: center;
+    // }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
+      vertical-align: top;
+    }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
+      text-align: left;
+    }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
+      text-align: right;
+    }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
+      text-align: center;
+    }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
+      font-family: fonts.$plex;
+      border-right: 0.025rem solid colors.$black;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      padding-right: 0.7rem;
+      padding-left: 0.7rem;
+    }
+
+    .os-table:not(.os-unstyled-container) > table > tbody > tr {
+      > td:not(:only-of-type) > strong {
+        word-break: break-word;
+      }
+      > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
+        border-left: 0.025rem solid colors.$black;
+      }
+      > td:not(:only-of-type):not(:last-child) {
+        border-left: none;
+        border-right: 0.025rem solid colors.$black;
+      }
+      > td {
+        border-bottom: 0.025rem solid colors.$black;
         padding: 0.7rem;
       }
-        > th[data-valign=top] {
-          vertical-align: top;
-        }
-        > th[data-align=left] {
-          text-align: left;
-        }
-        > th[data-align=right] {
-          text-align: right;
-        }
-        > th[data-align=center] {
-          text-align: center;
-        }
-      > tbody > tr > td[data-valign=top] {
-          vertical-align: top;
-        }
-        > td[data-align=left] {
-          text-align: left;
-        }
-        > td[data-align=right] {
-          text-align: right;
-        }
-        > td[data-align=center] {
-          text-align: center;
-        }
-        > td:not(:only-of-type) {
-          font-family: IBM Plex Sans, sans-serif; //TODO
-          border-left: 0.025rem solid black; //TODO
-          padding-top: 0.7rem;
-          padding-bottom: 0.7rem;
-          padding-right: 0.7rem;
-          padding-left: 0.7rem;
-        }
-        > td:not(:only-of-type) > strong {
-          word-break: break-word;
-        }
-        > td:not(:only-of-type):not(:last-child) {
-          border-left: none;
-          border-right: 0.025rem solid black; //TODO
-        }
-        > td {
-          border-bottom: 0.025rem solid black;
-          padding: 0.7rem;
-        }
-        > tr:last-of-type
-          > td:only-of-type {
-            border-right: none;
-          }
     }
-    > table col:not(:last-child) {
-      border-right: 0.025rem solid black;
-    }
-  }
-  .os-table:not(.os-unstyled-container):after {
-    content: '';
-    width: 100%;
-    border-top-color: #0074BC;
-    border-top-width: 0.12rem;
-    border-top-style: solid;
-    display: block;
-    position: relative;
-    top: -0.1rem;
-  }
 
-  .os-table:not(.os-unstyled-container) .os-caption-container {
-    display: table-caption;
-    caption-side: bottom;
-    prince-caption-page: all;
-    font-size: 0.8333333333rem;
-    line-height: 1.2;
-    > .os-title-label {
-      font-family: Mulish, sans-serif;
-      font-weight: bold;
-      color: #C31427;
-      text-transform: uppercase;
+    .os-table:not(.os-unstyled-container) > table > tbody{
+      > tr:last-of-type {
+        > td:only-of-type {
+          border-right: none;
+        }
+      }
     }
-    > .os-number {
-      font-family: Mulish, sans-serif;
-      font-weight: bold;
-      color: #C31427;
-    }
-    > .os-title {
-      font-family: Mulish, sans-serif;
-      font-weight: bold;
-    }
-    > .os-caption {
-      font-family: IBM Plex Sans, sans-serif;
-    }
-  }
 
+    .os-table:not(.os-unstyled-container) > table > table col:not(:last-child) {
+      border-right: 0.025rem solid colors.$black;
+    }
+
+    .os-table:not(.os-unstyled-container):after {
+      content: '';
+      width: 100%;
+      border-top-color: $border-after-table;
+      border-top-width: 0.12rem;
+      border-top-style: solid;
+      display: block;
+      position: relative;
+      top: -0.1rem;
+    }
+
+    .os-table:not(.os-unstyled-container) .os-caption-container {
+      display: table-caption;
+      caption-side: bottom;
+      prince-caption-page: all;
+      font-size: 0.8333333333rem;
+      line-height: 1.2;
+      > .os-title-label {
+        font-family: fonts.$mulish;
+        font-weight: bold;
+        color: colors.$R1;
+        text-transform: uppercase;
+      }
+      > .os-number {
+        font-family: fonts.$mulish;
+        font-weight: bold;
+        color: colors.$R1;
+      }
+      > .os-title {
+        font-family: fonts.$mulish;
+        font-weight: bold;
+      }
+      > .os-caption {
+        font-family: fonts.$plex;
+      }
+    }
 }
 
-@mixin column-header-table(){
+@mixin column-header-table($book-table-color: $black){
   .os-table.os-column-header-container {
     margin-bottom: 0.7rem;
     display: table;
@@ -119,9 +153,9 @@
       > tbody
         > tr
           > td:not(:only-of-type) {
-            font-family: IBM Plex Sans, sans-serif;
-            border-left: 0.025rem solid black;
-            border-bottom: 0.025rem solid black;
+            font-family: fonts.$plex;
+            border-left: 0.025rem solid colors.$black;
+            border-bottom: 0.025rem solid colors.$black;
             padding-top: 0.7rem;
             padding-bottom: 0.7rem;
             padding-right: 0.7rem;
@@ -129,17 +163,17 @@
           }
           > td:not(:only-of-type):not(:last-child) {
             border-left: none;
-            border-right: 0.1rem solid black;
-            font-family: Mulish, sans-serif;
+            border-right: 0.1rem solid colors.$black;
+            font-family: fonts.$mulish;
             font-weight: 700;
           }
         > tr:first-of-type {
-          border-top-color: #0074BC;
+          border-top-color: $book-table-color;
           border-top-width: 0.1rem;
           border-top-style: solid;
         }
         > tr:last-of-type > td {
-          border-bottom-color: #0074BC;
+          border-bottom-color: $book-table-color;
           border-bottom-width: 0.1rem;
           border-bottom-style: solid;
         }
@@ -148,7 +182,7 @@
 }
 
 @mixin vertically-tight-table(){
-  .os-table.os-vertically-tight-container > table.vertically-tight
+  .os-table.os-vertically-tight-container > table.vertically-tights {
     > tr > th {
       padding-top: 0.16rem;
       padding-bottom: 0.16rem;
@@ -157,6 +191,7 @@
       padding-top: 0.16rem;
       padding-bottom: 0.16rem;
     }
+  }
 }
 
 @mixin table-from-exercise(){
