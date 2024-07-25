@@ -1,4 +1,5 @@
-@use 'lib/carnival/theme' as carnival;
+@use 'lib/carnival/colors';
+@use 'lib/carnival/fonts';
 
 @mixin exercises($element, $number-width: null) {
     #{$element} {
@@ -34,7 +35,7 @@
 @mixin -number($width: null) {
     display: table-cell;
     text-decoration: none;
-    color: carnival.$black;
+    color: colors.$black;
     font-weight: bold;
     width: $width;
     text-align: right;
