@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `header row` in middle of table and refactor `table shapes` in `nursing-internal`
+* Unnumbered `Learning Objectives` in `computer-science`
+* Style `answer-key` in `neuroscience`
 * Add check for whether output compiled to CI
 * Rewrite `build.dart` to `build.js` and remove dart
 * Refactor and remove `EocCompositePageTitlesShape` in `cardboard`
