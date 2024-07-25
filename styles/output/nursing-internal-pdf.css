@@ -1830,6 +1830,20 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
+  border-top-color: #000000;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: #000000;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
