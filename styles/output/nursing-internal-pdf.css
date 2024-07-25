@@ -1979,28 +1979,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
-.os-table.os-column-header-container > table > td:not(:only-of-type):not(:last-child) {
+.os-table.os-column-header-container > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
   border-left: none;
   border-right: 0.1rem solid #000000;
   font-family: Mulish, sans-serif;
   font-weight: 700;
 }
-.os-table.os-column-header-container > table > tr:first-of-type {
+.os-table.os-column-header-container > table > tbody > tr > tr:first-of-type {
   border-top-color: #0074BC;
   border-top-width: 0.1rem;
   border-top-style: solid;
 }
-.os-table.os-column-header-container > table > tr:last-of-type > td {
+.os-table.os-column-header-container > table > tbody > tr > tr:last-of-type > td {
   border-bottom-color: #0074BC;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
 }
 
-.os-table.os-vertically-tight-container > table.vertically-tights > tr > th {
+.os-table.os-vertically-tight-container > table.vertically-tight > tr > th {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
 }
-.os-table.os-vertically-tight-container > table.vertically-tights > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
+.os-table.os-vertically-tight-container > table.vertically-tight > tbody > tr > td:not(.regular-spacing):not(.pseudo-class-for-precedence) {
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
 }

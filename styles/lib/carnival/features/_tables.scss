@@ -148,7 +148,7 @@
     > table {
       border-collapse: collapse;
       > tbody
-        > tr
+        > tr {
           > td:not(:only-of-type) {
             font-family: fonts.$plex;
             border-left: 0.025rem solid colors.$black;
@@ -173,6 +173,7 @@
           border-bottom-color: $book-table-color;
           border-bottom-width: 0.1rem;
           border-bottom-style: solid;
+        }
         }
     }
   }
