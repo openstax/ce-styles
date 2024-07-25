@@ -51,7 +51,7 @@
     }
     .os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
       border-top-color: colors.$black;
-      font-family: fonts.$mulish;
+      font-family: fonts.$mulish; //fixes font for headers in middle of table https://github.com/openstax/cnx-recipes/issues/5567
       border-top-width: 0.1rem;
       border-top-style: solid;
       border-bottom-color: colors.$black;
