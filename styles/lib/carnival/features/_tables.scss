@@ -32,6 +32,21 @@
             text-align: center;
           }
         }
+        > tbody > tr {
+          td
+            &[data-valign=top] {
+              vertical-align: top;
+            }
+            &[data-align=left] {
+              text-align: left;
+            }
+            &[data-align=right] {
+              text-align: right;
+            }
+            &[data-align=center] {
+              text-align: center;
+            }
+        }
       }
     }
     .os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
@@ -47,21 +62,6 @@
       font-weight: 700;
       padding-left: 0.7rem;
       padding-right: 0.7rem;
-    }
-    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
-      vertical-align: top;
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
-      text-align: left;
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
-      text-align: right;
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
-      text-align: center;
     }
 
     .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {

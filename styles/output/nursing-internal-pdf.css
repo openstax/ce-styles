@@ -1829,6 +1829,18 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=center] {
   text-align: center;
 }
+td .os-table:not(.os-unstyled-container) > table > tbody > tr[data-valign=top] {
+  vertical-align: top;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=left] {
+  text-align: left;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=right] {
+  text-align: right;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=center] {
+  text-align: center;
+}
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
   border-top-color: #000000;
@@ -1843,22 +1855,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 700;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
-  vertical-align: top;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
-  text-align: left;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
-  text-align: right;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
-  text-align: center;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
