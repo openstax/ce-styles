@@ -206,3 +206,12 @@ $bandColor: #093D4C;
 @include use('AnswerKeyOneColumnEobSolution', 'corn:::AnswerKeySolutionShape');
 @include use('Index', 'corn:::IndexShape');
 
+
+// Change the page number from 314 to 100π
+@page :nth(314):left         { @top-left-corner { content: "100π" "     "; } }
+@page :nth(314):right        { @top-right-corner { content: "     " "100π"; } }
+
+// Do the same for tau.
+// See https://www.scientificamerican.com/article/let-s-use-tau-it-s-easier-than-pi/
+@page :nth(628):left         { @top-left-corner { content: "100τ" "     "; } }
+@page :nth(628):right        { @top-right-corner { content: "     " "100τ"; } }
