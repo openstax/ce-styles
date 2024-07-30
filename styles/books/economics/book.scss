@@ -1,3 +1,5 @@
+@use '../../lib/cosmos/cosmos';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
@@ -154,7 +156,7 @@ $bandColor: #DCB83D;
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
 
 // Eob
-@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
+@include cosmos.module-with-indentation();
 @include use('Index', 'cosmos:::IndexShape');
 @include use('AnswerKey', 'cosmos:::AnswerKeyShape');
 @include use('AnswerKeySolution', 'cosmos:::AnswerKeySolutionShape');

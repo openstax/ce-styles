@@ -1,3 +1,5 @@
+@use '../../lib/cosmos/cosmos';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -68,10 +70,7 @@ $bandColor: #DCB83D;
     'ProblemNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemNumber:::width': 2%,
     'ProblemNumber:::text-align': right,
-  ),
-  SuggestedReading: (
-    _selectors: ('.os-eoc.os-suggested-reading-container'),
-  ),
+  )
 ));
 
 // Iconned Notes
@@ -150,7 +149,7 @@ $bandColor: #DCB83D;
 
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
-@include use('SuggestedReading', 'cosmos:::ModuleWithIndentationShape');
+@include cosmos.module-with-indentation($root: '.os-eoc.os-suggested-reading-container');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //Exercises
