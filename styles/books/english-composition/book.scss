@@ -1,3 +1,5 @@
+@use '../../lib/cosmos/cosmos';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-page"]', generalSelector: '.os-eob'),
@@ -175,24 +177,6 @@ $bandColor: #DCB83D;
   )
 ));
 
-@include add_settings((
-  WorksCited: (
-    _selectors: ('.os-eoc.os-works-cited-container'),
-  ),
-  WorksConsulted: (
-    _selectors: ('.os-eoc.os-works-consulted-container'),
-  ),
-  FurtherReading: (
-    _selectors: ('.os-eoc.os-further-reading-container'),
-  ),
-  HandbookFurtherReading: (
-    _selectors: ('.handbook section.further-reading'),
-  ),
-  HandbookWorksCited: (
-    _selectors: ('.handbook section.works-cited'),
-  ),
-));
-
 @include use('BookRoot', "common:::BookRoot");
 @include use('TocUnit', 'cosmos:::TocUnitShape');
 @include use('UnderlineYellow', 'cosmos:::UnderlineShape');
@@ -205,8 +189,9 @@ $bandColor: #DCB83D;
 @include use('UnitOpener', 'common:::UnitOpenerShape');
 @include use('PunctuationEmphasis', 'common:::PunctuationEmphasisShape');
 @include use('SectionWorksCited', 'cosmos:::SectionWorksCitedShape');
-@include use('HandbookWorksCited', 'cosmos:::ModuleWithIndentationShape');
-@include use('HandbookFurtherReading', 'cosmos:::ModuleWithIndentationShape');
+@include cosmos.module-with-indentation(
+  $root: '.handbook section.works-cited, .handbook section.further-reading'
+);
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 
 // Chapter Intro
@@ -266,10 +251,10 @@ $bandColor: #DCB83D;
 @include use('DefaultTable', 'cosmos:::BasicTableShape');
 @include use('TableAfterExercisePara', 'cosmos:::TableTopSpacingShape');
 
-//EoC
-@include use('FurtherReading', 'cosmos:::ModuleWithIndentationShape');
-@include use('WorksCited', 'cosmos:::ModuleWithIndentationShape');
-@include use('WorksConsulted', 'cosmos:::ModuleWithIndentationShape');
+// EoC
+@include cosmos.module-with-indentation(
+  $root: '.os-eoc.os-works-cited-container, .os-eoc.os-works-consulted-container, .os-eoc.os-further-reading-container'
+);
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 //EoB

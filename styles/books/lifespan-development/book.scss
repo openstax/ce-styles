@@ -1,3 +1,5 @@
+@use '../../lib/cosmos/cosmos';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -132,15 +134,22 @@ $bandColor: #DCB83D;
 @include use('IntersectionsContexts', 'cosmos:::BoxedNoteWithSubtitleShape');
 @include use('LifeHacks', 'cosmos:::BoxedNoteWithSubtitleShape');
 
+// End-of-page references
+@include cosmos.module-with-indentation($root: '.references');
+.references p { // one-off: there are many references in this book, so they need to be small
+  font-size: 0.667rem;
+  line-height: 0.8rem;
+  margin-bottom: 0;
+}
+
 // Eoc
 @include use('KeyTerms', 'cosmos:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
-@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
 
 // Eob
 @include use('Index', 'cosmos:::IndexShape');
 @include use('AnswerKey', 'cosmos:::AnswerKeyShape');
 @include use('AnswerKeyInjectedSolutionInline', 'cosmos:::AnswerKeySolutionInlineShape');
 @include use('AppendixGlossary', 'cosmos:::AppendixGlossaryShape');
-@include use('AppendixReferences', 'cosmos:::ModuleWithIndentationShape');
+@include cosmos.module-with-indentation($root: '.appendix > .indent-container');

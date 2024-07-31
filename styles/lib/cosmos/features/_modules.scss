@@ -1,0 +1,6 @@
+@mixin module-with-indentation($root: '.os-references-container') {
+  #{$root} p {
+    text-indent: -16px;
+    padding-left: 16px;
+  }
+}
