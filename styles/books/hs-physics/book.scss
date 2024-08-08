@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
@@ -252,8 +254,8 @@ $ChapterIntroType: fullWidth;
 @include use('FigureFromInjectedQuestion','carnival:::FigureFromExercisesShape');
 
 // Equations
-@include use('NumberedEquation', 'carnival:::NumberedEquationShape');
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.numbered-equation();
+@include carnival.unnumbered-equation();
 
 // Tables
 @include use('BasicTable', 'carnival:::BasicTableShape');
