@@ -1829,64 +1829,17 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 .os-table:not(.os-unstyled-container) > table > thead > tr > th[data-align=center] {
   text-align: center;
 }
-td .os-table:not(.os-unstyled-container) > table > tbody > tr[data-valign=top] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
-.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=left] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
   text-align: left;
 }
-.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=right] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
   text-align: right;
 }
-.os-table:not(.os-unstyled-container) > table > tbody > tr[data-align=center] {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
   text-align: center;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
-  border-top-color: #000000;
-  font-family: Mulish, sans-serif;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-bottom-color: #000000;
-  border-bottom-width: 0.1rem;
-  border-bottom-style: solid;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  font-weight: 700;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
-  font-family: Mulish, sans-serif;
-  border-right: 0.025rem solid #000000;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 0.7rem;
-  padding-left: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > strong {
-  word-break: break-word;
-}
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
-  border-left: 0.025rem solid #000000;
-}
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
-  border-left: none;
-  border-right: 0.025rem solid #000000;
-}
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td {
-  border-bottom: 0.025rem solid #000000;
-  padding: 0.7rem;
-}
-
-.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:only-of-type {
-  border-right: none;
-}
-
-.os-table:not(.os-unstyled-container) > table col:not(:last-child) {
-  border-right: 0.025rem solid #000000;
 }
 
 .os-table:not(.os-unstyled-container):after {
@@ -1899,7 +1852,6 @@ td .os-table:not(.os-unstyled-container) > table > tbody > tr[data-valign=top] {
   position: relative;
   top: -0.1rem;
 }
-
 .os-table:not(.os-unstyled-container) .os-caption-container {
   display: table-caption;
   caption-side: bottom;
@@ -1924,6 +1876,48 @@ td .os-table:not(.os-unstyled-container) > table > tbody > tr[data-valign=top] {
 }
 .os-table:not(.os-unstyled-container) .os-caption-container > .os-caption {
   font-family: IBM Plex Sans, sans-serif;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
+  border-top-color: #000000;
+  font-family: Mulish, sans-serif;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: #000000;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td:not(:only-of-type) {
+  font-family: Mulish, sans-serif;
+  border-right: 0.025rem solid #000000;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td:not(:only-of-type) > strong {
+  word-break: break-word;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
+  border-left: 0.025rem solid #000000;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td:not(:only-of-type):not(:last-child) {
+  border-left: none;
+  border-right: 0.025rem solid #000000;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td:last-of-type > td:only-of-type {
+  border-right: none;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td {
+  border-bottom: 0.025rem solid #000000;
+  padding: 0.7rem;
+}
+.os-table:not(.os-unstyled-container) > table col:not(:last-child) {
+  border-right: 0.025rem solid #000000;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table {
@@ -1982,12 +1976,12 @@ td .os-table:not(.os-unstyled-container) > table > tbody > tr[data-valign=top] {
   font-family: Mulish, sans-serif;
   font-weight: 700;
 }
-.os-table.os-column-header-container > table > tbody > tr > tr:first-of-type {
+.os-table.os-column-header-container > table > tbody > tr:first-of-type {
   border-top-color: #0074BC;
   border-top-width: 0.1rem;
   border-top-style: solid;
 }
-.os-table.os-column-header-container > table > tbody > tr > tr:last-of-type > td {
+.os-table.os-column-header-container > table > tbody > tr:last-of-type > td {
   border-bottom-color: #0074BC;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;

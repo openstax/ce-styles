@@ -1,3 +1,4 @@
+
 @use 'lib/carnival/colors';
 @use 'lib/carnival/fonts';
 
@@ -18,22 +19,6 @@
             font-family: fonts.$mulish;
             font-weight: 700;
             padding: 0.7rem;
-          }
-          > th[data-valign=top] {
-            vertical-align: top;
-          }
-          > th[data-align=left] {
-            text-align: left;
-          }
-          > th[data-align=right] {
-            text-align: right;
-          }
-          > th[data-align=center] {
-            text-align: center;
-          }
-        }
-        > tbody > tr {
-          td
             &[data-valign=top] {
               vertical-align: top;
             }
@@ -43,99 +28,112 @@
             &[data-align=right] {
               text-align: right;
             }
-            &[data-align=center] {
+           &[data-align=center] {
+              text-align: center;
+            }
+          }
+        }
+        > tbody > tr > td {
+          &[data-valign=top] {
+              vertical-align: top;
+            }
+          &[data-align=left] {
+              text-align: left;
+            }
+          &[data-align=right] {
+              text-align: right;
+            }
+          &[data-align=center] {
               text-align: center;
             }
         }
       }
     }
-    .os-table:not(.os-unstyled-container) > table > tbody > tr.header-row > td {
-      border-top-color: colors.$black;
-      font-family: fonts.$mulish;
-      border-top-width: 0.1rem;
-      border-top-style: solid;
-      border-bottom-color: colors.$black;
-      border-bottom-width: 0.1rem;
-      border-bottom-style: solid;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
-      font-weight: 700;
-      padding-left: 0.7rem;
-      padding-right: 0.7rem;
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) {
-      font-family: fonts.$mulish;
-      border-right: 0.025rem solid colors.$black;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
-      padding-right: 0.7rem;
-      padding-left: 0.7rem;
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody > tr {
-      > td:not(:only-of-type) > strong {
-        word-break: break-word;
+    .os-table:not(.os-unstyled-container) {
+      &:after {
+        content: '';
+        width: 100%;
+        border-top-color: $border-after-table;
+        border-top-width: 0.12rem;
+        border-top-style: solid;
+        display: block;
+        position: relative;
+        top: -0.1rem;
       }
-      > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
-        border-left: 0.025rem solid colors.$black;
-      }
-      > td:not(:only-of-type):not(:last-child) {
-        border-left: none;
-        border-right: 0.025rem solid colors.$black;
-      }
-      > td {
-        border-bottom: 0.025rem solid colors.$black;
-        padding: 0.7rem;
-      }
-    }
-
-    .os-table:not(.os-unstyled-container) > table > tbody{
-      > tr:last-of-type {
-        > td:only-of-type {
-          border-right: none;
+      & .os-caption-container {
+        display: table-caption;
+        caption-side: bottom;
+        prince-caption-page: all;
+        font-size: 0.8333333333rem;
+        line-height: 1.2;
+        > .os-title-label {
+          font-family: fonts.$mulish;
+          font-weight: bold;
+          color: colors.$R1;
+          text-transform: uppercase;
+        }
+        > .os-number {
+          font-family: fonts.$mulish;
+          font-weight: bold;
+          color: colors.$R1;
+        }
+        > .os-title {
+          font-family: fonts.$mulish;
+          font-weight: bold;
+        }
+        > .os-caption {
+          font-family: fonts.$plex;
         }
       }
-    }
-
-    .os-table:not(.os-unstyled-container) > table col:not(:last-child) {
-      border-right: 0.025rem solid colors.$black;
-    }
-
-    .os-table:not(.os-unstyled-container):after {
-      content: '';
-      width: 100%;
-      border-top-color: $border-after-table;
-      border-top-width: 0.12rem;
-      border-top-style: solid;
-      display: block;
-      position: relative;
-      top: -0.1rem;
-    }
-
-    .os-table:not(.os-unstyled-container) .os-caption-container {
-      display: table-caption;
-      caption-side: bottom;
-      prince-caption-page: all;
-      font-size: 0.8333333333rem;
-      line-height: 1.2;
-      > .os-title-label {
-        font-family: fonts.$mulish;
-        font-weight: bold;
-        color: colors.$R1;
-        text-transform: uppercase;
-      }
-      > .os-number {
-        font-family: fonts.$mulish;
-        font-weight: bold;
-        color: colors.$R1;
-      }
-      > .os-title {
-        font-family: fonts.$mulish;
-        font-weight: bold;
-      }
-      > .os-caption {
-        font-family: fonts.$plex;
+      > table {
+        > tbody{
+          > tr {
+            &.header-row > td {
+              border-top-color: colors.$black;
+              font-family: fonts.$mulish;
+              border-top-width: 0.1rem;
+              border-top-style: solid;
+              border-bottom-color: colors.$black;
+              border-bottom-width: 0.1rem;
+              border-bottom-style: solid;
+              padding-top: 0.7rem;
+              padding-bottom: 0.7rem;
+              font-weight: 700;
+              padding-left: 0.7rem;
+              padding-right: 0.7rem;
+              &:not(:only-of-type) {
+                font-family: fonts.$mulish;
+                border-right: 0.025rem solid colors.$black;
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+                padding-right: 0.7rem;
+                padding-left: 0.7rem;
+              }
+              &:not(:only-of-type) > strong {
+                word-break: break-word;
+              }
+              &[rowspan="2"]:not(:only-of-type):not(:first-child) {
+                border-left: 0.025rem solid colors.$black;
+              }
+              &:not(:only-of-type):not(:last-child) {
+                border-left: none;
+                border-right: 0.025rem solid colors.$black;
+              }
+              &:last-of-type {
+                > td:only-of-type {
+                  border-right: none;
+                }
+              }
+            }
+            > td {
+              border-bottom: 0.025rem solid colors.$black;
+              padding: 0.7rem;
+            }
+          }
+        }
+        & col:not(:last-child) {
+          border-right: 0.025rem solid colors.$black;
+        }
       }
     }
 }
@@ -150,32 +148,34 @@
       border-collapse: collapse;
       > tbody
         > tr {
-          > td:not(:only-of-type) {
-            font-family: fonts.$plex;
-            border-left: 0.025rem solid colors.$black;
-            border-bottom: 0.025rem solid colors.$black;
-            padding-top: 0.7rem;
-            padding-bottom: 0.7rem;
-            padding-right: 0.7rem;
-            padding-left: 0.7rem;
+          > td{
+            &:not(:only-of-type) {
+              font-family: fonts.$plex;
+              border-left: 0.025rem solid colors.$black;
+              border-bottom: 0.025rem solid colors.$black;
+              padding-top: 0.7rem;
+              padding-bottom: 0.7rem;
+              padding-right: 0.7rem;
+              padding-left: 0.7rem;
+            }
+            &:not(:only-of-type):not(:last-child) {
+              border-left: none;
+              border-right: 0.1rem solid colors.$black;
+              font-family: fonts.$mulish;
+              font-weight: 700;
+            }
           }
-          > td:not(:only-of-type):not(:last-child) {
-            border-left: none;
-            border-right: 0.1rem solid colors.$black;
-            font-family: fonts.$mulish;
-            font-weight: 700;
-          }
-        > tr:first-of-type {
+        &:first-of-type {
           border-top-color: $book-table-color;
           border-top-width: 0.1rem;
           border-top-style: solid;
         }
-        > tr:last-of-type > td {
+        &:last-of-type > td {
           border-bottom-color: $book-table-color;
           border-bottom-width: 0.1rem;
           border-bottom-style: solid;
         }
-        }
+      }
     }
   }
 }
