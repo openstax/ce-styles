@@ -1,3 +1,5 @@
+@use '../../lib/cosmos/cosmos';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-page"]', generalSelector: '.os-eob'),
@@ -143,5 +145,5 @@ $bandColor: #DCB83D;
 @include use('ExercisesModule', 'cosmos:::ExercisesModuleShape');
 
 // Eob
-@include use('ReferencesWithIndentation', 'cosmos:::ModuleWithIndentationShape');
+@include cosmos.module-with-indentation();
 @include use('Index', 'cosmos:::IndexShape');

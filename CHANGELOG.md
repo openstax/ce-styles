@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 * Style `header row` in middle of table and refactor `table shapes` in `nursing-internal`
+* Fix text overflowing with adding `max-width` on figure captions on EPUB display output.
+* Add `right-padding` to EPUB figure captions
+
+## [v2.2.0] - 2024-07-26
+
+* Refactor `module-with-indentation` for `cosmos`
+* Style references in `lifespan-development`
 * Unnumbered `Learning Objectives` in `computer-science`
 * Style `answer-key` in `neuroscience`
 * Add check for whether output compiled to CI
