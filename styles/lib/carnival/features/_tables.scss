@@ -194,36 +194,26 @@
 }
 
 @mixin table-from-exercise(){
-  .os-eoc [data-type=problem] > div .os-table > table {
-    max-width: 100%;
-    table-layout: fixed;
-    > tbody > tr > td:not(:only-of-type) {
-      text-align: center;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
-      padding-right: 4px;
-      padding-left: 4px;
+  .os-eoc {
+    & [data-type=problem], [data-type=exercise-question]{
+      > div .os-table > table {
+        max-width: 100%;
+        table-layout: fixed;
+        > tbody > tr > td:not(:only-of-type) {
+          text-align: center;
+          padding-top: 0.7rem;
+          padding-bottom: 0.7rem;
+          padding-right: 4px;
+          padding-left: 4px;
+        }
+      }
     }
   }
-  .os-eoc [data-type=exercise-question] > div .os-table > table {
-    max-width: 100%;
-    table-layout: fixed;
-    > tbody > tr > td:not(:only-of-type) {
-      text-align: center;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
-      padding-right: 4px;
-      padding-left: 4px;
-    }
-  }
+
 }
 
 @mixin table-top-spacing(){
-  .os-eoc .os-problem-container > p + .os-table {
-    margin-top: 1rem;
-  }
-
-  .os-eob .os-solution-container > p + .os-table {
+  .os-eoc .os-problem-container, .os-eob .os-solution-container{
     margin-top: 1rem;
   }
 }

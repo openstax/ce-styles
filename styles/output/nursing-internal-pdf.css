@@ -1920,11 +1920,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-right: 0.025rem solid #000000;
 }
 
-.os-eoc [data-type=problem] > div .os-table > table {
+.os-eoc [data-type=problem] > div .os-table > table, .os-eoc [data-type=exercise-question] > div .os-table > table {
   max-width: 100%;
   table-layout: fixed;
 }
-.os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
+.os-eoc [data-type=problem] > div .os-table > table > tbody > tr > td:not(:only-of-type), .os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
   text-align: center;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -1932,23 +1932,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 4px;
 }
 
-.os-eoc [data-type=exercise-question] > div .os-table > table {
-  max-width: 100%;
-  table-layout: fixed;
-}
-.os-eoc [data-type=exercise-question] > div .os-table > table > tbody > tr > td:not(:only-of-type) {
-  text-align: center;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-.os-eoc .os-problem-container > p + .os-table {
-  margin-top: 1rem;
-}
-
-.os-eob .os-solution-container > p + .os-table {
+.os-eoc .os-problem-container, .os-eob .os-solution-container {
   margin-top: 1rem;
 }
 
