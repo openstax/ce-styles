@@ -1,4 +1,4 @@
-@use 'lib/carnival/carnival';
+@use '../../lib/carnival/carnival';
 
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-summary-container', generalSelector: '.os-eoc'),
@@ -225,6 +225,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('ParaIndented', 'carnival:::ParaIndentedShape');
 @include use('ParaCentered', 'carnival:::ParaCenteredShape');
+@include carnival.unnumbered-equation();
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
