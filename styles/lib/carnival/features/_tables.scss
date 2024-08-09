@@ -195,7 +195,7 @@
 
 @mixin table-from-exercise(){
   .os-eoc {
-    & [data-type=problem], [data-type=exercise-question]{
+    & [data-type=problem], [data-type=exercise-question] {
       > div .os-table > table {
         max-width: 100%;
         table-layout: fixed;
@@ -206,6 +206,11 @@
           padding-right: 4px;
           padding-left: 4px;
         }
+      }
+    }
+    > .os-problem-container, .os-solution-container {
+      > p + .os-table {
+        margin-top: 1rem;
       }
     }
   }
