@@ -101,14 +101,6 @@
               font-weight: 700;
               padding-left: 0.7rem;
               padding-right: 0.7rem;
-              &:not(:only-of-type) {
-                font-family: fonts.$mulish;
-                border-right: 0.025rem solid colors.$black;
-                padding-top: 0.7rem;
-                padding-bottom: 0.7rem;
-                padding-right: 0.7rem;
-                padding-left: 0.7rem;
-              }
               &:not(:only-of-type) > strong {
                 word-break: break-word;
               }
@@ -128,6 +120,14 @@
             > td {
               border-bottom: 0.025rem solid colors.$black;
               padding: 0.7rem;
+              &:not(:only-of-type) {
+                font-family: fonts.$mulish;
+                border-right: 0.025rem solid colors.$black;
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+                padding-right: 0.7rem;
+                padding-left: 0.7rem;
+              }
             }
           }
         }
