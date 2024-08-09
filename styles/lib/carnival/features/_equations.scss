@@ -1,0 +1,35 @@
+@use '../colors';
+@use '../fonts';
+
+@mixin unnumbered-equation() {
+  [data-type=equation].unnumbered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@mixin numbered-equation() {
+  [data-type=equation]:not(.unnumbered) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+
+    > .os-equation-number {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-family: fonts.$mulish;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: bold;
+      color: colors.$R1;
+      margin-right: 0.7rem;
+    }
+  }
+}
