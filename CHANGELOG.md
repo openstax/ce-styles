@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Style `header row` in middle of table and refactor `table shapes` in `nursing-internal`
 * Fix text overflowing with adding `max-width` on figure captions on EPUB display output.
 * Add `right-padding` to EPUB figure captions
 
