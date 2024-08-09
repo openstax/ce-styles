@@ -33,23 +33,65 @@
             }
           }
         }
-        > tbody > tr > td {
-          &[data-valign=top] {
-              vertical-align: top;
+        > tbody > tr {
+          > td {
+            border-bottom: 0.025rem solid colors.$black;
+              padding: 0.7rem;
+              &:not(:only-of-type) {
+                font-family: fonts.$mulish;
+                border-right: 0.025rem solid colors.$black;
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+                padding-right: 0.7rem;
+                padding-left: 0.7rem;
+              }
+            &[data-valign=top] {
+                vertical-align: top;
+              }
+            &[data-align=left] {
+                text-align: left;
+              }
+            &[data-align=right] {
+                text-align: right;
+              }
+            &[data-align=center] {
+                text-align: center;
+              }
             }
-          &[data-align=left] {
-              text-align: left;
-            }
-          &[data-align=right] {
-              text-align: right;
-            }
-          &[data-align=center] {
-              text-align: center;
-            }
+            &.header-row > td {
+              border-top-color: colors.$black;
+              font-family: fonts.$mulish;
+              border-top-width: 0.1rem;
+              border-top-style: solid;
+              border-bottom-color: colors.$black;
+              border-bottom-width: 0.1rem;
+              border-bottom-style: solid;
+              padding-top: 0.7rem;
+              padding-bottom: 0.7rem;
+              font-weight: 700;
+              padding-left: 0.7rem;
+              padding-right: 0.7rem;
+              &:not(:only-of-type) > strong {
+                word-break: break-word;
+              }
+              &[rowspan="2"]:not(:only-of-type):not(:first-child) {
+                border-left: 0.025rem solid colors.$black;
+              }
+              &:not(:only-of-type):not(:last-child) {
+                border-left: none;
+                border-right: 0.025rem solid colors.$black;
+              }
+              &:last-of-type {
+                > td:only-of-type {
+                  border-right: none;
+                }
+              }
+          }
+        }
+        & col:not(:last-child) {
+          border-right: 0.025rem solid colors.$black;
         }
       }
-    }
-    .os-table:not(.os-unstyled-container) {
       &:after {
         content: '';
         width: 100%;
@@ -83,56 +125,6 @@
         }
         > .os-caption {
           font-family: fonts.$plex;
-        }
-      }
-      > table {
-        > tbody{
-          > tr {
-            &.header-row > td {
-              border-top-color: colors.$black;
-              font-family: fonts.$mulish;
-              border-top-width: 0.1rem;
-              border-top-style: solid;
-              border-bottom-color: colors.$black;
-              border-bottom-width: 0.1rem;
-              border-bottom-style: solid;
-              padding-top: 0.7rem;
-              padding-bottom: 0.7rem;
-              font-weight: 700;
-              padding-left: 0.7rem;
-              padding-right: 0.7rem;
-              &:not(:only-of-type) > strong {
-                word-break: break-word;
-              }
-              &[rowspan="2"]:not(:only-of-type):not(:first-child) {
-                border-left: 0.025rem solid colors.$black;
-              }
-              &:not(:only-of-type):not(:last-child) {
-                border-left: none;
-                border-right: 0.025rem solid colors.$black;
-              }
-              &:last-of-type {
-                > td:only-of-type {
-                  border-right: none;
-                }
-              }
-            }
-            > td {
-              border-bottom: 0.025rem solid colors.$black;
-              padding: 0.7rem;
-              &:not(:only-of-type) {
-                font-family: fonts.$mulish;
-                border-right: 0.025rem solid colors.$black;
-                padding-top: 0.7rem;
-                padding-bottom: 0.7rem;
-                padding-right: 0.7rem;
-                padding-left: 0.7rem;
-              }
-            }
-          }
-        }
-        & col:not(:last-child) {
-          border-right: 0.025rem solid colors.$black;
         }
       }
     }
