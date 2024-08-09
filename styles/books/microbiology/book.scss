@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '[data-type = 'chapter'] > .os-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -210,7 +212,7 @@ $ChapterIntroType: fullWidth;
 @include use('AnswerKeySolutionInline', 'carnival:::AnswerKeySolutionInlineShape');
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.unnumbered-equation();
 @include use('TwoColumnsModules','carnival:::ModuleWithTwoColumnsShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
