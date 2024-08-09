@@ -206,13 +206,14 @@
       }
     }
   }
-
-}
-
-@mixin table-top-spacing(){
-  .os-eoc .os-problem-container, .os-eob .os-solution-container{
-    margin-top: 1rem;
+  .os-eob {
+    > .os-solution-container {
+      > p + .os-table {
+        margin-top: 1rem;
+      }
+    }
   }
+
 }
 
 @mixin table-column(){
