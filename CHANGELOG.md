@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.3.0] - 2024-08-12
+
 * Fix text overflowing with adding `max-width` on figure captions on EPUB display output.
 * Add `right-padding` to EPUB figure captions
 
