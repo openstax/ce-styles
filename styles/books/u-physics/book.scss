@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-chapter-review-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -181,8 +183,8 @@ $ChapterIntroType: fullWidth;
 
 // Equations
 @include use('EquationCallOutNote', 'carnival:::BoxCondensedEquationShape');
-@include use('NumberedEquation', 'carnival:::NumberedEquationShape');
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.numbered-equation();
+@include carnival.unnumbered-equation();
 
 // Figures
 @include use('Figure','carnival:::FigureShape');

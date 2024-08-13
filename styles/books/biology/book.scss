@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
@@ -196,7 +198,7 @@ $ChapterIntroType: side;
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
 // Equations
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.unnumbered-equation();
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');

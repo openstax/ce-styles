@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v2.2.0] - 2024-07-26
 
+* Refactor `equations` for `carnival`
+* Add `unnumbered equations` to `nursing-internal`
 * Refactor `module-with-indentation` for `cosmos`
 * Style references in `lifespan-development`
 * Unnumbered `Learning Objectives` in `computer-science`

@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -193,7 +195,7 @@ $ChapterIntroType: fullWidth;
 @include use('InterconnectNote', 'carnival:::IconNoteShape');
 @include use('Example', 'carnival:::ExampleShape');
 @include use('LinkToLearningNote', 'carnival:::IconCondensedShape');
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.unnumbered-equation();
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');

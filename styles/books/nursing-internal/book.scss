@@ -1,3 +1,4 @@
+
 @use 'lib/carnival/carnival';
 @use 'lib/carnival/colors';
 
@@ -207,6 +208,7 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
 @include use('ParaIndented', 'carnival:::ParaIndentedShape');
 @include use('ParaCentered', 'carnival:::ParaCenteredShape');
+@include carnival.unnumbered-equation();
 
 // Chapter Intro
 @include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
