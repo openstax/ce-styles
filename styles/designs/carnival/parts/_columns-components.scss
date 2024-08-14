@@ -280,3 +280,20 @@ $Columns--FiveColumnsNineRatioTwo: (
     )
 );
 
+$Columns--SixColumnsElevenRatioOne: (
+  _name: "SixColumnsElevenRatioOne",
+  _subselector:
+    " [data-columns='6'][data-ratio='1,2,2,2,2,2'] col[data-width='1*']",
+  _properties: (
+    width: column-width(6, 11, 1),
+  ),
+);
+
+$Columns--SixColumnsElevenRatioTwo: (
+  _name: "SixColumnsElevenRatioTwo",
+  _subselector:
+    " [data-columns='6'][data-ratio='1,2,2,2,2,2'] col[data-width='2*']",
+  _properties: (
+    width: column-width(6, 11, 2),
+  ),
+);
