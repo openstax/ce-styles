@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:wght@200;400;500,700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("./downloaded-fonts/Roboto-Condensed.css");
+@import url("./downloaded-fonts/Noto-Sans.css");
+@import url("./downloaded-fonts/IBM-Plex-Sans.css");
+@import url("./downloaded-fonts/Dosis.css");
+@import url("./downloaded-fonts/Courier-Prime.css");
 nav#toc > ol > .os-toc-unit > ol > .os-toc-chapter > a > .os-number,
 nav#toc > ol > .os-toc-chapter > a > .os-number {
   page-break-after: avoid;
@@ -1038,98 +1038,23 @@ nav#toc > ol {
   display: inline;
 }
 
-nav#toc > ol > li:not(.os-toc-unit) {
-  display: block;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-right: 40px;
-  padding-left: 0px;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a {
-  font-family: Noto Sans, StixGeneral;
-  color: #24739E;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  padding-left: 32px;
-  display: inline-block;
-  position: relative;
-  margin-left: 8px;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
-  margin-left: 8px;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number {
-  font-size: 1rem;
-  line-height: 1rem;
-  border-style: solid;
-  border-width: 0.07rem;
-  border-color: #0DC0DC;
-  padding-top: 0.5rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 2.1rem;
-  height: 2.1rem;
-  text-align: center;
-  vertical-align: middle;
-}
-
-nav#toc > ol > li:not(.os-toc-unit) > a > .os-number > .os-part-text {
-  display: none;
-}
-
-nav#toc > ol > li.os-toc-unit > a:first-of-type::before {
-  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMC4zIDEwLjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwLjMgMTAuNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNDc1NDA7fQo8L3N0eWxlPgo8c3ltYm9sICBpZD0iaWNvbi11bml0IiB2aWV3Qm94PSItNC4zIC00LjMgOC42IDguNiI+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMi4zLTFjMCwwLjcsMCwxLjMsMCwyYzAsMCwwLDAsMCwwQzIuMSwxLDEuOSwxLDEuNywxQzEuMywxLDEsMS4yLDEsMS42YzAsMCwwLDAuMSwwLDAuMWMwLDAuMiwwLDAuNCwwLDAuNgoJCWMwLDAsMCwwLDAsMGMtMC43LDAtMS4zLDAtMiwwYzAsMCwwLDAsMCwwYzAtMC4yLDAtMC40LDAtMC42Qy0xLDEuMy0xLjIsMS0xLjYsMWMwLDAtMC4xLDAtMC4xLDBjLTAuMiwwLTAuNCwwLTAuNiwwYzAsMCwwLDAsMCwwCgkJYzAtMC43LDAtMS4zLDAtMmMwLDAsMCwwLDAsMGMwLjIsMCwwLjQsMCwwLjYsMEMtMS4zLTEtMS0xLjItMS0xLjZjMCwwLDAtMC4xLDAtMC4xYzAtMC43LDAtMS4zLDAtMkMtMS00LTEuMi00LjMtMS42LTQuMwoJCWMwLDAtMC4xLDAtMC4xLDBjLTAuNywwLTEuMywwLTIsMGMtMC4zLDAtMC42LDAuMi0wLjcsMC42YzAsMCwwLDAuMSwwLDAuMWMwLDAuNywwLDEuMywwLDJDLTQuMy0xLjMtNC4xLTEtMy43LTFjMCwwLDAuMSwwLDAuMSwwCgkJQy0zLjQtMS0zLjItMS0zLTFjMCwwLDAsMCwwLDBjMCwwLjcsMCwxLjMsMCwyYzAsMCwwLDAsMCwwYy0wLjIsMC0wLjQsMC0wLjYsMEMtNCwxLTQuMywxLjMtNC4zLDEuN2MwLDAuNywwLDEuMywwLDIKCQljMCwwLjMsMC4yLDAuNiwwLjYsMC43YzAsMCwwLjEsMCwwLjEsMGMwLjcsMCwxLjMsMCwyLDBDLTEuMyw0LjMtMSw0LjEtMSwzLjdjMCwwLDAtMC4xLDAtMC4xQy0xLDMuNC0xLDMuMi0xLDNjMCwwLDAsMCwwLDAKCQljMC43LDAsMS4zLDAsMiwwYzAsMCwwLDAsMCwwYzAsMC4yLDAsMC40LDAsMC42QzEsNCwxLjIsNC4zLDEuNiw0LjNjMCwwLDAuMSwwLDAuMSwwYzAuNywwLDEuMywwLDIsMEM0LDQuMyw0LjMsNCw0LjMsMy43CgkJYzAsMCwwLTAuMSwwLTAuMWMwLTAuNywwLTEuMywwLTJjMC0wLjMtMC4yLTAuNi0wLjUtMC43YzAsMC0wLjEsMC0wLjEsMEMzLjQsMSwzLjIsMSwzLDFjMCwwLDAsMCwwLDBjMC0wLjcsMC0xLjMsMC0yYzAsMCwwLDAsMCwwCgkJYzAuMiwwLDAuNCwwLDAuNiwwQzQtMSw0LjMtMS4yLDQuMy0xLjZjMCwwLDAtMC4xLDAtMC4xYzAtMC43LDAtMS4zLDAtMkM0LjMtNCw0LTQuMywzLjYtNC4zYy0wLjcsMC0xLjMsMC0yLDAKCQlDMS4zLTQuMywxLTQuMSwxLTMuN2MwLDAsMCwwLDAsMC4xYzAsMC43LDAsMS4zLDAsMkMxLTEuMywxLjMtMSwxLjYtMWMwLDAsMC4xLDAsMC4xLDBDMS45LTEsMi4xLTEsMi4zLTFDMi4zLTEsMi4zLTEsMi4zLTF6CgkJIE0tMy42LDMuNmMwLTAuNywwLTEuMywwLTJjMC43LDAsMS4zLDAsMiwwYzAsMC43LDAsMS4zLDAsMkMtMi4zLDMuNi0zLDMuNi0zLjYsMy42eiBNMy42LDEuN2MwLDAuNywwLDEuMywwLDJjLTAuNywwLTEuMywwLTIsMAoJCWMwLTAuNywwLTEuMywwLTJDMi4zLDEuNywzLDEuNywzLjYsMS43eiBNMS43LTMuNmMwLjcsMCwxLjMsMCwyLDBjMCwwLjcsMCwxLjMsMCwyYy0wLjcsMC0xLjMsMC0yLDBDMS43LTIuMywxLjctMywxLjctMy42eiIvPgo8L3N5bWJvbD4KPHVzZSB4bGluazpocmVmPSIjaWNvbi11bml0IiAgd2lkdGg9IjguNiIgaGVpZ2h0PSI4LjYiIGlkPSJYTUxJRF82XyIgeD0iLTQuMyIgeT0iLTQuMyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4xOTE0IDAgMCAtMS4xOTE0IDUuMTk0OCA1LjE3NTYpIiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTsiLz4KPC9zdmc+Cg==") no-repeat top left;
-  background-size: contain;
-  height: 1.4rem;
-  width: 1.4rem;
-  display: inline-block;
-  padding-right: 8px;
-  position: relative;
-  bottom: -0.3rem;
-  content: '';
-}
-
-nav#toc > ol > li.os-toc-unit > a:first-of-type {
-  font-family: Roboto Condensed, StixGeneral;
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  color: #344456;
-  padding-left: 16px;
-  margin-left: 8px;
-  line-height: 1.5rem;
-  margin: 0;
-  text-decoration: none;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit {
-  list-style: none;
-  margin-left: 0;
-  display: inline;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-chapter:nth-child(2n) {
+nav#toc > ol > li.os-toc-chapter:nth-child(2n) {
   background-color: #F9F9F9;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) {
+nav#toc > ol > li.os-toc-composite-chapter > ol {
+  display: none;
+}
+
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) {
   display: block;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-right: 40px;
-  padding-left: 0px;
+  padding-left: 8px;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a {
   font-family: Noto Sans, StixGeneral;
   color: #24739E;
   font-size: 1.2rem;
@@ -1142,13 +1067,13 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
   margin-left: 8px;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number {
   font-size: 1rem;
   line-height: 1rem;
   border-style: solid;
@@ -1165,11 +1090,11 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
   vertical-align: middle;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number > .os-part-text {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > a > .os-number > .os-part-text {
   display: none;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol {
   list-style: none;
   border-left-style: solid;
   border-left-width: 0.25rem;
@@ -1180,58 +1105,29 @@ nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-un
   padding-left: 8px;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li.os-toc-composite-chapter > ol {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li.os-toc-composite-chapter > ol {
   display: none;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li {
   display: block;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a {
   color: #000000;
   font-size: 1rem;
   line-height: 1.5rem;
   text-decoration: none;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a > .os-number {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a > .os-number {
   font-weight: bold;
 }
 
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after {
+nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after {
   content: target-counter(attr(href), page);
   display: inline-block;
   margin-left: 8px;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page {
-  display: block;
-  padding-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 40px;
-  padding-left: 8px;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a {
-  color: #000000;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-decoration: none;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a > .os-number {
-  display: none;
-}
-
-nav#toc > ol > li.os-toc-unit > ol.os-unit > li.os-toc-unit-page > a::after {
-  content: target-counter(attr(href), page);
-  display: inline-block;
-  margin-left: 8px;
-}
-
-nav#toc > ol > li.os-toc-composite-chapter > ol {
-  display: none;
 }
 
 [data-type=page]:not(.introduction):not(.unit-opener) .learning-objectives > h3[data-type=title] {
@@ -1270,7 +1166,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 {
   display: table;
   color: #24739E;
@@ -1279,21 +1174,18 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 2.0736rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-part-text {
   display: none;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-text {
   display: table-cell;
   padding-left: 16px;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener).appendix > h1 > .os-number {
+  border-color: #344456;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: #344456;
   padding: 0.5rem;
   width: 2.8rem;
   height: 2.8rem;
@@ -1301,7 +1193,6 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   text-align: center;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 {
   display: table;
   color: #24739E;
@@ -1310,17 +1201,15 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-text {
   display: table-cell;
   padding-left: 8px;
   vertical-align: middle;
 }
-
 [data-type=page]:not(.introduction):not(.unit-opener) > h2 > .os-number {
+  border-color: #0DC0DC;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: #0DC0DC;
   padding: 0.5rem;
   width: 2.8rem;
   height: 2.8rem;
@@ -1328,55 +1217,34 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   text-align: center;
   vertical-align: middle;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > h2 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h2 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.728rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > h3, [data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h3 {
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > h4, [data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > h4 {
-  color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h4 {
-  color: #24739E;
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-[data-type=page]:not(.introduction):not(.unit-opener) > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+[data-type=page]:not(.introduction):not(.unit-opener) > section:not(.learning-objectives) > section > section > h5 {
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1549,54 +1417,49 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 .os-glossary-container > h2::before {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMy43NiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyNDczOWU7fS5jbHMtMntmaWxsOiMzNDQ0NTY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5LZXkgVGVybXM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEsMjMuNzZIMFYwSDIxWk0uODYsMjIuODlIMjAuMTRWLjg2SC44NloiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMiIgY3g9IjEwLjUiIGN5PSI4LjU1IiByPSIwLjcyIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTMuMzQsOS4zM0EyLjg0LDIuODQsMCwxLDAsOS40MiwxMnY1LjMxaDIuMTdWMTYuN2guNTJ2LTFoLS41MlYxNS4zaC41MnYtLjcyaC0uNTJWMTJBMi44NSwyLjg1LDAsMCwwLDEzLjM0LDkuMzNabS0yLjUsNy4xOWgtLjY3VjEyLjE1bC4zMywwLC4zNCwwWm0uMDgtNS4xNGEyLjg2LDIuODYsMCwwLDEtLjQyLDAsMi44NSwyLjg1LDAsMCwxLS40MiwwLDIuMDksMi4wOSwwLDEsMSwuODQsMFoiLz48L2c+PC9nPjwvc3ZnPgo=") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
   width: 2.1rem;
   padding-right: 8px;
-  content: '';
+  content: "";
   display: inline-block;
 }
-
-.os-glossary-container > section > a > h3[data-type=document-title] {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-glossary-container > div > div > section > a > h4 {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .os-glossary-container > div > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
+.os-glossary-container > div > div > section > a > h4 {
+  font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.os-glossary-container > section a > h3[data-type=document-title] {
+  font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
 .os-glossary-container > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
 .os-glossary-container > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1611,54 +1474,49 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 .os-summary-container > h2::before {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMy43NiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyNDczOWU7fS5jbHMtMntmaWxsOiMzNDQ0NTY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5TdW1tYXJ5PC90aXRsZT48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIxLDIzLjc2SDBWMEgyMVpNLjg2LDIyLjg5SDIwLjE0Vi44NkguODZaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTMuNzUsNy43OFY2LjE3SDUuNjFWMTZINy4yNXYxLjYxaDguMTRWNy43OFpNNi4zNiw2LjkySDEzdjguM0g2LjM2Wm04LjI3LDkuOTFIOFYxNmg1Ljc2VjguNTNoLjg4WiIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC4zOCIgeT0iOS4xNSIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC40IiB5PSIxMC43NSIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC40IiB5PSIxMi4zNiIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjwvZz48L2c+PC9zdmc+Cg==") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
   width: 2.1rem;
   padding-right: 8px;
-  content: '';
+  content: "";
   display: inline-block;
 }
-
-.os-summary-container > section > a > h3[data-type=document-title] {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-summary-container > div > div > section > a > h4 {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .os-summary-container > div > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
+.os-summary-container > div > div > section > a > h4 {
+  font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.os-summary-container > section a > h3[data-type=document-title] {
+  font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
 .os-summary-container > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
 .os-summary-container > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1673,54 +1531,49 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 .os-review-questions-container > h2::before {
   background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzI4NzM5ZTt9LmNscy00e2ZpbGw6IzM5NDU1Nzt9LmNscy01e2ZpbGw6I2ZmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuNzYiLz48L2NsaXBQYXRoPjwvZGVmcz48dGl0bGU+c3VnZ2VzdGVkcmVzb3VyY2VzICgxKTwvdGl0bGU+PGcgY2xhc3M9ImNscy0yIj48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0uODYuODZIMjAuMTR2MjJILjg2Wk0wLDIzLjc2SDIxVjBIMFoiLz48L2c+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNMTMuMyw3LjgzVjYuMjJINS4xNlYxNkgxMy4zWk01LjkxLDdoNi42NHY4LjMxSDUuOTFaIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSI3LjkyIiB5PSI5LjIiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEwLjgiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEyLjQxIiB3aWR0aD0iMi41OSIgaGVpZ2h0PSIwLjY0Ii8+PGNpcmNsZSBjbGFzcz0iY2xzLTQiIGN4PSIxMi43NyIgY3k9IjE1LjY2IiByPSIzLjIiLz48cG9seWdvbiBjbGFzcz0iY2xzLTUiIHBvaW50cz0iMTIuNSAxNy4zNCAxMC45NyAxNi4xMSAxMS4zNiAxNS42MiAxMi40MSAxNi40NCAxNC4zMSAxNC4xOCAxNC44IDE0LjU5IDEyLjUgMTcuMzQiLz48L3N2Zz4=") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
   width: 2.1rem;
   padding-right: 8px;
-  content: '';
+  content: "";
   display: inline-block;
 }
-
-.os-review-questions-container > section > a > h3[data-type=document-title] {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-review-questions-container > div > div > section > a > h4 {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .os-review-questions-container > div > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
+.os-review-questions-container > div > div > section > a > h4 {
+  font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.os-review-questions-container > section a > h3[data-type=document-title] {
+  font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
 .os-review-questions-container > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
 .os-review-questions-container > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1735,54 +1588,49 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 .os-check-understanding-container > h2::before {
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOiMyODczOUU7fQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMzOTQ1NTc7c3Ryb2tlLXdpZHRoOjAuNzU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0MntmaWxsOiMzNTQ0NTY7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjAuMjU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxkZWZzPgoJCQk8cmVjdCBpZD0iU1ZHSURfMV8iIHk9IjAiIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMy44Ii8+CgkJPC9kZWZzPgoJCTxjbGlwUGF0aCBpZD0iU1ZHSURfMl8iPgoJCQk8dXNlIHhsaW5rOmhyZWY9IiNTVkdJRF8xXyIgIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlOyIvPgoJCTwvY2xpcFBhdGg+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAuOSwwLjloMTkuM3YyMkgwLjlWMC45eiBNMCwyMy44aDIxVjBIMFYyMy44eiIvPgoJPC9nPgo8L2c+CjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjEwLjUiIGN5PSIxMS44IiByPSI0Ii8+Cjxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMTUuNSw4LjYgMTAuNSwxMy42IDguNCwxMS40IDkuMSwxMC43IDEwLjUsMTIuMiAxNC44LDcuOSAiLz4KPC9zdmc+Cg==") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
   width: 2.1rem;
   padding-right: 8px;
-  content: '';
+  content: "";
   display: inline-block;
 }
-
-.os-check-understanding-container > section > a > h3[data-type=document-title] {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-check-understanding-container > div > div > section > a > h4 {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .os-check-understanding-container > div > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
+.os-check-understanding-container > div > div > section > a > h4 {
+  font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.os-check-understanding-container > section a > h3[data-type=document-title] {
+  font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
 .os-check-understanding-container > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
 .os-check-understanding-container > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
@@ -1797,54 +1645,49 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   line-height: 1.728rem;
   margin-bottom: 0.7rem;
 }
-
 .os-application-questions-container > h2::before {
   background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzI4NzM5ZTt9LmNscy00e2ZpbGw6IzM5NDU1Nzt9LmNscy01e2ZpbGw6I2ZmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjEiIGhlaWdodD0iMjMuNzYiLz48L2NsaXBQYXRoPjwvZGVmcz48dGl0bGU+c3VnZ2VzdGVkcmVzb3VyY2VzICgxKTwvdGl0bGU+PGcgY2xhc3M9ImNscy0yIj48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0uODYuODZIMjAuMTR2MjJILjg2Wk0wLDIzLjc2SDIxVjBIMFoiLz48L2c+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNMTMuMyw3LjgzVjYuMjJINS4xNlYxNkgxMy4zWk01LjkxLDdoNi42NHY4LjMxSDUuOTFaIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSI3LjkyIiB5PSI5LjIiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEwLjgiIHdpZHRoPSIyLjU5IiBoZWlnaHQ9IjAuNjQiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjcuOTQiIHk9IjEyLjQxIiB3aWR0aD0iMi41OSIgaGVpZ2h0PSIwLjY0Ii8+PGNpcmNsZSBjbGFzcz0iY2xzLTQiIGN4PSIxMi43NyIgY3k9IjE1LjY2IiByPSIzLjIiLz48cG9seWdvbiBjbGFzcz0iY2xzLTUiIHBvaW50cz0iMTIuNSAxNy4zNCAxMC45NyAxNi4xMSAxMS4zNiAxNS42MiAxMi40MSAxNi40NCAxNC4zMSAxNC4xOCAxNC44IDE0LjU5IDEyLjUgMTcuMzQiLz48L3N2Zz4=") no-repeat top left;
   background-size: contain;
   height: 2.1rem;
   width: 2.1rem;
   padding-right: 8px;
-  content: '';
+  content: "";
   display: inline-block;
 }
-
-.os-application-questions-container > section > a > h3[data-type=document-title] {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.44rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
-.os-application-questions-container > div > div > section > a > h4 {
-  font-family: Noto Sans, StixGeneral;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
-}
-
 .os-application-questions-container > div > h3 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
+.os-application-questions-container > div > div > section > a > h4 {
+  font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.os-application-questions-container > section a > h3[data-type=document-title] {
+  font-size: 1.44rem;
+  font-family: Noto Sans, StixGeneral;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
 .os-application-questions-container > section > section > h4 {
   color: #24739E;
-  font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-
 .os-application-questions-container > section > section > section > h5 {
-  font-family: Noto Sans, StixGeneral;
+  color: #000000;
   font-size: 1rem;
+  font-family: Noto Sans, StixGeneral;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
   font-weight: bold;

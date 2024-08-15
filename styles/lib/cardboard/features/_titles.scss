@@ -1,0 +1,191 @@
+@use 'lib/cardboard/colors';
+@use 'lib/cardboard/fonts';
+
+// Page titles
+@mixin page-titles(
+  $large-header-font:       fonts.$roboto,
+  $header-color:            colors.$B4,
+  $appendix-number-border:  colors.$B2,
+  $h2-number-border:        colors.$B3
+) {
+  [data-type=page]:not(.introduction):not(.unit-opener) {
+    &.preface > h1 {
+      color: $header_color;
+      font-family: $large-header-font;
+      font-size: 2.0736rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+    &.appendix > h1 {
+      display: table;
+      color: $header_color;
+      font-family: $large-header-font;
+      font-size: 2.0736rem;
+      line-height: 2.0736rem;
+      margin-bottom: 0.7rem;
+      > .os-part-text {
+        display: none;
+      }
+      > .os-text {
+        display: table-cell;
+        padding-left: 16px;
+        vertical-align: middle;
+      }
+      > .os-number {
+        @include -big-header-number(
+          $border-color: $appendix-number-border
+        );
+      }
+    }
+    > h2 {
+      display: table;
+      color: $header_color;
+      font-family: $large-header-font;
+      font-size: 1.728rem;
+      line-height: 1.728rem;
+      margin-bottom: 0.7rem;
+      > .os-text {
+        display: table-cell;
+        padding-left: 8px;
+        vertical-align: middle;
+      }
+      > .os-number {
+        @include -big-header-number(
+          $border-color: $h2-number-border
+        );
+      }
+    }
+    > section:not(.learning-objectives) {
+      > h2 {
+        @include -header-in-body(
+          $font-size: 1.728rem,
+          $color: $header_color
+        );
+      }
+      > h3, > section > h3 {
+        @include -header-in-body(
+          $font-size: 1.44rem,
+          $color: $header_color
+        );
+      }
+      > section {
+        > h4, > section > h4 {
+          @include -header-in-body(
+            $font-size: 1.2rem,
+            $color: $header_color
+          );
+        }
+        > section > h5 {
+          @include -header-in-body(
+            $font-size: 1rem,
+            $color: colors.$black
+          );
+        }
+      }
+    }
+  }
+}
+
+@mixin -header-in-body($font-size, $color) {
+  color: $color;
+  font-size: $font-size;
+  font-family: fonts.$noto;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+@mixin -big-header-number($border-color) {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 0.2rem;
+  padding: 0.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// Eoc titles
+@mixin eoc-composite-page-titles(
+  $root, $svg,
+  $h2-color: colors.$B4,
+  $h2-font: fonts.$roboto,
+  $h4-color: colors.$B4
+) {
+  #{$root} {
+    > h2 {
+      display: flex;
+      align-items: center;
+      color: $h2-color;
+      font-family: $h2-font;
+      font-size: 1.728rem;
+      line-height: 1.728rem;
+      margin-bottom: 0.7rem;
+      &::before {
+        background: url($svg) no-repeat top left;
+        background-size: contain;
+        height: 2.1rem;
+        width: 2.1rem;
+        padding-right: 8px;
+        content: '';
+        display: inline-block;
+      }
+    }
+    > div {
+      > h3 {
+        @include -header-in-body(
+          $color: colors.$B4,
+          $font-size: 1.44rem
+        )
+      }
+      > div > section > a > h4 {
+        @include -header-in-body(
+          $color: null,
+          $font-size: 1.2rem
+        )
+      }
+    }
+    > section {
+      a > h3[data-type=document-title] {
+        @include -header-in-body(
+          $color: null,
+          $font-size: 1.44rem
+        )
+      }
+      > section > h4 {
+        @include -header-in-body(
+          $color: $h4-color,
+          $font-size: 1.2rem
+        )
+      }
+      > section > section > h5 {
+        @include -header-in-body(
+          $color: colors.$black,
+          $font-size: 1rem
+        )
+      }
+    }
+  }
+}
+
+// Composite chapters style the chapter header as if it's a page header
+// and composite page children become subtitles. If there are icons on the subtitles,
+// include those too.
+@mixin eoc-composite-chapter-titles($root, $svg, $composite-page-icons-map: null) {
+  @include eoc-composite-page-titles($root, $svg);
+  @each $class, $svg in $composite-page-icons-map {
+    #{$class} > h3::before {
+      background-image: url($svg);
+      background-position: left bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 1.5rem;
+      width: 1.5rem;
+      padding-right: 2px;
+      content: '';
+      display: inline-block;
+    }
+  }
+}

@@ -540,7 +540,8 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-} /* stylelint-disable-next-line meowtec/no-px */
+}
+/* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
 }
@@ -2537,12 +2538,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   content: target-counter(attr(href, url), page);
 }
 
-.os-references-container p {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.os-further-research-container p {
+.os-references-container, .os-further-research-container p {
   text-indent: -16px;
   padding-left: 16px;
 }

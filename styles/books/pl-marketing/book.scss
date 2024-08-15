@@ -1,3 +1,6 @@
+@use 'lib/cardboard/cardboard';
+@use 'lib/cardboard/colors';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc .os-chapter-summary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -35,101 +38,6 @@ $bandColor: #9028A3;
   'H1ChapterIntroIcon:::bottom': 0.1rem,
   'H1ChapterIntroIcon:::left': 0rem,
   )
-));
-
-//EOC Titles
-@include add_settings((
-  SummaryTitles: (
-    _selectors: (".os-chapter-summary-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  KeyTermsTitles: (
-    _selectors: (".os-glossary-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  MarketingDiscussionTitles: (
-    _selectors: (".os-marketing-discussion-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-discussion.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  CriticalThinkingTitles: (
-    _selectors: (".os-critical-thinking-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  MarketingPlanTitles: (
-    _selectors: (".os-marketing-plan-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-net.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  CompanyCaseTitles: (
-    _selectors: (".os-company-case-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-casestudy.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  EndnotesTitles: (
-    _selectors: (".os-references-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFont'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColor"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-references.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
 ));
 
 //Notes
@@ -203,13 +111,6 @@ $bandColor: #9028A3;
 ));
 
 @include add_settings((
-  NumberedLearningObjectives: (
-    _selectors: ('[data-type="page"] .learning-objectives'),
-    'ObjectivesNumberToken:::color': (_ref: 'colorMap:::titleColor'),
-  )
-));
-
-@include add_settings((
   ModuleWithoutTitleLinks: (
     _selectors: ('.knowledge-check', '.os-eoc.os-marketing-discussion-container', '.os-eoc.os-critical-thinking-container', '.os-eoc.os-company-case-container'),
   ),
@@ -255,7 +156,7 @@ $bandColor: #9028A3;
 @include use('UnitOpenerPageTitle', 'common:::Hidden');
 @include use('FootnoteNotReference', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
-@include use('NumberedLearningObjectives', 'cardboard:::LearningObjectivesNumberedShape');
+@include cardboard.learning-objectives--numbered($token-color: colors.$B4);
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape');
 @include use('TocUnitWithDots', 'cardboard:::UnitWithDotsToc');
 @include use('Equation', 'cardboard:::EquationShape');
@@ -283,16 +184,21 @@ $bandColor: #9028A3;
 
 // Titles
 @include use('UnitOpenerTitles', 'cardboard:::UnitOpenerTitlesShape');
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
+@include cardboard.page-titles();
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesBlue', 'cardboard:::ChapterIntroTitlesShape');
-@include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('MarketingDiscussionTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('CriticalThinkingTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('MarketingPlanTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('CompanyCaseTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('EndnotesTitles', 'cardboard:::EocCompositePageTitlesShape');
+$composite-pages: (
+  '.os-chapter-summary-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary.svg"),
+  '.os-glossary-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms.svg"),
+  '.os-marketing-discussion-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-discussion.svg"),
+  '.os-critical-thinking-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-assessments.svg"),
+  '.os-marketing-plan-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-net.svg"),
+  '.os-company-case-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-casestudy.svg"),
+  '.os-references-container': toDataUri("svg+xml", "designs/cardboard/resources/cardboard-references.svg"),
+);
+@each $class, $svg in $composite-pages {
+  @include cardboard.eoc-composite-page-titles($class, $svg);
+}
 @include use('CompositeChapterTitles', 'cardboard:::CompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
 

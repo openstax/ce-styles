@@ -540,7 +540,8 @@ a {
     display: block;
     margin-top: 0.7rem;
   }
-} /* stylelint-disable-next-line meowtec/no-px */
+}
+/* stylelint-disable-next-line meowtec/no-px */
 [data-type=chapter] > h1[data-type=document-title] .os-number {
   string-set: chapter-number content();
 }
@@ -1239,12 +1240,7 @@ section.section-workscited > p {
   padding-left: 16px;
 }
 
-.handbook section.works-cited p {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.handbook section.further-reading p {
+.handbook section.works-cited, .handbook section.further-reading p {
   text-indent: -16px;
   padding-left: 16px;
 }
@@ -3003,17 +2999,7 @@ body > [data-type=page]:not(.preface):not(.appendix) > section > section > secti
   margin-top: 1rem;
 }
 
-.os-eoc.os-further-reading-container p {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.os-eoc.os-works-cited-container p {
-  text-indent: -16px;
-  padding-left: 16px;
-}
-
-.os-eoc.os-works-consulted-container p {
+.os-eoc.os-works-cited-container, .os-eoc.os-works-consulted-container, .os-eoc.os-further-reading-container p {
   text-indent: -16px;
   padding-left: 16px;
 }

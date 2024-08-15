@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
@@ -351,7 +353,7 @@ nav, [data-type="document-title"], [data-type="title"],
 @include use('CarbonylChemistry','carnival:::ExercisesModuleShape');
 
 // Equations
-@include use('Equation', 'carnival:::EquationShape');
+@include carnival.unnumbered-equation();
 
 // EOB
 @include use('AppendixGlossary', 'carnival:::AppendixGlossaryShape');

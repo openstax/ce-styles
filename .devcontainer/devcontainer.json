@@ -3,18 +3,23 @@
     "name": "Styles Devcontainer",
     "build": {
       "dockerfile": "../Dockerfile",
-      "context": "..",
+      "context": ".."
     },
-    "onCreateCommand": "bash ./.devcontainer/onCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=default",
     "workspaceFolder": "/code",
-    "settings": {
-      "files.trimTrailingWhitespace": true,
-      "files.insertFinalNewline": true,
-      "terminal.integrated.shell.linux": "/bin/bash",
-      "editor.detectIndentation": false,
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-    },
-    "extensions": ["stylelint.vscode-stylelint"],
+    "customizations": { "vscode": {
+      "settings": {
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.rulers": [100],
+      },
+      "extensions": [
+        "stylelint.vscode-stylelint",
+        "eamodio.gitlens"
+      ]
+    }}
 }

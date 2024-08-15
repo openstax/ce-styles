@@ -12,8 +12,7 @@ do
 done
 
 docker build -f Dockerfile -t styles-base .
-docker build -f Dockerfile.run -t styles-full .
-docker run -d -t --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container styles-full /bin/bash
+docker run -d -it --rm --mount type=bind,source="$PWD",target=/code --name styles_temp_container styles-base /bin/bash
 echo "Executing $@..."
-docker exec "${env_vars[@]}" styles_temp_container "$@"
+docker exec "${env_vars[@]}" styles_temp_container bash -c "$*"
 docker stop styles_temp_container > /dev/null    # mutes "styles_temp_container" output

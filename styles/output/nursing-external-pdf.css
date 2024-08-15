@@ -1352,6 +1352,8 @@ div[data-type=composite-page].os-eob {
   padding-bottom: 0.7rem;
   font-size: 0.8333333333rem;
   line-height: 1.2;
+  max-width: 7.65in;
+  padding-right: 8px;
 }
 
 .os-figure.has-splash .os-caption-container::before {
@@ -2268,6 +2270,14 @@ a[role=doc-noteref] {
 
 .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
   width: 22.2222222222%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="1*"] {
+  width: 9.0909090909%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="2*"] {
+  width: 18.1818181818%;
 }
 
 .os-table.os-full-width-container {

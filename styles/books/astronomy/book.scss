@@ -1,3 +1,7 @@
+@use 'lib/cardboard/cardboard';
+@use 'lib/cardboard/colors';
+@use 'lib/cardboard/fonts';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
@@ -133,80 +137,6 @@ $bandColor: #772949;
 ));
 
 @include add_settings((
-  SummaryTitles: (
-    _selectors: ('.os-summary-container'),
-    'H2WithIcon:::color': (_ref: 'colorMap:::eocTitleColorAstronomy'),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary2.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  KeyTermsTitles: (
-    _selectors: ('.os-glossary-container'),
-    'H2WithIcon:::color': (_ref: 'colorMap:::eocTitleColorAstronomy'),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms2.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  PageTitles: (
-    _selectors: ('[data-type="page"]:not(.introduction)'),
-    'H1Title:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H1Title:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H1Numbered:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H1Numbered:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H1Numbered:::font-size': font-scale(3),
-    'H1Numbered:::line-height': font-scale(3),
-    'H1Numbered:::margin-bottom': v-spacing(1),
-    'H1TitleNumber:::border-color': (_ref: "colorMap:::titleAppendixBorderColorAstronomy"),
-    'H2Numbered:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H2Numbered:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H2TitleNumber:::border-color': (_ref: "colorMap:::titleSectionBorderColorAstronomy"),
-    'H2Title:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H2Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  ForFurtherExplorationTitles: (
-    _selectors: (".os-further-exploration-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-rocket.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColorAstronomy'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
-  GroupActivitiesTitles: (
-    _selectors: (".os-group-activities-container"),
-    'H2WithIcon:::font-family': (_ref: 'typography:::titleFontAstronomy'),
-    'H2WithIcon:::color': (_ref: "colorMap:::titleColorAstronomy"),
-    'H2Icon:::background': url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-groupwork.svg")) no-repeat top left,
-    'H3LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H3Title:::color': (_ref: 'colorMap:::titleColor'),
-    'H4Title:::font-family': (_ref: 'typography:::baseFont'),
-    'H4Title:::color': (_ref: 'colorMap:::titleColorAstronomy'),
-    'H4LinkTitle:::font-family': (_ref: 'typography:::baseFont'),
-    'H5Title:::font-family': (_ref: 'typography:::baseFont'),
-  ),
   ExercisesTitles: (
     _selectors: (".os-exercises-container"),
     'H2WithIcon:::font-family': (_ref: 'typography:::titleFontAstronomy'),
@@ -368,11 +298,24 @@ $bandColor: #772949;
 // Titles
 @include use('ChapterTitles', 'cardboard:::ChapterTitlesShape');
 @include use('ChapterIntroTitlesPurple', 'cardboard:::ChapterIntroTitlesShape');
-@include use('SummaryTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('KeyTermsTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('PageTitles', 'cardboard:::PageTitlesShape');
-@include use('ForFurtherExplorationTitles', 'cardboard:::EocCompositePageTitlesShape');
-@include use('GroupActivitiesTitles', 'cardboard:::EocCompositePageTitlesShape');
+@include cardboard.page-titles(
+  $large-header-font:       fonts.$dosis,
+  $header-color:            colors.$P2,
+  $appendix-number-border:  colors.$Y1,
+  $h2-number-border:        colors.$Y1
+);
+$composite-pages:
+// root                               svg                                                                         h2 color    h4 color
+  '.os-summary-container'             toDataUri("svg+xml", "designs/cardboard/resources/cardboard-summary2.svg")  colors.$P1  colors.$B4,
+  '.os-glossary-container'            toDataUri("svg+xml", "designs/cardboard/resources/cardboard-keyterms2.svg") colors.$P1  colors.$B4,
+  '.os-further-exploration-container' toDataUri("svg+xml", "designs/cardboard/resources/cardboard-rocket.svg")    colors.$P2  colors.$P2,
+  '.os-group-activities-container'    toDataUri("svg+xml", "designs/cardboard/resources/cardboard-groupwork.svg") colors.$P2  colors.$P2
+;
+@each $class, $svg, $h2-color, $h4-color in $composite-pages {
+  @include cardboard.eoc-composite-page-titles(
+    $class, $svg, $h2-color: $h2-color, $h2-font: fonts.$dosis, $h4-color: $h4-color
+  );
+}
 @include use('ExercisesTitles', 'cardboard:::EocCompositeChapterTitlesShape');
 @include use('EobCompositePageTitles', 'cardboard:::EobCompositePageTitlesShape');
 

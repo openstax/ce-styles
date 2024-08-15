@@ -3,62 +3,6 @@
 @import 'lists/lists-components';
 //Preface, Appendix, regular module
 
-@include create_shape('cardboard:::PageTitlesShape', (
-    _components: (
-        map-merge($Page__Container, (
-            _components: (
-                map-merge($Preface__Container,(
-                    _components:(
-                        $H1,
-                    ),
-                )),
-                map-merge($Appendix__Container,(
-                    _components:(
-                        map-merge($H1--Numbered, (
-                            _components: (
-                                $H1--Numbered__PartText,
-                                $H1--Numbered__Text,
-                                $H1--Numbered__Number,
-                            )
-                        )),
-                    ),
-                )),
-                map-merge($H2--Numbered, (
-                    _components: (
-                        $H2--Numbered__Text,
-                        $H2--Numbered__Number,
-                    )
-                )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $H2,
-                    ),
-                )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $H3,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $H3,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $H4,
-                    ),
-                )),
-                map-merge($SectionWrapper--ThirdLevel,(
-                    _components:(
-                        $H4,
-                        $H5,
-                    ),
-                )),
-            )
-        )),
-    )
-));
 
 // Unit Opener
 
@@ -133,49 +77,6 @@
 ));
 
 //Composite pages
-
-@include create_shape('cardboard:::EocCompositePageTitlesShape', ( // settings for this shape are defined in book.scss file, because each module use different icon
-    _components: (
-        map-merge($Page--Composite__Container, (
-            _components: (
-                map-merge($H2--WithIcon,(
-                    _components:(
-                        $H2--WithIcon__Icon,
-                    ),
-                )),
-                map-merge($SectionWrapper--FirstLevel,(
-                    _components:(
-                        $H3--Link,
-                    ),
-                )),
-                map-merge($DivWrapper--SecondLevel,(
-                    _components:(
-                        map-merge($SectionWrapper--FirstLevel,(
-                            _components:(
-                                $H4--Link,
-                            ),
-                        )),
-                    ),
-                )),
-                map-merge($DivWrapper--FirstLevel,(
-                    _components:(
-                        $H3,
-                    ),
-                )),
-                map-merge($SectionWrapper--SecondLevel,(
-                    _components:(
-                        $H4,
-                    ),
-                )),
-                map-merge($SectionWrapper--ThirdLevel,(
-                    _components:(
-                        $H5,
-                    ),
-                )),
-            )
-        )),
-    )
-));
 
 @include create_shape('cardboard:::EobCompositePageTitlesShape', ( // Index, References
     _components: (

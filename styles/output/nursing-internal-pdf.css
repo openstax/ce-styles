@@ -1267,6 +1267,13 @@ p.centered-text {
   text-align: center;
 }
 
+[data-type=equation].unnumbered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
 .os-chapter-outline {
   font-family: IBM Plex Sans, sans-serif;
   font-weight: normal;
@@ -1654,6 +1661,8 @@ p.centered-text {
   padding-bottom: 0.7rem;
   font-size: 0.8333333333rem;
   line-height: 1.2;
+  max-width: 7.65in;
+  padding-right: 8px;
 }
 
 .os-figure.has-splash .os-caption-container::before {
@@ -2160,6 +2169,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
   width: 22.2222222222%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="1*"] {
+  width: 9.0909090909%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="2*"] {
+  width: 18.1818181818%;
 }
 
 [data-type=page] > ol {

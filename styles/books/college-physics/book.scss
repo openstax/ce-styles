@@ -1,3 +1,5 @@
+@use '../../lib/carnival/carnival';
+
 $PagesWithBands: (
   (pageName: eoc, firstSelector: '.os-eoc.os-glossary-container', generalSelector: '.os-eoc'),
   (pageName: eob, firstSelector: '.os-eob.os-index-container', generalSelector: '.os-eob'),
@@ -169,7 +171,7 @@ $ChapterIntroType: fullWidth;
 @include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
 
 // Equations
-@include use('NumberedEquation', 'carnival:::NumberedEquationShape');
+@include carnival.numbered-equation();
 
 // EOC
 @include use('KeyTerms', 'carnival:::KeyTermsShape');
