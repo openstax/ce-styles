@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Added `column-width` proportions to `nursing-internal`
+- Reenable local fonts for PDF/EPUB
 
 ## [v2.3.0] - 2024-08-12
 
