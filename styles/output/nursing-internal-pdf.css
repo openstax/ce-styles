@@ -1854,6 +1854,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
   margin-bottom: 0;
 }
+.os-table:not(.os-unstyled-container) > table col:not(:last-child) {
+  border-right: 0.025rem solid #000000;
+}
 .os-table:not(.os-unstyled-container) > table > thead > tr > th {
   border-bottom: 0.1rem solid #000000;
   border-top: 0.1rem solid #000000;
@@ -1885,6 +1888,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type) > strong {
+  word-break: break-word;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td:not(:only-of-type):not(:last-child) {
+  border-left: none;
+  border-right: 0.025rem solid #000000;
+}
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[rowspan="2"]:not(:only-of-type):not(:first-child) {
+  border-left: 0.025rem solid #000000;
+}
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-valign=top] {
   vertical-align: top;
 }
@@ -1911,21 +1924,8 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
 }
-.os-table:not(.os-unstyled-container) > table > tbody > tr:not(:only-of-type) > strong {
-  word-break: break-word;
-}
-.os-table:not(.os-unstyled-container) > table > tbody > tr[rowspan="2"]:not(:only-of-type):not(:first-child) {
-  border-left: 0.025rem solid #000000;
-}
-.os-table:not(.os-unstyled-container) > table > tbody > tr:not(:only-of-type):not(:last-child) {
-  border-left: none;
-  border-right: 0.025rem solid #000000;
-}
 .os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:only-of-type {
   border-right: none;
-}
-.os-table:not(.os-unstyled-container) col:not(:last-child) {
-  border-right: 0.025rem solid #000000;
 }
 
 .os-eoc [data-type=problem] > div .os-table > table, .os-eoc [data-type=exercise-question] > div .os-table > table {
@@ -2122,6 +2122,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
   width: 22.2222222222%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="1*"] {
+  width: 9.0909090909%;
+}
+
+.os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="2*"] {
+  width: 18.1818181818%;
 }
 
 [data-type=page] > ol {

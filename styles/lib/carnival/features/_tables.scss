@@ -47,6 +47,9 @@
         border-collapse: collapse;
         width: 100%;
         margin-bottom: 0;
+        & col:not(:last-child) {
+          border-right: 0.025rem solid colors.$black;
+        }
         > thead > tr {
           > th {
             border-bottom: 0.1rem solid colors.$black;
@@ -80,6 +83,16 @@
                 padding-right: 0.7rem;
                 padding-left: 0.7rem;
               }
+              &:not(:only-of-type) > strong {
+                word-break: break-word;
+              }
+              &:not(:only-of-type):not(:last-child) {
+                border-left: none;
+                border-right: 0.025rem solid colors.$black;
+              }
+              &[rowspan="2"]:not(:only-of-type):not(:first-child) {
+                border-left: 0.025rem solid colors.$black;
+              }
             &[data-valign=top] {
                 vertical-align: top;
               }
@@ -107,25 +120,12 @@
               padding-left: 0.7rem;
               padding-right: 0.7rem;
             }
-            &:not(:only-of-type) > strong {
-              word-break: break-word;
-            }
-            &[rowspan="2"]:not(:only-of-type):not(:first-child) {
-              border-left: 0.025rem solid colors.$black;
-            }
-            &:not(:only-of-type):not(:last-child) {
-              border-left: none;
-              border-right: 0.025rem solid colors.$black;
-            }
             &:last-of-type {
               > td:only-of-type {
                 border-right: none;
               }
             }
           }
-        }
-        & col:not(:last-child) {
-          border-right: 0.025rem solid colors.$black;
         }
       }
     }
@@ -346,4 +346,11 @@
   .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
     width: 22.2222222222%;
   }
+  .os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="1*"] {
+    width: 9.0909090909%;
+   }
+
+  .os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="2*"] {
+    width: 18.1818181818%;
+   }
 }
