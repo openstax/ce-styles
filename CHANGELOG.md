@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Style `header row` in middle of table and refactor `table shapes` in `nursing-internal`
 - Added `column-width` proportions to `nursing-internal`
 - Reenable local fonts for PDF/EPUB
 
