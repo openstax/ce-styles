@@ -4723,6 +4723,30 @@ a[data-type=cite] {
   margin-left: 24px;
 }
 
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > section > ol {
+  margin-left: 24px;
+}
+
+[data-type=composite-page] > section > section > section > ol > li > ul {
+  margin-left: 16px;
+}
+
+[data-type=composite-page] > section > section > section > ol > li > ol {
+  margin-left: 24px;
+}
+
 .os-index-container {
   column-count: 3;
   column-gap: 32px;
