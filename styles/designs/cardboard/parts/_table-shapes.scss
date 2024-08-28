@@ -219,6 +219,7 @@
                                             )
                                         )),
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -238,6 +239,7 @@
                                             )
                                         )),
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -252,6 +254,7 @@
                                             )
                                         )),
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -266,6 +269,7 @@
                                             )
                                         )),
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -300,6 +304,7 @@
                                     _components: (
                                         $Table__Data,
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -347,6 +352,7 @@
                                         $Table__Timeline__Data__Cell--FirstType,
                                         $Table__Timeline__Data__Cell--TwoRowSpan,
                                         $Table__Data--TopAligned,
+                                        $Table__Data_Cell--TopAligned,
                                         $Table__Data--LeftAligned,
                                         $Table__Data--RightAligned,
                                         $Table__Data--Centered,
@@ -401,6 +407,8 @@
             map-merge($Table__Row, (
                 _components: (
                     $Table__Data--VerticallyTight,
+                    $Table__Data--TopAligned,
+                    $Table__Data_Cell--TopAligned
                 )
             )),
         )

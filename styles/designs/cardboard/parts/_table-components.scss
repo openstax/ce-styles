@@ -288,6 +288,14 @@ $Table__Data--TopAligned: (
     )    
 );
 
+$Table__Data_Cell--TopAligned: (
+    _name: "TopAlignedTableData",
+    _subselector: " > td[data-valign="top"]",
+    _properties: (
+       vertical-align: top,
+    )    
+);
+
 $Table__Data--LeftAligned: (
     _name: "LeftAlignedTabledata",
     _subselector: " > td[data-align="left"]",
