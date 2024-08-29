@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Reenable local fonts for PDF/EPUB
 - Style lists at third section level in `cardboard`
+- `Data Science`: Table Vertical alignment
 
 ## [v2.4.0] - 2024-08-23
 
