@@ -3963,6 +3963,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-eob [data-type=solution] > .os-solution-container > span.answer-letters {
+  font-weight: bold;
+}
+
 .os-eob [data-type=solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -3994,6 +3998,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-eob [data-type=question-solution] > .os-solution-container > p {
   margin-bottom: 0;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container > span.answer-letters {
+  font-weight: bold;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
