@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
+- Add columns to `nursing-internal` 
 - Reenable local fonts for PDF/EPUB
 - Style lists at third section level in `cardboard`
 - `Data Science`: Table Vertical alignment

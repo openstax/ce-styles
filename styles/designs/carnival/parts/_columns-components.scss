@@ -25,6 +25,15 @@ $Columns--TwoColumnsThreeRatioTwo: (
     )
 );
 
+$Columns--TwoColumnsFourRatioTwo: (
+    _name: "TwoColumnsFourRatioTwo",
+    _subselector: " [data-columns='2'][data-ratio='2,2'] col[data-width='2*']",
+    _properties: (
+        width: column-width(2,4,2),
+    )
+);
+
+
 $Columns--TwoColumnsFourRatioOne: (
     _name: "TwoColumnsFourRatioOne",
     _subselector: " [data-columns='2'][data-ratio='1,3'] col[data-width='1*']",
@@ -49,9 +58,17 @@ $Columns--TwoColumnsFiveRatioTwo: (
     )
 );
 
-$Columns--TwoColumnsFiveRatioThree: (
-    _name: "TwoColumnsFiveRatioThree",
+$Columns--TwoColumnsFiveRatioThreeA: (
+    _name: "TwoColumnsFiveRatioThreeA",
     _subselector: " [data-columns='2'][data-ratio='2,3'] col[data-width='3*']",
+    _properties: (
+        width: column-width(2,5,3),
+    )
+);
+
+$Columns--TwoColumnsFiveRatioThreeB: (
+    _name: "TwoColumnsFiveRatioThreeB",
+    _subselector: " [data-columns='2'][data-ratio='3,2'] col[data-width='3*']",
     _properties: (
         width: column-width(2,5,3),
     )
@@ -123,19 +140,75 @@ $Columns--ThreeColumnsSixRatioThree: (
     )
 );
 
-$Columns--ThreeColumnsSevenRatioThree: (
-    _name: "ThreeColumnsSevenRatioThree",
+$Columns--ThreeColumnsSevenRatioOneA: (
+    _name: "ThreeColumnsSevenRatioOneA",
+    _subselector: " [data-columns='3'][data-ratio='1,3,3'] col[data-width='1*']",
+    _properties: (
+        width: column-width(3,7,1),
+    )
+);
+
+$Columns--ThreeColumnsSevenRatioOneB: (
+    _name: "ThreeColumnsSevenRatioOneB",
+    _subselector: " [data-columns='3'][data-ratio='2,2,3'] col[data-width='1*']",
+    _properties: (
+        width: column-width(3,7,1),
+    )
+);
+
+$Columns--ThreeColumnsSevenRatioTwo: (
+    _name: "ThreeColumnsSevenRatioTwo",
+    _subselector: " [data-columns='3'][data-ratio='2,2,3'] col[data-width='2*']",
+    _properties: (
+        width: column-width(3,7,2),
+    )
+);
+
+$Columns--ThreeColumnsSevenRatioThreeA: (
+    _name: "ThreeColumnsSevenRatioThreeA",
     _subselector: " [data-columns='3'][data-ratio='1,3,3'] col[data-width='3*']",
     _properties: (
         width: column-width(3,7,3),
     )
 );
 
-$Columns--ThreeColumnsSevenRatioOne: (
-    _name: "ThreeColumnsSevenRatioOne",
-    _subselector: " [data-columns='3'][data-ratio='1,3,3'] col[data-width='1*']",
+$Columns--ThreeColumnsSevenRatioThreeB: (
+    _name: "ThreeColumnsSevenRatioThreeB",
+    _subselector: " [data-columns='3'][data-ratio='2,2,3'] col[data-width='3*']",
     _properties: (
-        width: column-width(3,7,1),
+        width: column-width(3,7,3),
+    )
+);
+
+$Columns--ThreeColumnsEightRatioOne: (
+    _name: "ThreeColumnsEightRatioOne",
+    _subselector: " [data-columns='3'][data-ratio='2,3,3'] col[data-width='1*']",
+    _properties: (
+        width: column-width(3,8,1),
+    )
+);
+
+$Columns--ThreeColumnsEightRatioTwo: (
+    _name: "ThreeColumnsEightRatioTwo",
+    _subselector: " [data-columns='3'][data-ratio='2,3,3'] col[data-width='2*']",
+    _properties: (
+        width: column-width(3,8,2),
+    )
+);
+
+$Columns--ThreeColumnsEightRatioThree: (
+    _name: "ThreeColumnsEightRatioThree",
+    _subselector: " [data-columns='3'][data-ratio='2,3,3'] col[data-width='3*']",
+    _properties: (
+        width: column-width(3,8,3),
+    )
+);
+
+$Columns--ThreeColumnsNineRatioThree: (
+    _name: "ThreeColumnsNineRatioThree",
+    _subselector: " [data-columns='3'][data-ratio='3,3,3'] col[data-width='3*']",
+    _properties: (
+        width: column-width(3,9,3),
     )
 );
 
@@ -230,17 +303,33 @@ $Columns--FourColumnsSevenRatioTwo: (
     )
 );
 
-$Columns--FourColumnsEightRatioOne: (
-    _name: "FourColumnsEightRatioOne",
+$Columns--FourColumnsEightRatioOneA: (
+    _name: "FourColumnsEightRatioOneA",
     _subselector: " [data-columns='4'][data-ratio='1,2,3,2'] col[data-width='1*']",
     _properties: (
         width: column-width(4,8,1),
     )
 );
 
-$Columns--FourColumnsEightRatioTwo: (
-    _name: "FourColumnsEightRatioTwo",
+$Columns--FourColumnsEightRatioOneB: (
+    _name: "FourColumnsEightRatioOneB",
+    _subselector: " [data-columns='4'][data-ratio='2,1,3,2'] col[data-width='1*']",
+    _properties: (
+        width: column-width(4,8,1),
+    )
+);
+
+$Columns--FourColumnsEightRatioTwoA: (
+    _name: "FourColumnsEightRatioTwoA",
     _subselector: " [data-columns='4'][data-ratio='1,2,3,2'] col[data-width='2*']",
+    _properties: (
+        width: column-width(4,8,2),
+    )
+);
+
+$Columns--FourColumnsEightRatioTwoB: (
+    _name: "FourColumnsEightRatioTwoB",
+    _subselector: " [data-columns='4'][data-ratio='2,1,3,2'] col[data-width='2*']",
     _properties: (
         width: column-width(4,8,2),
     )
