@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `ProblemSolutionAnswerLetters` component for `answer-letters` to `cardboard`
 - Style `answer-letters` in bold in `data-science`
 - Style `answer-letters` in bold in `webview`
+- Style `brown-code` in `data-science` and on `webview`
 
 ## [v2.4.0] - 2024-08-23
 
