@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Make `FirstLevelOrderedList` margins adjustable in `cardboard`
 
 ## [v2.6.0] - 2024-10-01
 
