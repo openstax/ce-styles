@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Make `FirstLevelOrderedList` margins adjustable in `cardboard`
 - Make `FirstLevelUnorderedList` margins adjustable in `cardboard`
+- Set `FirstLevelOrderedList` left to `h-spacing(5)` in `computer-science`
 
 ## [v2.6.0] - 2024-10-01
 
