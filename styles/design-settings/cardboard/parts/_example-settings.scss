@@ -63,3 +63,16 @@
       ),
     ),
 ));
+
+@each $key in (ExampleBlue, ExampleGreen) {
+    @include add_settings((
+        $key: (
+            FirstLevelOrderedList: (
+                margin-left: h-spacing(3),
+            ),
+            FirstLevelUnorderedList: (
+                margin-left: h-spacing(3),
+            ),
+        )
+    ))
+}

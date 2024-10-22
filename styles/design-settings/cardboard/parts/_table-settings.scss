@@ -562,3 +562,21 @@
         _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
     )
 ));
+
+@each $key in (
+    FakeTitleTable,
+    DefaultTable,
+    CondensedDefaultTable,
+    TextHeavyWithTitleTable,
+) {
+    @include add_settings((
+        $key: (
+            FirstLevelOrderedList: (
+                margin-left: h-spacing(3),
+            ),
+            FirstLevelUnorderedList: (
+                margin-left: h-spacing(3),
+            ),
+        )
+  ))
+}

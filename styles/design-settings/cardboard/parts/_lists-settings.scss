@@ -32,4 +32,24 @@
     StepwiseLists: (
         _selectors: ('.os-stepwise'),
     )
-))
+));
+
+@each $key in (
+    PageLists,
+    CompositePageLists,
+    ExercisesProblemQuestionLists,
+    ExercisesSolutionLists,
+    NotesLists,
+    StepwiseLists,
+) {
+    @include add_settings((
+      $key: (
+        FirstLevelOrderedList: (
+            margin-left: h-spacing(3),
+        ),
+        FirstLevelUnorderedList: (
+            margin-left: h-spacing(3),
+        ),
+      )
+    ))
+}
