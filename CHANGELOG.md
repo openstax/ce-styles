@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
+- Create styles for `pl-nursing`
 
 ## [v2.7.0] - 2024-10-24
 
@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v2.5.0] - 2024-09-09
 
-- Add columns to `nursing-internal` 
+- Add columns to `nursing-internal`
 - Reenable local fonts for PDF/EPUB
 - Style lists at third section level in `cardboard`
 - `Data Science`: Table Vertical alignment

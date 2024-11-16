@@ -1,0 +1,395 @@
+$PagesWithBands: (
+  (pageName: eoc, firstSelector: '.os-eoc .os-chapter-summary-container', generalSelector: '.os-eoc'),
+  (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
+  (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
+);
+
+$bandColor: #00819A;
+$ChapterIntroType: fullWidth;
+
+@import 'framework/framework';
+@import '../../design-settings/carnival/_design.scss';
+@import '../../design-settings/carnival/_settings.scss';
+@import '../../designs/carnival/pdf/locale/pl/folio';
+
+@include add_settings((
+  UnitToc: (
+    _selectors: ('nav#toc'),
+    'TocTitleWord:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocUnitLink:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterNumber:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocUnitLink:::border-bottom': none,
+    'TocPrefaceLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocPrefaceLinkPage:::display': inline,
+    'TocPrefaceLinkPage:::margin-left': 0,
+    'TocPrefaceLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocAppendixLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocAppendixLinkPage:::display': inline,
+    'TocAppendixLinkPage:::margin-left': 0,
+    'TocAppendixLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocChapterLinkPage:::display': inline,
+    'TocChapterLinkPage:::margin-left': 0,
+    'TocChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterPageLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocChapterPageLinkPage:::display': inline,
+    'TocChapterPageLinkPage:::margin-left': 0,
+    'TocChapterPageLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocChapterCompositePageLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocChapterCompositePageLinkPage:::display': inline,
+    'TocChapterCompositePageLinkPage:::margin-left': 0,
+    'TocChapterCompositePageLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocEocCompositeChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocEocCompositeChapterLinkPage:::display': inline,
+    'TocEocCompositeChapterLinkPage:::margin-left': 0,
+    'TocEocCompositeChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocCompositeChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocCompositeChapterLinkPage:::display': inline,
+    'TocCompositeChapterLinkPage:::margin-left': 0,
+    'TocCompositeChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocReferencesLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocReferencesLinkPage:::display': inline,
+    'TocReferencesLinkPage:::margin-left': 0,
+    'TocReferencesLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+    'TocIndexLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+    'TocIndexLinkPage:::display': inline,
+    'TocIndexLinkPage:::margin-left': 0,
+    'TocIndexLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+  ),
+));
+
+//Titles
+@include add_settings((
+  ChapterTitles: (
+    _selectors: ('[data-type="chapter"]'),
+    'H1Chapter:::color': (_ref: "colorMap:::nursingHeaderColor"),
+  ),
+));
+
+@include add_settings((
+  ChapterIntroTitles: (
+    _selectors: ('[data-type="page"].introduction .intro-text'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  PageTitles: (
+    _selectors: ('[data-type="page"]:not(.introduction)'),
+    'H2ModuleTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H4Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H1AppendixText:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  EocCompositePageTitles: (
+    _selectors: ('[data-type="chapter"] > .os-eoc[data-type="composite-page"]'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+@include add_settings((
+  EobTitles: (
+    _selectors: ('.os-eob'),
+    'H2Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'H3Title:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+// Chapter Intro
+@include add_settings((
+  FigureSplash: (
+    _selectors: (".os-figure.has-splash"),
+    'FigureSplashBg:::background-color': (_ref: "colorMap:::nursingIntroColor"),
+  ),
+  ChapterOutline: (
+    _selectors: (".os-chapter-outline"),
+    'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::nursingIntroColor"),
+    'ChapterObjectiveLink:::font-weight': normal,
+    'ChapterOutlineContainer:::font-weight': normal,
+    'ChapterOutlineContainer:::font-size': font-scale(-1),
+  ),
+));
+
+@include add_settings((
+  LearningObjectivesSection: (
+    _selectors: ('[data-type="chapter"] > [data-type="page"] > section.learning-objectives'),
+    'H3ObjectivesTitle:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+    'ObjectivesListDot:::color': (_ref: 'colorMap:::nursingHeaderColor'),
+  ),
+));
+
+// Colored Text
+@include add_settings((
+  BlueText:(
+    _selectors: ('.blue-text'),
+    'ColoredTextContainer:::color': (_ref: "colorMap:::blueTextColor"),
+  ),
+));
+
+// Tables
+@include add_settings((
+  BasicTable: (
+    _selectors: ('.os-table:not(.os-unstyled-container):not(.os-no-cellborder-container)'),
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'Table:::border-top': solid 0.25px,
+    'Table:::border-top-color':  (_ref: 'colorMap:::fontBodyColor'),
+  ),
+));
+
+
+@include add_settings((
+  FakeTitleTable: (
+    _selectors: ('.os-table.os-top-titled-container'),
+    'TableTitle:::color': (_ref: "colorMap:::nursingTableColor"),
+  ),
+));
+
+@include add_settings((
+  NoCellBordersTable: (
+    _selectors: ('.os-table.os-no-cellborder-container'),
+    'TableContainer:::display': table,
+    'TableContainer:::margin-left': auto,
+    'TableContainer:::margin-right': auto,
+    'Table:::border-collapse': collapse,
+    'Table:::margin-top': v-spacing(1),
+    'Table:::margin-bottom': 0,
+    'Table:::width': 100%,
+    'TableBottomBorderAfterTable:::border-top-color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionTitleLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'CaptionText:::font-family': (_ref: 'typography:::sansFont'),
+    'CaptionNumber:::color': (_ref: 'colorMap:::nursingTableColor'),
+    'CaptionNumber:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'NoBordersTableHeadCell:::font-weight': 700,
+    'TableData:::padding-top': 0.16rem,
+    'TableData:::padding-bottom': 0.16rem,
+    'TableData:::padding-right': table-h-spacing(1),
+    'TableData:::padding-left': table-h-spacing(1),
+    'TableBottomBorder:::border-bottom-color': (_ref: 'colorMap:::nursingTableColor'),
+  ),
+));
+
+@include add_settings((
+  VerticallyTightTable: (
+    _selectors: ('.os-table.os-vertically-tight-container > table.vertically-tight')
+  )
+));
+
+@include add_settings((
+  AlternateShadingTable: (
+    _selectors:('.alternate-shading'),
+    'AlternateShadingTableRow:::background-color': (_ref: "colorMap:::tableRowGreyShadingColor"),
+  ),
+));
+
+// Notes
+@include add_settings((
+  SafetyAlertNote:(
+    _selectors: (".safety-alert"),
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-alertbig.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::alertColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::alertTitleColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::alertBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+  ),
+));
+
+@include add_settings((
+  ClinicalTipNote:(
+    _selectors: (".clinical-tip"),
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-scientificTrimmed.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::scienceColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::scienceBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+  ),
+));
+
+@include add_settings((
+  TrendingTodayNote:(
+    _selectors: (".trending-today"),
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-newspaperTrimmed.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::trendingColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::notesHeaderColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::trendingBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+  ),
+));
+
+@include add_settings((
+  UnfoldingCasestudyNote:(
+    _selectors: (".unfolding-casestudy"),
+    group-border-color: (_ref: 'colorMap:::unfoldingCaseStudyColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-example.svg")) no-repeat top left,
+  ),
+));
+
+@include add_settings((
+  MediaFeatureNote:(
+    _selectors: (".media-feature"),
+    'IconBoxedTitleIcon:::background': url(toDataUri("svg+xml", "designs/carnival/resources/carnival-mediablue.svg")) no-repeat center center,
+    'IconBoxedTitle:::background-color': (_ref: 'colorMap:::scienceColor'),
+    'IconBoxedTitle:::color': (_ref: "colorMap:::fontBodyColor"),
+    'IconBoxedTitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IconBoxedBody:::background-color': (_ref: 'colorMap:::scienceBlurredColor'),
+    'IconBoxedSubtitle:::font-family': (_ref: 'typography:::titleOption1Font'),
+  ),
+));
+
+@include add_settings((
+  SpecialConsiderationsNote:(
+    _selectors: (".special-considerations"),
+    group-border-color: (_ref: 'colorMap:::specialConsiderationsColor'),
+    'Title:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'Title:::color': (_ref: 'colorMap:::specialConsiderationsColor'),
+  ),
+));
+
+// EOC
+@include add_settings((
+  TwoColumnsModules: (
+    _selectors: (
+      '.os-glossary-container',
+      '.os-chapter-summary-container'
+    ),
+  ),
+));
+
+@include add_settings((
+  ExercisesModule: (
+    _selectors: ('.os-eoc.os-review-questions-container', '.unfolding-casestudy'),
+    'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
+    'ProblemSolutionNumber:::width': 2%,
+    'ProblemSolutionNumber:::text-align': right,
+  ),
+));
+
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container"),
+  ),
+));
+
+// EOB
+@include add_settings((
+  IndexName: (
+      _selectors: (".os-index-name-container"),
+      'IndexGroup:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
+      'IndexGroupLabel:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'IndexGroupLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+      'IndexTermContainer:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'IndexTermContainer:::font-family': (_ref: 'typography:::baseFont'),
+      'IndexTermText:::color': (_ref: 'colorMap:::fontBodyColor'),
+      'IndexTermText:::font-family': (_ref: 'typography:::baseFont'),
+      'IndexPageNumber:::content': target-counter(attr(href, url), page),
+    ),
+  IndexTerm: (
+    _selectors: (".os-index-term-container"),
+    'IndexGroup:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexGroupLabel:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexGroupLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IndexTermContainer:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexTermContainer:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexTermText:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexTermText:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexPageNumber:::content': target-counter(attr(href, url), page),
+  ),
+  IndexForeign: (
+    _selectors: (".os-index-foreign-container"),
+    'IndexGroup:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexGroup:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexGroupLabel:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexGroupLabel:::font-family': (_ref: 'typography:::titleOption1Font'),
+    'IndexTermContainer:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexTermContainer:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexTermText:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'IndexTermText:::font-family': (_ref: 'typography:::baseFont'),
+    'IndexPageNumber:::content': target-counter(attr(href, url), page),
+    ),
+));
+
+@include use('BookRoot', "common:::BookRoot");
+@include use('BlueText', "common:::ColoredText");
+@include use('Footnote', 'common:::FootnoteShape');
+@include use('FootnoteCall', 'common:::FootnoteCallShape');
+@include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
+@include use('UnitToc', 'carnival:::UnitToc');
+
+//Titles
+@include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'carnival:::ChapterIntroTitlesShape');
+@include use('PageTitles', 'carnival:::PageTitlesShape');
+@include use('EobTitles', 'carnival:::EobTitlesShape');
+@include use('EocCompositePageTitles', 'carnival:::EocCompositePageTitlesShape');
+@include use('UnitTitle', 'common:::Hidden');
+
+// Chapter Intro
+@include use('ChapterOutline', 'carnival:::ChapterOutlineShape');
+@include use('LearningObjectivesSection', 'carnival:::LearningObjectivesColoredDotShape');
+
+//Figures
+@include use('Figure','carnival:::FigureShape');
+@include use('FigureSplash','carnival:::FigureSplashShape');
+@include use('FigureAfterSubtitle', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEocPara', 'carnival:::FigureTopSpacingShape');
+@include use('FigureAfterEobPara', 'carnival:::FigureTopSpacingShape');
+@include use('ImageAfterSolutionTitle', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEocPara', 'carnival:::ImageTopSpacingShape');
+@include use('ImageAfterEobPara', 'carnival:::ImageTopSpacingShape');
+@include use('FigureFromExercisesProblem','carnival:::FigureFromExercisesShape');
+@include use('FigureFromExercisesSolution','carnival:::FigureFromExercisesShape');
+
+// Tables
+@include use('BasicTable', 'carnival:::BasicTableShape');
+@include use('TableFromEoCExercises','carnival:::TableFromExercisesShape');
+@include use('TableFromNotes','carnival:::TableFromNotesShape');
+@include use('TableAfterExercisePara', 'carnival:::TableTopSpacingShape');
+@include use('AlternateShadingTable', 'carnival:::AlternateShadingTableShape');
+@include use('NoCellBordersTable', 'carnival:::NoCellBordersTableShape');
+@include use('VerticallyTightTable', 'carnival:::VerticallyTightTableShape');
+@include use('ColumnsFromTable', 'carnival:::ColumnsShape');
+@include use('FullWidthTable', 'carnival:::FullWidthTableShape');
+
+//Lists
+@include use('PageLists', 'carnival:::PageListsShape');
+@include use('CompositePageLists', 'carnival:::CompositePageListsShape');
+@include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
+@include use('TableLists', 'carnival:::TableListShape');
+@include use("ExercisesSolutionLists", "carnival:::ExercisesListsShape");
+@include use("NotesLists", "carnival:::NotesListsShape");
+
+//Notes
+@include use('SafetyAlertNote', 'carnival:::IconBoxedNoteShape');
+@include use('ClinicalTipNote', 'carnival:::IconBoxedNoteShape');
+@include use('SpecialConsiderationsNote', 'carnival:::BoxedNoteShape');
+@include use('UnfoldingCasestudyNote', 'carnival:::IconNoteShape');
+@include use('TrendingTodayNote', 'carnival:::IconBoxedNoteShape');
+@include use('MediaFeatureNote', 'carnival:::IconBoxedNoteShape');
+
+//EOC
+@include use('KeyTerms', 'carnival:::KeyTermsShape');
+@include use('ExercisesModule', 'carnival:::ExercisesModuleShape');
+@include use('ModuleWithIndentation', 'carnival:::ModuleWithIndentationShape');
+@include use('TwoColumnsModules', 'carnival:::ModuleWithTwoColumnsShape');
+
+// EOB
+@include use('AnswerKey', 'carnival:::AnswerKeyShape');
+@include use('AnswerKeySolution', 'carnival:::AnswerKeySolutionShape');
+@include use('Index', 'carnival:::IndexShape');
+@include use('IndexName', 'carnival:::IndexShape');
+@include use('IndexTerm', 'carnival:::IndexShape');
+@include use('IndexForeign', 'carnival:::IndexShape');
