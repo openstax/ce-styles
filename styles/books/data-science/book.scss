@@ -50,6 +50,7 @@ $bandColor: #24739E;
         'ProblemSolutionNumber:::width': 2.2%,
         'ProblemSolutionNumber:::text-align': right,
         'ProblemSolutionText:::color': (_ref: 'colorMap:::fontBodyColor'),
+        'InjectedQuestionAnswersAnswerLetter:::color': (_ref: 'colorMap:::fontBodyColor'),
     ),
     MultipartQuestionExercises: (
       _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
@@ -114,13 +115,6 @@ $bandColor: #24739E;
     _selectors: ('.os-eoc.os-references-container'),
   ),
 ));
-
-@include add_settings((
-  "AnswerKeySolution:::ProblemSolutionAnswerLetters": (
-    font-weight: bold,
-  )
-));
-
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');

@@ -1183,6 +1183,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 0;
 }
 
+.os-eob [data-type=solution] > .os-solution-container > span.answer-letters {
+  font-weight: bold;
+}
+
 .os-eob [data-type=solution] > .os-solution-container.has-first-element {
   display: table-cell;
   vertical-align: bottom;
@@ -1214,6 +1218,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 .os-eob [data-type=question-solution] > .os-solution-container > p {
   margin-bottom: 0;
+}
+
+.os-eob [data-type=question-solution] > .os-solution-container > span.answer-letters {
+  font-weight: bold;
 }
 
 .os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
@@ -3533,6 +3541,29 @@ a[data-type=cite] {
 
 .os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] {
+  counter-reset: multi-choice-index;
+  padding: 0;
+  margin: 0;
+}
+
+.os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer] {
+  display: table;
+  counter-increment: multi-choice-index;
+}
+
+.os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer]::before {
+  font-weight: bold;
+  color: #000000;
+  content: counter(multi-choice-index, lower-latin) ".";
+  margin-right: 8px;
+  width: 16px;
+}
+
+.os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] div[data-type=answer-content] {
+  display: table-cell;
 }
 
 .os-eoc.os-assessment-questions-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {

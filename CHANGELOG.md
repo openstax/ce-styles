@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
+- Add multi-choice answer components to `cardboard`
+- Add multi-choice answer components to `webview`
+- Style multi-choice answers more like multi-part questions in `cardboard`
+- Style multi-choice answers more like multi-part questions in `webview`
 
 ## [v2.7.0] - 2024-10-24
 
