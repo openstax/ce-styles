@@ -3673,6 +3673,29 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
+.os-chapter-review-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] {
+  counter-reset: multi-choice-index;
+  padding: 0;
+  margin: 0;
+}
+
+.os-chapter-review-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer] {
+  display: table;
+  counter-increment: multi-choice-index;
+}
+
+.os-chapter-review-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer]::before {
+  font-weight: bold;
+  color: #000000;
+  content: counter(multi-choice-index, lower-latin) ".";
+  margin-right: 8px;
+  width: 16px;
+}
+
+.os-chapter-review-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] div[data-type=answer-content] {
+  display: table-cell;
+}
+
 .os-chapter-review-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
   margin: 0;
 }
@@ -3773,6 +3796,29 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] {
+  counter-reset: multi-choice-index;
+  padding: 0;
+  margin: 0;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer] {
+  display: table;
+  counter-increment: multi-choice-index;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer]::before {
+  font-weight: bold;
+  color: #000000;
+  content: counter(multi-choice-index, lower-latin) ".";
+  margin-right: 8px;
+  width: 16px;
+}
+
+.os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] div[data-type=answer-content] {
+  display: table-cell;
+}
+
 .os-critical-thinking-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
   margin: 0;
 }
@@ -3871,6 +3917,29 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
   margin-right: 8px;
+}
+
+.os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] {
+  counter-reset: multi-choice-index;
+  padding: 0;
+  margin: 0;
+}
+
+.os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer] {
+  display: table;
+  counter-increment: multi-choice-index;
+}
+
+.os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer]::before {
+  font-weight: bold;
+  color: #000000;
+  content: counter(multi-choice-index, lower-latin) ".";
+  margin-right: 8px;
+  width: 16px;
+}
+
+.os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] div[data-type=answer-content] {
+  display: table-cell;
 }
 
 .os-quantitative-problems-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {

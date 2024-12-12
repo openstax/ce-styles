@@ -28,7 +28,14 @@
                                 $Exercise__ProblemSolution__Text,
                                 $Exercise__ProblemSolution__Number,
                                 $Exercise__ProblemSolution__Divider,
-                                $InjectedExercise__Question__Answers--WithPre,
+                                map-merge($InjectedExercise__Question__MultiChoiceAnswers, (
+                                    _components: (
+                                        $InjectedExercise__Question__MultiChoiceAnswers--Answer,
+                                        $InjectedExercise__Question__MultiChoiceAnswers--AnswerLetter,
+                                        $InjectedExercise__Question__MultiChoiceAnswers--AnswerContent,
+                                    )
+                                )),
+                                $InjectedExercise__Question__Answers--AnswerWithPre,
                                 map-merge($Exercise__Problem__Container, (
                                     _components: (
                                         $InjectedExercise__Context,
