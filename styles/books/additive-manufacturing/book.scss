@@ -47,6 +47,7 @@ $bandColor: #093D4C;
 
 //Figures
 @include use('Figure','corn:::FigureShape');
+@include use('FigureSplash','corn:::FigureSplashShape');
 @include use('FigureAfterSubtitle', 'corn:::FigureTopSpacingShape');
 @include use('ImageAfterSolutionTitle', 'corn:::ImageTopSpacingShape');
 @include use('FigureFromExercisesProblem','corn:::FigureFromExercisesShape');
@@ -67,6 +68,7 @@ $bandColor: #093D4C;
 //Titles
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+@include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('PageTitles', 'corn:::PageTitlesShape');
 @include use('EocCompositePageTitles', 'corn:::CompositePageTitlesShape');
 @include use('EobCompositePageTitles', 'corn:::CompositePageTitlesShape');
