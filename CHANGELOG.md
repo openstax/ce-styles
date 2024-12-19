@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Style `chapter intro titles` in `additive-manufacturing`
+- Style `splash image` in `additive-manufacturing`
 - Add multi-choice answer components to `cardboard`
 - Add multi-choice answer components to `webview`
 - Style multi-choice answers more like multi-part questions in `cardboard`
