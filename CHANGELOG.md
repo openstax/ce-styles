@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Style more third level lists in `cardboard`
+- Fix typo in third level list name in `cardboard`
+
 ## [v2.8.0] - 2025-01-16
 
 - Style `practice` containers (aka case questions) in `additive-manufacturing`
