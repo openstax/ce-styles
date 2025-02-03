@@ -35,7 +35,7 @@ $OrderedList--SecondLevel: (
 );
 
 $UnorderedList--ThirdLevel: (
-    _name: "SecondLevelUnorderedList",
+    _name: "ThirdLevelUnorderedList",
     _subselector: " > li > ul > li > ul",
     _properties:(
         margin-left: h-spacing(2),
@@ -43,10 +43,10 @@ $UnorderedList--ThirdLevel: (
 );
 
 $OrderedList--ThirdLevel: (
-    _name: "SecondLevelOrderedList",
+    _name: "ThirdLevelOrderedList",
     _subselector: " > li  > ol > li > ol",
     _properties:(
-        margin-left: h-spacing(2),
+        margin-left: h-spacing(3),
     )
 );
 
