@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Style more third level lists in `cardboard`
 - Fix typo in third level list name in `cardboard`
+- Decrease `carnival` `AnswerKeys` number spacing
+- Increase `AnswerKeys` number spacing in `nursing-external`
+- Increase `AnswerKeys` number spacing in `nursing-internal`
 
 ## [v2.8.0] - 2025-01-16
 

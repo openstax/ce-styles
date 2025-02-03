@@ -196,6 +196,11 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  AnswerKeySolution: (
+    'ProblemSolutionNumber:::min-width': h-spacing(3),
+  ),
+));
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");

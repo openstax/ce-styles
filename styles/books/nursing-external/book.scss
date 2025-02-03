@@ -115,6 +115,12 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  AnswerKeySolution: (
+    'ProblemSolutionNumber:::min-width': h-spacing(3),
+  ),
+));
+
 // Tables
 @include add_settings((
   BasicTable: (
@@ -187,6 +193,7 @@ $ChapterIntroType: fullWidth;
     'ProblemSolutionNumber:::color': (_ref: "colorMap:::fontBodyColor"),
     'ProblemSolutionNumber:::width': 2%,
     'ProblemSolutionNumber:::text-align': right,
+    'ProblemSolutionNumber:::min-width': h-spacing(3),
   ),
 ));
 
