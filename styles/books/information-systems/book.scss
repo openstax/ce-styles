@@ -126,6 +126,17 @@ TextHeavyWithTitleTable: (
     )
 ));
 
+@include add_settings((
+  ListsFromStimulus: (
+    FirstLevelUnorderedList: (
+      margin-left: h-spacing(3),
+    ),
+    FirstLevelOrderedList: (
+      margin-left: h-spacing(3),
+    ),
+  ),
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
@@ -188,6 +199,7 @@ $composite-pages: (
 @include use('ExercisesProblemQuestionLists', 'cardboard:::ExercisesListsShape');
 @include use('ExercisesSolutionLists', 'cardboard:::ExercisesListsShape');
 @include use('CompositePageLists', 'cardboard:::CompositePageListsShape');
+@include use('ListsFromStimulus', 'cardboard:::ListsFromStimulusShape');
 
 // EOB
 @include use('Index', 'cardboard:::IndexShape');
