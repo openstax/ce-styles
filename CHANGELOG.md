@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Style more third level lists in `cardboard`
 - Fix typo in third level list name in `cardboard`
+- Add `lists from stimulus` to `cardboard`
+- Style `lists from stimulus` in `information-systems`
 
 ## [v2.8.0] - 2025-01-16
 

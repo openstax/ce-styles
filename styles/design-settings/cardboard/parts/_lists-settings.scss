@@ -34,6 +34,12 @@
     )
 ));
 
+@include add_settings((
+    ListsFromStimulus: (
+        _selectors: ('[data-type="exercise-stimulus"]'),
+    ),
+));
+
 @each $key in (
     PageLists,
     CompositePageLists,

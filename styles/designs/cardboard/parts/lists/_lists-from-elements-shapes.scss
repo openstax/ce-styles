@@ -86,3 +86,14 @@
         )),
     )
 ));
+
+@include create_shape('cardboard:::ListsFromStimulusShape', (
+    _components: (
+        map-merge($ListContainer, (
+            _components: (
+                $UnorderedList--FirstLevel,
+                $OrderedList--FirstLevel,
+            )
+        )),
+    )
+));
