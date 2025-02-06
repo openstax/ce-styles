@@ -110,14 +110,17 @@ $ChapterIntroType: fullWidth;
   InteractiveExercise: (
     _selectors: ("[data-type = 'chapter'] > .os-interactive-exercise-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::text-align': right,
   ),
   MultipleChoice: (
     _selectors: ("[data-type = 'chapter'] > .os-multiple-choice-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::text-align': right,
   ),
   FreeResponse: (
     _selectors: ("[data-type = 'chapter'] > .os-free-response-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::text-align': right,
   ),
 ));
 
