@@ -18,27 +18,19 @@
     ),
     FigureFromExercisesProblem:(
       _selectors: ('[data-type="problem"]'),
-      Image: (
-        max-width: 95%,
-      ),
+      'Image:::max-width': 95%,
     ),
     FigureFromExercisesSolution:(
       _selectors: ('[data-type="solution"]'),
-      Image: (
-        max-width: 95%,
-      ),
+      'Image:::max-width': 95%,
     ),
     FigureFromInjectedQuestion:(
       _selectors: ('[data-type="exercise-question"]'),
-      Image: (
-        max-width: 95%,
-      ),
+      'Image:::max-width': 95%,
     ),
     FigureFromInjectedSolution:(
       _selectors: ('[data-type="question-solution"]'),
-      Image: (
-        max-width: 95%,
-      ),
+      'Image:::max-width': 95%,
     ),
     FigureAfterSubtitle: (
       _selectors: ("h4.os-subtitle + .os-figure:not(.has-splash)"),
