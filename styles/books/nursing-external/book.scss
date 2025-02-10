@@ -391,6 +391,30 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  FigureFromExercisesProblem: (
+    'Image:::max-width': 100%,
+  )
+));
+
+@include add_settings((
+  FigureFromExercisesSolution: (
+    'Image:::max-width': 100%,
+  )
+));
+
+@include add_settings((
+  FigureFromInjectedQuestion: (
+    'Image:::max-width': 100%,
+  )
+));
+
+@include add_settings((
+  FigureFromInjectedSolution: (
+    'Image:::max-width': 100%,
+  )
+));
+
 
 // Common Settings
 @include use('BookRoot', "common:::BookRoot");

@@ -7,10 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [v2.9.0] - 2025-02-10
+
 - Style more third level lists in `cardboard`
 - Fix typo in third level list name in `cardboard`
 - Add `lists from stimulus` to `cardboard`
 - Style `lists from stimulus` in `information-systems`
+- Align `ProblemSolutionLetter` right in `carnival`
+- Set `max-width` of `FigureFromExercises` to 95% in `carnival`
 
 ## [v2.8.0] - 2025-01-16
 
