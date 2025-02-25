@@ -7,10 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.10.0] - 2025-02-25
+
 - Add margin for first level lists inside tables in `corn`
 - Add second level list styling to the div wrapper at the first section level in `corn`
 - Style `ListTitles` in `additive-manufacturing`
-
 
 ## [v2.9.0] - 2025-02-10
 
