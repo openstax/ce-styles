@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Remove set `width` from `EquationNumberContainer` on `webview`
 
 ## [v2.10.0] - 2025-02-25
 
