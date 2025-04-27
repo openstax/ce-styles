@@ -162,20 +162,9 @@ $Exercise__Question__Stem: (
 );
 ///
 
-$Exercise__Solution1: (
-  _name: "Solution1",
+$Exercise__Solution: (
+  _name: "Solution",
   _subselector: ' [data-type="solution"]',
-  _properties: (
-    padding: '0.5em 1em',
-    border-top-width: 0.1rem,
-    border-top-color: enum('ValueSet:::REQUIRED'),
-    border-top-style: solid,
-  ),
-);
-
-$Exercise__Solution2: (
-  _name: "Solution2",
-  _subselector: ' .solution',
   _properties: (
     padding: '0.5em 1em',
     border-top-width: 0.1rem,
@@ -193,14 +182,6 @@ $Exercise__Solution__Toggle: (
     text-transform: capitalize,
     list-style: none,
     cursor: pointer,
-  ),
-);
-
-$Exercise__Solution__Toggle__Before: (
-  _name: "SolutionToggleBefore",
-  _subselector: ('::before'),
-  _properties: (
-    content: '"[Show/Hide Solution]"',
   ),
 );
 
