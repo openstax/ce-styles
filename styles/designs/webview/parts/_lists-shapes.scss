@@ -5,21 +5,32 @@
     _components: (
         map-merge($UnorderedList, (
             _components: (
+                $List--Unindented,
                 $UnorderedList--Nested,
                 $OrderedList--Nested,
             ),
         )),
         map-merge($OrderedList, (
             _components: (
+                $List--Unindented,
                 $UnorderedList--Nested,
                 $OrderedList--Nested,
             ),
         )),
-        $UnorderedList--NoBullet,
+        map-merge($UnorderedList--NoBullet, (
+            _components: (
+                $List--Unindented,
+            )
+        )),
         $UnorderedList--NumberedLearningObjectives,
-        $UnorderedList--NotesQuestionSection,
+        map-merge($UnorderedList--NotesQuestionSection, (
+            _components: (
+                $List--Unindented,
+            )
+        )),
         map-merge($CircledList,(
             _components: (
+                $List--Unindented,
                 map-merge($CircledList__Item,(
                     _components: (
                         $CircledList__Token,
