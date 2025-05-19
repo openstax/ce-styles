@@ -469,3 +469,13 @@ $icons: (
   ));
   @include use('Icon', 'webview:::InlineIconShape');
 }
+
+@mixin BorderlessTable {
+    .os-table table.borderless {
+        thead > tr > th,
+        tbody > tr > td {
+            border: none !important;
+        }
+    }
+}
+@include BorderlessTable;
