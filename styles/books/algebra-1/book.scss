@@ -120,7 +120,7 @@ $ChapterIntroType: fullWidth;
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
-@include use('Toc', 'corn:::NoUnitToc');
+@include use('TocUnit', 'corn:::UnitToc');
 @include use('Example', 'corn:::ExampleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
