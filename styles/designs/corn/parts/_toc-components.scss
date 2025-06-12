@@ -69,6 +69,23 @@ $Toc__Link--TopLevel: (
   ),
 );
 
+$Toc__Link--TopLevel--UnitToc: (
+  _name: 'TopLevelLinkUnitToc',
+  _subselector: ' > a',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(1),
+    font-weight: bold,
+    text-decoration: none,
+    padding-left: h-spacing(5),
+    display: inline-block,
+    position: relative,
+    margin-left: h-spacing(1),
+  ),
+);
+
 $Toc__Link--TopLevel__Page: (
   _name: 'TopLevelLinkPage',
   _subselector: '::after',
@@ -77,6 +94,89 @@ $Toc__Link--TopLevel__Page: (
     display: inline-block,
     margin-left: h-spacing(1),
   ),
+);
+
+$Toc__ListItem--UnitPage: (
+  _name: 'UnitpageListItem',
+  _subselector: ' > li.os-toc-unit-page',
+  _properties: (
+    display: block,
+    margin-top: v-spacing(1),
+    margin-bottom: v-spacing(1),
+  )
+);
+
+$Toc__Unit: empty_wrapper(TocUnit, ' > li.os-toc-unit');
+
+$Toc__Unit__Icon: (
+  _name: 'UnitIcon',
+  _subselector: ' > a:first-of-type::before',
+  _properties: (
+    background: enum('ValueSet:::REQUIRED'),
+    background-size: contain,
+    height: v-spacing(2),
+    width: v-spacing(2),
+    display: inline-block,
+    padding-right: h-spacing(1),
+    position: relative,
+    bottom: -0.3rem,
+    content: "''",
+  )
+);
+
+$Toc__Unit__Link: (
+  _name: 'UnitTitle',
+  _subselector: '> a:first-of-type',
+  _properties: (
+    font-family: enum('ValueSet:::REQUIRED'),
+    font-weight: 700,
+    font-size: font-scale(1),
+    text-transform: uppercase,
+    color: enum('ValueSet:::REQUIRED'),
+    padding-left: h-spacing(2),
+    margin-left: h-spacing(1),
+    line-height: line-height(2),
+    margin: 0,
+    text-decoration: none,
+  )
+);
+
+$Toc__Number--Unit: (
+  _name: 'UnitNumber',
+  _subselector: ' > .os-number',
+  _properties: (
+    font-size: initial,
+  ),
+);
+
+$Toc__PartText--Unit: (  //"Chapter" and "Appendix" strings
+  _name: 'PartText',
+  _subselector: ' > .os-part-text',
+  _properties: (
+    display: inline,
+  ),
+);
+
+$Toc__List--TopLevel--Unit: (
+  _name: 'TopLevelList',
+  _subselector: ' > ol.os-unit',
+  _properties: (
+    list-style: none,
+    // margin-left: 0,
+    // display: inline,
+  )
+);
+
+$Toc__List--TopLevel__Item--Unit: (
+  _name: 'TopLevelListItem',
+  _subselector: ' > li:not(.os-toc-unit)',
+  _properties: (
+    display: block,
+    padding-top: v-spacing(1),
+    padding-bottom: v-spacing(1),
+    padding-right: h-spacing(5),
+    padding-left: h-spacing(0),
+  )
 );
 
 //Numbered elements: Chapter, Appendix
@@ -96,6 +196,27 @@ $Toc__Number: (
     top: 50%,
     transform: translate(0, -50%),
     width: v-spacing(3),
+    height: v-spacing(3),
+    text-align: center,
+    vertical-align: middle,
+  ),
+);
+
+$Toc__Number--UnitToc: (
+  _name: 'NumberUnitToc',
+  _subselector: ' > .os-number',
+  _properties: (
+    font-size: font-scale(0),
+    line-height: font-scale(0), //must be the same as font-size, otherwise space between top and bottom border is bigger then between left ad right
+    border-style: solid,
+    border-width: 0.07rem,
+    border-color: enum('ValueSet:::REQUIRED'),
+    padding: 0.5rem,
+    position: absolute,
+    left: 0,
+    top: 50%,
+    transform: translate(0, -50%),
+    min-width: v-spacing(3),
     height: v-spacing(3),
     text-align: center,
     vertical-align: middle,
@@ -123,6 +244,22 @@ $Toc__List--MiddleLevel: (
     margin-top: v-spacing(1),
     margin-bottom: v-spacing(1),
     margin-left: h-spacing(5),
+    padding-left: h-spacing(1),
+  )
+);
+
+// Unit ToC variant with more margin for larger numbers
+$Toc__List--MiddleLevel--UnitToc: (
+  _name: 'MiddleLevelListUnitToc',
+  _subselector: ' > ol',
+  _properties: (
+    list-style: none,
+    border-left-style: solid,
+    border-left-width: 0.3rem,
+    border-left-color: enum('ValueSet:::REQUIRED'),
+    margin-top: v-spacing(1),
+    margin-bottom: v-spacing(1),
+    margin-left: h-spacing(6),
     padding-left: h-spacing(1),
   )
 );
@@ -162,6 +299,25 @@ $Toc__Link--MiddleLevel__Page: (
     display: inline-block,
     margin-left: h-spacing(1),
   ),
+);
+
+$Toc__Link--MiddleLevel__Number--UnitPage: ( // Unit page link number needs to be hidden
+  _name: 'UnitPageModuleLinkNumberPartText',
+  _subselector: ' > .os-number',
+  _properties: (
+    display: none,
+  )
+);
+
+$Toc__Link--MiddleLevel--UnitPage: (
+  _name: 'UnitPageModuleLink',
+  _subselector: ' > a',
+  _properties: (
+    color: enum('ValueSet:::REQUIRED'),
+    font-size: font-scale(1),
+    line-height: line-height(0),
+    text-decoration: none,
+  )
 );
 
 //Specific elements

@@ -48,3 +48,86 @@
         )),
     )
 ));
+
+@include create_shape('corn:::UnitToc', (
+    _components: (
+        map-merge($Toc__Container, (
+            _components: (
+                map-merge($Toc__Title--Contents, (
+                    _components: (
+                        $Toc__Title--Contents__Icon,
+                    )
+                )),
+                map-merge($Toc__List--TopLevel, (
+                    _components: (
+                        map-merge($Toc__List--TopLevel__Item--Unit, (
+                            _components: (
+                                map-merge($Toc__Link--TopLevel--UnitToc, (
+                                    _components: (
+                                        $Toc__Link--TopLevel__Page,
+                                        map-merge($Toc__Number--UnitToc, (
+                                            _components: (
+                                                $Toc__PartText,
+                                            )
+                                        )),
+                                    )
+                                )),
+                            )
+                        )),
+                        map-merge($Toc__Unit, (
+                            _components: (
+                                $Toc__Unit__Icon,
+                                $Toc__Unit__Link,
+                                map-merge($Toc__List--TopLevel--Unit, (
+                                    _components: (
+                                        $Toc__Chapter--OddItem,
+                                        map-merge($Toc__List--TopLevel__Item, (
+                                            _components: (
+                                                map-merge($Toc__Link--TopLevel--UnitToc, (
+                                                    _components: (
+                                                        $Toc__Link--TopLevel__Page,
+                                                        map-merge($Toc__Number--UnitToc, (
+                                                            _components: (
+                                                                $Toc__PartText,
+                                                            )
+                                                        )),
+                                                    )
+                                                )),
+                                                map-merge($Toc__List--MiddleLevel--UnitToc, (
+                                                    _components: (
+                                                        $Toc__Chapter--Composite__List, //compound composite pages
+                                                        map-merge($Toc__List--MiddleLevel__Item, (
+                                                            _components: (
+                                                                map-merge($Toc__Link--MiddleLevel, (
+                                                                    _components: (
+                                                                        $Toc__Link--MiddleLevel__Number,
+                                                                        $Toc__Link--MiddleLevel__Page,
+                                                                    )
+                                                                )),
+                                                            )
+                                                        )),
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                        map-merge($Toc__ListItem--UnitPage, (
+                                            _components: (
+                                                map-merge($Toc__Link--MiddleLevel--UnitPage, (
+                                                    _components: (
+                                                        $Toc__Link--MiddleLevel__Number--UnitPage,
+                                                        $Toc__Link--MiddleLevel__Page
+                                                    )
+                                                )),
+                                            )
+                                        )),
+                                    )
+                                )),
+                            )
+                        )),
+                        $Toc__Chapter--Composite__List, //Answer Key
+                    )
+                )),
+            )
+        )),
+    )
+));
