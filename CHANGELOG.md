@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add `UnitToc` to `corn`
+- Use `UnitToc` in `algebra-1`
+
 ## [v2.11.0] - 2025-05-20
 
 - Add `borderless` table class to `webview`
