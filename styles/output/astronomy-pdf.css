@@ -3372,6 +3372,29 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] {
+  counter-reset: multi-choice-index;
+  padding: 0;
+  margin: 0;
+}
+
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer] {
+  display: table;
+  counter-increment: multi-choice-index;
+}
+
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] > li[data-type=question-answer]::before {
+  font-weight: bold;
+  color: #000000;
+  content: counter(multi-choice-index, lower-latin) ".";
+  margin-right: 8px;
+  width: 16px;
+}
+
+.os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] ol[data-type=question-answers][type=a] div[data-type=answer-content] {
+  display: table-cell;
+}
+
 .os-eoc.os-exercises-container [data-type=injected-exercise] [data-type=exercise-question] li[data-type=question-answer] pre {
   margin: 0;
 }
@@ -3436,6 +3459,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
+[data-type=page] > section > ol > li > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ol > li > ul > li > ul {
+  margin-left: 16px;
+}
+
 [data-type=page] > section > ul:not([data-labeled-item=true]) {
   margin-left: 24px;
 }
@@ -3446,6 +3477,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
   margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+  margin-left: 16px;
 }
 
 [data-type=page] > section > div > ul:not([data-labeled-item=true]) {

@@ -2374,7 +2374,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
+[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 [data-type=page] > section > div > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
+[data-type=page] > section > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
+  margin-left: 16px;
+}
+
+[data-type=page] > section > div > ol:not(.circled):not(.os-stepwise) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2971,16 +2987,48 @@ li > table {
   text-align: center;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] {
   text-align: left;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] {
   text-align: right;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
+}
+
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] {
   text-align: center;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 24px;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:first-child {

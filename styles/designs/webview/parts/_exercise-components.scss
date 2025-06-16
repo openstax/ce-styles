@@ -111,6 +111,46 @@ $Exercise__Problem__MCAnswer__Pre: (
   )
 );
 
+
+$InjectedExercise__Question__MultiChoiceAnswers: (
+  _name: "InjectedQuestionAnswers",
+  _subselector: " ol[data-type=question-answers][type=a]",
+  _properties: (
+    counter-reset: multi-choice-index,
+    padding: 0,
+    margin: 0
+  )
+);
+
+$InjectedExercise__Question__MultiChoiceAnswers--Answer: (
+  _name: "InjectedQuestionAnswersAnswer",
+  _subselector: " > li[data-type=question-answer]",
+  _properties: (
+    display: table,
+    counter-increment: multi-choice-index,
+  )
+);
+
+$InjectedExercise__Question__MultiChoiceAnswers--AnswerLetter: (
+  _name: "InjectedQuestionAnswersAnswerLetter",
+  _subselector: " > li[data-type=question-answer]::before",
+  _properties: (
+    font-weight: bold,
+    color: enum('ValueSet:::REQUIRED'),
+    content: 'counter(multi-choice-index, lower-latin) "."',
+    margin-right: 0.5em,
+    width: 16px,
+  )
+);
+
+$InjectedExercise__Question__MultiChoiceAnswers--AnswerContent: (
+  _name: "InjectedQuestionAnswersAnswerContent",
+  _subselector: " div[data-type=answer-content]",
+  _properties: (
+    display: table-cell,
+  )
+);
+
 $Exercise__Question__Stem: (
     _name: "ExerciseQuestionStem",
     _subselector: " > [data-type='question-stem']",

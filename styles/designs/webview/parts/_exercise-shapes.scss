@@ -75,6 +75,13 @@
                                 $Exercise__Question__Stem,
                                 $Image--AfterBold,
                                 $Exercise__Problem__MCAnswer__Pre,
+                                map-merge($InjectedExercise__Question__MultiChoiceAnswers, (
+                                    _components: (
+                                        $InjectedExercise__Question__MultiChoiceAnswers--Answer,
+                                        $InjectedExercise__Question__MultiChoiceAnswers--AnswerLetter,
+                                        $InjectedExercise__Question__MultiChoiceAnswers--AnswerContent,
+                                    )
+                                )),
                             )
                         )),
                     ),

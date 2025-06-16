@@ -341,6 +341,14 @@
 ));
 
 @include add_settings((
+    InjectedExercise: (
+        InjectedQuestionAnswersAnswerLetter: (
+            color: (_ref: 'colorMap:::ExerciseNumber'),
+        ),
+    ),
+));
+
+@include add_settings((
     ColumnsFromTable: (
         _selectors: (".os-table"),
     )
@@ -461,3 +469,13 @@ $icons: (
   ));
   @include use('Icon', 'webview:::InlineIconShape');
 }
+
+@mixin BorderlessTable {
+    .os-table table.borderless {
+        thead > tr > th,
+        tbody > tr > td {
+            border: none !important;
+        }
+    }
+}
+@include BorderlessTable;

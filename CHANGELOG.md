@@ -9,6 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Create styles for `pl-nursing`
 
+## [v2.11.0] - 2025-05-20
+
+- Add `borderless` table class to `webview`
+- Add `unindented` list class (os-raise-noindent) to `webview`
+- Remove set `width` from `EquationNumberContainer` on `webview`
+
+## [v2.10.0] - 2025-02-25
+
+- Add margin for first level lists inside tables in `corn`
+- Add second level list styling to the div wrapper at the first section level in `corn`
+- Style `ListTitles` in `additive-manufacturing`
+
+## [v2.9.0] - 2025-02-10
+
+- Style more third level lists in `cardboard`
+- Fix typo in third level list name in `cardboard`
+- Add `lists from stimulus` to `cardboard`
+- Style `lists from stimulus` in `information-systems`
+- Align `ProblemSolutionLetter` right in `carnival`
+- Set `max-width` of `FigureFromExercises` to 95% in `carnival`
+
+## [v2.8.0] - 2025-01-16
+
+- Style `practice` containers (aka case questions) in `additive-manufacturing`
+- Style `composite chapters` in `additive-manufacturing`
+- Style `chapter intro titles` in `additive-manufacturing`
+- Style `splash image` in `additive-manufacturing`
+- Add multi-choice answer components to `cardboard`
+- Add multi-choice answer components to `webview`
+- Style multi-choice answers more like multi-part questions in `cardboard`
+- Style multi-choice answers more like multi-part questions in `webview`
+
 ## [v2.7.0] - 2024-10-24
 
 - Add third level list styling to the section wrapper at the third level in `cardboard`

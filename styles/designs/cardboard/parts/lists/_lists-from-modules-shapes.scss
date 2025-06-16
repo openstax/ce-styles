@@ -23,12 +23,16 @@
                             _components: (
                                 $OrderedList--SecondLevel,
                                 $UnorderedList--SecondLevel,
+                                $OrderedList--ThirdLevel,
+                                $UnorderedList--ThirdLevel,
                             )
                         )),
                         map-merge($UnorderedList--FirstLevel, (
                             _components: (
                                 $UnorderedList--SecondLevel,
                                 $OrderedList--SecondLevel,
+                                $OrderedList--ThirdLevel,
+                                $UnorderedList--ThirdLevel,
                             )
                         )),
                         map-merge($DivWrapper--FirstLevel, (
