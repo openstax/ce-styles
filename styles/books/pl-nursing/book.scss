@@ -13,50 +13,24 @@ $ChapterIntroType: fullWidth;
 @import '../../designs/carnival/pdf/locale/pl/folio';
 
 @include add_settings((
-  UnitToc: (
-    _selectors: ('nav#toc'),
-    'TocTitleWord:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocTitleWord:::border-bottom-color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocUnitLink:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocChapterNumber:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocUnitLink:::border-bottom': none,
-    'TocPrefaceLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocPrefaceLinkPage:::display': inline,
-    'TocPrefaceLinkPage:::margin-left': 0,
-    'TocPrefaceLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocAppendixLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocAppendixLinkPage:::display': inline,
-    'TocAppendixLinkPage:::margin-left': 0,
-    'TocAppendixLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocChapterLinkPage:::display': inline,
-    'TocChapterLinkPage:::margin-left': 0,
-    'TocChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocChapterPageLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocChapterPageLinkPage:::display': inline,
-    'TocChapterPageLinkPage:::margin-left': 0,
-    'TocChapterPageLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocChapterCompositePageLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocChapterCompositePageLinkPage:::display': inline,
-    'TocChapterCompositePageLinkPage:::margin-left': 0,
-    'TocChapterCompositePageLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocEocCompositeChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocEocCompositeChapterLinkPage:::display': inline,
-    'TocEocCompositeChapterLinkPage:::margin-left': 0,
-    'TocEocCompositeChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocCompositeChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocCompositeChapterLinkPage:::display': inline,
-    'TocCompositeChapterLinkPage:::margin-left': 0,
-    'TocCompositeChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocReferencesLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocReferencesLinkPage:::display': inline,
-    'TocReferencesLinkPage:::margin-left': 0,
-    'TocReferencesLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-    'TocIndexLinkPage:::content': "leader('.') target-counter(attr(href), page)",
-    'TocIndexLinkPage:::display': inline,
-    'TocIndexLinkPage:::margin-left': 0,
-    'TocIndexLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
-  ),
+    TocNoUnit: (
+        _selectors: ('nav#toc'),
+        'TocTitle:::color': (_ref: 'colorMap:::nursingTocColor'),
+        'TocTitle:::border-bottom-color': (_ref: 'colorMap:::nursingTocColor'),
+        'ChapterLinkText:::color': (_ref: 'colorMap:::nursingTocColor'),
+        'OutOfChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+        'OutOfChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+        'OutOfChapterLinkPage:::display': inline,
+        'OutOfChapterLinkPage:::margin-left': 0,
+        'ChapterLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+        'ChapterLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+        'ChapterLinkPage:::display': inline,
+        'ChapterLinkPage:::margin-left': 0,
+        'ModuleLinkPage:::color': (_ref: 'colorMap:::nursingTocColor'),
+        'ModuleLinkPage:::content': "leader('.') target-counter(attr(href), page)",
+        'ModuleLinkPage:::display': inline,
+        'ModuleLinkPage:::margin-left': 0,
+    ),
 ));
 
 //Titles
@@ -327,7 +301,7 @@ $ChapterIntroType: fullWidth;
 @include use('Footnote', 'common:::FootnoteShape');
 @include use('FootnoteCall', 'common:::FootnoteCallShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
-@include use('UnitToc', 'carnival:::UnitToc');
+@include use('TocNoUnit', 'carnival:::TocNoUnitShape');
 
 //Titles
 @include use('ChapterTitles', 'carnival:::ChapterTitlesShape');
