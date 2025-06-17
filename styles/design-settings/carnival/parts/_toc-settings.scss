@@ -289,6 +289,9 @@
     OutOfChapterLinkPage: (
         color: (_ref: 'colorMap:::fontBodyColor'),
         font-family: (_ref: 'typography:::titleOption2Font'),
+        content: "target-counter(attr(href), page)",
+        display: inline-block,
+        margin-left: h-spacing(3),
     ),
     OutOfChapterLinkNumber: (
         color: (_ref: 'colorMap:::fontBodyColor'),
@@ -309,6 +312,9 @@
     ChapterLinkPage: (
         color: (_ref: 'colorMap:::fontBodyColor'),
         font-family: (_ref: 'typography:::titleOption2Font'),
+        content: "target-counter(attr(href), page)",
+        display: inline-block,
+        margin-left: h-spacing(3),
     ),
     ModuleLink: (
         color: (_ref: 'colorMap:::fontBodyColor'),
@@ -317,6 +323,9 @@
     ModuleLinkPage: (
         color: (_ref: 'colorMap:::fontBodyColor'),
         font-family: (_ref: 'typography:::titleOption2Font'),
+        content: "target-counter(attr(href), page)",
+        display: inline-block,
+        margin-left: h-spacing(3),
     ),
   ),
-)); 
+));

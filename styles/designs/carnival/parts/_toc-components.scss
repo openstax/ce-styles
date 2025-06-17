@@ -233,7 +233,7 @@ $Toc__List: (
   )
 );
 
-$Toc__Link: ( 
+$Toc__Link: (
   _name: 'TocLink',
   _subselector: ' > a',
   _properties: (
@@ -258,9 +258,9 @@ $Toc__LinkPage--OutOfChapter: (
   _name: 'OutOfChapterLinkPage',
   _subselector: '::after',
   _properties: (
-    content: "target-counter(attr(href), page)",
-    display: inline-block,
-    margin-left: h-spacing(3),
+    content: enum('ValueSet:::REQUIRED'), //different in polish nursing
+    display: enum('ValueSet:::REQUIRED'), //different in polish nursing
+    margin-left: enum('ValueSet:::REQUIRED'), //different in polish nursing
     font-family: enum('ValueSet:::REQUIRED'),
     color: enum('ValueSet:::REQUIRED'),
     font-size: font-scale(0),
@@ -313,9 +313,9 @@ $Toc__LinkPage--Chapter: (
   _name: 'ChapterLinkPage',
   _subselector: '::after',
   _properties: (
-    content: "target-counter(attr(href), page)",
-    display: inline-block,
-    margin-left: h-spacing(3),
+    content: enum('ValueSet:::REQUIRED'), //different in polish psychology
+    display: enum('ValueSet:::REQUIRED'), //different in polish psychology
+    margin-left: enum('ValueSet:::REQUIRED'), //different in polish psychology
     font-family: enum('ValueSet:::REQUIRED'),
     color: enum('ValueSet:::REQUIRED'),
     font-size: font-scale(0),
@@ -370,9 +370,9 @@ $Toc__LinkPage--Module: (
   _name: 'ModuleLinkPage',
   _subselector: '::after',
   _properties: (
-    content: "target-counter(attr(href), page)",
-    display: inline-block,
-    margin-left: h-spacing(3),
+    content: enum('ValueSet:::REQUIRED'), //different in polish psychology
+    display: enum('ValueSet:::REQUIRED'), //different in polish psychology
+    margin-left: enum('ValueSet:::REQUIRED'), //different in polish psychology
     font-family: enum('ValueSet:::REQUIRED'),
     color: enum('ValueSet:::REQUIRED'),
     font-size: font-scale(0),
