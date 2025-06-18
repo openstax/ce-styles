@@ -669,39 +669,96 @@ a {
   }
 }
 /* stylelint-disable-next-line meowtec/no-px */
-[data-type=chapter] > h1[data-type=document-title] .os-number {
-  string-set: chapter-number content();
-}
-[data-type=chapter] > h1[data-type=document-title] .os-text {
-  string-set: chapter-title content();
-}
-
-[data-type=chapter] > [data-type=page].introduction .intro-text > h2[data-type=document-title] {
-  string-set: module-number string(chapter-number);
-}
-[data-type=chapter] > [data-type=page].introduction .intro-text > h2[data-type=document-title] .os-text {
-  string-set: module-title content();
-}
-[data-type=chapter] > [data-type=page]:not(.introduction) > h2[data-type=document-title] .os-number {
-  string-set: module-number content();
-}
-[data-type=chapter] > [data-type=page]:not(.introduction) > h2[data-type=document-title] .os-text {
-  string-set: module-title content();
+p.folio-chapter {
+  position: running(folio_chapter);
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
 }
 
-.os-eoc > h2[data-type=document-title] .os-text {
-  string-set: eoc-title content();
+p.folio-module {
+  position: running(folio_module);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
 }
 
-.appendix > h1[data-type=document-title] .os-number {
-  string-set: appendix-number content();
-}
-.appendix > h1[data-type=document-title] .os-text {
-  string-set: appendix-title content();
+p.folio-eoc-left {
+  position: running(folio_eoc_left);
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
 }
 
-div.os-eob > h1[data-type=document-title] .os-text {
-  string-set: eob-title content();
+p.folio-eoc-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-eoc-right {
+  position: running(folio_eoc_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
+}
+
+p.folio-eoc-right::after {
+  content: "     " counter(page);
+}
+
+p.folio-appendix-left {
+  position: running(folio_appendix_left);
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
+}
+
+p.folio-appendix-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-appendix-right {
+  position: running(folio_appendix_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
+}
+
+p.folio-appendix-right::after {
+  content: "     " counter(page);
+}
+
+p.folio-eob-left {
+  position: running(folio_eob_left);
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
+}
+
+p.folio-eob-left::before {
+  content: counter(page) "     ";
+}
+
+p.folio-eob-right {
+  position: running(folio_eob_right);
+  text-align: right;
+  font-size: 0.8333333333rem;
+  font-family: "Roboto Slab", serif;
+  color: #093D4C;
+  font-weight: 700;
+}
+
+p.folio-eob-right::after {
+  content: "     " counter(page);
 }
 
 nav#toc {
@@ -730,6 +787,23 @@ div[data-type=composite-page].os-eob {
   page: eob;
 }
 
+@page chapter:first {
+  @top-left-corner {
+    content: none;
+  }
+  @top-right-corner {
+    content: none;
+  }
+  @top-left {
+    content: none;
+  }
+  @top-center {
+    content: none;
+  }
+  @top-right {
+    content: none;
+  }
+}
 @page table-of-contents {
   @top-left-corner {
     content: none;
@@ -744,207 +818,165 @@ div[data-type=composite-page].os-eob {
     content: none;
   }
 }
-@page chapter:nth(1):right {
-  @top-right-corner {
-    font-size: 0.8333333333rem;
-    font-family: "Roboto Slab", serif;
-    color: white;
-    background: #093D4C;
-    margin-right: -1.2rem;
-    margin-top: -1.2rem;
-    padding-right: 2.4rem;
-    padding-top: 2.4rem;
-    height: 0.95in;
-    width: 1.15in;
-    z-index: -1;
-    content: "     " counter(page);
-  }
-  @top-middle {
-    background: #093D4C;
-    padding-top: 2.4rem;
-    margin-top: -1.2rem;
-    height: 0.95in;
-    z-index: -1;
-    content: " ";
-  }
-  @top-right {
-    font-size: 0.8333333333rem;
-    font-family: "Roboto Slab", serif;
-    color: white;
-    background: #093D4C;
-    height: 0.95in;
-    padding-top: 2.4rem;
-    margin-top: -1.2rem;
-    z-index: -1;
-    content: string(module-number) " • " string(module-title) "     ";
-  }
-  @top-left-corner {
-    background: #093D4C;
-    width: 1.15in;
-    height: 0.95in;
-    margin-left: -1.2rem;
-    padding-left: 2.4rem;
-    padding-top: 2.4rem;
-    margin-top: -1.2rem;
-    z-index: -1;
-    content: " ";
-  }
-}
 [data-pdf-folio-preface-message][data-pdf-folio-access-message] {
   string-set: preface-msg attr(data-pdf-folio-preface-message) access-for-free-msg attr(data-pdf-folio-access-message);
 }
 
 @page :left {
   @top-left {
+    content: element(folio_chapter);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(chapter-number) " • " string(chapter-title);
   }
   @top-left-corner {
+    content: counter(page);
+    margin-right: 40px;
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: counter(page) "     ";
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page :right {
   @top-right {
+    content: element(folio_module);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(module-number) " • " string(module-title);
   }
   @top-right-corner {
+    content: counter(page);
+    margin-left: 40px;
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: "     " counter(page);
   }
 }
 @page preface:left {
   @top-left {
+    content: string(preface-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(preface-msg);
   }
   @top-left-corner {
+    content: counter(page);
+    margin-right: 40px;
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: counter(page) "     ";
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page preface:right {
   @top-right {
+    content: string(preface-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(preface-msg);
   }
   @top-right-corner {
+    content: counter(page);
+    margin-left: 40px;
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: "     " counter(page);
   }
 }
 @page eoc:left {
   @top-left {
+    content: element(folio_eoc_left);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: counter(page) "     " string(chapter-number) " • " string(eoc-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page eoc:right {
   @top-right {
+    content: element(folio_eoc_right);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(chapter-number) " • " string(eoc-title) "     " counter(page);
   }
 }
 @page appendix:left {
   @top-left {
+    content: element(folio_appendix_left);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: counter(page) "     " string(appendix-number) " • " string(appendix-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page appendix:right {
   @top-right {
+    content: element(folio_appendix_right);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(appendix-number) " • " string(appendix-title) "     " counter(page);
   }
 }
 @page eob:left {
   @top-left {
+    content: element(folio_eob_left);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: counter(page) "     " string(eob-title);
   }
   @bottom-left {
+    content: string(access-for-free-msg);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(access-for-free-msg);
   }
 }
 @page eob:right {
   @top-right {
+    content: element(folio_eob_right);
     font-size: 0.8333333333rem;
     font-family: "Roboto Slab", serif;
     color: #093D4C;
     font-weight: 700;
-    content: string(eob-title) "     " counter(page);
   }
 }
 @page {
