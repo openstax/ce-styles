@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add `folio_new` to `corn`
+- Use `folio_new` in `algebra-1`
+
 ## [v2.11.0] - 2025-05-20
 
 - Add `borderless` table class to `webview`
