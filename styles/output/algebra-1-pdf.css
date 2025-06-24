@@ -985,6 +985,16 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
+[data-type=exercise] ol.os-raise-noindent, [data-type=exercise] ul.os-raise-noindent {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.os-table table.borderless thead > tr > th,
+.os-table table.borderless tbody > tr > td {
+  border: none !important;
+}
+
 :root {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 11px;
@@ -2206,49 +2216,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=question-solution] > div > div > ol:not(.circled):not(.os-stepwise) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
-}
-
-[data-type=chapter] > h1[data-type=document-title] {
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: 14rem;
-  z-index: 2;
-  color: white;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-size: 2.0736rem;
-  line-height: 2.0736rem;
-  max-width: 5.9in;
-  height: 4.29981696rem;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-part-text {
-  display: none;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-text {
-  display: flex;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 8rem;
-  filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
-  prince-filter-resolution: 300dpi;
-  justify-content: center;
-  align-items: center;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-number {
-  border-style: solid;
-  border-width: 0.07rem;
-  border-color: white;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  left: 0;
-  width: 2.8rem;
-  height: 2.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 [data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {

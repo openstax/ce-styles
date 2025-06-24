@@ -151,6 +151,27 @@ $ChapterIntroType: fullWidth;
   )
 ));
 
+@mixin UnindentedList() {
+  [data-type="exercise"] {
+    ol.os-raise-noindent, ul.os-raise-noindent {
+      padding-left: 0;
+      list-style-position: inside;
+    }
+  }
+}
+
+@mixin BorderlessTable {
+    .os-table table.borderless {
+        thead > tr > th,
+        tbody > tr > td {
+            border: none !important;
+        }
+    }
+}
+
+@include UnindentedList();
+@include BorderlessTable();
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
@@ -185,7 +206,7 @@ $ChapterIntroType: fullWidth;
 @include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 
 //Titles
-@include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+// @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
 @include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('CompositeChapterTitles', 'corn:::CompositeChapterTitlesShape');
