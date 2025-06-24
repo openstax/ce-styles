@@ -142,6 +142,15 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModuleTitles: (
+    _selectors: (
+      settings('ModuleTitles:::_selectors'),
+      '[data-type=unit] > [data-type=page]:not(.introduction)',
+    )
+  )
+));
+
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
