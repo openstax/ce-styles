@@ -173,7 +173,7 @@ $ChapterIntroType: fullWidth;
 };
 
 @mixin UnindentedList() {
-  [data-type="exercise"] {
+  [data-type=exercise], [data-type=injected-exercise] {
     ol.os-raise-noindent, ul.os-raise-noindent {
       padding-left: 0;
       list-style-position: inside;
@@ -182,12 +182,12 @@ $ChapterIntroType: fullWidth;
 }
 
 @mixin BorderlessTable {
-    .os-table table.borderless {
-        thead > tr > th,
-        tbody > tr > td {
-            border: none !important;
-        }
+  .os-table table.borderless {
+    thead > tr > th,
+    tbody > tr > td {
+        border: none !important;
     }
+  }
 }
 
 @mixin ImageBaseline {
