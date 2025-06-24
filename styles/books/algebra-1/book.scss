@@ -35,13 +35,16 @@ $ChapterIntroType: fullWidth;
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
     'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-tryit.svg")) no-repeat top left,
     'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   GeneralStrategies: (
     _selectors: ('[data-type="note"].general-strategies'),
@@ -51,13 +54,16 @@ $ChapterIntroType: fullWidth;
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
     'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-manipmath.svg")) no-repeat top left,
     'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   MiniLessonQuestion: (
     _selectors: ('[data-type="note"].mini-lesson-question'),
@@ -67,13 +73,16 @@ $ChapterIntroType: fullWidth;
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
     'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-question.svg")) no-repeat top left,
     'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   LinkToLearning: (
     _selectors: ('[data-type="note"].link-to-learning'),
@@ -83,13 +92,16 @@ $ChapterIntroType: fullWidth;
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
     'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-link.svg")) no-repeat top left,
     'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   SelfCheck: (
     _selectors: ('[data-type="note"].self-check'),
@@ -99,6 +111,7 @@ $ChapterIntroType: fullWidth;
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
     'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
@@ -106,6 +119,8 @@ $ChapterIntroType: fullWidth;
     'Body:::display': table-cell,
     'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
     'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
 ));
 
@@ -267,11 +282,11 @@ $ChapterIntroType: fullWidth;
 
 //Notes
 @include use('NoClassNote', 'corn:::BoxedNoteShape');
-@include use('Try', 'corn:::IconCondensedNoteShape');
-@include use('GeneralStrategies', 'corn:::IconCondensedNoteShape');
-@include use('MiniLessonQuestion', 'corn:::IconCondensedNoteShape');
-@include use('LinkToLearning', 'corn:::IconCondensedNoteShape');
-@include use('SelfCheck', 'corn:::IconCondensedNoteShape');
+@include use('Try', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('GeneralStrategies', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('MiniLessonQuestion', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('LinkToLearning', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('SelfCheck', 'corn:::IconCondensedNoteWithSubtitleShape');
 
 //Equations
 @include use('Equation', 'corn:::EquationShape');
