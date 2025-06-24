@@ -175,9 +175,16 @@ $ChapterIntroType: fullWidth;
     }
 }
 
+@mixin ImageBaseline {
+  img {
+    max-width: 100%;
+  }
+}
+
 @include HideSolutions();
 @include UnindentedList();
 @include BorderlessTable();
+@include ImageBaseline();
 
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
