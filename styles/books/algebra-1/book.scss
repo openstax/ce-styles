@@ -151,6 +151,12 @@ $ChapterIntroType: fullWidth;
   )
 ));
 
+@mixin HideSolutions() {
+  [data-type="solution"] {
+    display: none;
+  }
+};
+
 @mixin UnindentedList() {
   [data-type="exercise"] {
     ol.os-raise-noindent, ul.os-raise-noindent {
@@ -169,6 +175,7 @@ $ChapterIntroType: fullWidth;
     }
 }
 
+@include HideSolutions();
 @include UnindentedList();
 @include BorderlessTable();
 
