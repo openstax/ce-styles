@@ -985,6 +985,10 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
+section.practice [data-type=injected-exercise] > [data-type=exercise-question] [data-type=question-stem] > ol:not([type=a]) > li::marker {
+  font-weight: bold;
+}
+
 [data-type=solution] {
   display: none;
 }
