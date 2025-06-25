@@ -166,7 +166,38 @@ $ChapterIntroType: fullWidth;
   )
 ));
 
-@mixin HideSolutions() {
+@mixin TableSettings {
+  .os-table {
+    // Prevent extremely wide images from overflowing the tables
+    // Unfortunately, this seems like the best way to get prince to do that
+    //
+    // https://www.princexml.com/doc/styling/
+    // When the fixed table layout algorithm is used [...] if the width
+    // property has value auto (which is the default value), the table-layout
+    // property will be ignored and automatic table layout will be used instead
+    //
+    // Other books use fixed colspec definitions to handle these problems
+    // That would be possible here too, but that functionality would need to
+    // be ported to `corn` and the content updated.
+    //
+    // Since only one table has this problem...
+    > table:has(figure img) {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    [data-type=injected-exercise]
+    [data-type=exercise-question]
+    .os-problem-container
+    [data-type=answer-content] > & {
+      display: initial;
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+}
+
+@mixin HideSolutions {
   [data-type="solution"] {
     display: none;
   }
@@ -251,6 +282,7 @@ $ChapterIntroType: fullWidth;
   $mainFontFamily: settings("typography:::titleFont"),
   $borderColor: settings("colorMap:::boxedTitleColor"),
 );
+@include TableSettings();
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
