@@ -233,6 +233,20 @@ $ChapterIntroType: fullWidth;
   }
 }
 
+@mixin PracticeQuestionNumbers {
+  section.practice [data-type=injected-exercise] > [data-type=exercise-question] {
+    [data-type=question-stem] {
+      > ol:not([type=a]) > li::marker {
+        @content;
+      }
+    }
+  }
+}
+
+@include PracticeQuestionNumbers {
+  font-weight: bold;
+};
+
 @include HideSolutions();
 @include UnindentedList();
 @include BorderlessTable();
