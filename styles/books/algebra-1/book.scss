@@ -187,7 +187,12 @@ $ChapterIntroType: fullWidth;
   }
 }
 
-@mixin TextOnlyChapterTitle {
+@mixin TextOnlyChapterTitle(
+  $mainFontColor,
+  $mainFontFamily,
+  $borderColor,
+  $mainFontSize: font-scale(4)
+) {
   [data-type=unit] > h1[data-type=document-title] {
     display: none;
   }
@@ -195,16 +200,16 @@ $ChapterIntroType: fullWidth;
   [data-type=chapter] > h1[data-type=document-title] {
     display: flex;
     align-items: center;
-    color: #{settings("colorMap:::boxedTitleColor")};
-    font-family: #{settings("typography:::titleFont")};
-    font-size: font-scale(4);
-    line-height: font-scale(4); // must be equal to font-size
+    color: #{$mainFontColor};
+    font-family: #{$mainFontFamily};
+    font-size: #{$mainFontSize};
+    line-height: #{$mainFontSize};
     height: font-scale(8);
 
     > .os-number {
       border-style: solid;
       border-width: 0.07rem;
-      border-color: #{settings("colorMap:::boxedTitleColor")};
+      border-color: #{$borderColor};
       text-transform: uppercase;
       padding: 0.5rem;
       margin-right: 1rem;
@@ -241,8 +246,11 @@ $ChapterIntroType: fullWidth;
 @include HideSolutions();
 @include BorderlessTable();
 @include ImageBaseline();
-@include TextOnlyChapterTitle();
-
+@include TextOnlyChapterTitle(
+  $mainFontColor: settings("colorMap:::boxedTitleColor"),
+  $mainFontFamily: settings("typography:::titleFont"),
+  $borderColor: settings("colorMap:::boxedTitleColor"),
+);
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
