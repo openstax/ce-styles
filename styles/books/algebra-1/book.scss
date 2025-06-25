@@ -172,15 +172,6 @@ $ChapterIntroType: fullWidth;
   }
 };
 
-@mixin UnindentedList() {
-  [data-type=exercise], [data-type=injected-exercise] {
-    ol.os-raise-noindent, ul.os-raise-noindent {
-      padding-left: 0;
-      list-style-position: inside;
-    }
-  }
-}
-
 @mixin BorderlessTable {
   .os-table table.borderless {
     thead > tr > th,
@@ -248,7 +239,6 @@ $ChapterIntroType: fullWidth;
 };
 
 @include HideSolutions();
-@include UnindentedList();
 @include BorderlessTable();
 @include ImageBaseline();
 @include TextOnlyChapterTitle();
