@@ -112,7 +112,7 @@ $Exercise__ProblemSolution__Number: (
     display: table-cell,
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
-    font-weight: bold,
+    font-weight: (enum('ValueSet:::OPTIONAL'), bold),
     width:  enum('ValueSet:::OPTIONAL'), // Used in one column exercises, answer key
     text-align: enum('ValueSet:::OPTIONAL'), // Used in one column exercises, answer key
   )
@@ -141,7 +141,7 @@ $InjectedExercise--Multipart__QuestionIndent: (
       _name: "MultipartQuestionIdent",
       _subselector: ' [data-type="injected-exercise"][data-is-multipart="True"] > [data-type="exercise-question"]',
       _properties: (
-        margin-left: h-spacing(2),
+        margin-left: (enum('ValueSet:::OPTIONAL'), h-spacing(2)),
       )
 );
 

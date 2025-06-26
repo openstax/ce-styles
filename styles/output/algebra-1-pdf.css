@@ -985,10 +985,6 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
-section.practice [data-type=injected-exercise] > [data-type=exercise-question] [data-type=question-stem] > ol:not([type=a]) > li::marker {
-  font-weight: bold;
-}
-
 [data-type=solution] {
   display: none;
 }
@@ -1034,7 +1030,7 @@ img {
   align-items: center;
 }
 
-.os-table > table:has(figure) {
+.os-table > table:has(figure img) {
   table-layout: fixed;
   width: 100%;
 }
@@ -1042,6 +1038,11 @@ img {
   display: initial;
   margin-left: initial;
   margin-right: initial;
+}
+
+[data-type=exercise-stimulus] > ol:not(.circled):not(.os-stepwise):not(:nth-of-type(1)),
+[data-type=exercise-stimulus] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]):not(:nth-of-type(1)) {
+  margin-left: 24px;
 }
 
 :root {
@@ -3707,7 +3708,7 @@ section.practice [data-type=exercise] [data-type=problem] > .os-number {
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.practice [data-type=exercise] [data-type=problem] > .os-divider {
@@ -3754,7 +3755,7 @@ section.practice [data-type=exercise].material-set-2 [data-type=problem] > .os-n
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.practice [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
@@ -3799,7 +3800,7 @@ section.practice [data-type=injected-exercise] [data-type=exercise-question] > .
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.practice [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
@@ -3839,7 +3840,7 @@ section.practice [data-type=injected-exercise] [data-type=exercise-question] .os
 }
 
 section.practice [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
-  margin-left: 16px;
+  margin-left: initial;
 }
 
 section.numbered-exercises > p > [data-effect=bold] {
@@ -3876,7 +3877,7 @@ section.numbered-exercises [data-type=exercise] [data-type=problem] > .os-number
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.numbered-exercises [data-type=exercise] [data-type=problem] > .os-divider {
@@ -3923,7 +3924,7 @@ section.numbered-exercises [data-type=exercise].material-set-2 [data-type=proble
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
@@ -3968,7 +3969,7 @@ section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-que
   display: table-cell;
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: initial;
 }
 
 section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
@@ -4008,7 +4009,7 @@ section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-que
 }
 
 section.numbered-exercises [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
-  margin-left: 16px;
+  margin-left: initial;
 }
 
 .os-key-equations-container > section {

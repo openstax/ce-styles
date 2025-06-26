@@ -127,6 +127,12 @@ $ChapterIntroType: fullWidth;
 @include add_settings((
   EverydayExercises: (
     _selectors: ('section.practice', 'section.numbered-exercises'),
+    MultipartQuestionIdent: (
+      margin-left: initial,
+    ),
+    ProblemSolutionNumber: (
+      font-weight: initial,
+    ),
   ),
   ReviewExercises: (
     _selectors: ('.os-eoc.os-review-exercises-container > section.review-exercises'),
@@ -260,19 +266,16 @@ $ChapterIntroType: fullWidth;
   }
 }
 
-@mixin PracticeQuestionNumbers {
-  section.practice [data-type=injected-exercise] > [data-type=exercise-question] {
-    [data-type=question-stem] {
-      > ol:not([type=a]) > li::marker {
-        @content;
+@mixin SplitMultipart {
+  [data-type=exercise-stimulus] {
+    > ol:not(.circled):not(.os-stepwise),
+    > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+      &:not(:nth-of-type(1)) {
+        margin-left: #{h-spacing(3)};
       }
     }
   }
 }
-
-@include PracticeQuestionNumbers {
-  font-weight: bold;
-};
 
 @include HideSolutions();
 @include BorderlessTable();
@@ -283,6 +286,7 @@ $ChapterIntroType: fullWidth;
   $borderColor: settings("colorMap:::boxedTitleColor"),
 );
 @include TableSettings();
+@include SplitMultipart();
 @include use('BookRoot', "common:::BookRoot");
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
