@@ -134,34 +134,8 @@ $ChapterIntroType: fullWidth;
       font-weight: initial,
     ),
   ),
-  ReviewExercises: (
-    _selectors: ('.os-eoc.os-review-exercises-container > section.review-exercises'),
-  ),
 ));
 
-@include add_settings ((
-  AnswerKeyExercisesSolutionLists: (
-    _selectors: ('.os-eob.os-solutions-container [data-type="solution"]'),
-  ),
-  KeyEquations:(
-      _selectors: (".os-key-equations-container"),
-        'TableData:::font-family': (_ref: "typography:::baseFont"),
-        'TableData:::padding-top': table-v-spacing(1),
-        'TableData:::padding-bottom': table-v-spacing(1),
-        'TableData:::padding-left': table-h-spacing(1),
-        'TableData:::padding-right': table-h-spacing(1),
-        'TableData:::border-bottom-width': 0.09rem,
-        'TableData:::border-bottom-style': solid,
-        'TableData:::border-bottom-color': (_ref: "colorMap:::keyEquationsBorderColor"),
-        'TableData:::color': (_ref: "colorMap:::tableColor"),
-  ),
-));
-
-@include add_settings((
-  ModuleWithoutTitleLinks: (
-    _selectors: ('.os-eos.os-section-exercises-container', '.os-eoc.os-review-exercises-container'),
-  ),
-));
 
 @include add_settings((
   ModuleTitles: (
@@ -291,7 +265,6 @@ $ChapterIntroType: fullWidth;
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
 @include use('Example', 'corn:::ExampleShape');
-@include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 
 // Chapter Intro
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
@@ -354,32 +327,8 @@ $ChapterIntroType: fullWidth;
 @include use('KeyTerms','corn:::KeyTermsShape');
 @include use('ModuleWithMarginBottom','common:::ModuleWithMarginBottomShape');
 
-// Exercises from Example
-@include use('ExerciseFromExample', 'corn:::ExerciseFromExampleShape');
-
 //Section Exercises
 @include use('EverydayExercises', 'corn:::ExercisesModuleShape');
 
-//Key Equations spacing
-@include use('KeyEquations','corn:::ModuleWithUnstyledTableShape');
-
-// EoC Exercises
-@include use('ReviewExercises', 'corn:::ExercisesModuleShape');
-
 //EOB
-@include use('AnswerKey', 'corn:::AnswerKeyShape');
-@include use('AnswerKeyOneColumnEobSolution', 'corn:::AnswerKeySolutionShape');
 @include use('Index', 'corn:::IndexShape');
-
-
-// // Change the page number from 314 to 100π
-// @page :nth(314):left         { @top-left-corner { content: "100π" "     "; } }
-// @page :nth(314):right        { @top-right-corner { content: "     " "100π"; } }
-
-// // Do the same for tau.
-// // See https://www.scientificamerican.com/article/let-s-use-tau-it-s-easier-than-pi/
-// @page :nth(628):left         { @top-left-corner { content: "100τ" "     "; } }
-// @page :nth(628):right        { @top-right-corner { content: "     " "100τ"; } }
-
-// @page :nth(2): left          { @top-left-corner { content: "TWO" "     "; } }
-// @page :nth(2):right          { @top-right-corner { content: "     " "TWO"; } }
