@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add `UnitToc` to `corn`
+- Use `UnitToc` in `algebra-1`
 - Add `folio_new` to `corn`
 - Use `folio_new` in `algebra-1`
 
