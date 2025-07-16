@@ -16,6 +16,8 @@ $ChapterIntroType: fullWidth;
 
 //Settings
 
+$noteTitlePadding: h-spacing(3);
+
 @include add_settings((
   NoClassNote: (
     _selectors: ('[data-type="note"]:not([class])'),
@@ -31,7 +33,7 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="note"].try'),
     'Container:::display': table,
     'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Title:::padding-right': $noteTitlePadding,
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
@@ -50,7 +52,7 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="note"].general-strategies'),
     'Container:::display': table,
     'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Title:::padding-right': $noteTitlePadding,
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
@@ -69,7 +71,7 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="note"].mini-lesson-question'),
     'Container:::display': table,
     'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Title:::padding-right': $noteTitlePadding,
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
@@ -88,7 +90,7 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="note"].link-to-learning'),
     'Container:::display': table,
     'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Title:::padding-right': $noteTitlePadding,
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
@@ -107,7 +109,7 @@ $ChapterIntroType: fullWidth;
     _selectors: ('[data-type="note"].self-check'),
     'Container:::display': table,
     'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Title:::padding-right': $noteTitlePadding,
     'Title:::white-space': nowrap,
     'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
     'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
@@ -126,18 +128,70 @@ $ChapterIntroType: fullWidth;
 
 @include add_settings((
   EverydayExercises: (
-    _selectors: ('section.practice', 'section.numbered-exercises'),
+    _selectors: ('section.numbered-exercises'),
     MultipartQuestionIdent: (
       margin-left: initial,
     ),
+    // ExerciseImage: (
+    //   max-width: calc(6in * 0.9 / 2),
+    // ),
+  ),
+  // ReviewExercises: (
+  //   _selectors: ('.os-eoc.os-review-exercises-container > section.review-exercises'),
+  // ),
+));
+
+
+@include add_settings((
+  PracticeExercises: ( // Two Column Exercise Module
+    _selectors: ('section.practice'),
+    MultipartQuestionIdent: (
+      margin-left: initial,
+    ),
+    ExerciseContainer: (
+      width: initial,
+      display: initial,
+    ),
+    ProblemWrapper: (
+      display: initial,
+    ),
+    // ExerciseImage: (
+    //   max-width: calc(6in * 0.9 / 2),
+    // ),
+    ExercisesParagraphTitle: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: (_ref: 'colorMap:::moduleTitleColor'),
+      margin-top: v-spacing(1),
+      font-style: normal,
+    ),
+    ExercisesParagraphTitleItalic: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: (_ref: 'colorMap:::moduleTitleColor'),
+      margin-top: v-spacing(1),
+      font-style: italic,
+    ),
     ProblemSolutionNumber: (
-      font-weight: initial,
+      color: (_ref: 'colorMap:::fontBodyColor'),
     ),
   ),
-  ReviewExercises: (
-    _selectors: ('.os-eoc.os-review-exercises-container > section.review-exercises'),
-  ),
 ));
+
+
+
+@mixin PracticeQuestionNumbers {
+  section.practice [data-type=injected-exercise] {
+    > [data-type=exercise-stimulus],
+    > [data-type=exercise-question] [data-type=question-stem] {
+      > ol:not([type=a]) > li::marker {
+        @content;
+      }
+    }
+  }
+}
+
+@include PracticeQuestionNumbers {
+  font-weight: bold;
+};
 
 @include add_settings ((
   AnswerKeyExercisesSolutionLists: (
@@ -174,7 +228,8 @@ $ChapterIntroType: fullWidth;
 
 @mixin TableSettings {
   .os-table {
-    // Prevent extremely wide images from overflowing the tables
+
+        // Prevent extremely wide images from overflowing the tables
     // Unfortunately, this seems like the best way to get prince to do that
     //
     // https://www.princexml.com/doc/styling/
@@ -187,9 +242,16 @@ $ChapterIntroType: fullWidth;
     // be ported to `corn` and the content updated.
     //
     // Since only one table has this problem...
-    > table:has(figure img) {
-      table-layout: fixed;
-      width: 100%;
+    // > table:has(figure img) {
+    //   table-layout: fixed;
+    //   max-width: half-fullBleedsSize(6.81, in);
+    // }
+    @each $cols in (2, 3, 4, 5, 6) {
+      > table:has(tr > td:nth-of-type(#{$cols})):not(:has(tr > td:nth-of-type(#{$cols + 1}))) {
+        img {
+          max-width: calc(6in / $cols);
+        }
+      }
     }
 
     [data-type=injected-exercise]
@@ -203,6 +265,59 @@ $ChapterIntroType: fullWidth;
   }
 }
 
+@each $noteClass, $titleWidth in (
+  ('try', 105px),
+  ('self-check', 135px)
+) {
+  [data-type=note].#{$noteClass} {
+    img {
+      max-width: calc(6in - $titleWidth);
+    }
+  }
+}
+
+// 2.15.1 Analyzing Graphs that Represent Linear Equations and Inequalities ✅
+// 3.1.4 Interpreting the Slope and Vertical Intercept of a Scatter Plot ✅
+// Avoid breaks between `p` describing `media` and `media`
+section.numbered-exercises, section.practice [data-type=problem] {
+  > p:has(+ [data-type=media]) {
+    break-after: avoid;
+    break-inside: avoid-page;
+  }
+}
+
+section.numbered-exercises [data-type=exercise]:has([data-type=problem] .os-problem-container [data-type=media]) {
+  display: inline-block;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem]:has(.os-problem-container [data-type=media]) {
+  display: flex;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container [data-type=media] {
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] img,
+section.numbered-exercises [data-type=injected-exercise] img {
+  max-width: 100%;
+}
+
+// section.numbered-exercise [data-type=problem] > .os-problem-container:has([data-type=media]) {
+//   overflow-wrap: anywhere;
+// }
+
+// 9.11.2 Does the Vertex Represent the Minimum or Maximum Value? Activity
+// section {
+//   margin-bottom: 1.7rem;
+// }
+
 @mixin HideSolutions {
   [data-type="solution"] {
     display: none;
@@ -213,14 +328,21 @@ $ChapterIntroType: fullWidth;
   .os-table table.borderless {
     thead > tr > th,
     tbody > tr > td {
-        border: none !important;
+      border: none !important;
     }
   }
 }
 
 @mixin ImageBaseline {
   img {
+    // 4.9.2 ✅
+    height: auto;
     max-width: 100%;
+
+    [data-type=media] > & {
+      display: block;
+      margin-bottom: #{v-spacing(2)};
+    }
   }
 }
 
@@ -270,9 +392,9 @@ $ChapterIntroType: fullWidth;
   [data-type=exercise-stimulus] {
     > ol:not(.circled):not(.os-stepwise),
     > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-      &:not(:nth-of-type(1)) {
+      // &:not(:nth-of-type(1)) {
         margin-left: #{h-spacing(3)};
-      }
+      // }
     }
   }
 }
@@ -359,12 +481,13 @@ $ChapterIntroType: fullWidth;
 
 //Section Exercises
 @include use('EverydayExercises', 'corn:::ExercisesModuleShape');
+@include use('PracticeExercises', 'corn:::ExercisesModuleShape');
 
 //Key Equations spacing
 @include use('KeyEquations','corn:::ModuleWithUnstyledTableShape');
 
 // EoC Exercises
-@include use('ReviewExercises', 'corn:::ExercisesModuleShape');
+// @include use('ReviewExercises', 'corn:::ExercisesModuleShape');
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');
