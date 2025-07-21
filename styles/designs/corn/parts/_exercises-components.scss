@@ -31,7 +31,7 @@ $Exercise__Problem__Wrapper: (
     _name: "ProblemWrapper",
     _subselector: " [data-type='problem']",
     _properties:(
-        display: table,
+        display: (enum('ValueSet:::OPTIONAL'), table),
         overflow-wrap: break-word,
     )
 );
