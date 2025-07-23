@@ -222,6 +222,19 @@ section:has([data-type=note]) {
 ));
 
 @include add_settings((
+  ModuleSectionWithBorder: (
+    _selectors: ('section.check-understanding'),
+    ModuleSectionWithBorder: (
+      border-top-style: solid,
+      border-bottom-style: solid,
+      border-color: (_ref: 'colorMap:::moduleTitleColor'),
+      border-width: 1px,
+      padding: v-spacing(2) 0,
+    )
+  )
+));
+
+@include add_settings((
   BasicTable: (
     'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
     'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
@@ -387,6 +400,7 @@ section.numbered-exercises [data-type=injected-exercise] img {
 @include use('TocUnit', 'corn:::UnitToc');
 @include use('Example', 'corn:::ExampleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
+@include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
