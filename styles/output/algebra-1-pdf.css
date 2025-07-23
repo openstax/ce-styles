@@ -2722,6 +2722,12 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
+[data-type=note]:not([class]) > .os-note-body > [data-type=media] > img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 3in;
+}
+
 [data-type=note].try {
   display: flex;
   margin-bottom: 1.4rem;
