@@ -25,6 +25,11 @@
                         )),
                         map-merge($Table__Body, (
                             _components: (
+                                map-merge($Table__Row--First, (
+                                    _components: (
+                                        $Table__Head__Cell--First--ColHeader,
+                                    )
+                                )),
                                 map-merge($Table__Row, (
                                     _components: (
                                         $Table__Head__Cell,
@@ -58,6 +63,7 @@
                                     _components: (
                                         $Table__Data--First,
                                         $Table__Data--Last,
+                                        $Table__Head__Cell--Last--ColHeader,
                                     )
                                 )),
                             )

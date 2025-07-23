@@ -221,6 +221,25 @@ section:has([data-type=note]) {
   )
 ));
 
+@include add_settings((
+  BasicTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  ColumnHeader: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  UnnumberedUnstyledTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  DataTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+));
+
 @include tables.distributed-table-images((2, 3, 4, 5, 6), $pageWidth);
 
 // We do not want these tables to be centered on the page

@@ -53,6 +53,7 @@ $Table__Head__Cell: (
         padding-right: enum('ValueSet:::REQUIRED'), //used in Exercises
         padding-left: enum('ValueSet:::REQUIRED'), //used in Exercises
         background-color: enum('ValueSet:::OPTIONAL'),
+        border-color: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -122,6 +123,7 @@ $Table__Data--Centered: (
 
 $Table__Head__Row: empty_wrapper(TableHeadRow, ' > tr');
 
+$Table__Row--First: empty_wrapper(TableLastRow, ' > tr:first-of-type');
 $Table__Row--Last: empty_wrapper(TableLastRow, ' > tr:last-of-type');
 
 $Table__Data--Last: (
@@ -149,6 +151,22 @@ $Table__Data--First--ColHeader: (
         padding-bottom: table-v-spacing(1),
         padding-right: table-h-spacing(1),
         padding-left: table-h-spacing(1),
+    )
+);
+
+$Table__Head__Cell--First--ColHeader: (
+    _name: "FirstTableHeadColHeader",
+    _subselector: " > th[scope=col]:first-child",
+    _properties: (
+        border-top-left-radius: 0.25rem,
+    )
+);
+
+$Table__Head__Cell--Last--ColHeader: (
+    _name: "LastTableHeadColHeader",
+    _subselector: " > th[scope=col]:first-child",
+    _properties: (
+        border-bottom-left-radius: 0.25rem,
     )
 );
 
