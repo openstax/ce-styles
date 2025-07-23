@@ -2935,6 +2935,10 @@ section.coreq-skills > section.learning-objectives > ul > li {
   border-spacing: 0;
 }
 
+.os-table:not(.os-unstyled-container) > table > thead > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > table > thead > tr > th {
   color: #FFFFFF;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2953,6 +2957,10 @@ section.coreq-skills > section.learning-objectives > ul > li {
 
 .os-table:not(.os-unstyled-container) > table > thead > tr > th:last-child {
   border-top-right-radius: 0.25rem;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > th {
@@ -3032,6 +3040,10 @@ section.coreq-skills > section.learning-objectives > ul > li {
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > td:last-child {
   border-bottom-right-radius: 0.25rem;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
 }
 
 .os-table:not(.os-unstyled-container) > .os-caption-container {

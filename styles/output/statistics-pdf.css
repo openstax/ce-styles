@@ -1548,6 +1548,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-spacing: 0;
 }
 
+.os-table:not(.os-unstyled-container) > table > thead > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > table > thead > tr > th {
   color: #FFFFFF;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -1566,6 +1570,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table:not(.os-unstyled-container) > table > thead > tr > th:last-child {
   border-top-right-radius: 0.25rem;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > th {
@@ -1647,6 +1655,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-right-radius: 0.25rem;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > .os-caption-container {
   display: table-caption;
   caption-side: bottom;
@@ -1692,6 +1704,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-spacing: 0;
 }
 
+.os-table.os-data-table-container > table > thead > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
 .os-table.os-data-table-container > table > thead > tr > th {
   color: #FFFFFF;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -1710,6 +1726,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table.os-data-table-container > table > thead > tr > th:last-child {
   border-top-right-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
 }
 
 .os-table.os-data-table-container > table > tbody > tr > th {
@@ -1789,6 +1809,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table.os-data-table-container > table > tbody > tr:last-of-type > td:last-child {
   border-bottom-right-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
 }
 
 .os-table.os-data-table-container > .os-caption-container {
