@@ -1409,6 +1409,15 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0;
 }
 
+section.check-understanding {
+  border-color: #1E7E91;
+  border-width: 1px;
+  padding: 1.4rem 0;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  break-inside: avoid;
+}
+
 .os-chapter-outline {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: 500;
@@ -2723,7 +2732,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   padding-right: 24px;
   white-space: nowrap;
-  max-width: 20%;
+  max-width: 15%;
 }
 
 [data-type=note].try > .os-title::before {
@@ -2750,7 +2759,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  width: 80%;
+  width: 85%;
 }
 
 [data-type=note].try > .os-note-body > .os-subtitle {
@@ -2825,7 +2834,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   padding-right: 24px;
   white-space: nowrap;
-  max-width: 20%;
+  max-width: 30%;
 }
 
 [data-type=note].mini-lesson-question > .os-title::before {
@@ -2852,7 +2861,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  width: 80%;
+  width: 70%;
 }
 
 [data-type=note].mini-lesson-question > .os-note-body > .os-subtitle {
@@ -2876,7 +2885,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   padding-right: 24px;
   white-space: nowrap;
-  max-width: 20%;
+  max-width: 30%;
 }
 
 [data-type=note].link-to-learning > .os-title::before {
@@ -2903,7 +2912,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  width: 80%;
+  width: 70%;
 }
 
 [data-type=note].link-to-learning > .os-note-body > .os-subtitle {
@@ -3018,7 +3027,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table:not(.os-unstyled-container) > table > thead > tr > th:first-child {
@@ -3027,6 +3036,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table:not(.os-unstyled-container) > table > thead > tr > th:last-child {
   border-top-right-radius: 0.25rem;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > th {
@@ -3038,7 +3051,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td {
@@ -3046,7 +3059,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -3108,6 +3121,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-right-radius: 0.25rem;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > .os-caption-container {
   display: table-caption;
   caption-side: bottom;
@@ -3162,7 +3179,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table.os-column-header-container > table > thead > tr > th:first-child {
@@ -3178,7 +3195,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 1rem;
@@ -3264,11 +3281,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
+  background-color: #0B5B51;
 }
 
 .os-table.os-unstyled-container > table > tbody > tr > td {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -3320,7 +3339,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.16rem;
   padding-right: 0.16rem;
   padding-left: 0.16rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table.os-data-table-container > table > thead > tr > th:first-child {
@@ -3329,6 +3348,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table.os-data-table-container > table > thead > tr > th:last-child {
   border-top-right-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
 }
 
 .os-table.os-data-table-container > table > tbody > tr > th {
@@ -3340,7 +3363,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.16rem;
   padding-right: 0.16rem;
   padding-left: 0.16rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table.os-data-table-container > table > tbody > tr > td {
@@ -3348,7 +3371,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-left: 0.16rem;
@@ -3408,6 +3431,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table.os-data-table-container > table > tbody > tr:last-of-type > td:last-child {
   border-bottom-right-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
 }
 
 .os-table.os-data-table-container > .os-caption-container {
