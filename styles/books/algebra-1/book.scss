@@ -283,6 +283,7 @@ section.numbered-exercises, section.practice [data-type=problem] {
 
 section.numbered-exercises [data-type=exercise]:has([data-type=problem] .os-problem-container [data-type=media]) {
   display: inline-block;
+  vertical-align: top;
 }
 
 section.numbered-exercises [data-type=exercise] [data-type=problem]:has(.os-problem-container [data-type=media]) {

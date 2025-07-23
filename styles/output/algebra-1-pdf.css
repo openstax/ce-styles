@@ -1021,6 +1021,7 @@ section.numbered-exercises > p:has(+ [data-type=media]), section.practice [data-
 
 section.numbered-exercises [data-type=exercise]:has([data-type=problem] .os-problem-container [data-type=media]) {
   display: inline-block;
+  vertical-align: top;
 }
 
 section.numbered-exercises [data-type=exercise] [data-type=problem]:has(.os-problem-container [data-type=media]) {
@@ -1416,6 +1417,18 @@ section.check-understanding {
   border-top-style: solid;
   border-bottom-style: solid;
   break-inside: avoid;
+}
+
+section > [data-type=media] > img {
+  max-width: 3in;
+}
+
+section > section > [data-type=media] > img {
+  max-width: 3in;
+}
+
+section > section > section > [data-type=media] > img {
+  max-width: 3in;
 }
 
 .os-chapter-outline {
