@@ -305,13 +305,6 @@ section.numbered-exercises [data-type=injected-exercise] img {
   max-width: 100%;
 }
 
-// section.numbered-exercise [data-type=problem] > .os-problem-container:has([data-type=media]) {
-//   overflow-wrap: anywhere;
-// }
-
-// 9.11.2 Does the Vertex Represent the Minimum or Maximum Value? Activity
-// styles/designs/common/_reset.scss
-
 @include add_settings((
   HiddenElements: (
     _selectors: ('[data-type=solution]')
@@ -329,8 +322,10 @@ section.numbered-exercises [data-type=injected-exercise] img {
 
 @mixin ImageBaseline {
   img {
-    height: auto;  // Required to maintain aspect ratios
-    max-width: 100%;
+    max-width: 4in;
+    max-height: 3in;
+    height: auto;
+    width: auto;
 
     [data-type=media] > & {
       display: block;
@@ -390,6 +385,35 @@ section.numbered-exercises [data-type=injected-exercise] img {
   }
 }
 
+@include add_settings((
+  GenericImageInSection: (
+    _selectors: ('section', 'section > section', 'section > section > section'),
+    ImageInMedia: (
+      margin-left: null,
+      margin-right: null,
+      // Do not overwrite the baseline values here
+      display: null,
+      margin-bottom: null,
+    ),
+  )
+));
+
+// Use the global image constraints instead
+@include add_settings((
+  FigureFromExercisesProblem: (
+    'Image:::max-width': null,
+  ),
+  FigureFromExercisesSolution: (
+    'Image:::max-width': null,
+  ),
+  FigureFromInjectedQuestion: (
+    'Image:::max-width': null,
+  ),
+  FigureFromInjectedSolution: (
+    'Image:::max-width': null,
+  ),
+));
+
 @include BorderlessTable();
 @include ImageBaseline();
 @include TextOnlyChapterTitle(
@@ -406,6 +430,7 @@ section.numbered-exercises [data-type=injected-exercise] img {
 @include use('Example', 'corn:::ExampleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 @include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
+@include use('GenericImageInSection', 'corn:::GenericImageShape');
 
 // Chapter Intro
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');

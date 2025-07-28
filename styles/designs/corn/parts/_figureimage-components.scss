@@ -51,7 +51,7 @@ $Image: (
     _name: "Image",
     _subselector: " img",
     _properties:(
-        max-width: 100%,
+        max-width: (enum('ValueSet:::OPTIONAL'), 100%),
     )
 );
 
@@ -68,10 +68,14 @@ $Image--InMedia: (
       _name: "ImageInMedia",
       _subselector: ' > [data-type="media"] > img',
       _properties: (
-        display: block,
-        margin-bottom: v-spacing(2),
-        margin-left: auto,
-        margin-right: auto,
+        display: (enum('ValueSet:::OPTIONAL'), block),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-left: (enum('ValueSet:::OPTIONAL'), auto),
+        margin-right: (enum('ValueSet:::OPTIONAL'), auto),
+        max-width: enum('ValueSet:::OPTIONAL'),
+        max-height: enum('ValueSet:::OPTIONAL'),
+        width: enum('ValueSet:::OPTIONAL'),
+        height: enum('ValueSet:::OPTIONAL'),
       )
 );
 
