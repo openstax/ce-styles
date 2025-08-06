@@ -135,6 +135,15 @@ $noteTitlePadding: h-spacing(3);
 @include add_settings((
   EverydayExercises: (
     _selectors: ('section.numbered-exercises'),
+    FirstLevelOrderedList: (
+      margin-left: h-spacing(5),
+    ),
+    ExercisesParagraphTitleItalic: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: null,
+      margin-top: v-spacing(1),
+      font-style: null,
+    ),
     MultipartQuestionIdent: (
       margin-left: initial,
     ),
@@ -144,6 +153,9 @@ $noteTitlePadding: h-spacing(3);
 @include add_settings((
   PracticeExercises: ( // Two Column Exercise Module
     _selectors: ('section.practice'),
+    FirstLevelOrderedList: (
+      margin-left: h-spacing(5),
+    ),
     MultipartQuestionIdent: (
       margin-left: initial,
     ),
@@ -162,15 +174,23 @@ $noteTitlePadding: h-spacing(3);
     ),
     ExercisesParagraphTitleItalic: (
       font-family: (_ref: 'typography:::baseFont'),
-      color: (_ref: 'colorMap:::moduleTitleColor'),
+      color: null,
       margin-top: v-spacing(1),
-      font-style: italic,
+      font-style: null,
     ),
     ProblemSolutionNumber: (
       color: (_ref: 'colorMap:::fontBodyColor'),
     ),
   ),
 ));
+
+[data-type=injected-exercise] ol:not(.os-raise-noindent), [data-type=exercise] ol:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+[data-type=injected-exercise] ul:not(.os-raise-noindent), [data-type=exercise] ul:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
 
 section:has([data-type=note]) {
   width: 100%;
@@ -256,6 +276,11 @@ section:has([data-type=note]) {
     'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
   ),
 ));
+
+// For when answers are incorrectly included in questions as first level lists
+[data-type="exercise-question"] > div > div > ol[type="a"]:not(.circled):not(.os-stepwise):not(.os-raise-noindent):nth-of-type(2) {
+  margin-left: h-spacing(5);
+}
 
 @include tables.distributed-table-images((2, 3, 4, 5, 6), $pageWidth);
 

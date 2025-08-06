@@ -25,7 +25,7 @@ $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
     _subselector: ' > ul:not(.circled):not(.os-stepwise):not([data-labeled-item="true"])',
     _properties:(
-        margin-left: h-spacing(3),
+        margin-left: (enum('ValueSet:::OPTIONAL'), h-spacing(3)),
     )
 );
 
@@ -33,7 +33,7 @@ $OrderedList--FirstLevel: (
     _name: "FirstLevelOrderedList",
     _subselector: " > ol:not(.circled):not(.os-stepwise)",
     _properties:(
-        margin-left: h-spacing(3),
+        margin-left: (enum('ValueSet:::OPTIONAL'), h-spacing(3)),
     )
 );
 

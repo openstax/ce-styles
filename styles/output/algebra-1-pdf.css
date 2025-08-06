@@ -985,6 +985,14 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
+[data-type=injected-exercise] ol:not(.os-raise-noindent), [data-type=exercise] ol:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+[data-type=injected-exercise] ul:not(.os-raise-noindent), [data-type=exercise] ul:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
 section:has([data-type=note]) {
   width: 100%;
 }
@@ -992,6 +1000,10 @@ section:has([data-type=note]) {
 section.practice [data-type=injected-exercise] > [data-type=exercise-stimulus] > ol:not([type=a]) > li::marker,
 section.practice [data-type=injected-exercise] > [data-type=exercise-question] [data-type=question-stem] > ol:not([type=a]) > li::marker {
   font-weight: bold;
+}
+
+[data-type=exercise-question] > div > div > ol[type=a]:not(.circled):not(.os-stepwise):not(.os-raise-noindent):nth-of-type(2) {
+  margin-left: 40px;
 }
 
 .os-table > table:has(tr > td:nth-of-type(2)):not(:has(tr > td:nth-of-type(3))) img {
@@ -3770,11 +3782,9 @@ section.numbered-exercises > p > [data-effect=bold] {
 }
 
 section.numbered-exercises > p {
-  color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-style: italic;
   margin-top: 0.7rem;
 }
 
@@ -3909,7 +3919,7 @@ section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-que
 }
 
 section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
+  margin-left: 40px;
 }
 
 section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
@@ -3939,11 +3949,9 @@ section.practice > p > [data-effect=bold] {
 }
 
 section.practice > p {
-  color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-style: italic;
   margin-top: 0.7rem;
 }
 
@@ -4078,7 +4086,7 @@ section.practice [data-type=injected-exercise] [data-type=exercise-question] .os
 }
 
 section.practice [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
+  margin-left: 40px;
 }
 
 section.practice [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
