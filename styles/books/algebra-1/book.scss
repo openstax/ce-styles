@@ -433,6 +433,13 @@ section.numbered-exercises [data-type=injected-exercise] img {
   ),
 ));
 
+@include add_settings((
+  LabeledImage: (
+    _selectors: ('[data-type=exercise] > [data-type=problem] > .os-problem-container > div.half.labeled-image'),
+    'FixedWidth:::width': 45%,
+  )
+));
+
 @include BorderlessTable();
 @include ImageBaseline();
 @include TextOnlyChapterTitle(
@@ -450,6 +457,7 @@ section.numbered-exercises [data-type=injected-exercise] img {
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 @include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
 @include use('GenericImageInSection', 'corn:::GenericImageShape');
+@include use('LabeledImage', 'common:::LabeledItem');
 
 // Chapter Intro
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
