@@ -121,6 +121,27 @@ $noteTitlePadding: h-spacing(3);
     'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
     'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
+  Document: (
+    _selectors: ('[data-type="note"].document'),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Title:::padding-right': $noteTitlePadding,
+    'Title:::max-width': 30%,
+    'Title:::white-space': nowrap,
+    'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
+    'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
+    'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
+    'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::width': 70%,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-summary.svg")) no-repeat top left,
+    'TitleIcon:::flex-shrink': 0,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
   SelfCheck: (
     _selectors: ('[data-type="note"].self-check'),
     'Container:::margin-top': v-spacing(2),
@@ -519,6 +540,7 @@ section.numbered-exercises [data-type=exercise] img {
 @include use('GeneralStrategies', 'corn:::IconCondensedNoteWithSubtitleShape');
 @include use('MiniLessonQuestion', 'corn:::IconCondensedNoteWithSubtitleShape');
 @include use('LinkToLearning', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('Document', 'corn:::IconCondensedNoteWithSubtitleShape');
 @include use('SelfCheck', 'corn:::BoxedNoteShape');
 
 //Equations
