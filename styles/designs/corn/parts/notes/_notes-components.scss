@@ -8,7 +8,8 @@ $Notes--IconCondensed__Container: (
     _properties: (
         display: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
         justify-content: enum('ValueSet:::OPTIONAL'),
-        margin-bottom: v-spacing(2),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-top: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -199,7 +200,8 @@ $Notes--Boxed__Container: (
     _name: "Container",
     _subselector: '',
     _properties: (
-        margin-bottom: v-spacing(2),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-top: enum('ValueSet:::OPTIONAL'),
     )
 );
 

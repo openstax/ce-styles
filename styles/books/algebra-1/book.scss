@@ -24,6 +24,8 @@ $noteTitlePadding: h-spacing(3);
 @include add_settings((
   NoClassNote: (
     _selectors: ('[data-type="note"]:not([class])'),
+    'Container:::margin-top': v-spacing(2),
+    'Container:::margin-bottom': v-spacing(2),
     'Title:::background-color': (_ref: "colorMap:::boxedBackgroundColor"),
     'Title:::border-bottom-color': (_ref: "colorMap:::boxedBorderColor"),
     'Title:::color': (_ref: "colorMap:::boxedTitleColor"),
@@ -38,6 +40,8 @@ $noteTitlePadding: h-spacing(3);
   Try: (
     _selectors: ('[data-type="note"].try'),
     'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
     'Title:::padding-right': $noteTitlePadding,
     'Title:::max-width': 15%,
     'Title:::white-space': nowrap,
@@ -57,6 +61,8 @@ $noteTitlePadding: h-spacing(3);
   GeneralStrategies: (
     _selectors: ('[data-type="note"].general-strategies'),
     'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
     'Title:::padding-right': $noteTitlePadding,
     'Title:::max-width': 20%,
     'Title:::white-space': nowrap,
@@ -76,6 +82,8 @@ $noteTitlePadding: h-spacing(3);
   MiniLessonQuestion: (
     _selectors: ('[data-type="note"].mini-lesson-question'),
     'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
     'Title:::padding-right': $noteTitlePadding,
     'Title:::max-width': 30%,
     'Title:::white-space': nowrap,
@@ -95,6 +103,8 @@ $noteTitlePadding: h-spacing(3);
   LinkToLearning: (
     _selectors: ('[data-type="note"].link-to-learning'),
     'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
     'Title:::padding-right': $noteTitlePadding,
     'Title:::max-width': 30%,
     'Title:::white-space': nowrap,
@@ -113,6 +123,8 @@ $noteTitlePadding: h-spacing(3);
   ),
   SelfCheck: (
     _selectors: ('[data-type="note"].self-check'),
+    'Container:::margin-top': v-spacing(2),
+    'Container:::margin-bottom': v-spacing(2),
     'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
     'Title:::border-bottom-color': (_ref: "colorMap:::boxedBorderColor"),
     'Title:::color': (_ref: "colorMap:::boxedTitleColor"),
@@ -186,6 +198,7 @@ $noteTitlePadding: h-spacing(3);
   margin-left: 16px;
 }
 
+// Ensure proper scaling
 section:has([data-type=note]) {
   width: 100%;
 }
@@ -234,7 +247,9 @@ section:has([data-type=note]) {
     _selectors: (
       settings('ModuleTitles:::_selectors'),
       '[data-type=unit] > [data-type=page]:not(.introduction)',
-    )
+    ),
+    'H2Title:::margin-top': v-spacing(3),
+    'H3Title:::margin-top': v-spacing(2),
   )
 ));
 
