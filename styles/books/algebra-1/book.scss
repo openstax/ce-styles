@@ -334,9 +334,8 @@ section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-
   width: 100%;
 }
 
-section.numbered-exercises [data-type=exercise] img,
-section.numbered-exercises [data-type=injected-exercise] img {
-  max-width: 100%;
+section.numbered-exercises [data-type=exercise] img {
+  max-width: 95%;
 }
 
 @include add_settings((
@@ -420,14 +419,19 @@ section.numbered-exercises [data-type=injected-exercise] img {
 }
 
 @include add_settings((
-  GenericImageInSection: (
-    _selectors: ('section', 'section > section', 'section > section > section'),
+  GenericImageSized: (
+    _selectors: (
+      'section.numbered-exercises [data-type=exercise]',
+      'section.practice > [data-type=injected-exercise]',
+      'section.practice > [data-type=exercise]',
+      '[data-type="note"][class] > .os-note-body'
+    ),
     ImageInMedia: (
-      margin-left: null,
-      margin-right: null,
-      // Do not overwrite the baseline values here
+      max-height: 2in,
       display: null,
       margin-bottom: null,
+      margin-left: null,
+      margin-right: null,
     ),
   )
 ));
@@ -471,7 +475,7 @@ section.numbered-exercises [data-type=injected-exercise] img {
 @include use('Example', 'corn:::ExampleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 @include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
-@include use('GenericImageInSection', 'corn:::GenericImageShape');
+@include use('GenericImageSized', 'corn:::GenericImageShape');
 @include use('LabeledImage', 'common:::LabeledItem');
 
 // Chapter Intro

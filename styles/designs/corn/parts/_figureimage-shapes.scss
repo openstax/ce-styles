@@ -109,6 +109,9 @@
 // Helper for styling images in random places
 @include create_shape('corn:::GenericImageShape', (
     _components: (
-      $Image--InMedia,
+      map-merge($Image--InMedia, (
+        // A little more generic for this
+        _subselector: ' img'
+      ))
     )
 ));

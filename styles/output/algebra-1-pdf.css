@@ -1050,9 +1050,8 @@ section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-
   width: 100%;
 }
 
-section.numbered-exercises [data-type=exercise] img,
-section.numbered-exercises [data-type=injected-exercise] img {
-  max-width: 100%;
+section.numbered-exercises [data-type=exercise] img {
+  max-width: 95%;
 }
 
 .os-table table.borderless thead > tr > th,
@@ -1431,6 +1430,22 @@ section.check-understanding {
   border-top-style: solid;
   border-bottom-style: solid;
   break-inside: avoid;
+}
+
+section.numbered-exercises [data-type=exercise] img {
+  max-height: 2in;
+}
+
+section.practice > [data-type=injected-exercise] img {
+  max-height: 2in;
+}
+
+section.practice > [data-type=exercise] img {
+  max-height: 2in;
+}
+
+[data-type=note][class] > .os-note-body img {
+  max-height: 2in;
 }
 
 [data-type=exercise] > [data-type=problem] > .os-problem-container > div.half.labeled-image {
