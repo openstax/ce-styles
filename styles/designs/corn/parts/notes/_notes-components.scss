@@ -10,6 +10,7 @@ $Notes--IconCondensed__Container: (
         justify-content: enum('ValueSet:::OPTIONAL'),
         margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
         margin-top: enum('ValueSet:::OPTIONAL'),
+        margin-left: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -77,12 +78,12 @@ $Notes--IconCondensed__Title__Icon: (
     _properties: (
         background: enum('ValueSet:::REQUIRED'),
         background-size: contain,
-        height: 1.45rem,
-        width: 1.45rem,
+        height: (enum('ValueSet:::OPTIONAL'), 1.45rem),
+        width: (enum('ValueSet:::OPTIONAL'), 1.45rem),
         padding-right: h-spacing(1),
         content: "''",
         display: inline-block,
-        vertical-align: text-bottom,
+        vertical-align: (enum('ValueSet:::OPTIONAL'), text-bottom),
     )
 );
 
@@ -97,6 +98,7 @@ $Notes--IconCondensed__Body: (
         margin-left: enum('ValueSet:::OPTIONAL'), //use in notes with note body under title
         display: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
         width: enum('ValueSet:::OPTIONAL'),
+        text-indent: enum('ValueSet:::OPTIONAL'),
     )
 );
 

@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `IconCondensedNoteWithSubtitleShape` for notes in `algebra-1`
 - Add `folio_new` to `corn`
 - Use `folio_new` in `algebra-1`
+- Add `IconCondensedNoteWithoutTitleShape` to `corn`
 
 ## [v2.11.0] - 2025-05-20
 
