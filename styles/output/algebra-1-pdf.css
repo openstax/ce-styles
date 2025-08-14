@@ -1415,6 +1415,28 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-weight: bold;
 }
 
+p.example-title {
+  border-top-width: 0.09rem;
+  border-top-style: solid;
+  border-top-color: #093D4C;
+  margin-bottom: 1.4rem;
+  display: block;
+  box-decoration-break: slice;
+}
+
+p.example-title > :first-child {
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  color: #C6CE33;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #093D4C;
+  display: table;
+  padding: 0.7rem;
+  vertical-align: top;
+}
+
 .os-eos.os-section-exercises-container section {
   margin-bottom: 0;
 }

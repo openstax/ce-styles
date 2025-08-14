@@ -469,6 +469,23 @@ section.numbered-exercises [data-type=exercise] img {
   )
 ));
 
+@include add_settings((
+  ExampleTitlePara: (
+    _selectors: ('p.example-title'),
+    ExampleContainer: (
+      border-top-color: (_ref: 'colorMap:::exampleBorderColor'),
+      border-bottom-width: null,
+      border-bottom-style: null,
+      border-bottom-color: null,
+    ),
+    ExampleTitle: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: (_ref: 'colorMap:::exampleTitleColor'),
+      background-color: (_ref: 'colorMap:::exampleBorderColor'),
+    ),
+  )
+));
+
 @include BorderlessTable();
 @include ImageBaseline();
 @include TextOnlyChapterTitle(
@@ -483,6 +500,7 @@ section.numbered-exercises [data-type=exercise] img {
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
 @include use('Example', 'corn:::ExampleShape');
+@include use('ExampleTitlePara', 'corn:::GenericExampleTitleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
 @include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
 @include use('GenericImageSized', 'corn:::GenericImageShape');
