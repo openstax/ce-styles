@@ -1,9 +1,7 @@
-// Books using those settings: Calculus Vol1, Vol2 and Vol3
-
 @use "../../lib/corn/features/tables";
 
 $PagesWithBands: (
-  (pageName: eoc, firstSelector: '.os-eoc', generalSelector: '.os-eoc'),
+  (pageName: eoc, firstSelector: '[data-type=page]:has(.custom-eoc)', generalSelector: '[data-type=page]:has(.custom-eoc)'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
