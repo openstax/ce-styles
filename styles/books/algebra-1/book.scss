@@ -338,6 +338,10 @@ section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-
   flex-wrap: wrap;
 }
 
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) > p:not(:has([data-type=media])) {
+  width: 100%;
+}
+
 section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container [data-type=media] {
   width: 100%;
 }
