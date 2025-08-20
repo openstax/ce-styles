@@ -315,6 +315,42 @@ section:has([data-type=note]) {
   }
 }
 
+// Add support for custom numbering
+.custom-question-container {
+  display: table;
+}
+
+span.custom-question-number {
+  display: table-cell;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+// Align the ordered list with the other questions
+ol.custom-question-number {
+  list-style: none;
+  margin: 0 !important;
+  counter-set: question 0;
+}
+
+ol.custom-question-number > li {
+  display: table;
+}
+
+ol.custom-question-number > li::before {
+  counter-increment: question;
+  content: counter(question)".";
+  font-weight: bold;
+  padding-right: 10px;
+  display: table-cell;
+}
+
+.custom-numbering {
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 10px;
+}
+
 // Avoid breaks between `p` describing `media`
 section.numbered-exercises, section.practice [data-type=problem] {
   > p:has(+ [data-type=media]) {
