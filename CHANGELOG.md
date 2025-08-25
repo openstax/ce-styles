@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.12.0] - 2025-08-25
+
 - Add `UnitToc` to `corn`
 - Use `UnitToc` in `algebra-1`
 - Style `exercises` differently in `algebra-1` so they are more cohesive
