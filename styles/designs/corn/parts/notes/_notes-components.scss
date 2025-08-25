@@ -7,7 +7,20 @@ $Notes--IconCondensed__Container: (
     _subselector: '',
     _properties: (
         display: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
-        margin-bottom: v-spacing(2),
+        justify-content: enum('ValueSet:::OPTIONAL'),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-top: enum('ValueSet:::OPTIONAL'),
+        margin-left: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
+$Image--InMedia: (
+    _name: "ImageInMedia",
+    _subselector: ' > [data-type="media"] > img',
+    _properties: (
+        margin-left: enum('ValueSet:::OPTIONAL'),
+        margin-right: enum('ValueSet:::OPTIONAL'),
+        width: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -21,6 +34,7 @@ $Notes--IconCondensed__Title: (
         display: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
         white-space: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
         margin-bottom: enum('ValueSet:::OPTIONAL'), //use in notes with note body under title
+        max-width: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -64,12 +78,12 @@ $Notes--IconCondensed__Title__Icon: (
     _properties: (
         background: enum('ValueSet:::REQUIRED'),
         background-size: contain,
-        height: 1.45rem,
-        width: 1.45rem,
+        height: (enum('ValueSet:::OPTIONAL'), 1.45rem),
+        width: (enum('ValueSet:::OPTIONAL'), 1.45rem),
         padding-right: h-spacing(1),
         content: "''",
         display: inline-block,
-        vertical-align: text-bottom,
+        vertical-align: (enum('ValueSet:::OPTIONAL'), text-bottom),
     )
 );
 
@@ -83,6 +97,8 @@ $Notes--IconCondensed__Body: (
         line-height: line-height(0),
         margin-left: enum('ValueSet:::OPTIONAL'), //use in notes with note body under title
         display: enum('ValueSet:::OPTIONAL'), //use in notes with note body next to title
+        width: enum('ValueSet:::OPTIONAL'),
+        text-indent: enum('ValueSet:::OPTIONAL'),
     )
 );
 
@@ -186,7 +202,8 @@ $Notes--Boxed__Container: (
     _name: "Container",
     _subselector: '',
     _properties: (
-        margin-bottom: v-spacing(2),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
+        margin-top: enum('ValueSet:::OPTIONAL'),
     )
 );
 

@@ -1,0 +1,199 @@
+@mixin table-column() {
+  .os-table [data-columns="2"][data-ratio="1,1"] col[data-width="1*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,2"] col[data-width="1*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,2"] col[data-width="2*"] {
+    width: 66.6666666667%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,3"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="2,2"] col[data-width="2*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="1,3"] col[data-width="3*"] {
+    width: 75%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="2,3"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="2,3"] col[data-width="3*"] {
+    width: 60%;
+  }
+
+  .os-table [data-columns="2"][data-ratio="3,2"] col[data-width="3*"] {
+    width: 60%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,1,1"] col[data-width="1*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,1"] col[data-width="2*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,2,2"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="2*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,2"] col[data-width="3*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="1*"] {
+    width: 14.2857142857%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="2,2,3"] col[data-width="1*"] {
+    width: 14.2857142857%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="2,2,3"] col[data-width="2*"] {
+    width: 28.5714285714%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,3,3"] col[data-width="3*"] {
+    width: 42.8571428571%;
+  }
+
+
+  .os-table [data-columns="3"][data-ratio="2,2,3"] col[data-width="3*"] {
+    width: 42.8571428571%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="2,3,3"] col[data-width="1*"] {
+    width: 12.5%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="2,3,3"] col[data-width="2*"] {
+    width: 25%;
+  }
+
+
+  .os-table [data-columns="3"][data-ratio="2,3,3"] col[data-width="3*"] {
+    width: 37.5%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="3,3,3"] col[data-width="3*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="1*"] {
+    width: 5.8823529412%;
+  }
+
+  .os-table [data-columns="3"][data-ratio="1,8,8"] col[data-width="8*"] {
+    width: 47.0588235294%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,1,1"] col[data-width="1*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,1,1"] col[data-width="2*"] {
+    width: 40%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,3,1"] col[data-width="3*"] {
+    width: 50%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="1*"] {
+    width: 16.6666666667%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,1,2,2"] col[data-width="2*"] {
+    width: 33.3333333333%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="1*"] {
+    width: 14.2857142857%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,2,2"] col[data-width="2*"] {
+    width: 28.5714285714%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="1*"] {
+    width: 12.5%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="2,1,3,2"] col[data-width="1*"] {
+    width: 12.5%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="2*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="2,1,3,2"] col[data-width="2*"] {
+    width: 25%;
+  }
+
+  .os-table [data-columns="4"][data-ratio="1,2,3,2"] col[data-width="3*"] {
+    width: 37.5%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,1,1,1,1"] col[data-width="1*"] {
+    width: 20%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="1*"] {
+    width: 11.1111111111%;
+  }
+
+  .os-table [data-columns="5"][data-ratio="1,2,2,2,2"] col[data-width="2*"] {
+    width: 22.2222222222%;
+  }
+  .os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="1*"] {
+    width: 9.0909090909%;
+   }
+
+  .os-table [data-columns="6"][data-ratio="1,2,2,2,2,2"] col[data-width="2*"] {
+    width: 18.1818181818%;
+   }
+}
+
+@mixin distributed-table-images($colCounts, $pageWidth) {
+  @each $cols in $colCounts {
+    .os-table > table:has(tr > td:nth-of-type(#{$cols})):not(:has(tr > td:nth-of-type(#{$cols + 1})))
+    img {
+      max-width: calc($pageWidth / $cols);
+    }
+  }
+}

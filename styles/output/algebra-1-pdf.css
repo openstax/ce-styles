@@ -308,12 +308,12 @@ a {
   font-size: 0.8333333333rem;
 }
 
-.os-eoc.os-chapter-review-container {
+[data-type=page]:has(.custom-eoc) {
   page: eoc;
   prince-page-group: start;
 }
 
-.os-eoc {
+[data-type=page]:has(.custom-eoc) {
   page: eoc;
 }
 
@@ -985,6 +985,172 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
+[data-type=injected-exercise] ol:not(.os-raise-noindent), [data-type=exercise] ol:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+[data-type=injected-exercise] ul:not(.os-raise-noindent), [data-type=exercise] ul:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+section:has([data-type=note]) {
+  width: 100%;
+}
+
+section.practice [data-type=injected-exercise] > [data-type=exercise-stimulus] > ol:not([type=a]) > li::marker,
+section.practice [data-type=injected-exercise] > [data-type=exercise-question] [data-type=question-stem] > ol:not([type=a]) > li::marker {
+  font-weight: bold;
+}
+
+[data-type=exercise-question] > div > div > ol[type=a]:not(.circled):not(.os-stepwise):not(.os-raise-noindent):nth-of-type(2) {
+  margin-left: 40px;
+}
+
+.os-table > table:has(tr > td:nth-of-type(2)):not(:has(tr > td:nth-of-type(3))) img {
+  max-width: 3in;
+}
+
+.os-table > table:has(tr > td:nth-of-type(3)):not(:has(tr > td:nth-of-type(4))) img {
+  max-width: 2in;
+}
+
+.os-table > table:has(tr > td:nth-of-type(4)):not(:has(tr > td:nth-of-type(5))) img {
+  max-width: 1.5in;
+}
+
+.os-table > table:has(tr > td:nth-of-type(5)):not(:has(tr > td:nth-of-type(6))) img {
+  max-width: 1.2in;
+}
+
+.os-table > table:has(tr > td:nth-of-type(6)):not(:has(tr > td:nth-of-type(7))) img {
+  max-width: 1in;
+}
+
+.custom-question-container {
+  display: table;
+}
+
+span.custom-question-number {
+  display: table-cell;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+ol.custom-question-number {
+  list-style: none;
+  margin: 0 !important;
+  counter-set: question 0;
+}
+
+ol.custom-question-number > li {
+  display: table;
+}
+
+ol.custom-question-number > li::before {
+  counter-increment: question;
+  content: counter(question) ".";
+  font-weight: bold;
+  padding-right: 10px;
+  display: table-cell;
+}
+
+.custom-numbering {
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+section.numbered-exercises > p:has(+ [data-type=media]), section.practice [data-type=problem] > p:has(+ [data-type=media]) {
+  break-after: avoid;
+  break-inside: avoid-page;
+}
+
+section.numbered-exercises [data-type=exercise]:has([data-type=problem] .os-problem-container [data-type=media]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem]:has(.os-problem-container [data-type=media]) {
+  display: flex;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) > p:not(:has([data-type=media])) {
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container [data-type=media] {
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] img {
+  max-width: 95%;
+}
+
+.os-table table.borderless thead > tr > th,
+.os-table table.borderless tbody > tr > td {
+  border: none !important;
+}
+
+img {
+  max-width: 4in;
+  max-height: 3in;
+  height: auto;
+  width: auto;
+}
+[data-type=media] > img {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+[data-type=unit] > h1[data-type=document-title] {
+  display: none;
+}
+
+[data-type=chapter] > h1[data-type=document-title] {
+  display: flex;
+  align-items: center;
+  color: #1E7E91;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 2.0736rem;
+  line-height: 2.0736rem;
+  height: 4.29981696rem;
+}
+[data-type=chapter] > h1[data-type=document-title] > .os-number {
+  border-style: solid;
+  border-width: 0.07rem;
+  border-color: #1E7E91;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+[data-type=chapter] > h1[data-type=document-title] > .os-part-text {
+  display: none;
+}
+[data-type=chapter] > h1[data-type=document-title] > .os-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  prince-filter-resolution: 300dpi;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-type=injected-exercise] [data-type=exercise-question] .os-problem-container [data-type=answer-content] > .os-table {
+  display: initial;
+  margin-left: initial;
+  margin-right: initial;
+}
+
+[data-type=exercise-stimulus] > ol:not(.circled):not(.os-stepwise),
+[data-type=exercise-stimulus] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
 :root {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 11px;
@@ -992,6 +1158,10 @@ div[data-type=composite-page].os-eob {
   color: #000000;
   prince-image-resolution: auto, 150dpi;
   prince-background-image-resolution: 200dpi;
+}
+
+[data-type=solution] {
+  display: none;
 }
 
 [data-type=abstract] > h3[data-type=title] {
@@ -1283,12 +1453,70 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-weight: bold;
 }
 
+p.example-title {
+  border-top-width: 0.09rem;
+  border-top-style: solid;
+  border-top-color: #093D4C;
+  margin-bottom: 1.4rem;
+  display: block;
+  box-decoration-break: slice;
+}
+
+p.example-title > :first-child {
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  color: #C6CE33;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #093D4C;
+  display: table;
+  padding: 0.7rem;
+  vertical-align: top;
+}
+
 .os-eos.os-section-exercises-container section {
   margin-bottom: 0;
 }
 
 .os-eoc.os-review-exercises-container section {
   margin-bottom: 0;
+}
+
+section.check-understanding {
+  border-color: #1E7E91;
+  border-width: 1px;
+  padding: 1.4rem 0;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  break-inside: avoid;
+}
+
+section.numbered-exercises [data-type=exercise] img {
+  max-height: 2in;
+}
+
+section.practice > [data-type=injected-exercise] img {
+  max-height: 2in;
+}
+
+section.practice > [data-type=exercise] img {
+  max-height: 2in;
+}
+
+[data-type=note][class] > .os-note-body img {
+  max-height: 2in;
+}
+
+[data-type=exercise] > [data-type=problem] > .os-problem-container > div.half.labeled-image {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+[data-type=exercise] > [data-type=problem] > .os-problem-container > div.half.labeled-image {
+  width: 45%;
 }
 
 .os-chapter-outline {
@@ -1450,10 +1678,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
-[data-type=problem] img {
-  max-width: 100%;
-}
-
 [data-type=problem] > div > ol:not(.circled):not(.os-stepwise) > li > .os-figure:first-child img {
   vertical-align: top;
   display: inline;
@@ -1470,10 +1694,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: top;
   display: inline;
   padding-top: 0.7rem;
-}
-
-[data-type=solution] img {
-  max-width: 100%;
 }
 
 [data-type=solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-figure:first-child img {
@@ -1494,10 +1714,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
-[data-type=exercise-question] img {
-  max-width: 100%;
-}
-
 [data-type=exercise-question] > div > ol:not(.circled):not(.os-stepwise) > li > .os-figure:first-child img {
   vertical-align: top;
   display: inline;
@@ -1514,10 +1730,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: top;
   display: inline;
   padding-top: 0.7rem;
-}
-
-[data-type=question-solution] img {
-  max-width: 100%;
 }
 
 [data-type=question-solution] > div > ol:not(.circled):not(.os-stepwise) > li > .os-figure:first-child img {
@@ -2208,49 +2420,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=chapter] > h1[data-type=document-title] {
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: 14rem;
-  z-index: 2;
-  color: white;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-size: 2.0736rem;
-  line-height: 2.0736rem;
-  max-width: 5.9in;
-  height: 4.29981696rem;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-part-text {
-  display: none;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-text {
-  display: flex;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 8rem;
-  filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
-  prince-filter-resolution: 300dpi;
-  justify-content: center;
-  align-items: center;
-}
-
-[data-type=chapter] > h1[data-type=document-title] > .os-number {
-  border-style: solid;
-  border-width: 0.07rem;
-  border-color: white;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  left: 0;
-  width: 2.8rem;
-  height: 2.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 [data-type=page].introduction .intro-text > h2[data-type=document-title]:first-of-type {
   font-size: 1.728rem;
   margin-bottom: 0.7rem;
@@ -2298,6 +2467,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Roboto Slab, serif, StixGeneral;
   font-size: 1.728rem;
   line-height: 1.5rem;
+  margin-top: 2.1rem;
   margin-bottom: 0.7rem;
 }
 
@@ -2306,6 +2476,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-family: Roboto Slab, serif, StixGeneral;
   font-size: 1.44rem;
   line-height: 1.5rem;
+  margin-top: 1.4rem;
   margin-bottom: 0.7rem;
 }
 
@@ -2347,6 +2518,70 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=chapter] > [data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > section > section > h4[data-type=title] {
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  color: #093D4C;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.4rem;
+  margin-top: 0.7rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) h2[data-type=document-title], h2[data-type=title] {
+  color: #1E7E91;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1.728rem;
+  line-height: 1.5rem;
+  margin-top: 2.1rem;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > section > h3[data-type=title], [data-type=composite-page] h3[data-type=title], [data-type=composite-page] h3[data-type=document-title], section > section > h3[data-type=title] {
+  color: #1E7E91;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > section > section > h4[data-type=title] {
+  font-family: Roboto Slab, serif, StixGeneral;
+  color: #1E7E91;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > section > section > section > h5[data-type=title] {
+  font-family: Roboto Slab, serif, StixGeneral;
+  color: #1E7E91;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > h3[data-type=document-title] {
+  color: #1E7E91;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > h3[data-type=document-title]::before {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMSAyMy44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMSAyMy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzFGN0U5MTt9Cgkuc3Qxe2ZpbGw6IzA5M0Q0Qzt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIxLDIzLjhIMFYwaDIxVjIzLjh6IE0wLjksMjIuOWgxOS4zdi0yMkgwLjlWMjIuOXoiLz4KCTwvZz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMi43LDcuNFY2LjZoLTAuOXYwbC0wLjYsMHYwaC0wLjl2MC44SDYuNHY5LjloOC4yVjcuNEgxMi43eiBNMTEuOCw3LjN2NC44aC0wLjZWNy4zSDExLjh6IE0xMy43LDE2LjRINy4zCgkJVjguMWgzLjF2NC4zbDEuMiwxbDEuMi0xVjguMWgxLjFWMTYuNHoiLz4KPC9nPgo8L3N2Zz4K") no-repeat top left;
+  background-size: contain;
+  height: 2.8rem;
+  width: 2.8rem;
+  display: inline-block;
+  content: '';
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > h3[data-type=document-title] > .os-text {
+  display: inline-block;
+  margin-left: 0.7rem;
+}
+
+[data-type=unit] > [data-type=page]:not(.introduction) > .os-eos.os-section-exercises-container > section > section > h4[data-type=title] {
   font-family: Noto Sans, sans-serif, StixGeneral;
   color: #093D4C;
   font-size: 1.2rem;
@@ -2552,6 +2787,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note]:not([class]) {
   margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
 }
 
 [data-type=note]:not([class]) > .os-title, [data-type=note]:not([class]) [data-type=composite-page] h3[data-type=title] {
@@ -2576,21 +2812,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
+[data-type=note]:not([class]) > .os-note-body > [data-type=media] > img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 3in;
+}
+
 [data-type=note].try {
-  display: table;
-  margin-bottom: 1.4rem;
+  display: flex;
+  margin-bottom: 2.8rem;
+  margin-top: 2.8rem;
 }
 
 [data-type=note].try > .os-title {
   font-size: 1rem;
   line-height: 1.5rem;
   padding-right: 24px;
-  display: table-cell;
   white-space: nowrap;
+  max-width: 15%;
 }
 
 [data-type=note].try > .os-title::before {
-  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMC43MyAyMC43MyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjdlOTE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwOTNkNGM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjAuNzVweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJlLXByZXBhcmVkPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zMi44LDI4LjY1VjQ3LjczSDEzLjcyVjI4LjY1SDMyLjhtLjgzLS44MkgxMi45VjQ4LjU2SDMzLjYzVjI3LjgzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLjkgLTI3LjgzKSIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjYuMzEiIHkxPSIxMC42NiIgeDI9IjkuNzEiIHkyPSIxMy40NCIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjE0LjQyIiB5MT0iNy4yOSIgeDI9IjkuMjIiIHkyPSIxMy40Ii8+PC9zdmc+") no-repeat top left;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNi4yIDE2LjIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2LjIgMTYuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMxRTdFOTE7fQoJLnN0MXtmaWxsOiMwOTNENEM7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNS41LDAuNnYxNC45SDAuNlYwLjZIMTUuNSBNMTYuMiwwSDB2MTYuMmgxNi4yVjBMMTYuMiwweiIvPgoJPC9nPgoJPGc+CgkJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSI2LjcsMTEuNSA2LjIsMTEuMSA5LjIsOC4xIDYuMiw1LjEgNi43LDQuNiAxMC4yLDguMSAJCSIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=") no-repeat top left;
   background-size: contain;
   height: 1.45rem;
   width: 1.45rem;
@@ -2601,38 +2844,48 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note].try > .os-title > .os-title-label {
-  display: none;
-}
-
-[data-type=note].try > .os-title > .os-number {
-  color: #757474;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-weight: normal;
+  color: #093D4C;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 16px;
 }
 
 [data-type=note].try > .os-note-body {
-  color: #757474;
+  color: #000000;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  display: table-cell;
+  width: 85%;
+}
+
+[data-type=note].try > .os-note-body > .os-subtitle {
+  color: #093D4C;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=note].try > .os-note-body > ul:not(.circled):not(.os-stepwise) {
+  list-style-type: none;
 }
 
 [data-type=note].general-strategies {
-  display: table;
-  margin-bottom: 1.4rem;
+  display: flex;
+  margin-bottom: 2.8rem;
+  margin-top: 2.8rem;
 }
 
 [data-type=note].general-strategies > .os-title {
   font-size: 1rem;
   line-height: 1.5rem;
   padding-right: 24px;
-  display: table-cell;
   white-space: nowrap;
+  max-width: 20%;
 }
 
 [data-type=note].general-strategies > .os-title::before {
-  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMC43MyAyMC43MyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjdlOTE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwOTNkNGM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjAuNzVweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJlLXByZXBhcmVkPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zMi44LDI4LjY1VjQ3LjczSDEzLjcyVjI4LjY1SDMyLjhtLjgzLS44MkgxMi45VjQ4LjU2SDMzLjYzVjI3LjgzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLjkgLTI3LjgzKSIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjYuMzEiIHkxPSIxMC42NiIgeDI9IjkuNzEiIHkyPSIxMy40NCIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjE0LjQyIiB5MT0iNy4yOSIgeDI9IjkuMjIiIHkyPSIxMy40Ii8+PC9zdmc+") no-repeat top left;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNS45IDE4LjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE1LjkgMTguNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwOTNENEM7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOCwwTDgsMGwtOCw0LjVMMCw0LjZ2OS4ybDcuOSw0LjZsMC4xLDBsNy45LTQuNmwwLjEsMFY0LjZMOCwweiBNNywxMy40TDEuMywxM2wxLjYtNkw3LDEzLjR6IE0xLjYsNC44bDQtMi4zCglsLTMsMi43TDEuNiw0Ljh6IE0xMyw3bDEuNiw2bC01LjcsMC40TDEzLDd6IE0xMy4zLDUuMmwtMy0yLjdsNCwyLjNMMTMuMyw1LjJ6IE04LDEuN2wzLjksMy42SDRMOCwxLjd6IE0xMi4zLDYuM0w4LDEzTDMuNyw2LjMKCUgxMi4zeiBNMTMuNCwxNC4xTDguNSwxN3YtMi41TDEzLjQsMTQuMXogTTEzLjgsNi4xbDEuMS0wLjV2NC44TDEzLjgsNi4xeiBNMi4xLDYuMUwxLDEwLjRWNS42TDIuMSw2LjF6IE03LjUsMTQuNFYxN2wtNC45LTIuOAoJTDcuNSwxNC40eiIvPgo8L3N2Zz4K") no-repeat top left;
   background-size: contain;
   height: 1.45rem;
   width: 1.45rem;
@@ -2643,38 +2896,48 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note].general-strategies > .os-title > .os-title-label {
-  display: none;
-}
-
-[data-type=note].general-strategies > .os-title > .os-number {
-  color: #757474;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-weight: normal;
+  color: #093D4C;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 16px;
 }
 
 [data-type=note].general-strategies > .os-note-body {
-  color: #757474;
+  color: #000000;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  display: table-cell;
+  width: 80%;
+}
+
+[data-type=note].general-strategies > .os-note-body > .os-subtitle {
+  color: #093D4C;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=note].general-strategies > .os-note-body > ul:not(.circled):not(.os-stepwise) {
+  list-style-type: none;
 }
 
 [data-type=note].mini-lesson-question {
-  display: table;
-  margin-bottom: 1.4rem;
+  display: flex;
+  margin-bottom: 2.8rem;
+  margin-top: 2.8rem;
 }
 
 [data-type=note].mini-lesson-question > .os-title {
   font-size: 1rem;
   line-height: 1.5rem;
   padding-right: 24px;
-  display: table-cell;
   white-space: nowrap;
+  max-width: 30%;
 }
 
 [data-type=note].mini-lesson-question > .os-title::before {
-  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMC43MyAyMC43MyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjdlOTE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwOTNkNGM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjAuNzVweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJlLXByZXBhcmVkPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zMi44LDI4LjY1VjQ3LjczSDEzLjcyVjI4LjY1SDMyLjhtLjgzLS44MkgxMi45VjQ4LjU2SDMzLjYzVjI3LjgzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLjkgLTI3LjgzKSIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjYuMzEiIHkxPSIxMC42NiIgeDI9IjkuNzEiIHkyPSIxMy40NCIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjE0LjQyIiB5MT0iNy4yOSIgeDI9IjkuMjIiIHkyPSIxMy40Ii8+PC9zdmc+") no-repeat top left;
+  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMC43MyAyMC43MyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjdlOTE7fS5jbHMtMntmaWxsOiMwOTNkNGM7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTS44Mi44M0gxOS45VjE5LjkxSC44MlYuODNNMCwwVjIwLjczSDIwLjczVjBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNOS4yLDEyLjg1Yy0uMjgtMiwxLjY4LTMuMzYsMi44MS00LjQ4QzE0LjI1LDUuNTYsOS43Niw0LjQ0LDcuOCw1Ljg0TDcuMjQsNC43MmMzLjA4LTIuMjQsOSwuMjgsNS44OSw0LjIxLS44NC44NC0zLjA5LDItMi41MywzLjkyWk04LjkyLDE1LjFhMSwxLDAsMSwxLDIsMEMxMC44OCwxNi43OCw4LjkyLDE2Ljc4LDguOTIsMTUuMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48L3N2Zz4=") no-repeat top left;
   background-size: contain;
   height: 1.45rem;
   width: 1.45rem;
@@ -2685,38 +2948,48 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note].mini-lesson-question > .os-title > .os-title-label {
-  display: none;
-}
-
-[data-type=note].mini-lesson-question > .os-title > .os-number {
-  color: #757474;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-weight: normal;
+  color: #093D4C;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 16px;
 }
 
 [data-type=note].mini-lesson-question > .os-note-body {
-  color: #757474;
+  color: #000000;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  display: table-cell;
+  width: 70%;
+}
+
+[data-type=note].mini-lesson-question > .os-note-body > .os-subtitle {
+  color: #093D4C;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=note].mini-lesson-question > .os-note-body > ul:not(.circled):not(.os-stepwise) {
+  list-style-type: none;
 }
 
 [data-type=note].link-to-learning {
-  display: table;
-  margin-bottom: 1.4rem;
+  display: flex;
+  margin-bottom: 2.8rem;
+  margin-top: 2.8rem;
 }
 
 [data-type=note].link-to-learning > .os-title {
   font-size: 1rem;
   line-height: 1.5rem;
   padding-right: 24px;
-  display: table-cell;
   white-space: nowrap;
+  max-width: 30%;
 }
 
 [data-type=note].link-to-learning > .os-title::before {
-  background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMC43MyAyMC43MyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjdlOTE7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwOTNkNGM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjAuNzVweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJlLXByZXBhcmVkPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zMi44LDI4LjY1VjQ3LjczSDEzLjcyVjI4LjY1SDMyLjhtLjgzLS44MkgxMi45VjQ4LjU2SDMzLjYzVjI3LjgzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLjkgLTI3LjgzKSIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjYuMzEiIHkxPSIxMC42NiIgeDI9IjkuNzEiIHkyPSIxMy40NCIvPjxsaW5lIGNsYXNzPSJjbHMtMiIgeDE9IjE0LjQyIiB5MT0iNy4yOSIgeDI9IjkuMjIiIHkyPSIxMy40Ii8+PC9zdmc+") no-repeat top left;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjEuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNC4zIDE1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNC4zIDE1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzA5M0Q0Qzt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMS4zLDEzLjggMS4yLDEzLjggMS4yLDEuMiAxMS4zLDEuMiAxMS4zLDIuMiAxMi41LDMuNCAxMi41LDAgMCwwIDAsMTUgMTIuNSwxNSAxMi41LDkuMiAxMS4zLDEwLjMgCgkJCQkJIi8+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMS4zLDkuMyAxNC4zLDYuMyAxMS4zLDMuMyAxMC41LDQuMSAxMi4xLDUuNyA2LjcsNS43IDYuNyw2LjkgMTIuMSw2LjkgMTAuNSw4LjUgCQkiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K") no-repeat top left;
   background-size: contain;
   height: 1.45rem;
   width: 1.45rem;
@@ -2727,21 +3000,89 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 }
 
 [data-type=note].link-to-learning > .os-title > .os-title-label {
-  display: none;
-}
-
-[data-type=note].link-to-learning > .os-title > .os-number {
-  color: #757474;
-  font-family: Roboto Slab, serif, StixGeneral;
-  font-weight: normal;
+  color: #093D4C;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 16px;
 }
 
 [data-type=note].link-to-learning > .os-note-body {
-  color: #757474;
+  color: #000000;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  display: table-cell;
+  width: 70%;
+}
+
+[data-type=note].link-to-learning > .os-note-body > .os-subtitle {
+  color: #093D4C;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=note].link-to-learning > .os-note-body > ul:not(.circled):not(.os-stepwise) {
+  list-style-type: none;
+}
+
+[data-type=note].document {
+  display: flex;
+  margin-bottom: 2.8rem;
+  margin-top: 2.8rem;
+  margin-left: calc(2.5rem + 8px);
+}
+
+[data-type=note].document > .os-note-body {
+  color: #000000;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-indent: calc(-2.5rem - 8px);
+}
+
+[data-type=note].document > .os-note-body > :first-child::before {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMy43NiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxRjdFOTE7fS5jbHMtMntmaWxsOiMwOTNENEM7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5TdW1tYXJ5PC90aXRsZT48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIxLDIzLjc2SDBWMEgyMVpNLjg2LDIyLjg5SDIwLjE0Vi44NkguODZaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTMuNzUsNy43OFY2LjE3SDUuNjFWMTZINy4yNXYxLjYxaDguMTRWNy43OFpNNi4zNiw2LjkySDEzdjguM0g2LjM2Wm04LjI3LDkuOTFIOFYxNmg1Ljc2VjguNTNoLjg4WiIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC4zOCIgeT0iOS4xNSIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC40IiB5PSIxMC43NSIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iOC40IiB5PSIxMi4zNiIgd2lkdGg9IjIuNTkiIGhlaWdodD0iMC42NCIvPjwvZz48L2c+PC9zdmc+Cg==") no-repeat top left;
+  background-size: contain;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding-right: 8px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[data-type=note].self-check {
+  margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+[data-type=note].self-check > .os-title, [data-type=note]:not([class]) [data-type=composite-page] h3[data-type=title] {
+  color: #1E7E91;
+  font-family: Roboto Slab, serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  background-color: #E7EBED;
+  padding: 0.7rem;
+  border-bottom-width: 0.09rem;
+  border-bottom-style: solid;
+  border-bottom-color: #F1F1F1;
+}
+
+[data-type=note].self-check > .os-note-body {
+  color: #093D4C;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #E7EBED;
+  padding: 0.7rem;
+}
+
+[data-type=note].self-check > .os-note-body > [data-type=media] > img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 3in;
 }
 
 [data-type=equation].unnumbered {
@@ -2785,6 +3126,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-spacing: 0;
 }
 
+.os-table:not(.os-unstyled-container) > table > thead > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > table > thead > tr > th {
   color: #FFFFFF;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2794,7 +3139,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table:not(.os-unstyled-container) > table > thead > tr > th:first-child {
@@ -2805,12 +3150,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-right-radius: 0.25rem;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.os-table:not(.os-unstyled-container) > table > tbody > tr > th {
+  color: #FFFFFF;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+  background-color: #0B5B51;
+}
+
 .os-table:not(.os-unstyled-container) > table > tbody > tr > td {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -2872,6 +3233,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-right-radius: 0.25rem;
 }
 
+.os-table:not(.os-unstyled-container) > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
 .os-table:not(.os-unstyled-container) > .os-caption-container {
   display: table-caption;
   caption-side: bottom;
@@ -2926,7 +3291,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table.os-column-header-container > table > thead > tr > th:first-child {
@@ -2942,7 +3307,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 1rem;
@@ -3028,11 +3393,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.7rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
+  background-color: #0B5B51;
 }
 
 .os-table.os-unstyled-container > table > tbody > tr > td {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
+  border-color: #0B5B51;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
@@ -3075,6 +3442,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-spacing: 0;
 }
 
+.os-table.os-data-table-container > table > thead > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
 .os-table.os-data-table-container > table > thead > tr > th {
   color: #FFFFFF;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -3084,7 +3455,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-bottom: 0.16rem;
   padding-right: 0.16rem;
   padding-left: 0.16rem;
-  background-color: #093D4C;
+  background-color: #0B5B51;
 }
 
 .os-table.os-data-table-container > table > thead > tr > th:first-child {
@@ -3095,12 +3466,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-right-radius: 0.25rem;
 }
 
+.os-table.os-data-table-container > table > tbody > tr:first-of-type > th[scope=col]:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr > th {
+  color: #FFFFFF;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
+  padding-right: 0.16rem;
+  padding-left: 0.16rem;
+  background-color: #0B5B51;
+}
+
 .os-table.os-data-table-container > table > tbody > tr > td {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   border-width: 0.09rem;
   border-style: solid;
-  border-color: #757474;
+  border-color: #0B5B51;
   padding-top: 0.16rem;
   padding-bottom: 0.16rem;
   padding-left: 0.16rem;
@@ -3160,6 +3547,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table.os-data-table-container > table > tbody > tr:last-of-type > td:last-child {
   border-bottom-right-radius: 0.25rem;
+}
+
+.os-table.os-data-table-container > table > tbody > tr:last-of-type > th[scope=col]:first-child {
+  border-bottom-left-radius: 0.25rem;
 }
 
 .os-table.os-data-table-container > .os-caption-container {
@@ -3484,6 +3875,173 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+section.numbered-exercises > p > [data-effect=bold] {
+  color: #1E7E91;
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.7rem;
+  font-style: normal;
+}
+
+section.numbered-exercises > p {
+  font-family: Noto Sans, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.7rem;
+}
+
+section.numbered-exercises [data-type=exercise] {
+  margin-bottom: 0.7rem;
+  display: inline-table;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container > p {
+  max-width: 100%;
+  padding-right: 0.7rem;
+  margin-bottom: 0;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 {
+  display: inline-table;
+  margin-bottom: 0.7rem;
+  width: 48%;
+  padding-right: 0.7rem;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
+  margin-right: 8px;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
+  max-width: 100%;
+  padding-right: 0.7rem;
+  margin-bottom: 0;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=injected-exercise] {
+  margin-bottom: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] {
+  display: table;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
+  display: table-cell;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
+  margin-right: 8px;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
+  display: table-cell;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
+  max-width: 100%;
+  padding-right: 0.7rem;
+  margin-bottom: 0;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+  margin-left: 24px;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
+  margin-left: 40px;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-top: 0.7rem;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-inline-list-element {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
+  margin-left: initial;
+}
+
 section.practice > p > [data-effect=bold] {
   color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -3494,23 +4052,21 @@ section.practice > p > [data-effect=bold] {
 }
 
 section.practice > p {
-  color: #1E7E91;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-style: italic;
   margin-top: 0.7rem;
 }
 
 section.practice [data-type=exercise] {
   margin-bottom: 0.7rem;
-  display: inline-table;
-  width: 48%;
+  display: initial;
+  width: initial;
   padding-right: 0.7rem;
 }
 
 section.practice [data-type=exercise] [data-type=problem] {
-  display: table;
+  display: initial;
   overflow-wrap: break-word;
 }
 
@@ -3557,7 +4113,7 @@ section.practice [data-type=exercise].material-set-2 {
 }
 
 section.practice [data-type=exercise].material-set-2 [data-type=problem] {
-  display: table;
+  display: initial;
   overflow-wrap: break-word;
 }
 
@@ -3633,7 +4189,7 @@ section.practice [data-type=injected-exercise] [data-type=exercise-question] .os
 }
 
 section.practice [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
+  margin-left: 40px;
 }
 
 section.practice [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
@@ -3650,7 +4206,7 @@ section.practice [data-type=injected-exercise] [data-type=exercise-question] .os
 }
 
 section.practice [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
-  margin-left: 16px;
+  margin-left: initial;
 }
 
 .os-key-equations-container > section {
@@ -3676,175 +4232,6 @@ section.practice [data-type=injected-exercise][data-is-multipart=True] > [data-t
   border-bottom-width: 0.09rem;
   border-bottom-style: solid;
   border-bottom-color: #F1F1F1;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises > p > [data-effect=bold] {
-  color: #1E7E91;
-  font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 0.7rem;
-  font-style: normal;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises > p {
-  color: #1E7E91;
-  font-family: Noto Sans, sans-serif, StixGeneral;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-style: italic;
-  margin-top: 0.7rem;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] {
-  margin-bottom: 0.7rem;
-  display: inline-table;
-  width: 29%;
-  padding-right: 0.7rem;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] {
-  display: table;
-  overflow-wrap: break-word;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] .os-problem-container > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise] [data-type=problem] .os-problem-container.has-first-inline-list-element {
-  display: table-cell;
-  vertical-align: bottom;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 {
-  display: inline-table;
-  margin-bottom: 0.7rem;
-  width: 48%;
-  padding-right: 0.7rem;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] {
-  display: table;
-  overflow-wrap: break-word;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=exercise].material-set-2 [data-type=problem] .os-problem-container.has-first-inline-list-element {
-  display: table-cell;
-  vertical-align: bottom;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] {
-  margin-bottom: 0.7rem;
-  padding-right: 0.7rem;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] {
-  display: table;
-  overflow-wrap: break-word;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] > .os-divider {
-  margin-right: 8px;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container {
-  display: table-cell;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > p {
-  max-width: 100%;
-  padding-right: 0.7rem;
-  margin-bottom: 0;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
-  margin-left: 24px;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ol:not(.circled):not(.os-stepwise) {
-  margin-left: 24px;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-element {
-  display: table-cell;
-  vertical-align: bottom;
-  padding-top: 0.7rem;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container.has-first-inline-list-element {
-  display: table-cell;
-  vertical-align: bottom;
-  width: 100%;
-}
-
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise][data-is-multipart=True] > [data-type=exercise-question] {
-  margin-left: 16px;
 }
 
 [data-type=composite-chapter].os-eob.os-solutions-container > [data-type=composite-page] {

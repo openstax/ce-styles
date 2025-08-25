@@ -15,3 +15,18 @@ $Module__Section--WithoutMarginBottom:(
         margin-bottom: 0,
     )
 );
+
+$Module__Section--WithBorders:(
+    _name: "ModuleSectionWithBorder",
+    _subselector: "",
+    _properties:(
+        border-color: enum('ValueSet:::OPTIONAL'),
+        border-width: enum('ValueSet:::OPTIONAL'),
+        padding: enum('ValueSet:::OPTIONAL'),
+        border-top-style: enum('ValueSet:::OPTIONAL'),
+        border-left-style: enum('ValueSet:::OPTIONAL'),
+        border-bottom-style: enum('ValueSet:::OPTIONAL'),
+        border-right-style: enum('ValueSet:::OPTIONAL'),
+        break-inside: enum('ValueSet:::OPTIONAL'),
+    )
+);

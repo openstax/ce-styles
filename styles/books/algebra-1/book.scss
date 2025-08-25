@@ -1,7 +1,7 @@
-// Books using those settings: Calculus Vol1, Vol2 and Vol3
+@use "../../lib/corn/features/tables";
 
 $PagesWithBands: (
-  (pageName: eoc, firstSelector: '.os-eoc.os-chapter-review-container', generalSelector: '.os-eoc'),
+  (pageName: eoc, firstSelector: '[data-type=page]:has(.custom-eoc)', generalSelector: '[data-type=page]:has(.custom-eoc)'),
   (pageName: eob, firstSelector: '.os-eob[data-type="composite-chapter"]', generalSelector: '.os-eob'),
   (pageName: appendix, firstSelector: '.appendix', generalSelector: '.appendix'),
 );
@@ -16,9 +16,14 @@ $ChapterIntroType: fullWidth;
 
 //Settings
 
+$pageWidth: 6in;
+$noteTitlePadding: h-spacing(3);
+
 @include add_settings((
   NoClassNote: (
     _selectors: ('[data-type="note"]:not([class])'),
+    'Container:::margin-top': v-spacing(2),
+    'Container:::margin-bottom': v-spacing(2),
     'Title:::background-color': (_ref: "colorMap:::boxedBackgroundColor"),
     'Title:::border-bottom-color': (_ref: "colorMap:::boxedBorderColor"),
     'Title:::color': (_ref: "colorMap:::boxedTitleColor"),
@@ -26,73 +31,200 @@ $ChapterIntroType: fullWidth;
     'Body:::color': (_ref: "colorMap:::boxedTextColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
     'Body:::background-color': (_ref: "colorMap:::boxedBackgroundColor"),
+    'ImageInMedia:::width': 3in,
+    'ImageInMedia:::margin-left': auto,
+    'ImageInMedia:::margin-right': auto,
   ),
   Try: (
     _selectors: ('[data-type="note"].try'),
-    'Container:::display': table,
-    'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Title:::padding-right': $noteTitlePadding,
+    'Title:::max-width': 15%,
     'Title:::white-space': nowrap,
+    'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
+    'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
-    'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
-    'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
-    'TitleIcon:::flex-shrink': 0,
+    'Body:::width': 85%,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-tryit.svg")) no-repeat top left,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   GeneralStrategies: (
     _selectors: ('[data-type="note"].general-strategies'),
-    'Container:::display': table,
-    'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Title:::padding-right': $noteTitlePadding,
+    'Title:::max-width': 20%,
     'Title:::white-space': nowrap,
+    'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
+    'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
-    'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
-    'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
-    'TitleIcon:::flex-shrink': 0,
+    'Body:::width': 80%,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-manipmath.svg")) no-repeat top left,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   MiniLessonQuestion: (
     _selectors: ('[data-type="note"].mini-lesson-question'),
-    'Container:::display': table,
-    'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Title:::padding-right': $noteTitlePadding,
+    'Title:::max-width': 30%,
     'Title:::white-space': nowrap,
+    'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
+    'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
-    'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
-    'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
-    'TitleIcon:::flex-shrink': 0,
+    'Body:::width': 70%,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-question.svg")) no-repeat top left,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
   ),
   LinkToLearning: (
     _selectors: ('[data-type="note"].link-to-learning'),
-    'Container:::display': table,
-    'Title:::display': table-cell,
-    'Title:::padding-right': h-spacing(3),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Title:::padding-right': $noteTitlePadding,
+    'Title:::max-width': 30%,
     'Title:::white-space': nowrap,
+    'TitleLabel:::color': (_ref: "colorMap:::iconCondensedLabelColor"),
+    'TitleLabel:::font-family': (_ref: "typography:::baseFont"),
+    'TitleLabel:::margin-right': h-spacing(2),
     'TitleNumber:::color': (_ref: "colorMap:::iconCondensedTextColor"),
     'TitleNumber:::font-family': (_ref: "typography:::titleFont"),
-    'Body:::color': (_ref: "colorMap:::iconCondensedTextColor"),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
     'Body:::font-family': (_ref: "typography:::baseFont"),
-    'Body:::display': table-cell,
-    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-be-prepared.svg")) no-repeat top left,
-    'TitleIcon:::flex-shrink': 0,
+    'Body:::width': 70%,
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-link.svg")) no-repeat top left,
+    'Subtitle:::color': (_ref: "colorMap:::iconBoxedTextColor"),
+    'Subtitle:::font-family': (_ref: "typography:::titleFont"),
+  ),
+  Document: (
+    _selectors: ('[data-type="note"].document'),
+    'Container:::display': flex,
+    'Container:::margin-top': v-spacing(4),
+    'Container:::margin-bottom': v-spacing(4),
+    'Container:::margin-left': calc(2.5rem + h-spacing(1)),
+    'Body:::color': (_ref: "colorMap:::fontBodyColor"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::text-indent': calc(-2.5rem - h-spacing(1)),
+    'TitleIcon:::background': url(toDataUri("svg+xml", "designs/corn/resources/corn-summary.svg")) no-repeat top left,
+    'TitleIcon:::width': 2.5rem,
+    'TitleIcon:::height': 2.5rem,
+    'TitleIcon:::vertical-align': middle,
+  ),
+  SelfCheck: (
+    _selectors: ('[data-type="note"].self-check'),
+    'Container:::margin-top': v-spacing(2),
+    'Container:::margin-bottom': v-spacing(2),
+    'Title:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
+    'Title:::border-bottom-color': (_ref: "colorMap:::boxedBorderColor"),
+    'Title:::color': (_ref: "colorMap:::boxedTitleColor"),
+    'Title:::font-family': (_ref: "typography:::titleFont"),
+    'Body:::color': (_ref: "colorMap:::boxedTextColor"),
+    'Body:::font-family': (_ref: "typography:::baseFont"),
+    'Body:::background-color': (_ref: "colorMap:::iconBoxedBackgroundColor"),
+    'ImageInMedia:::width': 3in,
+    'ImageInMedia:::margin-left': auto,
+    'ImageInMedia:::margin-right': auto,
   ),
 ));
 
 @include add_settings((
   EverydayExercises: (
-    _selectors: ('section.practice'),
-  ),
-  ReviewExercises: (
-    _selectors: ('.os-eoc.os-review-exercises-container > section.review-exercises'),
+    _selectors: ('section.numbered-exercises'),
+    FirstLevelOrderedList: (
+      margin-left: h-spacing(5),
+    ),
+    ExercisesParagraphTitleItalic: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: null,
+      margin-top: v-spacing(1),
+      font-style: null,
+    ),
+    MultipartQuestionIdent: (
+      margin-left: initial,
+    ),
   ),
 ));
+
+@include add_settings((
+  PracticeExercises: ( // Two Column Exercise Module
+    _selectors: ('section.practice'),
+    FirstLevelOrderedList: (
+      margin-left: h-spacing(5),
+    ),
+    MultipartQuestionIdent: (
+      margin-left: initial,
+    ),
+    ExerciseContainer: (
+      width: initial,
+      display: initial,
+    ),
+    ProblemWrapper: (
+      display: initial,
+    ),
+    ExercisesParagraphTitle: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: (_ref: 'colorMap:::moduleTitleColor'),
+      margin-top: v-spacing(1),
+      font-style: normal,
+    ),
+    ExercisesParagraphTitleItalic: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: null,
+      margin-top: v-spacing(1),
+      font-style: null,
+    ),
+    ProblemSolutionNumber: (
+      color: (_ref: 'colorMap:::fontBodyColor'),
+    ),
+  ),
+));
+
+[data-type=injected-exercise] ol:not(.os-raise-noindent), [data-type=exercise] ol:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+[data-type=injected-exercise] ul:not(.os-raise-noindent), [data-type=exercise] ul:not(.os-raise-noindent) {
+  margin-left: 16px;
+}
+
+// Ensure proper scaling
+section:has([data-type=note]) {
+  width: 100%;
+}
+
+@mixin PracticeQuestionNumbers {
+  section.practice [data-type=injected-exercise] {
+    > [data-type=exercise-stimulus],
+    > [data-type=exercise-question] [data-type=question-stem] {
+      > ol:not([type=a]) > li::marker {
+        @content;
+      }
+    }
+  }
+}
+
+@include PracticeQuestionNumbers {
+  font-weight: bold;
+};
 
 @include add_settings ((
   AnswerKeyExercisesSolutionLists: (
@@ -118,11 +250,299 @@ $ChapterIntroType: fullWidth;
   ),
 ));
 
+@include add_settings((
+  ModuleTitles: (
+    _selectors: (
+      settings('ModuleTitles:::_selectors'),
+      '[data-type=unit] > [data-type=page]:not(.introduction)',
+    ),
+    'H2Title:::margin-top': v-spacing(3),
+    'H3Title:::margin-top': v-spacing(2),
+  )
+));
+
+@include add_settings((
+  ModuleSectionWithBorder: (
+    _selectors: ('section.check-understanding'),
+    ModuleSectionWithBorder: (
+      border-top-style: solid,
+      border-bottom-style: solid,
+      border-color: (_ref: 'colorMap:::moduleTitleColor'),
+      border-width: 1px,
+      padding: v-spacing(2) 0,
+      break-inside: avoid,
+    )
+  )
+));
+
+@include add_settings((
+  BasicTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  ColumnHeader: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  UnnumberedUnstyledTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+  DataTable: (
+    'TableHeadCell:::background-color': (_ref: 'colorMap:::algebra1TableColor'),
+    'TableData:::border-color': (_ref: 'colorMap:::algebra1TableColor'),
+  ),
+));
+
+// For when answers are incorrectly included in questions as first level lists
+[data-type="exercise-question"] > div > div > ol[type="a"]:not(.circled):not(.os-stepwise):not(.os-raise-noindent):nth-of-type(2) {
+  margin-left: h-spacing(5);
+}
+
+@include tables.distributed-table-images((2, 3, 4, 5, 6), $pageWidth);
+
+// We do not want these tables to be centered on the page
+@mixin TableSettings {
+  .os-table {
+    [data-type=injected-exercise]
+    [data-type=exercise-question]
+    .os-problem-container
+    [data-type=answer-content] > & {
+      display: initial;
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+}
+
+// Add support for custom numbering
+.custom-question-container {
+  display: table;
+}
+
+span.custom-question-number {
+  display: table-cell;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+// Align the ordered list with the other questions
+ol.custom-question-number {
+  list-style: none;
+  margin: 0 !important;
+  counter-set: question 0;
+}
+
+ol.custom-question-number > li {
+  display: table;
+}
+
+ol.custom-question-number > li::before {
+  counter-increment: question;
+  content: counter(question)".";
+  font-weight: bold;
+  padding-right: 10px;
+  display: table-cell;
+}
+
+.custom-numbering {
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+// Avoid breaks between `p` describing `media`
+section.numbered-exercises, section.practice [data-type=problem] {
+  > p:has(+ [data-type=media]) {
+    break-after: avoid;
+    break-inside: avoid-page;
+  }
+}
+
+section.numbered-exercises [data-type=exercise]:has([data-type=problem] .os-problem-container [data-type=media]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem]:has(.os-problem-container [data-type=media]) {
+  display: flex;
+  overflow-wrap: break-word;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container:has([data-type=media]) > p:not(:has([data-type=media])) {
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] [data-type=problem] .os-problem-container [data-type=media] {
+  width: 100%;
+}
+
+section.numbered-exercises [data-type=exercise] img {
+  max-width: 95%;
+}
+
+@include add_settings((
+  HiddenElements: (
+    _selectors: ('[data-type=solution]')
+  )
+));
+
+@mixin BorderlessTable {
+  .os-table table.borderless {
+    thead > tr > th,
+    tbody > tr > td {
+      border: none !important;
+    }
+  }
+}
+
+@mixin ImageBaseline {
+  img {
+    max-width: 4in;
+    max-height: 3in;
+    height: auto;
+    width: auto;
+
+    [data-type=media] > & {
+      display: block;
+      margin-bottom: #{v-spacing(2)};
+    }
+  }
+}
+
+@mixin TextOnlyChapterTitle(
+  $mainFontColor,
+  $mainFontFamily,
+  $borderColor,
+  $mainFontSize: font-scale(4)
+) {
+  [data-type=unit] > h1[data-type=document-title] {
+    display: none;
+  }
+
+  [data-type=chapter] > h1[data-type=document-title] {
+    display: flex;
+    align-items: center;
+    color: #{$mainFontColor};
+    font-family: #{$mainFontFamily};
+    font-size: #{$mainFontSize};
+    line-height: #{$mainFontSize};
+    height: font-scale(8);
+
+    > .os-number {
+      border-style: solid;
+      border-width: 0.07rem;
+      border-color: #{$borderColor};
+      text-transform: uppercase;
+      padding: 0.5rem;
+      margin-right: 1rem;
+    }
+
+    > .os-part-text {
+      display: none;
+    }
+
+    > .os-text {
+      font-weight: bold;
+      text-transform: uppercase;
+      prince-filter-resolution: 300dpi;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@mixin SplitMultipart {
+  [data-type=exercise-stimulus] {
+    > ol:not(.circled):not(.os-stepwise),
+    > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+      margin-left: #{h-spacing(3)};
+    }
+  }
+}
+
+@include add_settings((
+  GenericImageSized: (
+    _selectors: (
+      'section.numbered-exercises [data-type=exercise]',
+      'section.practice > [data-type=injected-exercise]',
+      'section.practice > [data-type=exercise]',
+      '[data-type="note"][class] > .os-note-body'
+    ),
+    ImageInMedia: (
+      max-height: 2in,
+      display: null,
+      margin-bottom: null,
+      margin-left: null,
+      margin-right: null,
+    ),
+  )
+));
+
+// Use the global image constraints instead
+@include add_settings((
+  FigureFromExercisesProblem: (
+    'Image:::max-width': null,
+  ),
+  FigureFromExercisesSolution: (
+    'Image:::max-width': null,
+  ),
+  FigureFromInjectedQuestion: (
+    'Image:::max-width': null,
+  ),
+  FigureFromInjectedSolution: (
+    'Image:::max-width': null,
+  ),
+));
+
+@include add_settings((
+  LabeledImage: (
+    _selectors: ('[data-type=exercise] > [data-type=problem] > .os-problem-container > div.half.labeled-image'),
+    'FixedWidth:::width': 45%,
+  )
+));
+
+@include add_settings((
+  ExampleTitlePara: (
+    _selectors: ('p.example-title'),
+    ExampleContainer: (
+      border-top-color: (_ref: 'colorMap:::exampleBorderColor'),
+      border-bottom-width: null,
+      border-bottom-style: null,
+      border-bottom-color: null,
+    ),
+    ExampleTitle: (
+      font-family: (_ref: 'typography:::baseFont'),
+      color: (_ref: 'colorMap:::exampleTitleColor'),
+      background-color: (_ref: 'colorMap:::exampleBorderColor'),
+    ),
+  )
+));
+
+@include BorderlessTable();
+@include ImageBaseline();
+@include TextOnlyChapterTitle(
+  $mainFontColor: settings("colorMap:::boxedTitleColor"),
+  $mainFontFamily: settings("typography:::titleFont"),
+  $borderColor: settings("colorMap:::boxedTitleColor"),
+);
+@include TableSettings();
+@include SplitMultipart();
 @include use('BookRoot', "common:::BookRoot");
+@include use('HiddenElements', 'common:::Hidden');
 @include use('LearningObjectivesNumbered', 'corn:::LearningObjectivesNumberedShape');
 @include use('TocUnit', 'corn:::UnitToc');
 @include use('Example', 'corn:::ExampleShape');
+@include use('ExampleTitlePara', 'corn:::GenericExampleTitleShape');
 @include use('ModuleWithoutTitleLinks','common:::ModuleWithoutTitleLinksShape'); // Used in eoc, eos exercises
+@include use('ModuleSectionWithBorder', 'common:::ModuleSectionWithBorderShape');
+@include use('GenericImageSized', 'corn:::GenericImageShape');
+@include use('LabeledImage', 'common:::LabeledItem');
 
 // Chapter Intro
 @include use('ChapterOutline', 'corn:::ChapterOutlineShape');
@@ -152,7 +572,7 @@ $ChapterIntroType: fullWidth;
 @include use('ListsFromExercises', 'corn:::ListsFromExercisesShape');
 
 //Titles
-@include use('ChapterTitles', 'corn:::ChapterTitlesShape');
+// @include use('ChapterTitles', 'corn:::ChapterTitlesShape');
 @include use('ChapterIntroTitles', 'corn:::ChapterIntroTitlesShape');
 @include use('ModuleTitles', 'corn:::ModuleTitlesShape');
 @include use('CompositeChapterTitles', 'corn:::CompositeChapterTitlesShape');
@@ -161,10 +581,12 @@ $ChapterIntroType: fullWidth;
 
 //Notes
 @include use('NoClassNote', 'corn:::BoxedNoteShape');
-@include use('Try', 'corn:::IconCondensedNoteWithHiddenLabelShape');
-@include use('GeneralStrategies', 'corn:::IconCondensedNoteWithHiddenLabelShape');
-@include use('MiniLessonQuestion', 'corn:::IconCondensedNoteWithHiddenLabelShape');
-@include use('LinkToLearning', 'corn:::IconCondensedNoteWithHiddenLabelShape');
+@include use('Try', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('GeneralStrategies', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('MiniLessonQuestion', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('LinkToLearning', 'corn:::IconCondensedNoteWithSubtitleShape');
+@include use('Document', 'corn:::IconCondensedNoteWithoutTitleShape');
+@include use('SelfCheck', 'corn:::BoxedNoteShape');
 
 //Equations
 @include use('Equation', 'corn:::EquationShape');
@@ -189,12 +611,13 @@ $ChapterIntroType: fullWidth;
 
 //Section Exercises
 @include use('EverydayExercises', 'corn:::ExercisesModuleShape');
+@include use('PracticeExercises', 'corn:::ExercisesModuleShape');
 
 //Key Equations spacing
 @include use('KeyEquations','corn:::ModuleWithUnstyledTableShape');
 
 // EoC Exercises
-@include use('ReviewExercises', 'corn:::ExercisesModuleShape');
+// @include use('ReviewExercises', 'corn:::ExercisesModuleShape');
 
 //EOB
 @include use('AnswerKey', 'corn:::AnswerKeyShape');

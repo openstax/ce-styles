@@ -7,10 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.12.0] - 2025-08-25
+
 - Add `UnitToc` to `corn`
 - Use `UnitToc` in `algebra-1`
+- Style `exercises` differently in `algebra-1` so they are more cohesive
+- Style tables containing figures with 100% width in `algebra-1`
+- Style `th` in `tbody` within `corn`
+- Add `text-only` title support for `algebra-1`
+- Add baseline `max-width` for images in `algebra-1`
+- Visually hide `solutions` in `algebra-1`
+- Add borderless table to `algebra-1`
+- Style unit page titles the same as chapter page titles in `algebra-1`
+- Style `section.numbered-exercises` as `EverydayExercises`
+- Use `IconCondensedNoteWithSubtitleShape` for notes in `algebra-1`
 - Add `folio_new` to `corn`
 - Use `folio_new` in `algebra-1`
+- Add `IconCondensedNoteWithoutTitleShape` to `corn`
+- Add `GenericExampleTitleShape` to `corn`
 
 ## [v2.11.0] - 2025-05-20
 

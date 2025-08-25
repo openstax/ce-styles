@@ -66,3 +66,13 @@
         )),
     )),
   ));
+
+@include create_shape('common:::LabeledItem', (
+  _components: (
+    map-merge($LabelContainer, (
+      _components: (
+        $FixedWidth
+      ),
+    )),
+  )
+));
