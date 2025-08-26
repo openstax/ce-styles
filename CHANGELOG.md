@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [v2.12.1] - 2025-08-26
+
+- Avoid breaks after `example-title` in `algebra-1`
+
 ## [v2.12.0] - 2025-08-25
 
 - Add `UnitToc` to `corn`
