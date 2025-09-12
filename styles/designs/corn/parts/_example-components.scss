@@ -5,12 +5,13 @@ $Example__Container: (
         border-top-width: 0.09rem,
         border-top-style: solid,
         border-top-color: enum('ValueSet:::REQUIRED'),
-        border-bottom-width: 0.09rem,
-        border-bottom-style: solid,
-        border-bottom-color: enum('ValueSet:::REQUIRED'),
+        border-bottom-width: (enum('ValueSet:::OPTIONAL'), 0.09rem),
+        border-bottom-style: (enum('ValueSet:::OPTIONAL'), solid),
+        border-bottom-color: enum('ValueSet:::OPTIONAL'),
         margin-bottom: v-spacing(2),
         display: block,
         box-decoration-break: slice,
+        break-after: enum('ValueSet:::OPTIONAL'), // used in algebra-1
     )
 );
 

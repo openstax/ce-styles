@@ -111,3 +111,22 @@ $CodeSnippet__LineNumbers--Code: (
       text-align: enum('ValueSet:::REQUIRED'),
     )
 );
+
+$FixedWidth: (
+  _name: 'FixedWidth',
+  _subselector: '',
+  _properties: (
+    width: enum('ValueSet:::REQUIRED'),
+  )
+);
+
+$LabelContainer: (
+  _name: 'LabelContainer',
+  _subselector: '',
+  _properties: (
+    display: (enum('ValueSet:::OPTIONAL'), flex),
+    align-items: (enum('ValueSet:::OPTIONAL'), center),
+    padding-right: (enum('ValueSet:::OPTIONAL'), 10px),
+    padding-left: (enum('ValueSet:::OPTIONAL'), 10px),
+  )
+);

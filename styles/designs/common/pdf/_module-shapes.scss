@@ -18,3 +18,14 @@
         )),
     )
 ));
+
+// Use to add borders to sections
+@include create_shape('common:::ModuleSectionWithBorderShape', (
+    _components: (
+      map-merge($Module__Container,(
+            _components:(
+                $Module__Section--WithBorders
+            ),
+        )),
+    )
+));

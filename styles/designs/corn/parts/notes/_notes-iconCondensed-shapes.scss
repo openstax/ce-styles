@@ -55,3 +55,19 @@
         )),
     )
 ));
+
+@include create_shape('corn:::IconCondensedNoteWithoutTitleShape', (
+    _components: (
+        map-merge($Notes--IconCondensed__Container, (
+            _components: (
+                map-merge($Notes--IconCondensed__Body, (
+                    _components: (
+                        map-merge($Notes--IconCondensed__Title__Icon, (
+                            _subselector: ' > :first-child::before'
+                        )),
+                    )
+                ))
+            )
+        )),
+    )
+));

@@ -16,3 +16,15 @@
         )),
     )
 ));
+
+@include create_shape('corn:::GenericExampleTitleShape', (
+    _components: (
+        map-merge($Example__Container, (
+            _components: (
+                map-merge($Example__Title, (
+                    _subselector: ' > :first-child',
+                ))
+            )
+        )),
+    )
+));

@@ -18,7 +18,8 @@ $H1: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(4),
         line-height: line-height(4),
-        margin-bottom: v-spacing(1),
+        margin-top: enum('ValueSet:::OPTIONAL'),
+        margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(1)),
         column-span: all, //used in Index
     )
 );
@@ -138,6 +139,7 @@ $H2: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(3),
         line-height: line-height(3),
+        margin-top: enum('ValueSet:::OPTIONAL'),
         margin-bottom: v-spacing(1),
         column-span: enum('ValueSet:::OPTIONAL'), // used only in Formula Review in Statistics
     )
@@ -184,6 +186,7 @@ $H3: (
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(2),
         line-height: line-height(2),
+        margin-top: enum('ValueSet:::OPTIONAL'),
         margin-bottom: v-spacing(1),
         )
 );
