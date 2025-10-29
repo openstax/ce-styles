@@ -331,6 +331,23 @@ $H3--Objectives: (
   )
 );
 
+$H2--ChapterOutline: (
+    _name: "H2ChapterOutlineTitle",
+    _subselector: ' > h2.os-title',
+    _properties: (
+        margin: "0 0 0.5rem 0",
+        font-size: font-scale(0),
+        line-height: font-scale(0), // value has to be the same as font size
+        font-weight: bold,
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+        position:relative,
+        display: flex,
+        flex-direction: row,
+        text-transform: uppercase,
+    )
+);
+
 $H3--ChapterOutline: (
     _name: "H3ChapterOutlineTitle",
     _subselector: ' > h3.os-title',
