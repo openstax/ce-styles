@@ -1469,7 +1469,25 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-weight: bold;
 }
 
+[data-type=page].introduction .intro-text > section > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
 [data-type=page].introduction .intro-text > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -1617,7 +1635,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-glossary-container > section > section > h4 {
+.os-glossary-container > section > section > h3, .os-glossary-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1625,7 +1643,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-glossary-container > section > section > section > h5 {
+.os-glossary-container > section > section > section > h4, .os-glossary-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1674,7 +1692,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-group-project-container > section > section > h4 {
+.os-group-project-container > section > section > h3, .os-group-project-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1682,7 +1700,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-group-project-container > section > section > section > h5 {
+.os-group-project-container > section > section > section > h4, .os-group-project-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1731,7 +1749,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-chapter-review-container > section > section > h4 {
+.os-chapter-review-container > section > section > h3, .os-chapter-review-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1739,7 +1757,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-chapter-review-container > section > section > section > h5 {
+.os-chapter-review-container > section > section > section > h4, .os-chapter-review-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1788,7 +1806,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-critical-thinking-container > section > section > h4 {
+.os-critical-thinking-container > section > section > h3, .os-critical-thinking-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1796,7 +1814,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-critical-thinking-container > section > section > section > h5 {
+.os-critical-thinking-container > section > section > section > h4, .os-critical-thinking-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1845,7 +1863,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-quantitative-problems-container > section > section > h4 {
+.os-quantitative-problems-container > section > section > h3, .os-quantitative-problems-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1853,7 +1871,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-quantitative-problems-container > section > section > section > h5 {
+.os-quantitative-problems-container > section > section > section > h4, .os-quantitative-problems-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1902,7 +1920,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-references-container > section > section > h4 {
+.os-references-container > section > section > h3, .os-references-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -1910,7 +1928,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-references-container > section > section > section > h5 {
+.os-references-container > section > section > section > h4, .os-references-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -1968,6 +1986,14 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.os-chapter-outline > h2.os-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  font-family: Roboto Condensed, StixGeneral;
+  color: #344456;
 }
 
 .os-chapter-outline > h3.os-title {

@@ -57,6 +57,7 @@ $ChapterIntroType: side;
 @include add_settings((
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
+    'H2ChapterOutlineTitle:::color': (_ref: "colorMap:::neuroscienceIntroColor"),
     'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::neuroscienceIntroColor"),
     'ChapterOutlineContainer:::border-bottom-color': (_ref: "colorMap:::neuroscienceIntroColor"),
     'ChapterObjectiveLink:::font-weight': normal,

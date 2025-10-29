@@ -1215,6 +1215,14 @@ span[data-media~=screenreader] {
   margin-bottom: 1.5rem;
 }
 
+.os-chapter-outline > h2.os-title {
+  margin: 0 0 0.5rem 0;
+  font-family: Archivo, sans-serif, StixGeneral;
+  color: #8B693A;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-family: Archivo, sans-serif, StixGeneral;
@@ -1460,7 +1468,25 @@ span[data-media~=screenreader] {
   font-weight: 600;
 }
 
+[data-type=page].introduction .intro-text > section > section > h3 {
+  color: #C31427;
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
 [data-type=page].introduction .intro-text > section > section > h4 {
+  color: #C31427;
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h4 {
   color: #C31427;
   font-family: Archivo, sans-serif, StixGeneral;
   font-size: 1rem;

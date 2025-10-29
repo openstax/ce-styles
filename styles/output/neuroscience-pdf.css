@@ -980,6 +980,19 @@ div[data-type=composite-page].os-eob {
   box-decoration-break: slice;
 }
 
+.os-chapter-outline > h2.os-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-family: Mulish, sans-serif;
+  color: #0074BC;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
 .os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
@@ -2159,7 +2172,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 600;
 }
 
+[data-type=page].introduction .intro-text > section > section > h3 {
+  color: #0074BC;
+  font-family: Mulish, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
 [data-type=page].introduction .intro-text > section > section > h4 {
+  font-family: Mulish, sans-serif;
+  color: #0074BC;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h4 {
   font-family: Mulish, sans-serif;
   color: #0074BC;
   font-weight: 600;

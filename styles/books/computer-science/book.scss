@@ -24,6 +24,7 @@ $bandColor: #24739E;
 @include add_settings((
   ChapterOutline: (
     _selectors: (".os-chapter-outline"),
+    'H2ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
     'H3ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
   )
 ));

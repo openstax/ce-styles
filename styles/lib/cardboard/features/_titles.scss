@@ -154,13 +154,13 @@
           $font-size: 1.44rem
         )
       }
-      > section > h4 {
-        @include -header-in-body(
+      > section > h3, > section > h4 {
+      @include -header-in-body(
           $color: $h4-color,
           $font-size: 1.2rem
         )
       }
-      > section > section > h5 {
+      > section > section > h4, > section > section > h5 {
         @include -header-in-body(
           $color: colors.$black,
           $font-size: 1rem

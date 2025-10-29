@@ -251,6 +251,18 @@ $H3--Objectives: (
   )
 );
 
+$H2--ChapterOutline: (
+    _name: "H2ChapterOutlineTitle",
+    _subselector: ' > h2.os-title',
+    _properties: (
+        margin: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: font-scale(1),
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+    )
+);
+
 $H3--ChapterOutline: (
     _name: "H3ChapterOutlineTitle",
     _subselector: ' > h3.os-title',
