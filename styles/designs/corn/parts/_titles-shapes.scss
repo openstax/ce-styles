@@ -44,6 +44,15 @@
                         $H3,
                         $H4,
                         $H5,
+                        // HACK: Accessibility
+                        map-merge($Section__Container, (
+                            _subselector: '> section > section > section',
+                            _components: (
+                                map-merge($H4, (
+                                    _subselector: '> h4[data-type=title]'
+                                ))
+                            )
+                        )),
                     )
                 )),
         map-merge($SectionExercises__Container, (
