@@ -13,9 +13,9 @@ $Equation__Container--Numbered: (
   _properties: (
     overflow: 'auto !important',
     width: 100%,
-    display: flex,
+    display: grid,
+    grid-template-columns: '1fr auto 1fr',
     align-items: center,
-    justify-content: space-between,
   ),
 );
 
@@ -23,6 +23,8 @@ $Equation__Number__Container: (
   _name: "EquationNumberContainer",
   _subselector: ' .os-equation-number',
   _properties: (
+    grid-column: 3,
+    justify-self: end,
     width: auto,
     vertical-align: middle,
     margin-left: 1em,
@@ -31,11 +33,10 @@ $Equation__Number__Container: (
 
 $Equation__MathJax: (
   _name: "EquationMathJax",
-  _subselector: ' > .MathJax_Display',
+  _subselector: ' > mjx-container',
   _properties: (
-    min-width: 'auto !important',
-    min-height: 'auto !important',
-    width: 'auto !important',
+    grid-column: 2,
+    justify-self: center,
   ),
 );
 

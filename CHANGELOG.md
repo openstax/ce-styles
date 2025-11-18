@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.15.0] - 2025-11-18
+
+- Update webview equation styles for MathJax 4 compatibility
+- Remove legacy MathJax 2 styles from webview
+
 ## [v2.14.0] - 2025-09-16
 
 - Create styles for `pl-nursing`
