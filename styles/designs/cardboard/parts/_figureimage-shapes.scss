@@ -6,7 +6,15 @@
     _components: (
         map-merge($Figure__Container,(
             _components:(
-                $Figure,
+                map-merge($Figure, (
+                    _components: (
+                        map-merge($Figure--ScaledDown, (
+                            _components: (
+                                $Image,
+                            ),
+                        )),
+                    )
+                )),
                 map-merge($Caption__Container--Figure, (
                     _components: (
                         $Caption__TitleLabel,
