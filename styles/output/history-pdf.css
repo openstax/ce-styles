@@ -2415,19 +2415,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 8px;
 }
 
+.os-eoc.os-glossary-container {
+  -prince-pdf-tag-type: L;
+}
+
 .os-eoc.os-glossary-container > dl {
   text-indent: -24px;
   padding-left: 24px;
+  -prince-pdf-tag-type: Li;
 }
 
 .os-eoc.os-glossary-container > dl > dt {
   display: inline;
   font-weight: bold;
+  -prince-pdf-tag-type: Lbl;
 }
 
 .os-eoc.os-glossary-container > dl > dd {
   display: inline;
   margin-left: 2px;
+  -prince-pdf-tag-type: LBody;
 }
 
 .os-eoc[data-type=composite-page] {

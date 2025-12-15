@@ -3202,20 +3202,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
+.os-glossary-container {
+  -prince-pdf-tag-type: L;
+}
+
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
+  -prince-pdf-tag-type: Li;
 }
 
 .os-glossary-container > dl > dt {
   font-weight: bold;
   padding-right: 8px;
   display: inline;
+  -prince-pdf-tag-type: Lbl;
 }
 
 .os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
+  -prince-pdf-tag-type: LBody;
 }
 
 .os-section-summary-container {

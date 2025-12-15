@@ -1,4 +1,10 @@
-$KeyTerms__Container: empty_wrapper(KeyTermsContainer, '');
+$KeyTerms__Container: (
+    _name: "KeyTermsContainer",
+    _subselector: "",
+    _properties: (
+        -prince-pdf-tag-type: L,
+    ),
+);
 
 $KeyTerms__List:(
     _name: "KeyTermsList",
@@ -6,6 +12,7 @@ $KeyTerms__List:(
     _properties:(
         text-indent: h-spacing(-3),
         padding-left: h-spacing(3),
+        -prince-pdf-tag-type: Li,
     ),
 );
 
@@ -15,6 +22,7 @@ $KeyTerms__Term:(
     _properties:(
         display: inline,
         font-weight: bold,
+        -prince-pdf-tag-type: Lbl,
     )
 );
 
@@ -24,5 +32,6 @@ $KeyTerms__Definition:(
     _properties:(
         display: inline,
         margin-left: 2px,
+        -prince-pdf-tag-type: LBody,
     )
 );
