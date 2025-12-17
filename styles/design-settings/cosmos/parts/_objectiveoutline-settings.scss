@@ -63,6 +63,10 @@
 @include add_settings((
     ChapterOutline: (
         _selectors: (".os-chapter-outline"),
+        H2ChapterOutlineTitle: (
+            font-family: (_ref: "typography:::titleOption1Font"),
+            color: (_ref: "colorMap:::chapterOutlineTitleColor"),
+        ),
         H3ChapterOutlineTitle: (
             font-family: (_ref: "typography:::titleOption1Font"),
             color: (_ref: "colorMap:::chapterOutlineTitleColor"),

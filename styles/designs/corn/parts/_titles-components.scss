@@ -8,6 +8,7 @@ $Preface__Container: empty_wrapper(PrefaceContainer, '.preface');
 $Appendix__Container: empty_wrapper(AppendixContainer, '.appendix');
 $Chapter__Container: empty_wrapper(ChapterWrapper, '');
 $ChapterIntro__Container: empty_wrapper(ChapterIntroContainer, '');
+$Section__Container: empty_wrapper(SectionContainer, '> section');
 
 //h1 titles without numbers (pages like preface)
 $H1: (
@@ -249,6 +250,18 @@ $H3--Objectives: (
     line-height: line-height(1),
     font-weight: bold,
   )
+);
+
+$H2--ChapterOutline: (
+    _name: "H2ChapterOutlineTitle",
+    _subselector: ' > h2.os-title',
+    _properties: (
+        margin: enum('ValueSet:::REQUIRED'),
+        font-size: font-scale(1),
+        line-height: font-scale(1),
+        font-family: enum('ValueSet:::REQUIRED'),
+        color: enum('ValueSet:::REQUIRED'),
+    )
 );
 
 $H3--ChapterOutline: (
