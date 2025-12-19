@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `filter` to `text-shadow` in `corn` for accessibility
 - Change `cosmos` `G1` for 4.5 color contrast accessibility
 - Link color on `noteOption3BodyBackgroundColor` to `#026591` in `cardboard`
+- Chapter objective color to `#058294` in `cardboard`
 
 ## [v2.15.0] - 2025-11-18
 
