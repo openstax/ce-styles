@@ -1957,6 +1957,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 0.7rem;
 }
 
+.guided-slides > .os-note-body a {
+  color: #026591;
+}
+
 .guided-slides > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -2060,6 +2064,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin-bottom: 0.7rem;
 }
 
+.learning-questions > .os-note-body a {
+  color: #026591;
+}
+
 .learning-questions > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -2108,6 +2116,10 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   line-height: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
+}
+
+[data-type=note]:not([class]) > .os-note-body a {
+  color: #026591;
 }
 
 [data-type=note]:not([class]) > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
