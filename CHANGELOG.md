@@ -7,11 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.16.0] - 2026-01-05
+
 - Add `scaled-down` figure to `cardboard` (60% width)
 - Change `filter` to `text-shadow` in `corn` for accessibility
 - Change `cosmos` `G1` for 4.5 color contrast accessibility
 - Link color on `noteOption3BodyBackgroundColor` to `#026591` in `cardboard`
 - Chapter objective color to `#058294` in `cardboard`
+- Tag key terms structures for accesibility
 
 ## [v2.15.0] - 2025-11-18
 
