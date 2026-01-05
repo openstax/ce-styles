@@ -1455,6 +1455,14 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 1.5rem;
 }
 
+.os-chapter-outline > h2.os-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.728rem;
+  line-height: 1.728rem;
+  font-family: Roboto Condensed, StixGeneral;
+  color: #344456;
+}
+
 .os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-size: 1.728rem;
@@ -3160,7 +3168,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
 }
 
+[data-type=page].introduction .intro-text > section > section > h3 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
 [data-type=page].introduction .intro-text > section > section > h4 {
+  color: #24739E;
+  font-family: Noto Sans, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h4 {
   color: #24739E;
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -3217,7 +3243,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-glossary-container > section > section > h4 {
+.os-glossary-container > section > section > h3, .os-glossary-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -3225,7 +3251,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-glossary-container > section > section > section > h5 {
+.os-glossary-container > section > section > section > h4, .os-glossary-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -3274,7 +3300,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-section-summary-container > section > section > h4 {
+.os-section-summary-container > section > section > h3, .os-section-summary-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -3282,7 +3308,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-section-summary-container > section > section > section > h5 {
+.os-section-summary-container > section > section > section > h4, .os-section-summary-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -3331,7 +3357,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-assessment-questions-container > section > section > h4 {
+.os-assessment-questions-container > section > section > h3, .os-assessment-questions-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -3339,7 +3365,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-assessment-questions-container > section > section > section > h5 {
+.os-assessment-questions-container > section > section > section > h4, .os-assessment-questions-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;
@@ -3388,7 +3414,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-references-container > section > section > h4 {
+.os-references-container > section > section > h3, .os-references-container > section > section > h4 {
   color: #24739E;
   font-size: 1.2rem;
   font-family: Noto Sans, StixGeneral;
@@ -3396,7 +3422,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   font-weight: bold;
 }
-.os-references-container > section > section > section > h5 {
+.os-references-container > section > section > section > h4, .os-references-container > section > section > section > h5 {
   color: #000000;
   font-size: 1rem;
   font-family: Noto Sans, StixGeneral;

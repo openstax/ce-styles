@@ -1177,6 +1177,14 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-chapter) > ol {
   margin-bottom: 1.5rem;
 }
 
+.os-chapter-outline > h2.os-title {
+  margin: 0 0 0.5rem 0;
+  font-family: Archivo, sans-serif, StixGeneral;
+  color: #8B693A;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .os-chapter-outline > h3.os-title {
   margin: 0 0 0.5rem 0;
   font-family: Archivo, sans-serif, StixGeneral;
@@ -1623,7 +1631,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: 600;
 }
 
+[data-type=page].introduction .intro-text > section > section > h3 {
+  color: #0074BC;
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
 [data-type=page].introduction .intro-text > section > section > h4 {
+  color: #0074BC;
+  font-family: Archivo, sans-serif, StixGeneral;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+[data-type=page].introduction .intro-text > section > section > section > h4 {
   color: #0074BC;
   font-family: Archivo, sans-serif, StixGeneral;
   font-size: 1rem;

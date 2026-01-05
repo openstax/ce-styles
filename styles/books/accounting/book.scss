@@ -23,6 +23,7 @@ $bandColor: #24739e;
 @include add_settings ((
   ChapterOutlineWithLO: (
     _selectors: (".os-chapter-outline"),
+    'H2ChapterOutlineTitle:::color': (_ref: "colorMap:::chapterOutlineTitleColor"),
     "H3ChapterOutlineTitle:::color": (_ref: "colorMap:::chapterOutlineTitleColor"),
     "ChapterObjectiveLOButton:::background": url(toDataUri("svg+xml", "designs/cardboard/resources/cardboard-lo.svg")) no-repeat bottom left,
   ),
