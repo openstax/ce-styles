@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `cosmos` `G1` for 4.5 color contrast accessibility
 - Link color on `noteOption3BodyBackgroundColor` to `#026591` in `cardboard`
 - Chapter objective color to `#058294` in `cardboard`
-- Tag key terms structures for accesibility
+- Tag key terms structures for accessibility
 - Ensure headers are styled at various levels
 
 ## [v2.15.0] - 2025-11-18
