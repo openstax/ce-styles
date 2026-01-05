@@ -3844,6 +3844,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+.your-turn > .os-note-body a {
+  color: #026591;
+}
+
 .your-turn > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -3892,6 +3896,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
+}
+
+.concepts-practice > .os-note-body a {
+  color: #026591;
 }
 
 .concepts-practice > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
@@ -3944,6 +3952,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+.ifrs-connection > .os-note-body a {
+  color: #026591;
+}
+
 .ifrs-connection > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -3994,6 +4006,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
 }
 
+.continuing-application > .os-note-body a {
+  color: #026591;
+}
+
 .continuing-application > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
   font-family: Noto Sans, StixGeneral;
   font-size: 1.2rem;
@@ -4042,6 +4058,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
+}
+
+.ethical-considerations > .os-note-body a {
+  color: #026591;
 }
 
 .ethical-considerations > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
@@ -4172,6 +4192,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
+}
+
+.think-through > .os-note-body a {
+  color: #026591;
 }
 
 .think-through > .os-note-body > [data-type=exercise] > [data-type=problem] > h4 {
@@ -4662,22 +4686,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-glossary-container {
   margin-bottom: 1.4rem;
+  -prince-pdf-tag-type: L;
 }
 
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
+  -prince-pdf-tag-type: LI;
 }
 
 .os-glossary-container > dl > dt {
   font-weight: bold;
   padding-right: 8px;
   display: inline;
+  -prince-pdf-tag-type: Lbl;
 }
 
 .os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
+  -prince-pdf-tag-type: LBody;
 }
 
 .os-eoc[data-type=composite-page] {

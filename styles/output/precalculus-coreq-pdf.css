@@ -1722,7 +1722,7 @@ section.coreq-skills > section.learning-objectives > ul > li {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 8rem;
-  filter: drop-shadow(0.18rem 0.18rem 0.36rem #000);
+  text-shadow: 0.18rem 0.18rem 0.36rem #000;
   prince-filter-resolution: 300dpi;
   justify-content: center;
   align-items: center;
@@ -4097,20 +4097,27 @@ section.coreq-skills [data-type=injected-exercise][data-is-multipart=True] > [da
   margin-left: 16px;
 }
 
+.os-glossary-container {
+  -prince-pdf-tag-type: L;
+}
+
 .os-glossary-container > dl {
   text-indent: -16px;
   padding-left: 16px;
+  -prince-pdf-tag-type: LI;
 }
 
 .os-glossary-container > dl > dt {
   font-weight: bold;
   padding-right: 8px;
   display: inline;
+  -prince-pdf-tag-type: Lbl;
 }
 
 .os-glossary-container > dl > dd {
   display: inline;
   margin-left: 0px;
+  -prince-pdf-tag-type: LBody;
 }
 
 .os-glossary-container > dl > dd > ul {
