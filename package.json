@@ -4,7 +4,14 @@
   "type": "module",
   "license": "MIT",
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "axe-cli": "^3.2.1",
+    "axe-core": "^4.11.1",
+    "browser-driver-manager": "^2.0.1",
+    "playwright": "^1.57.0",
     "postcss": "^8.3.3",
+    "postcss-selector-parser": "^7.1.1",
+    "prettier": "^3.8.0",
     "stylelint": "^14.5.0",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
@@ -13,7 +20,8 @@
   "scripts": {
     "download-fonts": "./script/download-fonts",
     "lint": "stylelint './styles/**/*.scss'",
-    "compile": "node ./styles/build/build.js"
+    "compile": "node ./styles/build/build.js",
+    "test-bench": "node ./styles/build/test-bench.js"
   },
   "dependencies": {
     "sass-embedded": "^1.77.8"

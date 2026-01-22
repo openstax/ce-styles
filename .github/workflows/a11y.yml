@@ -1,0 +1,33 @@
+name: Check for a11y issues
+
+on:
+  pull_request:
+
+jobs:
+  matches:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install Playwright Browsers
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
+        run: npx playwright install chromium --with-deps
+      
+      - name: Run A11y Audit On PDF Styles
+        run: find styles/output/ -name '*-pdf.css' -exec node script/audit-a11y.js testing styles/output/downloaded-fonts/ {} \+
