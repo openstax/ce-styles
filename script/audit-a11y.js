@@ -314,7 +314,7 @@ const generateSummary = (results, styleName) => {
       });
     });
 
-    markdown += `\n\n> **Note:** Check the "Test for: [selector]" headings in your local \`test-bench.html\` to debug these specific cases.`;
+    markdown += `\n\n> **Note:** Check the "Test for: [selector]" headings in your local test \`index.html\` to debug these specific cases.`;
   }
 
   return markdown.replace(/</g, "&lt;").replace(/>/g, "&gt;");
