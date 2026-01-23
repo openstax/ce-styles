@@ -342,6 +342,15 @@ $Notes--PhotoQuote__Figure: (
     )
 );
 
+$Notes--Link: (
+    _name: "NotesLink",
+    _subselector: ' a',
+    _properties: (
+    color: (
+        enum('ValueSet:::OPTIONAL'), #026591),
+    )
+);
+
 $Notes--PhotoQuote__Blockquote: empty_wrapper(PQBlockquote, ' > blockquote');
 
 $Notes--PhotoQuote__Blockquote__FirstPara: (
