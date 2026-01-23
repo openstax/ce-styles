@@ -41,6 +41,14 @@ $Table__Column: (
 
 $Table__Head: empty_wrapper(TableHead, ' > thead');
 
+$Table__Head--Link: (
+    _name: "TableHeadLink",
+    _subselector: " a",
+    _properties: (
+        color: (enum('ValueSet:::OPTIONAL'), #0232B5)
+    )
+);
+
 $Table__Head__FirstRow__Cell: (
     _name: "TableHeadCellFirstRow",
     _subselector: " > th:not(:only-child)",
