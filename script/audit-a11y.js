@@ -320,7 +320,7 @@ const generateSummary = (results, styleName) => {
   return markdown.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 
-const run = async ({ page }, outputDir, cssFiles) => {
+const run = async ({ page }, tags, outputDir, cssFiles) => {
   let status = 0;
   const summaryPath =
     process.env.GITHUB_STEP_SUMMARY ?? path.resolve(outputDir, "summary.md");
@@ -330,13 +330,12 @@ const run = async ({ page }, outputDir, cssFiles) => {
     const { outputIndex, outputStyle } = buildTestBench(cssFile, outputDir);
     const filePath = `file://${outputIndex}`;
     const styleName = path.basename(cssFile);
-
+    
     await page.goto(filePath);
-
+    
     // 2. Run the audit
-    const results = await new AxeBuilder({ page })
-      .withTags(["wcag2aa", "wcag21aa"])
-      .analyze();
+    const results = await new AxeBuilder({ page }).withTags(tags).analyze();
+    console.log(`Testing with tgs: ${tags.join(", ")}`);
 
     // 3. Process results for the GitHub Summary
     const summary = generateSummary(results, styleName);
@@ -368,6 +367,7 @@ const main = async () => {
 
   try {
     const args = process.argv.slice(2);
+    const tags = args.shift().split(",");
     const outputDir = path.resolve(args.shift());
     const downloadedFontsDir = path.resolve(args.shift());
     const cssFiles = args;
@@ -379,7 +379,7 @@ const main = async () => {
       `${outputDir}/${path.basename(downloadedFontsDir)}`,
       { recursive: true },
     );
-    process.exitCode = await run(ctx, outputDir, cssFiles);
+    process.exitCode = await run(ctx, tags, outputDir, cssFiles);
     console.log(
       "Finished! Check the summary tab in GitHub actions for more details.",
     );
