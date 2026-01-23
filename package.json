@@ -5,8 +5,6 @@
   "license": "MIT",
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
-    "axe-cli": "^3.2.1",
-    "axe-core": "^4.11.1",
     "browser-driver-manager": "^2.0.1",
     "playwright": "^1.57.0",
     "postcss": "^8.3.3",
@@ -21,7 +19,7 @@
     "download-fonts": "./script/download-fonts",
     "lint": "stylelint './styles/**/*.scss'",
     "compile": "node ./styles/build/build.js",
-    "test-bench": "node ./styles/build/test-bench.js"
+    "a11y": "bash ./script/test-a11y"
   },
   "dependencies": {
     "sass-embedded": "^1.77.8"
