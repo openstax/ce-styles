@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+here="$(cd "$(dirname "$0")" && pwd)"
+repo_root="$(cd "$here/.." && pwd)"
+styles_output="$repo_root/styles/output"
+downloaded_fonts="$styles_output/downloaded-fonts"
+audit_script="$repo_root/script/audit-a11y.js"
+test_dir="$repo_root/testing"
+
+find "$styles_output"\
+    \( \
+        -name "*-pdf.css" -or \
+        -name "webview-generic.css" \
+    \) \
+    -exec node "$audit_script" "$test_dir" "$downloaded_fonts" {} \+

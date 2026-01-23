@@ -16,12 +16,41 @@ const getPlaywrightContext = async () => {
 const isTextFriendly = (tag) => {
   return (
     (tag.length === 2 && tag.startsWith("h") && !isNaN(tag[1])) ||
-    ["nav", "li", "a", "td", "div", "th", "dt", "dd", "label", "button", "caption", "figcaption", "summary", "legend"].includes(tag)
+    [
+      "nav",
+      "li",
+      "a",
+      "td",
+      "div",
+      "th",
+      "dt",
+      "dd",
+      "label",
+      "button",
+      "caption",
+      "figcaption",
+      "summary",
+      "legend",
+    ].includes(tag)
   );
 };
 
 const isSelfClosing = (tag) => {
-  return ["img", "input", "br", "hr", "meta", "link", "area", "base", "col", "embed", "source", "track", "wbr"].includes(tag);
+  return [
+    "img",
+    "input",
+    "br",
+    "hr",
+    "meta",
+    "link",
+    "area",
+    "base",
+    "col",
+    "embed",
+    "source",
+    "track",
+    "wbr",
+  ].includes(tag);
 };
 
 const getRequiredAttributes = (tag, existingAttrs) => {
@@ -29,7 +58,8 @@ const getRequiredAttributes = (tag, existingAttrs) => {
 
   if (tag === "img" && !existingAttrs.alt) {
     required.alt = "Sample image";
-    required.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23ddd'/%3E%3C/svg%3E";
+    required.src =
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23ddd'/%3E%3C/svg%3E";
   }
   if (tag === "input" && !existingAttrs.type) {
     required.type = "text";
@@ -82,7 +112,7 @@ const renderObjToHtml = (obj, parentTag = null) => {
   if (obj.children.length > 0) {
     // Check if any children need wrappers
     const childrenNeedingWrappers = obj.children.filter((child) =>
-      needsWrapper(child.tag)
+      needsWrapper(child.tag),
     );
 
     if (childrenNeedingWrappers.length > 0) {
@@ -112,7 +142,10 @@ const renderObjToHtml = (obj, parentTag = null) => {
         }
       }
       if (currentGroup.length > 0) {
-        groups.push({ wrapperInfo: currentWrapperInfo, children: currentGroup });
+        groups.push({
+          wrapperInfo: currentWrapperInfo,
+          children: currentGroup,
+        });
       }
 
       // Render groups, wrapping where needed
@@ -126,7 +159,10 @@ const renderObjToHtml = (obj, parentTag = null) => {
 
             // Check if we need a second level wrapper (e.g., tr needs tbody which needs table)
             const secondLevelWrapper = needsWrapper(wrapperTag);
-            if (secondLevelWrapper && parentTag !== secondLevelWrapper.wrapperTag) {
+            if (
+              secondLevelWrapper &&
+              parentTag !== secondLevelWrapper.wrapperTag
+            ) {
               return `<${secondLevelWrapper.wrapperTag}><${wrapperTag}>${childContent}</${wrapperTag}></${secondLevelWrapper.wrapperTag}>`;
             }
             return `<${wrapperTag}>${childContent}</${wrapperTag}>`;
@@ -247,7 +283,7 @@ const buildHtmlGallery = (root, cssPath) => {
   return htmlGallery;
 };
 
-const handleCssFile = (cssFile, outputDir) => {
+const buildTestBench = (cssFile, outputDir) => {
   const css = fs.readFileSync(cssFile, "utf8");
   const root = postcss.parse(css);
 
@@ -274,14 +310,14 @@ const generateSummary = (results, styleName) => {
       v.nodes.forEach((node) => {
         markdown += `| **${v.impact.toUpperCase()}** | ${v.help} | `;
         markdown += node.target;
-        markdown += " |\n"
-      })
+        markdown += " |\n";
+      });
     });
 
     markdown += `\n\n> **Note:** Check the "Test for: [selector]" headings in your local \`test-bench.html\` to debug these specific cases.`;
   }
 
-  return markdown.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return markdown.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 
 const run = async ({ page }, outputDir, cssFiles) => {
@@ -291,8 +327,9 @@ const run = async ({ page }, outputDir, cssFiles) => {
   fs.rmSync(summaryPath, { force: true });
   for (const cssFile of cssFiles) {
     // 1. Create and load test bench
-    const { outputIndex, outputStyle } = handleCssFile(cssFile, outputDir);
+    const { outputIndex, outputStyle } = buildTestBench(cssFile, outputDir);
     const filePath = `file://${outputIndex}`;
+    const styleName = path.basename(cssFile);
 
     await page.goto(filePath);
 
@@ -302,7 +339,7 @@ const run = async ({ page }, outputDir, cssFiles) => {
       .analyze();
 
     // 3. Process results for the GitHub Summary
-    const summary = generateSummary(results, path.basename(cssFile));
+    const summary = generateSummary(results, styleName);
 
     if (summaryPath) {
       fs.appendFileSync(summaryPath, summary);
@@ -313,10 +350,12 @@ const run = async ({ page }, outputDir, cssFiles) => {
     // 4. Exit with error code if critical/serious issues exist
     const failureCount = results.violations.length;
     if (failureCount > 0) {
-      console.error(`❌ Found ${failureCount} accessibility violations.`);
+      console.error(
+        `❌ ${styleName} - Found ${failureCount} accessibility violations.`,
+      );
       status = 1;
     } else {
-      console.log("✅ No accessibility violations found.");
+      console.log(`✅ ${styleName} - No accessibility violations found.`);
     }
 
     fs.rmSync(outputStyle);
@@ -341,6 +380,9 @@ const main = async () => {
       { recursive: true },
     );
     process.exitCode = await run(ctx, outputDir, cssFiles);
+    console.log(
+      "Finished! Check the summary tab in GitHub actions for more details.",
+    );
   } finally {
     await ctx.browser.close();
   }

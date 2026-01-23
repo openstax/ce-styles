@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  matches:
+  a11y_audit:
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
@@ -30,4 +30,4 @@ jobs:
         run: npx playwright install chromium --with-deps
       
       - name: Run A11y Audit On PDF Styles
-        run: find styles/output/ -name '*-pdf.css' -exec node script/audit-a11y.js testing styles/output/downloaded-fonts/ {} \+
+        run: ./script/test-a11y
