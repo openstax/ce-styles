@@ -39,6 +39,18 @@ To take a book completely from git repo to pdf, you'll need to run a variation o
 
 For additional enki usage, consult [enki's readme](https://github.com/openstax/enki).
 
+## Audit a11y
+
+You can run the a11y audit to detect **some** accessibility issues. It's important to remember that automated accessibility testing is **not perfect**. It is a **cursory** test that will warn about things like color contrast, etc. In its current state, it **probably detects around 20-30% of all accessibility issues**.
+
+You can set the tags it tests in the [wrapper](./script/test-a11y). Keep in mind that the HTML generated from the css is a little broken, so some tests will yield false positives.
+
+You can run this test with `yarn a11y` or `yarn run a11y` (whichever).
+
+The test also runs when you make a PR on the styles repository. It generates a summary of the results which you can see in [summary.md](./testing/summary.md) locally, or in the summary on the GitHub action.
+
+Unless we can figure out a way to map back to the scss, perhaps with source maps and some clever tricks, you will need to search for the associated components/shapes yourself to fix the issues.
+
 # Important Links
  - [CE  Team Confluence Documentation](https://openstax.atlassian.net/wiki/spaces/CE/overview)
  - [How to Release CE Styles](https://openstax.atlassian.net/l/c/TjrhH68R)
