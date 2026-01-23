@@ -335,8 +335,6 @@ const run = async ({ page }, tags, outputDir, cssFiles) => {
     
     // 2. Run the audit
     const results = await new AxeBuilder({ page }).withTags(tags).analyze();
-    console.log(`Testing with tgs: ${tags.join(", ")}`);
-
     // 3. Process results for the GitHub Summary
     const summary = generateSummary(results, styleName);
 
@@ -379,6 +377,7 @@ const main = async () => {
       `${outputDir}/${path.basename(downloadedFontsDir)}`,
       { recursive: true },
     );
+    console.log(`Testing with tags: ${tags.join(", ")}`);
     process.exitCode = await run(ctx, tags, outputDir, cssFiles);
     console.log(
       "Finished! Check the summary tab in GitHub actions for more details.",

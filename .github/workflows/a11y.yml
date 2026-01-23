@@ -18,7 +18,7 @@ jobs:
 
       - name: Cache Playwright Browsers
         id: cache-playwright
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('yarn.lock') }}
@@ -32,3 +32,10 @@ jobs:
       
       - name: Run A11y Audit On PDF Styles
         run: ./script/test-a11y
+
+      - name: Save Playwright Browsers Cache                                                             
+        if: always() && steps.cache-playwright.outputs.cache-hit != 'true'                               
+        uses: actions/cache/save@v4                                                                      
+        with:                                                                                            
+          path: ~/.cache/ms-playwright                                                                   
+          key: ${{ runner.os }}-playwright-${{ hashFiles('yarn.lock') }}                                 
