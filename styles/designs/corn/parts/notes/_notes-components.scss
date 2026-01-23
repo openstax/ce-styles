@@ -171,6 +171,14 @@ $Notes--IconBoxed__Title__Label: (
     )
 );
 
+$Notes--Link: (
+    _name: "NotesLink",
+    _subselector: ' a',
+    _properties: (
+        color: (enum('ValueSet:::OPTIONAL'), #0270A1),
+    )
+);
+
 $Notes--IconBoxed__Body: (
     _name: "Body",
     _subselector: ' > .os-note-body',
