@@ -17,6 +17,7 @@ jobs:
           node-version: 22
 
       - name: Cache Playwright Browsers
+        id: cache-playwright
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
