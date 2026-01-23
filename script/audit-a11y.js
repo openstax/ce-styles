@@ -360,15 +360,27 @@ const run = async ({ page }, tags, outputDir, cssFiles) => {
   return status;
 };
 
+const readStdin = async () => {
+  const chunks = [];
+  for await (const chunk of process.stdin) {
+    chunks.push(chunk);
+  }
+  return Buffer.concat(chunks).toString("utf8").trim();
+};
+
 const main = async () => {
   const ctx = await getPlaywrightContext();
 
   try {
     const args = process.argv.slice(2);
-    const tags = args.shift().split(",");
-    const outputDir = path.resolve(args.shift());
-    const downloadedFontsDir = path.resolve(args.shift());
-    const cssFiles = args;
+    const tags = args[0].split(",");
+    const outputDir = path.resolve(args[1]);
+    const downloadedFontsDir = path.resolve(args[2]);
+
+    // Read CSS files from stdin
+    const stdinContent = await readStdin();
+    const cssFiles = stdinContent.split("\n").filter((line) => line.trim());
+
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
