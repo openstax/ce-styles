@@ -2172,6 +2172,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 25%;
 }
 
+.os-table.os-top-titled-container > table > thead a {
+  color: #0232B5;
+}
+
 .os-table.os-top-titled-container > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:not(:only-child) {
   color: #344456;
   font-family: Noto Sans, StixGeneral;
@@ -4103,6 +4107,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   background-color: #F2F2F2;
   padding: 0.7rem;
+}
+
+.link-to-learning > .os-note-body a {
+  color: #026591;
 }
 
 [data-type=note] > ul:not([data-labeled-item=true]) {

@@ -1452,6 +1452,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 25%;
 }
 
+.os-table.os-top-titled-container > table > thead a {
+  color: #0232B5;
+}
+
 .os-table.os-top-titled-container > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:not(:only-child) {
   color: #344456;
   font-family: Noto Sans, StixGeneral;
@@ -2016,6 +2020,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table col[data-width="1*"] {
   width: 25%;
+}
+
+.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead a {
+  color: #0232B5;
 }
 
 .os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container):not(.os-text-heavy-container):not(.os-timeline-table-container):not(.os-data-table-container) > table > thead > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > th:not(:only-child) {
@@ -3010,6 +3018,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   background-color: #F2F2F2;
   padding: 0.7rem;
+}
+
+.link-to-learning > .os-note-body a {
+  color: #026591;
 }
 
 .mac-tip {

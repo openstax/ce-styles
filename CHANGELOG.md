@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add link styling to examples in `cardboard` (color: #026591)
+- Add link styling to table headers in `cardboard` (color: #0232B5)
+- Add link styling to boxed notes in `cardboard`
+- Add link styling to notes in `corn` (color: #0270A1)
+- Add link styling to notes in `cosmos` (color: #026591)
+- Add `text-shadow` to chapter numbers in `corn` for accessibility
+- Change various other colors for accessibility (more details in Google Sheets)
+
 
 ## [v2.16.0] - 2026-01-05
 
