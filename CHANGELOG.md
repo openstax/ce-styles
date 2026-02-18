@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Use `#914700` for `brown-code` for accessibility
 
 ## [v2.16.1] - 2026-02-04
 
