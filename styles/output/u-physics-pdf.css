@@ -1817,6 +1817,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-top: 0.7rem;
 }
 
+.problem-solving > .os-note-body a {
+  color: #026591;
+}
+
 .problem-solving > .os-note-body > .os-subtitle {
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -1858,6 +1862,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0.7rem;
   box-decoration-break: slice;
   text-transform: uppercase;
+}
+
+[data-type=note]:not([class]) > .os-note-body a {
+  color: #026591;
 }
 
 [data-type=note]:not([class]) > .os-note-body > .os-subtitle, h4[data-type=title] {
