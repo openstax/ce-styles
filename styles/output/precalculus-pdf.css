@@ -130,15 +130,15 @@ div.handbook {
   page-break-inside: avoid;
 }
 
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   page-break-after: avoid;
 }
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-number,
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-text {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-number,
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-text {
   page-break-after: avoid;
 }
 
-.os-chapter-outline > div.os-chapter-objective > div.learning-objective {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > div.learning-objective {
   page-break-inside: auto;
 }
 
@@ -1606,7 +1606,13 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   color: #1E7A8F;
 }
 
-.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.os-chapter-outline > ul.os-chapter-objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   display: inline-block;
   text-decoration: none;
   color: #248194;
@@ -1616,7 +1622,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-left-color: #F1F1F1;
 }
 
-.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-text {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-text {
   color: black;
 }
 
