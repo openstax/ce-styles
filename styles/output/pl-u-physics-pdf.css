@@ -1252,15 +1252,15 @@ nav#toc > ol > .os-toc-index > a::after {
   margin-bottom: 0;
 }
 
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) {
+[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) > li {
+[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li {
   max-width: 5.9in;
 }
 
-[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true]) > li::marker {
+[data-type=page] > [data-type=abstract] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li::marker {
   color: #00819A;
 }
 
@@ -1850,16 +1850,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 8px;
 }
 
-[data-type=example] > .body > ul:not([data-labeled-item=true]) {
+[data-type=example] > .body > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=example] > .body > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=example] > .body > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=example] > .body > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -2982,16 +2982,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3052,23 +3052,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3077,24 +3077,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3103,7 +3103,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3164,23 +3164,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3189,24 +3189,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3215,7 +3215,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3276,23 +3276,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3301,24 +3301,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3327,21 +3327,21 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3374,30 +3374,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3430,30 +3430,30 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > div > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3472,7 +3472,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=problem] > ul:not([data-labeled-item=true]) {
+[data-type=problem] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3480,25 +3480,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ol {
   margin-left: 32px;
 }
 
@@ -3521,7 +3521,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=problem] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > ol > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3529,16 +3529,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3557,7 +3557,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=exercise-question] > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3565,25 +3565,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ol {
   margin-left: 32px;
 }
 
@@ -3606,7 +3606,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=exercise-question] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > ol > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3614,16 +3614,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3642,16 +3642,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ol {
+.os-table > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3670,7 +3670,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=solution] > ul:not([data-labeled-item=true]) {
+[data-type=solution] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3678,25 +3678,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ol {
   margin-left: 32px;
 }
 
@@ -3719,7 +3719,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=solution] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > ol > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3727,16 +3727,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3755,7 +3755,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=question-solution] > ul:not([data-labeled-item=true]) {
+[data-type=question-solution] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3763,25 +3763,25 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=question-solution] > div > ul:not([data-labeled-item=true]) {
+[data-type=question-solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=question-solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=question-solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > div > ul:not([data-labeled-item=true]) {
+[data-type=question-solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=question-solution] > div > ul:not([data-labeled-item=true]) > li > div > ol {
+[data-type=question-solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > div > ol {
   margin-left: 32px;
 }
 
@@ -3804,7 +3804,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=question-solution] > div > ol > li > div > ul:not([data-labeled-item=true]) {
+[data-type=question-solution] > div > ol > li > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
@@ -3812,16 +3812,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 32px;
 }
 
-[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=question-solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=question-solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3840,16 +3840,16 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
@@ -3868,23 +3868,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 32px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ul > li::before {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3893,24 +3893,24 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul {
   padding-left: 24px;
   list-style-type: none;
   position: relative;
   margin-bottom: 0;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ul > li::before {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ul > li::before {
   font-size: 6px;
   content: '▪';
   display: inline-block;
@@ -3919,7 +3919,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   vertical-align: middle;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
   margin-bottom: 0;
 }

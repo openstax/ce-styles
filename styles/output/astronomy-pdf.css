@@ -1189,7 +1189,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   background-color: #EAEAEA;
 }
 
-[data-type=example] > .body > ul:not([data-labeled-item=true]) {
+[data-type=example] > .body > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1728,7 +1728,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-width: 0.08rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > tr:not(:first-child):not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > tr:not(:first-child):not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1774,7 +1774,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1877,7 +1877,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .gray-shading > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .gray-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1927,7 +1927,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .purple-shading > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .purple-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1977,7 +1977,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .yellow-shading > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container) > table > tbody > .yellow-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2298,7 +2298,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-width: 0.08rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr:not(:first-child):not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-titled-container > table > tbody > tr:not(:first-child):not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2344,7 +2344,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-titled-container > table > tbody > tr:first-child:not(.gray-shading):not(.yellow-shading):not(.purple-shading) > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2447,7 +2447,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > .gray-shading > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-titled-container > table > tbody > .gray-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2497,7 +2497,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > .purple-shading > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-titled-container > table > tbody > .purple-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2547,7 +2547,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-top-width: 0.08rem;
 }
 
-.os-table.os-top-titled-container > table > tbody > .yellow-shading > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-titled-container > table > tbody > .yellow-shading > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3480,15 +3480,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3524,27 +3524,27 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > div > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3552,23 +3552,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -3592,23 +3592,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -3632,15 +3632,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3656,15 +3656,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3680,7 +3680,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3688,15 +3688,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=composite-page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3712,15 +3712,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=composite-page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3736,7 +3736,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > div > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > section > section > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3744,15 +3744,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -3768,23 +3768,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul > li > ul {
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul > li > ul {
   margin-left: 16px;
 }
 
-[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol > li > ol {
+[data-type=composite-page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol > li > ol {
   margin-left: 24px;
 }
 
@@ -3808,15 +3808,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -3832,15 +3832,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -3856,7 +3856,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=note] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=note] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
