@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `.red-text` color from `#CC0000` to `#B30000` in `cardboard` and `webview` for accessibility (WCAG AA contrast compliance)
 - Update `R1` color variable from `#CC0000` to `#B30000` in `cardboard` design settings and lib
 - Update `darkRed2` color variable from `#CC0000` to `#B30000` in `webview` design settings and lib
+- Change `.os-number` color to `#003D66` in TOC components for `cardboard` design for accessibility (WCAG AA contrast compliance on osbooks-pl-marketing)
 
 ## [v2.16.1] - 2026-02-04
 
