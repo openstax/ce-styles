@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ensure `CircledListsFromMultiColumnsExercises` lists in os-solutions-container are styled in `corn`
 - Use `#914700` for `brown-code` for accessibility
 - Use `#F9F9F9` background for `SelfCheck` in algebra-1
+- Make chapter objectives lists instead of dividers
+- Change `.red-text` color from `#CC0000` to `#B30000` in `cardboard` and `webview` for accessibility (WCAG AA contrast compliance)
+- Update `R1` color variable from `#CC0000` to `#B30000` in `cardboard` design settings and lib
+- Update `darkRed2` color variable from `#CC0000` to `#B30000` in `webview` design settings and lib
 
 ## [v2.16.1] - 2026-02-04
 

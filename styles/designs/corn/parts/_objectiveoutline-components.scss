@@ -23,7 +23,16 @@ $ChapterOutline__Container: (
     )
 );
 
-$ChapterObjective__Container: empty_wrapper(ChapterObjectiveContainer, ' > div.os-chapter-objective');
+$ChapterObjective__List: (
+    _name: "ChapterObjectiveList",
+    _subselector: ' > ul.os-chapter-objectives',
+    _properties: (
+        list-style: none,
+        margin: 0,
+        padding: 0
+    )
+);
+$ChapterObjective__Container: empty_wrapper(ChapterObjectiveContainer, ' > li.os-chapter-objective');
 
 $ChapterObjective__Link: (
     _name: "ChapterObjectiveLink",

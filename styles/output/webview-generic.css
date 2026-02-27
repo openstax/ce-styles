@@ -1611,8 +1611,10 @@ blockquote {
   padding-left: 0rem;
 }
 
-.introduction > .intro-body .os-chapter-outline ul {
-  margin-top: 0;
+.introduction > .intro-body .os-chapter-outline > ul.os-chapter-objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .os-eob.os-reference-container .os-chapter-area [data-type=solution] p {
@@ -1811,7 +1813,7 @@ p.student-sample {
 }
 
 *:not(.os-term) > .red-text {
-  color: #CC0000;
+  color: #B30000;
 }
 
 *:not(.os-term) > .cyan-text {
