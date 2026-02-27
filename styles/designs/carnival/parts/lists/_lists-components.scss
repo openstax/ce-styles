@@ -5,7 +5,7 @@ $ListElementContainer: empty_wrapper(LiContainer, ' > li');
 // Basic Lists
 $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
-    _subselector: ' > ul:not([data-labeled-item="true"])',
+    _subselector: ' > ul:not([data-labeled-item="true"], .os-chapter-objectives)',
     _properties:(
         margin-left: h-spacing(4),
     )

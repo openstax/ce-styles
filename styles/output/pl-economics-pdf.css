@@ -133,15 +133,15 @@ div.handbook {
   page-break-inside: avoid;
 }
 
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   page-break-after: avoid;
 }
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-number,
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-text {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-number,
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-text {
   page-break-after: avoid;
 }
 
-.os-chapter-outline > div.os-chapter-objective > div.learning-objective {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > div.learning-objective {
   page-break-inside: auto;
 }
 
@@ -936,7 +936,7 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0;
 }
 
-[data-type=page] [data-type=note].learning-objectives > .os-note-body > ul:not([data-labeled-item=true]) {
+[data-type=page] [data-type=note].learning-objectives > .os-note-body > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1134,7 +1134,7 @@ nav#toc > ol > li.os-toc-chapter > ol.os-chapter > li > a::after {
   font-family: IBM Plex Serif, serif, StixGeneral;
 }
 
-[data-type=note].economics.chapter-objectives > .os-note-body > ul:not([data-labeled-item=true]) {
+[data-type=note].economics.chapter-objectives > .os-note-body > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1899,11 +1899,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+.os-table:not(.os-text-heavy-top-titled-container):not(.os-unstyled-container) > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2266,11 +2266,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding-right: 0.7rem;
 }
 
-.os-table.os-top-captioned-container > table > tbody > tr > td > ul:not([data-labeled-item=true]) {
+.os-table.os-top-captioned-container > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-table.os-top-captioned-container > table > tbody > tr > td > ul:not([data-labeled-item=true]) > li > ul {
+.os-table.os-top-captioned-container > table > tbody > tr > td > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2527,15 +2527,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2551,15 +2551,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2575,15 +2575,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2599,15 +2599,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2623,7 +2623,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > div > div > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2631,15 +2631,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2655,15 +2655,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=page] > section > section > section > section > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
@@ -2679,15 +2679,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2703,15 +2703,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=note] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=note] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2727,7 +2727,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=problem] > ul:not([data-labeled-item=true]) {
+[data-type=problem] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2735,15 +2735,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=problem] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2759,15 +2759,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=problem] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2783,7 +2783,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=exercise-question] > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2791,15 +2791,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=exercise-question] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2815,15 +2815,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=exercise-question] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2839,7 +2839,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=solution] > ul:not([data-labeled-item=true]) {
+[data-type=solution] > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2847,15 +2847,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=solution] > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
@@ -2871,15 +2871,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ol {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ol {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > div > ul:not([data-labeled-item=true]) > li > ul {
+[data-type=solution] > div > div > ul:not([data-labeled-item=true], .os-chapter-objectives) > li > ul {
   margin-left: 16px;
 }
 
