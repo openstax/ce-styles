@@ -2103,7 +2103,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 8rem;
-  text-shadow: 0.18rem 0.18rem 0.36rem #000;
+  color: #ffffff;
+  padding: 0.4rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
   prince-filter-resolution: 300dpi;
   justify-content: center;
   align-items: center;
@@ -2112,10 +2114,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 [data-type=chapter] > h1[data-type=document-title] > .os-number {
   border-style: solid;
   border-width: 0.07rem;
-  border-color: white;
-  text-shadow: 0.18rem 0.18rem 0.36rem #000;
+  color: #ffffff;
+  padding: 0.4rem;
+  background: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
-  padding: 0.5rem;
   left: 0;
   width: 2.8rem;
   height: 2.8rem;
@@ -2447,6 +2449,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note].theorem a {
+  color: #0270A1;
+}
+
 [data-type=note].theorem > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2478,6 +2484,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.09rem;
   border-bottom-style: solid;
   border-bottom-color: #F1F1F1;
+}
+
+[data-type=note].problem-solving a {
+  color: #0270A1;
 }
 
 [data-type=note].problem-solving > .os-note-body {
@@ -2591,6 +2601,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note]:not([class]) a {
+  color: #0270A1;
+}
+
 [data-type=note]:not([class]) > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2598,10 +2612,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   background-color: #F4F7F4;
   padding: 0.7rem;
-}
-
-[data-type=note]:not([class]) > .os-note-body a {
-  color: #0270A1;
 }
 
 .media-2 {
