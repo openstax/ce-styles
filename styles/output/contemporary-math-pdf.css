@@ -1549,7 +1549,9 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 8rem;
-  text-shadow: 0.18rem 0.18rem 0.36rem #000;
+  color: #ffffff;
+  padding: 0.4rem 1.5rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 85%, rgba(0, 0, 0, 0) 100%);
   prince-filter-resolution: 300dpi;
   justify-content: center;
   align-items: center;
@@ -1559,9 +1561,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-style: solid;
   border-width: 0.07rem;
   border-color: white;
-  text-shadow: 0.18rem 0.18rem 0.36rem #000;
+  color: #ffffff;
+  padding: 0.4rem 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
-  padding: 0.5rem;
   left: 0;
   width: 2.8rem;
   height: 2.8rem;
@@ -1893,6 +1896,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note].work-out a {
+  color: #0270A1;
+}
+
 [data-type=note].work-out > .os-note-body {
   color: #80004C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -1911,6 +1918,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note].who-knew {
   margin-bottom: 1.4rem;
+}
+
+[data-type=note].who-knew a {
+  color: #0270A1;
 }
 
 [data-type=note].who-knew > .os-title {
@@ -1953,10 +1964,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-[data-type=note].who-knew > .os-note-body a {
-  color: #0270A1;
-}
-
 [data-type=note].who-knew > .os-note-body > h4.os-subtitle {
   color: #093D4C;
   font-family: Roboto Slab, serif, StixGeneral;
@@ -1968,6 +1975,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note].tech-check {
   margin-bottom: 1.4rem;
+}
+
+[data-type=note].tech-check a {
+  color: #0270A1;
 }
 
 [data-type=note].tech-check > .os-title {
@@ -2010,10 +2021,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-[data-type=note].tech-check > .os-note-body a {
-  color: #0270A1;
-}
-
 [data-type=note].tech-check > .os-note-body > h4.os-subtitle {
   color: #1E7A8F;
   font-family: Roboto Slab, serif, StixGeneral;
@@ -2025,6 +2032,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=note].people-mathematics {
   margin-bottom: 1.4rem;
+}
+
+[data-type=note].people-mathematics a {
+  color: #0270A1;
 }
 
 [data-type=note].people-mathematics > .os-title {
@@ -2065,10 +2076,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-[data-type=note].people-mathematics > .os-note-body a {
-  color: #0270A1;
-}
-
 [data-type=note].people-mathematics > .os-note-body > h4.os-subtitle {
   color: #092d23;
   font-family: Roboto Slab, serif, StixGeneral;
@@ -2080,6 +2087,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 .your-turn {
   margin-bottom: 1.4rem;
+}
+
+.your-turn a {
+  color: #0270A1;
 }
 
 .your-turn > .os-title {
@@ -2126,10 +2137,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0.7rem;
 }
 
-.your-turn > .os-note-body a {
-  color: #0270A1;
-}
-
 .your-turn > .os-note-body > h4.os-subtitle {
   color: #093D4C;
   font-family: Roboto Slab, serif, StixGeneral;
@@ -2156,6 +2163,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note]:not([class]) a {
+  color: #0270A1;
+}
+
 [data-type=note]:not([class]) > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2163,10 +2174,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   line-height: 1.5rem;
   background-color: #F4F7F4;
   padding: 0.7rem;
-}
-
-[data-type=note]:not([class]) > .os-note-body a {
-  color: #0270A1;
 }
 
 .video {
@@ -2275,6 +2282,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note].definition a {
+  color: #0270A1;
+}
+
 [data-type=note].definition > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2306,6 +2317,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-width: 0.09rem;
   border-bottom-style: solid;
   border-bottom-color: #F1F1F1;
+}
+
+[data-type=note].formula a {
+  color: #0270A1;
 }
 
 [data-type=note].formula > .os-note-body {
