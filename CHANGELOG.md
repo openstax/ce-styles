@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `#914700` for `brown-code` for accessibility
 - Add link styling to notes in `carnival` (default color: #026591)
 - Change folio color in `carnival` to `#767676` for 4.5 color contrast
+- Make chapter objectives lists instead of dividers
+- Change `.red-text` color from `#CC0000` to `#B30000` in `cardboard` and `webview` for accessibility (WCAG AA contrast compliance)
+- Update `R1` color variable from `#CC0000` to `#B30000` in `cardboard` design settings and lib
+- Update `darkRed2` color variable from `#CC0000` to `#B30000` in `webview` design settings and lib
 
 ## [v2.16.1] - 2026-02-04
 

@@ -4,7 +4,7 @@ $ListContainer: empty_wrapper(Container, '');
 // Basic Lists
 $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
-    _subselector: ' > ul:not([data-labeled-item="true"])',
+    _subselector: ' > ul:not([data-labeled-item="true"], .os-chapter-objectives)',
     _properties:(
         margin-left: enum("ValueSet:::REQUIRED"),
     )
