@@ -149,7 +149,7 @@ div.handbook { // Selector used in American Government
 }
 
 //Module titles in chapter objective
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   page-break-after: avoid;
   > .os-number,
   > .os-text {
@@ -159,7 +159,7 @@ div.handbook { // Selector used in American Government
 
 //allow learning objectives in the chapter outline to break across page
 //without this, the you can get weird breaks of the chapter title and splash when there are a lot of learning objectives
-.os-chapter-outline > div.os-chapter-objective > div.learning-objective {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > div.learning-objective {
   page-break-inside: auto;
 }
 

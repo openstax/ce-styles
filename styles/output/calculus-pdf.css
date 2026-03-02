@@ -130,15 +130,15 @@ div.handbook {
   page-break-inside: avoid;
 }
 
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   page-break-after: avoid;
 }
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-number,
-.introduction > .intro-body > .os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-text {
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-number,
+.introduction > .intro-body > .os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-text {
   page-break-after: avoid;
 }
 
-.os-chapter-outline > div.os-chapter-objective > div.learning-objective {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > div.learning-objective {
   page-break-inside: auto;
 }
 
@@ -1131,7 +1131,7 @@ nav#toc > ol > li > ol > li > a::after {
   padding-bottom: 0.7rem;
 }
 
-[data-type=example] > .body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=example] > .body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1179,7 +1179,13 @@ nav#toc > ol > li > ol > li > a::after {
   color: #1E7A8F;
 }
 
-.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective {
+.os-chapter-outline > ul.os-chapter-objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective {
   display: inline-block;
   text-decoration: none;
   color: #248194;
@@ -1189,7 +1195,7 @@ nav#toc > ol > li > ol > li > a::after {
   border-left-color: #F1F1F1;
 }
 
-.os-chapter-outline > div.os-chapter-objective > a.os-chapter-objective > .os-text {
+.os-chapter-outline > ul.os-chapter-objectives > li.os-chapter-objective > a.os-chapter-objective > .os-text {
   color: black;
 }
 
@@ -1434,15 +1440,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-top: 1rem;
 }
 
-[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1458,23 +1464,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=page] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > div > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1490,7 +1496,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1498,15 +1504,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1522,15 +1528,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1546,15 +1552,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1570,7 +1576,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1578,15 +1584,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1602,15 +1608,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=page] > section > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1626,15 +1632,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1650,7 +1656,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc[data-type=composite-page] > section > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1658,15 +1664,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1682,15 +1688,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > section > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1706,15 +1712,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+.os-eoc[data-type=composite-page] > div > div > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1744,15 +1750,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: 8px;
 }
 
-.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-stepwise > li > .os-stepwise-content > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li {
+.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li {
   color: #1E7A8F;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
@@ -1762,11 +1768,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) > li {
+.os-eos > section > section > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) > li {
   color: #1E7A8F;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
@@ -1776,15 +1782,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -1804,15 +1810,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -1836,11 +1842,11 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=note]:not(.media-2):not(.media-notitle):not(.chapter-objectives) > .os-note-body > div > div > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1856,7 +1862,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=problem] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=problem] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1864,15 +1870,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=problem] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1888,15 +1894,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=problem] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -1912,7 +1918,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=exercise-question] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=exercise-question] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1920,15 +1926,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=exercise-question] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -1944,15 +1950,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=exercise-question] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -1968,7 +1974,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -1976,15 +1982,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2000,15 +2006,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -2024,7 +2030,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 16px;
 }
 
-[data-type=question-solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=question-solution] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2032,15 +2038,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
-[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=question-solution] > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
@@ -2056,15 +2062,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 24px;
 }
 
-[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
-[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ol:not(.circled):not(.os-stepwise) {
+[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ol:not(.circled):not(.os-stepwise) {
   margin-left: 24px;
 }
 
-[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) > li > ul:not(.circled):not(.os-stepwise) {
+[data-type=question-solution] > div > div > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) > li > ul:not(.circled):not(.os-stepwise) {
   margin-left: 16px;
 }
 
@@ -2747,7 +2753,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2759,7 +2765,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: left;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=left] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2771,7 +2777,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: right;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=right] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -2783,7 +2789,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table:not(.os-unstyled-container) > table > tbody > tr > td[data-align=center] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3061,7 +3067,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-.os-table.os-data-table-container > table > tbody > tr > td > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table.os-data-table-container > table > tbody > tr > td > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3073,7 +3079,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: left;
 }
 
-.os-table.os-data-table-container > table > tbody > tr > td[data-align=left] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table.os-data-table-container > table > tbody > tr > td[data-align=left] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3085,7 +3091,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: right;
 }
 
-.os-table.os-data-table-container > table > tbody > tr > td[data-align=right] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table.os-data-table-container > table > tbody > tr > td[data-align=right] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3097,7 +3103,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-align: center;
 }
 
-.os-table.os-data-table-container > table > tbody > tr > td[data-align=center] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-table.os-data-table-container > table > tbody > tr > td[data-align=center] > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3590,7 +3596,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-eos.os-section-exercises-container > section.section-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eos.os-section-exercises-container > section.section-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 
@@ -3784,7 +3790,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-bottom: 0;
 }
 
-.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true]) {
+.os-eoc.os-review-exercises-container > section.review-exercises [data-type=injected-exercise] [data-type=exercise-question] .os-problem-container > ul:not(.circled):not(.os-stepwise):not([data-labeled-item=true], .os-chapter-objectives) {
   margin-left: 24px;
 }
 

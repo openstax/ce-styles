@@ -73,9 +73,13 @@
             _components: (
                 $H2--ChapterOutline,
                 $H3--ChapterOutline,
-                map-merge($ChapterObjective__Container, (
+                map-merge($ChapterObjective__List, (
                     _components: (
-                        $ChapterObjective__Link,
+                        map-merge($ChapterObjective__Container, (
+                            _components: (
+                                $ChapterObjective__Link,
+                            )
+                        )),
                     )
                 )),
             )

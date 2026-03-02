@@ -76,20 +76,24 @@
 
 @include create_shape('corn:::ChapterOutlineShape', (
     _components: (
-        map-merge($ChapterOutline__Container, (
+      map-merge($ChapterOutline__Container, (
+        _components: (
+          $H2--ChapterOutline,
+          $H3--ChapterOutline,
+          map-merge($ChapterObjective__List, (
             _components: (
-                $H2--ChapterOutline,
-                $H3--ChapterOutline,
-                map-merge($ChapterObjective__Container, (
+              map-merge($ChapterObjective__Container, (
+                _components: (
+                  map-merge($ChapterObjective__Link,(
                     _components: (
-                        map-merge($ChapterObjective__Link,(
-                            _components: (
-                                $ChapterObjective__Text,
-                            ),
-                        )),
-                    )
-                )),
+                      $ChapterObjective__Text,
+                    ),
+                  )),
+                )
+              ))
             )
-        )),
+          )),
+        )
+      )),
     )
 ));

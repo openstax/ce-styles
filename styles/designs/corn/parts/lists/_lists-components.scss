@@ -23,7 +23,7 @@ $SectionWrapper--FirstLevelNoBottomMargin: (
 // Basic Lists
 $UnorderedList--FirstLevel: (
     _name: "FirstLevelUnorderedList",
-    _subselector: ' > ul:not(.circled):not(.os-stepwise):not([data-labeled-item="true"])',
+    _subselector: ' > ul:not(.circled):not(.os-stepwise):not([data-labeled-item="true"], .os-chapter-objectives)',
     _properties:(
         margin-left: (enum('ValueSet:::OPTIONAL'), h-spacing(3)),
     )
