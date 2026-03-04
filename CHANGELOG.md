@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Ensure `CircledListsFromMultiColumnsExercises` lists in os-solutions-container are styled in `corn`
 - Use `#914700` for `brown-code` for accessibility
+- Use `#F9F9F9` background for `SelfCheck` in algebra-1
 - Add link styling to notes in `carnival` (default color: #026591)
 - Change folio color in `carnival` to `#767676` for 4.5 color contrast
 - Make chapter objectives lists instead of dividers
