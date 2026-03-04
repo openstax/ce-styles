@@ -2832,6 +2832,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note]:not([class]) a {
+  color: #0270A1;
+}
+
 [data-type=note]:not([class]) > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -2846,10 +2850,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: auto;
   width: 3in;
   max-height: initial;
-}
-
-[data-type=note]:not([class]) > .os-note-body a {
-  color: #0270A1;
 }
 
 [data-type=note].try {
@@ -3104,6 +3104,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   border-bottom-color: #F1F1F1;
 }
 
+[data-type=note].self-check a {
+  color: #0270A1;
+}
+
 [data-type=note].self-check > .os-note-body {
   color: #093D4C;
   font-family: Noto Sans, sans-serif, StixGeneral;
@@ -3118,10 +3122,6 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-right: auto;
   width: 2in;
   max-height: initial;
-}
-
-[data-type=note].self-check > .os-note-body a {
-  color: #0270A1;
 }
 
 [data-type=equation].unnumbered {
