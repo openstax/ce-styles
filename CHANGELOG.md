@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Do not add link href after link for for `data-bare-link`
+- Add link styling to alternate-shading tables in `carnival` (color: #026591) for accessibility
+- Change `blueTextColor` and `nursingTableColor` from `#0074BC` to `#0071B8` in `carnival` for accessibility
 - Ensure `CircledListsFromMultiColumnsExercises` lists in os-solutions-container are styled in `corn`
 - Use `#914700` for `brown-code` for accessibility
 - Use `#F9F9F9` background for `SelfCheck` in algebra-1
