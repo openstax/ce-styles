@@ -367,6 +367,14 @@ $Table__Strong: (
     )
 );
 
+$Table__Link: (
+    _name: "TableLink",
+    _subselector: ' a',
+    _properties: (
+        color: (enum('ValueSet:::OPTIONAL'), #026591),
+    )
+);
+
 $Table__Column--NotLastChild: (
     _name: "TableColumnNotLastChild",
     _subselector: " col:not(:last-child)",
