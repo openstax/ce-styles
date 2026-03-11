@@ -4,6 +4,7 @@
     _components: (
         map-merge($Notes--IconBoxed__Container, (
             _components: (
+                $Notes--Link,
                 map-merge($Notes--IconBoxed__Title, (
                     _components: (
                         $Notes--IconBoxed__Title__Icon,
@@ -12,7 +13,6 @@
                 )),
                 map-merge($Notes--IconBoxed__Body, (
                     _components: (
-                        $Notes--Link,
                         $Notes--IconBoxed__Subtitle,
                     )
                 )),
