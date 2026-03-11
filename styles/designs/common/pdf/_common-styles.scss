@@ -1,4 +1,4 @@
-a[href^="http"]::after {
+a[href^="http"]:not([data-bare-link])::after {
   content: " (" attr(href) ")";
   overflow-wrap: break-word;
 }
