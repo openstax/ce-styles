@@ -298,6 +298,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 .os-eoc.os-glossary-container {
   page: eoc;
   prince-page-group: start;
@@ -999,19 +1007,6 @@ a[role=doc-noteref] {
   top: -0.7em;
   text-decoration: none;
   padding-right: 0.16rem;
-}
-
-span[data-media~=screenreader] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-  opacity: 0;
 }
 
 nav#toc > .os-toc-title {

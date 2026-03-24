@@ -308,6 +308,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 [data-type=page]:has(.custom-eoc) {
   page: eoc;
   prince-page-group: start;
