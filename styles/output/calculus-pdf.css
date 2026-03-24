@@ -2111,7 +2111,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   margin-left: 8rem;
   color: #ffffff;
   padding: 0.4rem 1.5rem;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 85%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
   prince-filter-resolution: 300dpi;
   justify-content: center;
   align-items: center;
@@ -2680,21 +2680,23 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.7rem;
-  position: relative;
   flex-direction: row;
 }
 
 [data-type=equation]:not(.unnumbered) > .os-equation-number {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  flex-shrink: 0;
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: bold;
   color: #1E7A8F;
-  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+}
+
+[data-type=equation]:not(.unnumbered) > *:not(.os-equation-number) {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
 }
 
 .os-table:not(.os-unstyled-container) {

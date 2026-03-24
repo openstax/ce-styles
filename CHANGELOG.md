@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix wide SVG equations overlapping equation numbers in `corn` by making number a flex sibling instead of absolutely positioned
+- Improve color contrast on titles in `corn`
+
 ## [v2.17.0] - 2026-03-11
 
 - Do not add link href after link for `data-bare-link`

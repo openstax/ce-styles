@@ -15,15 +15,22 @@ $Equation__Number: (
     _name: "EquationNumber",
     _subselector: " > .os-equation-number",
     _properties: (
-        position: absolute,
-        right: 0,
-        top: 50%,
-        transform: translate(0, -50%),
+        flex-shrink: 0,
         font-family: enum('ValueSet:::REQUIRED'),
         font-size: font-scale(0),
         line-height: line-height(0),
         font-weight: bold,
         color: enum('ValueSet:::REQUIRED'),
-        margin-right: v-spacing(1),
+        margin-left: v-spacing(1),
     )
 );
+
+$Equation__Equation: (
+    _name: "EquationEquation",
+    _subselector: " > *:not(.os-equation-number)",
+    _properties: (
+        flex: 1,
+        min-width: 0,
+        text-align: center,
+    )
+)
