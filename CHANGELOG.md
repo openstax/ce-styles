@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix folio text color contrast on unit opener pages in `marketing` (white text on dark blue background)
+- Fix link contrast on unit opener pages in `marketing` by updating `unitOpenerBackgroundLightColor` to white
+
 ## [v2.17.0] - 2026-03-11
 
 - Do not add link href after link for `data-bare-link`
