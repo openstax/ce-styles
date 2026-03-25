@@ -3527,7 +3527,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0 0 0 2.2rem;
 }
 
-.os-eoc.os-references-container > section.references > [data-type=note] a {
+.os-eoc.os-references-container > section.references > [data-type=note] a:not([data-bare-link]) {
   text-decoration: none;
   position: relative;
   left: -0.8rem;
