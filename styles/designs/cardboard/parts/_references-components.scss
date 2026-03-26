@@ -37,7 +37,8 @@ $References__Number: (
 
 $References__Link: (
     _name: "ReferencesLink",
-    _subselector: ' a',
+    // Excludes bare URL links (data-bare-link) which are full-width and would overflow a zero-width box
+    _subselector: ' a:not([data-bare-link])',
     _properties:(
         text-decoration: none,
         position: relative,
