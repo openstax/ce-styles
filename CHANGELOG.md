@@ -8,9 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Exclude bare links from `ReferencesLink` in `cardboard`
-- Fix wide SVG equations overlapping equation numbers in `corn` by making number a flex sibling instead of absolutely positioned
 - Fix wide MathML SVGs in answer key overflowing past page banding in `corn` by adding `table-layout: fixed` and `max-width: 100%` to solution areas
-- Improve color contrast on titles in `corn`
 
 ## [v2.17.0] - 2026-03-11
 
