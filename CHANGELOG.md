@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use `-prince-expansion-text` to replace screenreader spans
 - Exclude bare links from `ReferencesLink` in `cardboard`
+- Fix link contrast in `FigureSplashShape` in `carnival`
 
 ## [v2.17.0] - 2026-03-11
 

@@ -156,3 +156,11 @@ $Caption__Number:(
         color: enum('ValueSet:::REQUIRED'),
     )
 );
+
+$Link--Caption: (
+  _name: "CaptionLink",
+  _subselector: ' a',
+  _properties: (
+    color: (enum('ValueSet:::OPTIONAL'), #026591),
+  )
+);
