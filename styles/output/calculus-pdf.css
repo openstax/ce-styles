@@ -3840,8 +3840,10 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-chapter].os-eob.os-solutions-container > [data-type=composite-page] > .os-solution-area {
   display: table;
+  table-layout: fixed;
   margin-bottom: 1.4rem;
   width: 100%;
+  max-width: 100%;
 }
 
 [data-type=composite-chapter].os-eob.os-solutions-container > [data-type=composite-page] > .os-solution-area > span.os-note-number {

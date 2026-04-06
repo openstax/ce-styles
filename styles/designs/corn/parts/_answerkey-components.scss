@@ -22,8 +22,10 @@ $AnswerKey__SolutionArea: (
   _subselector: " > .os-solution-area",
   _properties:(
      display: table,
+     table-layout: fixed,
      margin-bottom: (enum('ValueSet:::OPTIONAL'), v-spacing(2)),
      width: 100%,
+     max-width: 100%,
   )
 );
 
@@ -40,8 +42,10 @@ $AnswerKey__ModuleReset: (
   _subselector: " > .os-module-reset-solution-area",
   _properties:(
      display: table,
+     table-layout: fixed,
      margin-bottom: v-spacing(2),
      width: 100%,
+     max-width: 100%,
   )
 );
 
