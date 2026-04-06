@@ -51,11 +51,12 @@
 ));
 
 // differs from Hidden by hiding elements visually but not from screenreaders
-@include create_shape('common:::VisuallyHiddenShape', (
-  _components: (
-    $VisuallyHidden,
-  ),
-));
+// COMPLETELY BREAKS PRINCE TAGGING. DO NOT USE!!! ONLY LEAVING HERE AS A WARNING
+// @include create_shape('common:::VisuallyHiddenShape', (
+//   _components: (
+//     $VisuallyHidden,
+//   ),
+// ));
 
 @include create_shape('common:::CodeSnippetLineNumbersShape', (
   _components: (
