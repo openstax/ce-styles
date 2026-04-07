@@ -965,6 +965,19 @@ div[data-type=composite-page].os-eob {
   margin-bottom: 0.8in;
   margin-top: 0.8in;
 }
+@page unit:left {
+  @top-left-corner {
+    color: #ffffff;
+  }
+  @bottom-left {
+    color: #ffffff;
+  }
+}
+@page unit:right {
+  @top-right-corner {
+    color: #ffffff;
+  }
+}
 :root {
   font-family: Noto Sans, StixGeneral;
   font-size: 12px;
@@ -1324,7 +1337,7 @@ nav#toc > ol > li.os-toc-composite-chapter > ol {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   border-top-right-radius: 135px;
   position: relative;
   top: 2.2in;
