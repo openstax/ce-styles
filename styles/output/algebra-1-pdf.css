@@ -308,6 +308,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 [data-type=page]:has(.custom-eoc) {
   page: eoc;
   prince-page-group: start;
@@ -4288,8 +4296,10 @@ section.practice [data-type=injected-exercise][data-is-multipart=True] > [data-t
 
 [data-type=composite-chapter].os-eob.os-solutions-container > [data-type=composite-page] > .os-solution-area {
   display: table;
+  table-layout: fixed;
   margin-bottom: 1.4rem;
   width: 100%;
+  max-width: 100%;
 }
 
 [data-type=composite-chapter].os-eob.os-solutions-container > [data-type=composite-page] > .os-solution-area > span.os-note-number {

@@ -308,6 +308,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 .os-eoc.os-chapter-review-container {
   page: eoc;
   prince-page-group: start;
@@ -1180,19 +1188,6 @@ a[role=doc-noteref] {
   vertical-align: baseline;
   top: -0.7em;
   padding-right: 0.16rem;
-}
-
-span[data-media~=screenreader] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-  opacity: 0;
 }
 
 [data-type=equation].unnumbered {
@@ -4304,20 +4299,26 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
 
 [data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area {
   display: table;
+  table-layout: fixed;
   margin-bottom: 1.4rem;
   width: 100%;
+  max-width: 100%;
 }
 
 [data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-module-reset-solution-area > .os-solution-area {
   display: table;
+  table-layout: fixed;
   margin-bottom: 1.4rem;
   width: 100%;
+  max-width: 100%;
 }
 
 [data-type=composite-chapter].os-eob.os-solution-container > [data-type=composite-page] > .os-solution-area {
   display: table;
+  table-layout: fixed;
   margin-bottom: 1.4rem;
   width: 100%;
+  max-width: 100%;
 }
 
 .os-eob [data-type=solution] {

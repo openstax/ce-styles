@@ -298,6 +298,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 .os-eoc .os-chapter-summary-container {
   page: eoc;
   prince-page-group: start;
@@ -5017,7 +5025,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0 0 0 2.2rem;
 }
 
-.os-eoc.os-references-container > section.references > [data-type=note] a {
+.os-eoc.os-references-container > section.references > [data-type=note] a:not([data-bare-link]) {
   text-decoration: none;
   position: relative;
   left: -0.8rem;
@@ -5034,7 +5042,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   padding: 0 0 0 2.2rem;
 }
 
-.appendix > section.references > [data-type=note] a {
+.appendix > section.references > [data-type=note] a:not([data-bare-link]) {
   text-decoration: none;
   position: relative;
   left: -0.8rem;
