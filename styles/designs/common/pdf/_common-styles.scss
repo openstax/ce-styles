@@ -71,3 +71,13 @@ a {
 .smallcaps {
   font-size: font-scale(-1);
 }
+
+// Screenreader spans are hidden in PDF — accessibility is provided via Prince expansion text
+// on the parent elements using data-screenreader-begin/end attributes set in cookbook.
+span[data-media~="screenreader"] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}

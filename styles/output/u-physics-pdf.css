@@ -299,6 +299,14 @@ a {
   font-size: 0.8333333333rem;
 }
 
+span[data-media~=screenreader] {
+  display: none;
+}
+
+[data-screenreader-begin] {
+  -prince-expansion-text: attr(data-screenreader-begin) " " content() " " attr(data-screenreader-end);
+}
+
 .os-eoc.os-chapter-review-container {
   page: eoc;
   prince-page-group: start;
@@ -1628,6 +1636,10 @@ nav#toc > ol > .os-toc-index > a::after {
   line-height: 1.2;
   max-width: 7.65in;
   padding-right: 8px;
+}
+
+.os-figure.has-splash .os-caption-container a {
+  color: #026591;
 }
 
 .os-figure.has-splash .os-caption-container::before {
