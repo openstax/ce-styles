@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use `-prince-expansion-text` to replace screenreader spans
 - Exclude bare links from `ReferencesLink` in `cardboard`
+- Fix link contrast in `FigureSplashShape` in `carnival`
 - Fix wide MathML SVGs in answer key overflowing past page banding in `corn` by adding `table-layout: fixed` and `max-width: 100%` to solution areas
 
 ## [v2.17.0] - 2026-03-11
