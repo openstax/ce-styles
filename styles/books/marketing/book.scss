@@ -13,6 +13,14 @@ $bandColor: #9028A3;
 @import '../../design-settings/cardboard/_settings.scss';
 @import '../../designs/cardboard/pdf/_folio';
 
+@page unit:left {
+  @top-left-corner { color: #ffffff; }
+  @bottom-left { color: #ffffff; }
+}
+@page unit:right {
+  @top-right-corner { color: #ffffff; }
+}
+
 @include add_settings ((
   FigureSplash: (
     _selectors: (".os-figure.has-splash"),
