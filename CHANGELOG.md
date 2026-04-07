@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.18.0] - 2026-04-07
+
 - Fix wide SVG equations overlapping equation numbers in `corn` by making number a flex sibling instead of absolutely positioned
 - Improve color contrast on titles in `corn`
 - Fix folio text color contrast on unit opener pages in `marketing` (white text on dark blue background)
