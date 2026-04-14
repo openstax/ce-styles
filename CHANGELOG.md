@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add PrinceXML 16 compatibility fixes to common PDF styles: reset `ol`/`ul` margin/padding and set `box-decoration-break: clone` globally
+- Update key terms PDF tag structure in `cardboard`, `carnival`, `cosmos`, and `corn` to match new `BakeChapterGlossary::V1` HTML output: add `KeyTermsListContainer` (`L`) and `KeyTermsListItem` (`LI`) components targeting `.os-glossary-list` and `.os-glossary-list-item` wrappers, and retag `KeyTermsList`/`KeyTermsTerm`/`KeyTermsDefinition` as `LBody`/`Span`/`Span`
+
 ## [v2.18.0] - 2026-04-07
 
 - Fix wide SVG equations overlapping equation numbers in `corn` by making number a flex sibling instead of absolutely positioned

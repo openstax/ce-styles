@@ -5,16 +5,24 @@
     _components:(
         map-merge($KeyTerms__Container,(
             _components:(
-                map-merge($KeyTerms__List,(
+                map-merge($KeyTerms__ListContainer, (
                     _components:(
-                        $KeyTerms__Term,
-                        map-merge($KeyTerms__Definition, (
+                        map-merge($KeyTerms__ListItem, (
                             _components: (
-                                $UnorderedList--KeyTerms,
-                                $OrderedList--KeyTerms,
-                            ),
-                        ))
-                    ),
+                                map-merge($KeyTerms__List,(
+                                    _components:(
+                                        $KeyTerms__Term,
+                                        map-merge($KeyTerms__Definition, (
+                                            _components: (
+                                                $UnorderedList--KeyTerms,
+                                                $OrderedList--KeyTerms,
+                                            ),
+                                        )),
+                                    ),
+                                )),
+                            )
+                        )),
+                    )
                 )),
             ),
         )),
