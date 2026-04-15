@@ -4,11 +4,19 @@
     _components:(
         map-merge($KeyTerms__Container,(
             _components:(
-                map-merge($KeyTerms__List,(
+                map-merge($KeyTerms__ListContainer, (
                     _components:(
-                        $KeyTerms__Term,
-                        $KeyTerms__Definition,
-                    ),
+                        map-merge($KeyTerms__ListItem, (
+                            _components: (
+                                map-merge($KeyTerms__List,(
+                                    _components:(
+                                        $KeyTerms__Term,
+                                        $KeyTerms__Definition,
+                                    ),
+                                )),
+                            )
+                        )),
+                    )
                 )),
             ),
         )),

@@ -82,7 +82,7 @@
   
   
   //Unnumbered pages
-  @page chapter:nth(1) {
+  @page chapter:nth-of-group(1) {
     @top-left-corner {
       content: none;
     }
@@ -205,7 +205,7 @@
       margin-right: 2in;
     }
     
-    @page chapter:nth(2) {
+    @page chapter:nth-of-group(2) {
       margin-right: 2in;
     }
   }

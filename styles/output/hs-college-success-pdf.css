@@ -233,6 +233,15 @@ blockquote {
 }
 
 /* stylelint-disable-next-line meowtec/no-px */
+ol, ul {
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+
+* {
+  box-decoration-break: clone;
+}
+
 a[href^=http]:not([data-bare-link])::after {
   content: " (" attr(href) ")";
   overflow-wrap: break-word;
@@ -745,7 +754,7 @@ div[data-type=composite-page].os-eob {
     content: none;
   }
 }
-@page chapter:nth(1):right {
+@page chapter:nth-of-group(1):right {
   @top-right-corner {
     content: none;
   }
