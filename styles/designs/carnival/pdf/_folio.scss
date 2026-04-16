@@ -201,7 +201,7 @@ $eobContent: string(eob-title);
 }
 
 @if $ChapterIntroType == side {
-  @page chapter:first {
+  @page chapter:first-of-group {
     margin-right: 2in;
   }
   

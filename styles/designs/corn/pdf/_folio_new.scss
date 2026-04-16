@@ -73,7 +73,7 @@ div[data-type="composite-page"].os-eob {
 }
 
 //Unnumbered pages
-@page chapter:first {
+@page chapter:first-of-group {
     @top-left-corner {
       content: none;
     }
@@ -188,7 +188,7 @@ $eobRightContent: element(folio_eob_right);
 }
 
 @if $ChapterIntroType == side {
-  @page chapter:first {
+  @page chapter:first-of-group {
     margin-right: 2in;
   }
   
