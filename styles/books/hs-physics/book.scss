@@ -313,8 +313,31 @@ $ChapterIntroType: fullWidth;
 @include use('CompositePageLists', 'carnival:::CompositePageListsShape');
 @include use("ExercisesProblemQuestionLists", "carnival:::ExercisesListsShape");
 @include use('TableLists', 'carnival:::TableListShape');
+
 @include use("NotesLists", "carnival:::NotesListsShape");
+
+@include add_settings((
+    WorkedExampleLists: (
+      _selectors: (
+        '.worked-example [data-type="solution"]',
+        '.worked-example [data-type="commentary"]',
+      ),
+      'FirstLevelOrderedList:::margin-left': h-spacing(4),
+      'SecondLevelOrderedList:::margin-left': h-spacing(3),
+    ),
+));
+
+@include use("WorkedExampleLists", "carnival:::NotesListsShape");
+
+@include add_settings((
+    SnapLabLists: (
+      _selectors: ('.snap-lab > .os-note-body'),
+      'FirstLevelOrderedList:::margin-left': h-spacing(4),
+      'SecondLevelOrderedList:::margin-left': h-spacing(3),
+    ),
+));
+
+@include use("SnapLabLists", "carnival:::NotesListsShape");
 
 // EOB
 @include use('Index', 'carnival:::IndexShape');
-
