@@ -339,5 +339,15 @@ $ChapterIntroType: fullWidth;
 
 @include use("SnapLabLists", "carnival:::NotesListsShape");
 
+@include add_settings((
+    SnapLabLabeledItemLists: (
+      _selectors: ('.snap-lab .os-note-body ul[data-labeled-item="true"] li'),
+      'FirstLevelUnorderedList:::margin-left': h-spacing(4),
+      'FirstLevelOrderedList:::margin-left': h-spacing(4),
+    ),
+));
+
+@include use("SnapLabLabeledItemLists", "carnival:::NotesListsShape");
+
 // EOB
 @include use('Index', 'carnival:::IndexShape');
