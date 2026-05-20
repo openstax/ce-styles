@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Add margins to numbered lists in `hs-physics` worked examples and snap labs (CORE-1789)
+- Indent question stem lists less in `carnival`
 
 
 ## [v2.19.0] - 2026-04-15
