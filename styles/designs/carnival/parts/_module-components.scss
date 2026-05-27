@@ -10,6 +10,15 @@ $Module__Container--WithTwoColumns: (
     ),
 );
 
+$Module__Container--WithTwoColumns__Table: (
+    _name: "ModuleContainerWithTwoColumnsTable",
+    _subselector: " .os-table > table",
+    _properties: (
+        width: enum('ValueSet:::OPTIONAL'),
+        margin: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
 $ModuleWithIndentation__Para: (
     _name: "ModuleWithIndentationPara",
     _subselector: ' > p',

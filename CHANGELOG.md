@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add margins to numbered lists in `hs-physics` worked examples and snap labs (CORE-1789)
 - Indent question stem lists less in `carnival`
 - Indent first-level lists in eos sections in `corn`
+- Set table width to 95% in `ModuleContainerWithTwoColumns` exercises in `ap-physics-2e`
 
 ## [v2.19.0] - 2026-04-15
 
