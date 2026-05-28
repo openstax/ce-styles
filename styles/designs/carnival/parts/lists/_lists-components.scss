@@ -28,6 +28,22 @@ $OrderedList--FirstLevel--MarginBottom: ( // only needed in Introduction page in
     )
 );
 
+$UnorderedList--StemFirstLevel: (
+    _name: "StemFirstLevelUnorderedList",
+    _subselector: ' > ul:not([data-labeled-item="true"], .os-chapter-objectives)',
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
+$OrderedList--StemFirstLevel: (
+    _name: "StemFirstLevelOrderedList",
+    _subselector: " > ol",
+    _properties:(
+        margin-left: h-spacing(3),
+    )
+);
+
 $UnorderedList--SecondLevel: (
     _name: "SecondLevelUnorderedList",
     _subselector: " > li > ul",

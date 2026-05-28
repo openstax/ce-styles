@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add margins to numbered lists in `hs-physics` worked examples and snap labs (CORE-1789)
 - Keep science-practice single-column for tables with 6+ columns
+- Indent question stem lists less in `carnival`
+- Indent first-level lists in eos sections in `corn`
 
 ## [v2.19.0] - 2026-04-15
 
