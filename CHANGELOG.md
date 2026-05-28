@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix chapter intro right margin in `biology`, `ap-biology`, and `neuroscience` (reduce page count)
 - Add margins to numbered lists in `hs-physics` worked examples and snap labs (CORE-1789)
 - Keep science-practice single-column for tables with 6+ columns
 - Indent question stem lists less in `carnival`
