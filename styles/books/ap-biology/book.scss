@@ -62,7 +62,7 @@
 
 @include add_settings((
   TwoColumnsModules: (
-    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container'),
+    _selectors: ('.os-review-container', '.os-ap-test-prep-container', '.os-science-practice-container:not(:has(.os-table > table tr td:nth-of-type(6)))'),
   ),
 ));
 

@@ -5,12 +5,15 @@
   TestPrep: (
     _selectors: ("[data-type = 'chapter'] > .os-ap-test-prep-container"),
     'ProblemSolutionNumber:::color': (_ref: 'colorMap:::fontBodyColor'),
+    'ProblemSolutionNumber:::text-align': right,
 ),
 ));
 
 @include add_settings((
   TwoColumnsModules: (
-    _selectors: ('.os-ap-test-prep-container'),
+    _selectors: ('.os-ap-test-prep-container:not(:has(.os-table > table tr td:nth-of-type(6)))'),
+    'ModuleContainerWithTwoColumnsTable:::width': 95%,
+    'ModuleContainerWithTwoColumnsTable:::margin': auto,
   ),
 ));
 

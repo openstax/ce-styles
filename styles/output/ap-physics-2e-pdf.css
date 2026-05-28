@@ -3497,6 +3497,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  text-align: right;
   min-width: 24px;
 }
 
@@ -3543,6 +3544,7 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  text-align: right;
   min-width: 24px;
 }
 
@@ -3578,10 +3580,15 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   width: 100%;
 }
 
-.os-ap-test-prep-container {
+.os-ap-test-prep-container:not(:has(.os-table > table tr td:nth-of-type(6))) {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
+}
+
+.os-ap-test-prep-container:not(:has(.os-table > table tr td:nth-of-type(6))) .os-table > table {
+  width: 95%;
+  margin: auto;
 }
 
 .os-ap-test-prep-container section {
