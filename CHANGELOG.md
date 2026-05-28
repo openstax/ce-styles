@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Indent question stem lists less in `carnival`
 - Indent first-level lists in eos sections in `corn`
 - Set table width to 95% in `ModuleContainerWithTwoColumns` exercises in `ap-physics-2e`
-- Use single-column for `ap-test-prep` with tables having five or more columns
+- Use single-column for `ap-test-prep` with tables having six or more columns
 
 ## [v2.19.0] - 2026-04-15
 
