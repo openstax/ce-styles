@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keep science-practice single-column for tables with 6+ columns
 - Indent question stem lists less in `carnival`
 - Indent first-level lists in eos sections in `corn`
+- Style nested list note titles in `carnival`
 - Set table width to 95% in `ModuleContainerWithTwoColumns` exercises in `ap-physics-2e`
 - Use single-column for `ap-test-prep` with tables having six or more columns
 - Align `os-number` right in AP Physics 2e `TestPrep`
