@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keep science-practice single-column for tables with 6+ columns
 - Indent question stem lists less in `carnival`
 - Indent first-level lists in eos sections in `corn`
+- Align `os-number` right in AP Physics 2e `TestPrep`
 
 ## [v2.19.0] - 2026-04-15
 
