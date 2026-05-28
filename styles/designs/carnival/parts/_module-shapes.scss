@@ -4,7 +4,11 @@
 
 @include create_shape('carnival:::ModuleWithTwoColumnsShape', (
     _components: (
-      $Module__Container--WithTwoColumns
+        map-merge($Module__Container--WithTwoColumns, (
+            _components: (
+                $Module__Container--WithTwoColumns__Table
+            )
+        ))
     )
 ));
 
