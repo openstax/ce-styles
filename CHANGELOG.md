@@ -8,10 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Add margins to numbered lists in `hs-physics` worked examples and snap labs (CORE-1789)
+- Keep science-practice single-column for tables with 6+ columns
 - Indent question stem lists less in `carnival`
 - Indent first-level lists in eos sections in `corn`
 - Set table width to 95% in `ModuleContainerWithTwoColumns` exercises in `ap-physics-2e`
 - Use single-column for `ap-test-prep` with tables having six or more columns
+- Align `os-number` right in AP Physics 2e `TestPrep`
 
 ## [v2.19.0] - 2026-04-15
 
