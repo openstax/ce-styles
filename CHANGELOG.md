@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.20.1] - 2026-06-22
+
 - Add max-height to images in two-column layout in ap-biology
 
 ## [v2.20.0] - 2026-05-28
