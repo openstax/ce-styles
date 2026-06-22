@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add max-height to images in two-column layout in ap-biology
+
 ## [v2.20.0] - 2026-05-28
 
 - Fix chapter intro right margin in `biology`, `ap-biology`, and `neuroscience` (reduce page count)

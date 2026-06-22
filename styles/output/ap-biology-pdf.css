@@ -3886,16 +3886,28 @@ h4.os-subtitle + .os-figure:not(.has-splash) > figure {
   column-width: auto;
 }
 
+.os-review-container img {
+  max-height: 7in;
+}
+
 .os-ap-test-prep-container {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
 }
 
+.os-ap-test-prep-container img {
+  max-height: 7in;
+}
+
 .os-science-practice-container:not(:has(.os-table > table tr td:nth-of-type(6))) {
   column-count: 2;
   column-gap: 2.4rem;
   column-width: auto;
+}
+
+.os-science-practice-container:not(:has(.os-table > table tr td:nth-of-type(6))) img {
+  max-height: 7in;
 }
 
 .os-review-container section {

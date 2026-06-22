@@ -19,6 +19,14 @@ $Module__Container--WithTwoColumns__Table: (
     )
 );
 
+$Module__Container--WithTwoColumns__Image: (
+    _name: "ModuleContainerWithTwoColumnsImage",
+    _subselector: " img",
+    _properties: (
+        max-height: enum('ValueSet:::OPTIONAL'),
+    )
+);
+
 $ModuleWithIndentation__Para: (
     _name: "ModuleWithIndentationPara",
     _subselector: ' > p',
