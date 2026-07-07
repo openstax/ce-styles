@@ -1582,40 +1582,42 @@ section.practice > [data-type=exercise] img {
 }
 
 .os-figure:not(.has-splash) > figure {
-  display: table;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
+  break-inside: auto;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+.os-figure:not(.has-splash) > figure > .os-caption-container {
+  display: block;
+  width: 100%;
   margin-bottom: 0.7rem;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-title-label {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-title-label {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-number {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-number {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-title {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-title {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-caption {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-caption {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   color: #093D4C;
@@ -1670,33 +1672,33 @@ section.practice > [data-type=exercise] img {
   position: relative;
 }
 
-.os-figure.has-splash > .os-caption-container {
+.os-figure.has-splash > figure > .os-caption-container {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-number {
+.os-figure.has-splash > figure > .os-caption-container > .os-number {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-title-label {
+.os-figure.has-splash > figure > .os-caption-container > .os-title-label {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-title {
+.os-figure.has-splash > figure > .os-caption-container > .os-title {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-weight: bold;
   font-size: 1rem;
   color: #093D4C;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-caption {
+.os-figure.has-splash > figure > .os-caption-container > .os-caption {
   font-family: Noto Sans, sans-serif, StixGeneral;
   font-size: 1rem;
   color: #093D4C;

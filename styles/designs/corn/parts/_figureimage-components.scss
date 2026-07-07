@@ -20,9 +20,12 @@ $Figure:(
     _name: "Figure",
     _subselector: "> figure",
      _properties:(
-        display: table,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
         margin-left: auto,
         margin-right: auto,
+        break-inside: auto,
      )
 );
 

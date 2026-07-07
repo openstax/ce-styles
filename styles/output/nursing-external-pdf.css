@@ -1336,15 +1336,17 @@ div[data-type=composite-page].os-eob {
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
-  display: table;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
+  break-inside: auto;
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  width: 100%;
   margin-bottom: 0.7rem;
   font-size: 0.8333333333rem;
   line-height: 1.2;
