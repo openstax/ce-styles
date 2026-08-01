@@ -17,25 +17,10 @@
                     $Exercise__Problem__MCAnswer__Pre,
                   )
                 )),
-                map-merge($Exercise__Solution1, (
+                map-merge($Exercise__Solution, (
                     _components: (
                         $Button--InExerciseSolution,
-                        map-merge($Exercise__Solution__Toggle, (
-                            _components: (
-                                $Exercise__Solution__Toggle__Before,
-                            ),
-                        )),
-                        $Exercise__Solution__Toggle__Marker,
-                    ),
-                )),
-                map-merge($Exercise__Solution2, (
-                    _components: (
-                        $Button--InExerciseSolution,
-                        map-merge($Exercise__Solution__Toggle, (
-                            _components: (
-                                $Exercise__Solution__Toggle__Before,
-                            ),
-                        )),
+                        $Exercise__Solution__Toggle,
                         $Exercise__Solution__Toggle__Marker,
                     ),
                 )),
