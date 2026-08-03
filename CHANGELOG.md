@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- figcaption inside figure
 
 ## [v2.20.1] - 2026-06-22
 

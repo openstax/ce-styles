@@ -12,11 +12,10 @@ $Caption__Container--Table: (
 
 $Caption__Container--Figure: (
     _name: "CaptionContainerFigure",
-    _subselector: " > .os-caption-container",
+    _subselector: " > figure > .os-caption-container",
     _properties: (
-        display: table,
-        margin-left: auto,
-        margin-right: auto,
+        display: block,
+        width: 100%,
         margin-bottom: v-spacing(1),
         line-height: 1rem,
     )
@@ -24,7 +23,7 @@ $Caption__Container--Figure: (
 
 $Caption__Container--ChapterIntro: (
     _name: "CaptionContainerChapterIntro",
-    _subselector: " > .os-caption-container",
+    _subselector: " > figure > .os-caption-container",
     _properties: (
         padding-bottom: v-spacing(1),
         padding-top: v-spacing(1),

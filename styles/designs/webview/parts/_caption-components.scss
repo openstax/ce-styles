@@ -77,7 +77,7 @@ $Caption__Number--Figure:(
 // Scaled-down figures
 $Caption__Container--ScaledDown:(
   _name: "CaptionContainerScaledDown",
-  _subselector: ' ~ .os-caption-container',
+  _subselector: ' > .os-caption-container',
   _properties: (
     width: 60%,
     margin: auto,
@@ -86,7 +86,7 @@ $Caption__Container--ScaledDown:(
 
 $Caption__Container--ScaledDown30:(
     _name: "CaptionContainerScaledDown30",
-    _subselector: ' ~ .os-caption-container',
+    _subselector: ' > .os-caption-container',
     _properties: (
         width: 30%,
         margin: auto,

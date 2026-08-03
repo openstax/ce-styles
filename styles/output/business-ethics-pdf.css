@@ -1254,7 +1254,9 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .os-figure:not(.has-splash) > figure {
-  display: table;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1268,36 +1270,35 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   max-width: 100%;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+.os-figure:not(.has-splash) > figure > .os-caption-container {
+  display: block;
+  width: 100%;
   margin-bottom: 0.7rem;
   line-height: 1rem;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-title-label {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-title-label {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-number {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-number {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-title {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-title {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure:not(.has-splash) > .os-caption-container > .os-caption {
+.os-figure:not(.has-splash) > figure > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
   color: #5C5C5C;
@@ -1310,9 +1311,6 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 
 .os-figure.has-splash > figure.splash {
   position: relative;
-  width: 8.75in;
-  transform: translate3d(-0.95in, 0, 0);
-  margin-left: -1.2rem;
   margin-bottom: 0;
 }
 
@@ -1322,16 +1320,18 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   border-left: none;
   height: 4.3in;
   position: relative;
+  transform: translate3d(-0.95in, 0, 0);
+  margin-left: -1.2rem;
 }
 
 .os-figure.has-splash > figure.splash > span[data-type=media]::after {
-  width: 100%;
   content: '';
   display: block;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   height: 5.83rem;
+  width: 8.75in;
   background-color: #24739E;
   border-top-width: 0.25rem;
   border-top-style: solid;
@@ -1340,39 +1340,40 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .os-figure.has-splash > figure.splash > span[data-type=media] > img {
+  position: relative;
   width: 8.75in;
   height: 3.58in;
   display: inline;
 }
 
-.os-figure.has-splash > .os-caption-container {
+.os-figure.has-splash > figure > .os-caption-container {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
   line-height: 1rem;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-title-label {
+.os-figure.has-splash > figure > .os-caption-container > .os-title-label {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-number {
+.os-figure.has-splash > figure > .os-caption-container > .os-number {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-title {
+.os-figure.has-splash > figure > .os-caption-container > .os-title {
   font-family: Noto Sans, StixGeneral;
   font-weight: bold;
   font-size: 0.8333333333rem;
   color: #000000;
 }
 
-.os-figure.has-splash > .os-caption-container > .os-caption {
+.os-figure.has-splash > figure > .os-caption-container > .os-caption {
   font-family: Noto Sans, StixGeneral;
   font-size: 0.8333333333rem;
   color: #5C5C5C;
