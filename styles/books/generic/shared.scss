@@ -1,0 +1,486 @@
+@use 'lib/webview/webview';
+@import 'framework/framework';
+@import '../../design-settings/webview/settings';
+@import '../../design-settings/webview/design';
+
+//Settings
+//Titles
+@include add_settings((
+    PageTitles: (
+        _selectors: (''),
+        'H1Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'H2Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'H3Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'H4Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'H5Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'H6Title:::color': (_ref: 'colorMap:::headingTitleColor'),
+        'Paragraph:::color': (_ref: 'colorMap:::baseColor'),
+    ),
+));
+
+@include add_settings((
+    EocPageTitles: (
+        _selectors: (''),
+    ),
+));
+
+@include add_settings((
+    EobPageTitles: (
+        _selectors: (''),
+    ),
+));
+
+//Figures
+@include add_settings((
+    FigureImage: (
+        _selectors: (''),
+        'CaptionContainerFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTitleContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTitleContainerMechanismFigure:::background-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
+        'CaptionTextContainerMechanismFigure:::color': (_ref: 'colorMap:::baseColor'),
+        'CaptionTextContainerMechanismFigure:::border-right-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
+        'CaptionTextContainerMechanismFigure:::border-left-color': (_ref: 'colorMap:::MechanismFigureBorderColor'),
+    ),
+));
+
+//Terms
+@include add_settings((
+    Terms: (
+        _selectors: (''),
+    ),
+));
+
+//Lists
+@include add_settings((
+    Lists: (
+        _selectors: (''),
+        'UnorderedList:::color': (_ref: 'colorMap:::baseColor'),
+        'OrderedList:::color': (_ref: 'colorMap:::baseColor'),
+        'NotesQuestionSectionList:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
+    ),
+));
+
+@include add_settings((
+    StepwiseLists: (
+        _selectors: ('.stepwise', '.os-stepwise'),
+    ),
+));
+
+@include add_settings((
+    ListStructure: (
+        _selectors: ('.list', '[data-type="list"]'),
+    ),
+));
+
+//Learning objectives
+@include add_settings((
+    LearningObjectives: (
+        _selectors: (''),
+        'LearningObjectivesContainer:::background-color': (_ref: 'colorMap:::LearningObjectivesBackground'),
+        'LearningObjectivesContainer:::border-color': (_ref: 'colorMap:::LearningObjectivesBorder'),
+        'LearningObjectivesTitle:::color': (_ref: 'colorMap:::LearningObjectivesText'),
+        'LearningObjectivesTitle:::border-bottom-color': (_ref: 'colorMap:::LearningObjectivesBorder'),
+        'LearningObjectivesParagraph:::color': (_ref: 'colorMap:::LearningObjectivesText'),
+    ),
+));
+
+@include add_settings((
+    AbstractClass: (
+        _selectors: (''),
+        'AbstractClassContainer:::background-color': (_ref: 'colorMap:::LearningObjectivesBackground'),
+        'UnorderedListInAbstractClassAfter:::color': (_ref: 'colorMap:::baseColor'),
+    ),
+));
+
+//Links
+@include add_settings((
+    Link: (
+        _selectors: (''),
+        'Link:::color': (_ref: 'colorMap:::Link'),
+        'LinkHover:::color': (_ref: 'colorMap:::LinkHover'),
+    ),
+));
+
+//Notes
+@include add_settings((
+    Note: (
+        _selectors: ('[data-type="note"]:not(.reference)', '.note', '[data-type="example"]', '.example'),
+        'NoteContainer:::background-color': (_ref: 'colorMap:::NoteBackground'),
+        'NoteContainer:::border-color' : (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle1:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle1:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle2:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle2:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle3:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle3:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle4:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle4:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle5:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle5:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteTitle6:::color' : (_ref: 'colorMap:::NoteText'),
+        'NoteTitle6:::border-bottom-color': (_ref: 'colorMap:::NoteBorder'),
+        'NoteBody:::background-color': (_ref: 'colorMap:::NoteBackground'),
+        'NoteBody:::color': (_ref: 'colorMap:::NoteText'),
+        'NoteBody2:::background-color': (_ref: 'colorMap:::NoteBackground'),
+        'NoteBody2:::color': (_ref: 'colorMap:::NoteText'),
+        'NoteBody3:::background-color': (_ref: 'colorMap:::NoteBackground'),
+        'NoteBody3:::color': (_ref: 'colorMap:::NoteText'),
+    ),
+));
+
+//Exercises
+@include add_settings((
+    Exercise: (
+        _selectors: ('[data-type="exercise"]'),
+        'Solution1:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
+        'Solution2:::border-top-color': (_ref: 'colorMap:::NoteBorder'),
+        'ProblemsExercisesProblemBefore1:::color': (_ref: 'colorMap:::NoteText'),
+        'ProblemsExercisesProblemBefore2:::color': (_ref: 'colorMap:::NoteText'),
+        'ProblemsExercisesSolutionBefore1:::color': (_ref: 'colorMap:::NoteText'),
+        'ProblemsExercisesSolutionBefore2:::color': (_ref: 'colorMap:::NoteText'),
+        'ButtonInExerciseSolution:::color': (_ref: 'colorMap:::SolutionButtonText'),
+    ),
+));
+
+@include add_settings((
+    InjectedExercise: (
+        _selectors: ('[data-type="injected-exercise"]'),
+    ),
+));
+
+@include add_settings((
+    ExerciseInAppendix: (
+        _selectors: ('.appendix [data-type="exercise"]'),
+    ),
+));
+
+@include add_settings((
+    ExerciseInlined: (
+        _selectors: ('.os-number ~'),
+    ),
+));
+
+//Table
+@include add_settings((
+    Table: (
+        _selectors: (' .os-table'),
+        'CaptionTitleBefore:::color': (_ref: 'colorMap:::TableCaptionLabel'),
+        'CaptionContainerTable:::border-top-color': (_ref: 'colorMap:::CaptionInTable'),
+        'TableHeadCell:::border-color': (_ref: 'colorMap:::TableBorder'),
+        'TableData:::border-color': (_ref: 'colorMap:::TableBorder'),
+        'TableMultipleBody:::border-color': (_ref: 'colorMap:::TableBorder'),
+        'TableNestedTable:::background-color': (_ref: 'colorMap:::bodyBackground'),
+        'TableRowAlternateShading:::background-color': (_ref: 'colorMap:::NoteBackground'),
+    ),
+));
+
+//Blockquote
+@include add_settings((
+    Blockquote: (
+        _selectors: ('blockquote'),
+        'Blockquote:::border-left-color': (_ref: 'colorMap:::BlockquoteBorder'),
+    ),
+));
+
+//Functions
+@include add_settings((
+    Function: (
+        _selectors: ('.primary-function, .secondary-function'),
+        'Function:::font-family': (_ref: 'typography:::fontOption2'),
+    ),
+    PrimaryFunction: (
+        _selectors: ('.primary-function'),
+    ),
+));
+
+//Keyterm
+@include add_settings((
+    KeyTerm: (
+        _selectors: ('.os-glossary-container'),
+    ),
+));
+
+//Chapter intro
+@include add_settings((
+    ChapterIntro: (
+        _selectors: (".introduction"),
+    ),
+));
+
+//References
+@include add_settings((
+    References: (
+        _selectors: (".os-eob", ".os-eoc"),
+        'ChapterAreaReference:::color': (_ref: 'colorMap:::baseColor'),
+    ),
+    ReferencesCiteLink: (
+        _selectors: ('a[data-type="cite"]'),
+    ),
+));
+
+//Coreq skills
+@include add_settings((
+    CoreqSkills: (
+        _selectors: ('.coreq-skills'),
+        'CoreqSkillsContainer:::border-color': (_ref: 'colorMap:::CoreqSkillsBorder'),
+        'CoreqSkillsTitle:::color': (_ref: 'colorMap:::baseColor'),
+        'CoreqSkillsTitle:::background-color': (_ref: 'colorMap:::CoreqSkillsTitleBackround'),
+        'CoreqSkillsTitle:::border-bottom-color': (_ref: 'colorMap:::CoreqSkillsBorder'),
+    ),
+));
+
+//Footnote
+@include add_settings((
+    Footnote: (
+        _selectors: (''),
+    ),
+));
+
+//Equation
+@include add_settings((
+    EquationUnnumbered: (
+        _selectors: ('[data-type="equation"].unnumbered'),
+    ),
+    EquationNumbered: (
+        _selectors: ('[data-type="equation"]:not(.unnumbered)'),
+        'EquationNumber:::border-color': (_ref: 'colorMap:::EquationNumberBorder'),
+    ),
+));
+
+//Annotations
+@include add_settings((
+    AnnotationText: (
+        _selectors: ('p.annotation-text'),
+        'Annotation:::font-family': (_ref: 'typography:::fontOption1'),
+        'Annotation:::color': (_ref: 'colorMap:::AnnotationText'),
+    ),
+    PublicDomainText: (
+        _selectors: ('p.public-domain'),
+        'AnnotationWithBorder:::font-family': (_ref: 'typography:::fontOption1'),
+        'AnnotationWithBorder:::border-left-color': (_ref: 'colorMap:::PublicDomainBorder'),
+    ),
+    StudentSampleText: (
+        _selectors: ('p.student-sample'),
+        'AnnotationWithBorder:::font-family': (_ref: 'typography:::fontOption1'),
+        'AnnotationWithBorder:::border-left-color': (_ref: 'colorMap:::StudentSampleBorder'),
+    ),
+));
+
+@include add_settings((
+  NonScreenElements: (
+      _selectors: ("[data-type='switch'] > :not([data-media~='screen'])"),
+  )
+));
+
+@include add_settings((
+  Index: (
+      _selectors: (".os-index-container"),
+  )
+));
+
+@include add_settings((
+  WorksCited: (
+      _selectors: ("section.works-cited"),
+  ),
+  SectionWorksCited: (
+      _selectors: ("section.section-workscited"),
+  ),
+  FurtherReading: (
+      _selectors: ("section.further-reading"),
+  )
+));
+
+@include add_settings((
+    RedColoredText: (
+        _selectors: ('*:not(.os-term) > .red-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::RedTextColor'),
+    ),
+    CyanColoredText: (
+        _selectors: ('*:not(.os-term) > .cyan-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::CyanTextColor'),
+    ),
+    MagentaColoredText: (
+        _selectors: ('*:not(.os-term) > .magenta-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::MagentaTextColor'),
+    ),
+    GreenColoredText: (
+        _selectors: ('*:not(.os-term) > .green-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::GreenTextColor'),
+    ),
+    GrayColoredText: (
+        _selectors: ('*:not(.os-term) > .gray-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::GrayTextColor'),
+    ),
+    YellowColoredText: (
+        _selectors: ('*:not(.os-term) > .yellow-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::YellowTextColor'),
+    ),
+    PurpleColoredText: (
+        _selectors: ('*:not(.os-term) > .purple-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::PurpleTextColor'),
+    ),
+    BlueColoredText: (
+        _selectors: ('.blue-text'),
+        'ColoredTextContainer:::color': (_ref: 'colorMap:::BlueTextColor'),
+    ),
+));
+
+@include add_settings((
+    FolioParagraphs: (
+        _selectors: (
+            '.folio-chapter', '.folio-module', '.folio-eoc-left', '.folio-eoc-right',
+            '.folio-appendix-left', '.folio-appendix-right', '.folio-eob-left', '.folio-eob-right'
+        ),
+    )
+));
+
+@include add_settings((
+    QuestionWithProblemPrefix: (
+        _selectors: ('[data-type="exercise-question"]'),
+        'ProblemSolutionPrefix:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+    MultipartQuestionExercises: (
+        _selectors: ('[data-type="injected-exercise"] [data-type="alphabetical-question-multipart"]'),
+        'ProblemSolutionLetter:::color': (_ref: 'colorMap:::ExerciseNumber'),
+    ),
+));
+
+@include add_settings((
+    InjectedExercise: (
+        InjectedQuestionAnswersAnswerLetter: (
+            color: (_ref: 'colorMap:::ExerciseNumber'),
+        ),
+    ),
+));
+
+@include add_settings((
+    ColumnsFromTable: (
+        _selectors: (".os-table"),
+    )
+));
+
+@include add_settings((
+  ModuleWithIndentation: (
+      _selectors: (".os-suggested-reading-container", ".os-references-container", ".os-reference-container"),
+  ),
+));
+
+// Titles
+@include use('PageTitles', 'webview:::PageTitlesShape');
+@include use('EocPageTitles', 'webview:::EocPageTitlesShape');
+@include use('EobPageTitles', 'webview:::EobPageTitlesShape');
+// Figures
+@include use('FigureImage', 'webview:::FigureImageShape');
+
+// Terms
+@include use('Terms', 'webview:::TermsShape');
+// Lists
+@include use('Lists', 'webview:::ListsShape');
+@include use('StepwiseLists', 'webview:::StepwiseListsShape');
+@include use('ListStructure', 'webview:::ListStructureShape');
+// Learning objectives
+@include use('LearningObjectives', 'webview:::LearningObjectivesShape');
+@include use('AbstractClass', 'webview:::AbstractClassShape');
+// Links
+@include use('Link', 'webview:::LinkShape');
+// Notes
+@include use('Note', 'webview:::NoteShape');
+// Exercises
+@include use('Exercise', 'webview:::ExerciseShape');
+@include use('InjectedExercise', 'webview:::InjectedExerciseShape');
+@include use('ExerciseInAppendix', 'webview:::ExerciseInAppendixShape');
+@include use('ExerciseInlined', 'webview:::ExerciseInlined');
+@include use('QuestionWithProblemPrefix','webview:::ExercisesQuestionWithProblemPrefixShape');
+@include use('MultipartQuestionExercises','webview:::ExercisesMultipartQuestionShape');
+// Tables
+@include use('Table', 'webview:::TableShape');
+// Blockquote
+@include use('Blockquote', 'webview:::BlockquoteShape');
+
+// Code Snippets
+@include webview.hljs-colors();
+@include webview.green-code();
+@include webview.brown-code();
+@include use('CodeSnippet', 'webview:::CodeSnippetLineNumbersShape');
+
+// Functions
+@include use('Function', 'webview:::FunctionShape');
+@include use('PrimaryFunction', 'webview:::FunctionPrimaryShape');
+// Keyterm
+@include use('KeyTerm', 'webview:::KeyTermShape');
+// Chapter intro
+@include use('ChapterIntro', 'webview:::ChapterIntroShape');
+// References
+@include use('References', 'webview:::ReferencesShape');
+@include use('ReferencesCiteLink', 'webview:::ReferencesCiteLinkShape');
+// Corq skills
+@include use('CoreqSkills', 'webview:::CoreqSkillsShape');
+// Footnote
+@include use('Footnote', 'webview:::FootnoteShape');
+// Equation
+@include use('EquationUnnumbered', 'webview:::EquationUnnumberedShape');
+@include use('EquationNumbered', 'webview:::EquationNumberedShape');
+// Annotations
+@include use('AnnotationText', 'webview:::AnnotationShape');
+@include use('PublicDomainText', 'webview:::AnnotationWithBorderShape');
+@include use('StudentSampleText', 'webview:::AnnotationWithBorderShape');
+// Hide teacher material
+@include use('TeacherMaterial', 'common:::Hidden');
+// Hide Iframe links
+@include use('NonScreenElements', 'common:::Hidden');
+@include use('FolioParagraphs', 'common:::Hidden');
+
+// Colored Text
+@include use('RedColoredText', 'webview:::ColoredText');
+@include use('CyanColoredText', 'webview:::ColoredText');
+@include use('MagentaColoredText', 'webview:::ColoredText');
+@include use('GreenColoredText', 'webview:::ColoredText');
+@include use('GrayColoredText', 'webview:::ColoredText');
+@include use('YellowColoredText', 'webview:::ColoredText');
+@include use('PurpleColoredText', 'webview:::ColoredText');
+@include use('BlueColoredText', 'webview:::ColoredText');
+
+//Columns
+@include use('ColumnsFromTable', 'webview:::ColumnsShape');
+
+// Modules
+@include use('WorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('SectionWorksCited', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('FurtherReading', 'webview:::ModuleWithIndentation&CenteredTitleShape');
+@include use('ModuleWithIndentation', 'webview:::ModuleWithIndentationShape');
+
+// EOB
+@include use('Index', 'webview:::IndexShape');
+@include webview.eob-answer-key();
+@include webview.eoc-answer-key();
+
+// Icons
+$icons: (
+  "linguistic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-linguistic.svg"),
+  "culture-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-culture.svg"),
+  "visual-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-visual.svg"),
+  "speech-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-speech.svg"),
+  "auditory-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-auditory.svg"),
+  "kinesthetic-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-kinesthetic.svg"),
+  "dreaming-icon": toDataUri("svg+xml", "designs/cosmos/resources/cosmos-dreaming.svg")
+);
+
+@each $class, $svg in $icons {
+  @include add_settings((
+    Icon: (
+      _selectors: 'span.#{$class}',
+      'InlineIcon:::background-image': url($svg),
+    )
+  ));
+  @include use('Icon', 'webview:::InlineIconShape');
+}
+
+@mixin BorderlessTable {
+    .os-table table.borderless {
+        thead > tr > th,
+        tbody > tr > td {
+            border: none !important;
+        }
+    }
+}
+@include BorderlessTable;

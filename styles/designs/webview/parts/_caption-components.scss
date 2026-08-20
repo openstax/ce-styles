@@ -1,4 +1,31 @@
 // Figures
+
+// $Caption__Container--Figure relies on the `display: table` / `table-caption`
+// box model to match the caption's width to the figure's. Epub readers are
+// inconsistent about supporting that model — some partially recognize
+// `display: table` on `.os-figure` but not `table-caption` on its child,
+// which makes them auto-wrap the caption into an anonymous table-cell whose
+// column width can shrink to the widest word instead of the widest line.
+// So for epub, drop the table model entirely instead of just patching the
+// caption's width: figures go full-width/block, and the image (previously
+// sized via `width: 100%` of the table's shrink-to-fit width) now just fills
+// that same full width. Web (browsers) are left untouched, since the
+// table-caption model there already sizes/centers figures correctly.
+@mixin figure-caption-layout($web: true) {
+    @if not $web {
+        .os-figure {
+            display: block;
+            margin: 3rem auto;
+        }
+
+        .os-figure .os-caption-container {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+
 $Caption__Container--Figure: (
   _name: "CaptionContainerFigure",
   _subselector: ' .os-caption-container',
