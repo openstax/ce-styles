@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v2.22.0] - 2026-09-26
+
 - Add generic `epub` style built off the `webview` design
 
 ## [v2.21.0] - 2026-08-03
