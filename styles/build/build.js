@@ -61,6 +61,10 @@ const getPaths = (book) => {
     bookPath = `${bookPathBase}generic/webview.scss`;
     outPath = `${outPathBase}webview-generic.css`;
   }
+  else if (['epub', 'epub-generic'].includes(book)) {
+    bookPath = `${bookPathBase}generic/epub.scss`;
+    outPath = `${outPathBase}epub-generic.css`;
+  }
   else {
     bookPath = `${bookPathBase}${book}/book.scss`;
     outPath = `${outPathBase}${book}-pdf.css`;
