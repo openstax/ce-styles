@@ -119,7 +119,9 @@ $FRAMEWORK_USED_SETTINGS: ();
   @if $default != enum('Object:::NONE') {
     @return $default;
   }
-  @return error(enum('Error:::INDEX_ERROR'), "Unknown setting `#{$name}`.");
+
+  @warn "Unknown setting `#{$name}`.";
+  @return "UNSET";
 }
 
 @function settings_not_null($name, $default: enum('Object:::NONE')) {
