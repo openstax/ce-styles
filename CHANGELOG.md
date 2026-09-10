@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix link styling in VitalSource EPUBs
 
 ## [v2.22.0] - 2026-09-26
 

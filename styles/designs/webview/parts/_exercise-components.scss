@@ -1,3 +1,13 @@
+$use-table-cell-layout: true !default;
+
+@function webview-table-cell-properties($properties: ()) {
+  @if $use-table-cell-layout {
+    @return map-merge((display: table-cell), $properties);
+  }
+
+  @return $properties;
+}
+
 $Exercise__Container: empty_wrapper(ExerciseContainer, '');
 $Exercise--WithProblemTitle: empty_wrapper(ExerciseWithProblemTitle, '.has-problem-title');
 
@@ -40,13 +50,12 @@ $Exercise__ExerciseQuestion: (
 $Exercise__ProblemSolution__Number: (
   _name: "ProblemSolutionNumber",
   _subselector: ' > .os-number',
-  _properties: (
-    display: table-cell,
+  _properties: webview-table-cell-properties((
     font-weight: 700,
     text-decoration: none,
     text-align: right,
     width: 30px,
-  )
+  ))
 );
 
 $Exercise__ProblemSolution__Divider:(
@@ -69,10 +78,9 @@ $Exercise__Problem__LOReference:(
 $Exercise__ProblemSolution__Divider--FromMultipartQuestion:(
   _name: "ProblemSolutionDividerFromMultipartQuestion",
   _subselector: " > .os-divider",
-  _properties:(
-    display: table-cell,
+  _properties: webview-table-cell-properties((
     width: 0.5em,
-  )
+  ))
 );
 
 $Exercise__Problem__Container: empty_wrapper(ExerciseProblemContainer, '> .os-problem-container');
@@ -80,10 +88,9 @@ $Exercise__Problem__Container: empty_wrapper(ExerciseProblemContainer, '> .os-pr
 $Exercise__Problem__Container--Numbered: (
     _name: "NumberedProblemContainer",
     _subselector: " > .os-number ~ .os-problem-container",
-    _properties:(
-      display: table-cell,
+    _properties: webview-table-cell-properties((
       width: 100%,
-    )
+    ))
 );
 
 $Exercise__Problem__Container--FromMultipartQuestion: (
@@ -146,9 +153,7 @@ $InjectedExercise__Question__MultiChoiceAnswers--AnswerLetter: (
 $InjectedExercise__Question__MultiChoiceAnswers--AnswerContent: (
   _name: "InjectedQuestionAnswersAnswerContent",
   _subselector: " div[data-type=answer-content]",
-  _properties: (
-    display: table-cell,
-  )
+  _properties: webview-table-cell-properties()
 );
 
 $Exercise__Question__Stem: (
@@ -215,20 +220,18 @@ $Exercise__Solution__Toggle__Marker: (
 $Exercise__Solution__Container: (
     _name: "ExerciseSolutionContainer",
     _subselector: " > .os-solution-container",
-    _properties:(
-      display: table-cell,
+    _properties: webview-table-cell-properties((
       width: auto,
-    )
+    ))
 );
 
 $Exercise__Solution__Container--WithFirstElement: (
     _name: "ExerciseSolutionContainerWithFirstElement",
     _subselector: " > .os-solution-container.has-first-element",
-    _properties:(
-      display: table-cell,
+    _properties: webview-table-cell-properties((
       vertical-align: bottom,
       width: auto,
-    )
+    ))
 );
 
 $Exercise__ProblemContainer: empty_wrapper(ExerciseProblemContainer, ' .os-problem-container');
@@ -330,13 +333,12 @@ $Exercise__ProblemSolution__Prefix__Number: (
 $InjectedExercise__ProblemSolution__Letter: (
   _name: "ProblemSolutionLetter",
   _subselector: ' > .problem-letter',
-  _properties: (
-    display: table-cell,
+  _properties: webview-table-cell-properties((
     text-decoration: none,
     color: enum('ValueSet:::REQUIRED'),
     font-weight: bold,
     width: 16px,
-  )
+  ))
 );
 
 // ToDo: add to name --FromMultipartQuestion
@@ -344,18 +346,15 @@ $InjectedExercise__ProblemSolution__Letter: (
 $InjectedExercise__Question__Stem: (
     _name: "QuestionStem",
     _subselector: " > [data-type='question-stem']",
-    _properties:(
-        display: table-cell,
-    )
+    _properties: webview-table-cell-properties()
 );
 
 $InjectedExercise__Question__Stem--WithFirstElement: (
     _name: "QuestionStemWithFirstElement",
     _subselector: " > [data-type='question-stem'].has-first-element",
-    _properties:(
-      display: table-cell,
+    _properties: webview-table-cell-properties((
       vertical-align: bottom,
-    )
+    ))
 );
 
 $InjectedExercise__Solution__Part: (
