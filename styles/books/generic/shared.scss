@@ -1,3 +1,5 @@
+$use-table-cell-layout: true !default;
+
 @use 'lib/webview/webview';
 @import 'framework/framework';
 @import '../../design-settings/webview/settings';
@@ -451,8 +453,8 @@
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
-@include webview.eob-answer-key();
-@include webview.eoc-answer-key();
+@include webview.eob-answer-key($use-table-cell-layout);
+@include webview.eoc-answer-key($use-table-cell-layout);
 
 // Icons
 $icons: (

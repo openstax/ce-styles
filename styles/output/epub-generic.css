@@ -1004,7 +1004,6 @@ a:hover {
 }
 
 [data-type=exercise] [data-type=problem] > .os-number {
-  display: table-cell;
   font-weight: 700;
   text-decoration: none;
   text-align: right;
@@ -1021,7 +1020,6 @@ a:hover {
 }
 
 [data-type=exercise] [data-type=problem] > .os-number ~ .os-problem-container {
-  display: table-cell;
   width: 100%;
 }
 
@@ -1131,7 +1129,6 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-number {
-  display: table-cell;
   font-weight: 700;
   text-decoration: none;
   text-align: right;
@@ -1143,7 +1140,6 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-number ~ .os-problem-container {
-  display: table-cell;
   width: 100%;
 }
 
@@ -1178,10 +1174,6 @@ a:hover {
   content: counter(multi-choice-index, lower-latin) ".";
   margin-right: 0.5em;
   width: 16px;
-}
-
-[data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container ol[data-type=question-answers][type=a] div[data-type=answer-content] {
-  display: table-cell;
 }
 
 .appendix [data-type=exercise] .os-problem-container p {
@@ -1279,7 +1271,6 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .problem-letter {
-  display: table-cell;
   text-decoration: none;
   color: #000;
   font-weight: bold;
@@ -1287,16 +1278,10 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > .os-divider {
-  display: table-cell;
   width: 0.5em;
 }
 
-[data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem] {
-  display: table-cell;
-}
-
 [data-type=injected-exercise] [data-type=alphabetical-question-multipart] > .os-problem-container > [data-type=question-stem].has-first-element {
-  display: table-cell;
   vertical-align: bottom;
 }
 
@@ -2091,7 +2076,6 @@ section.further-reading p {
   display: table;
 }
 .os-eob [data-type=solution] > .os-number, .os-eob [data-type=question-solution] > .os-number {
-  display: table-cell;
   font-weight: 700;
   text-decoration: none;
   text-align: right;
@@ -2099,9 +2083,6 @@ section.further-reading p {
 }
 .os-eob [data-type=solution] > .os-divider, .os-eob [data-type=question-solution] > .os-divider {
   margin-right: 0.5em;
-}
-.os-eob [data-type=solution] > .os-solution-container, .os-eob [data-type=question-solution] > .os-solution-container {
-  display: table-cell;
 }
 .os-eob [data-type=solution] > .os-solution-container img, .os-eob [data-type=question-solution] > .os-solution-container img {
   margin-top: 0;
@@ -2127,7 +2108,6 @@ section.further-reading p {
   width: auto;
 }
 .os-eob [data-type=question-solution] > .os-solution-container.has-first-element {
-  display: table-cell;
   vertical-align: bottom;
   width: auto;
 }
@@ -2136,7 +2116,6 @@ section.further-reading p {
   margin-right: 0.5em;
 }
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .problem-letter {
-  display: table-cell;
   text-decoration: none;
   color: #000;
   font-weight: bold;
@@ -2146,11 +2125,9 @@ section.further-reading p {
   margin-right: 0.5em;
 }
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-solution-container {
-  display: table-cell;
   width: auto;
 }
 .os-eob [data-type=question-solution] > .os-solution-container > [data-type=solution-part] > .os-solution-container.has-first-element {
-  display: table-cell;
   vertical-align: bottom;
   width: auto;
 }
@@ -2159,7 +2136,6 @@ section.further-reading p {
   display: table;
 }
 .os-eoc [data-type=solution] > .os-number {
-  display: table-cell;
   font-weight: 700;
   text-decoration: none;
   text-align: right;
@@ -2169,11 +2145,9 @@ section.further-reading p {
   margin-right: 0.5em;
 }
 .os-eoc [data-type=solution] > .os-solution-container {
-  display: table-cell;
   width: auto;
 }
 .os-eoc [data-type=solution] > .os-solution-container.has-first-element {
-  display: table-cell;
   vertical-align: bottom;
   width: auto;
 }
