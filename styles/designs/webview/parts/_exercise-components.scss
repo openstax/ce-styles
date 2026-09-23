@@ -1,7 +1,7 @@
-$use-table-cell-layout: true !default;
+$use-epub-layout: true !default;
 
 @function webview-table-cell-properties($properties: ()) {
-  @if $use-table-cell-layout {
+  @if $use-epub-layout {
     @return map-merge((display: table-cell), $properties);
   }
 
@@ -15,7 +15,7 @@ $ExerciseQuestion__Container: (
     _name: "ExerciseQuestionContainer",
     _subselector: '',
     _properties:(
-        display: table,
+        display: if($use-epub-layout, table, null),
     )
 );
 
@@ -32,7 +32,7 @@ $Exercise__Problem: (
   _name: "ExerciseProblem",
   _subselector: ' [data-type="problem"]',
   _properties: (
-    display: table,
+    display: if($use-epub-layout, table, null),
     padding: '0.5em 1em',
   ),
 );
@@ -43,7 +43,7 @@ $Exercise__ExerciseQuestion: (
   _subselector: ' [data-type="exercise-question"]',
   _properties: (
     padding: '0.5em 1em',
-    display: table,
+    display: if($use-epub-layout, table, null),
   ),
 );
 
@@ -97,7 +97,7 @@ $Exercise__Problem__Container--FromMultipartQuestion: (
     _name: "ProblemContainerFromMultipartQuestion",
     _subselector: " > .os-problem-container",
     _properties:(
-        display: table,
+        display: if($use-epub-layout, table, null),
         width: 100%,
     )
 );
@@ -133,7 +133,7 @@ $InjectedExercise__Question__MultiChoiceAnswers--Answer: (
   _name: "InjectedQuestionAnswersAnswer",
   _subselector: " > li[data-type=question-answer]",
   _properties: (
-    display: table,
+    display: if($use-epub-layout, table, block),
     counter-increment: multi-choice-index,
   )
 );
@@ -153,14 +153,16 @@ $InjectedExercise__Question__MultiChoiceAnswers--AnswerLetter: (
 $InjectedExercise__Question__MultiChoiceAnswers--AnswerContent: (
   _name: "InjectedQuestionAnswersAnswerContent",
   _subselector: " div[data-type=answer-content]",
-  _properties: webview-table-cell-properties()
+  _properties: (
+    display: if($use-epub-layout, table-cell, inline),
+  )
 );
 
 $Exercise__Question__Stem: (
     _name: "ExerciseQuestionStem",
     _subselector: " > [data-type='question-stem']",
     _properties:(
-        display: 'table !important',
+        display: if($use-epub-layout, table !important, null),
         width: 100%,
         table-layout: fixed,
     )

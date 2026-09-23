@@ -240,6 +240,10 @@ figure.scaled-down-30 > .os-caption-container {
   margin: 3rem auto;
 }
 
+.os-figure > figure {
+  display: contents;
+}
+
 .os-figure .os-caption-container {
   display: table-caption;
   padding-top: 1rem;
@@ -1147,7 +1151,7 @@ a:hover {
 }
 
 [data-type=injected-exercise] [data-type=exercise-question] > .os-problem-container > [data-type=question-stem] {
-  display: table !important;
+  display: table;
   width: 100%;
   table-layout: fixed;
 }
@@ -1594,7 +1598,7 @@ blockquote {
 }
 
 .introduction > .os-figure.has-splash > figure.splash:not([data-orient=vertical]) {
-  display: block;
+  display: contents;
 }
 
 .introduction > .os-figure.has-splash > figure.splash:not([data-orient=vertical]) img {
@@ -1602,7 +1606,7 @@ blockquote {
 }
 
 .introduction > .os-figure.has-splash > figure.splash.unnumbered {
-  display: table;
+  display: contents;
   margin: 3rem auto;
 }
 

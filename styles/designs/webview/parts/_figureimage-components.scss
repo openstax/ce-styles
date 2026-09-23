@@ -98,6 +98,14 @@ $FigureClass: (
   )
 );
 
+$WrappedFigure: (
+  _name: "WrappedFigure",
+  _subselector: '> figure',
+  _properties: (
+    display: if($use-epub-layout, contents, block),
+  )
+);
+
 $FigureClass--Mechanism: (
   _name:"FigureClass",
   _subselector: ' .os-figure.has-mechanism-figure',

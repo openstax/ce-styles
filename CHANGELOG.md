@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix generic web figure caption sizing after moving `figcaption` inside `figure`; keep the inner figure block-based in EPUB
+- Replace table-based layout in generic EPUB exercises and answer keys with block/inline layout for VitalSource Bookshelf compatibility
+
 ## [v2.22.1] - 2026-09-15
 
 - Fix link styling in VitalSource EPUBs

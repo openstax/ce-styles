@@ -25,7 +25,7 @@ $ChapterSplash__Figure--NotVertical: (
    _name: "SplashFigureNotVertical",
    _subselector: ' > figure.splash:not([data-orient="vertical"])',
    _properties: (
-     display: block,
+     display: if($use-epub-layout, contents, block),
    )
 );
 
@@ -33,7 +33,7 @@ $ChapterSplash__Figure--Unnumbered: (
    _name: "SplashFigureUnnumbered",
    _subselector: ' > figure.splash.unnumbered',
    _properties: (
-     display: table,
+     display: if($use-epub-layout, contents, block),
      margin: '3rem auto',
    )
 );
