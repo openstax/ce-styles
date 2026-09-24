@@ -46,7 +46,7 @@ $Figure--Splash: (
     ),
 );
 
-$Figure--Splash__Bg: fullWidthBg("FigureSplash", enum('ValueSet:::REQUIRED'));
+$Figure--Splash__Bg: fullWidthBg("FigureSplash", enum('ValueSet:::REQUIRED'), '::after');
 
 //Image
 
@@ -64,6 +64,7 @@ $Image--Splash: (
     _properties: (
         width: half-fullBleedsSize(6.81, in),
         position: relative,
+        z-index: 1,
     )
 );
 
@@ -111,8 +112,10 @@ $Media--Splash: (
     _subselector: ' > span[data-type="media"]',
     _properties: (
         line-height: 0,
-        height: 100%,
+        height: auto,
         display: flex,
+        position: relative,
+        z-index: 0,
         width: half-fullBleedsSize(7.5, in),
         justify-content: flex-end
     ),
@@ -127,10 +130,11 @@ $Media--Splash__Overlay: (
         opacity: 0.3,
         position: absolute,
         width: half-fullBleedsSize(6.81, in), //same as the splash img width
-        height: 100%,
+        height: auto,
         top: 0,
+        bottom: 0,
         left: 6rem,
-        z-index: 1,
+        z-index: 2,
         box-sizing: border-box,
     )
 );

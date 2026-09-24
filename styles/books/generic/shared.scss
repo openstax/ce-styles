@@ -1,4 +1,4 @@
-$use-table-cell-layout: true !default;
+$use-epub-layout: true !default;
 
 @use 'lib/webview/webview';
 @import 'framework/framework';
@@ -453,8 +453,8 @@ $use-table-cell-layout: true !default;
 
 // EOB
 @include use('Index', 'webview:::IndexShape');
-@include webview.eob-answer-key($use-table-cell-layout);
-@include webview.eoc-answer-key($use-table-cell-layout);
+@include webview.eob-answer-key($use-epub-layout);
+@include webview.eoc-answer-key($use-epub-layout);
 
 // Icons
 $icons: (

@@ -115,18 +115,20 @@
 }
 
 //Function used in Chapter Intro to create Splash Image Background Component
-@function fullWidthBg($kind, $color) {
+@function fullWidthBg($kind, $color, $pseudo: '::before') {
   @return (
       _name: "#{$kind}Bg",
-      _subselector: '::before',
+      _subselector: $pseudo,
       _properties: (
           content: "''",
           background-color: $color,
           position: absolute,
-          height: 100%,
+          height: auto,
           width: enum('ValueSet:::REQUIRED'),
           margin-left: enum('ValueSet:::REQUIRED'),
-          z-index: -1,
+          left: 0,
+          bottom: 0,
+          z-index: 0,
           box-sizing: border-box,
           padding: inherit,
           top: 0,
