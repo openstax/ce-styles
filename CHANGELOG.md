@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.22.2] - 2026-09-24
+
 - Fix generic web figure caption sizing after moving `figcaption` inside `figure`; keep the inner figure block-based in EPUB
 - Replace table-based layout in generic EPUB exercises and answer keys with block/inline layout for VitalSource Bookshelf compatibility
 - Keep Corn PDF splash backgrounds and image tint within the media area so captions remain on white; sync generated CSS across all eight Corn PDF styles
