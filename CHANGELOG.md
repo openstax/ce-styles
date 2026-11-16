@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.23.0] - 2026-11-16
+
 - Add `algebra-1-teacher-guide` style, which imports the `algebra-1` style
 
 ## [v2.22.2] - 2026-09-24
