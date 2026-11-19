@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add constant width to media span for scaled down figures
+
 ## [v2.23.0] - 2026-11-16
 
 - Add `algebra-1-teacher-guide` style, which imports the `algebra-1` style

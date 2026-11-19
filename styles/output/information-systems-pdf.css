@@ -1787,6 +1787,12 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   margin: auto;
 }
 
+.os-figure:not(.has-splash) > figure.scaled-down > span[data-type=media] {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .os-figure:not(.has-splash) > figure.scaled-down img {
   max-width: 100%;
 }

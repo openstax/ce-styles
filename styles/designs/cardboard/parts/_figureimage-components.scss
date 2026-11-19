@@ -37,6 +37,16 @@ $Figure--ScaledDown: (
   )
 );
 
+$Media--ScaledDown: (
+    _name: "MediaScaledDown",
+    _subselector: ' > span[data-type="media"]',
+    _properties: (
+      display: block,
+      width: 100%,
+      text-align: center,
+    ),
+);
+
 $Figure--Splash: (
     _name: "FigureSplash",
     _subselector: ' > figure.splash',
