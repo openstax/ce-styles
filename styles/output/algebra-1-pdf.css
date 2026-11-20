@@ -1582,9 +1582,8 @@ section.practice > [data-type=exercise] img {
 }
 
 .os-figure:not(.has-splash) > figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   break-inside: auto;
@@ -1594,6 +1593,7 @@ section.practice > [data-type=exercise] img {
   display: block;
   width: 100%;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 
 .os-figure:not(.has-splash) > figure > .os-caption-container > .os-title-label {
