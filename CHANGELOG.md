@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Add constant width to media span for scaled down figures
+- Use block instead of flex for figures and captions in PDFs
 
 ## [v2.23.0] - 2026-11-16
 
