@@ -1137,9 +1137,8 @@ section.coreq-skills section {
 }
 
 .os-figure:not(.has-splash) > figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   break-inside: auto;
@@ -1149,6 +1148,7 @@ section.coreq-skills section {
   display: block;
   width: 100%;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 
 .os-figure:not(.has-splash) > figure > .os-caption-container > .os-title-label {

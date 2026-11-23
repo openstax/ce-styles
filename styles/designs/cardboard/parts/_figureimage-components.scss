@@ -20,9 +20,8 @@ $Figure:(
     _name: "Figure",
     _subselector: " > figure",
     _properties:(
-        display: flex,
-        flex-direction: column,
-        align-items: center,
+        display: block,
+        text-align: center,
         margin-left: auto,
         margin-right: auto,
     )
@@ -30,10 +29,19 @@ $Figure:(
 
 $Figure--ScaledDown: (
   _name: "FigureScaledDown",
-  _subselector: '.scaled-down',
+  _subselector: ".scaled-down",
   _properties: (
-    width: 60%,
-    margin: auto,
+    width: auto,
+  ),
+  _components: (
+    (
+        _name: "ImageScaledDown",
+        _subselector: " img",
+        _properties: (
+            max-width: 60%,
+            margin: auto,
+        )
+    )
   )
 );
 

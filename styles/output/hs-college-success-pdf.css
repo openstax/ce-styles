@@ -1184,20 +1184,19 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
 }
 
 .os-figure:not(.has-splash) > figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 .os-figure:not(.has-splash) > figure.scaled-down {
-  width: 60%;
-  margin: auto;
+  width: auto;
 }
 
 .os-figure:not(.has-splash) > figure.scaled-down img {
-  max-width: 100%;
+  max-width: 60%;
+  margin: auto;
 }
 
 .os-figure:not(.has-splash) > figure > .os-caption-container {
@@ -1205,6 +1204,7 @@ nav#toc > ol > li:not(.os-toc-unit):not(.os-toc-unit-page) > ol > li > a::after 
   width: 100%;
   margin-bottom: 0.7rem;
   line-height: 1rem;
+  text-align: center;
 }
 
 .os-figure:not(.has-splash) > figure > .os-caption-container > .os-title-label {

@@ -1492,9 +1492,8 @@ a[role=doc-noteref] {
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) > figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   break-inside: auto;
@@ -1506,6 +1505,7 @@ a[role=doc-noteref] {
   margin-bottom: 0.7rem;
   font-size: 0.8333333333rem;
   line-height: 1.2;
+  text-align: left;
 }
 
 .os-figure:not(.has-splash):not(.has-mechanism-figure) .os-caption-container > .os-title-label {

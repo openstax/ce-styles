@@ -8,11 +8,7 @@
             _components:(
                 map-merge($Figure, (
                     _components: (
-                        map-merge($Figure--ScaledDown, (
-                            _components: (
-                                $Image,
-                            ),
-                        )),
+                        $Figure--ScaledDown,
                     )
                 )),
                 map-merge($Caption__Container--Figure, (
